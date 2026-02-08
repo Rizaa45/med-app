@@ -1,5 +1,6 @@
 /**
  * SLM System Core Engine 2026
+ * Integration: Prodigy AI Assistant (Powered by Gemini)
  */
 
 let currentQuestions = [];
@@ -22,7 +23,7 @@ window.onload = () => {
 // --- DASHBOARD LOGIK ---
 function initDashboard() {
     let totalSum = 0;
-    const activeModules = [1, 9]; // Definiere, welche Module in die Wertung einfließen
+    const activeModules = [1, 9]; 
 
     activeModules.forEach(id => {
         const p = parseInt(localStorage.getItem(`mod${id}_percent`)) || 0;
@@ -35,7 +36,6 @@ function initDashboard() {
         if (text) text.innerText = p + '%';
     });
 
-    // Berechnung des Gesamtschnitts nur basierend auf aktiven Modulen
     const avg = Math.round(totalSum / activeModules.length);
     const totalBar = document.getElementById('total-progress-bar');
     const totalText = document.getElementById('total-percent');
@@ -54,11 +54,8 @@ async function loadModuleData(id) {
         if (!response.ok) throw new Error(`Modul-Daten (ID: ${id}) nicht erreichbar.`);
 
         const data = await response.json();
-        
-        // UI Titel Update
         document.getElementById('mod-title').innerText = data.moduleName || `Modul ${id}`;
         
-        // PDFs rendern mit neuem Design
         if (pdfList && data.pdfs) {
             pdfList.innerHTML = "";
             data.pdfs.forEach(fileName => {
@@ -86,7 +83,7 @@ async function loadModuleData(id) {
         showQuestion();
 
     } catch (err) {
-        pdfList.innerHTML = `<div class="p-6 bg-red-50 text-red-700 rounded-2xl border border-red-100 font-medium">⚠️ System-Fehler: ${err.message}</div>`;
+        if(pdfList) pdfList.innerHTML = `<div class="p-6 bg-red-50 text-red-700 rounded-2xl border border-red-100 font-medium">⚠️ System-Fehler: ${err.message}</div>`;
     }
 }
 
@@ -110,16 +107,22 @@ function showQuestion() {
     document.getElementById('q-current').innerText = currentIndex + 1;
     document.getElementById('question-text').innerText = q.question;
     
+    // Feedback & Prodigy Reset
     const feedback = document.getElementById('feedback');
     feedback.classList.add('hidden');
     feedback.classList.remove('feedback-success', 'feedback-error');
+    
+    const prodigyResponse = document.getElementById('prodigy-response');
+    if (prodigyResponse) {
+        prodigyResponse.innerText = "Bereit für die Analyse der aktuellen Frage.";
+    }
     
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
     
     q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = "btn-option"; // Nutzt die Klasse aus der style.css
+        btn.className = "btn-option"; 
         btn.innerText = opt;
         btn.onclick = () => checkAnswer(i, btn);
         grid.appendChild(btn);
@@ -162,7 +165,48 @@ function resetModuleProgress(id) {
     location.reload();
 }
 
-// --- TAB WECHSEL LOGIK (Expert Style) ---
+// --- PRODIGY KI LOGIK ---
+async function askProdigy() {
+    const responseDiv = document.getElementById('prodigy-response');
+    const btn = document.getElementById('prodigy-btn');
+    const q = currentQuestions[currentIndex];
+
+    if (!q) return;
+
+    responseDiv.innerText = "Prodigy analysiert die Datenstruktur...";
+    btn.disabled = true;
+    btn.classList.add('opacity-50');
+
+    // WICHTIG: Setze hier deinen Gemini API Key ein
+    const API_KEY = "AIzaSyCMgsx_nNdl0J5tK6Fc2wO9ZpDh4TBoaXg"; 
+    const PROMPT = `Du bist Prodigy, ein medizinischer KI-Tutor. 
+    Erkläre kurz und präzise die folgende Frage und warum die Antwort '${q.options[q.answer]}' korrekt ist. 
+    Frage: ${q.question}
+    Antwortoptionen: ${q.options.join(", ")}
+    Halte dich kurz, professionell und motivierend. Antworte in maximal 4 Sätzen auf Deutsch.`;
+
+    try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: PROMPT }] }]
+            })
+        });
+
+        const data = await response.json();
+        const aiText = data.candidates[0].content.parts[0].text;
+        responseDiv.innerText = aiText;
+    } catch (err) {
+        responseDiv.innerText = "Verbindung zum Core-Server unterbrochen. Bitte API-Key in app.js prüfen.";
+        console.error("AI Error:", err);
+    } finally {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50');
+    }
+}
+
+// --- TAB WECHSEL LOGIK ---
 function switchTab(tab) {
     const isQuiz = tab === 'quiz';
     document.getElementById('section-inhalt').classList.toggle('hidden', isQuiz);
