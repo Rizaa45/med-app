@@ -1,0 +1,4565 @@
+{
+  "moduleID": 9,
+  "moduleName": "Menschen mit cerebralen Schädigungen durch rehabilitative Pflege fördern",
+  "lastUpdated": "2026-02-08",
+  "pdfs": [
+    "M9.4.pdf",
+    "16-12-2025 Handout.pdf",
+    "17 und 18-12-2025 ME 9.14 und 9.15 Handout.pdf",
+    "2 Apoplex und seine Folgen.pdf",
+    "M 9.16_Leben mit Behinderung A.E.A. Handout.pdf",
+    "M 9.17_Apoplex_Dysphagie_Fazialisparese_Aphasie_Dysarthrie.pdf"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welchen Wert hat das typische Ruhemembranpotenzial eines Neurons?",
+      "options": [
+        "-50 mV",
+        "-70 mV",
+        "+30 mV",
+        "0 mV"
+      ],
+      "answer": 1,
+      "hint": "Im Ruhezustand ist das Zellinnere im Vergleich zum Außenraum negativ geladen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "question": "Welches System sorgt aktiv für die Aufrechterhaltung der Ionenkonzentrationen beim Ruhepotenzial?",
+      "options": [
+        "Osmose-Brücke",
+        "Natrium-Kalium-Pumpe",
+        "Kalzium-Filter",
+        "Glukose-Transporter"
+      ],
+      "answer": 1,
+      "hint": "Dieses System pumpt Ionen unter Energieverbrauch gegen ihr Konzentrationsgefälle.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "question": "Was charakterisiert die 'saltatorische Erregungsleitung'?",
+      "options": [
+        "Ein kontinuierliches Wandern des Impulses",
+        "Eine sehr langsame Übertragungsrate",
+        "Das Springen des Impulses von Schnürring zu Schnürring",
+        "Die Übertragung über chemische Botenstoffe"
+      ],
+      "answer": 2,
+      "hint": "Diese Leitungsart findet sich bei markhaltigen Nervenfasern und ist besonders schnell.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "question": "Wie nennt man den Zeitraum nach einem Aktionspotenzial, in dem die Zelle nicht erneut erregbar ist?",
+      "options": [
+        "Depolarisationspause",
+        "Refraktärperiode",
+        "Latenzzeit",
+        "Repolarisationsstopp"
+      ],
+      "answer": 1,
+      "hint": "Dieser Mechanismus verhindert eine Dauererregung der Nervenzelle.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "question": "Welcher Neurotransmitter ist am häufigsten im ZNS vertreten und an Lernprozessen beteiligt?",
+      "options": [
+        "Dopamin",
+        "Serotonin",
+        "Glutamat",
+        "GABA"
+      ],
+      "answer": 2,
+      "hint": "Es ist der wichtigste erregende Botenstoff im menschlichen Gehirn.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "question": "Welche Struktur verbindet die zwei Hemisphären des Großhirns?",
+      "options": [
+        "Thalamus",
+        "Balken (Corpus callosum)",
+        "Kleinhirn",
+        "Mittelhirn"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um die größte Querverbindung zwischen den Hirnhälften.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 7,
+      "question": "Wo befindet sich das primär motorische Rindenfeld zur Steuerung der Willkürmotorik?",
+      "options": [
+        "Gyrus postcentralis",
+        "Gyrus praecentralis",
+        "Hinterhauptlappen",
+        "Schläfenlappen"
+      ],
+      "answer": 1,
+      "hint": "Dieses Areal liegt im Stirnlappen direkt vor der Zentralfurche.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "question": "Welches Organ im Gehirn fungiert als 'Tor zum Bewusstsein'?",
+      "options": [
+        "Hypothalamus",
+        "Thalamus",
+        "Hypophyse",
+        "Epiphyse"
+      ],
+      "answer": 1,
+      "hint": "Dieser Teil des Zwischenhirns filtert sensorische Informationen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 9,
+      "question": "Welche lebenswichtigen Zentren befinden sich in der Medulla oblongata?",
+      "options": [
+        "Seh- und Hörzentrum",
+        "Lese- und Schreibzentrum",
+        "Herz-Kreislauf- und Atemzentrum",
+        "Gleichgewichtszentrum"
+      ],
+      "answer": 2,
+      "hint": "Schädigungen in diesem Bereich des verlängerten Marks sind oft unmittelbar tödlich.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 10,
+      "question": "Welche Hirnhaut liegt der Oberfläche des Nervengewebes unmittelbar auf?",
+      "options": [
+        "Dura mater",
+        "Arachnoidea",
+        "Pia mater",
+        "Epidermis"
+      ],
+      "answer": 2,
+      "hint": "Diese 'zarte Innenhaut' folgt allen Windungen und Furchen des Gehirns.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 11,
+      "question": "In welchem Raum befindet sich der Liquor cerebrospinalis?",
+      "options": [
+        "Epiduralraum",
+        "Subduralraum",
+        "Subarachnoidalraum",
+        "Intrazellulärraum"
+      ],
+      "answer": 2,
+      "hint": "Dieser Raum liegt zwischen der Spinngewebshaut und der weichen Hirnhaut.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 12,
+      "question": "Welche Arterien versorgen primär den Hirnstamm und das Kleinhirn?",
+      "options": [
+        "Aa. carotides internae",
+        "Aa. vertebrales",
+        "Vv. jugulares",
+        "Aa. renales"
+      ],
+      "answer": 1,
+      "hint": "Diese Gefäße ziehen durch die Querfortsätze der Halswirbelsäule nach oben.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 13,
+      "question": "Was ist der Zweck des Circulus arteriosus Willisii?",
+      "options": [
+        "Die Produktion von Liquor",
+        "Eine ringförmige Arterienverbindung zur Kollateralversorgung",
+        "Die Filterung von Giftstoffen aus dem Blut",
+        "Die Steuerung des Blutdrucks im Körper"
+      ],
+      "answer": 1,
+      "hint": "Dieser Gefäßring an der Hirnbasis ermöglicht den Ausgleich bei Engpässen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "question": "Welcher Hirnlappen ist primär für das Sehvermögen zuständig?",
+      "options": [
+        "Stirnlappen",
+        "Scheitellappen",
+        "Schläfenlappen",
+        "Hinterhauptlappen"
+      ],
+      "answer": 3,
+      "hint": "Hier befindet sich das primäre Sehzentrum (Okzipitallappen).",
+      "difficulty": "easy"
+    },
+    {
+      "id": 15,
+      "question": "Welches System im Gehirn ist maßgeblich für Emotionen und Triebe verantwortlich?",
+      "options": [
+        "Extrapyramidales System",
+        "Limbisches System",
+        "Vegetatives System",
+        "Somatisches System"
+      ],
+      "answer": 1,
+      "hint": "Es verknüpft Gefühle mit körperlichen Reaktionen wie Herzklopfen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "question": "Wie viele Hirnnervenpaare hat der Mensch?",
+      "options": [
+        "10",
+        "12",
+        "31",
+        "24"
+      ],
+      "answer": 1,
+      "hint": "Sie werden klassischerweise mit römischen Ziffern von I bis XII bezeichnet.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 17,
+      "question": "Was kennzeichnet einen Eigenreflex?",
+      "options": [
+        "Reizaufnahme und Reizantwort in verschiedenen Organen",
+        "Er wird willentlich gesteuert",
+        "Reizaufnahme und Reizantwort im selben Organ",
+        "Es sind immer mindestens drei Neurone beteiligt"
+      ],
+      "answer": 2,
+      "hint": "Ein klassisches Beispiel ist der Patellarsehnenreflex.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "question": "Welcher Teil des vegetativen Nervensystems bereitet den Körper auf Stress vor?",
+      "options": [
+        "Parasympathikus",
+        "Sympathikus",
+        "Enterisches Nervensystem",
+        "Limbisches System"
+      ],
+      "answer": 1,
+      "hint": "Er ist für die 'Fight or Flight'-Reaktion zuständig.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 19,
+      "question": "Welche Wirkung hat der Parasympathikus auf die Herzfrequenz?",
+      "options": [
+        "Steigerung",
+        "Senkung",
+        "Keine Wirkung",
+        "Unregelmäßigkeit"
+      ],
+      "answer": 1,
+      "hint": "Der Parasympathikus dominiert in Ruhe- und Verdauungsphasen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 20,
+      "question": "Was ist die häufigste Ursache für einen ischämischen Schlaganfall?",
+      "options": [
+        "Ein geplatztes Blutgefäß",
+        "Ein Gefäßverschluss durch ein Gerinnsel",
+        "Eine bakterielle Entzündung",
+        "Vitaminmangel"
+      ],
+      "answer": 1,
+      "hint": "Etwa 80 % aller Schlaganfälle beruhen auf einem Sauerstoffmangel durch Verstopfung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 21,
+      "question": "Welches Symptom deutet typischerweise auf eine Schädigung der linken Hirnhälfte hin?",
+      "options": [
+        "Lähmung der linken Körperseite",
+        "Sprachstörungen (Aphasie)",
+        "Linkseitiger Neglect",
+        "Symptomfreiheit"
+      ],
+      "answer": 1,
+      "hint": "Die Sprachzentren befinden sich bei den meisten Menschen in der linken Hemisphäre.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 22,
+      "question": "Wie wird eine unvollständige Lähmung einer Körperhälfte genannt?",
+      "options": [
+        "Hemiplegie",
+        "Hemiparese",
+        "Tetraplegie",
+        "Paraplegie"
+      ],
+      "answer": 1,
+      "hint": "Die Endung '-parese' steht für eine Schwächung oder leichte Lähmung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 23,
+      "question": "Was beschreibt der Fachbegriff 'Neglect'?",
+      "options": [
+        "Einen kompletten Gedächtnisverlust",
+        "Die Vernachlässigung einer Körperseite oder Umgebungshälfte",
+        "Eine Schluckstörung",
+        "Einen Sprachverlust"
+      ],
+      "answer": 1,
+      "hint": "Es ist eine Störung der Aufmerksamkeit, bei der eine Seite ignoriert wird.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 24,
+      "question": "Welche Schluckphase ist willentlich steuerbar?",
+      "options": [
+        "Pharyngeale Phase",
+        "Orale Vorbereitungsphase",
+        "Ösophageale Phase",
+        "Reflexphase"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase wird die Nahrung zerkleinert und für den Schluckakt geformt.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 25,
+      "question": "Warum ist eine 'stille Aspiration' so gefährlich?",
+      "options": [
+        "Weil der Patient laut schreit",
+        "Weil kein Hustenreiz ausgelöst wird und sie unbemerkt bleibt",
+        "Weil sie nur nachts auftritt",
+        "Weil sie den Blutdruck senkt"
+      ],
+      "answer": 1,
+      "hint": "Das Fehlen klinischer Abwehrzeichen erschwert die Diagnose.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 26,
+      "question": "Welches Instrument dient dem Screening von Dysphagie durch Pflegekräfte?",
+      "options": [
+        "Barthel-Index",
+        "GUSS (Gugging Swallowing Screen)",
+        "Braden-Skala",
+        "Mini Mental Status Test"
+      ],
+      "answer": 1,
+      "hint": "Es wird direkt am Krankenbett durchgeführt, um das Verschluckungsrisiko zu prüfen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 27,
+      "question": "Wie muss ein Patient mit Schluckstörung beim Essen positioniert werden?",
+      "options": [
+        "Flach auf dem Rücken",
+        "In aufrechter Sitzposition (ca. 90 Grad)",
+        "In stabiler Seitenlage",
+        "Mit nach hinten gebeugtem Kopf"
+      ],
+      "answer": 1,
+      "hint": "Eine aufrechte Haltung sichert den Weg der Nahrung in die Speiseröhre.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 28,
+      "question": "Was ist der Hauptunterschied zwischen Aphasie und Dysarthrie?",
+      "options": [
+        "Aphasie betrifft das Denken, Dysarthrie das Sprechen",
+        "Aphasie ist eine Sprachstörung (System), Dysarthrie eine Sprechstörung (Motorik)",
+        "Es gibt keinen Unterschied",
+        "Dysarthrie tritt nur nach Unfällen auf"
+      ],
+      "answer": 1,
+      "hint": "Bei der einen ist das 'Spracharchiv' gestört, bei der anderen das 'Sprechwerkzeug'.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 29,
+      "question": "Welches Merkmal ist typisch für die Broca-Aphasie?",
+      "options": [
+        "Flüssige, aber inhaltslose Sprache",
+        "Nicht-flüssige, mühsame Sprache ('Telegrammstil')",
+        "Perfektes Sprachverständnis bei Stummheit",
+        "Sinnloses Nachplappern"
+      ],
+      "answer": 1,
+      "hint": "Die Sprechproduktion ist massiv gestört, das Verständnis oft besser erhalten.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 30,
+      "question": "Wofür steht das 'Ä' im PÄS-Schema für Pflegediagnosen?",
+      "options": [
+        "Änderungswunsch",
+        "Ätiologie (Ursachen/Einflussfaktoren)",
+        "Ärztliche Anweisung",
+        "Ästhetik"
+      ],
+      "answer": 1,
+      "hint": "In diesem Teil der Diagnose werden die Hintergründe des Problems benannt.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 31,
+      "question": "Wie viele Phasen hat der Pflegeprozess nach Fiechter und Meier?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "answer": 2,
+      "hint": "Er beginnt mit der Informationssammlung und ist als Regelkreis aufgebaut.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 32,
+      "question": "Was misst der Barthel-Index?",
+      "options": [
+        "Das Sturzrisiko",
+        "Die Selbstständigkeit bei Alltagsverrichtungen (ADLs)",
+        "Den Grad der Demenz",
+        "Die Schmerzintensität"
+      ],
+      "answer": 1,
+      "hint": "Punkte werden für Essen, Waschen, Mobilität etc. vergeben (0-100).",
+      "difficulty": "easy"
+    },
+    {
+      "id": 33,
+      "question": "Welche Phase im neurologischen Phasenmodell entspricht der Frührehabilitation?",
+      "options": [
+        "Phase A",
+        "Phase B",
+        "Phase C",
+        "Phase F"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase beginnt die Förderung sensomotorischer Basisfunktionen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 34,
+      "question": "Wofür steht das 'S' im SMART-Prinzip?",
+      "options": [
+        "Sicher",
+        "Spezifisch",
+        "Schnell",
+        "Selbstständig"
+      ],
+      "answer": 1,
+      "hint": "Ziele müssen konkret und eindeutig formuliert sein.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 35,
+      "question": "Was ist das Leitbild der rehabilitativen Pflege?",
+      "options": [
+        "Vollständige Übernahme aller Tätigkeiten",
+        "Ressourcenorientierung und Förderung der Eigenständigkeit",
+        "Reine medizinische Versorgung",
+        "Verwahrung kranker Menschen"
+      ],
+      "answer": 1,
+      "hint": "Hilfe zur Selbsthilfe steht hier im Mittelpunkt.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 36,
+      "question": "Wie definiert die ICF 'Behinderung'?",
+      "options": [
+        "Als rein medizinisches Defizit",
+        "Als Wechselwirkung zwischen Gesundheitsproblem und Barrieren",
+        "Als Unfähigkeit zu arbeiten",
+        "Als angeborenen Defekt"
+      ],
+      "answer": 1,
+      "hint": "Das Modell berücksichtigt Umwelt- und personenbezogene Faktoren.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 37,
+      "question": "Wann gilt ein Mensch in Deutschland rechtlich als schwerbehindert?",
+      "options": [
+        "Ab GdB 20",
+        "Ab GdB 30",
+        "Ab GdB 50",
+        "Ab GdB 100"
+      ],
+      "answer": 2,
+      "hint": "Ab diesem Wert besteht Anspruch auf einen Schwerbehindertenausweis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 38,
+      "question": "Was ist der Kern der 'Inklusion' im Vergleich zur Integration?",
+      "options": [
+        "Der Behinderte muss sich anpassen",
+        "Das System passt sich der Vielfalt der Individuen an",
+        "Es gibt keinen Unterschied",
+        "Inklusion ist nur für Schulen"
+      ],
+      "answer": 1,
+      "hint": "Inklusion sieht Vielfalt als Normalität an und baut Barrieren für alle ab.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 39,
+      "question": "Welches Gesetz bildet die Grundlage für die Teilhabe in Deutschland?",
+      "options": [
+        "SGB V",
+        "SGB IX (BTHG)",
+        "Strafgesetzbuch",
+        "Pflegeversicherungsgesetz"
+      ],
+      "answer": 1,
+      "hint": "Das Bundesteilhabegesetz ist Teil dieses Sozialgesetzbuches.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 40,
+      "question": "Was ermöglicht das 'Persönliche Budget'?",
+      "options": [
+        "Ein höheres Taschengeld",
+        "Den selbstbestimmten Einkauf von Leistungen/Hilfen durch Geld statt Sachleistung",
+        "Kostenloses Essen im Heim",
+        "Eine Steuerbefreiung"
+      ],
+      "answer": 1,
+      "hint": "Es fördert die Selbstbestimmung der Menschen mit Behinderung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 41,
+      "question": "Welches Gehirnareal koordiniert das Gleichgewicht und die Feinmotorik?",
+      "options": [
+        "Großhirn",
+        "Zwischenhirn",
+        "Kleinhirn (Cerebellum)",
+        "Hirnstamm"
+      ],
+      "answer": 2,
+      "hint": "Es liegt in der hinteren Schädelgrube unter dem Hinterhauptlappen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 42,
+      "question": "Was ist ein sicheres Zeichen für eine periphere Fazialisparese?",
+      "options": [
+        "Hängender Mundwinkel bei intakter Stirnmuskulatur",
+        "Unfähigkeit, die Stirn auf der betroffenen Seite zu runzeln",
+        "Verlust des Sehvermögens",
+        "Taubheit im Bein"
+      ],
+      "answer": 1,
+      "hint": "Bei der peripheren Form ist der gesamte Gesichtsnervast betroffen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 43,
+      "question": "Welche Hauptaufgabe hat der Nervus Vagus (X)?",
+      "options": [
+        "Riechen",
+        "Versorgung der inneren Organe (Parasympathikus)",
+        "Zungenbewegung",
+        "Gesichtssensibilität"
+      ],
+      "answer": 1,
+      "hint": "Er ist der wichtigste Nerv des 'Ruhenervs' und zieht bis in den Bauchraum.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 44,
+      "question": "Was versteht man unter 'Agrammatismus'?",
+      "options": [
+        "Wortneubildungen",
+        "Verlust der Schreibfähigkeit",
+        "Sprechen in kurzen, grammatikalisch unvollständigen Sätzen",
+        "Leseschwäche"
+      ],
+      "answer": 2,
+      "hint": "Oft als 'Telegrammstil' bezeichnet, typisch bei Broca-Aphasie.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 45,
+      "question": "In welcher Schluckphase schließt sich der Kehlkopf zum Schutz der Atemwege?",
+      "options": [
+        "Prä-orale Phase",
+        "Orale Transportphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 2,
+      "hint": "Dies ist der reflexhafte Teil des Schluckens im Rachen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 46,
+      "question": "Welche Kostform ist bei mittlerer Dysphagie am sichersten?",
+      "options": [
+        "Normalkost",
+        "Homogenisierte, breiige Kost",
+        "Krümeliges Brot",
+        "Dünne Suppe mit Fleischeinlage"
+      ],
+      "answer": 1,
+      "hint": "Mischkonsistenzen stellen das höchste Aspirationsrisiko dar.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 47,
+      "question": "Was ist die Funktion der Blut-Liquor-Schranke?",
+      "options": [
+        "Filterung von Liquor",
+        "Schutz des Gehirns vor Schadstoffen aus dem Blut",
+        "Produktion von Antikörpern",
+        "Regulierung des Blutdrucks"
+      ],
+      "answer": 1,
+      "hint": "Diese Barriere ist wichtig für die Wirkung von Medikamenten im ZNS.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 48,
+      "question": "Wie viele Segmente hat das Rückenmark insgesamt?",
+      "options": [
+        "12",
+        "24",
+        "31",
+        "45"
+      ],
+      "answer": 2,
+      "hint": "Davon sind 8 Hals-, 12 Brust-, 5 Lenden-, 5 Kreuzbein- und 1 Steißbeinsegment.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 49,
+      "question": "Was ist das Ziel interdisziplinärer Zusammenarbeit in der Reha?",
+      "options": [
+        "Kosten sparen",
+        "Bündelung von Expertenwissen zum Wohle des Patienten",
+        "Die Arbeit der Ärzte zu reduzieren",
+        "Die Angehörigen auszuschließen"
+      ],
+      "answer": 1,
+      "hint": "Pflege, Therapie und Medizin arbeiten hierbei Hand in Hand.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 50,
+      "question": "Welches Merkzeichen im Ausweis steht für außergewöhnliche Gehbehinderung?",
+      "options": [
+        "G",
+        "aG",
+        "B",
+        "H"
+      ],
+      "answer": 1,
+      "hint": "Dieses Merkzeichen berechtigt u.a. zum Parken auf Behindertenparkplätzen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 51,
+      "question": "Welche Struktur eines Neurons ist primär für die Signalaufnahme (Eingangsseite) zuständig?",
+      "options": [
+        "Axon",
+        "Dendrit",
+        "Myelinscheide",
+        "Ranvier-Schnürring"
+      ],
+      "answer": 1,
+      "hint": "Diese baumartig verzweigten Fortsätze empfangen Impulse von anderen Zellen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 52,
+      "question": "Ein Mangel welcher Neurotransmitter wird primär mit der Entstehung von Depressionen in Verbindung gebracht?",
+      "options": [
+        "Glutamat und GABA",
+        "Acetylcholin und Dopamin",
+        "Noradrenalin und Serotonin",
+        "Endorphine und Insulin"
+      ],
+      "answer": 2,
+      "hint": "Diese Botenstoffe regulieren unter anderem die Stimmung und Wachheit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 53,
+      "question": "Welche Auswirkung hat der Sympathikus auf die Bronchien?",
+      "options": [
+        "Verengung",
+        "Erweiterung",
+        "Vermehrte Schleimproduktion",
+        "Keine Wirkung"
+      ],
+      "answer": 1,
+      "hint": "Der Sympathikus bereitet den Körper auf körperliche Höchstleistung vor.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 54,
+      "question": "Wie nennt man die bindegewebige Trennwand der Dura mater, die die beiden Großhirnhemisphären trennt?",
+      "options": [
+        "Tentorium cerebelli",
+        "Falx cerebri",
+        "Falx cerebelli",
+        "Pia mater"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um die sogenannte 'Großhirnsichel'.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 55,
+      "question": "Wie viele Segmente umfasst das menschliche Rückenmark im Bereich der Brust (Thorakalmark)?",
+      "options": [
+        "8",
+        "5",
+        "12",
+        "1"
+      ],
+      "answer": 2,
+      "hint": "Die Anzahl entspricht der Anzahl der Brustwirbel.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 56,
+      "question": "Was ist ein typisches Beispiel für einen Fremdreflex?",
+      "options": [
+        "Patellarsehnenreflex",
+        "Achillessehnenreflex",
+        "Schutzreflex beim Berühren einer heißen Herdplatte",
+        "Bizepssehnenreflex"
+      ],
+      "answer": 2,
+      "hint": "Bei Fremdreflexen liegen Reizort und Reizantwort in unterschiedlichen Organen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 57,
+      "question": "Welches Hirnareal wird primär durch die Arteria cerebri media versorgt?",
+      "options": [
+        "Hinterhauptlappen",
+        "Große Teile der Außenfläche (Stirn-, Scheitel- und Schläfenlappen)",
+        "Nur der Hirnstamm",
+        "Ausschließlich das Kleinhirn"
+      ],
+      "answer": 1,
+      "hint": "Dieses Gefäß ist bei Schlaganfällen besonders häufig betroffen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 58,
+      "question": "Was versteht die ICF unter 'personenbezogenen Faktoren'?",
+      "options": [
+        "Rollstuhlrampen in der Umgebung",
+        "Gesetze zur Teilhabe",
+        "Eigenschaften wie Alter, Geschlecht, Lebensstil und Motivation",
+        "Die ärztliche Diagnose"
+      ],
+      "answer": 2,
+      "hint": "Es handelt sich um Faktoren, die nicht Teil des Gesundheitsproblems, aber Teil der Person sind.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 59,
+      "question": "Was bedeutet das Merkzeichen 'aG' im Schwerbehindertenausweis?",
+      "options": [
+        "Altersbedingte Gehschwäche",
+        "Außergewöhnliche Gehbehinderung",
+        "Aphasie-Gefahr",
+        "Arbeitsunfähigkeit"
+      ],
+      "answer": 1,
+      "hint": "Dieses Merkzeichen wird z.B. bei Verlust beider Beine ab Oberschenkelhöhe vergeben.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 60,
+      "question": "Welches Ziel verfolgt die Phase E im neurologischen Phasenmodell?",
+      "options": [
+        "Akutbehandlung",
+        "Frührehabilitation",
+        "Nachsorge und berufliche Rehabilitation",
+        "Aktivierende Langzeitpflege"
+      ],
+      "answer": 2,
+      "hint": "In dieser Phase geht es um die Wiedereingliederung in das Arbeitsleben.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 61,
+      "question": "Wofür steht das 'R' im SMART-Prinzip?",
+      "options": [
+        "Relevant",
+        "Realistisch",
+        "Robust",
+        "Ressourcenorientiert"
+      ],
+      "answer": 1,
+      "hint": "Das Ziel muss für den Patienten tatsächlich erreichbar sein.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 62,
+      "question": "Was wird im PÄS-Schema unter 'S' dokumentiert?",
+      "options": [
+        "Soziale Kontakte",
+        "Symptome und Kennzeichen",
+        "Spezifische Pflegeplanung",
+        "Selbstständigkeit"
+      ],
+      "answer": 1,
+      "hint": "Hier stehen die beobachtbaren Anzeichen, die die Diagnose bestätigen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 63,
+      "question": "Welche Punktzahl erhält ein Patient im Barthel-Index beim Kriterium 'Essen', wenn er Hilfe beim Fleischschneiden benötigt?",
+      "options": [
+        "10 Punkte",
+        "5 Punkte",
+        "0 Punkte",
+        "15 Punkte"
+      ],
+      "answer": 1,
+      "hint": "10 Punkte gäbe es nur bei vollständiger Unabhängigkeit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 64,
+      "question": "Welche pflegerische Maßnahme ist bei einer Fazialisparese mit unvollständigem Lidschluss essenziell?",
+      "options": [
+        "Vermehrtes Sprechtraining",
+        "Anlegen eines Uhrglasverbandes (insb. nachts) zum Hornhautschutz",
+        "Massive Kühlung des Gesichts",
+        "Vollständiger Verzicht auf Augenpflege"
+      ],
+      "answer": 1,
+      "hint": "Das Auge droht sonst auszutrocknen und Schaden zu nehmen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 65,
+      "question": "Welches Brodmann-Areal wird klassischerweise dem Broca-Sprachzentrum zugeordnet?",
+      "options": [
+        "Areal 22",
+        "Areal 17",
+        "Areale 44 und 45",
+        "Areal 4"
+      ],
+      "answer": 2,
+      "hint": "Dieses Zentrum liegt im Stirnlappen und steuert die Sprachproduktion.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 66,
+      "question": "Warum gilt ein Schlaganfall als medizinischer Notfall ('Time is Brain')?",
+      "options": [
+        "Weil die Patienten sonst unruhig werden",
+        "Weil Nervenzellen bei Sauerstoffmangel bereits nach wenigen Minuten unwiederbringlich absterben",
+        "Damit die Abrechnung im Krankenhaus stimmt",
+        "Weil die Angehörigen sonst klagen könnten"
+      ],
+      "answer": 1,
+      "hint": "Eine schnelle Durchblutungswiederherstellung kann Dauerschäden minimieren.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 67,
+      "question": "Was ist der Unterschied zwischen einer Hemiparese und einer Hemiplegie?",
+      "options": [
+        "Es gibt keinen Unterschied",
+        "Hemiparese ist eine leichte Lähmung, Hemiplegie eine vollständige Lähmung",
+        "Hemiplegie betrifft nur die Beine",
+        "Hemiparese tritt nur bei Kindern auf"
+      ],
+      "answer": 1,
+      "hint": "Die Begriffe beschreiben den Schweregrad der motorischen Einschränkung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 68,
+      "question": "Ein Patient nach Schlaganfall isst nur die rechte Hälfte seines Tellers leer. Welches Phänomen liegt wahrscheinlich vor?",
+      "options": [
+        "Aphasie",
+        "Dysphagie",
+        "Neglect",
+        "Apraxie"
+      ],
+      "answer": 2,
+      "hint": "Es handelt sich um eine Störung der Aufmerksamkeit für eine Raumhälfte.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 69,
+      "question": "Welche Symptome sind typisch für eine Globale Aphasie?",
+      "options": [
+        "Flüssiges Sprechen mit vielen Wortneubildungen",
+        "Fast vollständiger Verlust der Sprache und des Sprachverständnisses",
+        "Nur leichte Wortfindungsstörungen",
+        "Perfektes Verständnis, aber leichte Artikulationsprobleme"
+      ],
+      "answer": 1,
+      "hint": "Es ist die schwerste Form der aphasischen Störung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 70,
+      "question": "Was ist das Hauptmerkmal einer Dysarthrie?",
+      "options": [
+        "Störung der Grammatik",
+        "Verlust der Lesefähigkeit",
+        "Störung der Ausführung von Sprechbewegungen (verwaschene Aussprache)",
+        "Völlige Stummheit bei intakten Muskeln"
+      ],
+      "answer": 2,
+      "hint": "Die Ursache liegt in einer Schwäche oder Koordinationsstörung der Sprechmuskeln.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 71,
+      "question": "In welcher Schluckphase wird der 'Bolus' (Nahrungsbissen) geformt?",
+      "options": [
+        "Prä-orale Phase",
+        "Orale Vorbereitungsphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase erfolgt das Kauen und Einspeicheln.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 72,
+      "question": "Was ist die gefährlichste Folge einer unerkannten stillen Aspiration?",
+      "options": [
+        "Gewichtsverlust",
+        "Mundtrockenheit",
+        "Aspirationspneumonie (Lungenentzündung)",
+        "Zahnschmerzen"
+      ],
+      "answer": 2,
+      "hint": "Fremdkörper in der Lunge führen ohne Abwehrreaktion oft zu schweren Infekten.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 73,
+      "question": "Nach Perry (SSA) muss das Assessment abgebrochen werden, wenn der Patient beim Schluckversuch:",
+      "options": [
+        "Lächelt",
+        "Hustet oder räuspert",
+        "Schnell schluckt",
+        "Nach mehr Wasser fragt"
+      ],
+      "answer": 1,
+      "hint": "Husten ist ein klinisches Zeichen für das Eindringen von Material in die Atemwege.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 74,
+      "question": "Welche Voraussetzung muss für die Durchführung des GUSS-Tests (Gugging Swallowing Screen) erfüllt sein?",
+      "options": [
+        "Der Patient muss schlafen",
+        "Der Patient muss mindestens 15 Minuten wach und reaktionsfähig sein",
+        "Der Patient muss stehen können",
+        "Der Magen muss leer sein"
+      ],
+      "answer": 1,
+      "hint": "Die Vigilanz ist entscheidend für die Sicherheit beim Schlucken.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 75,
+      "question": "Wie sollte die Portionsgröße beim Anreichen von Nahrung bei Dysphagie-Patienten gewählt werden?",
+      "options": [
+        "Ein gehäufter Esslöffel",
+        "Maximal ein halber Teelöffel voll",
+        "Möglichst große Bissen zur Reflexauslösung",
+        "Ein ganzer Becher auf einmal"
+      ],
+      "answer": 1,
+      "hint": "Kleine Mengen lassen sich besser kontrollieren und sicherer schlucken.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 76,
+      "question": "Welche Flüssigkeit ist für die Lunge im Falle einer Aspiration am besten kompensierbar?",
+      "options": [
+        "Milchshakes",
+        "Klare Flüssigkeiten ohne Zucker (z.B. Wasser, Tee)",
+        "Fruchtsäfte mit Fruchtfleisch",
+        "Dickflüssiger Tomatensaft"
+      ],
+      "answer": 1,
+      "hint": "Zucker und Fette in der Lunge begünstigen das Bakterienwachstum stärker.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 77,
+      "question": "In welcher Struktur der Pia mater wird der Liquor cerebrospinalis gebildet?",
+      "options": [
+        "Arachnoidalzotten",
+        "Plexus choroideus",
+        "Sinus sagittalis",
+        "Epiduralraum"
+      ],
+      "answer": 1,
+      "hint": "Diese Kapillargeflechte filtrieren das Blut zur Liquorproduktion.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 78,
+      "question": "Auf welcher Höhe endet das Rückenmark beim Erwachsenen normalerweise?",
+      "options": [
+        "Am Steißbein",
+        "Auf Höhe des 1. bis 2. Lendenwirbels (L1/L2)",
+        "Am Hinterhauptloch",
+        "Auf Höhe des Bauchnabels"
+      ],
+      "answer": 1,
+      "hint": "Darunter befinden sich nur noch die Nervenwurzeln (Cauda equina).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 79,
+      "question": "Wie nennt man einen vegetativen Reflex, bei dem die Erregung eines inneren Organs eine Reaktion eines anderen inneren Organs bewirkt (z.B. Blasenentleerung)?",
+      "options": [
+        "Eigenreflex",
+        "Fremdreflex",
+        "Viszero-viszeraler Reflex",
+        "Viszero-somatischer Reflex"
+      ],
+      "answer": 2,
+      "hint": "Beide beteiligten Partner sind Eingeweide (Viszera).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 80,
+      "question": "In welcher Windung des Großhirns liegt das primär sensorische Rindenfeld?",
+      "options": [
+        "Gyrus praecentralis",
+        "Gyrus postcentralis",
+        "Gyrus angularis",
+        "Kleinhirnwurm"
+      ],
+      "answer": 1,
+      "hint": "Es liegt direkt hinter der Zentralfurche im Scheitellappen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 81,
+      "question": "Was ist das Kernproblem bei einer Sprechapraxie?",
+      "options": [
+        "Muskellähmung",
+        "Störung der Sprechplanung und Programmierung",
+        "Verlust des Wortschatzes",
+        "Schwerhörigkeit"
+      ],
+      "answer": 1,
+      "hint": "Die Muskelkraft ist vorhanden, aber der 'Bauplan' für das Wort kommt nicht an.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 82,
+      "question": "Wie sollte man sich als Pflegekraft gegenüber einem Patienten mit Aphasie verhalten?",
+      "options": [
+        "Sätze für ihn beenden, um Zeit zu sparen",
+        "Nur noch schriftlich kommunizieren",
+        "Geduldig sein und den Patienten ausreden lassen",
+        "Laut und deutlich schreien"
+      ],
+      "answer": 2,
+      "hint": "Zeitdruck erhöht den Stress und verschlechtert die Sprachproduktion.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 83,
+      "question": "Welcher Teil des SGB IX regelt die besonderen Bestimmungen für schwerbehinderte Menschen?",
+      "options": [
+        "Teil 1",
+        "Teil 2",
+        "Teil 3",
+        "Teil 12"
+      ],
+      "answer": 2,
+      "hint": "Das Gesetz ist in drei Hauptteile gegliedert.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 84,
+      "question": "Was ist das Hauptziel des 'Persönlichen Budgets'?",
+      "options": [
+        "Kosteneinsparung für die Kassen",
+        "Förderung der Selbstbestimmung und Wahlfreiheit des Behinderten",
+        "Erhöhung der Bürokratie",
+        "Finanzierung von Urlauben für Pflegekräfte"
+      ],
+      "answer": 1,
+      "hint": "Der Mensch mit Behinderung wird zum 'Käufer' seiner Leistungen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 85,
+      "question": "Welche Definition von Inklusion ist korrekt?",
+      "options": [
+        "Der Behinderte muss sich in die normale Gesellschaft einfügen",
+        "Behinderte Menschen leben in Sondereinrichtungen",
+        "Die Gesellschaft passt ihre Strukturen so an, dass alle Menschen teilhaben können",
+        "Inklusion ist nur ein anderes Wort für Integration"
+      ],
+      "answer": 2,
+      "hint": "Inklusion fordert die Anpassung der Umwelt an das Individuum.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 86,
+      "question": "Müssen öffentlich zugängliche bauliche Anlagen (z.B. Kinos) in NRW barrierefrei sein?",
+      "options": [
+        "Nein, das ist freiwillig",
+        "Ja, das ist in § 49 der Bauordnung NRW gesetzlich vorgeschrieben",
+        "Nur wenn der Besitzer selbst behindert ist",
+        "Nur in Großstädten"
+      ],
+      "answer": 1,
+      "hint": "Barrierefreiheit ist ein rechtlich verankertes Ziel.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 87,
+      "question": "Welche dieser Behinderungsarten wird in der Fachsprache heute oft als 'kognitive Beeinträchtigung' bezeichnet?",
+      "options": [
+        "Körperbehinderung",
+        "Sehbehinderung",
+        "Geistige Behinderung",
+        "Hörbehinderung"
+      ],
+      "answer": 2,
+      "hint": "Es handelt sich um eine wertschätzendere Bezeichnung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 88,
+      "question": "Wie nennt man die Fähigkeit des Gehirns, Funktionen nach einer Schädigung neu zu organisieren?",
+      "options": [
+        "Atrophie",
+        "Neuroplastizität",
+        "Apoplex",
+        "Refraktärzeit"
+      ],
+      "answer": 1,
+      "hint": "Dies ist die Grundlage für jeden Rehabilitationserfolg.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 89,
+      "question": "Wie viel Prozent des täglichen Sauerstoffs und Zuckers verbraucht das menschliche Gehirn?",
+      "options": [
+        "3 %",
+        "10 %",
+        "20 %",
+        "50 %"
+      ],
+      "answer": 2,
+      "hint": "Obwohl es nur 3 % des Körpergewichts ausmacht, ist es energetisch sehr teuer.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 90,
+      "question": "Welche Funktion hat das Brodmann-Areal 17 im Hinterhauptlappen?",
+      "options": [
+        "Hören",
+        "Sprechen",
+        "Sehen (Primäre Sehrinde)",
+        "Rechnen"
+      ],
+      "answer": 2,
+      "hint": "Hier kommen die Signale der Sehnerven an.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 91,
+      "question": "In wie vielen Schichten ist die Großhirnrinde (graue Substanz) beim Menschen typischerweise aufgebaut?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": 2,
+      "hint": "Dieser Aufbau ist charakteristisch für den Neokortex.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 92,
+      "question": "Wie nennt man Nervenfasern der weißen Substanz, die Impulse innerhalb einer einzelnen Hemisphäre hin- und herleiten?",
+      "options": [
+        "Kommissurenbahnen",
+        "Projektionsbahnen",
+        "Assoziationsbahnen",
+        "Pyramidenbahnen"
+      ],
+      "answer": 2,
+      "hint": "Sie verknüpfen verschiedene Rindenfelder derselben Seite.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 93,
+      "question": "Welches Zentrum im Zwischenhirn steuert den Wasser- und Elektrolythaushalt sowie die Körpertemperatur?",
+      "options": [
+        "Thalamus",
+        "Hypothalamus",
+        "Zirbeldrüse",
+        "Balken"
+      ],
+      "answer": 1,
+      "hint": "Er ist die oberste Steuerzentrale des vegetativen Nervensystems.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 94,
+      "question": "Welches netzartige Geflecht im Hirnstamm reguliert die Wachheit und das Bewusstsein?",
+      "options": [
+        "Basalganglien",
+        "Limbisches System",
+        "Formatio reticularis",
+        "Plexus choroideus"
+      ],
+      "answer": 2,
+      "hint": "Eine Schädigung hier führt oft zum Koma.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 95,
+      "question": "Was misst eine Elektroenzephalografie (EEG)?",
+      "options": [
+        "Den Blutfluss im Gehirn",
+        "Elektrische Spannungsschwankungen der Hirnrinde",
+        "Die Muskelkraft der Beine",
+        "Den Liquordruck"
+      ],
+      "answer": 1,
+      "hint": "Die Elektroden werden schmerzfrei auf der Kopfhaut angebracht.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 96,
+      "question": "Wie nennt man eine unkontrollierte, synchronisierte Nervenzellaktivität im Gehirn?",
+      "options": [
+        "Schlaganfall",
+        "Epileptischer Anfall",
+        "Migräne",
+        "Demenz"
+      ],
+      "answer": 1,
+      "hint": "Dabei geben viele Neuronen gleichzeitig Aktionspotenziale ab.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 97,
+      "question": "Was ist die pathophysiologische Ursache der Multiplen Sklerose (MS)?",
+      "options": [
+        "Blutungen im Gehirn",
+        "Autoimmunbedingter Abbau der Myelinscheiden (Markscheiden)",
+        "Mangel an Vitamin C",
+        "Überproduktion von Liquor"
+      ],
+      "answer": 1,
+      "hint": "Dadurch wird die elektrische Erregungsleitung gestört.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 98,
+      "question": "Wie nennt man die spezielle Synapse zwischen einem efferenten Neuron und einer Muskelfaser?",
+      "options": [
+        "Ranvier-Schnürring",
+        "Motorische Endplatte",
+        "Dendritischer Baum",
+        "Liquorschranke"
+      ],
+      "answer": 1,
+      "hint": "Hier wird Acetylcholin zur Kontraktionsauslösung freigesetzt.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 99,
+      "question": "Welcher große Armnerv entspringt aus dem Plexus brachialis und versorgt u.a. den Daumenbereich?",
+      "options": [
+        "N. ischiadicus",
+        "N. medianus",
+        "N. femoralis",
+        "N. phrenicus"
+      ],
+      "answer": 1,
+      "hint": "Ein bekannter Engpass dieses Nervs ist das Karpaltunnelsyndrom.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 100,
+      "question": "Was versorgt der Nervus vagus (X. Hirnnerv) primär?",
+      "options": [
+        "Nur das Gesicht",
+        "Die Kaumuskulatur",
+        "Innere Organe von Hals bis Bauchraum (Parasympathikus)",
+        "Den Gleichgewichtssinn"
+      ],
+      "answer": 2,
+      "hint": "Er ist der längste Hirnnerv und wird oft als 'Wandernerv' bezeichnet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 101,
+      "question": "Welche Struktur im Zwischenhirn ist das Bindeglied zwischen Nerven- und Hormonsystem?",
+      "options": [
+        "Thalamus",
+        "Hypothalamus",
+        "Balken",
+        "Formatio reticularis"
+      ],
+      "answer": 1,
+      "hint": "Er steuert lebenswichtige Funktionen wie Körpertemperatur und Wasserhaushalt [1].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 102,
+      "question": "Wie nennt man die graue Substanz in der Tiefe des Großhirns, die für motorische Koordination wichtig ist?",
+      "options": [
+        "Plexus choroideus",
+        "Basalganglien",
+        "Assoziationsbahnen",
+        "Dura mater"
+      ],
+      "answer": 1,
+      "hint": "Hierzu gehören u. a. der Schweifkern und der Mandelkern [2].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 103,
+      "question": "Was charakterisiert die REM-Schlafphase?",
+      "options": [
+        "Sehr tiefer, traumloser Schlaf",
+        "Schnelle Augenbewegungen und erhöhte Herzfrequenz",
+        "Völlige Abwesenheit von Gehirnströmen",
+        "Nur bei Neugeborenen vorhanden"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase träumen Menschen besonders intensiv [3].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 104,
+      "question": "Wo wird der Liquor cerebrospinalis primär gebildet?",
+      "options": [
+        "In den Arachnoidalzotten",
+        "Im Plexus choroideus der Ventrikel",
+        "Im Epiduralraum",
+        "In den Basalganglien"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um spezielle Gefäßgeflechte in den Hirnkammern [4].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 105,
+      "question": "Welcher Raum existiert im Gehirn im Gegensatz zum Rückenmark praktisch nicht?",
+      "options": [
+        "Subarachnoidalraum",
+        "Epiduralraum",
+        "Subduralraum",
+        "Zentralkanal"
+      ],
+      "answer": 1,
+      "hint": "Im Schädel ist die Dura mater fest mit dem Knochen verwachsen [5].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 106,
+      "question": "Welches Gefäß versorgt das Broca-Areal primär mit Blut?",
+      "options": [
+        "A. cerebri anterior",
+        "A. cerebri media",
+        "A. cerebri posterior",
+        "A. basilaris"
+      ],
+      "answer": 1,
+      "hint": "Die Media versorgt etwa zwei Drittel der Gehirnhemisphäre [6].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 107,
+      "question": "Was beschreibt der Begriff 'Agrammatismus' bei einer Aphasie?",
+      "options": [
+        "Flüssiges Sprechen ohne Sinn",
+        "Sprechen in kurzen, unvollständigen Sätzen (Telegrammstil)",
+        "Störung des Leseverständnisses",
+        "Verlust der Rechenfähigkeit"
+      ],
+      "answer": 1,
+      "hint": "Dies ist ein Leitmerkmal der Broca-Aphasie [7].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 108,
+      "question": "Welches Hirnareal nach Brodmann ist für das Sprachverständnis (Wernicke-Zentrum) zuständig?",
+      "options": [
+        "Areal 4",
+        "Areal 17",
+        "Areal 22",
+        "Areal 44"
+      ],
+      "answer": 2,
+      "hint": "Es liegt im Temporallappen der sprachdominanten Hemisphäre [8].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 109,
+      "question": "Wie lange dauert die pharyngeale Schluckphase normalerweise an?",
+      "options": [
+        "Ca. 5 Sekunden",
+        "Ca. 0,7 Sekunden",
+        "Mehrere Minuten",
+        "Genau 1 Millisekunde"
+      ],
+      "answer": 1,
+      "hint": "Dies ist die hochkritische Phase des Schluckreflexes [9].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 110,
+      "question": "Welche Konsequenz hat eine 'schwerste Dysphagie' (Grad 4) oft für die Ernährung?",
+      "options": [
+        "Gabe von weichem Brot",
+        "Nahrungskarenz (NPO) und ggf. Sondenernährung",
+        "Nur Gabe von unangedickten Flüssigkeiten",
+        "Der Patient darf alles essen"
+      ],
+      "answer": 1,
+      "hint": "Das Aspirationsrisiko ist hierbei zu hoch für orale Kost [10].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 111,
+      "question": "Wofür steht das 'A' im GUSS-Test (Screening-Tool)?",
+      "options": [
+        "Atemnot",
+        "Aspiration",
+        "Assessment",
+        "Appetit"
+      ],
+      "answer": 1,
+      "hint": "Der Test prüft klinische Zeichen für das Eindringen von Material in die Atemwege [11].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 112,
+      "question": "Was versteht man unter 'stiller Aspiration'?",
+      "options": [
+        "Der Patient verschluckt sich lautlos",
+        "Eindringen von Material in die Atemwege ohne Schutzhusten",
+        "Das Verschlucken von Speichel im Schlaf",
+        "Eine Verstopfung der Speiseröhre"
+      ],
+      "answer": 1,
+      "hint": "Da der Hustenreiz fehlt, bleibt sie oft unbemerkt und gefährlich [12].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 113,
+      "question": "Welcher Hirnnerv ist bei einer Fazialisparese geschädigt?",
+      "options": [
+        "V. Hirnnerv (Trigeminus)",
+        "VII. Hirnnerv (Facialis)",
+        "X. Hirnnerv (Vagus)",
+        "XII. Hirnnerv (Hypoglossus)"
+      ],
+      "answer": 1,
+      "hint": "Er steuert primär die mimische Gesichtsmuskulatur [13].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 114,
+      "question": "Was ist das Hauptmerkmal einer zentralen Fazialisparese im Vergleich zur peripheren?",
+      "options": [
+        "Das ganze Gesicht ist gelähmt",
+        "Die Stirnmuskulatur bleibt beweglich",
+        "Der Patient kann nicht mehr sehen",
+        "Die Zunge ist gelähmt"
+      ],
+      "answer": 1,
+      "hint": "Die Stirn wird aus beiden Gehirnhälften versorgt [14].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 115,
+      "question": "Wie sollte man mit einem Patienten mit Aphasie kommunizieren?",
+      "options": [
+        "Besonders laut schreien",
+        "Einfache, kurze Sätze nutzen und Zeit lassen",
+        "Nur noch über Angehörige sprechen",
+        "Sätze des Patienten schnell beenden"
+      ],
+      "answer": 1,
+      "hint": "Geduld und einfache Sprache senken den Kommunikationsstress [15].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 116,
+      "question": "Was kennzeichnet eine 'Sprechapraxie'?",
+      "options": [
+        "Eine Muskellähmung der Zunge",
+        "Eine Störung der Bewegungsplanung und -programmierung",
+        "Ein Verlust des Wortschatzes",
+        "Ein komplettes Fehlen des Sprachverständnisses"
+      ],
+      "answer": 1,
+      "hint": "Typisch sind Suchbewegungen der Lippen beim Sprechbeginn [16].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 117,
+      "question": "Was bedeutet 'Interdisziplinarität' im Reha-Team?",
+      "options": [
+        "Dass jeder Bereich isoliert arbeitet",
+        "Zusammenwirken verschiedener Fachgruppen für komplexe Lösungen",
+        "Dass der Arzt alle Anweisungen ohne Rücksprache gibt",
+        "Dass Therapeuten die Pflegekräfte ersetzen"
+      ],
+      "answer": 1,
+      "hint": "Es erfordert eine gemeinsame Fachsprache und Anerkennung von Kompetenzen [17].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 118,
+      "question": "Welche Phase im neurologischen Phasenmodell dient der 'Nachsorge und beruflichen Rehabilitation'?",
+      "options": [
+        "Phase C",
+        "Phase D",
+        "Phase E",
+        "Phase F"
+      ],
+      "answer": 2,
+      "hint": "In dieser Phase steht die Rückkehr in das Arbeitsleben im Fokus [18].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 119,
+      "question": "Welches Merkzeichen im Schwerbehindertenausweis steht für 'Hilflosigkeit'?",
+      "options": [
+        "G",
+        "aG",
+        "H",
+        "B"
+      ],
+      "answer": 2,
+      "hint": "Es bedeutet, dass die Person für tägliche Verrichtungen fremde Hilfe benötigt [19].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 120,
+      "question": "Wofür steht das 'T' im SMART-Prinzip?",
+      "options": [
+        "Tolerierbar",
+        "Terminiert",
+        "Therapeutisch",
+        "Teamfähig"
+      ],
+      "answer": 1,
+      "hint": "Ein Ziel muss einen festen Zeitrahmen haben [20].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 121,
+      "question": "Welche Ebene der Selbsthilfe bezieht sich auf die 'Förderung der Selbstständigkeit'?",
+      "options": [
+        "Finanzielle Ebene",
+        "Individuelle Ebene",
+        "Gesetzliche Ebene",
+        "Medizinische Ebene"
+      ],
+      "answer": 1,
+      "hint": "Hier geht es um die Alltags- und Handlungskompetenz des Einzelnen [21].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 122,
+      "question": "Was ist das übergeordnete Ziel der UN-Behindertenrechtskonvention?",
+      "options": [
+        "Heimplätze auszubauen",
+        "Volle und gleichberechtigte Teilhabe (Inklusion)",
+        "Krankheiten komplett zu heilen",
+        "Behindertenausweise abzuschaffen"
+      ],
+      "answer": 1,
+      "hint": "Sie wurde 2006 verabschiedet und 2009 in Deutschland ratifiziert [22].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 123,
+      "question": "Wie hoch ist die Inzidenz von Aphasien in Deutschland pro Jahr ca.?",
+      "options": [
+        "1.000",
+        "25.000",
+        "500.000",
+        "1 Million"
+      ],
+      "answer": 1,
+      "hint": "Die meisten Fälle resultieren aus einem Schlaganfall [23].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 124,
+      "question": "In welcher Hirnhaut befinden sich die Kapillargeflechte zur Liquorbildung?",
+      "options": [
+        "Dura mater",
+        "Arachnoidea",
+        "Pia mater",
+        "Subduralraum"
+      ],
+      "answer": 2,
+      "hint": "Es handelt sich um die innerste, zarte Schicht [4].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 125,
+      "question": "Was ist ein 'Viszero-viszeraler Reflex'?",
+      "options": [
+        "Vom Muskel zum Knochen",
+        "Reaktion eines inneren Organs auf Reizung eines anderen inneren Organs",
+        "Ein willentlicher Reflex",
+        "Ein Schutzreflex der Haut"
+      ],
+      "answer": 1,
+      "hint": "Ein Beispiel ist die reflektorische Blasenentleerung [24].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 126,
+      "question": "Wie viele Paare von Spinalnerven hat der Mensch in der Regel?",
+      "options": [
+        "12",
+        "24",
+        "31",
+        "40"
+      ],
+      "answer": 2,
+      "hint": "Sie treten segmentweise aus dem Rückenmark aus [25].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 127,
+      "question": "Was versorgt der N. phrenicus?",
+      "options": [
+        "Den Kehlkopf",
+        "Das Zwerchfell",
+        "Den Herzmuskel",
+        "Die Kaumuskulatur"
+      ],
+      "answer": 1,
+      "hint": "Er entspringt aus dem Plexus cervicalis (Halsgeflecht) [26].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 128,
+      "question": "Was bewirkt der Sympathikus an der Pupille?",
+      "options": [
+        "Verengung (Miosis)",
+        "Erweiterung (Mydriasis)",
+        "Keine Veränderung",
+        "Farbänderung"
+      ],
+      "answer": 1,
+      "hint": "Er bereitet den Körper auf erhöhte Aufmerksamkeit vor [27].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 129,
+      "question": "Was beschreibt das 'Persönliche Budget' rechtlich?",
+      "options": [
+        "Ein Taschengeld im Pflegeheim",
+        "Eine Geldleistung statt Sachleistung zur selbstbestimmten Hilfe",
+        "Eine Erhöhung der Rentenzahlung",
+        "Einen Kredit für Hilfsmittel"
+      ],
+      "answer": 1,
+      "hint": "Der Behinderte entscheidet selbst, welche Leistungen er einkauft [28].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 130,
+      "question": "Was ist die ICF-Definition von 'Teilhabe'?",
+      "options": [
+        "Das Recht auf kostenlose Medizin",
+        "Das Einbezogensein in eine Lebenssituation",
+        "Die reine Heilung einer Krankheit",
+        "Die Unterbringung in einer Sondereinrichtung"
+      ],
+      "answer": 1,
+      "hint": "Sie wird auch Partizipation genannt [29].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 131,
+      "question": "Welcher Teil des SGB IX regelt die Eingliederungshilfe?",
+      "options": [
+        "Teil 1",
+        "Teil 2",
+        "Teil 3",
+        "Teil 11"
+      ],
+      "answer": 1,
+      "hint": "Es geht hier um Leistungen zur selbstbestimmten Lebensführung [30].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 132,
+      "question": "Was bedeutet 'Neuroplastizität'?",
+      "options": [
+        "Das Absterben von Nervenzellen",
+        "Die Fähigkeit des Gehirns zur funktionellen Umstrukturierung",
+        "Ein künstlicher Ersatz von Gehirngewebe",
+        "Die Versteifung der Nervenfasern"
+      ],
+      "answer": 1,
+      "hint": "Dies ist die biologische Basis für Lern- und Rehabilitationserfolge [31].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 133,
+      "question": "In welcher Phase des Schluckens wird der Bolus über den Zungenrücken nach hinten geschoben?",
+      "options": [
+        "Orale Vorbereitungsphase",
+        "Orale Transportphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 1,
+      "hint": "Diese Phase dauert etwa eine Sekunde [32].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 134,
+      "question": "Was ist ein klinischer Hinweis auf eine pharyngeale Dysphagie?",
+      "options": [
+        "Nahrung fällt aus dem Mund",
+        "Gurgelnde Stimme nach dem Schlucken",
+        "Patient kann nicht kauen",
+        "Patient vergisst das Essen"
+      ],
+      "answer": 1,
+      "hint": "Flüssigkeit bleibt im Rachen oder dringt in den Kehlkopf ein [33].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 135,
+      "question": "Warum sollte man bei Dysphagie keine 'Mischkonsistenzen' geben?",
+      "options": [
+        "Weil sie nicht schmecken",
+        "Weil feste und flüssige Anteile unterschiedlich schnell transportiert werden",
+        "Weil sie zu viele Kalorien haben",
+        "Weil sie zu teuer sind"
+      ],
+      "answer": 1,
+      "hint": "Die Koordination im Rachen wird dadurch extrem erschwert [34].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 136,
+      "question": "Welches Merkzeichen im Ausweis berechtigt zur Mitnahme einer Begleitperson?",
+      "options": [
+        "G",
+        "H",
+        "B",
+        "RF"
+      ],
+      "answer": 2,
+      "hint": "Wichtig für die unentgeltliche Beförderung der Begleitung [19].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 137,
+      "question": "Ab welchem Wert gilt ein Grad der Behinderung (GdB) als Schwerbehinderung?",
+      "options": [
+        "20",
+        "30",
+        "50",
+        "100"
+      ],
+      "answer": 2,
+      "hint": "Ab diesem Wert stehen dem Betroffenen besondere Schutzrechte zu [35].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 138,
+      "question": "Was ist das Ziel von 'Inklusion'?",
+      "options": [
+        "Der Behinderte passt sich an",
+        "Das System passt sich der Vielfalt der Menschen an",
+        "Behinderte leben in geschlossenen Gruppen",
+        "Abschaffung aller Krankenhäuser"
+      ],
+      "answer": 1,
+      "hint": "Inklusion sieht Verschiedenheit als Normalität an [29].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 139,
+      "question": "Was ist das SMART-Ziel 'Realistisch'?",
+      "options": [
+        "Das Ziel muss schön klingen",
+        "Das Ziel muss für den Patienten tatsächlich erreichbar sein",
+        "Das Ziel muss teuer sein",
+        "Das Ziel muss nur für den Therapeuten wichtig sein"
+      ],
+      "answer": 1,
+      "hint": "Utopische Ziele demotivieren den Rehabilitationsprozess [20].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 140,
+      "question": "Welche Berufsgruppe führt primär die Schluckdiagnostik durch?",
+      "options": [
+        "Physiotherapie",
+        "Logopädie",
+        "Ergotherapie",
+        "Sozialdienst"
+      ],
+      "answer": 1,
+      "hint": "Sie sind Spezialisten für Sprach-, Sprech- und Schluckstörungen [36].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 141,
+      "question": "Was charakterisiert eine 'Amnestische Aphasie'?",
+      "options": [
+        "Vollständiger Sprachverlust",
+        "Vorrangig Wortfindungsstörungen bei flüssiger Sprache",
+        "Sinnlose Wortneubildungen",
+        "Verlust der Schreibfähigkeit"
+      ],
+      "answer": 1,
+      "hint": "Der Patient nutzt oft Umschreibungen und Floskeln [7].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 142,
+      "question": "Welcher Teil des Nervensystems steuert die 'Flight or Fight'-Reaktion?",
+      "options": [
+        "Parasympathikus",
+        "Sympathikus",
+        "Kleinhirn",
+        "Hinterhauptlappen"
+      ],
+      "answer": 1,
+      "hint": "Er erhöht die Herzfrequenz und erweitert die Bronchien [37].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 143,
+      "question": "Welche Schicht der Hirnhäute bildet das 'Wasserkissen' für das Gehirn?",
+      "options": [
+        "Dura mater",
+        "Subarachnoidalraum mit Liquor",
+        "Epiduralraum",
+        "Schädelknochen"
+      ],
+      "answer": 1,
+      "hint": "Dieser Raum liegt zwischen Arachnoidea und Pia mater [38].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 144,
+      "question": "Was ist die Hauptaufgabe des Kleinhirns?",
+      "options": [
+        "Sprachproduktion",
+        "Gleichgewicht und Bewegungskoordination",
+        "Hormonsteuerung",
+        "Sehverarbeitung"
+      ],
+      "answer": 1,
+      "hint": "Es liegt in der hinteren Schädelgrube [39].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 145,
+      "question": "Wie viele Segmente hat das Halsmark (Zervikalmark)?",
+      "options": [
+        "7",
+        "8",
+        "12",
+        "5"
+      ],
+      "answer": 1,
+      "hint": "Obwohl es nur 7 Halswirbel gibt, existieren 8 Segmente [25].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 146,
+      "question": "Was beschreibt ein 'Eigenreflex'?",
+      "options": [
+        "Reiz und Antwort im selben Muskel",
+        "Wegziehen der Hand bei Hitze",
+        "Eine willentliche Bewegung",
+        "Ein Reflex ohne Nervenbeteiligung"
+      ],
+      "answer": 0,
+      "hint": "Er ist meist monosynaptisch [40].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 147,
+      "question": "Welcher Neurotransmitter sorgt für die Übertragung an der motorischen Endplatte?",
+      "options": [
+        "Dopamin",
+        "Serotonin",
+        "Acetylcholin",
+        "Glutamat"
+      ],
+      "answer": 2,
+      "hint": "Er löst die Kontraktion der Skelettmuskulatur aus [41].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 148,
+      "question": "Was versteht man unter 'Inklusion' im öffentlichen Bau?",
+      "options": [
+        "Bau von Treppen ohne Aufzüge",
+        "Gesetzliche Pflicht zur Barrierefreiheit (§ 49 BauO NRW)",
+        "Bau von Sondereingängen für Behinderte",
+        "Keine besonderen Vorschriften"
+      ],
+      "answer": 1,
+      "hint": "Öffentliche Gebäude müssen für alle zugänglich sein [42].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 149,
+      "question": "Welcher Test prüft das Risiko der 'stillen Aspiration' am besten (Goldstandard)?",
+      "options": [
+        "Wassertest nach Daniels",
+        "GUSS-Test",
+        "Instrumentelle Diagnostik (FEES oder Röntgen-Schluckstudie)",
+        "Blutdruckmessung"
+      ],
+      "answer": 2,
+      "hint": "Klinische Tests können lautlose Vorgänge oft nicht erfassen [11].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 150,
+      "question": "Was ist die Konsequenz der Pyramidenbahnkreuzung?",
+      "options": [
+        "Es gibt keine Kreuzung",
+        "Die linke Hirnhälfte steuert die rechte Körperseite",
+        "Beide Hälften steuern alles gemeinsam",
+        "Die Beine werden doppelt versorgt"
+      ],
+      "answer": 1,
+      "hint": "Die Fasern kreuzen im verlängerten Mark zur Gegenseite [43].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 151,
+      "question": "An welcher Stelle kreuzen die Fasern der Pyramidenbahn zum Großteil zur Gegenseite?",
+      "options": [
+        "Im Thalamus",
+        "Im verlängerten Mark (Medulla oblongata)",
+        "Im Balken",
+        "Direkt im Rückenmark"
+      ],
+      "answer": 1,
+      "hint": "Die Pyramidenkreuzung erklärt, warum eine Schädigung der linken Hirnhälfte zu Symptomen auf der rechten Körperseite führt.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 152,
+      "question": "Welches aphasische Syndrom ist primär durch das Auftreten von Sprachautomatismen (z. B. 'tata-tata') gekennzeichnet?",
+      "options": [
+        "Broca-Aphasie",
+        "Wernicke-Aphasie",
+        "Globale Aphasie",
+        "Amnestische Aphasie"
+      ],
+      "answer": 2,
+      "hint": "Diese Form ist die schwerste Störung, bei der fast der gesamte Sprachfluss durch starre Silbenfolgen ersetzt wird.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 153,
+      "question": "Was ist das primäre Ziel des GUSS (Gugging Swallowing Screen)?",
+      "options": [
+        "Die Heilung der Schluckstörung",
+        "Die Ersteinschätzung des Aspirationsrisikos am Krankenbett",
+        "Die Messung der Kalorienaufnahme",
+        "Die operative Planung"
+      ],
+      "answer": 1,
+      "hint": "Es ist ein Screening-Tool, das entscheidet, ob ein Patient sicher essen oder trinken kann.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 154,
+      "question": "Wie heißt die tiefe Furche, die das Großhirn in eine rechte und linke Hemisphäre teilt?",
+      "options": [
+        "Sulcus centralis",
+        "Fissura longitudinalis",
+        "Sulcus lateralis",
+        "Tentorium cerebelli"
+      ],
+      "answer": 1,
+      "hint": "Diese 'Längsfurche' ist ein markantes anatomisches Merkmal bei der Aufsicht auf das Gehirn.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 155,
+      "question": "Was besagt Artikel 3 Abs. 3 des deutschen Grundgesetzes (seit 1994)?",
+      "options": [
+        "Behinderte Menschen müssen in Heimen leben",
+        "Niemand darf wegen seiner Behinderung benachteiligt werden",
+        "Jeder hat ein Anrecht auf ein Auto",
+        "Krankheiten müssen ausgerottet werden"
+      ],
+      "answer": 1,
+      "hint": "Dies ist ein zentrales Grundrecht zum Schutz vor Diskriminierung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 156,
+      "question": "Welche Phase im neurologischen Phasenmodell entspricht der 'Anschlussheilbehandlung' zur Ermöglichung einer selbstständigen Lebensführung zu Hause?",
+      "options": [
+        "Phase B",
+        "Phase C",
+        "Phase D",
+        "Phase F"
+      ],
+      "answer": 2,
+      "hint": "Diese Phase folgt meist auf die Akut- und Frühreha und bereitet auf die Entlassung vor.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 157,
+      "question": "Welcher Vorgang findet in der 'Oralen Vorbereitungsphase' des Schluckens statt?",
+      "options": [
+        "Auslösung des Hungergefühls",
+        "Kauen, Einspeichelung und Bolusformung",
+        "Transport durch die Speiseröhre",
+        "Verschluss des Kehlkopfes"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase wird die Nahrung mechanisch zerkleinert und für den Schluckakt bereitgemacht.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 158,
+      "question": "Welcher Muskel ist für den Lidschluss zuständig und bei einer Fazialisparese oft betroffen?",
+      "options": [
+        "M. frontalis",
+        "M. orbicularis oculi",
+        "M. buccinator",
+        "M. masseter"
+      ],
+      "answer": 1,
+      "hint": "Ein Ausfall führt dazu, dass das Auge nicht mehr vollständig geschlossen werden kann (Gefahr der Austrocknung).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 159,
+      "question": "Welches der genannten Instrumente ist ein Assessment zur Einschätzung des Dekubitusrisikos?",
+      "options": [
+        "Barthel-Index",
+        "Norton-Skala",
+        "Mini Mental Status Test",
+        "Visuelle Analogskala"
+      ],
+      "answer": 1,
+      "hint": "Neben Braden und Waterlow ist dies eine klassische Skala für körperliche Aspekte.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 160,
+      "question": "Welcher Neurotransmitter im ZNS hat primär eine hemmende Wirkung?",
+      "options": [
+        "Glutamat",
+        "GABA (Gamma-Aminobuttersäure)",
+        "Acetylcholin",
+        "Dopamin"
+      ],
+      "answer": 1,
+      "hint": "GABA ist der wichtigste Gegenspieler zu den erregenden Botenstoffen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 161,
+      "question": "Ein Patient nach Schlaganfall rasiert sich nur die rechte Gesichtshälfte. Wie nennt man dieses Phänomen?",
+      "options": [
+        "Apraxie",
+        "Aphasie",
+        "Neglect",
+        "Ataxie"
+      ],
+      "answer": 2,
+      "hint": "Es handelt sich um eine Aufmerksamkeitsstörung für eine Raum- oder Körperseite.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 162,
+      "question": "Welche Arterie versorgt primär den Hinterhauptlappen (Okzipitallappen) mit dem Sehzentrum?",
+      "options": [
+        "A. cerebri anterior",
+        "A. cerebri media",
+        "A. cerebri posterior",
+        "A. carotis interna"
+      ],
+      "answer": 2,
+      "hint": "Dieses Gefäß bildet den hinteren Teil des Circulus arteriosus Willisii.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 163,
+      "question": "Was beschreibt der Begriff 'Agrammatismus' fachsprachlich?",
+      "options": [
+        "Eine Leseschwäche",
+        "Den Verlust der Grammatik (Sprechen in kurzen, unvollständigen Sätzen)",
+        "Verwaschene Aussprache",
+        "Sinnlose Wortneubildungen"
+      ],
+      "answer": 1,
+      "hint": "Wird oft auch als 'Telegrammstil' bezeichnet und ist typisch für die Broca-Aphasie.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 164,
+      "question": "Wofür steht das 'A' im SMART-Prinzip bei der Formulierung von Reha-Zielen?",
+      "options": [
+        "Anatomisch",
+        "Akzeptiert (bzw. Attraktiv)",
+        "Arztzentriert",
+        "Automatisiert"
+      ],
+      "answer": 1,
+      "hint": "Das Ziel muss vom Patienten mitgetragen werden, um motivierend zu wirken.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 165,
+      "question": "Welche Faktoren werden in der ICF (International Classification of Functioning) als 'Kontextfaktoren' bezeichnet?",
+      "options": [
+        "Nur die medizinische Diagnose",
+        "Umweltfaktoren und personenbezogene Faktoren",
+        "Ausschließlich die finanziellen Mittel",
+        "Die Körperstrukturen"
+      ],
+      "answer": 1,
+      "hint": "Diese Faktoren beschreiben den Lebenshintergrund einer Person.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 166,
+      "question": "Welche pflegerische Schutzmaßnahme ist bei einer Fazialisparese mit Lagophthalmus (unvollständiger Lidschluss) indiziert?",
+      "options": [
+        "Halskrause anlegen",
+        "Uhrglasverband zum Schutz der Hornhaut",
+        "Kühlende Umschläge",
+        "Völlige Bettruhe"
+      ],
+      "answer": 1,
+      "hint": "Dieser Verband hält das Auge feucht und schützt vor Verletzungen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 167,
+      "question": "Wo wird der Liquor cerebrospinalis nach der Umspülung des ZNS resorbiert?",
+      "options": [
+        "Im Plexus choroideus",
+        "In den Arachnoidalzotten",
+        "In der Hypophyse",
+        "In den Basalganglien"
+      ],
+      "answer": 1,
+      "hint": "Von hier aus wird die Flüssigkeit in das venöse Blutsystem abgeleitet.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 168,
+      "question": "Was charakterisiert den Patellarsehnenreflex anatomisch?",
+      "options": [
+        "Er ist ein Fremdreflex",
+        "Er ist ein monosynaptischer Eigenreflex",
+        "Er wird über das Gehirn gesteuert",
+        "Er benötigt mindestens drei Neurone"
+      ],
+      "answer": 1,
+      "hint": "Reizort und Reizantwort liegen im selben Muskel.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 169,
+      "question": "Wie viele Schritte umfasst der klassische Pflegeprozess nach Fiechter und Meier?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 2,
+      "hint": "Das Modell reicht von der Informationssammlung bis zur Evaluation der Wirkung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 170,
+      "question": "Ab welchem Grad der Behinderung (GdB) liegt in Deutschland rechtlich eine Schwerbehinderung vor?",
+      "options": [
+        "20",
+        "30",
+        "50",
+        "100"
+      ],
+      "answer": 2,
+      "hint": "Ab diesem Wert erhält der Betroffene einen Schwerbehindertenausweis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 171,
+      "question": "Was versteht man unter 'Stiller Aspiration'?",
+      "options": [
+        "Der Patient verschluckt sich im Schlaf",
+        "Eindringen von Material in die Atemwege ohne Auslösung eines Hustenreizes",
+        "Das Verschlucken von Wasser",
+        "Die Unfähigkeit zu kauen"
+      ],
+      "answer": 1,
+      "hint": "Sie ist besonders gefährlich, da sie keine direkten klinischen Symptome wie Husten zeigt.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 172,
+      "question": "In welchem Hirnlappen liegt das Broca-Areal (Sprachproduktion)?",
+      "options": [
+        "Stirnlappen (Frontallappen)",
+        "Scheitellappen (Parietallappen)",
+        "Schläfenlappen (Temporallappen)",
+        "Hinterhauptlappen (Okzipitallappen)"
+      ],
+      "answer": 0,
+      "hint": "Es ist in der sprachdominanten Hemisphäre unmittelbar vor dem motorischen Kortex lokalisiert.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 173,
+      "question": "Was ist der Hauptunterschied zwischen Aphasie und Sprechapraxie?",
+      "options": [
+        "Aphasie ist eine Lähmung der Zunge",
+        "Aphasie betrifft das Sprachsystem, Sprechapraxie die motorische Planung",
+        "Es gibt keinen Unterschied",
+        "Sprechapraxie ist eine reine Denkstörung"
+      ],
+      "answer": 1,
+      "hint": "Bei der einen ist das 'Archiv' der Wörter gestört, bei der anderen der 'Bauplan' für die Bewegung.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 174,
+      "question": "Welches Sozialgesetzbuch (SGB) regelt primär die Teilhabe und Rehabilitation (Bundesteilhabegesetz)?",
+      "options": [
+        "SGB V",
+        "SGB XI",
+        "SGB IX",
+        "SGB XII"
+      ],
+      "answer": 2,
+      "hint": "Dieses Gesetzbuch bildet die zentrale Rechtsgrundlage für Menschen mit Behinderung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 175,
+      "question": "Wie wird die isolierende Fettschicht um ein Axon fachsprachlich genannt?",
+      "options": [
+        "Dendrit",
+        "Myelinschicht (Markscheide)",
+        "Zytoplasma",
+        "Synapse"
+      ],
+      "answer": 1,
+      "hint": "Sie ermöglicht die schnelle saltatorische Erregungsleitung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 176,
+      "question": "Welchen Peak-Wert erreicht die elektrische Spannung bei einem Aktionspotenzial eines Neurons?",
+      "options": [
+        "-70 mV",
+        "0 mV",
+        "+30 mV",
+        "+100 mV"
+      ],
+      "answer": 2,
+      "hint": "In dieser Phase kehren sich die Ladungsverhältnisse an der Membran kurzzeitig um.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 177,
+      "question": "Welche Form des Schlaganfalls ist mit ca. 80 % die häufigste?",
+      "options": [
+        "Hämorrhagischer Schlaganfall",
+        "Ischämischer Schlaganfall",
+        "Hitzschlag",
+        "Epileptischer Anfall"
+      ],
+      "answer": 1,
+      "hint": "Hierbei handelt es sich um eine Durchblutungsstörung aufgrund eines Gefäßverschlusses.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 178,
+      "question": "Wie heißt der Knorpel, der beim Schlucken den Eingang zum Kehlkopf verschließt?",
+      "options": [
+        "Schildknorpel",
+        "Ringknorpel",
+        "Kehldeckel (Epiglottis)",
+        "Stellknorpel"
+      ],
+      "answer": 2,
+      "hint": "Dies ist ein mechanischer Schutzmechanismus der Atemwege.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 179,
+      "question": "Welcher Ast des N. facialis versorgt die Stirnmuskulatur?",
+      "options": [
+        "Ramus temporalis",
+        "Ramus zygomaticus",
+        "Ramus buccalis",
+        "Ramus colli"
+      ],
+      "answer": 0,
+      "hint": "Bei einer peripheren Fazialisparese ist dieser Ast immer mit betroffen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 180,
+      "question": "Welches Assessment-Tool dient im Modul 9 primär der Erfassung kognitiver Leistungen?",
+      "options": [
+        "Norton-Skala",
+        "Barthel-Index",
+        "Mini Mental Status Test (MMST)",
+        "Wassertest"
+      ],
+      "answer": 2,
+      "hint": "Es prüft Orientierung, Merkfähigkeit und Aufmerksamkeit.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 181,
+      "question": "Welche Wirkung hat der Sympathikus auf den Magen-Darm-Trakt?",
+      "options": [
+        "Steigerung von Tonus und Peristaltik",
+        "Verminderung von Tonus und Bewegungen",
+        "Keine Wirkung",
+        "Vermehrung der Verdauungssäfte"
+      ],
+      "answer": 1,
+      "hint": "In Stresssituationen ('Fight or Flight') wird die Verdauung heruntergefahren.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 182,
+      "question": "Welche Form der Aphasie zeigt flüssige Sprache, aber massiv gestörtes Verständnis und Wortneubildungen?",
+      "options": [
+        "Broca-Aphasie",
+        "Wernicke-Aphasie",
+        "Globale Aphasie",
+        "Amnestische Aphasie"
+      ],
+      "answer": 1,
+      "hint": "Man nennt dies auch 'sensorische Aphasie'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 183,
+      "question": "Was bedeutet 'ressourcenorientierte Pflege' in der Rehabilitation?",
+      "options": [
+        "Der Fokus liegt auf den Defiziten des Patienten",
+        "Die Pflegekraft übernimmt alle Verrichtungen",
+        "vorhandene Fähigkeiten werden erkannt und aktiv genutzt",
+        "Es werden möglichst teure Hilfsmittel eingesetzt"
+      ],
+      "answer": 2,
+      "hint": "Hierbei steht die Hilfe zur Selbsthilfe im Vordergrund.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 184,
+      "question": "Welcher anatomische Raum liegt beim Rückenmark zwischen der knöchernen Wand und der Dura mater?",
+      "options": [
+        "Subarachnoidalraum",
+        "Subduralraum",
+        "Epiduralraum",
+        "Zentralkanal"
+      ],
+      "answer": 2,
+      "hint": "Dieser Raum wird bei bestimmten Anästhesieverfahren (z. B. PDA) genutzt.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 185,
+      "question": "Was beschreibt der Begriff 'Ataxie' nach einer Schädigung des Kleinhirns?",
+      "options": [
+        "Vollständige Lähmung",
+        "Sprachlosigkeit",
+        "Störung der Bewegungskoordination und Gleichgewicht",
+        "Verlust des Gehörs"
+      ],
+      "answer": 2,
+      "hint": "Typisch sind unsichere Bewegungen und ein breitbeiniges Gangbild.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 186,
+      "question": "Welcher klinische Test für Dysphagie kann 'Stille Aspirationen' bauartbedingt *nicht* sicher erkennen?",
+      "options": [
+        "Instrumentelle FEES-Diagnostik",
+        "Röntgen-Videokinematografie",
+        "Wassertest nach Daniels",
+        "Keiner der genannten"
+      ],
+      "answer": 2,
+      "hint": "Rein klinische Tests basieren auf äußeren Symptomen (wie Husten), die bei einer stillen Aspiration fehlen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 187,
+      "question": "Was bedeutet der Fachbegriff 'Hemiparese'?",
+      "options": [
+        "Vollständige Lähmung beider Beine",
+        "Leichte bis unvollständige Lähmung einer Körperhälfte",
+        "Lähmung aller vier Extremitäten",
+        "Verlust der Sehkraft auf einem Auge"
+      ],
+      "answer": 1,
+      "hint": "Die Endung '-parese' steht für Kraftminderung, 'Hemi-' für halbseitig.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 188,
+      "question": "Welches Verständnis von Teilhabe beschreibt die 'Inklusion'?",
+      "options": [
+        "Der behinderte Mensch muss sich an die normale Umgebung anpassen",
+        "Behinderte Menschen leben in separaten Einrichtungen",
+        "Die Umgebung passt sich den Bedürfnissen aller Menschen an",
+        "Teilhabe ist nur für Reiche möglich"
+      ],
+      "answer": 2,
+      "hint": "Inklusion sieht Vielfalt als Normalität und fordert Barrierefreiheit für alle.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 189,
+      "question": "Welcher Hirnnerv steuert primär die Bewegungen der Zunge?",
+      "options": [
+        "N. vagus (X)",
+        "N. accessorius (XI)",
+        "N. hypoglossus (XII)",
+        "N. glossopharyngeus (IX)"
+      ],
+      "answer": 2,
+      "hint": "Seine Funktion ist essenziell für Artikulation und Schlucken.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 190,
+      "question": "Welcher Schritt folgt im Pflegeprozess nach Fiechter und Meier unmittelbar auf die 'Informationssammlung'?",
+      "options": [
+        "Festlegen der Pflegeziele",
+        "Planung der Maßnahmen",
+        "Erkennen von Problemen (Pflegediagnose)",
+        "Durchführung der Pflege"
+      ],
+      "answer": 2,
+      "hint": "In diesem zweiten Schritt werden die gesammelten Daten analysiert.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 191,
+      "question": "Was bedeutet das Kriterium 'Messbar' innerhalb der SMART-Zielsetzung?",
+      "options": [
+        "Das Ziel muss schön klingen",
+        "Der Erfolg muss anhand objektiver Kriterien prüfbar sein",
+        "Der Patient muss gewogen werden",
+        "Das Ziel muss zeitnah erreicht werden"
+      ],
+      "answer": 1,
+      "hint": "Nur messbare Ziele erlauben eine objektive Evaluation.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 192,
+      "question": "Was ist das Hauptmerkmal einer 'Amnestischen Aphasie'?",
+      "options": [
+        "Völliger Sprachverlust",
+        "Mühsames Sprechen im Telegrammstil",
+        "Vorrangig Wortfindungsstörungen bei flüssiger Sprache",
+        "Sinnloses Nachplappern (Echolalie)"
+      ],
+      "answer": 2,
+      "hint": "Das Sprachverständnis ist hierbei meist gut erhalten.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 193,
+      "question": "Wo befindet sich der 'äußere Liquorraum'?",
+      "options": [
+        "In den Seitenventrikeln",
+        "Im Subarachnoidalraum",
+        "Im Zentralkanal des Rückenmarks",
+        "Innerhalb der Blut-Liquor-Schranke"
+      ],
+      "answer": 1,
+      "hint": "Dieser Raum umgibt das gesamte Gehirn und Rückenmark.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 194,
+      "question": "Welche Region versorgt der 'Ramus colli' des VII. Hirnnervs?",
+      "options": [
+        "Die Stirn",
+        "Die Wangen",
+        "Das Platysma am Hals",
+        "Die Zungenwurzel"
+      ],
+      "answer": 2,
+      "hint": "Es ist der unterste Ast des Gesichtsnervs.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 195,
+      "question": "Was ist das Ziel der Phase F im neurologischen Phasenmodell?",
+      "options": [
+        "Berufliche Wiedereingliederung",
+        "Zustandserhaltende Langzeitpflege",
+        "Akutdiagnostik",
+        "Vorbereitung auf die Rente"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase stehen die Pflege und der Erhalt von Funktionen im Zentrum.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 196,
+      "question": "Welches System im Gehirn ist für die Entstehung von Emotionen (z. B. Angst, Wut) zuständig?",
+      "options": [
+        "Extrapyramidales System",
+        "Limbisches System",
+        "Pyramidenbahn",
+        "Ventrikelsystem"
+      ],
+      "answer": 1,
+      "hint": "Strukturen wie der Mandelkern gehören dazu.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 197,
+      "question": "In wie viele Phasen lässt sich der menschliche Schluckakt unterteilen?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "hint": "Die Einteilung beginnt bereits vor dem Mund (Prä-oral) und endet im Magen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 198,
+      "question": "Wie viele Reformstufen umfasst die Umsetzung des Bundesteilhabegesetzes (BTHG) bis 2023?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "10"
+      ],
+      "answer": 1,
+      "hint": "Die Einführung erfolgte zeitversetzt über mehrere Jahre.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 199,
+      "question": "Welcher Teil des Zwischenhirns fungiert als 'Filter' sensorischer Informationen?",
+      "options": [
+        "Hypothalamus",
+        "Thalamus",
+        "Epiphyse",
+        "Balken"
+      ],
+      "answer": 1,
+      "hint": "Er entscheidet, welche Reize zum Bewusstsein gelangen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 200,
+      "question": "Was beschreibt die 'saltatorische Erregungsleitung'?",
+      "options": [
+        "Ein langsames Wandern des Impulses",
+        "Das sprunghafte Springen der Erregung zwischen Ranvier-Schnürringen",
+        "Eine Erregung durch Lichtstrahlen",
+        "Den Transport von Ionen durch Pumpen"
+      ],
+      "answer": 1,
+      "hint": "Dies ist die schnellste Form der Signalübertragung im Nervensystem.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 201,
+      "question": "Welches Symptom ist ein klinischer Hinweis auf eine pharyngeale Dysphagie während des Essens?",
+      "options": [
+        "Nahrung fällt aus dem Mund",
+        "Gurgelnde oder feuchte Stimme nach dem Schlucken",
+        "Erhöhter Blutdruck",
+        "Hautausschlag am Hals"
+      ],
+      "answer": 1,
+      "hint": "Flüssigkeitsreste im Rachenraum verändern den Stimmklang unmittelbar nach der Schluckreflexauslösung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 202,
+      "question": "Was beschreibt die 'Amnestische Aphasie' primär?",
+      "options": [
+        "Völliger Verlust des Sprachverständnisses",
+        "Mühsames Sprechen im Telegrammstil",
+        "Wortfindungsstörungen bei weitgehend flüssiger Sprache",
+        "Sinnlose Silbenwiederholungen"
+      ],
+      "answer": 2,
+      "hint": "Betroffene nutzen oft Umschreibungen, um die fehlenden Begriffe zu ersetzen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 203,
+      "question": "Welcher Hirnbereich ist für die Planung und Programmierung der Sprechmotorik zuständig?",
+      "options": [
+        "Primär motorischer Kortex",
+        "Broca-Areal",
+        "Wernicke-Areal",
+        "Okzipitallappen"
+      ],
+      "answer": 1,
+      "hint": "Eine Schädigung hier führt zur Sprechapraxie, bei der die Muskelkraft intakt ist, aber der Bewegungsplan fehlt.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 204,
+      "question": "In welcher Phase des neurologischen Phasenmodells liegt der Fokus auf der Teilhabe am Arbeitsleben?",
+      "options": [
+        "Phase B",
+        "Phase D",
+        "Phase E",
+        "Phase F"
+      ],
+      "answer": 2,
+      "hint": "Diese Phase beinhaltet die Nachsorge und die berufliche Rehabilitation.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 205,
+      "question": "Was bedeutet das Merkzeichen 'H' im Schwerbehindertenausweis?",
+      "options": [
+        "Hörbehinderung",
+        "Hilflosigkeit",
+        "Herzfehler",
+        "Hüftgelenkschaden"
+      ],
+      "answer": 1,
+      "hint": "Es steht für Personen, die dauerhaft für tägliche Verrichtungen auf fremde Hilfe angewiesen sind.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 206,
+      "question": "Welche Wirkung hat der Parasympathikus auf die Speicheldrüsen?",
+      "options": [
+        "Verminderung der Sekretion",
+        "Steigerung der Sekretion",
+        "Keine Wirkung",
+        "Erhöhung der Viskosität des Speichels"
+      ],
+      "answer": 1,
+      "hint": "Der Parasympathikus fördert die Verdauungsvorgänge ('Rest and Digest').",
+      "difficulty": "medium"
+    },
+    {
+      "id": 207,
+      "question": "Was versteht man unter einer 'Viszero-somatischen' Reflexwirkung?",
+      "options": [
+        "Reizung der Haut führt zur Organreaktion",
+        "Erregung aus einem inneren Organ beeinflusst die Skelettmuskulatur",
+        "Vom Knochen zum Muskel",
+        "Rein geistige Reflexion"
+      ],
+      "answer": 1,
+      "hint": "Dabei kann z.B. eine Entzündung im Bauchraum zu einer schmerzhaften Muskelanspannung führen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 208,
+      "question": "Welcher Hirnnerv versorgt die Kaumuskulatur (M. masseter)?",
+      "options": [
+        "N. facialis (VII)",
+        "N. trigeminus (V)",
+        "N. hypoglossus (XII)",
+        "N. vagus (X)"
+      ],
+      "answer": 1,
+      "hint": "Obwohl der VII. Nerv die Mimik steuert, ist der V. Nerv für das Kauen zuständig.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 209,
+      "question": "Wo liegt das Zentrum für die Steuerung der Körpertemperatur?",
+      "options": [
+        "Thalamus",
+        "Hypothalamus",
+        "Kleinhirn",
+        "Mittelhirn"
+      ],
+      "answer": 1,
+      "hint": "Dieser Teil des Zwischenhirns ist die oberste Instanz des Hormon- und Vegetativsystems.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 210,
+      "question": "Wie nennt man die Verbindung zwischen zwei Großhirnhemisphären?",
+      "options": [
+        "Kommissurenbahnen",
+        "Assoziationsbahnen",
+        "Projektionsbahnen",
+        "Pyramidenbahnen"
+      ],
+      "answer": 0,
+      "hint": "Die größte Struktur dieser Art ist der Balken (Corpus callosum).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 211,
+      "question": "Was ist das Hauptmerkmal eines 'Neglects'?",
+      "options": [
+        "Vollständige Erblindung",
+        "Vernachlässigung einer Körperhälfte oder Umgebungshälfte",
+        "Verlust der Sprache",
+        "Schwäche der Gesichtsmuskulatur"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um eine Aufmerksamkeitsstörung, meist nach Läsion der rechten Hemisphäre.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 212,
+      "question": "Welche Arterie versorgt das Gebiet des Stirnlappens an der Hirninnenseite?",
+      "options": [
+        "A. cerebri anterior",
+        "A. cerebri media",
+        "A. cerebri posterior",
+        "A. basilaris"
+      ],
+      "answer": 0,
+      "hint": "Dieses Gefäß ist Teil des Circulus arteriosus Willisii.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 213,
+      "question": "In welcher Schluckphase wird der Kehlkopfdeckel (Epiglottis) passiv nach unten geklappt?",
+      "options": [
+        "Orale Vorbereitungsphase",
+        "Orale Transportphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 2,
+      "hint": "Dies geschieht durch die Hebung des Kehlkopfes zum Schutz der Luftwege.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 214,
+      "question": "Was bedeutet 'Integration' im Gegensatz zur 'Inklusion'?",
+      "options": [
+        "Das System passt sich dem Menschen an",
+        "Menschen werden in ein bestehendes System eingegliedert",
+        "Vollständige Trennung von Gruppen",
+        "Rein medizinische Rehabilitation"
+      ],
+      "answer": 1,
+      "hint": "Bei der Integration müssen die Menschen sich oft noch an die bestehenden Rahmenbedingungen anpassen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 215,
+      "question": "Wofür steht das 'M' im PÄS-Schema?",
+      "options": [
+        "Methoden",
+        "Merkmale (Kennzeichen/Symptome)",
+        "Messbarkeit",
+        "Motivation"
+      ],
+      "answer": 1,
+      "hint": "Es ist der Teil der Pflegediagnose, der beweist, dass das Problem existiert (oft auch als 'S' für Symptome abgekürzt).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 216,
+      "question": "Welches Assessment erfasst die kognitiven Leistungen (Orientierung, Merkfähigkeit)?",
+      "options": [
+        "Barthel-Index",
+        "Braden-Skala",
+        "Mini Mental Status Test (MMST)",
+        "Norton-Skala"
+      ],
+      "answer": 2,
+      "hint": "Dieser Test wird oft zur Demenzdiagnostik oder bei neurologischen Ausfällen genutzt.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 217,
+      "question": "Wie nennt man die Zeit, in der ein Neuron nach einem Aktionspotenzial absolut nicht erregbar ist?",
+      "options": [
+        "Latenzphase",
+        "Relative Refraktärperiode",
+        "Absolute Refraktärperiode",
+        "Depolarisationszeit"
+      ],
+      "answer": 2,
+      "hint": "Sie schützt die Zelle davor, unmittelbar hintereinander Signale zu feuern.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 218,
+      "question": "Welcher Neurotransmitter sorgt für die Übertragung an der motorischen Endplatte?",
+      "options": [
+        "Dopamin",
+        "Acetylcholin",
+        "Serotonin",
+        "GABA"
+      ],
+      "answer": 1,
+      "hint": "Er löst die Kontraktion der Skelettmuskeln aus.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 219,
+      "question": "Was beschreibt die 'Neuroplastizität'?",
+      "options": [
+        "Das Absterben von Gehirngewebe",
+        "Die Fähigkeit des Gehirns, sich durch Training umzustrukturieren",
+        "Eine Entzündung der Nervenbahnen",
+        "Die Bildung von Tumoren im Gehirn"
+      ],
+      "answer": 1,
+      "hint": "Sie ist die biologische Basis für jegliches Lernen und Rehabilitation.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 220,
+      "question": "Welche Hirnhaut liegt der Gehirnoberfläche direkt auf?",
+      "options": [
+        "Dura mater",
+        "Arachnoidea",
+        "Pia mater",
+        "Schädelknochen"
+      ],
+      "answer": 2,
+      "hint": "Die 'weiche Hirnhaut' folgt allen Windungen und Furchen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 221,
+      "question": "Wie viele Halssegmente hat das menschliche Rückenmark?",
+      "options": [
+        "7",
+        "8",
+        "12",
+        "5"
+      ],
+      "answer": 1,
+      "hint": "Es gibt zwar 7 Halswirbel, aber 8 Rückenmarkssegmente.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 222,
+      "question": "Welches Merkzeichen berechtigt zur Mitnahme einer Begleitperson (Bedingung G oder H)?",
+      "options": [
+        "B",
+        "aG",
+        "RF",
+        "Bl"
+      ],
+      "answer": 0,
+      "hint": "B wie Begleitung.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 223,
+      "question": "Was ist die ICF-Definition von 'Behinderung'?",
+      "options": [
+        "Eine rein medizinische Diagnose",
+        "Folge der Wechselwirkung von Gesundheitsproblem und Barrieren",
+        "Angeborener Defekt",
+        "Nur körperliche Einschränkung"
+      ],
+      "answer": 1,
+      "hint": "Das bio-psycho-soziale Modell steht hier im Vordergrund.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 224,
+      "question": "Welcher Hirnbereich ist für das Sprachverständnis (Wernicke) zuständig?",
+      "options": [
+        "Frontallappen",
+        "Temporallappen",
+        "Parietallappen",
+        "Okzipitallappen"
+      ],
+      "answer": 1,
+      "hint": "Dieses Areal liegt im Schläfenlappen der sprachdominanten Hemisphäre.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 225,
+      "question": "In welcher Phase der Rehabilitation findet die Frührehabilitation statt?",
+      "options": [
+        "Phase A",
+        "Phase B",
+        "Phase C",
+        "Phase D"
+      ],
+      "answer": 1,
+      "hint": "Hier werden basale und sensomotorische Funktionen gefördert.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 226,
+      "question": "Wofür steht das 'T' im SMART-Prinzip?",
+      "options": [
+        "Teamfähig",
+        "Therapeutisch",
+        "Terminiert",
+        "Transmural"
+      ],
+      "answer": 2,
+      "hint": "Ziele müssen eine klare Zeitvorgabe haben.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 227,
+      "question": "Was kennzeichnet eine periphere Fazialisparese im Vergleich zur zentralen?",
+      "options": [
+        "Nur der Mundwinkel hängt",
+        "Stirnrunzeln ist auf der betroffenen Seite nicht mehr möglich",
+        "Der Patient kann nicht mehr riechen",
+        "Beide Gesichtshälften sind betroffen"
+      ],
+      "answer": 1,
+      "hint": "Bei der peripheren Parese ist der gesamte Nervenast inklusive Stirnzweig ausgefallen.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 228,
+      "question": "Wie nennt man eine Sprachstörung, die durch eine Schädigung des Sprachsystems (Archiv) entsteht?",
+      "options": [
+        "Dysarthrie",
+        "Aphasie",
+        "Dysphonie",
+        "Stottern"
+      ],
+      "answer": 1,
+      "hint": "Das Wortgedächtnis und die Grammatik sind hierbei gestört.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 229,
+      "question": "Welche Kostform sollte bei Schluckstörungen für Flüssigkeiten gewählt werden?",
+      "options": [
+        "Dünnflüssiges Wasser",
+        "Angedickte Flüssigkeit",
+        "Limonade mit Kohlensäure",
+        "Heißer Tee"
+      ],
+      "answer": 1,
+      "hint": "Dickflüssige Medien lassen sich im Mundraum besser kontrollieren.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 230,
+      "question": "Welcher Hirnlappen beherbergt das Sehzentrum?",
+      "options": [
+        "Stirnlappen",
+        "Scheitellappen",
+        "Schläfenlappen",
+        "Hinterhauptlappen"
+      ],
+      "answer": 3,
+      "hint": "Dies ist der Okzipitallappen im hinteren Teil des Kopfes.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 231,
+      "question": "Wie hoch ist der Anteil ischämischer Schlaganfälle ca.?",
+      "options": [
+        "20 %",
+        "50 %",
+        "80 %",
+        "95 %"
+      ],
+      "answer": 2,
+      "hint": "Die Mehrheit der Schlaganfälle ist unblutig (Gefäßverschluss).",
+      "difficulty": "medium"
+    },
+    {
+      "id": 232,
+      "question": "Was versteht man unter 'Aspiration'?",
+      "options": [
+        "Eine Entzündung der Speiseröhre",
+        "Eindringen von Fremdkörpern in die Luftwege unterhalb der Stimmlippen",
+        "Das Ausspucken von Speichel",
+        "Eine allergische Reaktion auf Nahrung"
+      ],
+      "answer": 1,
+      "hint": "Sie kann lebensgefährliche Lungenentzündungen verursachen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 233,
+      "question": "Welches Merkmal deutet auf eine 'Stille Aspiration' hin?",
+      "options": [
+        "Heftiger Hustenreiz",
+        "Gurgelnde Stimme (aber oft keine äußeren Zeichen)",
+        "Patient läuft blau an",
+        "Patient erbricht"
+      ],
+      "answer": 1,
+      "hint": "Das Gefährliche ist das Fehlen eines Schutzreflexes (Husten).",
+      "difficulty": "hard"
+    },
+    {
+      "id": 234,
+      "question": "Wo kreuzen die Fasern der Pyramidenbahn überwiegend zur Gegenseite?",
+      "options": [
+        "Im Thalamus",
+        "Im verlängerten Mark (Medulla oblongata)",
+        "Im Rückenmark",
+        "Im Balken"
+      ],
+      "answer": 1,
+      "hint": "Dies erklärt, warum die linke Hirnhälfte die rechte Körperseite steuert.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 235,
+      "question": "Was ist die Hauptaufgabe des Kleinhirns (Cerebellum)?",
+      "options": [
+        "Planung von komplexen Sätzen",
+        "Gleichgewicht und Bewegungskoordination",
+        "Regulierung der Körpertemperatur",
+        "Speicherung von Vokabeln"
+      ],
+      "answer": 1,
+      "hint": "Eine Schädigung führt zur Ataxie (unsicheres Gangbild).",
+      "difficulty": "easy"
+    },
+    {
+      "id": 236,
+      "question": "Wie viele Segmente umfasst das Brustmark (Thorakalmark)?",
+      "options": [
+        "8",
+        "12",
+        "5",
+        "1"
+      ],
+      "answer": 1,
+      "hint": "Die Anzahl entspricht der Zahl der Brustwirbel.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 237,
+      "question": "Welches Assessment wird zur Einschätzung des Dekubitusrisikos empfohlen?",
+      "options": [
+        "Barthel-Index",
+        "Braden-Skala",
+        "MMST",
+        "Wassertest"
+      ],
+      "answer": 1,
+      "hint": "Sie bewertet Faktoren wie Feuchtigkeit, Aktivität und Mobilität.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 238,
+      "question": "Was ist ein 'Persönliches Budget' im Rahmen des SGB IX?",
+      "options": [
+        "Ein fester Betrag für Medikamente",
+        "Geldleistung zur selbstbestimmten Finanzierung von Hilfen",
+        "Das monatliche Gehalt im Heim",
+        "Ein Sparbuch der Krankenkasse"
+      ],
+      "answer": 1,
+      "hint": "Es stärkt die Wahlfreiheit der behinderten Menschen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 239,
+      "question": "Welcher Schritt folgt im Pflegeprozess unmittelbar auf die 'Informationssammlung'?",
+      "options": [
+        "Planung der Maßnahmen",
+        "Festlegen der Pflegeziele",
+        "Erkennen von Problemen (Pflegediagnose)",
+        "Evaluation"
+      ],
+      "answer": 2,
+      "hint": "Zuerst muss analysiert werden, welche Probleme tatsächlich vorliegen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 240,
+      "question": "Was charakterisiert die 'saltatorische Erregungsleitung'?",
+      "options": [
+        "Kontinuierliches Gleiten des Impulses",
+        "Impuls springt von Schnürring zu Schnürring",
+        "Impuls wird chemisch übertragen",
+        "Ganz langsame Weiterleitung"
+      ],
+      "answer": 1,
+      "hint": "Diese Art der Leitung ist sehr schnell und findet bei markhaltigen Fasern statt.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 241,
+      "question": "Welcher Teil des vegetativen Nervensystems weitet die Pupille?",
+      "options": [
+        "Parasympathikus",
+        "Sympathikus",
+        "Darmnervensystem",
+        "Kleinhirn"
+      ],
+      "answer": 1,
+      "hint": "In Stresssituationen ('Fight or Flight') muss mehr Licht ins Auge fallen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 242,
+      "question": "In welchem Raum zirkuliert der Liquor um das Gehirn herum?",
+      "options": [
+        "Epiduralraum",
+        "Subduralraum",
+        "Subarachnoidalraum",
+        "Zentralkanal"
+      ],
+      "answer": 2,
+      "hint": "Er liegt zwischen der Spinngewebshaut und der inneren Hirnhaut.",
+      "difficulty": "hard"
+    },
+    {
+      "id": 243,
+      "question": "Was ist das Hauptziel der Phase F im neurologischen Phasenmodell?",
+      "options": [
+        "Heilung der Krankheit",
+        "Zustandserhaltende Langzeitpflege",
+        "Vorbereitung auf eine Operation",
+        "Berufliche Umschulung"
+      ],
+      "answer": 1,
+      "hint": "Hier steht die aktivierende Pflege bei bleibenden Defiziten im Zentrum.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 244,
+      "question": "Wofür steht das 'Ä' im PÄS-Schema?",
+      "options": [
+        "Änderungswunsch",
+        "Ätiologie (Ursachen)",
+        "Ärztliche Anordnung",
+        "Äußerlichkeit"
+      ],
+      "answer": 1,
+      "hint": "Damit werden die Faktoren benannt, die zum Pflegeproblem führen.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 245,
+      "question": "Was beschreibt eine 'Globale Aphasie'?",
+      "options": [
+        "Nur leichte Wortfindungsstörung",
+        "Störung fast aller sprachlichen Leistungen (Verständnis und Produktion)",
+        "Nur Lesestörung",
+        "Verwaschene Aussprache bei intakter Grammatik"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um die schwerste Form der aphasischen Störung.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 246,
+      "question": "Welcher Hirnnerv steuert die Mimik?",
+      "options": [
+        "N. facialis (VII)",
+        "N. trigeminus (V)",
+        "N. vagus (X)",
+        "N. oculomotorius (III)"
+      ],
+      "answer": 0,
+      "hint": "Bei seinem Ausfall kommt es zur Fazialisparese.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 247,
+      "question": "In welcher Position sollte ein Patient mit Dysphagie essen?",
+      "options": [
+        "In Rückenlage",
+        "Aufrechte Sitzposition (90° Oberkörper)",
+        "In Seitenlage",
+        "Kopf nach hinten gebeugt"
+      ],
+      "answer": 1,
+      "hint": "Diese Haltung bietet den besten Schutz vor Aspiration.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 248,
+      "question": "Was ist das Ziel interdisziplinärer Zusammenarbeit in der Reha?",
+      "options": [
+        "Kostenreduktion",
+        "Bündelung verschiedener Fachkompetenzen für komplexe Lösungen",
+        "Einsparung von Pflegepersonal",
+        "Patienten schneller zu entlassen"
+      ],
+      "answer": 1,
+      "hint": "Alle Berufsgruppen (Pflege, Logo, Physio etc.) arbeiten am selben Ziel.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 249,
+      "question": "Welches Gesetz regelt in Deutschland die Eingliederungshilfe für Behinderte?",
+      "options": [
+        "SGB V",
+        "SGB IX",
+        "SGB XI",
+        "SGB XII"
+      ],
+      "answer": 1,
+      "hint": "Es ist das 'Gesetz zur Rehabilitation und Teilhabe von Menschen mit Behinderungen'.",
+      "difficulty": "medium"
+    },
+    {
+      "id": 250,
+      "question": "Ab welchem Wert gilt ein Grad der Behinderung (GdB) als Schwerbehinderung?",
+      "options": [
+        "20",
+        "30",
+        "50",
+        "100"
+      ],
+      "answer": 2,
+      "hint": "Ab diesem Wert besteht rechtlich Anspruch auf einen Schwerbehindertenausweis.",
+      "difficulty": "easy"
+    },
+    {
+      "id": 251,
+      "question": "Welcher Brodmann-Areal-Nummer wird das Wernicke-Sprachzentrum (Sprachverständnis) zugeordnet?",
+      "options": [
+        "Areal 4",
+        "Areal 17",
+        "Areal 22",
+        "Areal 44"
+      ],
+      "answer": 2,
+      "hint": "Dieses Areal liegt im Schläfenlappen der sprachdominanten Hemisphäre [1].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 252,
+      "question": "Was ist das Hauptmerkmal eines 'Agrammatismus', wie er bei der Broca-Aphasie vorkommt?",
+      "options": [
+        "Flüssiges Sprechen ohne inhaltlichen Sinn",
+        "Eingeschränkter Satzbau bis hin zum Telegrammstil",
+        "Verwechslung von Buchstaben innerhalb eines Wortes",
+        "Vollständiger Verlust des Hörvermögens"
+      ],
+      "answer": 1,
+      "hint": "Die Sätze sind kurz und bestehen oft nur aus Substantiven und Verben im Infinitiv [2].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 253,
+      "question": "Welche Modalität ist bei einer 'Amnestischen Aphasie' primär beeinträchtigt?",
+      "options": [
+        "Das Sprachverständnis",
+        "Die Wortfindung",
+        "Das Lesen",
+        "Die Artikulation der Laute"
+      ],
+      "answer": 1,
+      "hint": "Betroffene umschreiben Wörter oft, wenn ihnen der korrekte Begriff nicht einfällt [2].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 254,
+      "question": "Wie wird eine Aphasie bezeichnet, bei der fast gar kein Sprachfluss mehr vorhanden ist und oft nur Sprachautomatismen genutzt werden?",
+      "options": [
+        "Broca-Aphasie",
+        "Wernicke-Aphasie",
+        "Globale Aphasie",
+        "Amnestische Aphasie"
+      ],
+      "answer": 2,
+      "hint": "Dies ist die schwerste Form der aphasischen Störung [2].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 255,
+      "question": "Was unterscheidet die Sprechapraxie klinisch von der Dysarthrie?",
+      "options": [
+        "Bei der Dysarthrie ist die Sprachplanung gestört",
+        "Bei der Sprechapraxie ist die Ausführung (Muskelkraft) gestört",
+        "Bei der Sprechapraxie ist die motorische Planung/Programmierung gestört",
+        "Es gibt keinen Unterschied"
+      ],
+      "answer": 2,
+      "hint": "Sprechapraxie betrifft den 'Bauplan' der Bewegung, Dysarthrie die 'Werkzeuge' (Muskeln) [3, 4].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 256,
+      "question": "Welche Konsistenz ist bei einer Dysphagie für den Patienten am schwierigsten zu kontrollieren?",
+      "options": [
+        "Breiige Kost",
+        "Pudding",
+        "Dünnflüssige Getränke (z.B. Wasser)",
+        "Weiches Brot ohne Rinde"
+      ],
+      "answer": 2,
+      "hint": "Dünne Flüssigkeiten fließen sehr schnell und erfordern eine präzise Schluckreflex-Steuerung [5].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 257,
+      "question": "Was ist eine 'stille Aspiration'?",
+      "options": [
+        "Der Patient verschluckt sich und hustet sehr laut",
+        "Eindringen von Material in die Luftwege ohne jeglichen Hustenreiz",
+        "Das Verschlucken von Luft beim Trinken",
+        "Ein Verschluss der Speiseröhre"
+      ],
+      "answer": 1,
+      "hint": "Sie ist besonders gefährlich, weil sie für Umstehende oft unbemerkt bleibt [6].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 258,
+      "question": "Welches Screening-Tool zur Dysphagie beinhaltet einen indirekten (Vigilanz, Husten) und einen direkten Schluckversuch?",
+      "options": [
+        "Barthel-Index",
+        "Braden-Skala",
+        "GUSS (Gugging Swallowing Screen)",
+        "Mini Mental Status Test"
+      ],
+      "answer": 2,
+      "hint": "Es wird in zwei Stufen durchgeführt, um das Aspirationsrisiko sicher einzuschätzen [7].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 259,
+      "question": "In welcher Position sollte die Nahrung bei einem Patienten mit Dysphagie idealerweise angereicht werden?",
+      "options": [
+        "Von oben, damit der Patient den Kopf strecken muss",
+        "In Rückenlage",
+        "Von vorne oder leicht von unten auf Augenhöhe",
+        "Immer von der betroffenen Seite"
+      ],
+      "answer": 2,
+      "hint": "Dies vermeidet eine Überstreckung des Nackens, die das Verschlucken begünstigen würde [8].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 260,
+      "question": "Warum sollten bei Dysphagie keine 'Mischkonsistenzen' (z.B. Suppe mit Einlage) gegeben werden?",
+      "options": [
+        "Wegen des zu hohen Kaloriengehalts",
+        "Weil die unterschiedlichen Phasen (fest/flüssig) im Mund unterschiedlich schnell transportiert werden",
+        "Weil es dem Patienten nicht schmeckt",
+        "Wegen der Verwechslungsgefahr mit Medikamenten"
+      ],
+      "answer": 1,
+      "hint": "Dies überfordert die Koordination der Schluckmuskulatur massiv [5].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 261,
+      "question": "Was bedeutet das Kürzel 'NPO' im Kontext einer schweren Dysphagie?",
+      "options": [
+        "Nur passierte Obstkost",
+        "Non per os (Nahrungskarenz über den Mund)",
+        "Natürliche Pflege-Option",
+        "Nach Prüfung oral"
+      ],
+      "answer": 1,
+      "hint": "In diesem Fall darf der Patient absolut nichts über den Mund zu sich nehmen [9].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 262,
+      "question": "Welche anatomische Struktur trennt die beiden Großhirnhemisphären?",
+      "options": [
+        "Zentralfurche",
+        "Längsfurche (Fissura longitudinalis)",
+        "Balken",
+        "Tentorium"
+      ],
+      "answer": 1,
+      "hint": "Es ist die tiefe Einkerbung, die man bei der Aufsicht auf das Gehirn sieht [10].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 263,
+      "question": "Wo befindet sich das primär motorische Rindenfeld (Gyrus praecentralis)?",
+      "options": [
+        "Hinterhauptlappen",
+        "Schläfenlappen",
+        "Stirnlappen (vor der Zentralfurche)",
+        "Scheitellappen"
+      ],
+      "answer": 2,
+      "hint": "Hier werden die Impulse für die bewusste Skelettmuskelbewegung generiert [11].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 264,
+      "question": "Was beschreibt der 'Homunkulus' in der Neuroanatomie?",
+      "options": [
+        "Einen kleinen künstlichen Menschen",
+        "Die Repräsentation von Körperregionen auf der Hirnrinde",
+        "Einen speziellen Reflexbogen",
+        "Die Struktur der Blut-Hirn-Schranke"
+      ],
+      "answer": 1,
+      "hint": "Körperteile mit feiner Motorik/Sensorik nehmen dort überproportional viel Platz ein [12].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 265,
+      "question": "Welche Bahn leitet Impulse für bewusste, willkürliche Bewegungen?",
+      "options": [
+        "Extrapyramidale Bahn",
+        "Pyramidenbahn",
+        "Hinterstrangbahn",
+        "Assoziationsbahn"
+      ],
+      "answer": 1,
+      "hint": "Ihre Fasern kreuzen zum Großteil im verlängerten Mark zur Gegenseite [13].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 266,
+      "question": "Welcher Teil des Gehirns ist die oberste Steuerzentrale des vegetativen Nervensystems und des Hormonsystems?",
+      "options": [
+        "Thalamus",
+        "Hypothalamus",
+        "Kleinhirn",
+        "Balken"
+      ],
+      "answer": 1,
+      "hint": "Er reguliert unter anderem die Körpertemperatur und den Wasserhaushalt [14].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 267,
+      "question": "In welcher Struktur des Hirnstamms liegen lebenswichtige Zentren für Herz-Kreislauf und Atmung?",
+      "options": [
+        "Mittelhirn",
+        "Brücke (Pons)",
+        "Verlängertes Mark (Medulla oblongata)",
+        "Thalamus"
+      ],
+      "answer": 2,
+      "hint": "Verletzungen in diesem Bereich führen meist sofort zum Tod [15].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 268,
+      "question": "Was ist die Hauptfunktion des Kleinhirns (Cerebellum)?",
+      "options": [
+        "Sprachproduktion",
+        "Gleichgewicht und Koordination von Bewegungsabläufen",
+        "Hörverarbeitung",
+        "Schlafsteuerung"
+      ],
+      "answer": 1,
+      "hint": "Eine Schädigung führt zur sogenannten Ataxie [16].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 269,
+      "question": "Wie viele Segmente hat das menschliche Rückenmark?",
+      "options": [
+        "12",
+        "24",
+        "31",
+        "40"
+      ],
+      "answer": 2,
+      "hint": "Jedes Segment gibt ein Paar Spinalnerven ab [17].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 270,
+      "question": "Was versteht man unter einem 'monosynaptischen Eigenreflex'?",
+      "options": [
+        "Ein Reflex, der über viele Schaltstellen im Gehirn läuft",
+        "Reizaufnahme und Reizantwort finden im selben Organ (Muskel) statt",
+        "Ein willentlich gesteuerter Vorgang",
+        "Ein Schutzreflex der Haut"
+      ],
+      "answer": 1,
+      "hint": "Ein Beispiel ist der Patellarsehnenreflex [18].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 271,
+      "question": "Welcher Hirnnerv (Nummer und Name) steuert die mimische Gesichtsmuskulatur?",
+      "options": [
+        "V. Hirnnerv (N. trigeminus)",
+        "X. Hirnnerv (N. vagus)",
+        "VII. Hirnnerv (N. facialis)",
+        "XII. Hirnnerv (N. hypoglossus)"
+      ],
+      "answer": 2,
+      "hint": "Sein Ausfall führt zur Gesichtslähmung (Fazialisparese) [19].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 272,
+      "question": "Welche Wirkung hat der Sympathikus auf die Herzfrequenz?",
+      "options": [
+        "Senkung",
+        "Steigerung",
+        "Keine Wirkung",
+        "Erzeugt Rhythmusstörungen"
+      ],
+      "answer": 1,
+      "hint": "Er bereitet den Körper auf 'Kampf oder Flucht' vor [20].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 273,
+      "question": "Was bewirkt der Parasympathikus an den Bronchien?",
+      "options": [
+        "Erweiterung",
+        "Verengung",
+        "Keine Wirkung",
+        "Erhöhung der Atemfrequenz"
+      ],
+      "answer": 1,
+      "hint": "Er dominiert in Ruhephasen ('Rest and Digest') [20].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 274,
+      "question": "Welche Hirnhaut liegt dem Knochen des Schädels direkt an?",
+      "options": [
+        "Pia mater",
+        "Arachnoidea",
+        "Dura mater",
+        "Epidermis"
+      ],
+      "answer": 2,
+      "hint": "Sie ist die 'harte' äußere Hirnhaut [21].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 275,
+      "question": "Wo wird der Liquor cerebrospinalis gebildet?",
+      "options": [
+        "In den Basalganglien",
+        "Im Kleinhirnwurm",
+        "Im Plexus choroideus (Gefäßgeflechte der Ventrikel)",
+        "In der Hypophyse"
+      ],
+      "answer": 2,
+      "hint": "Von dort aus umspült er das Gehirn und das Rückenmark [22].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 276,
+      "question": "Welche Arterie versorgt den größten Teil der Außenfläche des Gehirns und ist am häufigsten von Schlaganfällen betroffen?",
+      "options": [
+        "A. cerebri anterior",
+        "A. cerebri media",
+        "A. cerebri posterior",
+        "A. basilaris"
+      ],
+      "answer": 1,
+      "hint": "Ihr Versorgungsgebiet umfasst wichtige Sprach- und Motorikzentren [23, 24].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 277,
+      "question": "Was ist der 'Circulus arteriosus Willisii'?",
+      "options": [
+        "Ein Venengeflecht am Bein",
+        "Ein ringförmiger Arterienzusammenschluss an der Hirnbasis",
+        "Der Blutkreislauf der Lunge",
+        "Das Lymphsystem des Kopfes"
+      ],
+      "answer": 1,
+      "hint": "Er ermöglicht eine Reserveversorgung bei Ausfall einer Halsschlagader [25].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 278,
+      "question": "Wie hoch ist der tägliche Energieverbrauch des Gehirns (Zucker/Sauerstoff) bezogen auf den Gesamtkörper?",
+      "options": [
+        "3 %",
+        "10 %",
+        "20 %",
+        "50 %"
+      ],
+      "answer": 2,
+      "hint": "Trotz seines geringen Gewichts ist es energetisch extrem anspruchsvoll [26].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 279,
+      "question": "Welches Symptom ist ein 'Alarm-Signal' für einen akuten Schlaganfall?",
+      "options": [
+        "Plötzlicher Heißhunger",
+        "Plötzliche, heftigste Kopfschmerzen",
+        "Langsam zunehmende Schwerhörigkeit",
+        "Hautausschlag am Rücken"
+      ],
+      "answer": 1,
+      "hint": "Zusammen mit Lähmungen und Sprachstörungen deutet dies auf ein akutes Ereignis hin [27].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 280,
+      "question": "Welche Folge eines Schlaganfalls beschreibt der Begriff 'Neglect'?",
+      "options": [
+        "Vollständige Erblindung",
+        "Vernachlässigung einer Körper- oder Umgebungshälfte",
+        "Verlust der Fähigkeit zu schreiben",
+        "Unfähigkeit, Gesichter zu erkennen"
+      ],
+      "answer": 1,
+      "hint": "Es ist eine Störung der Aufmerksamkeit, kein Problem der Augen [28].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 281,
+      "question": "Was ist das übergeordnete Ziel der Rehabilitation nach cerebralen Schädigungen?",
+      "options": [
+        "Vollständige Heilung aller Nervenzellen",
+        "Erreichung der maximal möglichen Funktion bzw. Teilhabe",
+        "Dauerhafte Unterbringung in einem Heim",
+        "Vermeidung jeglicher körperlicher Anstrengung"
+      ],
+      "answer": 1,
+      "hint": "Es geht darum, verbliebene Funktionen zu stabilisieren und Autonomie zu fördern [29].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 282,
+      "question": "Welche Phase im neurologischen Phasenmodell entspricht der 'Akutversorgung'?",
+      "options": [
+        "Phase A",
+        "Phase B",
+        "Phase C",
+        "Phase F"
+      ],
+      "answer": 0,
+      "hint": "Dies ist die unmittelbare Behandlung nach dem Ereignis [30].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 283,
+      "question": "Was kennzeichnet die 'Phase F' im Phasenmodell?",
+      "options": [
+        "Berufliche Wiedereingliederung",
+        "Frührehabilitation",
+        "Aktivierende und zustandserhaltende Langzeitpflege",
+        "Vorbereitung auf die Entlassung"
+      ],
+      "answer": 2,
+      "hint": "In dieser Phase stehen Pflege und Erhalt von Funktionen bei bleibenden Defiziten im Fokus [31].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 284,
+      "question": "Wofür steht das 'M' im SMART-Prinzip der Zielformulierung?",
+      "options": [
+        "Motivierend",
+        "Messbar",
+        "Medizinisch",
+        "Menschlich"
+      ],
+      "answer": 1,
+      "hint": "Erfolge müssen anhand von Kriterien (z.B. Gehstrecke) überprüfbar sein [32].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 285,
+      "question": "Was ist das Leitprinzip der 'aktivierenden Pflege'?",
+      "options": [
+        "Schnelles Abarbeiten der Aufgaben",
+        "Vollständige Übernahme aller Verrichtungen",
+        "Förderung der Eigenständigkeit und Unabhängigkeit des Klienten",
+        "Strenge Bettruhe zur Schonung"
+      ],
+      "answer": 2,
+      "hint": "Ressourcen des Patienten werden aktiv in den Pflegealltag einbezogen [33].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 286,
+      "question": "Wie definiert die ICF den Begriff 'Behinderung'?",
+      "options": [
+        "Als reinen medizinischen Defekt",
+        "Als Wechselwirkung zwischen Gesundheitsproblem und Barrieren (Umwelt/Person)",
+        "Als angeborene Unfähigkeit zu arbeiten",
+        "Als Synonym für Krankheit"
+      ],
+      "answer": 1,
+      "hint": "Es ist ein bio-psycho-soziales Modell [34].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 287,
+      "question": "Ab welchem Grad der Behinderung (GdB) gilt man in Deutschland als 'schwerbehindert'?",
+      "options": [
+        "20",
+        "30",
+        "50",
+        "100"
+      ],
+      "answer": 2,
+      "hint": "Ab diesem Wert besteht Anspruch auf besondere Nachteilsausgleiche [35].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 288,
+      "question": "Was ist der Kernunterschied zwischen Integration und Inklusion?",
+      "options": [
+        "Es gibt keinen Unterschied",
+        "Integration ist für Erwachsene, Inklusion für Kinder",
+        "Bei der Inklusion passt sich das System der Vielfalt der Menschen an",
+        "Bei der Inklusion müssen sich Behinderte anpassen"
+      ],
+      "answer": 2,
+      "hint": "Inklusion sieht Verschiedenheit als normale Gegebenheit an [36].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 289,
+      "question": "Welches Gesetz regelt in Deutschland die Teilhabe und Rehabilitation (BTHG)?",
+      "options": [
+        "SGB V",
+        "SGB IX",
+        "SGB XI",
+        "Strafgesetzbuch"
+      ],
+      "answer": 1,
+      "hint": "Dieses Sozialgesetzbuch bildet die Grundlage für die Eingliederungshilfe [37].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 290,
+      "question": "Welches Assessment-Tool dient der Erfassung der Selbstständigkeit im Alltag (ADL)?",
+      "options": [
+        "Braden-Skala",
+        "Barthel-Index",
+        "MMST",
+        "Norton-Skala"
+      ],
+      "answer": 1,
+      "hint": "Hier werden Punkte für Essen, Waschen, Mobilität usw. vergeben [38].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 291,
+      "question": "Was kennzeichnet eine 'periphere' Fazialisparese im Vergleich zur 'zentralen'?",
+      "options": [
+        "Nur der Mundwinkel hängt",
+        "Der Patient kann die Stirn auf der betroffenen Seite nicht runzeln",
+        "Die Stirnmuskulatur bleibt beweglich",
+        "Das Sehvermögen ist eingeschränkt"
+      ],
+      "answer": 1,
+      "hint": "Bei der peripheren Form ist der gesamte Nervenast (einschließlich Stirn) ausgefallen [39].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 292,
+      "question": "Welche pflegerische Maßnahme ist bei einer Fazialisparese mit unvollständigem Lidschluss nachts essenziell?",
+      "options": [
+        "Viel trinken",
+        "Anlegen eines Uhrglasverbandes zum Schutz der Hornhaut",
+        "Das Zimmer hell beleuchten",
+        "Halskrause anlegen"
+      ],
+      "answer": 1,
+      "hint": "Das Auge droht sonst auszutrocknen und dauerhaft zu Schaden zu kommen [40].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 293,
+      "question": "Was versteht man unter 'Interdisziplinarität'?",
+      "options": [
+        "Dass alle Pflegekräfte gleich arbeiten",
+        "Zusammenarbeit verschiedener Fachgruppen für gemeinsame Lösungen",
+        "Dass der Patient die Therapie selbst plant",
+        "Ausschließlich die Kooperation zwischen Arzt und Patient"
+      ],
+      "answer": 1,
+      "hint": "Erfordert gegenseitige Anerkennung der Kernkompetenzen (Pflege, Physio, Logo etc.) [41].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 294,
+      "question": "In welcher Phase des Schluckens wird der Bolus über den Zungenrücken nach hinten geschoben?",
+      "options": [
+        "Prä-orale Phase",
+        "Orale Transportphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 1,
+      "hint": "Diese Phase dauert ca. eine Sekunde und ist willentlich steuerbar [42].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 295,
+      "question": "Was ist das Hauptproblem bei einer 'Sprechapraxie'?",
+      "options": [
+        "Muskelschwäche der Zunge",
+        "Störung der Bewegungsplanung und -programmierung",
+        "Verlust des Wortschatzes",
+        "Schwerhörigkeit"
+      ],
+      "answer": 1,
+      "hint": "Typisch sind Suchbewegungen der Lippen zu Beginn des Sprechens [43].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 296,
+      "question": "Welches Merkzeichen im Schwerbehindertenausweis steht für die Notwendigkeit einer ständigen Begleitperson?",
+      "options": [
+        "G",
+        "aG",
+        "B",
+        "H"
+      ],
+      "answer": 2,
+      "hint": "Es ist wichtig für die unentgeltliche Mitnahme im Nahverkehr [44].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 297,
+      "question": "Wie bezeichnet man Nervenfasern, die Impulse von den Sinnesorganen zum ZNS leiten?",
+      "options": [
+        "Efferent",
+        "Afferent",
+        "Motorisch",
+        "Vegetativ"
+      ],
+      "answer": 1,
+      "hint": "Sie sind 'hinführende' Fasern [45].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 298,
+      "question": "Welche Ionen strömen beim Aktionspotenzial massenhaft in das Zellinnere?",
+      "options": [
+        "Kalium",
+        "Natrium",
+        "Chlorid",
+        "Magnesium"
+      ],
+      "answer": 1,
+      "hint": "Dadurch kehrt sich die Ladung kurzzeitig auf ca. +30 mV um [46].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 299,
+      "question": "In welcher Form wird die Information an der Synapse übertragen?",
+      "options": [
+        "Rein elektrisch",
+        "Chemisch (über Neurotransmitter)",
+        "Mechanisch",
+        "Magnetisch"
+      ],
+      "answer": 1,
+      "hint": "Botenstoffe überbrücken den synaptischen Spalt [47].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 300,
+      "question": "Was ist das 'Persönliche Budget' rechtlich gesehen?",
+      "options": [
+        "Ein Kredit der Bank",
+        "Eine Geldleistung zur selbstbestimmten Finanzierung von Hilfen",
+        "Die Rentenzahlung des Staates",
+        "Ein Taschengeld im Krankenhaus"
+      ],
+      "answer": 1,
+      "hint": "Es soll behinderten Menschen mehr Wahlfreiheit bei Dienstleistungen geben [48].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 301,
+      "question": "Welche Barriere im ZNS verhindert, dass potenziell schädliche Stoffe aus dem Blut ungehindert in das Gehirngewebe übertreten?",
+      "options": [
+        "Blut-Liquor-Schranke",
+        "Dura-Barriere",
+        "Aortenklappe",
+        "Plexus-Gitter"
+      ],
+      "answer": 0,
+      "hint": "Diese Barriere wird von Gliazellen und Anteilen der Pia mater gebildet und erschwert auch die Gabe bestimmter Medikamente [1].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 302,
+      "question": "Was beschreibt der Begriff 'Neuroplastizität' im Kontext der Rehabilitation?",
+      "options": [
+        "Das dauerhafte Absterben von Hirngewebe",
+        "Die Versteifung der Blutgefäße im Gehirn",
+        "Die Fähigkeit des Gehirns, Funktionen nach Schädigung neu zu organisieren",
+        "Ein künstlicher Ersatz für Nervenzellen"
+      ],
+      "answer": 2,
+      "hint": "Dies ist die biologische Grundlage dafür, dass Patienten verloren geglaubte Fähigkeiten wieder erlernen können [2].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 303,
+      "question": "In welcher Phase des neurologischen Phasenmodells liegt der Schwerpunkt auf der 'Anschlussheilbehandlung' zur Vorbereitung auf das Leben zu Hause?",
+      "options": [
+        "Phase B",
+        "Phase C",
+        "Phase D",
+        "Phase F"
+      ],
+      "answer": 2,
+      "hint": "Diese Phase folgt meist auf die Akut- und Frührehabilitation und dient der Verselbstständigung [3].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 304,
+      "question": "Welches Merkmal kennzeichnet eine 'Globale Aphasie'?",
+      "options": [
+        "Nur leichte Wortfindungsstörungen bei flüssiger Sprache",
+        "Störung fast aller sprachlichen Leistungen (Verständnis und Produktion)",
+        "Flüssiges Sprechen mit vielen Neuerfindungen (Neologismen)",
+        "Perfektes Sprachverständnis bei Stummheit"
+      ],
+      "answer": 1,
+      "hint": "Es ist die schwerste Form der Aphasie, oft nach einem großflächigen Mediainfarkt [4].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 305,
+      "question": "Wie wird im PÄS-Schema der Teil genannt, der die Ursachen oder beeinflussenden Faktoren eines Pflegeproblems beschreibt?",
+      "options": [
+        "Problem (P)",
+        "Ätiologie (Ä)",
+        "Symptom (S)",
+        "Ressourcen (R)"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um die Einflussfaktoren, die zu der beobachteten Reaktion führen [5].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 306,
+      "question": "Was versteht man unter einer 'zentralen Fazialisparese'?",
+      "options": [
+        "Die gesamte Gesichtshälfte ist inklusive der Stirn gelähmt",
+        "Nur die Stirnmuskulatur ist betroffen",
+        "Die Lähmung betrifft die untere Gesichtshälfte, die Stirn bleibt beweglich",
+        "Es liegt eine Lähmung beider Beine vor"
+      ],
+      "answer": 2,
+      "hint": "Bei der zentralen Form bleibt das Stirnrunzeln meist möglich, da die Stirnäste doppelseitig versorgt werden [6].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 307,
+      "question": "Welche Konsequenz hat eine 'stille Aspiration' bei Schluckstörungen häufig?",
+      "options": [
+        "Heftigen Hustenreiz",
+        "Aspirationspneumonie ohne vorherige Alarmzeichen",
+        "Sofortiges Erbrechen",
+        "Übermäßigen Speichelfluss"
+      ],
+      "answer": 1,
+      "hint": "Da der Schutzreflex (Husten) fehlt, gelangen Fremdstoffe unbemerkt in die Lunge [7].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 308,
+      "question": "Wofür ist das 'Broca-Areal' im Gehirn primär zuständig?",
+      "options": [
+        "Das Sprachverständnis",
+        "Das Sehvermögen",
+        "Die motorische Sprachproduktion",
+        "Den Gleichgewichtssinn"
+      ],
+      "answer": 2,
+      "hint": "Schäden in diesem Areal (Brodmann 44/45) führen zu mühsamem Sprechen im Telegrammstil [8].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 309,
+      "question": "Ab welchem Grad der Behinderung (GdB) kann eine Person einem schwerbehinderten Menschen gleichgestellt werden (bei GdB unter 50)?",
+      "options": [
+        "Ab GdB 10",
+        "Ab GdB 20",
+        "Ab GdB 30",
+        "Ab GdB 40"
+      ],
+      "answer": 2,
+      "hint": "Menschen mit einem GdB von mindestens 30 können zur Sicherung des Arbeitsplatzes gleichgestellt werden [9].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 310,
+      "question": "Was beschreibt das 'SMART-Prinzip' in der Zielformulierung?",
+      "options": [
+        "Ein Modell zur Schmerzbehandlung",
+        "Kriterien für gute rehabilitative Ziele (Spezifisch, Messbar, etc.)",
+        "Eine Einteilung von Gehirnregionen",
+        "Die Reihenfolge der Schluckphasen"
+      ],
+      "answer": 1,
+      "hint": "Ziele müssen unter anderem akzeptiert, realistisch und terminiert sein [10].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 311,
+      "question": "Welche Aufgabe übernimmt der Landschaftsverband Rheinland (LVR) primär?",
+      "options": [
+        "Die allgemeine Krankenversicherung",
+        "Die Trägerschaft für Förderschulen und Kostenträger für Eingliederungshilfe",
+        "Den Bau von Autobahnen",
+        "Die polizeiliche Überwachung"
+      ],
+      "answer": 1,
+      "hint": "Der LVR unterstützt Menschen mit Behinderung in vielen Lebensbereichen im Rheinland [11].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 312,
+      "question": "Wie nennt man die zeitweilige Erhöhung der Muskelspannung nach einem Schlaganfall, die zu Fehlstellungen führen kann?",
+      "options": [
+        "Parese",
+        "Spastik",
+        "Ataxie",
+        "Apraxie"
+      ],
+      "answer": 1,
+      "hint": "Es handelt sich um eine dauerhaft erhöhte Muskelspannung durch fehlende zentrale Hemmung [12].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 313,
+      "question": "Welches Merkzeichen im Schwerbehindertenausweis steht für 'außergewöhnliche Gehbehinderung'?",
+      "options": [
+        "G",
+        "aG",
+        "H",
+        "RF"
+      ],
+      "answer": 1,
+      "hint": "Dieses Merkzeichen berechtigt zur Nutzung von Behindertenparkplätzen [13].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 314,
+      "question": "Was charakterisiert die 'Wernicke-Aphasie'?",
+      "options": [
+        "Nicht-flüssige Sprache mit gutem Verständnis",
+        "Flüssige Sprache mit gestörtem Verständnis und Wortneubildungen",
+        "Vollständiger Sprachverlust",
+        "Nur Leseschwäche"
+      ],
+      "answer": 1,
+      "hint": "Man spricht auch von einer sensorischen Aphasie, da das Archiv der Wortbedeutungen gestört ist [4].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 315,
+      "question": "In welcher Position sollte ein Patient mit Dysphagie beim Anreichen von Essen *nicht* sein?",
+      "options": [
+        "Oberkörper 90 Grad aufrecht",
+        "Kopf leicht nach vorne geneigt",
+        "Rückenlage (flach)",
+        "Sitzend am Tisch"
+      ],
+      "answer": 2,
+      "hint": "Flaches Liegen erhöht das Aspirationsrisiko massiv [7].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 316,
+      "question": "Wie viele Segmente hat das menschliche Rückenmark insgesamt?",
+      "options": [
+        "12",
+        "24",
+        "31",
+        "40"
+      ],
+      "answer": 2,
+      "hint": "Es unterteilt sich in Hals-, Brust-, Lenden-, Kreuzbein- und Steißbeinsegmente [14].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 317,
+      "question": "Welche Funktion hat das Kleinhirn (Cerebellum) hauptsächlich?",
+      "options": [
+        "Sitz der Persönlichkeit",
+        "Koordination von Bewegung und Gleichgewicht",
+        "Steuerung der Hormone",
+        "Verarbeitung von Gerüchen"
+      ],
+      "answer": 1,
+      "hint": "Es liegt in der hinteren Schädelgrube und ist für die Feinmotorik essenziell [15].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 318,
+      "question": "Welches Gesetz regelt in Deutschland die Teilhabe und Rehabilitation (SGB IX)?",
+      "options": [
+        "Bundesteilhabegesetz (BTHG)",
+        "Pflegestärkungsgesetz",
+        "Infektionsschutzgesetz",
+        "Betreuungsgesetz"
+      ],
+      "answer": 0,
+      "hint": "Dieses Gesetzespaket wurde in mehreren Stufen bis 2023 umgesetzt [16].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 319,
+      "question": "Was beschreibt ein 'Neglect' nach einem Schlaganfall?",
+      "options": [
+        "Die Unfähigkeit zu schlucken",
+        "Die Vernachlässigung einer Körper- oder Umgebungshälfte",
+        "Einen kompletten Gedächtnisverlust",
+        "Eine Entzündung der Hirnhäute"
+      ],
+      "answer": 1,
+      "hint": "Es ist eine Aufmerksamkeitsstörung, keine Störung der Sehkraft an sich [17].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 320,
+      "question": "Was ist das Ziel der 'aktivierenden Pflege'?",
+      "options": [
+        "Vollständige Übernahme aller Tätigkeiten durch die Pflegekraft",
+        "Förderung der Eigenständigkeit und Nutzung vorhandener Ressourcen",
+        "Möglichst schnelle Entlassung ohne Rücksicht auf den Zustand",
+        "Reine medizinische Behandlung nach Anweisung"
+      ],
+      "answer": 1,
+      "hint": "Es ist ein ressourcenorientiertes Handlungsprinzip in der Rehabilitation [18].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 321,
+      "question": "Welche Arterie versorgt primär das Sehzentrum im Hinterhauptlappen?",
+      "options": [
+        "A. cerebri anterior",
+        "A. cerebri media",
+        "A. cerebri posterior",
+        "A. carotis interna"
+      ],
+      "answer": 2,
+      "hint": "Diese Arterie versorgt die Hirnbasis und die hinteren Areale [19].",
+      "difficulty": "hard"
+    },
+    {
+      "id": 322,
+      "question": "Welcher Hirnnerv steuert die Bewegungen der Zunge?",
+      "options": [
+        "N. facialis (VII)",
+        "N. vagus (X)",
+        "N. hypoglossus (XII)",
+        "N. trigeminus (V)"
+      ],
+      "answer": 2,
+      "hint": "Seine Funktion ist wichtig für Artikulation und Schlucken [20].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 323,
+      "question": "Was kennzeichnet die 'Pharyngeale Phase' des Schluckens?",
+      "options": [
+        "Sie ist willentlich steuerbar",
+        "Der Kehlkopf hebt sich und verschließt die Atemwege (Reflex)",
+        "Die Nahrung wird im Mund zerkleinert",
+        "Die Nahrung gelangt in den Magen"
+      ],
+      "answer": 1,
+      "hint": "In dieser Phase wird der Schluckreflex ausgelöst und der Atem kurz unterbrochen [21].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 324,
+      "question": "Was ist der Kernunterschied zwischen Inklusion und Integration?",
+      "options": [
+        "Integration ist moderner als Inklusion",
+        "Bei der Inklusion passt sich das System der Vielfalt der Individuen an",
+        "Integration bedeutet völlige Trennung von Gruppen",
+        "Es gibt keinen Unterschied"
+      ],
+      "answer": 1,
+      "hint": "Inklusion sieht Vielfalt als Normalität an und baut Barrieren für alle ab [22].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 325,
+      "question": "Wofür steht das 'S' im PÄS-Schema der Pflegediagnosen?",
+      "options": [
+        "Schmerz",
+        "Symptome/Merkmale",
+        "Sicherheit",
+        "Soziales Umfeld"
+      ],
+      "answer": 1,
+      "hint": "Dies sind die beobachtbaren Kennzeichen, die die Diagnose bestätigen [5].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 326,
+      "question": "Wie nennt man die Querverbindung zwischen den beiden Hirnhemisphären?",
+      "options": [
+        "Thalamus",
+        "Balken (Corpus callosum)",
+        "Hypophyse",
+        "Kleinhirnwurm"
+      ],
+      "answer": 1,
+      "hint": "Es ist die größte Kommissurenbahn des Gehirns [23].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 327,
+      "question": "Welche Wirkung hat der Parasympathikus auf die Pupille?",
+      "options": [
+        "Erweiterung (Mydriasis)",
+        "Verengung (Miosis)",
+        "Keine Wirkung",
+        "Farbveränderung"
+      ],
+      "answer": 1,
+      "hint": "Der Parasympathikus dominiert in Ruhephasen ('Rest and Digest') [24].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 328,
+      "question": "Was beschreibt das 'Persönliche Budget'?",
+      "options": [
+        "Ein Sparkonto für Notfälle",
+        "Geldleistung zur selbstbestimmten Finanzierung von Hilfen statt Sachleistung",
+        "Das Gehalt der Pflegekräfte",
+        "Einen Kredit für Barrierefreiheit"
+      ],
+      "answer": 1,
+      "hint": "Es dient der Förderung der Selbstbestimmung und Wahlfreiheit [25].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 329,
+      "question": "In welcher Schluckphase wird der 'Bolus' gebildet?",
+      "options": [
+        "Prä-orale Phase",
+        "Orale Vorbereitungsphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 1,
+      "hint": "Dazu gehören das Kauen, Einspeicheln und Formen der Nahrung [26].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 330,
+      "question": "Welches Merkzeichen im Ausweis steht für 'Hilflosigkeit'?",
+      "options": [
+        "G",
+        "B",
+        "H",
+        "RF"
+      ],
+      "answer": 2,
+      "hint": "Dies bedeutet, dass die Person dauerhaft Hilfe bei täglichen Verrichtungen benötigt [27].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 331,
+      "question": "Wie wird eine unvollständige Lähmung einer Körperseite fachsprachlich bezeichnet?",
+      "options": [
+        "Hemiplegie",
+        "Hemiparese",
+        "Paraparese",
+        "Tetraplegie"
+      ],
+      "answer": 1,
+      "hint": "Die Endung '-parese' deutet auf eine Kraftminderung hin [12].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 332,
+      "question": "Was ist die Hauptaufgabe des Nervus Vagus (X)?",
+      "options": [
+        "Steuerung der Kaumuskulatur",
+        "Versorgung innerer Organe (Parasympathikus)",
+        "Bewegung der Augen",
+        "Hörvermögen"
+      ],
+      "answer": 1,
+      "hint": "Er ist der längste Hirnnerv und zieht bis in den Bauchraum [28].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 333,
+      "question": "Wofür steht die Abkürzung 'ICF'?",
+      "options": [
+        "Internal Clinical Factors",
+        "International Classification of Functioning, Disability and Health",
+        "Independent Care Framework",
+        "Interdisziplinärer Code für Funktionen"
+      ],
+      "answer": 1,
+      "hint": "Es ist die Klassifikation der WHO zur Beschreibung des funktionalen Gesundheitszustandes [29].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 334,
+      "question": "Welche Hirnhaut liegt dem Nervengewebe direkt auf?",
+      "options": [
+        "Dura mater",
+        "Arachnoidea",
+        "Pia mater",
+        "Schädelknochen"
+      ],
+      "answer": 2,
+      "hint": "Diese zarte Innenhaut enthält viele Gefäße und folgt jeder Windung [30].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 335,
+      "question": "Was charakterisiert einen 'Eigenreflex'?",
+      "options": [
+        "Reiz und Antwort erfolgen im selben Organ",
+        "Es sind mindestens fünf Neuronen beteiligt",
+        "Der Reflex ist willentlich unterdrückbar",
+        "Der Reizort liegt weit weg vom Antwortort"
+      ],
+      "answer": 0,
+      "hint": "Ein Beispiel ist der Patellarsehnenreflex [31].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 336,
+      "question": "Was versteht man unter 'Agrammatismus'?",
+      "options": [
+        "Eine Störung des Zahlenverständnisses",
+        "Sprechen in kurzen, unvollständigen Sätzen (Telegrammstil)",
+        "Sinnlose Wortneubildungen",
+        "Verlust der Schreibfähigkeit"
+      ],
+      "answer": 1,
+      "hint": "Typisch für Patienten mit Broca-Aphasie [4].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 337,
+      "question": "In welcher Phase der Rehabilitation findet die Frührehabilitation statt?",
+      "options": [
+        "Phase A",
+        "Phase B",
+        "Phase C",
+        "Phase F"
+      ],
+      "answer": 1,
+      "hint": "Hier beginnt bereits während der Akutbehandlung die Förderung sensomotorischer Funktionen [3].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 338,
+      "question": "Welcher Neurotransmitter sorgt für die Übertragung an der motorischen Endplatte?",
+      "options": [
+        "Dopamin",
+        "Serotonin",
+        "Acetylcholin",
+        "GABA"
+      ],
+      "answer": 2,
+      "hint": "Dieser Botenstoff löst die Muskelkontraktion aus [32].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 339,
+      "question": "Welches Assessment-Tool dient der Erfassung der ADLs (Aktivitäten des täglichen Lebens)?",
+      "options": [
+        "Barthel-Index",
+        "Norton-Skala",
+        "Glasgow Coma Scale",
+        "MMST"
+      ],
+      "answer": 0,
+      "hint": "Punkte von 0 bis 100 beschreiben den Grad der Selbstständigkeit [33].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 340,
+      "question": "Was beschreibt die 'saltatorische Erregungsleitung'?",
+      "options": [
+        "Das Wandern der Impulse entlang markloser Fasern",
+        "Das Springen der Erregung von Schnürring zu Schnürring",
+        "Die chemische Übertragung an der Synapse",
+        "Eine sehr langsame Form der Signalübermittlung"
+      ],
+      "answer": 1,
+      "hint": "Diese Form der Leitung ist wesentlich schneller als die kontinuierliche [34].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 341,
+      "question": "Welcher Teil des Zwischenhirns wirkt als 'Filter' sensorischer Informationen?",
+      "options": [
+        "Hypothalamus",
+        "Thalamus",
+        "Hypophyse",
+        "Epiphyse"
+      ],
+      "answer": 1,
+      "hint": "Er wird auch als 'Tor zum Bewusstsein' bezeichnet [35].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 342,
+      "question": "Was ist das Hauptziel der Phase F im neurologischen Phasenmodell?",
+      "options": [
+        "Akutdiagnostik",
+        "Berufliche Wiedereingliederung",
+        "Aktivierende und zustandserhaltende Langzeitpflege",
+        "Heilung des Gehirnschadens"
+      ],
+      "answer": 2,
+      "hint": "Es geht um die spezialisierte Pflege bei bleibenden schweren Defiziten [3].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 343,
+      "question": "Welches Symptom ist ein Alarmzeichen für einen Schlaganfall?",
+      "options": [
+        "Langsam zunehmender Haarausfall",
+        "Plötzliche halbseitige Lähmung oder Taubheit",
+        "Hautausschlag am Bauch",
+        "Kalte Füße"
+      ],
+      "answer": 1,
+      "hint": "Zusätzlich können Sprach- und Sehstörungen auftreten [36].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 344,
+      "question": "Welches Merkzeichen berechtigt zur Mitnahme einer Begleitperson?",
+      "options": [
+        "G",
+        "B",
+        "aG",
+        "H"
+      ],
+      "answer": 1,
+      "hint": "Das Merkzeichen 'B' steht direkt für Begleitung [27].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 345,
+      "question": "Was versteht man unter 'Interdisziplinarität'?",
+      "options": [
+        "Ärzte entscheiden alles allein",
+        "Zusammenarbeit verschiedener Fachgruppen für komplexe Lösungen",
+        "Pflegekräfte arbeiten ohne Rücksprache",
+        "Der Patient therapiert sich selbst"
+      ],
+      "answer": 1,
+      "hint": "Erfordert gegenseitige Anerkennung der Fachkompetenzen von Pflege, Logo, Physio etc. [37].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 346,
+      "question": "In welcher Schluckphase wird der Kehlkopfdeckel (Epiglottis) umgeklappt?",
+      "options": [
+        "Orale Vorbereitungsphase",
+        "Orale Transportphase",
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "answer": 2,
+      "hint": "Dies schützt die Luftröhre vor eindringender Nahrung [21].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 347,
+      "question": "Welcher Kostform ist bei Schluckstörungen für Getränke oft vorzuziehen?",
+      "options": [
+        "Dünnflüssiges Wasser",
+        "Angedickte Flüssigkeit",
+        "Getränke mit Kohlensäure",
+        "Heißer Tee"
+      ],
+      "answer": 1,
+      "hint": "Dickflüssigere Medien lassen sich im Mundraum besser kontrollieren [7].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 348,
+      "question": "Wie nennt man die Flüssigkeit, die Gehirn und Rückenmark umspült?",
+      "options": [
+        "Blutplasma",
+        "Liquor cerebrospinalis",
+        "Lymphe",
+        "Zytoplasma"
+      ],
+      "answer": 1,
+      "hint": "Sie wirkt wie ein Wasserkissen gegen Stöße [38].",
+      "difficulty": "easy"
+    },
+    {
+      "id": 349,
+      "question": "Was beschreibt die 'Amnestische Aphasie'?",
+      "options": [
+        "Vollständiger Sprachverlust",
+        "Vorrangig Wortfindungsstörungen bei flüssiger Sprache",
+        "Mühsames Sprechen im Telegrammstil",
+        "Sinnloses Nachplappern"
+      ],
+      "answer": 1,
+      "hint": "Der Patient nutzt oft Umschreibungen und Floskeln [4].",
+      "difficulty": "medium"
+    },
+    {
+      "id": 350,
+      "question": "Wie hoch ist der tägliche Energieverbrauch des Gehirns bezogen auf den Gesamtkörper?",
+      "options": [
+        "3 %",
+        "10 %",
+        "20 %",
+        "50 %"
+      ],
+      "answer": 2,
+      "hint": "Obwohl es nur 3 % des Gewichts ausmacht, verbraucht es 20 % der Energie [39].",
+      "difficulty": "medium"
+    }
+  ]
+}
