@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM | Modul-Ansicht</title>
+    <title>SLM System | Modul-Analyse</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#fcfdfe] min-h-screen font-['Inter']">
@@ -17,19 +17,21 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
                 </div>
-                Dashboard
+                <span class="hidden sm:inline text-sm uppercase tracking-wider">Dashboard</span>
             </button>
-            <div class="flex flex-col items-center">
-                <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tight">Modul-Identifikation</span>
-                <span class="text-[10px] text-indigo-600 font-bold tracking-[0.3em] uppercase">SLM System Protocol</span>
+            
+            <div class="flex flex-col items-center text-center">
+                <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tight leading-none">Initialisiere...</span>
+                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM System Protocol v.2.6</span>
             </div>
+            
             <div class="w-10"></div>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-10">
-        <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-10 border border-slate-200">
-            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+        <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-8 border border-slate-200">
+            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50">
                 Lerninhalte
             </button>
             <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700">
@@ -38,40 +40,99 @@
         </div>
 
         <div id="section-inhalt" class="space-y-6">
-            <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">Verfügbare Dokumentationen</h3>
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest">Verfügbare Dokumentationen</h3>
+                <span class="bg-indigo-50 text-indigo-700 text-[10px] px-2 py-0.5 rounded font-bold uppercase">PDF-Verzeichnis</span>
+            </div>
             <div id="pdf-list" class="grid gap-4">
-                </div>
+                <div class="animate-pulse bg-slate-50 h-20 rounded-2xl border border-slate-100"></div>
+            </div>
         </div>
 
         <div id="section-quiz" class="hidden">
-            <div class="bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden">
-                <div class="bg-indigo-600 px-8 py-4 flex justify-between items-center text-white">
-                    <span class="text-indigo-100 text-xs font-bold uppercase tracking-widest">Fortschritt: <span id="q-current">1</span> / <span id="q-total">...</span></span>
-                    <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold" id="q-score">Session Aktiv</span>
+            <div class="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-slate-100 overflow-hidden">
+                <div class="bg-slate-900 px-8 py-5 flex justify-between items-center text-white">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Fortschritts-Status</span>
+                        <span class="text-sm font-medium"><span id="q-current" class="text-indigo-400 font-bold">--</span> von <span id="q-total" class="text-slate-300">--</span> analysiert</span>
+                    </div>
+                    <div id="q-score-badge" class="bg-white/10 px-4 py-1.5 rounded-full border border-white/10 text-[11px] font-bold tracking-wide">
+                        SESSION AKTIV
+                    </div>
                 </div>
                 
-                <div class="p-10 md:p-14">
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="w-8 h-[2px] bg-indigo-600"></span>
-                        <div id="type-badge" class="text-indigo-600 text-xs font-black uppercase tracking-tighter">System-Frage</div>
+                <div class="p-8 md:p-12 lg:p-16">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="w-12 h-[3px] bg-indigo-600 rounded-full"></span>
+                        <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em]">Data-Analysis Request</div>
                     </div>
                     
-                    <h2 id="question-text" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-12 leading-tight">Lade Systemdaten...</h2>
+                    <h2 id="question-text" class="text-xl md:text-3xl font-extrabold text-slate-900 mb-10 leading-tight">Lade Systemdaten...</h2>
                     
-                    <div id="options-grid" class="grid gap-4">
+                    <div id="options-grid" class="grid gap-4 mb-8">
                         </div>
 
-                    <div id="feedback" class="mt-12 p-8 rounded-3xl hidden transition-all border-l-[6px]">
-                        <p id="feedback-text" class="font-black text-xl mb-2"></p>
-                        <p id="hint-text" class="text-slate-600 leading-relaxed italic"></p>
-                        <button onclick="nextQuestion()" class="mt-8 w-full bg-slate-900 text-white py-4 rounded-2xl font-bold hover:bg-indigo-600 transition-all shadow-lg active:scale-[0.98]">
-                            Nächste Frage analysieren
+                    <div id="feedback" class="mt-8 p-8 rounded-[2rem] hidden transition-all border-l-8 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-1">
+                                <p id="feedback-text" class="font-black text-xl mb-2 uppercase tracking-tight"></p>
+                                <p id="hint-text" class="text-slate-600 text-sm leading-relaxed italic"></p>
+                            </div>
+                        </div>
+                        <button onclick="nextQuestion()" class="mt-8 w-full bg-slate-900 text-white py-4 rounded-2xl font-bold hover:bg-indigo-600 transition-all shadow-xl active:scale-[0.97] flex items-center justify-center gap-2">
+                            <span>Nächste Analyse</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
                         </button>
                     </div>
                 </div>
             </div>
+
+            <div class="mt-10 bg-gradient-to-br from-slate-900 via-indigo-950 to-black rounded-[2.5rem] p-8 text-white shadow-2xl relative overflow-hidden border border-indigo-500/30">
+                <div class="absolute top-0 right-0 p-4 opacity-5">
+                    <svg class="w-40 h-40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-indigo-500 rounded-2xl flex items-center justify-center rotate-3 shadow-[0_0_20px_rgba(99,102,241,0.4)] border border-indigo-400">
+                                <span class="text-xl font-black italic">P</span>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg tracking-tight leading-none uppercase">Prodigy</h4>
+                                <p class="text-[9px] text-indigo-300 font-bold uppercase tracking-[0.2em] mt-1">AI Assistant developed by Prasanth</p>
+                            </div>
+                        </div>
+                        <div id="prodigy-status" class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Core Ready</span>
+                        </div>
+                    </div>
+                    
+                    <div id="prodigy-response" class="bg-black/20 backdrop-blur-sm border border-white/5 rounded-2xl p-6 text-sm leading-relaxed text-slate-300 min-h-[80px] mb-6 italic transition-all duration-500">
+                        "Wähle eine Frage aus. Ich stehe bereit, um dir die tieferen medizinischen Zusammenhänge zu erklären."
+                    </div>
+                    
+                    <button onclick="askProdigy()" id="prodigy-btn" class="w-full py-4 bg-white text-slate-900 hover:bg-indigo-500 hover:text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 group">
+                        <span>Analyse anfordern</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <button onclick="resetModuleProgress(currentModuleId)" class="mt-8 mx-auto flex items-center text-slate-400 hover:text-red-500 text-[10px] font-bold uppercase tracking-widest transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Fortschritt zurücksetzen
+            </button>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
