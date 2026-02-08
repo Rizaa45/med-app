@@ -1,5 +1,5 @@
 /**
- * MED-APP 2026 - ULTIMATE REPAIR VERSION
+ * SLM System Core Engine 2026
  */
 
 let currentQuestions = [];
@@ -15,60 +15,67 @@ window.onload = () => {
     } else if (isModulePage) {
         const params = new URLSearchParams(window.location.search);
         currentModuleId = params.get('id') || 1;
-        // Kleiner Fix: Sicherstellen, dass die ID eine Zahl/Sauberer String ist
         loadModuleData(currentModuleId);
     }
 };
 
-// --- DASHBOARD ---
+// --- DASHBOARD LOGIK ---
 function initDashboard() {
     let totalSum = 0;
-    for (let i = 1; i <= 9; i++) {
-        const p = parseInt(localStorage.getItem(`mod${i}_percent`)) || 0;
+    const activeModules = [1, 9]; // Definiere, welche Module in die Wertung einfließen
+
+    activeModules.forEach(id => {
+        const p = parseInt(localStorage.getItem(`mod${id}_percent`)) || 0;
         totalSum += p;
-        const bar = document.getElementById(`mod${i}-bar`);
-        const text = document.getElementById(`mod${i}-percent`);
+        
+        const bar = document.getElementById(`mod${id}-bar`);
+        const text = document.getElementById(`mod${id}-percent`);
+        
         if (bar) bar.style.width = p + '%';
         if (text) text.innerText = p + '%';
-    }
-    const avg = Math.round(totalSum / 9);
+    });
+
+    // Berechnung des Gesamtschnitts nur basierend auf aktiven Modulen
+    const avg = Math.round(totalSum / activeModules.length);
     const totalBar = document.getElementById('total-progress-bar');
     const totalText = document.getElementById('total-percent');
+    
     if (totalBar) totalBar.style.width = avg + '%';
     if (totalText) totalText.innerText = avg + '%';
 }
 
-// --- MODUL LADEN ---
+// --- DATEN LADEN ---
 async function loadModuleData(id) {
-    // WICHTIG: Pfad ohne führenden Schrägstrich für GitHub Pages
     const jsonPath = `data/mod_${id}.json`;
-    const errorContainer = document.getElementById('section-inhalt');
+    const pdfList = document.getElementById('pdf-list');
 
     try {
         const response = await fetch(jsonPath);
-        
-        if (!response.ok) {
-            throw new Error(`Datei nicht gefunden (HTTP ${response.status}). Prüfe, ob 'data/mod_${id}.json' wirklich so auf GitHub existiert.`);
-        }
+        if (!response.ok) throw new Error(`Modul-Daten (ID: ${id}) nicht erreichbar.`);
 
         const data = await response.json();
         
-        // UI befüllen
+        // UI Titel Update
         document.getElementById('mod-title').innerText = data.moduleName || `Modul ${id}`;
         
-        const pdfList = document.getElementById('pdf-list');
+        // PDFs rendern mit neuem Design
         if (pdfList && data.pdfs) {
             pdfList.innerHTML = "";
             data.pdfs.forEach(fileName => {
                 pdfList.innerHTML += `
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between shadow-sm mb-3">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-center">
-                            <div class="bg-red-50 text-red-600 p-2 rounded mr-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                            <div class="bg-indigo-50 text-indigo-600 p-3 rounded-xl mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
                             </div>
-                            <span class="text-slate-700 font-semibold text-sm">${fileName}</span>
+                            <div>
+                                <span class="text-slate-900 font-bold text-sm block">${fileName}</span>
+                                <span class="text-slate-400 text-xs uppercase tracking-tighter font-semibold">Dokumentation</span>
+                            </div>
                         </div>
-                        <a href="docs/m${id}/${fileName}" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold">Öffnen</a>
+                        <a href="docs/m${id}/${fileName}" target="_blank" class="bg-slate-900 text-white px-5 py-2 rounded-xl text-xs font-black hover:bg-indigo-600 transition-colors uppercase tracking-widest">Öffnen</a>
                     </div>`;
             });
         }
@@ -79,40 +86,40 @@ async function loadModuleData(id) {
         showQuestion();
 
     } catch (err) {
-        console.error("Fehler-Details:", err);
-        errorContainer.innerHTML = `
-            <div class="p-6 bg-red-50 border-2 border-red-200 text-red-700 rounded-2xl">
-                <h3 class="font-bold text-lg mb-2">❌ Ladefehler</h3>
-                <p class="mb-4">Details: ${err.message}</p>
-                <div class="text-xs bg-white p-3 rounded border border-red-100 font-mono">
-                    1. Check: Heißt die Datei wirklich <b>mod_${id}.json</b> (kleingeschrieben)?<br>
-                    2. Check: Kopiere den Inhalt der JSON in einen "JSON Validator" im Netz.<br>
-                    3. Check: Hast du die Änderungen auf GitHub "committed"?
-                </div>
-            </div>`;
+        pdfList.innerHTML = `<div class="p-6 bg-red-50 text-red-700 rounded-2xl border border-red-100 font-medium">⚠️ System-Fehler: ${err.message}</div>`;
     }
 }
 
-// --- QUIZ FUNKTIONEN ---
+// --- QUIZ LOGIK ---
 function showQuestion() {
-    const quizContainer = document.getElementById('section-quiz');
-    if (!quizContainer || currentQuestions.length === 0) return;
+    const quizSection = document.getElementById('section-quiz');
+    if (!quizSection || currentQuestions.length === 0) return;
 
     if (currentIndex >= currentQuestions.length) {
-        quizContainer.innerHTML = `<div class="text-center py-10"><h2 class="text-2xl font-bold mb-4">🏆 Modul beendet!</h2><button onclick="resetModuleProgress(${currentModuleId})" class="bg-blue-600 text-white px-6 py-2 rounded-full">Wiederholen</button></div>`;
+        quizSection.innerHTML = `
+            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
+                <div class="text-6xl mb-6">🎯</div>
+                <h2 class="text-3xl font-black text-slate-900 mb-2 uppercase">Modul Abgeschlossen</h2>
+                <p class="text-slate-500 mb-8 font-medium italic text-sm italic">Alle Daten für Modul ${currentModuleId} erfolgreich verarbeitet.</p>
+                <button onclick="resetModuleProgress(${currentModuleId})" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-black hover:bg-slate-900 transition-all shadow-lg uppercase tracking-widest text-xs">Analyse Neustarten</button>
+            </div>`;
         return;
     }
 
     const q = currentQuestions[currentIndex];
     document.getElementById('q-current').innerText = currentIndex + 1;
     document.getElementById('question-text').innerText = q.question;
-    document.getElementById('feedback').classList.add('hidden');
+    
+    const feedback = document.getElementById('feedback');
+    feedback.classList.add('hidden');
+    feedback.classList.remove('feedback-success', 'feedback-error');
     
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
+    
     q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = "btn-option w-full text-left p-4 rounded-xl border-2 border-slate-100 hover:border-blue-400 mb-3 transition-all";
+        btn.className = "btn-option"; // Nutzt die Klasse aus der style.css
         btn.innerText = opt;
         btn.onclick = () => checkAnswer(i, btn);
         grid.appendChild(btn);
@@ -122,24 +129,30 @@ function showQuestion() {
 function checkAnswer(idx, btn) {
     const q = currentQuestions[currentIndex];
     const all = document.querySelectorAll('.btn-option');
+    const feedback = document.getElementById('feedback');
+    
     all.forEach(b => b.disabled = true);
     
     if (idx === q.answer) {
-        btn.classList.add('border-green-500', 'bg-green-50');
-        document.getElementById('feedback-text').innerText = "Richtig!";
+        btn.classList.add('correct-answer');
+        feedback.classList.add('feedback-success');
+        document.getElementById('feedback-text').innerText = "SYSTEM-CHECK: KORREKT";
     } else {
-        btn.classList.add('border-red-500', 'bg-red-50');
-        all[q.answer].classList.add('border-green-500', 'bg-green-50');
-        document.getElementById('feedback-text').innerText = "Falsch!";
+        btn.classList.add('wrong-answer');
+        all[q.answer].classList.add('correct-answer');
+        feedback.classList.add('feedback-error');
+        document.getElementById('feedback-text').innerText = "SYSTEM-CHECK: ABWEICHUNG";
     }
+    
     document.getElementById('hint-text').innerText = q.hint;
-    document.getElementById('feedback').classList.remove('hidden');
+    feedback.classList.remove('hidden');
+    feedback.classList.add('fade-in');
 }
 
 function nextQuestion() {
     currentIndex++;
     localStorage.setItem(`mod${currentModuleId}_index`, currentIndex);
-    localStorage.setItem(`mod${currentModuleId}_percent`, Math.round((currentIndex/currentQuestions.length)*100));
+    localStorage.setItem(`mod${currentModuleId}_percent`, Math.round((currentIndex / currentQuestions.length) * 100));
     showQuestion();
 }
 
@@ -149,10 +162,20 @@ function resetModuleProgress(id) {
     location.reload();
 }
 
+// --- TAB WECHSEL LOGIK (Expert Style) ---
 function switchTab(tab) {
     const isQuiz = tab === 'quiz';
     document.getElementById('section-inhalt').classList.toggle('hidden', isQuiz);
     document.getElementById('section-quiz').classList.toggle('hidden', !isQuiz);
-    document.getElementById('tab-inhalt').className = isQuiz ? "flex-1 py-2 text-slate-500" : "flex-1 py-2 bg-blue-600 text-white rounded-lg";
-    document.getElementById('tab-quiz').className = isQuiz ? "flex-1 py-2 bg-blue-600 text-white rounded-lg" : "flex-1 py-2 text-slate-500";
+    
+    const btnInhalt = document.getElementById('tab-inhalt');
+    const btnQuiz = document.getElementById('tab-quiz');
+
+    if (isQuiz) {
+        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
+    } else {
+        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
+    }
 }
