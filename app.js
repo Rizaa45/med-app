@@ -176,7 +176,7 @@ async function askProdigy() {
     btn.classList.add('opacity-50', 'cursor-not-allowed');
 
     // DEIN API KEY HIER EINSETZEN
-    const API_KEY = "AIzaSyCMgsx_nNdl0J5tK6Fc2wO9ZpDh4TBoaXg"; 
+    const API_KEY = "fuge es hin"; 
     const PROMPT = `Erkläre als Prodigy, ein medizinischer Tutor: 
     Frage: ${q.question}
     Richtige Antwort: ${q.options[q.answer]}
@@ -219,3 +219,4 @@ function switchTab(tab) {
     btnInhalt.className = isQuiz ? inactiveClass : activeClass;
     btnQuiz.className = isQuiz ? activeClass : inactiveClass;
 }
+
