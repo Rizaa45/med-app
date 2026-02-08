@@ -44,6 +44,7 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="module-grid">
+            
             <div onclick="location.href='module.html?id=1'" class="group bg-white p-7 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-6">
                     <div class="bg-indigo-50 text-indigo-600 p-3 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
@@ -60,12 +61,28 @@
                 </div>
             </div>
 
+            <div onclick="location.href='module.html?id=9'" class="group bg-white p-7 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="bg-indigo-50 text-indigo-600 p-3 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <span id="mod9-percent" class="font-bold text-slate-400 group-hover:text-indigo-600 transition-colors">0%</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-indigo-600 transition-colors">Modul 9</h3>
+                <p class="text-sm text-slate-500 mb-6 font-medium">Rechtliche Grundlagen</p>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                    <div id="mod9-bar" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                </div>
+            </div>
+
             <script>
-                for(let i=2; i<=9; i++) {
+                for(let i=2; i<=8; i++) {
                     document.write(`
                     <div class="bg-slate-50/50 p-7 rounded-2xl border border-dashed border-slate-200 flex flex-col justify-center items-center grayscale opacity-50">
                         <span class="text-slate-400 font-bold text-lg italic uppercase tracking-widest">Modul ${i}</span>
-                        <span class="text-[10px] text-slate-400 mt-2 font-bold tracking-tighter">KEINE DATENBANK-VERBINDUNG</span>
+                        <span class="text-[10px] text-slate-400 mt-2 font-bold tracking-tighter uppercase">In Vorbereitung</span>
                     </div>
                     `);
                 }
