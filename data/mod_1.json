@@ -1,0 +1,4662 @@
+{
+  "moduleName": "Modul 1: Kommunikation & Biografiewerkstatt",
+  "pdfs": [
+    "M 1A.2_Handout_03.09.24.pdf",
+    "M 1A.2_Handout_04.09.24.pdf",
+    "M 1A.3_Handout.pdf",
+    "M 1A.4_Handout.pdf",
+    "M1B.1_PPT_Handout.pdf"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Modul befasst sich explizit mit 'Lern- und Lebensgeschichten'?",
+      "options": ["M 1A.1", "M 1A.2", "M 1A.3", "M 1A.4"],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 1"
+    },
+    {
+      "id": 2,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist der wesentliche Unterschied zwischen einem Lebenslauf und einer Biografie?",
+      "options": [
+        "Der Lebenslauf ist immer länger.",
+        "Die Biografie ist eine sachliche Darstellung von Daten.",
+        "Biografie ist die individuelle Interpretation der erlebten Lebensgeschichte.",
+        "Es gibt keinen Unterschied."
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 9"
+    },
+    {
+      "id": 3,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie definiert die Forschung den Begriff 'Normalbiografie'?",
+      "options": [
+        "Ein Leben ohne Krankheiten.",
+        "Standardisierte Form eines Lebenslaufs einer Personengruppe.",
+        "Die Biografie einer berühmten Person.",
+        "Ein tabellarischer Lebenslauf für Behörden."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 4,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Alter wird für Interviewpartner eines biografischen Interviews im Handout empfohlen?",
+      "options": ["ca. 18+", "ca. 30+", "ca. 60+", "Jedes Alter"],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 12"
+    },
+    {
+      "id": 5,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "In der Grafik zum Sender-Empfänger-Modell: Welcher Begriff steht direkt über dem Symbol für den Mund?",
+      "options": ["Empfänger_in", "Sender_in", "Nachricht", "Kanal"],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 2"
+    },
+    {
+      "id": 6,
+      "module": 1,
+      "type": "MC",
+      "question": "Was versteht man unter 'Statuspassagen'?",
+      "options": [
+        "Flure im Krankenhaus.",
+        "Markante Übergänge im Lebenslauf (z.B. Schüler zu Azubi).",
+        "Die Zeit zwischen zwei Schichten.",
+        "Die Einstufung in einen Pflegegrad."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 7,
+      "module": 1,
+      "type": "MC",
+      "question": "Wie wird Kommunikation im Modul 1A.3 definiert?",
+      "options": [
+        "Einseitige Informationsabgabe.",
+        "Verständigung untereinander sowie Austausch und Übertragung von Informationen.",
+        "Das Führen von Patientenakten.",
+        "Nur das gesprochene Wort."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 16"
+    },
+    {
+      "id": 8,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "Welcher Prozentsatz wird in der Grafik der 'Körpersprache' zugeordnet?",
+      "options": ["7 %", "38 %", "55 %", "93 %"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 9,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Seite einer Nachricht nach Schulz von Thun fragt: \"Was ist das für einer?\"",
+      "options": ["Sachinhalt", "Selbstoffenbarung", "Beziehung", "Appell"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 10,
+      "module": 1,
+      "type": "MC",
+      "question": "Wer begrüßt sich durch \"Sich gegenseitig die Wangen beriechen\"?",
+      "options": ["Franzosen", "Inder", "Mongolen", "Assyrer"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 11,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist laut Watzlawick unmöglich?",
+      "options": ["Nicht zu pflegen.", "Nicht zu kommunizieren.", "Nicht zu fühlen.", "Nicht zu sterben."],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22"
+    },
+    {
+      "id": 12,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher Begriff gilt als Kommunikationsstörer?",
+      "options": ["Paraphrasieren", "Ich-Botschaften", "Du-Botschaften", "Aktives Zuhören"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 13,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was ist 'Paraphrasieren'?",
+      "options": [
+        "Das Gesagte in eigenen Worten wiederholen.",
+        "Den Patienten unterbrechen.",
+        "Fremdwörter erklären.",
+        "Die Pflegedokumentation schreiben."
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 14,
+      "module": 1,
+      "type": "MC",
+      "question": "Was steht an erster Stelle des Pflegeprozess-Kreislaufs?",
+      "options": ["Planung der Maßnahmen", "Durchführung der Pflege", "Informationssammlung", "Beurteilung der Wirkung"],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 15,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Dokument ist beim Heimeinzug laut SLP-Checkliste zwingend notwendig?",
+      "options": [
+        "Abiturzeugnis",
+        "Nachweis über TBC-Freiheit (ärztliche Erklärung)",
+        "Mitgliedschaft im Sportverein",
+        "Führerschein"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 16,
+      "module": 1,
+      "type": "MC",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Informationserfassung'?",
+      "options": ["Einleitung", "Hauptteil", "Schluss", "Nachbereitung"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 17,
+      "module": 1,
+      "type": "MC",
+      "question": "Was gehört laut Checkliste zur 'Vorbereitung des Zimmers' beim Heimeinzug?",
+      "options": ["Heimvertrag unterschreiben", "Bett beziehen", "Arzt anrufen", "PDL vorstellen"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 18,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was ist die etymologische Bedeutung von 'Anamnese'?",
+      "options": ["Untersuchung", "Erinnerung", "Heilung", "Befragung"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30 (Arbeitsblatt 2)"
+    },
+    {
+      "id": 19,
+      "module": 1,
+      "type": "MC",
+      "question": "Wie viele Basisemotionen definiert Paul Ekman in seiner Theorie?",
+      "options": ["3", "5", "7", "10"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 20,
+      "module": 1,
+      "type": "MC",
+      "question": "Woran erkennt man ein 'echtes Lächeln' laut Ekman?",
+      "options": [
+        "An den entblößten Zähnen.",
+        "An der Dauer des Lächelns.",
+        "An den Lachfältchen um die Augen.",
+        "Am gleichzeitigen Lachen."
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44"
+    },
+    {
+      "id": 21,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "Im Modell der Emotionsentstehung: Was folgt direkt auf die 'kognitive Bewertung'?",
+      "options": ["Auslöser", "Primäre Emotion", "Sekundäre Emotion", "Bedürfnis 1"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 22,
+      "module": 1,
+      "type": "MC",
+      "question": "Was kann laut Handout passieren, wenn man Gefühle über lange Zeit nur kontrolliert, aber nicht reflektiert?",
+      "options": [
+        "Man wird professioneller.",
+        "Man bekommt mehr Gehalt.",
+        "Es kann zum Burnout führen.",
+        "Die Patienten werden zufriedener."
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 23,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie wird 'Supervision' im Handout definiert?",
+      "options": [
+        "Überwachung der Arbeitszeit.",
+        "Beratung zur Berufsrollenreflexion.",
+        "Fachliche Fortbildung.",
+        "Kontrolle der Pflegedokumentation."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 24,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist das Ziel der 'Kollegialen Beratung'?",
+      "options": [
+        "Bestrafung von Fehlern.",
+        "Lösungen für Probleme aus dem Berufsalltag entwickeln.",
+        "Urlaubsplanung im Team.",
+        "Ärztliche Anordnungen diskutieren."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 53"
+    },
+    {
+      "id": 25,
+      "module": 1,
+      "type": "MC",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Begrüßung/Vorstellung'?",
+      "options": ["Schluss", "Einleitung", "Hauptteil", "Anamnese"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 26,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Diagramm NICHT zu den 6 gezeigten Gesichtern?",
+      "options": ["Angst (Fear)", "Ekel (Disgust)", "Neid (Envy)", "Trauer (Sadness)"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42"
+    },
+    {
+      "id": 27,
+      "module": 1,
+      "type": "MC",
+      "question": "Was versteht man unter 'Ganzheitlichkeit' in der Pflege nach Schwerdt (2002)?",
+      "options": [
+        "Alle Körperteile waschen.",
+        "Einbeziehung des sozialen und biographischen Kontexts.",
+        "Den ganzen Tag beim Patienten bleiben.",
+        "Medizin und Pflege mischen."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 50"
+    },
+    {
+      "id": 28,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher Gesprächsaspekt befasst sich mit der Frage: \"Was soll ich tun aufgrund seiner Mitteilung?\"",
+      "options": ["Sachinhalt", "Selbstoffenbarung", "Beziehung", "Appell"],
+      "answer": 3,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 29,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was ist ein 'biografisches Kurzportrait'?",
+      "options": [
+        "Ein langer Aufsatz.",
+        "Ein Steckbrief mit den wichtigsten Lebensdaten.",
+        "Ein Foto des Bewohners.",
+        "Die Krankenakte."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 13"
+    },
+    {
+      "id": 30,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher Anteil entfällt auf den 'stimmlichen Ausdruck'?",
+      "options": ["7 %", "38 %", "55 %", "100 %"],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 31,
+      "module": 1,
+      "type": "MC",
+      "question": "Wann ist laut Modul 8 die Implementierung der kollegialen Beratung vorgesehen?",
+      "options": [
+        "Ab dem ersten Tag.",
+        "Regelmäßig bis zum Examen.",
+        "Nur nach Fehlern.",
+        "Einmalig vor dem Abschluss."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 32,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Geste gehört zur Begrüßung bei den Indern?",
+      "options": [
+        "Händeschütteln",
+        "Handflächen aneinanderlegen und verbeugen",
+        "Kleider hergeben",
+        "Nase reiben"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 33,
+      "module": 1,
+      "type": "MC",
+      "question": "Wer führt laut Handout idealerweise das Aufnahmegespräch?",
+      "options": [
+        "Der behandelnde Arzt",
+        "Die (Bezugs-)Pflegekraft",
+        "Die PDL",
+        "Die Verwaltungsmitarbeiter"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30 (Arbeitsblatt 2)"
+    },
+    {
+      "id": 34,
+      "module": 1,
+      "type": "MC",
+      "question": "In der 'Gefühl-Sammlung' (AB 2): Welches Gefühl gehört zu den negativen?",
+      "options": ["Dankbarkeit", "Geborgenheit", "Aggression", "Zuversicht"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44"
+    },
+    {
+      "id": 35,
+      "module": 1,
+      "type": "MC",
+      "question": "Was steht im Zentrum des 4-Ohren-Modells laut Abbildung?",
+      "options": ["Die Ohren", "Die Nachricht (Sprechblase)", "Der Empfänger", "Der Sender"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 36,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was ist ein 'Narrativ' im Kontext der Reflexion?",
+      "options": ["Eine Tabelle.", "Eine Erlebnisschilderung.", "Ein Medikamentenplan.", "Eine Facharbeit."],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 37,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Institution muss über einen Heimeinzug informiert werden?",
+      "options": ["Einwohnermeldeamt", "ADAC", "Supermarkt", "Sportverein"],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 38,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist eine 'primäre Emotion'?",
+      "options": [
+        "Eine überlegte Reaktion.",
+        "Die erste, unmittelbare Reaktion auf einen Auslöser.",
+        "Eine gespielte Emotion.",
+        "Die Emotion der Bezugspflegekraft."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 39,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist das Ziel der 'Biografieforschung'?",
+      "options": [
+        "Statistiken über Geburtsraten.",
+        "Rekonstruktion von Lebensverläufen und Sinnkonstruktionen.",
+        "Erstellung von Stammbäumen.",
+        "Verfolgung von Kriminellen."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 10"
+    },
+    {
+      "id": 40,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Lebensstadium steht nach 'Erwachsener' in der Liste der Lebensabschnitte?",
+      "options": ["Kindheit", "Jugend", "Rentner Großeltern", "Säugling"],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    },
+    {
+      "id": 41,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was versteht man unter 'Eisbrechern'?",
+      "options": [
+        "Werkzeuge für gefrorenes Wasser.",
+        "Themen oder Strategien zum Gesprächsbeginn bei Schweigsamkeit.",
+        "Medikamente gegen Fieber.",
+        "Kühlelemente für Verbände."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 23"
+    },
+    {
+      "id": 42,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher Schritt im Pflegeprozess folgt auf 'Festlegen der Pflegeziele'?",
+      "options": [
+        "Informationssammlung",
+        "Planung der Pflegemaßnahmen",
+        "Durchführung der Pflege",
+        "Beurteilung der Wirkung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 43,
+      "module": 1,
+      "type": "MC",
+      "question": "Was gehört zum 'Schluss' eines Aufnahmegesprächs?",
+      "options": ["Begrüßung", "Informationsgabe", "Abschließende Fragen / Beendigung", "Ziele erläutern"],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 44,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist laut Ekman 'universell' an Emotionen?",
+      "options": [
+        "Dass jeder die gleichen Kleider trägt.",
+        "Dass sie kulturübergreifend gleich ausgedrückt werden.",
+        "Dass sie nur im Weltraum existieren.",
+        "Dass sie nur bei Erwachsenen auftreten."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 45,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Dokument wird bei Beantragung von Pflegewohngeld als Kopie benötigt?",
+      "options": ["Geburtsurkunde der Enkel", "Rentenbescheide", "Heiratsurkunde der Nachbarn", "Zeugnis der Grundschule"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 46,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist 'Resonanz' in der Fallarbeit?",
+      "options": [
+        "Lautstärke der Stimme.",
+        "Emotionen, die eine Erzählung beim Zuhörer auslösen.",
+        "Die Antwort des Arztes.",
+        "Das Echo im Krankenzimmer."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 47,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Was ist eine 'sekundäre Emotion'?",
+      "options": [
+        "Die zweitwichtigste Emotion.",
+        "Eine Emotion nach kognitiver Bewertung.",
+        "Eine Emotion, die erst im Alter auftritt.",
+        "Ein Gefühl, das man vergisst."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 48,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Institution ist KEIN Empfänger der Meldung des Heimeinzuges laut Checkliste?",
+      "options": ["Krankenkasse", "Pflegekasse", "Finanzamt", "Sozialamt"],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 49,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist ein 'Schlüsselthema' in der Pflege für kollegiale Beratung?",
+      "options": ["Reparatur der Kaffeemaschine", "Umgang mit Nähe und Distanz", "Parkplatzsuche", "Kantinenpreise"],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 50,
+      "module": 1,
+      "type": "MC",
+      "question": "Wie wird das 4-Seiten-Modell im Handout M 1A.4 auch bezeichnet?",
+      "options": ["Vier-Augen-Prinzip", "Vier-Ohren-Modell", "Quadratische Kommunikation", "Pflegequadrat"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 51,
+      "module": 1,
+      "type": "MC",
+      "question": "Was besagt das erste Axiom von Paul Watzlawick?",
+      "options": [
+        "Kommunikation ist immer symmetrisch.",
+        "Man kann nicht nicht kommunizieren.",
+        "Der Beziehungsaspekt bestimmt den Inhaltsaspekt.",
+        "Digitale Kommunikation ist analoger überlegen."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22"
+    },
+    {
+      "id": 52,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher dieser Begriffe ist ein 'Kommunikationsförderer'?",
+      "options": ["Du-Botschaften", "Mangelnde Sachkenntnis", "Paraphrasieren und Rückfragen", "Emotionale Beeinflussung"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 53,
+      "module": 1,
+      "type": "MC",
+      "question": "Welchen Anteil an der face-to-face Kommunikation hat laut Grafik das 'gesprochene Wort'?",
+      "options": ["38 %", "55 %", "7 %", "15 %"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 54,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie wird das Wiederholen einer Aussage mit eigenen Worten in der Kommunikation genannt?",
+      "options": ["Interpretieren", "Evaluieren", "Paraphrasieren", "Reflektieren"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 55,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat: Welche Seite fragt \"Wie redet der eigentlich mit mir?\"",
+      "options": ["Sachinhalt", "Selbstoffenbarung", "Beziehung", "Appell"],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 56,
+      "module": 1,
+      "type": "MC",
+      "question": "An welcher Stelle im Pflegeprozess-Kreislauf steht die 'Beurteilung der Wirkung der Pflege'?",
+      "options": ["Schritt 1", "Schritt 4", "Schritt 6", "Schritt 2"],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 57,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Ziel verfolgt das pflegerische Aufnahmegespräch primär?",
+      "options": [
+        "Festlegung der ärztlichen Therapie",
+        "Aufbau einer Beziehung zum zu pflegenden Menschen",
+        "Abrechnung der Pflegeleistungen",
+        "Einteilung des Personals"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30 (Arbeitsblatt 2)"
+    },
+    {
+      "id": 58,
+      "module": 1,
+      "type": "MC",
+      "question": "In welcher Gesprächsphase erfolgt die 'Begrüßung und Vorstellung'?",
+      "options": ["Hauptteil", "Einleitung", "Schluss", "Nachbereitung"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 59,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Welcher Fachbegriff beschreibt den markanten Übergang von der Rolle des Schülers zum Auszubildenden?",
+      "options": ["Normalbiografie", "Statuspassage", "Lebenslinie", "Karriereschritt"],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 60,
+      "module": 1,
+      "type": "MC",
+      "question": "Was gehört laut SLP-Checkliste zur 'Durchführung' beim Eintreffen des Bewohners?",
+      "options": [
+        "Heimvertrag unterschreiben lassen",
+        "Begrüßen mit einem Blumenstrauß",
+        "Krankenakte anlegen",
+        "Kleidung markieren"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 61,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Institution muss über einen Heimeinzug informiert werden?",
+      "options": ["ADAC", "Einwohnermeldeamt", "Lokale Zeitung", "Katasteramt"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 62,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Dokument ist für den Ausschluss von TBC bei Heimaufnahme notwendig?",
+      "options": ["Impfpass", "Ärztliche Erklärung", "Röntgenbild", "Blutbild"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 63,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist laut Paul Ekman eine der universellen Basisemotionen?",
+      "options": ["Schuld", "Ekel", "Stolz", "Neid"],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42"
+    },
+    {
+      "id": 64,
+      "module": 1,
+      "type": "MC",
+      "question": "Wie wird die unmittelbare emotionale Reaktion auf einen Auslöser genannt?",
+      "options": ["Sekundäre Emotion", "Kognitive Bewertung", "Primäre Emotion", "Handlungsimpuls"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 65,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "In der Abbildung zum Emotionsmodell: Was beeinflusst die 'kognitive Bewertung'?",
+      "options": ["Handlungsimpuls 1", "Erfahrungen, Regeln, Normen", "Bedürfnis 1", "Auslöser"],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 66,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Beratung für Personen, deren primäre Aufgabe die Arbeit am Menschen ist?",
+      "options": ["Coaching", "Supervision", "Mentoring", "Fortbildung"],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 67,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist ein Schlüsselthema in der Pflege für die kollegiale Beratung?",
+      "options": ["Dienstplanerstellung", "Umgang mit Nähe und Distanz", "Gehaltsabrechnung", "Speisenplan"],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 68,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Modul befasst sich mit 'Orientierung in der Ausbildung'?",
+      "options": ["M 1A.1", "M 1A.3", "M 1A.5", "M 1B.2"],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 1"
+    },
+    {
+      "id": 69,
+      "module": 1,
+      "type": "MC",
+      "question": "Was versteht man unter 'Biografie'?",
+      "options": [
+        "Tabellarische Datenaufzählung",
+        "Erzählung der erlebten Lebensgeschichte",
+        "Medizinische Anamnese",
+        "Wissenschaftliche Studie"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 9"
+    },
+    {
+      "id": 70,
+      "module": 1,
+      "type": "MC",
+      "question": "Wer begrüßt sich durch drei Schläge auf den Rücken während einer Umarmung?",
+      "options": ["Franzosen", "Mongolen", "Lateinamerikaner", "Inder"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 71,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Welcher Aspekt einer Nachricht nach Schulz von Thun beinhaltet den 'Appell'?",
+      "options": [
+        "Information über Sachverhalte",
+        "Darstellung der Beziehung",
+        "Was der Sender vom Empfänger will",
+        "Was der Sender von sich preisgibt"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 72,
+      "module": 1,
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt steht am Ende der Liste in M 1A.2?",
+      "options": ["Rentner", "Erwachsener", "Hochaltriger Mensch", "Großeltern"],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    },
+    {
+      "id": 73,
+      "module": 1,
+      "type": "MC",
+      "question": "Was steht im Zentrum des Modells in M 1A.2, Seite 2?",
+      "options": ["Der Sprechwunsch", "Die Nachricht", "Der Empfänger", "Der Sender"],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 2"
+    },
+    {
+      "id": 74,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist das griechische Wort für 'Erinnerung' im pflegerischen Kontext?",
+      "options": ["Diagnosis", "Anamnese", "Therapie", "Prognose"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30 (Arbeitsblatt 2)"
+    },
+    {
+      "id": 75,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "Welcher Kommunikationsanteil beträgt laut Kreisdiagramm 38 %?",
+      "options": ["Körpersprache", "Gesprochenes Wort", "Stimmlicher Ausdruck", "Blickkontakt"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 76,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Dokument wird laut Checkliste unter 'notwendige Dokumente' bei Heimeinzug aufgeführt?",
+      "options": ["Jagdschein", "Kopie der Geburtsurkunde", "Mietvertrag", "Arbeitszeugnis"],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 77,
+      "module": 1,
+      "type": "MC",
+      "question": "Was besagt das Konzept der 'Ganzheitlichkeit' nach Schwerdt (2002)?",
+      "options": [
+        "Pflege braucht nur medizinische Daten.",
+        "Soziale und biographische Kontexte sind unverzichtbar.",
+        "Pflege umfasst nur die körperliche Reinigung.",
+        "Ganzheitlichkeit führt immer zu Burnout."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 50"
+    },
+    {
+      "id": 78,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Geste nutzen Mongolen laut Handout zur Begrüßung?",
+      "options": ["Faustschlag", "Händeklatschen", "Wangen beriechen / Nasen berühren", "Schweigen"],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 79,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie nennt man Emotionen, die erst nach einer kognitiven Bewertung entstehen?",
+      "options": ["Basisemotionen", "Universelle Emotionen", "Sekundäre Emotionen", "Reaktive Emotionen"],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 80,
+      "module": 1,
+      "type": "MC",
+      "question": "In welchem Alter beginnt laut Lernbiografie-Beispiel die Kita?",
+      "options": [
+        "1 Jahr",
+        "2 Jahre",
+        "3 Jahre",
+        "4 Jahre"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 5"
+    },
+    {
+      "id": 81,
+      "module": 1,
+      "type": "MC",
+      "question": "Was gehört zum 'Austausch im Gespräch' im Hauptteil des Aufnahmegesprächs?",
+      "options": [
+        "Begrüßung",
+        "Informationsgabe und Informationserfassung",
+        "Beendigung",
+        "Hausordnung vorlesen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 82,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Institution ist in der Liste 'Meldung des Heimeinzuges an' NICHT enthalten?",
+      "options": [
+        "Krankenkasse",
+        "Finanzamt",
+        "Pflegekasse",
+        "Einwohnermeldeamt"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 83,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wer ist der 'Gesichtsversteher' und Forscher zur nonverbalen Kommunikation?",
+      "options": [
+        "Paul Watzlawick",
+        "Friedemann Schulz von Thun",
+        "Paul Ekman",
+        "Adi Holzer"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 84,
+      "module": 1,
+      "type": "MC",
+      "question": "Woran erkennt man ein echtes Lächeln laut Handout?",
+      "options": [
+        "Nur am Mund",
+        "Lachfältchen um die Augen",
+        "An der Stimme",
+        "An der Dauer"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44"
+    },
+    {
+      "id": 85,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Handlung gehört zur Vorbereitung des Zimmers (SLP)?",
+      "options": [
+        "Bett beziehen",
+        "Hausordnung erklären",
+        "Blumenstrauß kaufen",
+        "Anamnese führen"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 86,
+      "module": 1,
+      "type": "MC",
+      "question": "Wie viele Teilnehmer hat eine typische Kleingruppe für Fallschilderungen laut Handout?",
+      "options": [
+        "2 Personen",
+        "3 - 4 TN",
+        "8 - 10 TN",
+        "Die ganze Klasse"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 87,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Emotion ist im Modell 'Alfred & Shadow' zentral?",
+      "options": [
+        "Wut",
+        "Gefühle allgemein",
+        "Langeweile",
+        "Eifersucht"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 46"
+    },
+    {
+      "id": 88,
+      "module": 1,
+      "type": "MC",
+      "question": "Was folgt im Emotionsprozess auf die 'sekundäre Emotion'?",
+      "options": [
+        "Kognitive Bewertung",
+        "Bedürfnis 2",
+        "Handlungsimpuls 2",
+        "Auslöser"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 89,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die bewusste Steuerung von Gefühlen in der Pflege?",
+      "options": [
+        "Emotionskontrolle",
+        "Emotionsregulation",
+        "Selbstbeherrschung",
+        "Gefühlsunterdrückung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 39"
+    },
+    {
+      "id": 90,
+      "module": 1,
+      "type": "MC",
+      "question": "Was passiert laut Schwerdt (2002), wenn man Informationen über den Kontext weglässt?",
+      "options": [
+        "Die Pflege wird effizienter.",
+        "Gute Pflege ist nicht möglich.",
+        "Burnout wird verhindert.",
+        "Patienten werden schneller gesund."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 50"
+    },
+    {
+      "id": 91,
+      "module": 1,
+      "type": "MC",
+      "question": "In welcher Phase der Ausbildung findet die 'Erinnerungsreise' statt?",
+      "options": [
+        "Vor dem ersten Einsatz",
+        "Nach dem Orientierungseinsatz",
+        "Nach dem Examen",
+        "Am ersten Tag"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 38"
+    },
+    {
+      "id": 92,
+      "module": 1,
+      "type": "MC",
+      "question": "Was gehört zum 'Schluss' eines Aufnahmegesprächs?",
+      "options": [
+        "Begrüßung",
+        "Nachfragen bei Unklarheiten",
+        "Abschließende Fragen / Beendigung",
+        "Ziele erläutern"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 93,
+      "module": 1,
+      "type": "Bildzuordnung",
+      "question": "Was steht im 4-Ohren-Modell in der Gedankenblase über dem Kopf?",
+      "options": [
+        "Selbstoffenbarung",
+        "Sachinhalt",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 94,
+      "module": 1,
+      "type": "MC",
+      "question": "Welches Dokument wird für die Verwaltung des Barbetrages benötigt?",
+      "options": [
+        "Kontoauszug",
+        "Heimvertrag",
+        "Vollmacht",
+        "Sparbuch"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 95,
+      "module": 1,
+      "type": "MC",
+      "question": "Ab welchem Modul ist die regelmäßige Implementierung kollegialer Beratung vorgesehen?",
+      "options": [
+        "Modul 1",
+        "Modul 4",
+        "Modul 8",
+        "Modul 12"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 96,
+      "module": 1,
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Emotionen, die eine Erzählung beim Zuhörer auslösen?",
+      "options": [
+        "Sympathie",
+        "Mitleid",
+        "Resonanz",
+        "Echo"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 97,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist laut Paul Ekman angeboren?",
+      "options": [
+        "Sprache",
+        "Mimik der Basisemotionen",
+        "Höflichkeitsregeln",
+        "Pflegewissen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 98,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist eine 'Normalbiografie'?",
+      "options": [
+        "Ein Leben ohne Fehler",
+        "Standardisierte Form eines Lebenslaufs einer Gruppe",
+        "Eine Biografie von Prominenten",
+        "Der medizinische Bericht"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 99,
+      "module": 1,
+      "type": "MC",
+      "question": "Welche Begrüßung ist den Eipo auf Neuguinea zuzuordnen?",
+      "options": [
+        "Händeklatschen",
+        "Schweigen",
+        "Wangen beriechen",
+        "Kleider hergeben"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 100,
+      "module": 1,
+      "type": "MC",
+      "question": "Was ist das Ziel der Supervision laut Handout?",
+      "options": [
+        "Kontrolle der Leistung",
+        "Berufsrollenreflexion",
+        "Vorgabe von Arbeitsanweisungen",
+        "Therapie der Mitarbeiter"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 101,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist laut Handout der entscheidende Unterschied bei einer 'Biografie' im Vergleich zum 'Lebenslauf'?",
+      "options": [
+        "Sie enthält nur medizinische Daten.",
+        "Sie ist eine rein chronologische Abfolge.",
+        "Sie ist die individuelle Interpretation des Erlebten.",
+        "Sie darf keine Krankheiten enthalten."
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [1]"
+    },
+    {
+      "id": 102,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Welcher Begriff beschreibt markante Übergänge im Lebenslauf, wie den Wechsel in die Elternrolle?",
+      "options": [
+        "Biografieforschung",
+        "Statuspassagen",
+        "Normalbiografie",
+        "Lebenslinie"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [2]"
+    },
+    {
+      "id": 103,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welche Methode nutzt die Biografieforschung primär zur Rekonstruktion von Lebensverläufen?",
+      "options": [
+        "Blutanalyse",
+        "Schriftliche Tests",
+        "Interviews",
+        "Beobachtung im Schlaf"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [3]"
+    },
+    {
+      "id": 104,
+      "module": "1A.2",
+      "type": "Bildzuordnung",
+      "question": "Welcher Lebensabschnitt steht in der Liste der 'Lebensabschnitte als Aufgabe' an letzter Stelle?",
+      "options": [
+        "Rentner Großeltern",
+        "Erwachsener",
+        "Hochaltriger Mensch",
+        "Junger Erwachsener"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Passage [4]"
+    },
+    {
+      "id": 105,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was bildet die Grundlage für das Erfassen wesentlicher Lernereignisse in der eigenen Lernbiografie?",
+      "options": [
+        "Das Zeugnis",
+        "Die Lebenslinie",
+        "Der Ausbildungsvertrag",
+        "Das Stammbuch"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Passage [5]"
+    },
+    {
+      "id": 106,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welches Alter sollte ein Interviewpartner für das 'narrative Interview' laut Handout ca. haben?",
+      "options": [
+        "Gleiches Alter wie der Azubi",
+        "ca. 30+",
+        "ca. 60+",
+        "Mindestens 90"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [6]"
+    },
+    {
+      "id": 107,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die vorab formulierten Schwerpunkte und Fragen für ein Interview?",
+      "options": [
+        "Fragebogen",
+        "Leitfaden",
+        "Checkliste",
+        "Anamnesebogen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [6]"
+    },
+    {
+      "id": 108,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist das Ergebnis nach der Durchführung eines biografischen Interviews?",
+      "options": [
+        "Eine Diagnose",
+        "Ein biografisches Kurzportrait",
+        "Ein Pflegegrad",
+        "Ein ärztliches Attest"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [7]"
+    },
+    {
+      "id": 109,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welcher Aspekt gehört laut Watzlawick untrennbar zu jeder Kommunikation?",
+      "options": [
+        "Digitale Übertragung",
+        "Der Inhalts- und Beziehungsaspekt",
+        "Die Lautstärke",
+        "Die schriftliche Fixierung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [8, 9]"
+    },
+    {
+      "id": 110,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Welchen Begriff verwendet das Handout als Synonym für Kommunikation?",
+      "options": [
+        "Befehlsausgabe",
+        "Verständigung untereinander",
+        "Einseitige Information",
+        "Dokumentation"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [10]"
+    },
+    {
+      "id": 111,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was zählt laut Handout zu den 'Kommunikationsstörern'?",
+      "options": [
+        "Aktives Zuhören",
+        "Paraphrasieren",
+        "Du-Botschaften",
+        "Ich-Botschaften"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [11]"
+    },
+    {
+      "id": 112,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform nutzen die 'Dani auf Neuguinea'?",
+      "options": [
+        "Händeschütteln",
+        "Minutenlanges Umarmen und Tränen",
+        "Kleider hergeben",
+        "Faustschlag gegen den Kopf"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [12]"
+    },
+    {
+      "id": 113,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man Strategien, um mit schweigsamen Personen ein Gespräch zu beginnen?",
+      "options": [
+        "Türöffner",
+        "Eisbrecher",
+        "Smalltalk",
+        "Anamnese"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [13]"
+    },
+    {
+      "id": 114,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welcher Anteil der Kommunikation wird der 'Körpersprache' zugeschrieben?",
+      "options": [
+        "7 %",
+        "38 %",
+        "55 %",
+        "93 %"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [14]"
+    },
+    {
+      "id": 115,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An welcher Stelle im Pflegeprozess steht die Informationssammlung?",
+      "options": [
+        "Schritt 1",
+        "Schritt 2",
+        "Schritt 6",
+        "Nach der Durchführung"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [15]"
+    },
+    {
+      "id": 116,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Was ist der griechische Ursprung des Wortes 'Anamnese'?",
+      "options": [
+        "Untersuchung",
+        "Erinnerung",
+        "Heilung",
+        "Gespräch"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [15]"
+    },
+    {
+      "id": 117,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Ziel verfolgt das Aufnahmegespräch in Bezug auf die 'Ankommenssituation'?",
+      "options": [
+        "Erschwerung durch Bürokratie",
+        "Erleichterung der Situation",
+        "Vermeidung von Kontakt",
+        "Prüfung der Zahlungsfähigkeit"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [15]"
+    },
+    {
+      "id": 118,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat: Welches 'Ohr' fragt 'Was soll ich tun aufgrund seiner Mitteilung?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 3,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [16]"
+    },
+    {
+      "id": 119,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was gehört laut SLP-Checkliste zur Phase 'Eintreffen des Bewohners'?",
+      "options": [
+        "Heimvertrag kündigen",
+        "Begrüßen mit einem Blumenstrauß",
+        "Sofortige Blutabnahme",
+        "Zimmerschlüssel verstecken"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [17]"
+    },
+    {
+      "id": 120,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument ist beim Heimeinzug zwingend für den Ausschluss von ansteckenden Krankheiten?",
+      "options": [
+        "Impfpass",
+        "Ärztliche Erklärung (z.B. TBC)",
+        "Röntgenpass",
+        "Allergiepass"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [17]"
+    },
+    {
+      "id": 121,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welche Vollmacht wird laut Checkliste für die Postöffnung durch die Verwaltung benötigt?",
+      "options": [
+        "Vorsorgevollmacht",
+        "Patientenverfügung",
+        "Vollmacht für Öffnung wichtiger Post",
+        "Bankvollmacht"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [17]"
+    },
+    {
+      "id": 122,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An wen muss laut Checkliste eine Meldung des Heimeinzuges erfolgen?",
+      "options": [
+        "Finanzamt",
+        "Einwohnermeldeamt",
+        "Sportverein",
+        "ADAC"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [17]"
+    },
+    {
+      "id": 123,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wer ist laut Handout der 'Gesichtsversteher'?",
+      "options": [
+        "Paul Watzlawick",
+        "Schulz von Thun",
+        "Paul Ekman",
+        "Adi Holzer"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [18]"
+    },
+    {
+      "id": 124,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was besagt die Theorie der Basisemotionen?",
+      "options": [
+        "Sie sind nur in Europa gültig.",
+        "Sie sind angeboren und kulturübergreifend.",
+        "Sie müssen in der Schule gelernt werden.",
+        "Sie treten erst ab dem 20. Lebensjahr auf."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [18]"
+    },
+    {
+      "id": 125,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Welche Emotion gehört NICHT zu den 6 im Bild gezeigten Gesichtern (HAPPINESS, SADNESS, ...)?",
+      "options": [
+        "ANGER",
+        "DISGUST",
+        "LOVE",
+        "SURPRISE"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [19]"
+    },
+    {
+      "id": 126,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Woran erkennt man ein 'echtes Lächeln' laut Handout?",
+      "options": [
+        "Nur an den Lippen",
+        "An den Lachfältchen um die Augen",
+        "An der Stimme",
+        "An der Dauer des Lachens"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [20]"
+    },
+    {
+      "id": 127,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man eine detaillierte Erlebnisschilderung einer Situation, die emotional bewegt hat?",
+      "options": [
+        "Bericht",
+        "Protokoll",
+        "Narrativ",
+        "Statistik"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [21]"
+    },
+    {
+      "id": 128,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Emotionen, die eine Erzählung beim Zuhörer auslösen?",
+      "options": [
+        "Gefühlschaos",
+        "Resonanz",
+        "Mitleid",
+        "Sympathie"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [21]"
+    },
+    {
+      "id": 129,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was steht am Anfang des Modells der Emotionsentstehung?",
+      "options": [
+        "Handlungsimpuls",
+        "Auslöser",
+        "Kognitive Bewertung",
+        "Bedürfnis 2"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [22]"
+    },
+    {
+      "id": 130,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was folgt im Modell direkt auf die 'primäre Emotion'?",
+      "options": [
+        "Sekundäre Emotion",
+        "Kognitive Bewertung",
+        "Auslöser",
+        "Handlungsimpuls 2"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [22]"
+    },
+    {
+      "id": 131,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welches Risiko birgt die 'Ganzheitlichkeit' in der Pflege laut Schwerdt (2002)?",
+      "options": [
+        "Zu viel Freizeit",
+        "Überfordernde emotionale Belastungssituationen",
+        "Mangel an Arbeit",
+        "Finanzielle Verluste"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [23]"
+    },
+    {
+      "id": 132,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was kann passieren, wenn man Gefühle über lange Zeit nur kontrolliert, aber nicht reflektiert?",
+      "options": [
+        "Man wird weiser.",
+        "Es kann zum Burnout führen.",
+        "Man braucht weniger Schlaf.",
+        "Die Muskelkraft steigt."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [24]"
+    },
+    {
+      "id": 133,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Beratung zur kontinuierlichen Berufsrollenreflexion?",
+      "options": [
+        "Therapie",
+        "Supervision",
+        "Mediation",
+        "Inspektion"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [24]"
+    },
+    {
+      "id": 134,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was ist ein Merkmal der 'Kollegialen Beratung'?",
+      "options": [
+        "Beratung durch den Chef",
+        "Selbstgesteuerte Gruppe Gleichberechtigter",
+        "Einseitige Anweisung",
+        "Kritikgespräch"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [25]"
+    },
+    {
+      "id": 135,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Ab welchem Modul ist die Implementierung der kollegialen Beratung vorgesehen?",
+      "options": [
+        "Modul 1",
+        "Modul 4",
+        "Modul 8",
+        "Modul 12"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [26]"
+    },
+    {
+      "id": 136,
+      "module": "1A.2",
+      "type": "Bildzuordnung",
+      "question": "Welcher Akteur im 'Unser Modell' steht auf der linken Seite mit dem Mund-Symbol?",
+      "options": [
+        "Empfänger_in",
+        "Sender_in",
+        "Patient",
+        "Arzt"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Passage [27]"
+    },
+    {
+      "id": 137,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Wie wird 'Zuhören' in der Geschichte von Momo beschrieben?",
+      "options": [
+        "Wie eine lästige Pflicht",
+        "Wie Momo",
+        "Wie ein Lehrer",
+        "Wie ein Richter"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Passage [28]"
+    },
+    {
+      "id": 138,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist eine 'Normalbiografie' laut Forschung?",
+      "options": [
+        "Ein Leben ohne Hochs und Tiefs",
+        "Standardisierte Form eines durchschnittlichen Lebenslaufs einer Gruppe",
+        "Eine Biografie, die nur Erfolge nennt",
+        "Der tabellarische Lebenslauf einer Einzelperson"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Passage [2]"
+    },
+    {
+      "id": 139,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wer begrüßt sich durch 'Drei Schläge auf den Rücken während einer Umarmung'?",
+      "options": [
+        "Inder",
+        "Lateinamerikaner",
+        "Franzosen",
+        "Eskimos"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [12]"
+    },
+    {
+      "id": 140,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie lautet die prozentuale Verteilung für 'stimmlichen Ausdruck'?",
+      "options": [
+        "7 %",
+        "38 %",
+        "55 %",
+        "100 %"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Passage [14]"
+    },
+    {
+      "id": 141,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Was steht im Zentrum der Grafik 'Ziele des Aufnahmegespräches'?",
+      "options": [
+        "Informationssammlung",
+        "Ziele des Aufnahmegespräches",
+        "Pflegeanamnese",
+        "Ankommenssituation"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [15]"
+    },
+    {
+      "id": 142,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welcher Teil des Aufnahmegesprächs umfasst 'Begrüßung / Vorstellung / Beginn'?",
+      "options": [
+        "Hauptteil",
+        "Nachbereitung",
+        "Einleitung",
+        "Schluss"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [16]"
+    },
+    {
+      "id": 143,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welche Seite der Nachricht fragt 'Wie ist der Sachverhalt zu verstehen?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [16]"
+    },
+    {
+      "id": 144,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was muss laut Checkliste bezüglich der 'Hausordnung' getan werden?",
+      "options": [
+        "Abschreiben lassen",
+        "Bewohner informieren",
+        "Ignorieren",
+        "Ärzten vorlegen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Passage [29]"
+    },
+    {
+      "id": 145,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "In welcher Phase der Ausbildung findet die 'Erinnerungsreise' statt?",
+      "options": [
+        "Vor dem Orientierungseinsatz",
+        "Nach dem 1. Teil des Orientierungseinsatzes",
+        "Nach dem Examen",
+        "In den Ferien"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [30, 31]"
+    },
+    {
+      "id": 146,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was besagt die Emotionspsychologie über Mimik?",
+      "options": [
+        "Sie ist rein willkürlich.",
+        "Sie offenbart Gefühle oft unwillkürlich.",
+        "Sie ist für Kommunikation unbedeutend.",
+        "Nur Erwachsene zeigen Mimik."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [31, 32]"
+    },
+    {
+      "id": 147,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die bewusste Auseinandersetzung mit dem eigenen emotionalen Prozess?",
+      "options": [
+        "Emotionskontrolle",
+        "Emotionsregulation",
+        "Gefühlsunterdrückung",
+        "Selbstbeherrschung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [33]"
+    },
+    {
+      "id": 148,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was beeinflusst laut Modell die 'kognitive Bewertung'?",
+      "options": [
+        "Nur das aktuelle Wetter",
+        "Erfahrungen, erlernte Regeln, kulturelle Normen",
+        "Die Blutgruppe",
+        "Das Alter des Patienten"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [22]"
+    },
+    {
+      "id": 149,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welches Thema ist ein 'Schlüsselthema' in der Pflege?",
+      "options": [
+        "Reparatur der Heizung",
+        "Umgang mit Nähe und Distanz",
+        "Kantinenpreise",
+        "Parkplatzregelung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [26]"
+    },
+    {
+      "id": 150,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Welches Tier ist auf dem Titelbild von 'Alfred & Shadow' zu sehen?",
+      "options": [
+        "Hund",
+        "Katze",
+        "Eule",
+        "Maus"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Passage [34]"
+    },
+    {
+      "id": 151,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was ist die etymologische Bedeutung des griechischen Wortes 'Anamnese'?",
+      "options": [
+        "Untersuchung",
+        "Heilung",
+        "Erinnerung",
+        "Befragung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [1]"
+    },
+    {
+      "id": 152,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welcher Schritt im Pflegeprozess-Kreislauf befasst sich mit der 'Durchführung der Pflege'?",
+      "options": [
+        "Schritt 1",
+        "Schritt 3",
+        "Schritt 5",
+        "Schritt 6"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [1]"
+    },
+    {
+      "id": 153,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat (4-Ohren-Modell): Welcher Aspekt fragt 'Wie ist der Sachverhalt zu verstehen?'",
+      "options": [
+        "Selbstoffenbarung",
+        "Sachinhalt",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 154,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat: Welcher Aspekt fragt 'Wie redet der eigentlich mit mir?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 155,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat: Welcher Aspekt fragt 'Was soll ich tun aufgrund seiner Mitteilung?'",
+      "options": [
+        "Sachinhalt",
+        "Beziehung",
+        "Appell",
+        "Selbstoffenbarung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 156,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im Kommunikationsquadrat: Welcher Aspekt fragt 'Was ist das denn für einer?'",
+      "options": [
+        "Selbstoffenbarung",
+        "Sachinhalt",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 157,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welches Axiom stammt von Paul Watzlawick?",
+      "options": [
+        "Wer schreibt, der bleibt.",
+        "Man kann nicht nicht kommunizieren!",
+        "Pflege ist eine reine Dienstleistung.",
+        "Emotionen stören die Kommunikation."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [3]"
+    },
+    {
+      "id": 158,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie hoch ist der Gesamteindruck der nonverbalen Ebene (Stimme + Körper) laut der Grafik?",
+      "options": [
+        "7 %",
+        "55 %",
+        "38 %",
+        "93 %"
+      ],
+      "answer": 3,
+      "hint": "Siehe M 1A.3_Handout.pdf [4]"
+    },
+    {
+      "id": 159,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den 7 universellen Basisemotionen?",
+      "options": [
+        "Neid",
+        "Schuld",
+        "Überraschung",
+        "Stolz"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 160,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den Basisemotionen?",
+      "options": [
+        "Ekel",
+        "Eifersucht",
+        "Schadenfreude",
+        "Geduld"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 161,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den Basisemotionen?",
+      "options": [
+        "Hass",
+        "Liebe",
+        "Ärger",
+        "Verachtung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 162,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den Basisemotionen?",
+      "options": [
+        "Angst",
+        "Gier",
+        "Hoffnung",
+        "Mut"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 163,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den Basisemotionen?",
+      "options": [
+        "Reue",
+        "Trauer",
+        "Zorn",
+        "Langeweile"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 164,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman zu den Basisemotionen?",
+      "options": [
+        "Mitgefühl",
+        "Freude",
+        "Gleichgültigkeit",
+        "Ehrgeiz"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [5]"
+    },
+    {
+      "id": 165,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Inder laut der interkulturellen Übersicht?",
+      "options": [
+        "Händeschütteln",
+        "Handflächen aneinanderlegen und sich leicht verbeugen",
+        "Wangen beriechen",
+        "Drei Schläge auf den Rücken"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [6]"
+    },
+    {
+      "id": 166,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform nutzen die 'Kupfer-Eskimos'?",
+      "options": [
+        "Nasen reiben",
+        "Händeklatschen",
+        "Faustschlag gegen Kopf und Schulter",
+        "Schweigen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf [6]"
+    },
+    {
+      "id": 167,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Angehörige der 'Assyrer'?",
+      "options": [
+        "Kleider hergeben",
+        "Händeklatschen",
+        "Wangen beriechen",
+        "Faustschlag"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.3_Handout.pdf [6]"
+    },
+    {
+      "id": 168,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform ist den 'Eipo auf Neuguinea' zuzuordnen?",
+      "options": [
+        "Händeklatschen",
+        "Schweigen",
+        "Küsschen rechts und links",
+        "Kleider hergeben"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [6]"
+    },
+    {
+      "id": 169,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Was versteht man unter 'Biografieforschung' laut wikipedia.de?",
+      "options": [
+        "Sammeln von Geburtsurkunden",
+        "Rekonstruktion von Lebensverläufen und Sinnkonstruktionen",
+        "Schreiben von Lebensläufen",
+        "Suche nach Vorfahren"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf [7]"
+    },
+    {
+      "id": 170,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist eine 'Normalbiografie'?",
+      "options": [
+        "Ein Leben ohne Krankheiten",
+        "Ein tabellarischer Lebenslauf einer Einzelperson",
+        "Standardisierte Form eines Lebenslaufs einer Personengruppe",
+        "Die Biografie einer berühmten Person"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf [8]"
+    },
+    {
+      "id": 171,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was sind 'Statuspassagen'?",
+      "options": [
+        "Korridore in einer Klinik",
+        "Markante Übergänge im Lebenslauf (z.B. Wechsel in Elternrolle)",
+        "Abschnitte in einem Buch",
+        "Phasen einer Krankheit"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf [8]"
+    },
+    {
+      "id": 172,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welche Interviewform wird in M 1A.2 zur Gewinnung biografischer Daten thematisiert?",
+      "options": [
+        "Standardisiertes Interview",
+        "Strukturiertes Interview",
+        "Narratives Interview",
+        "Stressinterview"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf [9]"
+    },
+    {
+      "id": 173,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was steht am Anfang des Emotionsmodells (M1B.1 Handout)?",
+      "options": [
+        "Primäre Emotion",
+        "Auslöser",
+        "Kognitive Bewertung",
+        "Sekundäre Emotion"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [10]"
+    },
+    {
+      "id": 174,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was folgt im Emotionsmodell direkt auf den Auslöser?",
+      "options": [
+        "Primäre Emotion",
+        "Sekundäre Emotion",
+        "Handlungsimpuls 2",
+        "Bedürfnis 2"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [10]"
+    },
+    {
+      "id": 175,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Welcher Schritt im Emotionsmodell wird durch 'Erfahrungen, erlernte Regeln, kulturelle Normen' beeinflusst?",
+      "options": [
+        "Handlungsimpuls 1",
+        "Primäre Emotion",
+        "Kognitive Bewertung",
+        "Sekundäre Emotion"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [10]"
+    },
+    {
+      "id": 176,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was folgt im Modell nach der 'kognitiven Bewertung'?",
+      "options": [
+        "Bedürfnis 1",
+        "Sekundäre Emotion",
+        "Auslöser",
+        "Handlungsimpuls 1"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [10]"
+    },
+    {
+      "id": 177,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was resultiert am Ende des gezeigten Emotionsprozesses?",
+      "options": [
+        "Handlungsimpuls 2",
+        "Kognitive Bewertung",
+        "Auslöser",
+        "Bedürfnis 1"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [10]"
+    },
+    {
+      "id": 178,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie heißt das Konzept zum professionellen Umgang mit Gefühlen in der Pflege?",
+      "options": [
+        "Emotionskontrolle",
+        "Gefühlsunterdrückung",
+        "Emotionsregulation",
+        "Stressbewältigung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [11]"
+    },
+    {
+      "id": 179,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wozu dient Supervision laut Handout primär?",
+      "options": [
+        "Überwachung der Schichtpläne",
+        "Kontinuierliche Berufsrollenreflexion",
+        "Vorgabe medizinischer Therapien",
+        "Bestrafung von Fehlern"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [12]"
+    },
+    {
+      "id": 180,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wer berät wen in einer 'Kollegialen Beratung'?",
+      "options": [
+        "Der Chef seine Mitarbeiter",
+        "Ein externer Berater das Team",
+        "Gleichberechtigte Mitglieder ein Mitglied der Gruppe",
+        "Der Arzt die Pflegekraft"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [13]"
+    },
+    {
+      "id": 181,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was ist ein typisches Schlüsselthema für kollegiale Beratung in der Pflege?",
+      "options": [
+        "Die Reparatur des Bettenwaschautomaten",
+        "Umgang mit Nähe und Distanz",
+        "Die Gestaltung des Parkplatzes",
+        "Wetterbericht für den Ausflug"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [14]"
+    },
+    {
+      "id": 182,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was gehört laut SLP-Checkliste zum 'Eintreffen des Bewohners'?",
+      "options": [
+        "Sofortiges Blutdruckmessen",
+        "Begrüßen mit einem Blumenstrauß",
+        "Heimvertrag unterschreiben lassen",
+        "Post öffnen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [15]"
+    },
+    {
+      "id": 183,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument ist für den Ausschluss ansteckender Krankheiten bei Aufnahme zwingend?",
+      "options": [
+        "Impfpass",
+        "Ärztliche Erklärung (insb. TBC)",
+        "Krankenkassenkarte",
+        "Reisepass"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [15]"
+    },
+    {
+      "id": 184,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Wofür wird laut Checkliste eine Vollmacht durch die Verwaltung benötigt?",
+      "options": [
+        "Bankeinzug",
+        "Heimeinzug",
+        "Öffnung wichtiger Post",
+        "Arztbesuche"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [15]"
+    },
+    {
+      "id": 185,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Erläuterung der Ziele des Gesprächs'?",
+      "options": [
+        "Hauptteil",
+        "Schluss",
+        "Einleitung",
+        "Nachbereitung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 186,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Informationserfassung'?",
+      "options": [
+        "Einleitung",
+        "Hauptteil",
+        "Schluss",
+        "Nachbereitung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 187,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welche Tätigkeit schließt das Aufnahmegespräch ab?",
+      "options": [
+        "Begrüßung",
+        "Abschließende Fragen / Beendigung",
+        "Anamnese",
+        "Pflegeplanung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 188,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist laut Handout der Hauptunterschied zwischen Lebenslauf und Biografie?",
+      "options": [
+        "Es gibt keinen.",
+        "Biografie ist die individuelle Interpretation des Erlebten.",
+        "Lebenslauf ist immer handschriftlich.",
+        "Lebenslauf enthält nur Krankheiten."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf [16]"
+    },
+    {
+      "id": 189,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was besagt das Zitat von Schwerdt (2002) zur 'Ganzheitlichkeit'?",
+      "options": [
+        "Ganzheitlichkeit ist immer einfach.",
+        "Sie kann Pflegende in überfordernde Belastungssituationen bringen.",
+        "Informationen über den Kontext sind unwichtig.",
+        "Ganzheitlichkeit verhindert Konflikte."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [17]"
+    },
+    {
+      "id": 190,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was droht Pflegenden, die Gefühle nur kontrollieren, aber nicht reflektieren?",
+      "options": [
+        "Mehr Freizeit",
+        "Karriereaufstieg",
+        "Burnout",
+        "Besseres Gehör"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf [12]"
+    },
+    {
+      "id": 191,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Welches Merkmal gehört zum 'Aktiven Zuhören'?",
+      "options": [
+        "Viel reden",
+        "Paraphrasieren und mimische Bestätigung",
+        "Den Patienten unterbrechen",
+        "Währenddessen telefonieren"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [18]"
+    },
+    {
+      "id": 192,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Was bedeutet 'Paraphrasieren'?",
+      "options": [
+        "Lateinische Begriffe nutzen",
+        "Das Gesagte in eigenen Worten wiederholen",
+        "Eine fremde Sprache lernen",
+        "Informationen weglassen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [18]"
+    },
+    {
+      "id": 193,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welches 'Ohr' im 4-Ohren-Modell nimmt Fakten und Daten auf?",
+      "options": [
+        "Beziehungsohr",
+        "Appellohr",
+        "Sachohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 194,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welches 'Ohr' achtet darauf, wie der Sender zum Empfänger steht?",
+      "options": [
+        "Sachohr",
+        "Beziehungsohr",
+        "Appellohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 195,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welches 'Ohr' fragt 'Was ist mit ihm?'",
+      "options": [
+        "Sachohr",
+        "Appellohr",
+        "Selbstoffenbarungsohr",
+        "Beziehungsohr"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 196,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Welches 'Ohr' nimmt Wünsche und Anweisungen auf?",
+      "options": [
+        "Appellohr",
+        "Sachohr",
+        "Beziehungsohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf [2]"
+    },
+    {
+      "id": 197,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Wer in der Weltliteratur gilt als Vorbild für gutes Zuhören?",
+      "options": [
+        "Harry Potter",
+        "Momo",
+        "Faust",
+        "Sherlock Holmes"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf [19]"
+    },
+    {
+      "id": 198,
+      "module": "1A.2",
+      "type": "Bildzuordnung",
+      "question": "Welcher Lebensabschnitt folgt auf die 'Rentner Großeltern'?",
+      "options": [
+        "Junger Erwachsener",
+        "Kindheit",
+        "Hochaltriger Mensch",
+        "Erwachsener"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf [20]"
+    },
+    {
+      "id": 199,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Was sind 'Eisbrecher'?",
+      "options": [
+        "Spezielle Schiffe",
+        "Themen zum Gesprächsbeginn bei Schweigsamkeit",
+        "Kühlelemente für Medikamente",
+        "Strenge Praxisanleiter"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf [21]"
+    },
+    {
+      "id": 200,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Aus wie vielen Schritten besteht der im Handout dargestellte Pflegeprozess?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf [1]"
+    },
+    {
+      "id": 201,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was versteht die Forschung unter dem Begriff 'Statuspassagen'?",
+      "options": [
+        "Die Flure innerhalb eines Pflegeheims",
+        "Bedeutsame bzw. markante Übergänge im Lebenslauf",
+        "Die tägliche Übergabe zwischen den Schichten",
+        "Der Wechsel von einem Zimmer in ein anderes"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11 [1]"
+    },
+    {
+      "id": 202,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Welcher Begriff beschreibt die standardisierte Form eines Lebenslaufs mit Informationen, die für eine Personengruppe als relevant anerkannt sind?",
+      "options": [
+        "Musterbiografie",
+        "Idealbiografie",
+        "Normalbiografie",
+        "Standardbiografie"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11 [1]"
+    },
+    {
+      "id": 203,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Aus welcher Sprache stammt der Begriff 'Anamnese' und was bedeutet er wörtlich?",
+      "options": [
+        "Lateinisch: Untersuchung",
+        "Griechisch: Erinnerung",
+        "Griechisch: Befragung",
+        "Lateinisch: Geschichte"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2 [2]"
+    },
+    {
+      "id": 204,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welcher Schritt im Pflegeprozess-Kreislauf bildet den direkten Ausgangspunkt für das Aufnahmegespräch?",
+      "options": [
+        "Schritt 2: Erkennen von Problemen",
+        "Schritt 4: Planung der Maßnahmen",
+        "Schritt 1: Informationssammlung",
+        "Schritt 6: Beurteilung der Wirkung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30 [2]"
+    },
+    {
+      "id": 205,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Angehörige des Stammes der 'Loango' laut der interkulturellen Übersicht?",
+      "options": [
+        "Wangen beriechen",
+        "Händeklatschen",
+        "Kleider hergeben",
+        "Faustschlag gegen den Kopf"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 206,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform ist den 'Assyrern' zuzuordnen?",
+      "options": [
+        "Händeschütteln",
+        "Schweigen",
+        "Kleider hergeben",
+        "Nasen reiben"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 207,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welcher Prozentsatz wird in der Grafik der Kommunikation dem 'stimmlichen Ausdruck' zugeschrieben?",
+      "options": [
+        "7 %",
+        "55 %",
+        "38 %",
+        "93 %"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25 [4]"
+    },
+    {
+      "id": 208,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im 4-Ohren-Modell: Welches 'Ohr' nimmt die Information auf, wie der Sender zum Empfänger steht?",
+      "options": [
+        "Sachohr",
+        "Appellohr",
+        "Beziehungsohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 209,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört NICHT zu den 6 universellen Basisemotionen nach Paul Ekman, die im Handout bebildert sind?",
+      "options": [
+        "DISGUST (Ekel)",
+        "SURPRISE (Überraschung)",
+        "ENVY (Neid)",
+        "FEAR (Angst)"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42 [6]"
+    },
+    {
+      "id": 210,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was steht im Modell der Emotionsentstehung am Ende der Kette nach der 'sekundären Emotion'?",
+      "options": [
+        "Kognitive Bewertung",
+        "Handlungsimpuls 2",
+        "Bedürfnis 1",
+        "Auslöser"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48 [7]"
+    },
+    {
+      "id": 211,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie wird die Beratung für Personen und Organisationen genannt, die primär am Menschen arbeiten und ihre Rolle reflektieren müssen?",
+      "options": [
+        "Therapie",
+        "Supervision",
+        "Audit",
+        "Mediation"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52 [8]"
+    },
+    {
+      "id": 212,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Ab wann sollte die 'Kollegiale Beratung' in der Ausbildung regelmäßig implementiert werden?",
+      "options": [
+        "Ab Modul 1",
+        "Ab Modul 4",
+        "Ab Modul 8",
+        "Erst nach dem Examen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54 [9]"
+    },
+    {
+      "id": 213,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welche Altersgruppe wird im Handout 04.09.24 für die Auswahl eines Interviewpartners empfohlen?",
+      "options": [
+        "Jugendliche",
+        "ca. 30+",
+        "ca. 60+",
+        "Gleichaltrige Mitschüler"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 12 [10]"
+    },
+    {
+      "id": 214,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument ist beim Heimeinzug laut SLP-Checkliste für den Ausschluss ansteckender Krankheiten notwendig?",
+      "options": [
+        "Personalausweis",
+        "Ärztliche Erklärung (insbes. TBC)",
+        "Röntgenpass",
+        "Krankenkassenkarte"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35 [11]"
+    },
+    {
+      "id": 215,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An welche Institution muss der Heimeinzug laut Checkliste gemeldet werden?",
+      "options": [
+        "Finanzamt",
+        "Einwohnermeldeamt",
+        "ADAC",
+        "Hausmeister"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35 [11]"
+    },
+    {
+      "id": 216,
+      "module": "1A.3",
+      "type": "Bildzuordnung",
+      "question": "Welcher Kommunikationsanteil beträgt laut Kreisdiagramm 55 %?",
+      "options": [
+        "Gesprochenes Wort",
+        "Stimmlicher Ausdruck",
+        "Körpersprache",
+        "Mimik allein"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25 [4]"
+    },
+    {
+      "id": 217,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welche Seite der Nachricht nach Schulz von Thun fragt: 'Was soll ich tun aufgrund seiner Mitteilung?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 3,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 218,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt Paul Ekman sich selbst aufgrund seiner Forschungen zur Mimik?",
+      "options": [
+        "Gesichtsversteher",
+        "Mimik-Experte",
+        "Gefühlsforscher",
+        "Emotionspsychologe"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41 [12]"
+    },
+    {
+      "id": 219,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt steht in der Liste 'Lebensabschnitte als Aufgabe' ganz am Anfang?",
+      "options": [
+        "Säugling",
+        "Kindheit",
+        "Jugend",
+        "Geburt"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4 [13]"
+    },
+    {
+      "id": 220,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt folgt laut Modell auf den 'Erwachsenen'?",
+      "options": [
+        "Rentner Großeltern",
+        "Hochaltriger Mensch",
+        "Junger Erwachsener",
+        "Pensionär"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4 [13]"
+    },
+    {
+      "id": 221,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was steht laut dem Modell der Emotionsentstehung zwischen 'primärer Emotion' und 'sekundärer Emotion'?",
+      "options": [
+        "Auslöser",
+        "Kognitive Bewertung",
+        "Bedürfnis 1",
+        "Handlungsimpuls 1"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48 [7]"
+    },
+    {
+      "id": 222,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was beeinflusst laut Modell die 'kognitive Bewertung' maßgeblich?",
+      "options": [
+        "Das aktuelle Wetter",
+        "Erfahrungen, erlernte Regeln und kulturelle Normen",
+        "Nur das Alter des Patienten",
+        "Die Tageszeit"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48 [7]"
+    },
+    {
+      "id": 223,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform nutzen die 'Kupfer-Eskimos'?",
+      "options": [
+        "Nasen reiben",
+        "Händeschütteln",
+        "Faustschlag gegen Kopf und Schulter",
+        "Verbeugung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 224,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich 'Lateinamerikaner' laut Handout?",
+      "options": [
+        "Küsschen rechts und links",
+        "Drei Schläge auf den Rücken während einer Umarmung",
+        "Handflächen aneinanderlegen",
+        "Händeklatschen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 225,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welche Phase des Aufnahmegesprächs beinhaltet die 'Begrüßung / Vorstellung / Beginn'?",
+      "options": [
+        "Hauptteil",
+        "Einleitung",
+        "Schluss",
+        "Nachbereitung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 226,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Was ist der Kern des 'Hauptteils' im Aufnahmegespräch?",
+      "options": [
+        "Abschließende Fragen",
+        "Austausch im Gespräch (Informationsgabe / -erfassung)",
+        "Erläuterung der Ziele",
+        "Verabschiedung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 227,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was kann laut Handout passieren, wenn man Gefühle über lange Zeit nur kontrolliert, aber nicht reflektiert?",
+      "options": [
+        "Man wird widerstandsfähiger",
+        "Man nimmt sie irgendwann nicht mehr wahr (Burnout-Gefahr)",
+        "Man erhält mehr Lob vom Vorgesetzten",
+        "Man wird kognitiv leistungsfähiger"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52 [8]"
+    },
+    {
+      "id": 228,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Welches Axiom stammt von Paul Watzlawick bezüglich der Kommunikation?",
+      "options": [
+        "Wer schreibt, der bleibt",
+        "Der Klient hat immer recht",
+        "Man kann nicht nicht kommunizieren!",
+        "Reden ist Silber, Schweigen ist Gold"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22 [14]"
+    },
+    {
+      "id": 229,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Wofür wird laut SLP-Checkliste beim Heimeinzug eine Vollmacht durch die Verwaltung benötigt?",
+      "options": [
+        "Zur Verwaltung des Barbetrages",
+        "Zur Vereinbarung von Arztterminen",
+        "Zur Auswahl des Mittagessens",
+        "Zur Kündigung der alten Wohnung"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35 [11]"
+    },
+    {
+      "id": 230,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Welcher Begriff beschreibt die Erzählung der erlebten Lebensgeschichte durch die Person selbst?",
+      "options": [
+        "Lebenslauf",
+        "Biografie",
+        "Anamnese",
+        "Tagebuch"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 9 [15]"
+    },
+    {
+      "id": 231,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welches Thema wird im Handout als 'Schlüsselthema' in der Pflege für kollegiale Beratung genannt?",
+      "options": [
+        "Umgang mit Nähe und Distanz",
+        "Die Reparatur von Pflegebetten",
+        "Wäschebestellung",
+        "Dienstwagenregelung"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54 [9]"
+    },
+    {
+      "id": 232,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist laut Handout 03.09.24 die Grundlage für die eigene Lernbiografie?",
+      "options": [
+        "Das Abschlusszeugnis",
+        "Die Lebenslinie",
+        "Der Ausbildungsvertrag",
+        "Die Empfehlung der Grundschule"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 6 [16]"
+    },
+    {
+      "id": 233,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Element gehört laut Arbeitsblatt 2 NICHT zu den Zielen eines Aufnahmegesprächs?",
+      "options": [
+        "Aufbau einer Beziehung",
+        "Klärung von Erwartungen",
+        "Diagnosestellung einer Demenz",
+        "Erleichterung der 'Ankommenssituation'"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2 [2]"
+    },
+    {
+      "id": 234,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Im Modell der Emotionsentstehung folgt auf 'Handlungsimpuls 1' ein Pfeil zu...",
+      "options": [
+        "Bedürfnis 2",
+        "mögliche Konsequenzen",
+        "Auslöser",
+        "Primäre Emotion"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48 [7]"
+    },
+    {
+      "id": 235,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welche Seite der Nachricht nach Schulz von Thun fragt: 'Was ist mit ihm? Was ist das denn für einer?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 236,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was gehört laut Handout zu den 'Kommunikationsförderern'?",
+      "options": [
+        "Du-Botschaften",
+        "Paraphrasieren und Rückfragen",
+        "Emotionale Beeinflussung",
+        "Aneinander vorbeireden"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19 [17]"
+    },
+    {
+      "id": 237,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was zählt laut Handout zu den 'Kommunikationsstörern'?",
+      "options": [
+        "Ich-Botschaften",
+        "Aktives Zuhören",
+        "Mangelnde Sachkenntnis",
+        "Respekt zeigen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19 [17]"
+    },
+    {
+      "id": 238,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wie wird die unmittelbare Reaktion auf einen Reiz im Emotionsmodell genannt?",
+      "options": [
+        "Sekundäre Emotion",
+        "Primäre Emotion",
+        "Kognitive Emotion",
+        "Reaktive Emotion"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48 [7]"
+    },
+    {
+      "id": 239,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Wer sollte laut Arbeitsvorschlag im Handout das Aufnahmegespräch idealerweise führen?",
+      "options": [
+        "Nur der Heimleiter",
+        "Die Bezugspflegekraft",
+        "Der aufnehmende Arzt",
+        "Das Reinigungspersonal"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2 [2]"
+    },
+    {
+      "id": 240,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion ist eine der Basisemotionen laut Paul Ekman?",
+      "options": [
+        "Hass",
+        "Liebe",
+        "Trauer",
+        "Scham"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42 [6]"
+    },
+    {
+      "id": 241,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Welcher Begriff beschreibt eine detaillierte Erlebnisschilderung einer emotional bewegenden Situation?",
+      "options": [
+        "Chronik",
+        "Protokoll",
+        "Narrativ",
+        "Bericht"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45 [18]"
+    },
+    {
+      "id": 242,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Begriff steht am Ende der Kette der Lebensabschnitte in Modul 1A.2?",
+      "options": [
+        "Rentner",
+        "Senior",
+        "Hochaltriger Mensch",
+        "Greis"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4 [13]"
+    },
+    {
+      "id": 243,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "In welcher Phase des Heimeinzugs (SLP) sollte die 'Bezugspflegekraft vorgestellt' werden?",
+      "options": [
+        "Informationssammlung",
+        "Aufnahmegespräch",
+        "Zimmer vorbereiten",
+        "Eintreffen des Bewohners"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35 [11]"
+    },
+    {
+      "id": 244,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was versteht Schwerdt (2002) unter 'Ganzheitlichkeit' in der Pflege?",
+      "options": [
+        "Alle Körperteile zu waschen",
+        "Einbeziehung des sozialen und biographischen Kontexts",
+        "Pflege rund um die Uhr",
+        "Die Zusammenarbeit mit allen Berufsgruppen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 50 [19]"
+    },
+    {
+      "id": 245,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Angehörige des Stammes 'Dani auf Neuguinea'?",
+      "options": [
+        "Handflächen aneinanderlegen",
+        "Händeklatschen",
+        "Minutenlanges Umarmen und Tränen",
+        "Kleider hergeben"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 246,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welcher Kommunikationsaspekt im 4-Ohren-Modell befasst sich mit der Frage: 'Wie ist der Sachverhalt zu verstehen?'",
+      "options": [
+        "Selbstoffenbarung",
+        "Sachinhalt",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31 [5]"
+    },
+    {
+      "id": 247,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was kennzeichnet die 'Kollegiale Beratung'?",
+      "options": [
+        "Ein Vier-Augen-Gespräch mit dem Chef",
+        "Beratungsgespräch in selbstgesteuerter Gruppe Gleichberechtigter",
+        "Ein ärztliches Konsil",
+        "Die Pflegevisite"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 53 [20]"
+    },
+    {
+      "id": 248,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Geste gehört zur Begrüßung bei den 'Indern'?",
+      "options": [
+        "Drei Schläge auf den Rücken",
+        "Handflächen aneinanderlegen und sich leicht verbeugen",
+        "Wangen beriechen",
+        "Händeschütteln"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21 [3]"
+    },
+    {
+      "id": 249,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Woran erkennt man laut Ekman ein 'echtes Lächeln'?",
+      "options": [
+        "Nur am Mund",
+        "Lachfältchen um die Augen",
+        "An der Lautstärke",
+        "An der Dauer"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44 [21]"
+    },
+    {
+      "id": 250,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument wird laut SLP bei Beantragung von Pflegewohngeld benötigt?",
+      "options": [
+        "Heimvertrag",
+        "Jagdschein",
+        "Rentenbescheide",
+        "Kopie der Heiratsurkunde"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35 [11]"
+    },
+    {
+      "id": 251,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welcher Schritt im Pflegeprozess-Kreislauf folgt unmittelbar auf die 'Planung der Pflegemaßnahmen'?",
+      "options": [
+        "Beurteilung der Wirkung",
+        "Durchführung der Pflege",
+        "Erkennen von Problemen",
+        "Informationssammlung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 252,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Benennen Sie den Fachbegriff für die erste Phase des Aufnahmegesprächs, in der die Ziele erläutert werden.",
+      "options": [
+        "Hauptteil",
+        "Anamnese-Phase",
+        "Einleitung",
+        "Schlussphase"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 253,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im 4-Ohren-Modell: Welches 'Ohr' nimmt die Nachricht 'Was ich von dir halte' wahr?",
+      "options": [
+        "Sach-Ohr",
+        "Appell-Ohr",
+        "Beziehungs-Ohr",
+        "Selbstoffenbarungs-Ohr"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 254,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Angehörige des Stammes der 'Loango' laut Handout?",
+      "options": [
+        "Sich gegenseitig die Wangen beriechen",
+        "Händeklatschen",
+        "Drei Schläge auf den Rücken",
+        "Kleider hergeben"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 255,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform nutzen 'Assyrer' laut der interkulturellen Übersicht?",
+      "options": [
+        "Nasen reiben",
+        "Kleider hergeben",
+        "Faustschlag gegen Kopf",
+        "Schweigen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 256,
+      "module": "1A.3",
+      "type": "Bildzuordnung",
+      "question": "Welcher Prozentsatz der Kommunikation wird laut der Grafik dem 'stimmlichen Ausdruck' zugeordnet?",
+      "options": [
+        "7 %",
+        "55 %",
+        "38 %",
+        "93 %"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 257,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Woran erkennt man laut Emotionspsychologie ein 'echtes Lächeln' im Gegensatz zu einem gespielten?",
+      "options": [
+        "An der Lautstärke des Lachens",
+        "An den Lachfältchen um die Augen",
+        "Nur an der Stellung der Mundwinkel",
+        "An der Dauer des Lächelns"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44"
+    },
+    {
+      "id": 258,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wie viele Teilnehmer hat eine Kleingruppe für Fallschilderungen laut AA 3 idealerweise?",
+      "options": [
+        "2 TN",
+        "3 - 4 TN",
+        "8 - 10 TN",
+        "Die gesamte Klasse"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 259,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Welcher Begriff beschreibt die Emotionen, die eine Erzählung beim Zuhörer auslösen?",
+      "options": [
+        "Mitgefühl",
+        "Echo",
+        "Resonanz",
+        "Gefühlsübertragung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 260,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was steht im Zentrum des Modells der Emotionsentstehung zwischen der 'primären Emotion' und der 'sekundären Emotion'?",
+      "options": [
+        "Auslöser",
+        "Kognitive Bewertung",
+        "Handlungsimpuls 2",
+        "Bedürfnis 1"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 261,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Faktoren fließen laut Modell maßgeblich in die 'kognitive Bewertung' einer Emotion ein?",
+      "options": [
+        "Nur der Hungerzustand",
+        "Erfahrungen, erlernte Regeln, kulturelle Normen",
+        "Nur das Lebensalter",
+        "Die Wetterbedingungen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 262,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie wird das Konzept zum professionellen Umgang mit Gefühlen in der Pflege genannt?",
+      "options": [
+        "Emotionskontrolle",
+        "Gefühlsunterdrückung",
+        "Emotionsregulation",
+        "Distanzwahrung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 39"
+    },
+    {
+      "id": 263,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was kann laut Schwerdt (2002) Pflegende in überfordernde, emotionale Belastungssituationen bringen?",
+      "options": [
+        "Zu viel Dokumentation",
+        "Die 'Ganzheitlichkeit' der Betreuung",
+        "Mangel an Fachbüchern",
+        "Zu kurze Pausen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 50"
+    },
+    {
+      "id": 264,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wozu kann es laut Handout führen, wenn Gefühle über lange Zeit nur kontrolliert, aber nicht reflektiert werden?",
+      "options": [
+        "Zu besonderer Härte",
+        "Zum Burnout",
+        "Zu einer Gehaltserhöhung",
+        "Zu besserer Konzentration"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 265,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "An wen richtet sich Supervision laut Definition?",
+      "options": [
+        "Nur an die Heimleitung",
+        "Nur an Auszubildende",
+        "Einzelpersonen, Gruppen oder Teams",
+        "Ausschließlich an Ärzte"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 266,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was ist das Ziel der Kollegialen Beratung?",
+      "options": [
+        "Therapie traumatisierter Mitarbeiter",
+        "Lösungen für Fragen oder Probleme aus dem beruflichen Alltag entwickeln",
+        "Bestrafung von Fehlern im Dienst",
+        "Anordnung von Mehrarbeit"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 53"
+    },
+    {
+      "id": 267,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welches 'Schlüsselthema' wird im Handout für die kollegiale Beratung in der Pflege beispielhaft genannt?",
+      "options": [
+        "Umgang mit Nähe und Distanz",
+        "Reparatur von medizinischen Geräten",
+        "Einhaltung der Brandschutzregeln",
+        "Erstellung des Speiseplans"
+      ],
+      "answer": 0,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 268,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist laut Handout 04.09.24 eine Biografie?",
+      "options": [
+        "Ein tabellarischer Lebenslauf für Versicherungen",
+        "Die individuelle Interpretation der erlebten Lebensgeschichte",
+        "Eine Liste aller medizinischen Diagnosen",
+        "Eine statistische Auswertung der Lebenserwartung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 9"
+    },
+    {
+      "id": 269,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Womit befasst sich die Biografieforschung laut wikipedia.de primär?",
+      "options": [
+        "Mit der Auszählung von Berufsjahren",
+        "Mit der Rekonstruktion von Lebensverläufen und Sinnkonstruktionen",
+        "Mit der Suche nach Erben",
+        "Mit der genetischen Veranlagung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 10"
+    },
+    {
+      "id": 270,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man bedeutsame bzw. markante Übergänge im Lebenslauf (z.B. Wechsel zum Auszubildenden)?",
+      "options": [
+        "Statuspassagen",
+        "Lebensphasen",
+        "Meilensteine",
+        "Biografieschritte"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 271,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument ist beim Heimeinzug laut SLP-Checkliste für den Ausschluss von TBC zwingend?",
+      "options": [
+        "Röntgenbild der Lunge",
+        "Ärztlicher Fragebogen / Erklärung",
+        "Impfpass",
+        "Blutuntersuchung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 272,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welche Tätigkeit gehört laut Checkliste zur 'Durchführung' beim Eintreffen des Bewohners?",
+      "options": [
+        "Sofortiges Auspacken der Koffer",
+        "Begrüßen mit einem Blumenstrauß durch PDL und Bezugspflegekraft",
+        "Unterschrift unter alle Verträge erzwingen",
+        "Durchführung einer Ganzkörperwäsche"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 273,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An wen muss der Heimeinzug laut Checkliste gemeldet werden?",
+      "options": [
+        "Finanzamt",
+        "Pflegekasse",
+        "Sportverein",
+        "Automobilclub"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 274,
+      "module": "1A.3",
+      "type": "Bildzuordnung",
+      "question": "Welcher Anteil entfällt bei der Kommunikation auf das 'gesprochene Wort'?",
+      "options": [
+        "55 %",
+        "38 %",
+        "7 %",
+        "93 %"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 275,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welche Begrüßungsform nutzen Inder laut Handout?",
+      "options": [
+        "Drei Schläge auf den Rücken",
+        "Handflächen aneinanderlegen und sich leicht verbeugen",
+        "Nasen reiben",
+        "Wangen beriechen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 276,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört laut Paul Ekman NICHT zu den 6 im Diagramm gezeigten Basisemotionen?",
+      "options": [
+        "Angst (FEAR)",
+        "Ekel (DISGUST)",
+        "Stolz (PRIDE)",
+        "Ärger (ANGER)"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42"
+    },
+    {
+      "id": 277,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt steht in der Liste 'Lebensabschnitte als Aufgabe' ganz oben (M 1A.2, S. 4)?",
+      "options": [
+        "Säugling",
+        "Kindheit",
+        "Geburt",
+        "Jugend"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    },
+    {
+      "id": 278,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Wie geht es laut Handout nach der Lernbiografie weiter?",
+      "options": [
+        "Mit einer schriftlichen Prüfung",
+        "Mit der Vorbereitung und Durchführung eines Interviews",
+        "Mit dem ersten Praxiseinsatz",
+        "Mit der Urlaubsplanung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 5"
+    },
+    {
+      "id": 279,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im 4-Ohren-Modell: Welches 'Ohr' fragt 'Wie ist der Sachverhalt zu verstehen?'",
+      "options": [
+        "Appell-Ohr",
+        "Selbstoffenbarungs-Ohr",
+        "Sach-Ohr",
+        "Beziehungs-Ohr"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 280,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im 4-Ohren-Modell: Welches 'Ohr' fragt 'Was ist mit ihm? Was ist das denn für einer?'",
+      "options": [
+        "Selbstoffenbarungs-Ohr",
+        "Beziehungs-Ohr",
+        "Appell-Ohr",
+        "Sach-Ohr"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 281,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Tätigkeit wird zur 'Reflexion der Praxiserfahrung' (AA 3) in der Kleingruppe durchgeführt?",
+      "options": [
+        "Gemeinsames Mittagessen",
+        "Bilden von Gefühlsclustern aus Resonanzen",
+        "Körperliche Untersuchung üben",
+        "Medikamente sortieren"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 282,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man laut Handout die unmittelbare emotionale Reaktion auf einen Auslöser?",
+      "options": [
+        "Sekundäre Emotion",
+        "Kognitive Bewertung",
+        "Primäre Emotion",
+        "Handlungsimpuls"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 283,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welche Vollmacht wird laut Checkliste für die Öffnung wichtiger Post benötigt?",
+      "options": [
+        "Patientenverfügung",
+        "Vorsorgevollmacht",
+        "Vollmacht durch die Verwaltung",
+        "Vollmacht des Hausarztes"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 284,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Welchen Begriff verwendet Paul Watzlawick für die Unmöglichkeit, nicht zu kommunizieren?",
+      "options": [
+        "Erstes Axiom",
+        "Grundregel der Pflege",
+        "Kommunikationsgebot",
+        "Verständigungsgesetz"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22"
+    },
+    {
+      "id": 285,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was gehört laut Handout zu den 'Kommunikationsförderern'?",
+      "options": [
+        "Unterbrechen",
+        "Paraphrasieren und Rückfragen",
+        "Du-Botschaften",
+        "Emotionale Beeinflussung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 286,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist laut Handout 03.09.24 die Grundlage für die Erfassung von Lernereignissen?",
+      "options": [
+        "Der Schulabschluss",
+        "Die Lebenslinie",
+        "Das Zeugnis der 10. Klasse",
+        "Der Arbeitsvertrag"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 6"
+    },
+    {
+      "id": 287,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An welcher Stelle im Pflegeprozess-Kreislauf steht die 'Informationssammlung'?",
+      "options": [
+        "Schritt 1",
+        "Schritt 2",
+        "Schritt 5",
+        "Schritt 6"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 288,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Was ist die etymologische Bedeutung des Wortes 'Anamnese'?",
+      "options": [
+        "Untersuchung",
+        "Erinnerung",
+        "Heilung",
+        "Lebenslauf"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2"
+    },
+    {
+      "id": 289,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt laut Handout der 'Austausch im Gespräch'?",
+      "options": [
+        "Einleitung",
+        "Hauptteil",
+        "Schluss",
+        "Nachbereitung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 290,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion ist eine der 7 Basisemotionen nach Ekman?",
+      "options": [
+        "Eifersucht",
+        "Ekel",
+        "Scham",
+        "Liebe"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 291,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Im Modell der Emotionsentstehung: Was folgt direkt auf die 'sekundäre Emotion'?",
+      "options": [
+        "Kognitive Bewertung",
+        "Handlungsimpuls 2",
+        "Auslöser",
+        "Handlungsimpuls 1"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 292,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welche Altersgruppe wird im Handout 04.09.24 als Interviewpartner empfohlen?",
+      "options": [
+        "Jugendliche",
+        "ca. 30+",
+        "ca. 60+",
+        "Nur Gleichaltrige"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 12"
+    },
+    {
+      "id": 293,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was gehört laut SLP-Checkliste zur 'Vorbereitung des Zimmers'?",
+      "options": [
+        "Heimvertrag kündigen",
+        "Nachtkästchen säubern",
+        "Post des Bewohners lesen",
+        "Hausarzt anrufen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 294,
+      "module": "1A.4",
+      "type": "Fachbegriff",
+      "question": "Wie heißt das Modell von Schulz von Thun, das im Handout zur Analyse von Nachrichten genutzt wird?",
+      "options": [
+        "Sender-Empfänger-Modell",
+        "Vier-Ohren-Modell / Kommunikationsquadrat",
+        "Eisberg-Modell",
+        "Interaktionsspirale"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 295,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Ab welchem Modul wird die Implementierung kollegialer Beratung laut Handout regelmäßig empfohlen?",
+      "options": [
+        "Modul 1",
+        "Modul 5",
+        "Modul 8",
+        "Nach dem Examen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 296,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wer begrüßt sich durch 'Minutenlanges Umarmen und Tränen'?",
+      "options": [
+        "Kupfer-Eskimos",
+        "Franzosen",
+        "Dani auf Neuguinea",
+        "Mongolen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 297,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Welche Form des Interviews wird zur Gewinnung biografischer Daten in M 1A.2 genutzt?",
+      "options": [
+        "Strukturiertes Interview",
+        "Narratives Interview",
+        "Stressinterview",
+        "Standardisierter Fragebogen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 14"
+    },
+    {
+      "id": 298,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument wird laut Checkliste bei Beantragung von Pflegewohngeld benötigt?",
+      "options": [
+        "Heimvertrag",
+        "Rentenbescheide",
+        "Mitgliedsausweis",
+        "Geburtsurkunde der Enkel"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 299,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was wird in der 'Erinnerungsreise' laut Modul 1B.1 primär reflektiert?",
+      "options": [
+        "Die Anatomie des Herzens",
+        "Praxiserfahrungen im Orientierungseinsatz",
+        "Der Urlaubsplan",
+        "Die gesetzlichen Feiertage"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 38"
+    },
+    {
+      "id": 300,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt folgt laut der Liste in M 1A.2 auf 'Jugend'?",
+      "options": [
+        "Erwachsener",
+        "Junger Erwachsener",
+        "Rentner",
+        "Kindheit"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    }
+  ]
+}
+
+{
+  "questions": [
+    {
+      "id": 301,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welches Axiom von Paul Watzlawick wird im Handout M 1A.3 zitiert?",
+      "options": [
+        "Kommunikation ist Glückssache.",
+        "Man kann nicht nicht kommunizieren!",
+        "Wer redet, der führt.",
+        "Ein Bild sagt mehr als tausend Worte."
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22"
+    },
+    {
+      "id": 302,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die 'Erzählung der erlebten Lebensgeschichte durch die Person selbst'?",
+      "options": [
+        "Anamnese",
+        "Lebenslauf",
+        "Biografie",
+        "Steckbrief"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 9"
+    },
+    {
+      "id": 303,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt steht in der Liste der 'Lebensabschnitte als Aufgabe' zwischen 'Erwachsener' und 'Hochaltriger Mensch'?",
+      "options": [
+        "Junger Erwachsener",
+        "Kindheit",
+        "Rentner Großeltern",
+        "Jugend"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    },
+    {
+      "id": 304,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Im Modell der Emotionsentstehung: Welches Element folgt direkt auf die 'kognitive Bewertung'?",
+      "options": [
+        "Primäre Emotion",
+        "Sekundäre Emotion",
+        "Auslöser",
+        "Handlungsimpuls 1"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 305,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Ziel gehört laut Grafik NICHT direkt zu den Zielen des Aufnahmegespräches?",
+      "options": [
+        "Erleichterung der 'Ankommenssituation'",
+        "Aufbau einer Beziehung",
+        "Erstellen einer ärztlichen Diagnose",
+        "Klärung von Erwartungen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 306,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "An welche interne Abteilung muss laut SLP-Checkliste eine 'Information über den neuen Bewohner' erfolgen?",
+      "options": [
+        "Labor",
+        "Hauswirtschaft",
+        "Einkauf",
+        "IT-Abteilung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 307,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welche Seite der Nachricht fragt: 'Was soll ich tun, denken, fühlen aufgrund seiner Mitteilung?'",
+      "options": [
+        "Sachinhalt",
+        "Beziehung",
+        "Appell",
+        "Selbstoffenbarung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 308,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wie viele universelle Basisemotionen definiert Paul Ekman laut Handout?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "12"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 41"
+    },
+    {
+      "id": 309,
+      "module": "1A.2",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man bedeutsame Übergänge im Lebenslauf, wie den Wechsel zum Auszubildenden?",
+      "options": [
+        "Statuspassagen",
+        "Normalbiografie",
+        "Lebensphasen",
+        "Biografieforschung"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 310,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was zählt laut Handout zu den 'Kommunikationsstörern'?",
+      "options": [
+        "Ich-Botschaften",
+        "Paraphrasieren",
+        "Du-Botschaften",
+        "Aktives Zuhören"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 311,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was droht bei dauerhafter Kontrolle von Gefühlen ohne Reflexion?",
+      "options": [
+        "Bessere körperliche Fitness",
+        "Burnout-Gefahr",
+        "Gehaltserhöhung",
+        "Höhere Fachkompetenz"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 312,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Informationsgabe / Informationserfassung'?",
+      "options": [
+        "Einleitung",
+        "Hauptteil",
+        "Schluss",
+        "Nachbereitung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 313,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument ist für den Ausschluss von TBC bei Aufnahme zwingend?",
+      "options": [
+        "Heimvertrag",
+        "Ärztliche Erklärung",
+        "Rentenbescheid",
+        "Personalausweis"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 314,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Beratung zur kontinuierlichen Berufsrollenreflexion?",
+      "options": [
+        "Fortbildung",
+        "Supervision",
+        "Mediation",
+        "Teammeeting"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    },
+    {
+      "id": 315,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Welcher Prozentsatz der Kommunikation wird der 'Körpersprache' zugeschrieben?",
+      "options": [
+        "7 %",
+        "38 %",
+        "55 %",
+        "93 %"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 316,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört zu den Basisemotionen nach Ekman?",
+      "options": [
+        "Neid",
+        "Stolz",
+        "Ekel",
+        "Schuld"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42"
+    },
+    {
+      "id": 317,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist eine 'Normalbiografie'?",
+      "options": [
+        "Ein tabellarischer Lebenslauf",
+        "Standardisierte Form eines Lebenslaufs einer Personengruppe",
+        "Eine Biografie ohne Krankheiten",
+        "Die Geschichte eines berühmten Menschen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 11"
+    },
+    {
+      "id": 318,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Im 4-Ohren-Modell: Welches 'Ohr' fragt 'Was ist das denn für einer?'",
+      "options": [
+        "Beziehungsohr",
+        "Sachohr",
+        "Appellohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 3,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 319,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Wer berät wen in einer 'Kollegialen Beratung'?",
+      "options": [
+        "Vorgesetzter den Mitarbeiter",
+        "Externer das Team",
+        "Gleichberechtigte Mitglieder einander",
+        "Arzt die Pflegekraft"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 53"
+    },
+    {
+      "id": 320,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welcher Schritt im Pflegeprozess steht an 1. Stelle?",
+      "options": [
+        "Erkennen von Problemen",
+        "Planung der Maßnahmen",
+        "Informationssammlung",
+        "Durchführung der Pflege"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 30"
+    },
+    {
+      "id": 321,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Angehörige der 'Assyrer'?",
+      "options": [
+        "Nasen reiben",
+        "Händeklatschen",
+        "Kleider hergeben",
+        "Schweigen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 322,
+      "module": "1B.1",
+      "type": "Bildzuordnung",
+      "question": "Was steht am Anfang des Emotionsprozesses?",
+      "options": [
+        "Primäre Emotion",
+        "Auslöser",
+        "Handlungsimpuls",
+        "Bedürfnis"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 323,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welches Dokument wird bei Beantragung von Pflegewohngeld benötigt?",
+      "options": [
+        "Heimvertrag",
+        "Jagdschein",
+        "Rentenbescheide",
+        "Zeugnis der 10. Klasse"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 324,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man Strategien, um mit schweigsamen Personen ein Gespräch zu beginnen?",
+      "options": [
+        "Türöffner",
+        "Eisbrecher",
+        "Smalltalk",
+        "Initialzündung"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 23"
+    },
+    {
+      "id": 325,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Ab welchem Modul ist die kollegiale Beratung regelmäßig vorgesehen?",
+      "options": [
+        "Modul 1",
+        "Modul 4",
+        "Modul 8",
+        "Nach dem Examen"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 326,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was wird in der face-to-face Kommunikation zu 38 % wahrgenommen?",
+      "options": [
+        "Gesprochenes Wort",
+        "Stimmlicher Ausdruck",
+        "Körpersprache",
+        "Fachkompetenz"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 25"
+    },
+    {
+      "id": 327,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welche Seite der Nachricht fragt: 'Wie ist der Sachverhalt zu verstehen?'",
+      "options": [
+        "Sachinhalt",
+        "Selbstoffenbarung",
+        "Beziehung",
+        "Appell"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 328,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Woran erkennt man ein 'echtes Lächeln' laut Ekman?",
+      "options": [
+        "Nur am Mund",
+        "Lachfältchen um die Augen",
+        "An der Lautstärke",
+        "Daran, dass die Zähne sichtbar sind"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 44"
+    },
+    {
+      "id": 329,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welche Institution muss über einen Heimeinzug informiert werden?",
+      "options": [
+        "Finanzamt",
+        "Einwohnermeldeamt",
+        "ADAC",
+        "Hausmeister"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 330,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welches Alter wird für Interviewpartner im biografischen Interview empfohlen?",
+      "options": [
+        "ca. 18+",
+        "ca. 30+",
+        "ca. 60+",
+        "Gleiches Alter wie der Azubi"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 12"
+    },
+    {
+      "id": 331,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was gehört zu den 'Kommunikationsförderern'?",
+      "options": [
+        "Unterbrechen",
+        "Du-Botschaften",
+        "Paraphrasieren",
+        "Emotionale Beeinflussung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 332,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man die Emotionen, die eine Erzählung beim Zuhörer auslösen?",
+      "options": [
+        "Sympathie",
+        "Echo",
+        "Resonanz",
+        "Mitleid"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 45"
+    },
+    {
+      "id": 333,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was ist der Ursprung des Wortes 'Anamnese'?",
+      "options": [
+        "Lateinisch: Untersuchung",
+        "Griechisch: Erinnerung",
+        "Griechisch: Befragung",
+        "Lateinisch: Geschichte"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2"
+    },
+    {
+      "id": 334,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Wer sollte idealerweise das Aufnahmegespräch führen?",
+      "options": [
+        "PDL",
+        "Heimleitung",
+        "Bezugspflegekraft",
+        "Ärztlicher Dienst"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Arbeitsblatt 2"
+    },
+    {
+      "id": 335,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was beeinflusst die 'kognitive Bewertung' im Emotionsmodell?",
+      "options": [
+        "Blutgruppe",
+        "Wetter",
+        "Erfahrungen, Regeln, Normen",
+        "Körpergewicht"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 336,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "Welches 'Ohr' nimmt Informationen über die Beziehung zum Sender auf?",
+      "options": [
+        "Sachohr",
+        "Beziehungsohr",
+        "Appellohr",
+        "Selbstoffenbarungsohr"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 337,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Wie begrüßen sich Mongolen laut Handout?",
+      "options": [
+        "Händeklatschen",
+        "Wangen beriechen / Nasen berühren",
+        "Faustschlag",
+        "Umarmen und Weinen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 21"
+    },
+    {
+      "id": 338,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was kennzeichnet eine 'sekundäre Emotion'?",
+      "options": [
+        "Sie ist angeboren.",
+        "Sie entsteht nach kognitiver Bewertung.",
+        "Sie ist immer Freude.",
+        "Sie tritt nur bei Babys auf."
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 48"
+    },
+    {
+      "id": 339,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Welche Vollmacht wird für die Postöffnung durch die Verwaltung benötigt?",
+      "options": [
+        "Bankvollmacht",
+        "Vorsorgevollmacht",
+        "Vollmacht für Öffnung wichtiger Post",
+        "Patientenverfügung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 340,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Was ist das Ziel der Biografieforschung?",
+      "options": [
+        "Sammeln von Daten",
+        "Rekonstruktion von Lebensverläufen und Sinnkonstruktionen",
+        "Schreiben von Testamenten",
+        "Auszählen von Berufsjahren"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1 A.2_Handout_04.09.24.pdf, Seite 10"
+    },
+    {
+      "id": 341,
+      "module": "1A.3",
+      "type": "Fachbegriff",
+      "question": "Wie nennt man das Wiederholen des Gesagten in eigenen Worten?",
+      "options": [
+        "Interpretieren",
+        "Evaluieren",
+        "Paraphrasieren",
+        "Reflektieren"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 19"
+    },
+    {
+      "id": 342,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was ist ein Schlüsselthema in der Pflege für kollegiale Beratung?",
+      "options": [
+        "Reparatur der Heizung",
+        "Umgang mit Nähe und Distanz",
+        "Speisenplan der Kantine",
+        "Parkplatzregeln"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 54"
+    },
+    {
+      "id": 343,
+      "module": "1A.4",
+      "type": "Bildzuordnung",
+      "question": "In welcher Phase des Aufnahmegesprächs erfolgt die 'Begrüßung / Vorstellung'?",
+      "options": [
+        "Einleitung",
+        "Hauptteil",
+        "Schluss",
+        "Nachbereitung"
+      ],
+      "answer": 0,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 344,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was gehört zur 'Vorbereitung des Zimmers' laut Checkliste?",
+      "options": [
+        "Heimvertrag kündigen",
+        "Bett beziehen",
+        "Post öffnen",
+        "Anamnese führen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 35"
+    },
+    {
+      "id": 345,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Welche Emotion gehört NICHT zu den 6 universellen Basisemotionen im Handout?",
+      "options": [
+        "Angst",
+        "Ekel",
+        "Hass",
+        "Trauer"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 42"
+    },
+    {
+      "id": 346,
+      "module": "1A.3",
+      "type": "MC",
+      "question": "Was ist laut Watzlawick 'unmöglich'?",
+      "options": [
+        "Nicht zu arbeiten",
+        "Nicht zu kommunizieren",
+        "Nicht zu altern",
+        "Nicht zu fühlen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M 1A.3_Handout.pdf, Seite 22"
+    },
+    {
+      "id": 347,
+      "module": "1B.1",
+      "type": "Fachbegriff",
+      "question": "Wie wird das Konzept zum professionellen Umgang mit Gefühlen in der Pflege genannt?",
+      "options": [
+        "Gefühlsmanagement",
+        "Emotionskontrolle",
+        "Emotionsregulation",
+        "Selbstbeherrschung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 39"
+    },
+    {
+      "id": 348,
+      "module": "1A.4",
+      "type": "MC",
+      "question": "Was steht im Zentrum des 4-Ohren-Modells laut Handout?",
+      "options": [
+        "Sender",
+        "Empfänger",
+        "Nachricht",
+        "Beziehung"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1A.4_Handout.pdf, Seite 31"
+    },
+    {
+      "id": 349,
+      "module": "1A.2",
+      "type": "MC",
+      "question": "Welcher Lebensabschnitt folgt auf 'Kindheit'?",
+      "options": [
+        "Junger Erwachsener",
+        "Erwachsener",
+        "Jugend",
+        "Säugling"
+      ],
+      "answer": 2,
+      "hint": "Siehe M 1 A.2_Handout_03.09.24.pdf, Seite 4"
+    },
+    {
+      "id": 350,
+      "module": "1B.1",
+      "type": "MC",
+      "question": "Was ist das primäre Ziel der Supervision laut Handout?",
+      "options": [
+        "Kontrolle der Mitarbeiter",
+        "Berufsrollenreflexion",
+        "Therapie traumatisierter Patienten",
+        "Abrechnung von Leistungen"
+      ],
+      "answer": 1,
+      "hint": "Siehe M1B.1_PPT_Handout.pdf, Seite 52"
+    }
+  ]
+}

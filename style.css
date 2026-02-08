@@ -1,0 +1,43 @@
+/* Verhindert Textmarkierung beim schnellen Tippen auf Buttons */
+button {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+/* Spezial-Klasse für Antwort-Buttons */
+.btn-option {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 2px solid #e2e8f0;
+    background-color: white;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-option:active {
+    transform: scale(0.98);
+}
+
+.btn-option.correct {
+    background-color: #dcfce7;
+    border-color: #22c55e;
+    color: #166534;
+}
+
+.btn-option.wrong {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+/* Animation für Feedback */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
