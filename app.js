@@ -57,24 +57,31 @@ function initDashboard() {
  * MODUL-DATEN LADEN (module.html)
  */
 async function loadModuleData(id) {
+    // Wir nutzen einen relativen Pfad ohne führenden Schrägstrich
     const jsonPath = `data/mod_${id}.json`;
     
     try {
-        const response = await fetch(jsonPath);
-        if (!response.ok) throw new Error(`Datei ${jsonPath} nicht gefunden.`);
+        // 'cache: "no-store"' hilft, wenn du Änderungen hochlädst, damit der Browser nicht die alte Version zeigt
+        const response = await fetch(jsonPath, { cache: "no-store" });
+        
+        if (!response.ok) {
+            throw new Error(`Server antwortet mit Status ${response.status}`);
+        }
         
         const data = await response.json();
         
-        // Header Titel setzen
+        // Titel setzen
         document.getElementById('mod-title').innerText = data.moduleName;
         
-        // --- PDF LISTE GENERIEREN ---
+        // --- PDF LISTE ---
         const pdfList = document.getElementById('pdf-list');
         if (pdfList && data.pdfs) {
-            pdfList.innerHTML = ""; // Container leeren
+            pdfList.innerHTML = "";
             data.pdfs.forEach(fileName => {
+                // Pfad zu den PDFs: docs/m1/dateiname.pdf
+                const pdfPath = `docs/m${id}/${fileName}`;
                 pdfList.innerHTML += `
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between shadow-sm hover:border-blue-300 transition-all mb-3">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center justify-between shadow-sm mb-3">
                         <div class="flex items-center">
                             <div class="bg-red-50 text-red-600 p-2 rounded mr-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,12 +90,26 @@ async function loadModuleData(id) {
                             </div>
                             <span class="text-slate-700 font-semibold text-sm">${fileName}</span>
                         </div>
-                        <a href="docs/m${id}/${fileName}" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-blue-700 transition-colors">
-                            Ansehen
-                        </a>
+                        <a href="${pdfPath}" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold">Ansehen</a>
                     </div>`;
             });
         }
+
+        currentQuestions = data.questions || [];
+        currentIndex = parseInt(localStorage.getItem(`mod${id}_index`)) || 0;
+        document.getElementById('q-total').innerText = currentQuestions.length;
+        showQuestion();
+
+    } catch (error) {
+        console.error("Detaillierter Fehler:", error);
+        document.getElementById('section-inhalt').innerHTML = `
+            <div class="p-4 bg-red-50 text-red-700 rounded-xl">
+                <strong>Ladefehler!</strong><br>
+                Die Datei <code>${jsonPath}</code> konnte nicht geladen werden.<br>
+                <small>Grund: ${error.message}</small>
+            </div>`;
+    }
+}
 
         // --- QUIZ SETUP ---
         currentQuestions = data.questions || [];
@@ -221,4 +242,5 @@ function switchTab(tab) {
         tabInhalt.className = "flex-1 py-2 rounded-lg font-medium bg-blue-600 text-white shadow-sm";
         tabQuiz.className = "flex-1 py-2 rounded-lg font-medium text-slate-500 hover:bg-slate-100";
     }
+
 }
