@@ -1,6 +1,6 @@
 /**
  * SLM System Core Engine 2026
- * Integration: Prodigy AI Assistant (Powered by Gemini)
+ * Integration: Prodigy AI Sidebar & Gemini 1.5-Flash
  */
 
 let currentQuestions = [];
@@ -28,10 +28,8 @@ function initDashboard() {
     activeModules.forEach(id => {
         const p = parseInt(localStorage.getItem(`mod${id}_percent`)) || 0;
         totalSum += p;
-        
         const bar = document.getElementById(`mod${id}-bar`);
         const text = document.getElementById(`mod${id}-percent`);
-        
         if (bar) bar.style.width = p + '%';
         if (text) text.innerText = p + '%';
     });
@@ -39,7 +37,6 @@ function initDashboard() {
     const avg = Math.round(totalSum / activeModules.length);
     const totalBar = document.getElementById('total-progress-bar');
     const totalText = document.getElementById('total-percent');
-    
     if (totalBar) totalBar.style.width = avg + '%';
     if (totalText) totalText.innerText = avg + '%';
 }
@@ -51,30 +48,20 @@ async function loadModuleData(id) {
 
     try {
         const response = await fetch(jsonPath);
-        if (!response.ok) throw new Error(`Modul-Daten (ID: ${id}) nicht erreichbar.`);
+        if (!response.ok) throw new Error(`Datenbank-Fehler (ID: ${id})`);
 
         const data = await response.json();
         document.getElementById('mod-title').innerText = data.moduleName || `Modul ${id}`;
         
         if (pdfList && data.pdfs) {
-            pdfList.innerHTML = "";
-            data.pdfs.forEach(fileName => {
-                pdfList.innerHTML += `
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex items-center">
-                            <div class="bg-indigo-50 text-indigo-600 p-3 rounded-xl mr-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="text-slate-900 font-bold text-sm block">${fileName}</span>
-                                <span class="text-slate-400 text-xs uppercase tracking-tighter font-semibold">Dokumentation</span>
-                            </div>
-                        </div>
-                        <a href="docs/m${id}/${fileName}" target="_blank" class="bg-slate-900 text-white px-5 py-2 rounded-xl text-xs font-black hover:bg-indigo-600 transition-colors uppercase tracking-widest">Öffnen</a>
-                    </div>`;
-            });
+            pdfList.innerHTML = data.pdfs.map(fileName => `
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center">
+                        <div class="bg-indigo-50 text-indigo-600 p-3 rounded-xl mr-4 font-bold">PDF</div>
+                        <span class="text-slate-900 font-bold text-sm">${fileName}</span>
+                    </div>
+                    <a href="docs/m${id}/${fileName}" target="_blank" class="bg-slate-900 text-white px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest">Öffnen</a>
+                </div>`).join('');
         }
 
         currentQuestions = data.questions || [];
@@ -83,7 +70,7 @@ async function loadModuleData(id) {
         showQuestion();
 
     } catch (err) {
-        if(pdfList) pdfList.innerHTML = `<div class="p-6 bg-red-50 text-red-700 rounded-2xl border border-red-100 font-medium">⚠️ System-Fehler: ${err.message}</div>`;
+        if(pdfList) pdfList.innerHTML = `<div class="p-6 bg-red-50 text-red-700 rounded-2xl">⚠️ Fehler: ${err.message}</div>`;
     }
 }
 
@@ -94,11 +81,10 @@ function showQuestion() {
 
     if (currentIndex >= currentQuestions.length) {
         quizSection.innerHTML = `
-            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
+            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100 fade-in">
                 <div class="text-6xl mb-6">🎯</div>
-                <h2 class="text-3xl font-black text-slate-900 mb-2 uppercase">Modul Abgeschlossen</h2>
-                <p class="text-slate-500 mb-8 font-medium italic text-sm italic">Alle Daten für Modul ${currentModuleId} erfolgreich verarbeitet.</p>
-                <button onclick="resetModuleProgress(${currentModuleId})" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-black hover:bg-slate-900 transition-all shadow-lg uppercase tracking-widest text-xs">Analyse Neustarten</button>
+                <h2 class="text-3xl font-black text-slate-900 uppercase">Abschluss erreicht</h2>
+                <button onclick="resetModuleProgress(${currentModuleId})" class="mt-8 bg-indigo-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs">Neustarten</button>
             </div>`;
         return;
     }
@@ -106,23 +92,17 @@ function showQuestion() {
     const q = currentQuestions[currentIndex];
     document.getElementById('q-current').innerText = currentIndex + 1;
     document.getElementById('question-text').innerText = q.question;
+    document.getElementById('feedback').classList.add('hidden');
     
-    // Feedback & Prodigy Reset
-    const feedback = document.getElementById('feedback');
-    feedback.classList.add('hidden');
-    feedback.classList.remove('feedback-success', 'feedback-error');
-    
-    const prodigyResponse = document.getElementById('prodigy-response');
-    if (prodigyResponse) {
-        prodigyResponse.innerText = "Bereit für die Analyse der aktuellen Frage.";
-    }
-    
+    // Reset Prodigy Response when moving to next question
+    const prodigyRes = document.getElementById('prodigy-response');
+    if(prodigyRes) prodigyRes.innerHTML = "";
+
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
-    
     q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = "btn-option"; 
+        btn.className = "btn-option w-full text-left p-5 rounded-2xl border-2 border-slate-100 hover:border-indigo-400 transition-all font-medium mb-2";
         btn.innerText = opt;
         btn.onclick = () => checkAnswer(i, btn);
         grid.appendChild(btn);
@@ -133,18 +113,15 @@ function checkAnswer(idx, btn) {
     const q = currentQuestions[currentIndex];
     const all = document.querySelectorAll('.btn-option');
     const feedback = document.getElementById('feedback');
-    
     all.forEach(b => b.disabled = true);
     
     if (idx === q.answer) {
-        btn.classList.add('correct-answer');
-        feedback.classList.add('feedback-success');
-        document.getElementById('feedback-text').innerText = "SYSTEM-CHECK: KORREKT";
+        btn.classList.add('bg-green-50', 'border-green-500', 'text-green-700');
+        document.getElementById('feedback-text').innerText = "KORREKT";
     } else {
-        btn.classList.add('wrong-answer');
-        all[q.answer].classList.add('correct-answer');
-        feedback.classList.add('feedback-error');
-        document.getElementById('feedback-text').innerText = "SYSTEM-CHECK: ABWEICHUNG";
+        btn.classList.add('bg-red-50', 'border-red-500', 'text-red-700');
+        all[q.answer].classList.add('bg-green-50', 'border-green-500', 'text-green-700');
+        document.getElementById('feedback-text').innerText = "ABWEICHUNG";
     }
     
     document.getElementById('hint-text').innerText = q.hint;
@@ -165,7 +142,24 @@ function resetModuleProgress(id) {
     location.reload();
 }
 
-// --- PRODIGY KI LOGIK ---
+// --- PRODIGY AI SIDEBAR LOGIK ---
+function toggleProdigy() {
+    const sidebar = document.getElementById('prodigy-sidebar');
+    const overlay = document.getElementById('prodigy-overlay');
+    
+    const isOpen = !sidebar.classList.contains('translate-x-full');
+    
+    if (isOpen) {
+        sidebar.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+        overlay.classList.remove('opacity-100');
+    } else {
+        sidebar.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+    }
+}
+
 async function askProdigy() {
     const responseDiv = document.getElementById('prodigy-response');
     const btn = document.getElementById('prodigy-btn');
@@ -173,40 +167,44 @@ async function askProdigy() {
 
     if (!q) return;
 
-    responseDiv.innerText = "Prodigy analysiert die Datenstruktur...";
+    responseDiv.innerHTML = `
+        <div class="flex items-center gap-3 text-indigo-400 animate-pulse py-4 font-bold text-xs uppercase tracking-widest">
+            <span class="w-3 h-3 bg-indigo-500 rounded-full"></span> Neuronaler Check läuft...
+        </div>`;
+    
     btn.disabled = true;
-    btn.classList.add('opacity-50');
+    btn.classList.add('opacity-50', 'cursor-not-allowed');
 
-    // WICHTIG: Setze hier deinen Gemini API Key ein
+    // DEIN API KEY HIER EINSETZEN
     const API_KEY = "AIzaSyCMgsx_nNdl0J5tK6Fc2wO9ZpDh4TBoaXg"; 
-    const PROMPT = `Du bist Prodigy, ein medizinischer KI-Tutor. 
-    Erkläre kurz und präzise die folgende Frage und warum die Antwort '${q.options[q.answer]}' korrekt ist. 
+    const PROMPT = `Erkläre als Prodigy, ein medizinischer Tutor: 
     Frage: ${q.question}
-    Antwortoptionen: ${q.options.join(", ")}
-    Halte dich kurz, professionell und motivierend. Antworte in maximal 4 Sätzen auf Deutsch.`;
+    Richtige Antwort: ${q.options[q.answer]}
+    Warum ist das korrekt? Antworte kurz, professionell, auf Deutsch, max. 4 Sätze.`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: PROMPT }] }]
-            })
+            body: JSON.stringify({ contents: [{ parts: [{ text: PROMPT }] }] })
         });
 
         const data = await response.json();
         const aiText = data.candidates[0].content.parts[0].text;
-        responseDiv.innerText = aiText;
+        
+        responseDiv.innerHTML = `
+            <div class="fade-in bg-white/5 p-5 rounded-2xl border border-white/10 text-slate-200 shadow-inner">
+                ${aiText}
+            </div>`;
     } catch (err) {
-        responseDiv.innerText = "Verbindung zum Core-Server unterbrochen. Bitte API-Key in app.js prüfen.";
-        console.error("AI Error:", err);
+        responseDiv.innerHTML = `<div class="p-4 bg-red-500/10 border border-red-500/20 text-red-400 text-xs rounded-xl">⚠️ Fehler: API Verbindung fehlgeschlagen.</div>`;
     } finally {
         btn.disabled = false;
-        btn.classList.remove('opacity-50');
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
     }
 }
 
-// --- TAB WECHSEL LOGIK ---
+// --- TAB SYSTEM ---
 function switchTab(tab) {
     const isQuiz = tab === 'quiz';
     document.getElementById('section-inhalt').classList.toggle('hidden', isQuiz);
@@ -215,11 +213,9 @@ function switchTab(tab) {
     const btnInhalt = document.getElementById('tab-inhalt');
     const btnQuiz = document.getElementById('tab-quiz');
 
-    if (isQuiz) {
-        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
-        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
-    } else {
-        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
-        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
-    }
+    const activeClass = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+    const inactiveClass = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
+
+    btnInhalt.className = isQuiz ? inactiveClass : activeClass;
+    btnQuiz.className = isQuiz ? activeClass : inactiveClass;
 }
