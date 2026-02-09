@@ -1,0 +1,2789 @@
+[
+  {
+    "scenario": "Herr Müller (67) wird mit einer akuten rechtsseitigen Hemiplegie und einer auffälligen Sprachstörung in die Stroke Unit eingeliefert. Er kann Aufforderungen verstehen, antwortet jedoch nur mühsam in kurzen Ein-Wort-Sätzen ('Hunger... Schmerz'). Die neurologische Untersuchung deutet auf einen Infarkt im Versorgungsgebiet der Arteria cerebri media der linken Hemisphäre hin. Es zeigt sich zudem ein hängender rechter Mundwinkel, wobei er die Stirn beidseitig runzeln kann. Das Pflegeteam muss sofort Assessment-Maßnahmen einleiten und die rehabilitative Planung gemäß dem Phasenmodell beginnen, während Herr Müller noch in der akuten Überwachungsphase (Phase A) verbleibt.",
+    "setting": "Krankenhaus (Stroke Unit)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Priorität hat die erste pflegerische Maßnahme bei Verdacht auf eine Schluckstörung (Dysphagie)?",
+        "options": [
+          "Gabe von angedickter Flüssigkeit",
+          "Nahrungs- und Flüssigkeitsaufnahme stoppen (NPO) bis zur Abklärung",
+          "Den Patienten im Liegen füttern",
+          "Durchführung eines Wassertests mit 90ml"
+        ],
+        "correct_answer": "1",
+        "hint": "Bei erkanntem Verdacht muss die Nahrungsaufnahme gestoppt werden, um eine Aspiration zu vermeiden. [1]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Form der Aphasie liegt bei Herrn Müller aufgrund der Symptomatik (mühsames Sprechen, Telegrammstil, Verständnis intakt) am wahrscheinlichsten vor?",
+        "options": [
+          "Wernicke-Aphasie",
+          "Globale Aphasie",
+          "Amnestische Aphasie",
+          "Broca-Aphasie"
+        ],
+        "correct_answer": "3",
+        "hint": "Die Broca-Aphasie ist durch nicht-flüssige Sprache und Agrammatismus bei meist erhaltenem Verständnis gekennzeichnet. [2]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da Herr Müller die Stirn runzeln kann, handelt es sich um eine periphere Fazialisparese.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Bei der zentralen Fazialisparese bleibt die Stirnmuskulatur beweglich, da sie aus beiden Hemisphären versorgt wird. [3]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Hirnlappen des Großhirns.",
+        "correct_answer": "Stirnlappen (Lobus frontalis), Scheitellappen (Lobus parietalis), Schläfenlappen (Lobus temporalis), Hinterhauptlappen (Lobus occipitalis).",
+        "hint": "Jeder Lappen hat spezifische Funktionen wie Motorik, Sensorik, Hören oder Sehen. [4]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "In der Akutphase eines Schlaganfalls gilt der Leitsatz: '____ is Brain'.",
+        "correct_answer": "Time",
+        "hint": "Jede Minute Sauerstoffmangel führt zum Absterben von Millionen Nervenzellen. [5, 6]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt die vollständige Lähmung einer Körperhälfte?",
+        "options": [
+          "Hemiparese",
+          "Hemiplegie",
+          "Paraplegie",
+          "Tetraparese"
+        ],
+        "correct_answer": "1",
+        "hint": "Hemiplegie steht für die vollständige Lähmung, Hemiparese für die unvollständige. [7]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welcher Teil des Nervensystems ist für die 'Flight or Fight'-Reaktion zuständig, die bei Herrn Müller durch den Stress der Einlieferung aktiviert wird?",
+        "options": [
+          "Parasympathikus",
+          "Sympathikus",
+          "Darmnervensystem",
+          "Zentralkanal"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Sympathikus steigert Herzfrequenz und Blutdruck in Stresssituationen. [8, 9]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei typische 'Alarm-Signale' eines Schlaganfalls.",
+        "correct_answer": "Sehstörungen, Lähmungen/Taubheitsgefühle (oft halbseitig), Sprachstörungen, heftigster Kopfschmerz, Schwindel.",
+        "hint": "Diese Symptome erfordern sofortiges Handeln. [7, 10]"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wie viel Prozent der Gesamtenergie des Körpers (Zucker und Sauerstoff) verbraucht das Gehirn im Durchschnitt?",
+        "options": [
+          "3 %",
+          "10 %",
+          "20 %",
+          "50 %"
+        ],
+        "correct_answer": "2",
+        "hint": "Obwohl es nur 3 % des Gewichts ausmacht, benötigt es 20 % der Energie. [11]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das PÄS-Schema für Pflegediagnosen steht für Problem, ____ und Symptome.",
+        "correct_answer": "Ätiologie",
+        "hint": "Ätiologie beschreibt die ursächlichen oder beeinflussenden Faktoren. [12, 13]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Hirnarterie bildet den ringförmigen Zusammenschluss zur Kollateralversorgung an der Hirnbasis?",
+        "options": [
+          "Arteria basilaris",
+          "Circulus arteriosus Willisii",
+          "Arteria carotis externa",
+          "Arteria vertebralis"
+        ],
+        "correct_answer": "1",
+        "hint": "Dieser Gefäßring ermöglicht den Ausgleich von Druckunterschieden und Engpässen. [14]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Hauptformen des Schlaganfalls und deren prozentuale Verteilung.",
+        "correct_answer": "Ischämischer Schlaganfall (ca. 80 %) und Hämorrhagischer Schlaganfall (ca. 20 %).",
+        "hint": "Ischämie bedeutet Gefäßverschluss, Hämorrhagie bedeutet Einblutung. [6]"
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Lehmann (72) befindet sich in der neurologischen Rehabilitation Phase C. Nach einem linkshemisphärischen Insult leidet sie unter einer ausgeprägten Dysphagie und einer Rechts-Hemiparese. Sie zeigt beim Essen eine feuchte Stimme und muss häufig husten. Das interdisziplinäre Team aus Pflege und Logopädie führt den GUSS (Gugging Swallowing Screen) durch. Zur Steigerung ihrer Selbstständigkeit im Alltag wird der Barthel-Index erhoben, bei dem sie aktuell 45 Punkte erreicht. Ein Ziel ist es, dass Frau Lehmann in zwei Wochen mit Hilfe einer Griffverdickung eigenständig weiche Kost zu sich nehmen kann.",
+    "setting": "Rehabilitationszentrum (Phase C)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welcher Schritt des Pflegeprozesses nach Fiechter und Meier folgt unmittelbar auf die Informationssammlung?",
+        "options": [
+          "Festlegen der Pflegeziele",
+          "Erkennen von Problemen",
+          "Planung der Maßnahmen",
+          "Durchführung der Pflege"
+        ],
+        "correct_answer": "1",
+        "hint": "Zuerst müssen die Probleme (Pflegediagnosen) identifiziert werden. [15, 16]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "In welcher Schluckphase wird der Kehlkopfdeckel (Epiglottis) reflektorisch verschlossen?",
+        "options": [
+          "Orale Vorbereitungsphase",
+          "Orale Transportphase",
+          "Pharyngeale Phase",
+          "Ösophageale Phase"
+        ],
+        "correct_answer": "2",
+        "hint": "Dies ist die kritische Phase, in der die Atemwege geschützt werden müssen. [17, 18]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Der Barthel-Index mit 45 Punkten stuft Frau Lehmann als 'punktuell hilfsbedürftig' ein.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Ein Wert von 35-80 Punkten gilt als 'hilfsbedürftig', 0-30 als 'pflegeabhängig'. [15]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Phasen des Schluckaktes.",
+        "correct_answer": "1. Prä-orale Phase, 2. Orale Vorbereitungsphase, 3. Orale Transportphase, 4. Pharyngeale Phase, 5. Ösophageale Phase.",
+        "hint": "Die Entwicklung beginnt bereits in utero. [19, 20]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das SMART-Prinzip besagt, dass Ziele spezifisch, messbar, ____, realistisch und terminiert sein müssen.",
+        "correct_answer": "akzeptiert",
+        "hint": "Manchmal auch als 'attraktiv' bezeichnet; der Patient muss hinter dem Ziel stehen. [21]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welches Anzeichen deutet auf eine 'stille Aspiration' hin?",
+        "options": [
+          "Lautes, produktives Husten",
+          "Häufig keine direkten klinischen Anzeichen",
+          "Sofortige Zyanose (Blaufärbung)",
+          "Erbrechen der Nahrung"
+        ],
+        "correct_answer": "1",
+        "hint": "Stille Aspirationen verlaufen ohne Hustenreiz und sind daher besonders gefährlich. [1]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was ist die empfohlene Position beim Anreichen von Nahrung bei Dysphagie?",
+        "options": [
+          "Rückenlage mit erhöhtem Kopfteil (30°)",
+          "Aufrechte Sitzposition (90°)",
+          "Stabile Seitenlage",
+          "Stehend vor dem Patienten"
+        ],
+        "correct_answer": "1",
+        "hint": "Eine aufrechte Haltung (90°) minimiert das Risiko einer Aspiration. [1]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Merkmale, die beim Anreichen von Nahrung beachtet werden müssen.",
+        "correct_answer": "Kleine Portionen (halber TL), langsam anreichen, Schlucken abwarten, Mundkontrolle auf Reste, keine Ablenkung.",
+        "hint": "Diese Maßnahmen dienen der Sicherheit und Beobachtung. [22]"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welches Assessment-Instrument dient speziell der Einschätzung des Dekubitusrisikos?",
+        "options": [
+          "Barthel-Index",
+          "Braden-Skala",
+          "MMST (Mini Mental Status Test)",
+          "STRATIFY"
+        ],
+        "correct_answer": "1",
+        "hint": "Die Braden-Skala ist ein evidenzbasiertes Instrument zur Risikoerfassung. [15]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Wenn das Schlucken nicht sicher möglich ist, ist die Konsequenz ____ (Abkürzung), was Nahrungskarenz bedeutet.",
+        "correct_answer": "NPO",
+        "hint": "Non per os - nichts über den Mund. [23, 24]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Wie wird die Fähigkeit des Gehirns genannt, Funktionen nach einer Schädigung neu zu organisieren?",
+        "options": [
+          "Atrophie",
+          "Apoplexie",
+          "Neuroplastizität",
+          "Degeneration"
+        ],
+        "correct_answer": "2",
+        "hint": "Neuroplastizität ist die Grundlage jeder Rehabilitation. [20]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Ziele der interdisziplinären Zusammenarbeit.",
+        "correct_answer": "Bündelung von Wissen, Transparenz der Sichtweisen, erfolgreiches Zusammenspiel der Kompetenzen, wirtschaftliche Optimierung.",
+        "hint": "Das Wohl des Patienten steht im Mittelpunkt. [25]"
+      }
+    ]
+  },
+  {
+    "scenario": "Lukas (24) erlitt vor zwei Jahren ein schweres Schädel-Hirn-Trauma. Er befindet sich nun in Phase E/F der Rehabilitation. Lukas lebt in einer inklusiven Wohngruppe und arbeitet stundenweise in einer Werkstatt für Menschen mit Behinderung (WfbM). Er hat einen Schwerbehindertenausweis mit einem GdB von 80 und den Merkzeichen 'aG' (außergewöhnliche Gehbehinderung) und 'B' (Begleitung). Lukas möchte sein 'Persönliches Budget' nutzen, um eine Freizeitassistenz zu finanzieren. Seine funktionale Gesundheit wird nach dem ICF-Modell beurteilt, um Barrieren in seiner Umwelt zu identifizieren und seine Teilhabe am gesellschaftlichen Leben zu verbessern.",
+    "setting": "Ambulant / Inklusives Wohnen",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welches Gesetz regelt in Deutschland primär die Teilhabe und Rehabilitation (SGB IX)?",
+        "options": [
+          "Pflegestärkungsgesetz",
+          "Bundesteilhabegesetz (BTHG)",
+          "Infektionsschutzgesetz",
+          "Betreuungsgesetz"
+        ],
+        "correct_answer": "1",
+        "hint": "Das BTHG hat das SGB IX umfassend reformiert, um mehr Selbstbestimmung zu ermöglichen. [26, 27]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Was ist der Kernunterschied zwischen Inklusion und Integration laut den Quellen?",
+        "options": [
+          "Es gibt keinen Unterschied",
+          "Inklusion bedeutet Anpassung des Behinderten an das System",
+          "Bei der Inklusion passt sich das System der Vielfalt der Menschen an",
+          "Integration ist ein Menschenrecht, Inklusion ein Akt der Gnade"
+        ],
+        "correct_answer": "2",
+        "hint": "Inklusion sieht Vielfalt als Normalität an und fordert Barrierefreiheit. [28]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Der Grad der Behinderung (GdB) wird in Prozent angegeben.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Der GdB ist eine dimensionslose Zahl von 20 bis 100 in Zehnerschritten. [29]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Hauptteile, in die das SGB IX gegliedert ist.",
+        "correct_answer": "1. Allgemeine Regelungen, 2. Eingliederungshilfe, 3. Regelungen für schwerbehinderte Menschen.",
+        "hint": "Jeder Teil deckt unterschiedliche Leistungsbereiche ab. [30]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Behinderung ist laut ICF das Ergebnis negativer ____ zwischen Gesundheitsproblemen und Kontextfaktoren.",
+        "correct_answer": "Wechselwirkungen",
+        "hint": "Dabei spielen Umweltfaktoren und personenbezogene Faktoren eine Rolle. [31]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Was ermöglicht das 'Persönliche Budget' für Lukas?",
+        "options": [
+          "Eine Erhöhung seines Taschengeldes",
+          "Wahlfreiheit durch Geldleistung statt Sachleistung",
+          "Kostenloses Essen in der Werkstatt",
+          "Einen zinslosen Kredit für einen Rollstuhl"
+        ],
+        "correct_answer": "1",
+        "hint": "Es fördert die Selbstbestimmung, indem Lukas Leistungen selbst einkaufen kann. [32]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Ab welchem Grad der Behinderung (GdB) gilt ein Mensch rechtlich als schwerbehindert?",
+        "options": [
+          "GdB 30",
+          "GdB 50",
+          "GdB 70",
+          "GdB 100"
+        ],
+        "correct_answer": "1",
+        "hint": "Menschen mit einem GdB ab 50 erhalten den Schwerbehindertenausweis. [29, 33]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Komponenten der 'funktionalen Gesundheit' nach ICF.",
+        "correct_answer": "Körperfunktionen/-strukturen, Aktivitäten, Teilhabe (Partizipation).",
+        "hint": "Diese werden durch Kontextfaktoren beeinflusst. [34, 35]"
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welches Merkzeichen im Ausweis berechtigt Lukas zur Mitnahme einer Begleitperson im ÖPNV?",
+        "options": [
+          "aG",
+          "H",
+          "B",
+          "G"
+        ],
+        "correct_answer": "2",
+        "hint": "Das Merkzeichen 'B' steht für Begleitung. [36]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Nach § 49 der Bauordnung NRW müssen bauliche Anlagen, die ____ zugänglich sind, barrierefrei sein.",
+        "correct_answer": "öffentlich",
+        "hint": "Dies betrifft z.B. Kinos, Schulen und Arztpraxen. [37]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welcher Rehabilitationsträger ist in NRW typischerweise für die Eingliederungshilfe zuständig?",
+        "options": [
+          "Rentenversicherung",
+          "Krankenkasse",
+          "Landschaftsverbände (z. B. LVR)",
+          "Berufsgenossenschaft"
+        ],
+        "correct_answer": "2",
+        "hint": "Der LVR ist ein großer Kostenträger für soziale Teilhabe im Rheinland. [32, 38]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei der fünf Leistungsgruppen zur Teilhabe nach SGB IX.",
+        "correct_answer": "1. Medizinische Rehabilitation, 2. Teilhabe am Arbeitsleben, 3. Unterhaltssichernde Leistungen, 4. Teilhabe an Bildung, 5. Soziale Teilhabe.",
+        "hint": "Diese Gruppen definieren die Art der Unterstützung. [5, 39]"
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Berger (58) wird nach einer intrazerebralen Blutung, die primär das Zwischenhirn und Teile des limbischen Systems betrifft, auf der neurologischen Rehabilitationsstation betreut. Sie zeigt seither massive emotionale Instabilität, reagiert impulsiv und klagt über einen gestörten Schlaf-Wach-Rhythmus. Zudem fällt auf, dass sie Schwierigkeiten hat, ihre Körpertemperatur konstant zu halten. Das Pflegeteam muss verstehen, dass das limbische System als funktionelle Einheit aus Strukturen von Großhirn, Zwischenhirn und Mittelhirn ihre Gefühle und Triebe steuert. Die Pflegeplanung konzentriert sich in dieser Phase auf die Stabilisierung der vegetativen Funktionen (gesteuert durch den Hypothalamus) und die psychosoziale Begleitung der Patientin, während gleichzeitig die motorischen Einschränkungen durch die Nähe zur Pyramidenbahn überwacht werden.",
+    "setting": "Neurologische Rehabilitationsklinik",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Struktur im Zwischenhirn fungiert als 'Filter' und schützt das Bewusstsein vor Signalüberflutung?",
+        "options": [
+          "Hypothalamus",
+          "Thalamus",
+          "Epiphyse",
+          "Hypophyse"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Thalamus wird oft als 'Tor zum Bewusstsein' bezeichnet. [1]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Teil des Gehirns ist primär für die Entstehung von Gefühlen wie Wut oder Furcht zuständig?",
+        "options": [
+          "Kleinhirn",
+          "Limbisches System",
+          "Formatio reticularis",
+          "Okzipitallappen"
+        ],
+        "correct_answer": "1",
+        "hint": "Strukturen wie der Mandelkern im limbischen System steuern emotionale Reaktionen. [2]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Das limbische System verknüpft Gefühle mit vegetativen Funktionen wie Herzfrequenzanstieg.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "0",
+        "hint": "Das limbische System bindet den Gefühlshaushalt in vegetative und hormonelle Funktionen ein. [2]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie vier klassische Neurotransmitter des ZNS.",
+        "correct_answer": "Glutamat, Acetylcholin, Noradrenalin, Serotonin, Dopamin, GABA.",
+        "hint": "Diese Botenstoffe steuern Lernen, Motorik, Stimmung und Hemmung. [3, 4]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Die ____ ist ein netzartiges Geflecht im Hirnstamm, das die Bewusstseinslage und den Schlaf-Wach-Rhythmus reguliert.",
+        "correct_answer": "Formatio reticularis",
+        "hint": "Eine Schädigung dieses Systems kann zum Koma führen. [5]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche Schlafphase ist durch schnelle Augenbewegungen und eine hohe Traumfrequenz gekennzeichnet?",
+        "options": [
+          "Non-REM-Schlaf",
+          "REM-Schlaf",
+          "Einschlafphase",
+          "Tiefschlafphase"
+        ],
+        "correct_answer": "1",
+        "hint": "REM steht für 'Rapid Eye Movements'. [6]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welcher Gehirnabschnitt steuert den Wasserhaushalt und die Körpertemperatur?",
+        "options": [
+          "Thalamus",
+          "Hypothalamus",
+          "Kleinhirn",
+          "Balken"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Hypothalamus ist das oberste Steuerorgan für vegetative und endokrine Aufgaben. [1]"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Was ist die Hauptaufgabe des Kleinhirns (Cerebellum)?",
+        "options": [
+          "Sprachverständnis",
+          "Gleichgewicht und Bewegungskoordination",
+          "Hormonproduktion",
+          "Filterung von Sinnesreizen"
+        ],
+        "correct_answer": "1",
+        "hint": "Es reguliert die Muskelspannung und stimmt Bewegungen aufeinander ab. [7, 8]"
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Abschnitte des Hirnstamms.",
+        "correct_answer": "Mittelhirn (Mesencephalon), Brücke (Pons), Verlängertes Mark (Medulla oblongata).",
+        "hint": "Diese Region beherbergt lebenswichtige Zentren und Hirnnervenkerne. [9]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das Bindeglied zwischen Nerven- und Hormonsystem ist der ____.",
+        "correct_answer": "Hypothalamus",
+        "hint": "Er steuert die Hypophyse sowohl nerval als auch hormonell. [1]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Wie nennt man Nervenfasern, die Informationen von den Sinnesorganen zum ZNS leiten?",
+        "options": [
+          "Efferente Fasern",
+          "Afferente Fasern",
+          "Motorische Fasern",
+          "Pyramidenbahn"
+        ],
+        "correct_answer": "1",
+        "hint": "Afferent bedeutet hinführend. [10]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Komponenten des Zentralnervensystems (ZNS).",
+        "correct_answer": "Gehirn und Rückenmark.",
+        "hint": "Zusammen bilden sie die zentrale Steuerinstanz. [11]"
+      }
+    ]
+  },
+  {
+    "scenario": "Der 12-jährige Matthes wird nach einer hypoxischen Hirnschädigung rehabilitativ gepflegt. Er befindet sich aktuell in Phase C des neurologischen Phasenmodells, mit dem Ziel, die Selbstständigkeit bei alltäglichen Herausforderungen zu erhöhen. Sein Barthel-Index liegt bei 40 Punkten, was ihn als 'hilfsbedürftig' einstuft. Das interdisziplinäre Team, bestehend aus Pflegefachpersonen, Physiotherapeuten und Logopäden, arbeitet eng zusammen, um Matthes' Ressourcen zu fördern. Ein zentrales Problem ist seine beeinträchtigte Gehfähigkeit (P), verursacht durch spastische Lähmungen (Ä), was sich in einem unsicheren Gangbild auf der Fußaußenkante (S) äußert. Die Pflegefachkraft übernimmt hierbei die Rolle der Prozessbegleiterin und koordiniert die Maßnahmen nach dem SMART-Prinzip.",
+    "setting": "Spezialisierte Rehabilitationseinrichtung für Kinder/Jugendliche",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Was ist das Hauptziel der Phase C im neurologischen Phasenmodell?",
+        "options": [
+          "Akutbehandlung",
+          "Frührehabilitation",
+          "Selbstständiger Umgang mit alltäglichen Herausforderungen",
+          "Berufliche Wiedereingliederung"
+        ],
+        "correct_answer": "2",
+        "hint": "Phase C folgt auf die Frühreha und fokussiert die Alltagsbewältigung. [12]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Wert im Barthel-Index kennzeichnet einen Patienten als 'pflegeabhängig'?",
+        "options": [
+          "0 - 30 Punkte",
+          "35 - 80 Punkte",
+          "85 - 95 Punkte",
+          "100 Punkte"
+        ],
+        "correct_answer": "0",
+        "hint": "Matthes liegt mit 40 Punkten im Bereich 'hilfsbedürftig'. [13]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Rehabilitative Pflege zielt primär auf die vollständige Übernahme aller ADLs durch die Pflegekraft ab.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Das Ziel ist die Förderung der Eigenständigkeit und Unabhängigkeit. [14]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Kriterien der SMART-Regel zur Zielformulierung.",
+        "correct_answer": "Spezifisch, Messbar, Akzeptiert (Attraktiv), Realistisch, Terminiert.",
+        "hint": "Diese Struktur macht Pflegeziele überprüfbar. [15]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das PÄS-Schema steht für Problem, Ätiologie und ____.",
+        "correct_answer": "Symptome",
+        "hint": "Symptome sind die beobachtbaren Merkmale, die die Diagnose bestätigen. [16]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Was kennzeichnet eine 'zentrale Lähmung' im Gegensatz zu einer peripheren?",
+        "options": [
+          "Schlaffer Muskeltonus",
+          "Erhöhter muskulärer Ruhetonus (Spastik)",
+          "Vollständiger Verlust der Eigenreflexe",
+          "Schädigung direkt im Muskel"
+        ],
+        "correct_answer": "1",
+        "hint": "Da die Schaltkreise im Rückenmark intakt sind, aber die Hemmung fehlt, entsteht eine Spastik. [17]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welche Disziplin im Rehateam ist primär für die Therapie von Sprech- und Schluckstörungen zuständig?",
+        "options": [
+          "Physiotherapie",
+          "Ergotherapie",
+          "Logopädie",
+          "Sozialdienst"
+        ],
+        "correct_answer": "2",
+        "hint": "Logopäden behandeln Aphasien, Dysarthrien und Dysphagien. [18]"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Interdisziplinarität bedeutet, dass jede Fachgruppe ihre Ziele isoliert verfolgt.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Es geht um das Verbinden von Fachkompetenzen für neue Lösungsmöglichkeiten. [19]"
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Instrumente der interdisziplinären Zusammenarbeit.",
+        "correct_answer": "Case Management, Primary Nursing, Fallbesprechung, gemeinsame Dokumentationssysteme.",
+        "hint": "Diese Tools sichern die Transparenz und Kommunikation im Team. [20]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Rehabilitation zielt darauf ab, ____ mögliche Funktionen wieder zu erreichen oder zu erhalten.",
+        "correct_answer": "maximal",
+        "hint": "Das Ziel ist die bestmögliche Teilhabe des Patienten. [21]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Wie nennt man einen Reflex, bei dem Reizaufnahme und -antwort im selben Organ erfolgen?",
+        "options": [
+          "Fremdreflex",
+          "Vegetativer Reflex",
+          "Eigenreflex",
+          "Viszeraler Reflex"
+        ],
+        "correct_answer": "2",
+        "hint": "Ein Beispiel ist der Patellarsehnenreflex. [22]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die sechs Schritte des Pflegeprozesses nach Fiechter und Meier.",
+        "correct_answer": "1. Informationssammlung, 2. Erkennen von Problemen, 3. Festlegen der Pflegeziele, 4. Planung der Maßnahmen, 5. Durchführung der Pflege, 6. Beurteilung der Wirkung.",
+        "hint": "Dieser Regelkreis sichert die Qualität der Pflege. [13]"
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Krüger (82) lebt in der Phase F einer Langzeitpflegeeinrichtung. Nach einem schweren Schlaganfall leidet er unter einer globalen Aphasie und einer ausgeprägten Dysphagie. Beim Anreichen von Nahrung zeigt er ein feuchtes, gurgelndes Atemgeräusch, zeigt aber keinen Hustenreiz. Die Pflegekraft vermutet eine stille Aspiration. Zudem besteht eine periphere Fazialisparese links, wodurch er den Mundschluss nicht halten kann und Speichel austritt (Drooling). Herr Krüger trägt nachts einen Uhrglasverband, um sein linkes Auge vor Austrocknung zu schützen, da der Lidschlussreflex fehlt. Die rehabilitative Pflege konzentriert sich hier auf den Erhalt der Funktionen, die Vermeidung von Komplikationen wie einer Aspirationspneumonie und die Förderung der Kommunikation durch nonverbale Signale.",
+    "setting": "Pflegeheim (Phase F / Langzeitpflege)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Was ist die Priorität, wenn beim Patienten während des Essens eine gurgelnde Stimme auftritt?",
+        "options": [
+          "Weiter füttern und beobachten",
+          "Nahrungsaufnahme sofort stoppen (NPO)",
+          "Dem Patienten Wasser zum Nachspülen geben",
+          "Den Patienten flach hinlegen"
+        ],
+        "correct_answer": "1",
+        "hint": "Gurgelnde Sprache ist ein klinischer Hinweis auf Dysphagie/Aspiration; sofortiger Stopp ist nötig. [23, 24]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Was beschreibt der Begriff 'Drooling'?",
+        "options": [
+          "Erschwertes Schlucken von Festkost",
+          "Austritt von Speichel aus dem Mund",
+          "Eindringen von Nahrung in die Nase",
+          "Verwaschene Aussprache"
+        ],
+        "correct_answer": "1",
+        "hint": "Drooling entsteht oft durch mangelnden Lippenschluss bei Fazialisparese. [25]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Bei einer peripheren Fazialisparese kann der Patient die Stirn auf der betroffenen Seite meist noch runzeln.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Erst bei der zentralen Parese bleibt die Stirnbeweglichkeit erhalten. [26]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei klinische Hinweise auf eine Dysphagie.",
+        "correct_answer": "Husten nach dem Schlucken, feuchte/gurgelnde Stimme, verändertes Atemmuster, Fieber unklarer Genese, verzögerte orale Phase.",
+        "hint": "Diese Zeichen müssen bei der Nahrungsaufnahme aktiv beobachtet werden. [23]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Eindringen von Material in die Luftwege unterhalb der Stimmbandebene nennt man ____.",
+        "correct_answer": "Aspiration",
+        "hint": "Wenn klinische Zeichen fehlen, spricht man von 'stiller Aspiration'. [23]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche Aphasieform ist durch fast vollständigen Verlust von Sprachproduktion und -verständnis charakterisiert?",
+        "options": [
+          "Broca-Aphasie",
+          "Wernicke-Aphasie",
+          "Globale Aphasie",
+          "Amnestische Aphasie"
+        ],
+        "correct_answer": "2",
+        "hint": "Die globale Aphasie ist die schwerste Form nach großen Hirninfarkten. [27]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welche pflegerische Maßnahme schützt das Auge bei fehlendem Lidschluss (Lagophthalmus)?",
+        "options": [
+          "Regelmäßiges Auswaschen mit Leitungswasser",
+          "Anlegen eines Uhrglasverbandes",
+          "Abdecken mit einer dunklen Brille",
+          "Das Auge offen lassen zur Belüftung"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Uhrglasverband verhindert die Austrocknung der Hornhaut. [28, 29]"
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Klare Flüssigkeiten ohne Zucker sind bei Aspiration für die Lunge besser kompensierbar als milchbasierte Produkte.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "0",
+        "hint": "Milchprodukte verschleimen zusätzlich und fördern Bakterienwachstum. [30]"
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Phasen des Schluckaktes.",
+        "correct_answer": "1. Prä-orale Phase, 2. Orale Vorbereitungsphase, 3. Orale Transportphase, 4. Pharyngeale Phase, 5. Ösophageale Phase.",
+        "hint": "Die Koordination dieser Phasen ist beim Gesunden hochpräzise. [31]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Bei schwerster Dysphagie gilt die Anordnung ____, was vollständige Nahrungskarenz bedeutet.",
+        "correct_answer": "NPO",
+        "hint": "NPO steht für 'nil per os'. [32]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Warum sind Mischkonsistenzen (z. B. Suppe mit festen Einlagen) bei Dysphagie gefährlich?",
+        "options": [
+          "Weil sie zu wenig Kalorien haben",
+          "Weil sie die Koordination überfordern (festes Kauen vs. flüssiges Schlucken)",
+          "Weil sie zu schnell abkühlen",
+          "Weil sie den Geschmackssinn stören"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Schluckreflex muss gleichzeitig verschiedene Texturen verarbeiten, was das Risiko erhöht. [33]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Voraussetzungen für die Durchführung eines Schluck-Screenings (z.B. GUSS).",
+        "correct_answer": "Patient muss wach/reaktionsfähig sein (Vigilanz mind. 15 Min.), aufrechte Sitzposition möglich, willkürliches Husten/Räuspern möglich.",
+        "hint": "Ohne ausreichende Wachheit ist jedes orale Testen lebensgefährlich. [25]"
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Sowinski (68) wird mit dem Verdacht auf einen akuten ischämischen Insult in der Notaufnahme aufgenommen. Die Patientin zeigt eine plötzliche Erschlaffung der linken Gesichtshälfte sowie eine deutliche Schwäche im linken Arm. Der herbeigerufene Neurologe stellt fest, dass Frau Sowinski zwar flüssig spricht, der Inhalt jedoch kaum Sinn ergibt und sie viele Wortneubildungen (Neologismen) verwendet. Zudem scheint sie einfache Aufforderungen nicht zu verstehen. Eine Bildgebung bestätigt einen Infarkt im Bereich des Wernicke-Sprachzentrums der rechten Hemisphäre (bei Linkshändigkeit) sowie eine Beteiligung der Capsula interna. Die Pflegekraft muss nun die Vitalzeichen engmaschig überwachen, das Aspirationsrisiko einschätzen und die ersten Schritte für eine rehabilitative Pflegeplanung einleiten.",
+    "setting": "Krankenhaus (Notaufnahme/Stroke Unit)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welches Gefäßsystem versorgt primär das betroffene Wernicke-Areal?",
+        "options": ["Arteria cerebri anterior", "Arteria cerebri media", "Arteria cerebri posterior", "Arteria vertebralis"],
+        "correct_answer": "1",
+        "hint": "Die A. cerebri media versorgt ca. 2/3 der Hemisphäre, inklusive der Sprachzentren."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Form der Aphasie liegt bei Frau Sowinski aufgrund der flüssigen, aber inhaltsarmen Sprache vor?",
+        "options": ["Broca-Aphasie", "Globale Aphasie", "Amnestische Aphasie", "Wernicke-Aphasie"],
+        "correct_answer": "3",
+        "hint": "Flüssige Sprache mit Paraphasien und gestörtem Verständnis ist typisch für die Wernicke-Aphasie."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da Frau Sowinski Linkshänderin ist, liegt ihr Sprachzentrum mit hoher Wahrscheinlichkeit in der rechten Hemisphäre.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Auch bei Linkshändern liegt das Sprachzentrum in 70 % der Fälle links."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei typische motorische Symptome bei einer Schädigung der Pyramidenbahn.",
+        "correct_answer": "Lähmung (Hemiparese/Hemiplegie), erhöhter Muskeltonus (Spastik), gestörte Feinmotorik.",
+        "hint": "Die Pyramidenbahn steuert die bewusste Willkürmotorik."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das Gehirn macht nur ca. 3 % des Körpergewichts aus, verbraucht aber ca. ____ % der Gesamtenergie.",
+        "correct_answer": "20",
+        "hint": "Dies erklärt die hohe Empfindlichkeit gegenüber Sauerstoffmangel."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Wo kreuzen die Fasern der Pyramidenbahn zur Gegenseite?",
+        "options": ["Im Thalamus", "Im Kleinhirn", "Im verlängerten Mark (Medulla oblongata)", "Im Balken"],
+        "correct_answer": "2",
+        "hint": "Die Pyramidenkreuzung führt zur kontralateralen Steuerung des Körpers."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt die hier vorliegende Vernachlässigung einer Körperseite, die oft mit Rechts-Läsionen einhergeht?",
+        "options": ["Apraxie", "Aphasie", "Neglect", "Ataxie"],
+        "correct_answer": "2",
+        "hint": "Neglect ist eine Aufmerksamkeitsstörung für eine Umgebungshälfte."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Schichten der Hirnhäute von außen nach innen.",
+        "correct_answer": "Dura mater (harte Hirnhaut), Arachnoidea (Spinnwebhaut), Pia mater (zarte Innenhaut).",
+        "hint": "Diese schützen das ZNS mechanisch."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welcher Neurotransmitter ist primär für die Erregungsübertragung an der motorischen Endplatte zuständig?",
+        "options": ["Dopamin", "Serotonin", "Acetylcholin", "Glutamat"],
+        "correct_answer": "2",
+        "hint": "Acetylcholin ist der Botenstoff zwischen efferentem Neuron und Muskel."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Die ____ Erregungsleitung ist deutlich schneller als die kontinuierliche, da der Impuls von Schnürring zu Schnürring springt.",
+        "correct_answer": "saltatorische",
+        "hint": "Sie benötigt markhaltige Axone zur Isolation."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welches Zentrum im verlängerten Mark steuert den Schutzreflex des Hustens?",
+        "options": ["Das optische Zentrum", "Das Reflexzentrum der Medulla oblongata", "Das limbische System", "Das Kleinhirn"],
+        "correct_answer": "1",
+        "hint": "Lebenswichtige Reflexe wie Husten und Schlucken sitzen im verlängerten Mark."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei klinische Hinweise auf eine Dysphagie bei Frau Sowinski.",
+        "correct_answer": "Husten nach dem Schlucken, gurgelnde Stimme, erschwerter Mundschluss (Drooling), verzögerte Schluckreflexauslösung.",
+        "hint": "Beobachtung während der ersten oralen Versuche ist entscheidend."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Özdemir (52) befindet sich nach einem schweren Schädel-Hirn-Trauma in der Phase B der neurologischen Rehabilitation. Er ist nun seit 15 Minuten wach und reaktionsfähig, leidet jedoch unter einer schweren Dysphagie. Die Pflegefachkraft plant die Durchführung des GUSS (Gugging Swallowing Screen), um zu prüfen, ob mit einer vorsichtigen oralen Kost (angedickt) begonnen werden kann. Herr Özdemir zeigt eine ausgeprägte Spastik im rechten Bein. Das Rehabilitationsziel für diese Woche wurde nach dem SMART-Prinzip gemeinsam mit den Physiotherapeuten festgelegt: 'Herr Özdemir kann bis Freitag mit Unterstützung für 2 Minuten sicher an der Bettkante sitzen'. In der interdisziplinären Fallbesprechung werden zudem die Pflegediagnosen nach dem PÄS-Schema aktualisiert.",
+    "setting": "Rehabilitationsklinik (Phase B - Frührehabilitation)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Was ist das primäre Ziel der Phase B im neurologischen Phasenmodell?",
+        "options": ["Akutversorgung", "Förderung basaler, sensomotorischer und motorischer Funktionen", "Berufliche Wiedereingliederung", "Erhaltung der Funktionen in der Langzeitpflege"],
+        "correct_answer": "1",
+        "hint": "Phase B ist die Frührehabilitation nach der klinischen Akutphase."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Voraussetzung für den GUSS-Test erfüllt Herr Özdemir laut Szenario?",
+        "options": ["Er kann laufen", "Er ist seit 15 Minuten wach und reaktionsfähig", "Er hat keine Schmerzen", "Er hat bereits gegessen"],
+        "correct_answer": "1",
+        "hint": "Vigilanz für mindestens 15 Minuten ist Grundvoraussetzung für jedes Schluck-Screening."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Eine Spastik ist ein Zeichen für eine periphere Lähmung.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Spastik deutet auf eine zentrale Lähmung hin (1. Motoneuron)."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Komponenten des GUSS-Vorversuchs (Indirekter Schluckversuch).",
+        "correct_answer": "1. Vigilanz, 2. Willkürliches Husten/Räuspern, 3. Speichelschluck, 4. Drooling/Stimmänderung.",
+        "hint": "Dies dient der Sicherheit vor dem direkten Test mit Wasser."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Ziele in der Rehabilitation müssen nach dem SMART-Prinzip formuliert werden. Das 'T' steht dabei für ____.",
+        "correct_answer": "terminiert",
+        "hint": "Ziele brauchen eine klare Zeitangabe zur Überprüfung."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Teil des Zwischenhirns steuert Herrn Özdemirs Körpertemperatur und den Wasserhaushalt?",
+        "options": ["Thalamus", "Balken", "Hypothalamus", "Epiphyse"],
+        "correct_answer": "2",
+        "hint": "Der Hypothalamus ist die oberste Steuerzentrale für vegetative Funktionen."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was ist das Hauptmerkmal einer aktivierenden Pflege?",
+        "options": ["Vollständige Übernahme der ADLs", "Vermeidung von Anstrengung", "Förderung der Eigenständigkeit durch Einbezug von Ressourcen", "Ausschließlich medizinische Behandlung"],
+        "correct_answer": "2",
+        "hint": "Aktivierende Pflege bedeutet 'Hilfe zur Selbsthilfe'."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Voraussetzungen für eine erfolgreiche interdisziplinäre Zusammenarbeit.",
+        "correct_answer": "Gemeinsame Fachsprache, Anerkennung der Kernkompetenzen, Kooperationsbereitschaft, Kommunikationskompetenz.",
+        "hint": "Das Team muss als funktionelle Einheit agieren."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welches Instrument wird im interdisziplinären Team genutzt, um die Selbstständigkeit objektiv messbar zu machen?",
+        "options": ["Braden-Skala", "Barthel-Index", "Wassertest", "GUSS"],
+        "correct_answer": "1",
+        "hint": "Der Barthel-Index misst ADL-Funktionen auf einer Skala bis 100 Punkte."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Die Fähigkeit des Gehirns zur funktionellen Umstrukturierung nach einer Verletzung nennt man ____.",
+        "correct_answer": "Neuroplastizität",
+        "hint": "Diese ist die biologische Basis für den Erfolg in Phase B."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Ein Patient verschluckt sich ohne Hustenreiz. Wie nennt man dieses Phänomen?",
+        "options": ["Dysphagie", "Stille Aspiration", "Apnoe", "Regurgitation"],
+        "correct_answer": "1",
+        "hint": "Das Fehlen von Schutzhusten macht die Aspiration besonders gefährlich (Pneumonierisiko)."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die sechs Schritte des Pflegeprozesses nach Fiechter und Meier.",
+        "correct_answer": "1. Informationssammlung, 2. Erkennen von Problemen, 3. Festlegen der Pflegeziele, 4. Planung der Maßnahmen, 5. Durchführung der Pflege, 6. Beurteilung der Wirkung.",
+        "hint": "Dieses Modell bildet den Rahmen für die rehabilitative Pflege."
+      }
+    ]
+  },
+  {
+    "scenario": "Die 19-jährige Sarah hat nach einer Hirnblutung bleibende kognitive und körperliche Beeinträchtigungen. Sie hat einen Schwerbehindertenausweis mit einem GdB von 70 und dem Merkzeichen 'G'. Sarah möchte aus dem Elternhaus in eine eigene Wohnung ziehen und benötigt dafür Unterstützung bei der Haushaltsführung und Begleitung zu Arztterminen. Die zuständige Pflegeberaterin erklärt Sarah das Konzept der Inklusion und die Möglichkeiten der Eingliederungshilfe nach SGB IX. Sarah überlegt, ein 'Persönliches Budget' zu beantragen, um ihre Assistenzkräfte selbst einzustellen. Um ihren Bedarf genau zu ermitteln, wird Sarahs Situation nach dem bio-psycho-sozialen Modell der ICF beurteilt, wobei besonders die Barrieren in ihrer Umwelt und ihre Teilhabewünsche im Vordergrund stehen.",
+    "setting": "Ambulante Pflegeberatung / Sozialdienst",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Ab welchem GdB gilt Sarah rechtlich als schwerbehindert?",
+        "options": ["20", "30", "50", "100"],
+        "correct_answer": "2",
+        "hint": "Schwerbehinderung beginnt ab einem GdB von 50."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Was bedeutet das Merkzeichen 'G' in Sarahs Ausweis?",
+        "options": ["Gehörlos", "Gleichstellung", "Erhebliche Beeinträchtigung der Bewegungsfähigkeit im Straßenverkehr", "Große Hilflosigkeit"],
+        "correct_answer": "2",
+        "hint": "Es steht für eine Einschränkung des Gehvermögens."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Inklusion bedeutet, dass Sarah sich so weit wie möglich an die bestehende Umwelt anpassen muss.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Inklusion fordert, dass die Umwelt Barrieren für Sarah abbaut."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Komponenten der 'funktionalen Gesundheit' nach ICF.",
+        "correct_answer": "1. Körperfunktionen und -strukturen, 2. Aktivitäten, 3. Teilhabe (Partizipation).",
+        "hint": "Diese drei Bereiche werden durch Kontextfaktoren beeinflusst."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das ____ Budget ist eine Geldleistung, mit der Sarah Leistungen selbst einkaufen und finanzieren kann.",
+        "correct_answer": "Persönliche",
+        "hint": "Es dient der Stärkung der Selbstbestimmung gegenüber Sachleistungen."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welches Gesetz regelt Sarahs Anspruch auf Eingliederungshilfe primär?",
+        "options": ["SGB V", "SGB XI", "SGB IX (BTHG)", "Bürgerliches Gesetzbuch"],
+        "correct_answer": "2",
+        "hint": "Das SGB IX umfasst die Rehabilitation und Teilhabe behinderter Menschen."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was sind laut ICF 'Kontextfaktoren'?",
+        "options": ["Nur die ärztliche Diagnose", "Umweltfaktoren und personenbezogene Faktoren", "Ausschließlich die finanziellen Mittel", "Die Wohnanschrift"],
+        "correct_answer": "1",
+        "hint": "Diese Faktoren beschreiben den gesamten Lebenshintergrund eines Menschen."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei der fünf Leistungsgruppen zur Teilhabe (§ 5 SGB IX).",
+        "correct_answer": "1. Medizinische Reha, 2. Teilhabe am Arbeitsleben, 3. Unterhaltssichernde Leistungen, 4. Teilhabe an Bildung, 5. Soziale Teilhabe.",
+        "hint": "Die Unterstützung bei der Haushaltsführung fällt unter die soziale Teilhabe."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wer ist im Rheinland ein typischer Kostenträger für Leistungen der Eingliederungshilfe?",
+        "options": ["Die Polizei", "Die Rentenversicherung", "Der Landschaftsverband Rheinland (LVR)", "Die Agentur für Arbeit"],
+        "correct_answer": "2",
+        "hint": "Der LVR übernimmt als Rehabilitationsträger die Kosten für soziale Teilhabe."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Laut UN-Behindertenrechtskonvention ist Inklusion ein ____ und kein 'Akt der Gnade'.",
+        "correct_answer": "Menschenrecht",
+        "hint": "Dies bildet die völkerrechtliche Basis für Sarahs Ansprüche."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Ebene der Selbsthilfe stärkt Sarahs 'Alltagskompetenz'?",
+        "options": ["Die finanzielle Ebene", "Die individuelle Ebene", "Die gesetzliche Ebene", "Die medizinische Ebene"],
+        "correct_answer": "1",
+        "hint": "Individuelle Selbsthilfe fördert die Handlungskompetenz im Alltag."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Beispiele für Barrierefreiheit laut Behindertengleichstellungsgesetz (BGG).",
+        "correct_answer": "Bauliche Anlagen (Rampen), Verkehrsmittel (Niederflur), akustische/visuelle Infos, Gebärdensprache, einfache Sprache.",
+        "hint": "Barrierefreiheit geht über das rein Bauliche hinaus."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Wagner (72) wird nach einem schweren ischämischen Infarkt der Arteria cerebri media (links) in die Phase B der neurologischen Rehabilitation übernommen. Er zeigt eine ausgeprägte Rechts-Hemiplegie und eine globale Aphasie. Bei der pflegerischen Aufnahme fällt auf, dass Herr Wagner Speichel verliert (Drooling) und beim Schlucken von Wasser unmittelbar gurgelnd atmet, jedoch keinen Hustenreiz zeigt. Die Pflegefachkraft erkennt die Gefahr einer stillen Aspiration. Die Vitalwerte zeigen einen erhöhten Blutdruck, was den Sympathikustonus widerspiegelt. In der interdisziplinären Teambesprechung wird ein Reha-Ziel nach dem SMART-Prinzip formuliert, um die basalen Funktionen zu fördern. Zudem wird Herr Wagners Teilhabebedarf für die spätere Überleitung in Phase F diskutiert, wobei Kontextfaktoren nach dem ICF-Modell berücksichtigt werden.",
+    "setting": "Neurologische Frührehabilitation (Phase B)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche pflegerische Sofortmaßnahme hat bei Herrn Wagner aufgrund der gurgelnden Stimme ohne Hustenreiz oberste Priorität?",
+        "options": [
+          "Gabe von angedicktem Wasser zur Testung",
+          "Vollständige Nahrungskarenz (NPO) bis zur logopädischen Abklärung",
+          "Aufforderung zum kräftigen Räuspern",
+          "Flache Lagerung zur Entlastung des Kreislaufs"
+        ],
+        "correct_answer": "1",
+        "hint": "Gurgelnde Stimme ohne Husten deutet auf eine stille Aspiration hin; orales Anreichen ist lebensgefährlich [1, 2]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Struktur im Hirnstamm beherbergt das Reflexzentrum für den Schluckakt, das bei Herrn Wagner beeinträchtigt sein könnte?",
+        "options": [
+          "Mittelhirn (Mesencephalon)",
+          "Brücke (Pons)",
+          "Verlängertes Mark (Medulla oblongata)",
+          "Thalamus"
+        ],
+        "correct_answer": "2",
+        "hint": "Die Medulla oblongata steuert lebenswichtige Reflexe wie Schlucken, Husten und Herz-Kreislauf [3, 4]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da die linke Hirnhälfte betroffen ist, zeigt Herr Wagner die motorischen Symptome auf der rechten Körperseite aufgrund der Pyramidenbahnkreuzung.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "0",
+        "hint": "Die meisten Fasern der Pyramidenbahn kreuzen im verlängerten Mark zur Gegenseite [5, 6]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Komponenten, die im GUSS-Vorversuch (indirekter Schluckversuch) beurteilt werden.",
+        "correct_answer": "1. Vigilanz (wach für 15 Min.), 2. Willkürliches Husten/Räuspern, 3. Speichelschluck (möglich?), 4. Drooling und Stimmänderung.",
+        "hint": "Dieser Vorversuch schützt vor Fehlern beim direkten Schlucktest [7]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das SMART-Prinzip besagt, dass Ziele spezifisch, messbar, ____, realistisch und terminiert sein müssen.",
+        "correct_answer": "akzeptiert",
+        "hint": "Ziele müssen vom Patienten oder den Bezugspersonen mitgetragen werden, um motivierend zu wirken [8]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt die Unfähigkeit, motorische Bewegungen wie das Schlucken zu planen, obwohl die Muskelkraft theoretisch vorhanden wäre?",
+        "options": ["Aphasie", "Dysarthrie", "Apraxie", "Ataxie"],
+        "correct_answer": "2",
+        "hint": "Apraxie ist eine Störung der Handlungsplanung; speziell beim Sprechen spricht man von Sprechapraxie [9]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welche Wirkung zeigt der Sympathikus, der bei Herrn Wagner stressbedingt aktiv ist, an den Bronchien?",
+        "options": ["Verengung", "Erweiterung", "Sekretionssteigerung", "Keine Wirkung"],
+        "correct_answer": "1",
+        "hint": "Der Sympathikus erweitert die Bronchien für eine bessere Sauerstoffaufnahme bei Belastung [10]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei typische Anzeichen einer 'Globalen Aphasie', die bei Herrn Wagner vorliegt.",
+        "correct_answer": "Stark eingeschränkte Sprachproduktion, Sprachautomatismen (tata-tata), stark gestörtes Sprachverständnis, eingeschränktes Nachsprechen.",
+        "hint": "Es ist die schwerste Form der Aphasie nach großflächigen Infarkten [11]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wie hoch ist der tägliche Energieverbrauch (Zucker/Sauerstoff) des Gehirns bezogen auf den Gesamtkörper?",
+        "options": ["3 %", "10 %", "20 %", "50 %"],
+        "correct_answer": "2",
+        "hint": "Das Gehirn ist energetisch extrem anspruchsvoll trotz geringem Gewichtsanteil [12]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Die ____ Erregungsleitung ist deutlich schneller als die kontinuierliche, da der Impuls an den Ranvier-Schnürringen springt.",
+        "correct_answer": "saltatorische",
+        "hint": "Diese Leitungsart findet sich bei markhaltigen Nervenfasern (ca. 80 m/s) [13]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welcher Neurotransmitter ist primär für die hemmenden Impulse im ZNS zuständig und reguliert die neuronale Erregbarkeit?",
+        "options": ["Glutamat", "GABA", "Serotonin", "Dopamin"],
+        "correct_answer": "1",
+        "hint": "GABA (Gamma-Aminobuttersäure) ist der wichtigste hemmende Botenstoff [14]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Bereiche der 'Kontextfaktoren' laut ICF-Modell.",
+        "correct_answer": "Umweltfaktoren (Barrieren/Förderfaktoren), personenbezogene Faktoren (Alter, Lebensstil), soziale Faktoren.",
+        "hint": "Diese Faktoren entscheiden über das Ausmaß der Teilhabe trotz Behinderung [15, 16]."
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Meissner (54) leidet an einer progredienten Multiplen Sklerose (MS). Sie wird zur rehabilitativen Pflege in Phase D aufgenommen, um ihre Selbstständigkeit im Haushalt zu erhalten. Aktuell weist sie eine spastische Paraparese der Beine und eine Ataxie auf. Bei der klinischen Untersuchung zeigt sich eine periphere Fazialisparese rechts mit inkomplettem Lidschluss (Lagophthalmus). Das Pflegeteam setzt den Barthel-Index ein, um ihren Hilfebedarf objektiv zu erfassen; sie erreicht 65 Punkte. Frau Meissner klagt über Sensibilitätsstörungen im Bereich der Dermatome L4/L5. In der interdisziplinären Planung wird besonders auf die Prävention von Hornhautschäden am Auge und die Förderung der Koordination durch die Physiotherapie geachtet.",
+    "setting": "Rehabilitationsklinik (Phase D - Anschlussheilbehandlung)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche pflegerische Maßnahme ist bei Frau Meissner zum Schutz des rechten Auges (inkompletter Lidschluss) besonders nachts indiziert?",
+        "options": [
+          "Regelmäßiges Spülen mit Kamillentee",
+          "Anlegen eines Uhrglasverbandes",
+          "Abkleben des Auges mit einem einfachen Pflaster",
+          "Erhöhung der Luftfeuchtigkeit im Zimmer"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Uhrglasverband schützt die Hornhaut vor Austrocknung und Verletzung [17, 18]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche anatomische Struktur ist bei Multipler Sklerose primär durch Autoimmunvorgänge geschädigt?",
+        "options": [
+          "Dendriten",
+          "Markscheiden (Myelinschicht)",
+          "Zellkörper (Soma)",
+          "Synaptischer Spalt"
+        ],
+        "correct_answer": "1",
+        "hint": "MS zerstört die isolierenden Myelinschichten der Axone im ZNS [19]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da Frau Meissner eine periphere Fazialisparese hat, kann sie die Stirn auf der betroffenen Seite nicht runzeln.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "0",
+        "hint": "Bei der peripheren Parese ist der gesamte Gesichtsnerv (N. VII) geschädigt, inklusive der Stirnäste [20, 21]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Symptome einer Kleinhirnschädigung (Ataxie), wie sie bei Frau Meissner vorliegt.",
+        "correct_answer": "Störung der Bewegungskoordination, Gangunsicherheit, Schwindel, gestörte Feinmotorik, reduzierte Muskelgrundspannung.",
+        "hint": "Das Cerebellum ist das Hauptkoordinationszentrum für Motorik [22, 23]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das Schwellenpotenzial muss erreicht werden, damit nach dem ____ Prinzip ein Aktionspotenzial ausgelöst wird.",
+        "correct_answer": "Alles-oder-Nichts",
+        "hint": "Entweder ein vollständiges Signal wird gefeuert oder gar keines [24]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Teil des Nervensystems ist geschädigt, wenn eine spastische Lähmung vorliegt?",
+        "options": [
+          "Das 2. Motoneuron im Vorderhorn",
+          "Die peripheren Nerven",
+          "Das 1. Motoneuron (motorischer Kortex oder Pyramidenbahn)",
+          "Die Sinnesrezeptoren in der Haut"
+        ],
+        "correct_answer": "2",
+        "hint": "Zentrale Lähmungen (1. Motoneuron) führen durch Wegfall der Hemmung zur Spastik [25]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welcher Hirnnerv versorgt Frau Meissners Gesichtsmuskulatur und ist bei der Fazialisparese betroffen?",
+        "options": [
+          "V. Hirnnerv (N. trigeminus)",
+          "VII. Hirnnerv (N. facialis)",
+          "X. Hirnnerv (N. vagus)",
+          "XII. Hirnnerv (N. hypoglossus)"
+        ],
+        "correct_answer": "1",
+        "hint": "Der N. facialis steuert die Mimik, den Lidschluss und Teile des Geschmacks [26]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Schichten der bindegewebigen Hirnhäute von außen nach innen.",
+        "correct_answer": "1. Dura mater (harte Hirnhaut), 2. Arachnoidea (Spinnwebhaut), 3. Pia mater (zarte Innenhaut).",
+        "hint": "Diese schützen das ZNS mechanisch [27, 28]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "In welchem Bereich des Rückenmarks liegen die Zellkörper der motorischen Neuronen?",
+        "options": ["Hinterhorn", "Vorderhorn", "Seitenhorn", "Spinalganglion"],
+        "correct_answer": "1",
+        "hint": "Das Vorderhorn der grauen Substanz enthält die efferenten motorischen Neuronen [29]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Der ____ ist der Zeitraum nach einem Aktionspotenzial, in dem das Neuron nicht erneut erregbar ist.",
+        "correct_answer": "Refraktärperiode",
+        "hint": "Dieser Mechanismus schützt vor Dauererregung [30]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Was beschreibt der Barthel-Index-Wert von 65 Punkten für Frau Meissner?",
+        "options": ["Pflegeabhängig", "Hilfsbedürftig", "Punktuell hilfsbedürftig", "Völlig unabhängig"],
+        "correct_answer": "1",
+        "hint": "Werte zwischen 35 und 80 Punkten werden als 'hilfsbedürftig' eingestuft [31, 32]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Aufgaben des Liquors.",
+        "correct_answer": "Schutz vor Stößen (Wasserkissen), Versorgung mit Nährstoffen, Abtransport von Stoffwechselprodukten.",
+        "hint": "Der Liquor zirkuliert im Subarachnoidalraum [27, 33]."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Schröder (48) erlitt eine Hirnblutung im Bereich des Zwischenhirns (Hypothalamus) und des limbischen Systems. Er befindet sich in Phase F und wird in einem spezialisierten Pflegeheim betreut. Er zeigt Schwierigkeiten bei der Regulation seiner Körpertemperatur und klagt über einen gestörten Schlaf-Wach-Rhythmus. Zudem zeigt er eine amnestische Aphasie mit deutlichen Wortfindungsstörungen. Herr Schröder hat einen Schwerbehindertenausweis mit einem GdB von 90 und dem Merkzeichen 'H' (Hilflos). Er nutzt das 'Persönliche Budget', um Assistenzleistungen für seine soziale Teilhabe zu finanzieren. Die pflegerische Begleitung konzentriert sich auf die Ressourcenaktivierung und die Koordination mit dem LVR als Kostenträger der Eingliederungshilfe.",
+    "setting": "Pflegeheim / Langzeitpflege (Phase F)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welches Gehirnareal ist primär für Herrn Schröders gestörte Temperaturregulation verantwortlich?",
+        "options": ["Thalamus", "Hypothalamus", "Balken", "Kleinhirn"],
+        "correct_answer": "1",
+        "hint": "Der Hypothalamus ist das oberste Steuerorgan für vegetative Funktionen wie Temperatur und Wasserhaushalt [34]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welches Merkmal kennzeichnet die amnestische Aphasie von Herrn Schröder?",
+        "options": [
+          "Mühsames Sprechen im Telegrammstil",
+          "Wortfindungsstörungen bei flüssiger Sprache",
+          "Fast vollständiger Sprachverlust",
+          "Verwaschene Artikulation durch Muskellähmung"
+        ],
+        "correct_answer": "1",
+        "hint": "Amnestische Aphasiker umschreiben oft Wörter, die ihnen nicht einfallen [11]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Das Merkzeichen 'H' im Schwerbehindertenausweis bedeutet, dass Herr Schröder außergewöhnlich gehbehindert ist.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. 'H' steht für Hilflosigkeit; 'aG' stünde für außergewöhnliche Gehbehinderung [35, 36]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Ziele der Rehabilitation laut den Quellen.",
+        "correct_answer": "Maximal mögliche Funktionen erreichen, verbliebene Funktionen erhalten/stabilisieren, Teilhabe ermöglichen, Pflegebedürftigkeit mindern/vermeiden.",
+        "hint": "Reha ist ein ressourcenorientierter Prozess [37, 38]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das Bindeglied zwischen Nerven- und Hormonsystem ist der ____.",
+        "correct_answer": "Hypothalamus",
+        "hint": "Er steuert die Hypophyse sowohl nerval als auch hormonell [34]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welches System im Gehirn ist maßgeblich an der Entstehung von Emotionen wie Angst und Wut beteiligt?",
+        "options": [
+          "Pyramidenbahn",
+          "Limbisches System",
+          "Extrapyramidales System",
+          "Ventrikelsystem"
+        ],
+        "correct_answer": "1",
+        "hint": "Das limbische System steuert Gefühle und Triebe [39]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "In welcher Schlafphase kommt es zu schnellen Augenbewegungen und intensiven Träumen?",
+        "options": ["Non-REM-Schlaf", "Tiefschlaf", "REM-Schlaf", "Einschlafphase"],
+        "correct_answer": "2",
+        "hint": "REM steht für 'Rapid Eye Movements' [40]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Komponenten des 'Konzeptes der Rehabilitation' (laut Modul 9.15).",
+        "correct_answer": "Interdisziplinarität (Zusammenarbeit der Fachgruppen) und Prozessbegleitung (Reha-Verlauf steuern).",
+        "hint": "Die Pflege koordiniert und begleitet den gesamten Prozess [41, 42]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welches Gesetz bildet die Grundlage für Herrn Schröders Eingliederungshilfe?",
+        "options": ["SGB V", "SGB XI", "SGB IX", "BGB"],
+        "correct_answer": "2",
+        "hint": "Das SGB IX regelt die Rehabilitation und Teilhabe von Menschen mit Behinderungen [43]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das 'Persönliche Budget' ist eine ____, mit der Herr Schröder Leistungen selbst einkaufen kann.",
+        "correct_answer": "Geldleistung",
+        "hint": "Es fördert die Selbstbestimmung gegenüber reinen Sachleistungen [44]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Struktur verbindet die beiden Großhirnhemisphären miteinander?",
+        "options": ["Balken (Corpus callosum)", "Thalamus", "Innere Kapsel", "Formatio reticularis"],
+        "correct_answer": "0",
+        "hint": "Der Balken ist die größte Kommissurenbahn des Gehirns [45]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Voraussetzungen für gelingende interdisziplinäre Zusammenarbeit.",
+        "correct_answer": "Gemeinsame Fachsprache, Anerkennung der Kernkompetenzen, Kommunikationskompetenz, Kooperationsbereitschaft.",
+        "hint": "Das Team muss effektiv kommunizieren [46]."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Müller (45) erlitt vor 18 Monaten einen Schlaganfall. Nach den Phasen A bis D befindet er sich nun in der Phase E der neurologischen Rehabilitation. Er möchte in seinen Beruf als Buchhalter zurückkehren, leidet jedoch unter kognitiven Einschränkungen und einer leichten Restsymptomatik im rechten Arm. Er ist als schwerbehindert anerkannt (GdB 60, Merkzeichen G). In einem Beratungsgespräch informiert ihn die Pflegefachkraft über die Möglichkeiten des Bundesteilhabegesetzes (BTHG) und das Modell der ICF. Es wird geprüft, ob er ein 'Persönliches Budget' für eine Arbeitsplatzassistenz nutzen kann. Das Ziel der Rehabilitation ist die volle Teilhabe am Arbeitsleben und die Vermeidung von Barrieren in seinem sozialen Umfeld, wobei seine individuellen Kontextfaktoren eine zentrale Rolle spielen.",
+    "setting": "Ambulante Pflegeberatung / Berufliche Rehabilitation",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Was ist das primäre Ziel der Phase E im neurologischen Phasenmodell?",
+        "options": ["Akutversorgung", "Frührehabilitation", "Nachsorge und berufliche Rehabilitation", "Langzeitpflege"],
+        "correct_answer": "2",
+        "hint": "In Phase E steht die berufliche Wiedereingliederung und die Förderung der Teilhabe im Vordergrund [1]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Bedingung muss rechtlich erfüllt sein, damit Herr Müller als 'schwerbehindert' gilt?",
+        "options": ["GdB von mindestens 20", "GdB von mindestens 30", "GdB von mindestens 50", "GdB von 100"],
+        "correct_answer": "2",
+        "hint": "Laut SGB IX § 2 Abs. 2 gelten Menschen ab einem GdB von 50 als schwerbehindert [2, 3]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Wenn Herr Müller mehrere Beeinträchtigungen hat, werden die einzelnen GdB-Werte zur Ermittlung des Gesamt-GdB einfach addiert.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Ein Gesamt-GdB wird durch eine integrierende Bewertung gebildet, nicht durch Addition [3, 4]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Leistungsgruppen zur Teilhabe nach § 5 SGB IX.",
+        "correct_answer": "1. Medizinische Rehabilitation, 2. Teilhabe am Arbeitsleben, 3. Unterhaltssichernde und ergänzende Leistungen, 4. Teilhabe an Bildung, 5. Soziale Teilhabe.",
+        "hint": "Diese Gruppen definieren die gesetzlichen Ansprüche auf Unterstützung [5]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Die WHO definiert ____ als das Einbezogensein in eine Lebenssituation.",
+        "correct_answer": "Teilhabe",
+        "hint": "Teilhabe (Partizipation) ist ein zentraler Begriff der ICF und des BTHG [6, 7]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Was ermöglicht das 'Persönliche Budget' für Herrn Müller?",
+        "options": ["Einen zinslosen Kredit für den Hausumbau", "Wahlfreiheit durch Geldleistung statt Sachleistung zur selbstbestimmten Finanzierung von Hilfen", "Eine Erhöhung der monatlichen Rente", "Kostenlose Medikamente"],
+        "correct_answer": "1",
+        "hint": "Es stärkt die Selbstbestimmung, indem Leistungen selbst eingekauft werden können [8]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was ist der Kernunterschied zwischen Integration und Inklusion laut den Quellen?",
+        "options": ["Inklusion ist nur für Kinder relevant", "Integration bedeutet, dass sich das System der Vielfalt anpasst", "Bei der Inklusion muss sich die Umgebung dem Menschen anpassen, bei der Integration eher umgekehrt", "Es gibt keinen rechtlichen Unterschied"],
+        "correct_answer": "2",
+        "hint": "Inklusion fordert die Anpassung der Barrieren und der Umwelt an das Individuum [6]."
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Die ICF dient primär der Verschlüsselung medizinischer Diagnosen (Kodierung von Krankheiten).",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Dafür dient die ICD. Die ICF beschreibt den funktionalen Gesundheitszustand und die Behinderung [9, 10]."
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Komponenten der 'funktionalen Gesundheit' nach dem ICF-Modell.",
+        "correct_answer": "1. Körperfunktionen und -strukturen, 2. Aktivitäten, 3. Teilhabe (Partizipation).",
+        "hint": "Diese werden durch Umwelt- und personenbezogene Faktoren beeinflusst [11, 12]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das BTHG sieht zur Umsetzung der UN-Behindertenrechtskonvention vier zeitversetzte ____ bis zum Jahr 2023 vor.",
+        "correct_answer": "Reformstufen",
+        "hint": "Die Einführung des BTHG erfolgte schrittweise [13]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Faktoren zählen laut ICF zu den 'Kontextfaktoren'?",
+        "options": ["Nur die ärztliche Diagnose", "Umweltfaktoren und personenbezogene Faktoren", "Ausschließlich das Einkommen", "Die Dauer der Erkrankung"],
+        "correct_answer": "1",
+        "hint": "Kontextfaktoren beschreiben den Lebenshintergrund eines Menschen (Barrieren vs. Förderfaktoren) [11, 14]."
+      },
+      {
+        "id": 12,
+        "type": "mc",
+        "q": "Welcher Rehabilitationsträger ist im Rheinland oft für die Eingliederungshilfe zuständig?",
+        "options": ["Die Bundesagentur für Arbeit", "Der Landschaftsverband Rheinland (LVR)", "Die Deutsche Rentenversicherung", "Die Berufsgenossenschaft"],
+        "correct_answer": "1",
+        "hint": "Der LVR ist ein großer Kostenträger für soziale Teilhabe und Eingliederungshilfe im Rheinland [15, 16]."
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Koch (59) wird nach einem Kleinhirninfarkt (Cerebellum) in die rehabilitative Pflege aufgenommen. Sie zeigt eine ausgeprägte Rumpf- und Extremitätenataxie sowie Schwindel, was zu einer massiven Gangunsicherheit führt. In der physiotherapeutischen und pflegerischen Befunderhebung wird ihre Koordinationsfähigkeit beurteilt. Die Pflegefachkraft erklärt Frau Koch die Funktion der Neuroplastizität und die Wichtigkeit der saltatorischen Erregungsleitung für schnelle Reaktionen. Zur Einschätzung ihrer Selbstständigkeit wird der Barthel-Index erhoben, bei dem sie aufgrund der Koordinationsstörungen beim Waschen und Ankleiden aktuell 55 Punkte erreicht. Ein Ziel nach dem SMART-Prinzip wird formuliert, um ihre Ressourcen in der Feinmotorik zu fördern, während gleichzeitig die motorischen Rindenfelder durch gezieltes Training stimuliert werden sollen.",
+    "setting": "Neurologische Fachklinik (Rehabilitation)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "In welcher Windung des Großhirns liegt das primär motorische Rindenfeld zur Steuerung bewusster Bewegungen?",
+        "options": ["Gyrus postcentralis", "Gyrus praecentralis", "Wernicke-Areal", "Balken"],
+        "correct_answer": "1",
+        "hint": "Der Gyrus praecentralis im Frontallappen ist für die Willkürmotorik zuständig [17, 18]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt die bei Frau Koch vorliegende Störung der Bewegungskoordination?",
+        "options": ["Aphasie", "Apraxie", "Ataxie", "Anosmie"],
+        "correct_answer": "2",
+        "hint": "Ataxie ist das Leitsymptom bei Schädigungen des Kleinhirns [19, 20]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Das Kleinhirn (Cerebellum) liegt in der hinteren Schädelgrube und ist durch den Kleinhirnwurm verbunden.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "0",
+        "hint": "Richtig. Das Kleinhirn koordiniert Motorik und Gleichgewicht [17, 21]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Abschnitte des Hirnstamms.",
+        "correct_answer": "Mittelhirn (Mesencephalon), Brücke (Pons), Verlängertes Mark (Medulla oblongata).",
+        "hint": "Diese Regionen beherbergen lebenswichtige Reflexzentren [17, 22]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Die Fähigkeit des Gehirns, Funktionen nach einer Schädigung neu zu organisieren, nennt man ____.",
+        "correct_answer": "Neuroplastizität",
+        "hint": "Neuroplastizität ist die Grundlage für Lernprozesse in der Rehabilitation [23]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche Einstufung ergibt sich für Frau Koch bei einem Barthel-Index von 55 Punkten?",
+        "options": ["Weitgehend pflegeabhängig", "Hilfsbedürftig", "Punktuell hilfsbedürftig", "Völlig unabhängig"],
+        "correct_answer": "1",
+        "hint": "Werte zwischen 35 und 80 Punkten gelten als 'hilfsbedürftig' [24, 25]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Warum ist die saltatorische Erregungsleitung schneller als die kontinuierliche?",
+        "options": ["Weil sie keine Ionen benötigt", "Weil der Impuls von Schnürring zu Schnürring springt", "Weil sie nur im Gehirn vorkommt", "Wegen der fehlenden Myelinschicht"],
+        "correct_answer": "1",
+        "hint": "Sie findet an markhaltigen Axonen mit Ranvier-Schnürringen statt (ca. 80 m/s) [26, 27]."
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Das typische Ruhemembranpotenzial eines Neurons beträgt +30 mV.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Das Ruhepotenzial liegt bei ca. -70 mV; +30 mV entspricht dem Aktionspotenzial [28, 29]."
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Kriterien des SMART-Prinzips zur Zielformulierung.",
+        "correct_answer": "Spezifisch, Messbar, Akzeptiert (Attraktiv), Realistisch, Terminiert.",
+        "hint": "Nur SMART formulierte Ziele sind im Team evaluierbar [30]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Nervenzellen feuern erst, wenn ein bestimmter Schwellenwert erreicht ist, nach dem ____ Prinzip.",
+        "correct_answer": "Alles-oder-Nichts",
+        "hint": "Unterhalb des Schwellenwerts wird kein Aktionspotenzial ausgelöst [29]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welcher Teil des Großhirns ist primär für die Verarbeitung von Körperwahrnehmungen (Sensibilität) zuständig?",
+        "options": ["Gyrus praecentralis", "Gyrus postcentralis", "Hinterhauptlappen", "Basalganglien"],
+        "correct_answer": "1",
+        "hint": "Der Gyrus postcentralis beherbergt den primär somatosensorischen Kortex [17, 18]."
+      },
+      {
+        "id": 12,
+        "type": "mc",
+        "q": "Welche Neurotransmitter-Störung wird primär mit dem Parkinson-Syndrom (Betroffenheit der Basalganglien) assoziiert?",
+        "options": ["Mangel an Serotonin", "Mangel an Dopamin", "Überschuss an Glutamat", "Mangel an Insulin"],
+        "correct_answer": "1",
+        "hint": "Der Untergang dopaminproduzierender Neurone im Mittelhirn ist ursächlich [31]."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Jansen (81) lebt in einer stationären Langzeitpflegeeinrichtung (Phase F). Nach mehreren Rezidiv-Insulten leidet er unter einer globalen Aphasie und einer schweren neurogenen Dysphagie. Beim letzten GUSS-Screening zeigte er deutliche Anzeichen einer pharyngealen Störung (feuchte Stimme), aber keinen effektiven Hustenreiz. Es besteht der Verdacht auf eine stille Aspiration. Zudem liegt eine periphere Fazialisparese rechts vor, was den Mundschluss erschwert und zu 'Drooling' führt. Nachts erhält er einen Uhrglasverband zum Hornhautschutz. Das Pflegeteam muss die Nahrungsaufnahme kritisch begleiten, Konsistenzen anpassen (angedickte Flüssigkeiten) und die rehabilitativen Ziele interdisziplinär mit der Logopädie abstimmen. Herr Jansen ist auf Unterstützung bei allen ADLs angewiesen.",
+    "setting": "Pflegeheim (Phase F / Langzeitpflege)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Maßnahme hat Priorität, wenn bei Herrn Jansen eine feuchte, gurgelnde Stimme ohne Hustenreiz nach dem Schlucken auftritt?",
+        "options": ["Weiter füttern und beobachten", "Dem Patienten Wasser zum Nachspülen geben", "Nahrungsaufnahme sofort stoppen (NPO) und Abklärung veranlassen", "Patienten flach lagern"],
+        "correct_answer": "2",
+        "hint": "Dies sind klinische Zeichen einer Aspiration; bei fehlendem Hustenreiz besteht die Gefahr einer stillen Aspiration [32, 33]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt den unkontrollierten Speichelaustritt bei Herrn Jansen?",
+        "options": ["Dysarthrie", "Drooling", "Agrammatismus", "Apraxie"],
+        "correct_answer": "1",
+        "hint": "Drooling entsteht oft durch eine Fazialisparese und mangelnden Mundschluss [34, 35]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da Herr Jansen auch die Stirn auf der rechten Seite nicht runzeln kann, handelt es sich um eine zentrale Fazialisparese.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Die fehlende Beweglichkeit der Stirn ist typisch für die periphere Form (ipsilateral) [36, 37]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Phasen des Schluckaktes.",
+        "correct_answer": "1. Prä-orale Phase, 2. Orale Vorbereitungsphase, 3. Orale Transportphase, 4. Pharyngeale Phase, 5. Ösophageale Phase.",
+        "hint": "Die Koordination dieser Phasen ist beim Gesunden hochpräzise [38]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das Eindringen von Bolusanteilen oder Sekreten in die Luftwege unterhalb der Stimmbandebene nennt man ____.",
+        "correct_answer": "Aspiration",
+        "hint": "Eine Aspiration kann eine lebensgefährliche Pneumonie auslösen [39]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche Oberkörper-Position ist beim Anreichen von Nahrung bei Dysphagie zur Aspirationsprophylaxe am sichersten?",
+        "options": ["Flache Rückenlage", "30 Grad Oberkörperhochlagerung", "Aufrechte Sitzposition (ca. 90 Grad)", "Seitenlage"],
+        "correct_answer": "2",
+        "hint": "Ein aufrechter Oberkörper sichert den anatomischen Weg der Nahrung [33]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welches Merkmal kennzeichnet die bei Herrn Jansen vorliegende 'Globale Aphasie'?",
+        "options": ["Nur leichte Wortfindungsstörungen", "Sprechen im Telegrammstil", "Fast vollständiger Verlust von Sprachproduktion und -verständnis", "Flüssiges Sprechen ohne Sinn"],
+        "correct_answer": "2",
+        "hint": "Die globale Aphasie ist die schwerste Form der Sprachstörung [40]."
+      },
+      {
+        "id": 8,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Klare Flüssigkeiten ohne Zucker sind im Falle einer Aspiration für die Lunge besser kompensierbar als milchbasierte Produkte.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "0",
+        "hint": "Richtig. Milchprodukte verschleimen stärker und fördern Bakterienwachstum [41]."
+      },
+      {
+        "id": 9,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei klinische Hinweise auf eine Dysphagie, die Pflegekräfte beobachten können.",
+        "correct_answer": "Husten nach Schlucken, feuchte/gurgelnde Stimme, verändertes Atemmuster, Fieber unklarer Genese, verzögerte orale Phase.",
+        "hint": "Diese Zeichen erfordern sofortiges Handeln [32]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Schwerste Dysphagien erfordern oft eine vorübergehende Nahrungskarenz, abgekürzt als ____.",
+        "correct_answer": "NPO",
+        "hint": "NPO (nil per os) bedeutet: Nichts über den Mund aufnehmen [42, 43]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Was ist eine zwingende Voraussetzung für die Durchführung des GUSS-Vorversuchs (Indirekter Schluckversuch)?",
+        "options": ["Der Patient muss laufen können", "Der Patient muss mindestens 15 Minuten wach und reaktionsfähig sein (Vigilanz)", "Der Patient muss nüchtern sein", "Es muss ein Arzt anwesend sein"],
+        "correct_answer": "1",
+        "hint": "Ohne ausreichende Wachheit ist das Risiko eines Verschluckens zu hoch [34]."
+      },
+      {
+        "id": 12,
+        "type": "mc",
+        "q": "Welcher Hirnnerv steuert primär das Broca-Areal (Sprachproduktion)?",
+        "options": ["Brodmann Areal 22", "Brodmann Areale 44 und 45", "Brodmann Areal 17", "Brodmann Areal 4"],
+        "correct_answer": "1",
+        "hint": "Das Broca-Zentrum liegt in den Arealen 44/45 der sprachdominanten Hemisphäre [44, 45]."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Schmidt (78) lebt seit einem schweren Schlaganfall in einem spezialisierten Pflegeheim (Phase F). Er leidet unter einer ausgeprägten neurogenen Dysphagie. Die Pflegekraft bemerkt beim Mittagessen, dass Herr Schmidt nach jedem dritten Löffel eine gurgelnde, feuchte Stimme bekommt, jedoch keinerlei Hustenreiz zeigt. Zudem zeigt er ein deutliches 'Drooling' an der rechten Mundseite. Herr Schmidt ist kognitiv eingeschränkt, reagiert aber auf einfache Ansprache. Das Pflegeteam muss nun die Gefahren einer stillen Aspiration abwägen und die Kostform sowie die Anreichtechnik interdisziplinär mit der Logopädie anpassen, um eine Aspirationspneumonie zu vermeiden.",
+    "setting": "Pflegeheim (Phase F)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche sofortige Maßnahme hat Priorität, wenn bei Herrn Schmidt während des Essens eine gurgelnde Stimme auftritt?",
+        "options": [
+          "Ihm fest auf den Rücken klopfen",
+          "Die Nahrungsaufnahme sofort stoppen (NPO) und eine Abklärung veranlassen",
+          "Den Patienten zum Trinken von klarem Wasser auffordern",
+          "Die Portionsgröße der Löffel erhöhen"
+        ],
+        "correct_answer": "1",
+        "hint": "Gurgelnde Stimme ist ein klinischer Hinweis auf Material im Kehlkopfbereich; bei fehlendem Hustenreiz besteht Lebensgefahr durch stille Aspiration [1-3]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt das Eindringen von Material in die Luftwege, ohne dass der Patient Schutzreflexe wie Husten zeigt?",
+        "options": [
+          "Bolusreaktion",
+          "Stille Aspiration",
+          "Regurgitation",
+          "Dysphonie"
+        ],
+        "correct_answer": "1",
+        "hint": "Das Fehlen klinischer Anzeichen macht die stille Aspiration besonders gefährlich, da sie oft unbemerkt bleibt [2]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Milchbasierte Lebensmittel sind bei Verschleimung vorteilhafter als fruchtbasierte Lebensmittel.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Milchbasierte Lebensmittel verschleimen mehr als fruchtbasierte [4]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Phasen des Schluckaktes in der korrekten Reihenfolge.",
+        "correct_answer": "1. Prä-orale Phase, 2. Orale Vorbereitungsphase, 3. Orale Transportphase, 4. Pharyngeale Phase, 5. Ösophageale Phase.",
+        "hint": "Die Koordination beginnt bereits vor der eigentlichen Nahrungsaufnahme im Mund [5]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Bei einer schwersten Dysphagie muss der Patient ____ (Abkürzung) bleiben, was vollständige Nahrungskarenz bedeutet.",
+        "correct_answer": "NPO",
+        "hint": "NPO steht für 'nil per os' oder 'non per os' [6, 7]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche Position des Oberkörpers ist beim Anreichen von Nahrung zur Aspirationsprophylaxe am sichersten?",
+        "options": [
+          "30 Grad Hochlagerung",
+          "Flache Rückenlage",
+          "Aufrechte Sitzposition (90 Grad)",
+          "Leichte Seitenlage"
+        ],
+        "correct_answer": "2",
+        "hint": "Eine aufrechte Position von 90 Grad minimiert das Risiko, dass Nahrung unkontrolliert in den Rachen gleitet [2, 3]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was ist die wahrscheinlichste Ursache für das 'Drooling' (Speichelverlust) bei Herrn Schmidt?",
+        "options": [
+          "Eine Entzündung der Speicheldrüse",
+          "Mangelnder Mundschluss durch eine Fazialisparese",
+          "Ein Defekt im Kleinhirn",
+          "Zu schnelles Essen"
+        ],
+        "correct_answer": "1",
+        "hint": "Drooling entsteht oft durch eine Lähmung der Gesichtsmuskulatur, die den Lippenschluss verhindert [8]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei klinische Hinweise auf eine Dysphagie, die Pflegekräfte beobachten können.",
+        "correct_answer": "Husten nach dem Schlucken, feuchte/gurgelnde Stimme, verändertes Atemmuster, Austritt von Nahrung aus der Nase, verzögerte Schluckreflexauslösung.",
+        "hint": "Die Beobachtung muss innerhalb einer Minute nach dem Schlucken erfolgen [1, 9]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welche Struktur verschließt beim Schlucken reflektorisch den Kehlkopfeingang?",
+        "options": [
+          "Gaumensegel",
+          "Stimmbänder",
+          "Kehldeckel (Epiglottis)",
+          "Zungengrund"
+        ],
+        "correct_answer": "2",
+        "hint": "Die Epiglottis klappt passiv nach unten und schützt so die Trachea [10]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Eine der gefährlichsten Spätfolgen einer unentdeckten Schluckstörung ist die ____.",
+        "correct_answer": "Aspirationspneumonie",
+        "hint": "Fremdkörper in der Lunge führen schnell zu schweren Entzündungen [11, 12]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Wie sollte die Nahrung bei einem Dysphagie-Patienten angereicht werden?",
+        "options": [
+          "Von oben, damit er den Hals streckt",
+          "Kleine Portionen (max. halber Teelöffel), von vorne auf Augenhöhe",
+          "Möglichst große Bissen, um den Reflex zu provozieren",
+          "Mischkonsistenzen wie Suppe mit Einlage verwenden"
+        ],
+        "correct_answer": "1",
+        "hint": "Kleine Mengen und eine frontale Annäherung fördern die Kontrolle und vermeiden Überstreckung [3, 13]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Welche drei Berufsgruppen arbeiten in der Rehabilitation bei Schluckstörungen primär interdisziplinär zusammen?",
+        "correct_answer": "Pflege, Logopädie, Ärzte (ggf. auch Ernährungsberatung).",
+        "hint": "Die Bündelung von Wissen ist ein Kernziel der Interdisziplinarität [14-16]."
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Bauer (65) erlitt einen linkshemisphärischen Mediainfarkt. Sie zeigt eine rechtsseitige Hemiparese und eine nicht-flüssige Sprache im Telegrammstil ('Kaffee... heiß'). Aufforderungen versteht sie meist gut. Zudem ist ihr rechter Mundwinkel hängend, und sie kann auf dieser Seite die Stirn nicht runzeln. Das interdisziplinäre Team plant die Frührehabilitation (Phase B). Ein SMART-Ziel wird formuliert: 'Frau Bauer kann bis in 7 Tagen mit Hilfe einer Griffverdickung den Löffel eigenständig zum Mund führen'. Die Pflegekraft achtet besonders auf den Schutz des rechten Auges, da der Lidschluss unvollständig ist.",
+    "setting": "Neurologische Frührehabilitation (Phase B)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Aphasieform liegt bei Frau Bauer aufgrund der Symptomatik (nicht-flüssig, Telegrammstil, Verständnis intakt) vor?",
+        "options": [
+          "Wernicke-Aphasie",
+          "Globale Aphasie",
+          "Amnestische Aphasie",
+          "Broca-Aphasie"
+        ],
+        "correct_answer": "3",
+        "hint": "Das Broca-Zentrum (Areale 44/45) steuert die motorische Sprachproduktion [17, 18]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Form der Fazialisparese liegt vor, wenn auch die Stirnmuskulatur gelähmt ist?",
+        "options": [
+          "Zentrale Fazialisparese",
+          "Periphere Fazialisparese",
+          "Vaskuläre Fazialisparese",
+          "Gekreuzte Fazialisparese"
+        ],
+        "correct_answer": "1",
+        "hint": "Bei der peripheren Parese ist der gesamte ipsilaterale Nervenast geschädigt [19]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da die linke Hirnhälfte betroffen ist, zeigen sich die motorischen Symptome auf der rechten Körperseite.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "0",
+        "hint": "Die Pyramidenbahn kreuzt im verlängerten Mark zur Gegenseite [20-22]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Hirnlappen des Großhirns.",
+        "correct_answer": "Stirnlappen (Frontallappen), Scheitellappen (Parietallappen), Schläfenlappen (Temporallappen), Hinterhauptlappen (Okzipitallappen).",
+        "hint": "Jeder Lappen hat spezifische funktionelle Areale [20, 23]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Die Fähigkeit des Gehirns, Funktionen nach einer Schädigung neu zu organisieren, nennt man ____.",
+        "correct_answer": "Neuroplastizität",
+        "hint": "Diese ist die biologische Grundlage für rehabilitative Lernprozesse [24, 25]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welche pflegerische Maßnahme ist zum Schutz des Auges bei inkomplettem Lidschluss essenziell?",
+        "options": [
+          "Das Auge offen lassen zur Belüftung",
+          "Anlegen eines Uhrglasverbandes (besonders nachts)",
+          "Regelmäßiges Auswaschen mit Leitungswasser",
+          "Verzicht auf Augensalben"
+        ],
+        "correct_answer": "1",
+        "hint": "Ein Uhrglasverband verhindert das Austrocknen der Hornhaut [8, 26]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was ist das Kernproblem bei einer Sprechapraxie im Vergleich zur Aphasie?",
+        "options": [
+          "Ein Verlust des Wortschatzes",
+          "Eine Störung der Bewegungsplanung und -programmierung",
+          "Eine Muskellähmung der Zunge",
+          "Ein gestörtes Sprachverständnis"
+        ],
+        "correct_answer": "1",
+        "hint": "Bei der Sprechapraxie ist der 'Bauplan' der Sprechbewegung gestört [27, 28]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die fünf Kriterien des SMART-Prinzips zur Zielformulierung.",
+        "correct_answer": "Spezifisch, Messbar, Akzeptiert (Attraktiv), Realistisch, Terminiert.",
+        "hint": "Diese Struktur macht Ziele überprüfbar und motivierend [29]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Welcher Leitsatz gilt in der Akutphase (Phase A) eines Schlaganfalls?",
+        "options": [
+          "Wait and see",
+          "Reha vor Pflege",
+          "Time is Brain",
+          "Rest and Digest"
+        ],
+        "correct_answer": "2",
+        "hint": "Jede Minute Sauerstoffmangel führt zum unwiederbringlichen Zelltod [30]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das Broca-Sprachzentrum befindet sich in den Brodmann-Arealen ____ und ____.",
+        "correct_answer": "44, 45",
+        "hint": "Diese Areale liegen im Frontallappen der sprachdominanten Hemisphäre [17, 31]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welcher Neurotransmitter ist primär für die Übertragung an der motorischen Endplatte zuständig?",
+        "options": [
+          "Dopamin",
+          "Serotonin",
+          "GABA",
+          "Acetylcholin"
+        ],
+        "correct_answer": "3",
+        "hint": "Acetylcholin löst die Kontraktion der Skelettmuskulatur aus [32]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei typische 'Alarm-Signale' eines Schlaganfalls.",
+        "correct_answer": "Plötzliche halbseitige Lähmung/Taubheit, Sprachstörungen, Sehstörungen (Doppelbilder), heftigster Kopfschmerz, Schwindel.",
+        "hint": "Diese Symptome erfordern eine sofortige Krankenhauseinweisung [30, 33]."
+      }
+    ]
+  },
+  {
+    "scenario": "David (22) erlitt bei einem Motorradunfall ein schweres Schädel-Hirn-Trauma. Nach intensiver Rehabilitation befindet er sich nun in Phase E. Er lebt in einer inklusiven Wohngruppe und möchte wieder im allgemeinen Arbeitsmarkt Fuß fassen. David hat einen Schwerbehindertenausweis (GdB 70) mit den Merkzeichen 'B' und 'aG'. Zur Bedarfsermittlung für seine Teilhabeleistungen wird das ICF-Modell angewendet. David möchte sein 'Persönliches Budget' nutzen, um eine Assistenzkraft für seine Freizeitgestaltung selbst zu finanzieren. Die Pflegeberatung unterstützt ihn dabei, Barrieren in seiner Umwelt zu identifizieren und Förderfaktoren zu stärken.",
+    "setting": "Ambulante Pflegeberatung / Inklusives Wohnen",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Was bedeutet Inklusion im Gegensatz zur Integration laut den Quellen?",
+        "options": [
+          "Der Behinderte muss sich an die Gesellschaft anpassen",
+          "Behinderte Menschen leben in Sondereinrichtungen",
+          "Das System passt sich der Vielfalt der Menschen an und baut Barrieren ab",
+          "Inklusion ist ein anderes Wort für medizinische Heilung"
+        ],
+        "correct_answer": "2",
+        "hint": "Inklusion sieht Vielfalt als Normalität an und fordert die Anpassung der Umwelt [34]."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Komponente der ICF beschreibt Davids Wunsch, am gesellschaftlichen Leben teilzunehmen?",
+        "options": [
+          "Körperstrukturen",
+          "Aktivitäten",
+          "Partizipation (Teilhabe)",
+          "Umweltfaktoren"
+        ],
+        "correct_answer": "2",
+        "hint": "Teilhabe ist das Einbezogensein in eine Lebenssituation [34, 35]."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Der Grad der Behinderung (GdB) wird in Prozent angegeben.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Der GdB wird in Zehnerschritten von 20 bis 100 angegeben, ohne Prozentzeichen [36]."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Hauptteile des SGB IX.",
+        "correct_answer": "1. Allgemeine Regelungen, 2. Eingliederungshilfe, 3. Regelungen für schwerbehinderte Menschen.",
+        "hint": "Das SGB IX ist das zentrale Gesetz für Rehabilitation und Teilhabe [37]."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das ____ Budget ist eine Geldleistung, mit der David Leistungen zur Teilhabe selbstbestimmt finanzieren kann.",
+        "correct_answer": "Persönliche",
+        "hint": "Es fördert die Wahlfreiheit gegenüber reinen Sachleistungen [38]."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welches übergeordnete Ziel verfolgt Phase E im neurologischen Phasenmodell?",
+        "options": [
+          "Akutbehandlung",
+          "Frührehabilitation",
+          "Nachsorge und berufliche Rehabilitation",
+          "Zustandserhaltende Langzeitpflege"
+        ],
+        "correct_answer": "2",
+        "hint": "In Phase E steht die Rückkehr in den Beruf und die Familie im Vordergrund [39]."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Was bedeutet das Merkzeichen 'aG' in Davids Schwerbehindertenausweis?",
+        "options": [
+          "Allgemeine Gehschwäche",
+          "Außergewöhnliche Gehbehinderung",
+          "Anwesenheit einer Begleitperson",
+          "Aphasie-Gefahr"
+        ],
+        "correct_answer": "1",
+        "hint": "Dies berechtigt unter anderem zur Nutzung von Behindertenparkplätzen [40]."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Arten von Kontextfaktoren nach ICF.",
+        "correct_answer": "Umweltfaktoren (Barrieren/Förderfaktoren) und personenbezogene Faktoren (Alter, Lebensstil, Motivation).",
+        "hint": "Diese Faktoren beeinflussen die funktionale Gesundheit massiv [41, 42]."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Ab welchem GdB gilt ein Mensch rechtlich als schwerbehindert?",
+        "options": [
+          "20",
+          "30",
+          "50",
+          "100"
+        ],
+        "correct_answer": "2",
+        "hint": "Schwerbehinderung ist ab einem GdB von 50 definiert [36, 43]."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das BTHG sieht vier zeitversetzte ____ bis zum Jahr 2023 vor.",
+        "correct_answer": "Reformstufen",
+        "hint": "Die Umsetzung erfolgte schrittweise zur Verbesserung der Teilhabe [44]."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche baulichen Anlagen müssen laut § 49 BauO NRW barrierefrei sein?",
+        "options": [
+          "Nur private Wohnhäuser",
+          "Anlagen, die öffentlich zugänglich sind (z. B. Kinos, Praxen)",
+          "Nur Gebäude in Großstädten",
+          "Ausschließlich Krankenhäuser"
+        ],
+        "correct_answer": "1",
+        "hint": "Barrierefreiheit im öffentlichen Raum ist gesetzlich vorgeschrieben [45]."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei der fünf Leistungsgruppen zur Teilhabe (§ 5 SGB IX).",
+        "correct_answer": "Medizinische Reha, Teilhabe am Arbeitsleben, Unterhaltssichernde Leistungen, Teilhabe an Bildung, Soziale Teilhabe.",
+        "hint": "Diese Gruppen definieren die Ansprüche gegenüber den Reha-Trägern [46]."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Fischer (62) verspürt beim morgendlichen Rasieren plötzlich ein Taubheitsgefühl im linken Arm und bemerkt im Spiegel, dass sein linker Mundwinkel hängt. Als er seine Frau rufen will, kommen nur unverständliche, lallende Laute aus seinem Mund. Er klagt zudem über einen blitzartig einsetzenden, extrem heftigen Kopfschmerz und sieht Doppelbilder. Da Frau Fischer die 'Alarm-Signale' eines Schlaganfalls aus einer Broschüre kennt, wählt sie sofort den Notruf. Im Krankenhaus wird ein hämorrhagischer Insult ausgeschlossen und ein ischämischer Infarkt der Arteria cerebri media rechts diagnostiziert. Herr Fischer wird umgehend auf die Stroke Unit (Phase A) aufgenommen. Die Pflegekraft muss nun die Vitalparameter stabilisieren, das Ausmaß der Hemiparese dokumentieren und eine erste Einschätzung der Schluckfähigkeit vornehmen.",
+    "setting": "Krankenhaus (Notaufnahme / Stroke Unit)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Maßnahme hat bei den geschilderten Initialsymptomen für die Ehefrau oberste Priorität?",
+        "options": [
+          "Herrn Fischer eine Aspirin zur Blutverdünnung geben",
+          "Den Hausarzt am nächsten Morgen konsultieren",
+          "Sofort den Notruf (112) wählen, da 'Time is Brain' gilt",
+          "Herrn Fischer erst einmal schlafen legen, um den Stress zu senken"
+        ],
+        "correct_answer": "2",
+        "hint": "Ein Schlaganfall ist ein medizinischer Notfall; jede Minute zählt, um das Absterben von Nervenzellen zu minimieren."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welcher Fachbegriff beschreibt die bei Herrn Fischer vorliegende unvollständige Lähmung der linken Körperhälfte?",
+        "options": [
+          "Hemiplegie",
+          "Hemiparese",
+          "Paraplegie",
+          "Tetraparese"
+        ],
+        "correct_answer": "1",
+        "hint": "Hemiparese bezeichnet die unvollständige Lähmung/Schwäche, Hemiplegie die vollständige Lähmung einer Seite."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Da die Symptome auf der linken Körperseite auftreten, liegt die Schädigung (Insult) mit hoher Wahrscheinlichkeit in der rechten Gehirnhälfte.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "0",
+        "hint": "Aufgrund der Pyramidenbahnkreuzung im verlängerten Mark steuert die rechte Hirnhälfte die linke Körperseite."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Hauptformen des Schlaganfalls.",
+        "correct_answer": "1. Ischämischer Schlaganfall (Gefäßverschluss), 2. Hämorrhagischer Schlaganfall (Blutung).",
+        "hint": "Ischämische Schlaganfälle machen etwa 80 % der Fälle aus."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Obwohl das Gehirn nur ca. 3 % des Körpergewichts ausmacht, verbraucht es ca. ____ % der Gesamtenergie des Körpers.",
+        "correct_answer": "20",
+        "hint": "Das Gehirn hat einen extrem hohen Bedarf an Sauerstoff und Zucker."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Hirnteil ist primär für die bei Herrn Fischer aufgetretenen Gleichgewichtsstörungen und Doppelbilder verantwortlich, wenn das Reflexzentrum betroffen ist?",
+        "options": [
+          "Großhirnrinde",
+          "Balken",
+          "Kleinhirn oder Hirnstamm",
+          "Zirbeldrüse"
+        ],
+        "correct_answer": "2",
+        "hint": "Das Kleinhirn koordiniert die Motorik; im Hirnstamm sitzen lebenswichtige Reflexzentren."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Wo kreuzen die meisten Fasern der Pyramidenbahn, die Herrn Fischers bewusste Bewegungen steuern?",
+        "options": [
+          "Im Thalamus",
+          "Im verlängerten Mark (Medulla oblongata)",
+          "Direkt im Gyrus praecentralis",
+          "Im Rückenmark auf Segmenthöhe"
+        ],
+        "correct_answer": "1",
+        "hint": "Die Pyramidenkreuzung ist die anatomische Ursache für die kontralaterale Symptomatik."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei typische Alarm-Signale eines Schlaganfalls laut den Quellen.",
+        "correct_answer": "Lähmungen/Taubheitsgefühl (oft halbseitig), Sprachstörungen, Sehstörungen, heftigster Kopfschmerz, Drehschwindel.",
+        "hint": "Diese Symptome treten meist plötzlich auf."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wie viele Nervenzellen kommunizieren im menschlichen Gehirn laut aktuellen Berechnungen miteinander?",
+        "options": [
+          "Ca. 1 Million",
+          "Ca. 1 Milliarde",
+          "Ca. 86 Milliarden",
+          "Unendlich viele"
+        ],
+        "correct_answer": "2",
+        "hint": "Die enorme Anzahl an Neuronen bildet zusammen mit dem Rückenmark das ZNS."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Das periphere Nervensystem (PNS) umfasst alle Nerven außerhalb des ZNS, insbesondere die Hirnnerven und die ____.",
+        "correct_answer": "Spinalnerven",
+        "hint": "Diese treten segmentweise aus dem Rückenmark aus."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welches Gefäß versorgt das Gebiet der mittleren Hirnareale, in dem Herrn Fischers Infarkt lokalisiert wurde?",
+        "options": [
+          "A. cerebri anterior",
+          "A. cerebri media",
+          "A. cerebri posterior",
+          "A. basilaris"
+        ],
+        "correct_answer": "1",
+        "hint": "Die Media-Arterie versorgt etwa zwei Drittel der Gehirnhemisphäre."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Hirnlappen des Großhirns (Telencephalon).",
+        "correct_answer": "Stirnlappen (Frontallappen), Scheitellappen (Parietallappen), Schläfenlappen (Temporallappen), Hinterhauptlappen (Okzipitallappen).",
+        "hint": "Jeder Lappen ist für spezifische Rindenfelder zuständig."
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Wagner (80) lebt in der Phase F einer Langzeitpflegeeinrichtung nach einem schweren Mediainfarkt vor zwei Jahren. Sie leidet unter einer globalen Aphasie, einer ausgeprägten spastischen Rechts-Hemiplegie und einer chronischen Dysphagie. Beim Mittagessen bemerkt die Pflegefachkraft ein 'Drooling' (Speichelfluss) und ein gurgelndes Atemgeräusch, woraufhin die Nahrungsaufnahme sofort gestoppt wird (NPO). Frau Wagners Barthel-Index beträgt aktuell 25 Punkte. Sie benötigt Unterstützung bei allen Verrichtungen des täglichen Lebens. Das interdisziplinäre Team plant eine Fallbesprechung, um ihre Ressourcen (R) nach dem PÄS(R)-Schema neu zu bewerten und ein Rehabilitationsziel nach dem SMART-Prinzip zu formulieren, das ihre Teilhabe am sozialen Leben innerhalb des Heims verbessert.",
+    "setting": "Pflegeheim (Phase F - Langzeitpflege)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Wie ist Frau Wagner bei einem Barthel-Index von 25 Punkten einzustufen?",
+        "options": [
+          "Punktuell hilfsbedürftig",
+          "Hilfsbedürftig",
+          "Weitgehend pflegeabhängig",
+          "Völlig unabhängig"
+        ],
+        "correct_answer": "2",
+        "hint": "Werte zwischen 0 und 30 Punkten gelten als weitgehend pflegeabhängig."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welche Folge der spastischen Lähmung führt bei Frau Wagner zu den schmerzhaften Fehlstellungen?",
+        "options": [
+          "Eine schlaffe Muskulatur durch Nerventod",
+          "Dauerhaft erhöhte Muskelspannung durch Wegfall der zentralen Hemmung",
+          "Ein Mangel an Calcium in den Knochen",
+          "Eine Entzündung der Gelenkkapseln"
+        ],
+        "correct_answer": "1",
+        "hint": "Zentrale Lähmungen (1. Motoneuron) führen zu einer Spastik, periphere Lähmungen (2. Motoneuron) sind schlaff."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Das Hauptziel der Phase F im neurologischen Phasenmodell ist die berufliche Wiedereingliederung.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Phase F dient der aktivierenden und zustandserhaltenden Langzeitpflege bei bleibenden Defiziten."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Merkmale einer 'Globalen Aphasie'.",
+        "correct_answer": "Fast kein Sprachfluss, Sprachautomatismen, stark eingeschränktes Nachsprechen, stark eingeschränktes Sprachverständnis.",
+        "hint": "Es ist die schwerste Form der aphasischen Störung."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das SMART-Prinzip fordert, dass Ziele spezifisch, messbar, akzeptiert, ____ und terminiert sein müssen.",
+        "correct_answer": "realistisch",
+        "hint": "Nicht erreichbare Ziele demotivieren den Rehabilitanden und das Team."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Teil des vegetativen Nervensystems weitet Frau Wagners Pupillen in einer Stresssituation?",
+        "options": [
+          "Parasympathikus",
+          "Sympathikus",
+          "Enterisches Nervensystem",
+          "Formatio reticularis"
+        ],
+        "correct_answer": "1",
+        "hint": "Der Sympathikus sorgt für Mydriasis (Pupillenerweiterung) im Rahmen der 'Flight or Fight'-Reaktion."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welcher Neurotransmitter wirkt im ZNS primär hemmend und schützt Frau Wagner vor einer Dauererregung der Neuronen?",
+        "options": [
+          "Glutamat",
+          "GABA",
+          "Dopamin",
+          "Acetylcholin"
+        ],
+        "correct_answer": "1",
+        "hint": "GABA (Gamma-Aminobuttersäure) ist der wichtigste hemmende Botenstoff."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Aufgaben des Liquors cerebrospinalis.",
+        "correct_answer": "Schutz vor Stößen/Druck (Wasserkissen), Versorgung mit Nährstoffen, Abtransport von Stoffwechselprodukten.",
+        "hint": "Er zirkuliert in den Ventrikeln und im Subarachnoidalraum."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wer ist in NRW ein typischer Rehabilitationsträger für Leistungen der Eingliederungshilfe in Frau Wagners Situation?",
+        "options": [
+          "Die Rentenversicherung",
+          "Die Bundesagentur für Arbeit",
+          "Landschaftsverbände (z. B. LVR)",
+          "Die Polizei"
+        ],
+        "correct_answer": "2",
+        "hint": "Der LVR ist im Rheinland Kostenträger für soziale Teilhabe und Eingliederungshilfe."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Inklusion bedeutet nach UN-BRK, dass nicht der Behinderte sich anpassen muss, sondern die ____ Barrieren abbauen muss.",
+        "correct_answer": "Umgebung",
+        "hint": "Inklusion sieht Verschiedenheit als Normalität an."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Wie nennt man die Zeitspanne nach einem Aktionspotenzial, in der Frau Wagners Neuronen absolut nicht erregbar sind?",
+        "options": [
+          "Depolarisationszeit",
+          "Ruhepotenzialphase",
+          "Refraktärperiode",
+          "Saltatorische Phase"
+        ],
+        "correct_answer": "2",
+        "hint": "Die Refraktärzeit begrenzt die maximale Frequenz von Nervenimpulsen."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Bestandteile der interdisziplinären Zusammenarbeit.",
+        "correct_answer": "Bündelung von Wissen, Transparenz der Sichtweisen, erfolgreiches Zusammenspiel der Kompetenzen, gemeinsame Dokumentation.",
+        "hint": "Ziel ist das bestmögliche Ergebnis für den Patienten."
+      }
+    ]
+  },
+  {
+    "scenario": "Elias (8) kam mit einer hypoxischen Hirnschädigung aufgrund von Komplikationen bei der Geburt zur Welt. Er besucht nun eine inklusive Grundschule, wo er durch einen Schulbegleiter (Leistung zur Bildung) unterstützt wird. Elias nutzt einen Elektrorollstuhl und kommuniziert über einen Talker (unterstützte Kommunikation). Seine Eltern nutzen das 'Persönliche Budget', um Assistenzkräfte für die Freizeitgestaltung zu finanzieren. Elias' Situation wird regelmäßig nach dem ICF-Modell bewertet, um Barrieren in der Schule (Umweltfaktoren) zu identifizieren. Ein aktuelles Ziel ist die Förderung seiner Partizipation (Teilhabe) am Sportunterricht durch adaptive Spiele. Das Team orientiert sich dabei an den Grundsätzen der UN-Behindertenrechtskonvention, die seit 2009 in Deutschland ratifiziert ist.",
+    "setting": "Inklusive Grundschule / Ambulante Rehabilitation",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Seit wann ist die UN-Behindertenrechtskonvention in Deutschland rechtlich bindend (ratifiziert)?",
+        "options": [
+          "1945",
+          "1994",
+          "2006",
+          "2009"
+        ],
+        "correct_answer": "3",
+        "hint": "Die UN verabschiedete sie 2006, Deutschland ratifizierte sie 2009."
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welches Konzept beschreibt Elias' Einbindung in die Regelschule am besten, wenn das System sich an seine Bedürfnisse anpasst?",
+        "options": [
+          "Exklusion",
+          "Separation",
+          "Integration",
+          "Inklusion"
+        ],
+        "correct_answer": "3",
+        "hint": "Inklusion fordert die gleichberechtigte Teilhabe und die Anpassung der Strukturen an den Menschen."
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Behinderung ist laut ICF eine Krankheit, die geheilt werden muss.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "correct_answer": "1",
+        "hint": "Falsch. Behinderung ist das Ergebnis der Wechselwirkung zwischen Gesundheitsproblem und Barrieren (Umwelt/Person)."
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Hauptteile des SGB IX.",
+        "correct_answer": "1. Allgemeine Regelungen, 2. Eingliederungshilfe, 3. Teilhabe schwerbehinderter Menschen.",
+        "hint": "Das SGB IX ist die zentrale Rechtsgrundlage für Elias' Hilfen."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das ____ Budget ermöglicht es Elias' Eltern, Leistungen selbstbestimmt einzukaufen und zu finanzieren.",
+        "correct_answer": "Persönliche",
+        "hint": "Es ist eine Geldleistung anstelle von Sachleistungen."
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Wie nennt man die schnelle Erregungsleitung an Elias' markhaltigen Nervenfasern, bei der der Impuls von Schnürring zu Schnürring springt?",
+        "options": [
+          "Kontinuierliche Leitung",
+          "Saltatorische Leitung",
+          "Chemische Transmission",
+          "Vegetative Leitung"
+        ],
+        "correct_answer": "1",
+        "hint": "Saltatorische Leitung erreicht Geschwindigkeiten von bis zu 80 m/s."
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "In welchem Hirnlappen liegen die Zentren für Elias' Impulskontrolle und Persönlichkeit?",
+        "options": [
+          "Stirnlappen (Frontallappen)",
+          "Scheitellappen",
+          "Schläfenlappen",
+          "Hinterhauptlappen"
+        ],
+        "correct_answer": "0",
+        "hint": "Der Frontallappen ist Sitz der Exekutivfunktionen und des Sozialverhaltens."
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Komponenten der 'funktionalen Gesundheit' nach ICF.",
+        "correct_answer": "1. Körperfunktionen/-strukturen, 2. Aktivitäten, 3. Teilhabe (Partizipation).",
+        "hint": "Diese drei Bereiche interagieren mit den Kontextfaktoren."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Wie viele Reformstufen sah das Bundesteilhabegesetz (BTHG) bis zum Jahr 2023 vor?",
+        "options": [
+          "Keine",
+          "2",
+          "4",
+          "10"
+        ],
+        "correct_answer": "2",
+        "hint": "Das BTHG wurde in vier zeitversetzten Stufen umgesetzt."
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Nach § 49 der Bauordnung NRW müssen bauliche Anlagen, die ____ zugänglich sind, barrierefrei sein.",
+        "correct_answer": "öffentlich",
+        "hint": "Dazu gehören Schulen, Kinos und medizinische Einrichtungen."
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Gehirnstruktur koordiniert Elias' Feinmotorik beim Bedienen seines Talkers?",
+        "options": [
+          "Thalamus",
+          "Hypothalamus",
+          "Kleinhirn (Cerebellum)",
+          "Zirbeldrüse"
+        ],
+        "correct_answer": "2",
+        "hint": "Das Kleinhirn ist das Hauptkoordinationsorgan für Bewegungsabläufe."
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei der fünf Leistungsgruppen zur Teilhabe (§ 5 SGB IX).",
+        "correct_answer": "Medizinische Reha, Teilhabe am Arbeitsleben, Unterhaltssichernde Leistungen, Teilhabe an Bildung, Soziale Teilhabe.",
+        "hint": "Elias' Schulbegleitung fällt unter die Teilhabe an Bildung."
+      }
+    ]
+  },
+  {
+    "scenario": "Frau Maria Steiner (52) leidet seit zehn Jahren an Multipler Sklerose (MS) und wird aktuell in der neurologischen Phase D betreut. [1] Die chronisch-entzündliche Entmarkungserkrankung führt bei ihr zu einer Zerstörung der Myelinschichten im ZNS, was die saltatorische Erregungsleitung massiv beeinträchtigt. [2, 3] Aktuell zeigt sie eine spastische Paraparese der Beine mit einem deutlich erhöhten Muskeltonus und schmerzhaften Fehlstellungen. [4, 5] Zur Evaluation ihrer Selbstständigkeit wird der Barthel-Index erhoben, bei dem sie 65 Punkte erreicht. [6, 7] Ihr Rehabilitationsziel ist die Wiedererlangung einer sicheren Gehfähigkeit unter Nutzung von Hilfsmitteln bis zum Ende des Monats. Die Pflegeplanung erfolgt nach dem SMART-Prinzip unter Berücksichtigung ihrer individuellen Ressourcen. [8, 9]",
+    "setting": "Rehabilitationsklinik (Phase D)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche physiologische Besonderheit ist bei Frau Steiner durch die Zerstörung der Markscheiden (Demyelinisierung) gestört?",
+        "options": ["Die chemische Übertragung an der Synapse", "Die saltatorische Erregungsleitung", "Die Produktion von Neurotransmittern", "Der Blutfluss im Circulus arteriosus Willisii"],
+        "correct_answer": "1",
+        "hint": "Markscheiden ermöglichen das schnelle Springen der Impulse von Schnürring zu Schnürring. [2, 10]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Wie wird Frau Steiner bei einem Barthel-Index von 65 Punkten fachlich eingestuft?",
+        "options": ["Völlig unabhängig", "Pflegeabhängig", "Hilfsbedürftig", "Weitgehend pflegeabhängig"],
+        "correct_answer": "2",
+        "hint": "Werte zwischen 35 und 80 Punkten kennzeichnen laut Skala eine Hilfsbedürftigkeit. [6, 7]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Eine spastische Lähmung, wie bei Frau Steiner, ist immer Folge einer Schädigung des 2. Motoneurons (Vorderhornzelle).",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Spastik entsteht durch eine zentrale Schädigung (1. Motoneuron); periphere Schäden (2. Motoneuron) führen zu schlaffen Lähmungen. [4]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Symptome einer Kleinhirnschädigung (Ataxie), die häufig bei MS-Patienten auftreten.",
+        "correct_answer": "Regulierung der Muskelgrundspannung (Hypotonie), Abstimmung von Bewegungen (Koordinationsstörung), Gleichgewichtsprobleme. [5, 11]",
+        "hint": "Das Kleinhirn (Cerebellum) ist das Hauptkoordinationszentrum für motorische Abläufe. [12]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das SMART-Prinzip fordert, dass ein Pflegeziel unter anderem ____ sein muss, damit es für den Patienten motivierend wirkt.",
+        "correct_answer": "akzeptiert (oder attraktiv)",
+        "hint": "Nur Ziele, hinter denen der Patient steht, fördern den Rehabilitationsprozess. [8]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Teil des Nervensystems umfasst die Hirnnerven und Spinalnerven außerhalb des Schädels?",
+        "options": ["Zentrales Nervensystem (ZNS)", "Vegetatives Nervensystem", "Peripheres Nervensystem (PNS)", "Limbisches System"],
+        "correct_answer": "2",
+        "hint": "Das PNS verbindet das ZNS mit den Organen und Extremitäten. [13, 14]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welches Hilfsmittel dient nachts dem Schutz der Hornhaut, falls eine Fazialisparese mit Lagophthalmus vorläge?",
+        "options": ["Halskrause", "Uhrglasverband", "Antidekubitusmatratze", "Sprechkanüle"],
+        "correct_answer": "1",
+        "hint": "Der Uhrglasverband verhindert das Austrocknen des Auges bei unvollständigem Lidschluss. [15, 16]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die vier Kriterien des PÄS-Schemas (ergänzt um R) für eine Pflegediagnose.",
+        "correct_answer": "P = Pflegediagnosetitel, Ä = Ätiologie (Ursachen), S = Symptome (Merkmale), R = Ressourcen. [17, 18]",
+        "hint": "Dieses Schema sichert eine präzise und wissenschaftlich fundierte Problembeschreibung."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Was ist die Konsequenz der Refraktärperiode eines Neurons?",
+        "options": ["Dauererregung", "Schutz vor unmittelbarer erneuter Erregung", "Beschleunigung des Impulses", "Umschaltung auf Neurotransmitter"],
+        "correct_answer": "1",
+        "hint": "Die Refraktärzeit stellt sicher, dass Impulse geordnet und getrennt voneinander weitergeleitet werden. [19]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Bei der Erregungsleitung springt das Aktionspotenzial von ____ zu ____.",
+        "correct_answer": "Ranvier-Schnürring, Ranvier-Schnürring",
+        "hint": "Dies ist das Kennzeichen der saltatorischen Leitung an markhaltigen Fasern. [10, 20]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welcher Neurotransmitter ist primär für die Übertragung an der motorischen Endplatte zuständig?",
+        "options": ["Serotonin", "GABA", "Acetylcholin", "Dopamin"],
+        "correct_answer": "2",
+        "hint": "Acetylcholin vermittelt den Impuls vom Nerv auf die Skelettmuskulatur. [21, 22]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei rehabilitative Aufgaben von Pflegefachpersonen im Team nach Phase D.",
+        "correct_answer": "Prozessbegleitung im Rehabilitationsverlauf (z.B. Entlassungsmanagement), Umsetzung aktivierender Pflegekonzepte, Trainieren täglicher Verrichtungen. [23]",
+        "hint": "Die Pflege koordiniert oft die Schnittstellen zwischen den Therapeuten und dem Alltag."
+      }
+    ]
+  },
+  {
+    "scenario": "Herr Helmut Vogt (68) wird nach einem Infarkt im Bereich der Medulla oblongata (verlängertes Mark) in Phase B rehabilitiert. [1, 24] Er zeigt eine instabile Spontanatmung und einen gestörten Schluckreflex. [25] In der interdisziplinären Fallbesprechung wird deutlich, dass auch das Brechzentrum und das Hustenzentrum im Hirnstamm betroffen sind. [25] Herr Vogt leidet zudem unter einer ausgeprägten Dysarthrie. [26] Die Pflegefachkraft führt ein tägliches Monitoring der Vitalparameter durch, da Schädigungen in diesem Bereich oft lebensbedrohlich sind. [25] Ein Ziel ist die Anbahnung normaler Schluckmuster in enger Zusammenarbeit mit der Logopädie, wobei zunächst die pharyngeale Phase im Fokus steht. [27, 28]",
+    "setting": "Neurologische Frührehabilitation (Phase B)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Welche Struktur des Gehirns beherbergt die Zentren für Herz-Kreislauf, Atmung und Schlucken?",
+        "options": ["Thalamus", "Mittelhirn", "Verlängertes Mark (Medulla oblongata)", "Kleinhirn"],
+        "correct_answer": "2",
+        "hint": "In der Medulla oblongata sitzen die lebenswichtigen Reflexzentren. [25]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Was charakterisiert die 'Pharyngeale Phase' des Schluckens?",
+        "options": ["Willentliche Steuerung möglich", "Bolusformung in der Mundhöhle", "Reflektorische Auslösung und Atempause", "Transport durch die Speiseröhre"],
+        "correct_answer": "2",
+        "hint": "Diese kritische Phase dauert ca. 0,7 Sekunden und ist nicht willentlich beeinflussbar. [29]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Die Formatio reticularis im Hirnstamm reguliert den Schlaf-Wach-Rhythmus und die Bewusstseinslage.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "0",
+        "hint": "Dieses netzartige Geflecht reicht vom Hirnstamm bis zum Thalamus. [30, 31]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei Abschnitte des Hirnstamms.",
+        "correct_answer": "Mittelhirn (Mesencephalon), Brücke (Pons), Verlängertes Mark (Medulla oblongata). [24, 25]",
+        "hint": "Zusammen bilden sie den phylogenetisch ältesten Teil des Gehirns."
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Schädigungen des verlängerten Marks verlaufen aufgrund der lebenswichtigen Zentren oft ____.",
+        "correct_answer": "tödlich",
+        "hint": "Eine Einklemmung führt meist zum sofortigen Atem- und Herzstillstand. [25]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welches Problem beschreibt Herr Vogts verwaschene Aussprache bei intakter Sprachplanung?",
+        "options": ["Aphasie", "Apraxie", "Dysarthrie", "Neglect"],
+        "correct_answer": "2",
+        "hint": "Dysarthrie betrifft die Ausführung der Sprechmotorik, nicht das Sprachsystem. [26, 32]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Welche Hirnnerven sind primär an der Steuerung des Schluckens und der viszeralen Organfunktionen beteiligt?",
+        "options": ["N. opticus (II) und N. olfactorius (I)", "N. facialis (VII) und N. vagus (X)", "N. vestibulocochlearis (VIII)", "N. trochlearis (IV)"],
+        "correct_answer": "1",
+        "hint": "Der N. vagus versorgt Kehlkopf und innere Organe; der N. facialis u.a. die Mimik und Speicheldrüsen. [33, 34]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei klinische Zeichen einer Dysphagie, die bei Herrn Vogt auftreten könnten.",
+        "correct_answer": "Feuchte/gurgelnde Stimme, Husten unmittelbar nach dem Schlucken, verzögerte Schluckreflexauslösung, verändertes Atemmuster. [35]",
+        "hint": "Die Beobachtung innerhalb von einer Minute nach dem Schlucken ist entscheidend."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Was ist das Hauptziel der Rehabilitationsphase B?",
+        "options": ["Berufliche Wiedereingliederung", "Ermöglichung einer selbstständigen Lebensführung zu Hause", "Förderung basaler, sensomotorischer und motorischer Funktionen", "Akutbehandlung"],
+        "correct_answer": "2",
+        "hint": "Phase B ist die Phase der Frührehabilitation nach der Akutversorgung. [1]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Der Fachbegriff für den X. Hirnnerven, der bis in den Bauchraum zieht, lautet Nervus ____.",
+        "correct_answer": "vagus",
+        "hint": "Er ist der wichtigste Nerv des Parasympathikus. [34]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welche Ionenkonzentration wird während des Ruhepotenzials durch die Natrium-Kalium-Pumpe aktiv aufrechterhalten?",
+        "options": ["Natrium wird hinein-, Kalium herausgepumpt", "Kalium wird hinein-, Natrium herausgepumpt", "Calcium wird hinein-, Chlorid herausgepumpt", "Kein aktiver Transport notwendig"],
+        "correct_answer": "1",
+        "hint": "Die Pumpe sorgt für das negative Ruhemembranpotenzial von -70 mV. [7, 36]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die zwei Hauptphasen des Schlafs und deren Merkmale.",
+        "correct_answer": "REM-Schlaf (schnelle Augenbewegungen, Träume, unregelmäßige Atmung) und Non-REM-Schlaf (ruhige Phase ohne Augenbewegung). [37]",
+        "hint": "Beide Phasen wechseln sich mehrmals pro Nacht ab."
+      }
+    ]
+  },
+  {
+    "scenario": "Sarah (21) erlitt eine schwere traumatische Hirnschädigung nach einem Unfall. Sie befindet sich nun in der Phase E der Rehabilitation und möchte wieder in ihr Studium einsteigen. [1] Sie hat einen Grad der Behinderung (GdB) von 70 erhalten. [38] Die Rehabilitationsträger prüfen die Gewährung von Leistungen zur Teilhabe an Bildung. [39] Sarah nutzt das 'Persönliche Budget', um eine Studienassistenz zu finanzieren. [40] Ihre Situation wird nach dem ICF-Modell bewertet, um nicht nur ihre Körperstrukturen, sondern auch Kontextfaktoren wie Umweltbarrieren (z.B. fehlende Barrierefreiheit im Hörsaal) und personenbezogene Faktoren (ihre hohe Motivation) einzubeziehen. [41, 42] Sarahs Ziel ist die volle Inklusion, wie sie in der UN-Behindertenrechtskonvention gefordert wird. [43]",
+    "setting": "Pflegeberatung / Ambulante Rehabilitation (Phase E)",
+    "module": 9,
+    "questions": [
+      {
+        "id": 1,
+        "type": "mc",
+        "q": "Ab welchem Grad der Behinderung (GdB) gilt Sarah rechtlich als schwerbehindert?",
+        "options": ["GdB 20", "GdB 30", "GdB 50", "GdB 70"],
+        "correct_answer": "2",
+        "hint": "Schwerbehinderung ist im SGB IX ab einem GdB von 50 definiert. [38, 44]"
+      },
+      {
+        "id": 2,
+        "type": "mc",
+        "q": "Welches Konzept beschreibt Sarahs Situation am besten, wenn sich die Universität an ihre Bedürfnisse anpasst (z.B. durch Rampen und Assistenz)?",
+        "options": ["Exklusion", "Separation", "Integration", "Inklusion"],
+        "correct_answer": "3",
+        "hint": "Bei der Inklusion passt sich das System der Vielfalt an, nicht umgekehrt. [43]"
+      },
+      {
+        "id": 3,
+        "type": "mc",
+        "q": "Richtig oder Falsch: Der GdB wird als Prozentwert (z.B. 70 %) im Ausweis eingetragen.",
+        "options": ["Richtig", "Falsch"],
+        "correct_answer": "1",
+        "hint": "Falsch. Der GdB ist eine dimensionslose Zahl zwischen 20 und 100. [38]"
+      },
+      {
+        "id": 4,
+        "type": "nennen_offen",
+        "q": "Nennen Sie die drei Komponenten der funktionalen Gesundheit nach ICF.",
+        "correct_answer": "Körperfunktionen und -strukturen, Aktivitäten, Teilhabe (Partizipation). [42, 45]",
+        "hint": "Dieses bio-psycho-soziale Modell der WHO betrachtet den Menschen ganzheitlich. [46]"
+      },
+      {
+        "id": 5,
+        "type": "lueckentext",
+        "q": "Das ____ Budget ist eine Geldleistung, mit der Sarah Leistungen zur Teilhabe selbstbestimmt einkaufen kann.",
+        "correct_answer": "Persönliche",
+        "hint": "Es soll die Wahlfreiheit und Selbstbestimmung gegenüber Sachleistungen stärken. [40]"
+      },
+      {
+        "id": 6,
+        "type": "mc",
+        "q": "Welcher Teil des SGB IX regelt speziell die Leistungen der Eingliederungshilfe für Sarah?",
+        "options": ["Teil 1", "Teil 2", "Teil 3", "Teil 11"],
+        "correct_answer": "1",
+        "hint": "Der 2. Teil des SGB IX befasst sich mit der Eingliederungshilfe für Menschen mit Behinderung. [47]"
+      },
+      {
+        "id": 7,
+        "type": "mc",
+        "q": "Wer ist in NRW ein typischer Kostenträger für Sarahs Studienassistenz im Rahmen der Eingliederungshilfe?",
+        "options": ["Krankenkasse", "Landschaftsverband (z.B. LVR)", "Polizei", "Rentenversicherung"],
+        "correct_answer": "1",
+        "hint": "Der Landschaftsverband Rheinland (LVR) ist Kostenträger für Organisationen der Eingliederungshilfe. [48]"
+      },
+      {
+        "id": 8,
+        "type": "nennen_offen",
+        "q": "Nennen Sie drei der fünf Leistungsgruppen zur Teilhabe (§ 5 SGB IX).",
+        "correct_answer": "Medizinische Reha, Teilhabe am Arbeitsleben, Unterhaltssichernde Leistungen, Teilhabe an Bildung, Soziale Teilhabe. [39]",
+        "hint": "Sarahs Unterstützung fällt unter 'Teilhabe an Bildung'."
+      },
+      {
+        "id": 9,
+        "type": "mc",
+        "q": "Was ist laut UN-Behindertenrechtskonvention das übergeordnete Ziel der Barrierefreiheit?",
+        "options": ["Kostenersparnis", "Heilung der Behinderung", "Unabhängige Lebensführung und volle Teilhabe", "Segregation von Behinderten"],
+        "correct_answer": "2",
+        "hint": "Barrierefreiheit ermöglicht den gleichberechtigten Zugang zur Umwelt und Information. [49]"
+      },
+      {
+        "id": 10,
+        "type": "lueckentext",
+        "q": "Nach der ICF entsteht Behinderung durch negative ____ zwischen Gesundheitsproblemen und Kontextfaktoren.",
+        "correct_answer": "Wechselwirkungen",
+        "hint": "Behinderung ist also kein statischer Zustand, sondern ein interaktives Ergebnis. [41]"
+      },
+      {
+        "id": 11,
+        "type": "mc",
+        "q": "Welches Gesetz bildet in Deutschland die Grundlage für die schrittweise Verbesserung der Teilhabe durch Reformstufen bis 2023?",
+        "options": ["SGB V", "Infektionsschutzgesetz", "Bundesteilhabegesetz (BTHG)", "Bürgerliches Gesetzbuch"],
+        "correct_answer": "2",
+        "hint": "Das BTHG ist ein umfassendes Gesetzespaket zur Umsetzung der UN-BRK. [50]"
+      },
+      {
+        "id": 12,
+        "type": "nennen_offen",
+        "q": "Nennen Sie zwei Beispiele für 'Umweltfaktoren' laut ICF im Kontext der Hochschule.",
+        "correct_answer": "Produkte und Technologien (z.B. Fahrstühle), unterstützende Dienste (z.B. Assistenten), bauliche Anlagen, Einstellungen von Mitmenschen. [42, 51]",
+        "hint": "Umweltfaktoren können Barrieren oder Förderfaktoren sein."
+      }
+    ]
+  }
+]
