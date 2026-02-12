@@ -1,6 +1,6 @@
 /**
  * SLM System Core Engine 2026
- * Version: 2.7 - Exam Simulator & Smart Drill
+ * Version: 2.8 - Vercel Security Integration
  */
 
 let currentQuestions = [];
@@ -253,17 +253,75 @@ async function finishQuiz() {
     }
 }
 
+// --- NEUE SICHERE KI-BEWERTUNG ÜBER VERCEL ---
+async function calculateExamGrade() {
+    const resultDiv = document.getElementById('ai-grading-result');
+    resultDiv.innerHTML = `<p class="text-center text-slate-500 animate-pulse">KI analysiert deine Antworten...</p>`;
+
+    // Zusammenfassung der Antworten für die KI
+    const summary = userAnswersLog.map((log, i) => 
+        `Frage ${i+1}: ${log.question}\nAntwort des Schülers: ${log.userAnswer}\nErgebnis: ${log.correct ? "Richtig gelöst" : "Falsch gelöst"}`
+    ).join('\n\n');
+
+    const PROMPT = `
+        Handle als erfahrener Fachlehrer für Pflegeberufe. 
+        Analysiere die folgende Klausurleistung eines Schülers (Modul: Anatomie/Pflegeprozess).
+        Erstelle ein professionelles Feedback basierend auf diesen Daten:
+        
+        ${summary}
+
+        Deine Antwort muss enthalten:
+        1. Eine Gesamtnote (1-6) basierend auf dem deutschen Notenschlüssel.
+        2. Kurzes Feedback zu den Stärken.
+        3. Konstruktive Tipps für die Bereiche, die falsch waren.
+        
+        Antworte in einem motivierenden, aber professionellen Lehrer-Tonfall.
+        Nutze HTML-Formatierung (<b>, <br>, etc.) für eine schöne Darstellung.
+    `;
+
+    try {
+        // DER SICHERE CALL: Ruft dein Vercel-Backend auf statt direkt Google
+        const response = await fetch('/api/grade', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: PROMPT })
+        });
+        
+        if (!response.ok) throw new Error("Server-Fehler");
+
+        const data = await response.json();
+        
+        // Ergebnis anzeigen
+        resultDiv.innerHTML = `
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 prose prose-indigo max-h-[500px] overflow-y-auto shadow-inner">
+                ${data.text}
+            </div>
+            <button onclick="location.reload()" class="w-full mt-4 bg-indigo-600 text-white py-4 rounded-xl font-bold uppercase tracking-widest shadow-lg hover:bg-indigo-700 transition-all">Neue Klausur starten</button>
+        `;
+        
+    } catch (e) {
+        console.error("KI-Fehler:", e);
+        resultDiv.innerHTML = `
+            <div class="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm">
+                <b>Verbindungsproblem:</b> Die KI-Bewertung konnte nicht geladen werden. 
+                Stelle sicher, dass die App auf Vercel läuft und der GEMINI_API_KEY hinterlegt ist.
+            </div>
+            <button onclick="location.reload()" class="w-full mt-4 bg-slate-800 text-white py-3 rounded-xl font-bold">Erneut versuchen</button>
+        `;
+    }
+}
+
 // PRODIGY SIDEBAR LOGIK
 function toggleProdigy() {
     const sidebar = document.getElementById('prodigy-sidebar');
     const overlay = document.getElementById('prodigy-overlay');
-    const isOpen = sidebar.style.transform === 'translateX(0%)';
+    const isOpen = sidebar && sidebar.style.transform === 'translateX(0%)';
     
     if(isOpen) {
         sidebar.style.transform = 'translateX(100%)';
         overlay.classList.add('hidden');
         overlay.style.opacity = '0';
-    } else {
+    } else if(sidebar) {
         sidebar.style.transform = 'translateX(0%)';
         overlay.classList.remove('hidden');
         setTimeout(() => overlay.style.opacity = '1', 10);
