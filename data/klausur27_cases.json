@@ -1,0 +1,764 @@
+[
+  {
+    "case_id": "K27_CASE_01",
+    "title": "Junge Patienten und das schlagartige Rollenverständnis",
+    "scenario": "Stefan Walther ist 42 Jahre alt, erfolgreicher Abteilungsleiter in einer Werbeagentur und Vater von drei Kindern. Er ist 1,90 m groß, athletisch gebaut und war im Handballverein aktiv. Vor zwei Wochen erlitt er einen Cerebri-media-Infarkt der rechten Hirnhälfte. Aktuell leidet er an einer Hemiparese der linken Körperseite, einer halbseitigen Sensibilitätsstörung sowie einer Aphasie. Er befindet sich in der neurologischen Frührehabilitation. Auffällig ist, dass er gegenüber seiner Familie einen starken Willen zeigt, jedoch nach deren Verabschiedung in sich gekehrt und antriebslos wirkt. Mit Hilfestellung kann er bereits am Bettrand sitzen und am Waschbecken stehen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Begründe anhand der anatomischen Grundlagen, warum Herr Walther eine Lähmung der linken Körperseite aufweist, obwohl der Infarkt in der rechten Hirnhälfte liegt.",
+        "correct_answer": "Dies liegt an der Kreuzung der absteigenden Pyramidenbahnen (motorisch) sowie der aufsteigenden sensiblen Bahnen im unteren Hirnstamm (Medulla oblongata) zur Gegenseite. Ein Schaden in der rechten Hemisphäre führt daher zu kontralateralen Symptomen auf der linken Seite.",
+        "hint": "Denke an den Verlauf der Nervenbahnen im Hirnstamm."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Was versteht man unter einer rehabilitativ-aktivierenden Pflege?",
+        "correct_answer": "Sie orientiert sich daran, die Selbstständigkeit der Betroffenen weitestgehend zu erhalten bzw. wiederzuerlangen und eine Pflegebedürftigkeit zu verhindern oder zu mindern. Sie hat den Menschen als Ganzes im Blick und setzt an Alltagserfordernissen an.",
+        "hint": "Siehe Definition in Quelle [1]."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Wie kann die Körperpflege bei Herrn Walther konkret in den Rehabilitationsprozess integriert werden, um seine Ressourcen zu nutzen?",
+        "correct_answer": "Die Ressource des Sitzens an der Bettkante und des Stehens am Waschbecken muss genutzt werden, um die Pflege außerhalb des Bettes durchzuführen. Die betroffene Seite sollte aktiv einbezogen werden (z. B. Waschlappen führen, Zahnpastatube halten), ggf. durch therapeutisches Führen (Affolter-Konzept).",
+        "hint": "Das Stehen ist die am meisten aktivierende Form des Trainings."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne 3 psychosoziale Folgen, die bei Herrn Walther aufgrund seines jungen Alters und seiner bisherigen Rolle besonders berücksichtigt werden müssen.",
+        "correct_answer": "1. Schlagartige Rollenveränderung (vom Versorger zum Pflegefall), 2. Gefahr der sozialen Isolation durch die Aphasie/Scham, 3. Gefährdung der Lebensplanung und beruflichen Existenz.",
+        "hint": "Siehe Quelle [2] zum Rollenverständnis."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welche Reha-Phase beschreibt die Neurologische Frührehabilitation im Phasenmodell?",
+        "options": [
+          "Phase A",
+          "Phase B",
+          "Phase C",
+          "Phase D"
+        ],
+        "correct_answer": 1,
+        "hint": "Phase B folgt unmittelbar auf die Akutphase."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_02",
+    "title": "Akutereignis und Zeitmanagement (Stroke Unit)",
+    "scenario": "Herr Petersen, 68 Jahre alt, adipös (115 kg bei 1,80 m) und Diabetiker, erleidet beim Abendessen einen Schlaganfall. Ihm fällt plötzlich eine Bierflasche aus der Hand, da er rechts keine Kraft mehr hat. Er verständigt sofort den Rettungsdienst. In der Klinik wird ein ischämischer Infarkt im linken Mediastromgebiet diagnostiziert. Der Neurologe leitet sofort eine Lysetherapie ein, danach erfolgt die Verlegung auf die Stroke Unit. Herr Petersen versteht alle Fragen, kann aber kaum antworten.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erläutere die Durchführung und die Ziele einer Lysetherapie.",
+        "correct_answer": "Durchführung: Gabe von Thrombolytika (z. B. Alteplase) zur medikamentösen Auflösung des Blutgerinnsels. Ziele: Wiederherstellung der Durchblutung im Hirnareal und Minimierung von Folgeschäden.",
+        "hint": "Es ist eine Akutmaßnahme innerhalb eines engen Zeitfensters."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne 2 zwingende Voraussetzungen, damit eine Lysetherapie durchgeführt werden darf.",
+        "correct_answer": "1. Zeitfenster (meist innerhalb von 4,5 Stunden nach Symptombeginn), 2. Ausschluss einer Hirnblutung (Hämorrhagie) mittels CT/MRT.",
+        "hint": "Siehe Quelle [3] und [4]."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Unter welcher Form der Aphasie leidet Herr Petersen wahrscheinlich? Begründe deine Antwort.",
+        "correct_answer": "Broca-Aphasie (motorische Aphasie). Begründung: Das Sprachverständnis ist erhalten (er versteht Fragen), aber die Sprachproduktion ist stark eingeschränkt.",
+        "hint": "Unterscheide sensorische und motorische Sprachzentren."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne 3 beeinflussbare Risikofaktoren, die bei Herrn Petersen zur Arteriosklerose beigetragen haben könnten.",
+        "correct_answer": "1. Adipositas (Übergewicht), 2. Diabetes mellitus Typ 2, 3. Arterielle Hypertonie (Bluthochdruck).",
+        "hint": "Schau dir seine Anamnese in Quelle [5] an."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wofür steht das 'A' im FAST-Schema?",
+        "options": [
+          "Aphasie",
+          "Armhalteversuch",
+          "Atemfrequenz",
+          "Apraxie"
+        ],
+        "correct_answer": 1,
+        "hint": "Check auf halbseitige Lähmung der Extremitäten."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_03",
+    "title": "Wahrnehmungsstörungen und professionelles Handling",
+    "scenario": "Frau Schneider, 83 Jahre alt, wurde nach einem Schlaganfall in ein Pflegeheim aufgenommen. Die Pflegekraft Pina unterstützt sie bei der Morgenpflege. Pina bemerkt, dass Frau Schneider die Tasse auf dem Tablett gar nicht anschaut, wenn sie von links gereicht wird. Beim Anziehen zieht Pina unabsichtlich am gelähmten linken Arm der Bewohnerin, woraufhin die Praxisanleitung sie korrigiert.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Welches neurologische Phänomen beschreibt das Verhalten von Frau Schneider bezüglich der Tasse?",
+        "correct_answer": "Neglect (Vernachlässigung). Es handelt sich um eine Wahrnehmungsstörung einer Körperseite oder der Umgebung, bei der Reize auf der betroffenen Seite ignoriert werden.",
+        "hint": "Siehe Quelle [6] und [7]."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Warum darf am gelähmten Arm eines Schlaganfallpatienten niemals gezogen werden?",
+        "correct_answer": "Es besteht die Gefahr einer Subluxation. Da die Muskulatur das Schultergelenk nicht mehr ausreichend stabilisiert, kann der Oberkopf teilweise aus der Pfanne rutschen, was sehr schmerzhaft ist.",
+        "hint": "Fachbegriff für Teil-Ausrenkung gesucht."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne 3 konkrete Maßnahmen, wie Pina im Pflegealltag die Wahrnehmung der betroffenen Seite bei Frau Schneider fördern kann.",
+        "correct_answer": "1. Ansprache des Patienten von der betroffenen Seite, 2. Essen und Getränke von der betroffenen Seite reichen, 3. Pflegehandlungen (z. B. Waschen) auf der betroffenen Seite beginnen.",
+        "hint": "Die betroffene Seite muss 'gelockt' werden."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Mit welcher Seite beginnt man laut Bobath-Konzept beim ANziehen eines Patienten mit Hemiparese?",
+        "options": [
+          "Gesunde Seite",
+          "Betroffene Seite",
+          "Egal",
+          "Beide gleichzeitig"
+        ],
+        "correct_answer": 1,
+        "hint": "Die eingeschränkte Seite braucht zuerst Platz im Kleidungsstück."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erkläre den Zusammenhang zwischen Dysphagie und Pneumonie.",
+        "correct_answer": "Bei einer Dysphagie (Schluckstörung) besteht die Gefahr der Aspiration von Speichel oder Nahrung. Gelangt dieses Material in die Luftröhre/Lunge, kann dies eine Aspirationspneumonie (Lungenentzündung) auslösen.",
+        "hint": "Warum ist Rücksprache vor dem Essenreichen so wichtig?"
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_04",
+    "title": "Anatomie des ZNS und Überwachungsaspekte",
+    "scenario": "Herr Hadad, 68 Jahre alt, liegt am ersten Tag nach seinem ischämischen Infarkt auf der Stroke Unit. Er ist sehr unruhig und hat kaum geschlafen. Er hat eine Parese des rechten Arms und eine ausgeprägte Aphasie. Die Pflegefachkraft Mike Thiele kontrolliert regelmäßig die Vitalparameter, den Blutzucker und die Pupillenreaktion, um eine Verschlechterung des Zustands (z. B. Hirnödem) frühzeitig zu erkennen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 6 Hauptstrukturen des Gehirns laut dem anatomischen Steckbrief.",
+        "correct_answer": "1. Großhirn (Cerebrum), 2. Zwischenhirn (Diencephalon), 3. Mittelhirn (Mesencephalon), 4. Brücke (Pons), 5. Verlängertes Mark (Medulla oblongata), 6. Kleinhirn (Cerebellum).",
+        "hint": "Drei davon bilden den Hirnstamm."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Welche lebenswichtigen Zentren liegen in der Medulla oblongata?",
+        "correct_answer": "Steuerungszentren für Herz-Kreislauf, Atmung sowie Reflexzentren für Schlucken, Husten, Niesen und Erbrechen.",
+        "hint": "Schäden hier verlaufen oft tödlich."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welche Schlafphase ist durch 'Rapid Eye Movements' und herabgesetzten Muskeltonus gekennzeichnet?",
+        "options": [
+          "Non-REM Phase",
+          "Stadium 4 (Tiefschlaf)",
+          "REM-Schlaf",
+          "Übergangsstadium"
+        ],
+        "correct_answer": 2,
+        "hint": "In dieser Phase wird besonders häufig geträumt."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Was ist die Funktion des Liquors und wo befindet er sich?",
+        "correct_answer": "Funktion: Schutz vor Stößen (Wasserkissen), Nährstoffversorgung, Abtransport von Stoffwechselprodukten. Lage: In den Ventrikeln (innen) und im Subarachnoidalraum (außen).",
+        "hint": "Siehe Quelle [8]."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 3 bindegewebigen Hirnhäute von außen nach innen.",
+        "correct_answer": "1. Dura mater (harte Hirnhaut), 2. Arachnoidea (Spinnwebhaut), 3. Pia mater (weiche Hirnhaut).",
+        "hint": "Die mittlere Schicht liegt über dem Subarachnoidalraum."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_05",
+    "title": "Komplikationen und Anatomie des Stützapparats",
+    "scenario": "Eine Patientin erleidet infolge eines Schlaganfalls einen Sturz und zieht sich eine Femurhalsfraktur zu. Nach der operativen Versorgung ist sie immobil und verweigert aus Angst vor Schmerzen jede Bewegung (Kinesiophobie). Dies erschwert sowohl die neurologische Rehabilitation als auch die postoperative Heilung. Die Pflegekraft muss nun Prophylaxen planen und die anatomischen Gegebenheiten der Gelenke berücksichtigen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne 5 Risiken (Pflegeprobleme), die bei dieser Patientin aufgrund der kombinierten neurologischen und orthopädischen Immobilität entstehen.",
+        "correct_answer": "1. Dekubitusgefahr, 2. Thrombosegefahr, 3. Kontrakturengefahr, 4. Pneumoniegefahr (durch flache Atmung), 5. Muskelatrophie.",
+        "hint": "Denke an die klassischen Prophylaxen."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wie nennt man die Beugung im Hüftgelenk fachsprachlich?",
+        "options": [
+          "Extension",
+          "Flexion",
+          "Abduktion",
+          "Adduktion"
+        ],
+        "correct_answer": 1,
+        "hint": "Gegenteil von Streckung."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Unterscheide Sympathikus und Parasympathikus in ihrer Wirkung auf Herz und Magen-Darm-Trakt.",
+        "correct_answer": "Herz: Sympathikus steigert Frequenz/Kraft, Parasympathikus senkt sie. Magen-Darm: Sympathikus hemmt Tonus/Bewegung, Parasympathikus steigert Sekretion/Motilität.",
+        "hint": "Fight or Flight vs. Rest and Digest."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne 4 Hilfsmittel, die die Patientin nach Entlassung zur Kompensation ihrer Einschränkungen im Bereich 'Mobilität' und 'Körperpflege' nutzen könnte.",
+        "correct_answer": "Mobilität: Rollator, Gehstock. Körperpflege: Duschstuhl, Toilettensitzerhöhung (oder Greifzange).",
+        "hint": "Siehe Hilfsmittelliste in Quelle [9]."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erkläre den Begriff 'Spastik' im Kontext einer zentralen Lähmung.",
+        "correct_answer": "Eine Spastik ist eine Erhöhung des muskulären Ruhetonus. Sie entsteht bei einer Schädigung im ZNS (Rindenfeld/Pyramidenbahn), da die zentrale Hemmung der Muskeleigenreflexe fehlt.",
+        "hint": "Unterscheide von der schlaffen Lähmung."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_06",
+    "title": "Akutereignis auf der Stroke Unit und das FAST-Schema",
+    "scenario": "Herr Müller (65 J.) wird mit dem Rettungsdienst in die Klinik eingeliefert. Seine Ehefrau berichtet, dass er beim Frühstück plötzlich die Kaffeetasse fallen ließ und nur noch unverständliche Laute von sich gab. In der Notaufnahme stellt die Pflegefachkraft fest, dass sein rechter Mundwinkel herabhängt und er seinen rechten Arm nicht gegen die Schwerkraft halten kann. Er wird sofort auf die Stroke Unit verlegt, wo eine CT-Untersuchung durchgeführt wird, um die weitere Therapie (z. B. Lysetherapie) festzulegen. Herr Müller wirkt verängstigt und blickt Mike Thiele, der die Akutversorgung übernimmt, verzweifelt an.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Wende das FAST-Schema auf die Symptome von Herrn Müller an und ordne die Beobachtungen zu.",
+        "correct_answer": "Face: Herabhängender Mundwinkel; Arm: Kann rechten Arm nicht halten; Speech: Unverständliche Laute/Sprachstörung; Time: Sofortiger Notruf/Verlegung auf Stroke Unit.",
+        "hint": "Das Schema dient der schnellen Identifikation von Schlaganfallsymptomen."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die zwei typischen Ursachen eines Schlaganfalls und erläutere deren Häufigkeitsverteilung.",
+        "correct_answer": "1. Ischämischer Schlaganfall (Durchblutungsstörung durch Gefäßverschluss, ca. 80 %); 2. Hämorrhagischer Schlaganfall (Gehirnblutung, ca. 20 %).",
+        "hint": "Unterscheide zwischen 'Verstopfung' und 'Blutung'."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Warum ist eine CT-Untersuchung vor Einleitung einer Lysetherapie bei Herrn Müller zwingend erforderlich?",
+        "correct_answer": "Die CT dient dem Ausschluss einer Hirnblutung (Hämorrhagie). Eine Lysetherapie darf nur bei einem ischämischen Infarkt erfolgen, da sie bei einer Blutung lebensgefährlich wäre.",
+        "hint": "Lysis löst Gerinnsel auf – was würde das bei einer offenen Blutung bedeuten?"
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welches Gefäßsystem versorgt das Gehirn primär mit Sauerstoff?",
+        "options": [
+          "Aa. carotides internae und Aa. vertebrales",
+          "Vv. jugulares",
+          "A. facialis",
+          "Aorta abdominalis"
+        ],
+        "correct_answer": 0,
+        "hint": "Denke an die Halsschlagadern und die Wirbelarterien."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Welche lebenswichtigen Zentren liegen in der Medulla oblongata, die Mike bei Herrn Müller überwachen muss?",
+        "correct_answer": "Herz-Kreislauf-Zentrum, Atemzentrum sowie Reflexzentren für Schlucken, Husten und Niesen.",
+        "hint": "Diese Struktur bildet den Übergang zum Rückenmark."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_07",
+    "title": "Bobath-Konzept und Tonusregulation in der Frührehabilitation",
+    "scenario": "Frau Meinhardt (74 J.) befindet sich nach einem schweren Schlaganfall in der Phase B der Rehabilitation. Sie weist eine ausgeprägte Spastik in der linken Körperhälfte auf. Die Pflegekraft wendet das Bobath-Konzept an, um die physiologische Bewegung wieder anzubahnen. Bei der Mobilisation in den Rollstuhl achtet die Pflegekraft besonders darauf, die 'Schlüsselpunkte' einzubeziehen und eine Überbeanspruchung der gesunden Seite zu vermeiden. Frau Meinhardt zeigt erste Anzeichen eines Neglects, da sie Reize von ihrer linken Seite kaum noch wahrnimmt.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Definiere den Begriff 'Spastik' im Gegensatz zur schlaffen Lähmung.",
+        "correct_answer": "Eine Spastik ist eine zentrale Lähmung mit erhöhtem muskulärem Ruhetonus (Spannung), während eine schlaffe Lähmung eine periphere Schädigung mit fehlendem Tonus ist.",
+        "hint": "Denke an die zentrale Steuerung vs. periphere Nervendurchtrennung."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Erläutere die Bedeutung der 'Schlüsselpunkte' bei der Mobilisation von Frau Meinhardt.",
+        "correct_answer": "Schlüsselpunkte sind Körperregionen mit besonders vielen Rezeptoren, über die sich der Muskeltonus (die Spannung) besonders gut regulieren und Bewegungen kontrollieren lassen.",
+        "hint": "Diese Punkte liegen meist zentral oder an den Gelenken."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne zwei konkrete pflegerische Maßnahmen, um den Neglect bei Frau Meinhardt zu reduzieren.",
+        "correct_answer": "1. Ansprache von der betroffenen (linken) Seite; 2. Essen und Getränke über die betroffene Seite reichen; 3. Pflegehandlungen bewusst dort beginnen.",
+        "hint": "Die Aufmerksamkeit muss auf die vernachlässigte Seite 'gelockt' werden."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welche Phase der neurologischen Rehabilitation beschreibt die Frührehabilitation?",
+        "options": [
+          "Phase A",
+          "Phase B",
+          "Phase C",
+          "Phase F"
+        ],
+        "correct_answer": 1,
+        "hint": "In dieser Phase werden basale motorische Funktionen gefördert."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 4 Grundprinzipien des Bobath-Konzepts.",
+        "correct_answer": "1. Neuroplastizität (Lernfähigkeit des Gehirns); 2. Anbahnung normaler Bewegung; 3. Tonusregulation; 4. Integration der betroffenen Seite.",
+        "hint": "Wiederholung ist hier der Schlüssel zum Lernen."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_08",
+    "title": "Dysphagie-Management und das vegetative Nervensystem",
+    "scenario": "Herr Lehmann (80 J.) leidet seit seinem Schlaganfall unter einer schweren Schluckstörung (Dysphagie). Er zeigt beim Versuch, Wasser zu trinken, einen starken Hustenreiz. Die Pflegekraft Mike weiß, dass hier das Konzept F.O.T.T. indiziert ist. Herr Lehmann ist zudem sehr unruhig; Mike stellt fest, dass sein Puls erhöht ist und er schwitzt, was Mike auf eine Aktivierung des Sympathikus zurückführt. Bevor Mike Herrn Lehmann beim Essen unterstützt, hält er Rücksprache mit der Fachkraft und der Logopädie.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Warum ist die Rücksprache vor dem Essenreichen bei Herrn Lehmann lebensnotwendig?",
+        "correct_answer": "Aufgrund der Dysphagie besteht eine hohe Aspirationsgefahr (Verschlucken von Nahrung/Flüssigkeit in die Luftröhre), was eine lebensgefährliche Lungenentzündung (Pneumonie) auslösen kann.",
+        "hint": "Welche Komplikation kann durch Verschlucken entstehen?"
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erkläre das Ziel des Pflegekonzepts F.O.T.T.",
+        "correct_answer": "Die Fascio-orale-Trakt-Therapie konzentriert sich auf die Behandlung von Störungen im Bereich Gesicht, Mund und Schlucktrakt, um das Schlucken wieder sicher anzubahnen.",
+        "hint": "Es geht um den Mundraum und den Rachen."
+      },
+      {
+        "type": "mc",
+        "context": "fallabhängig",
+        "question": "Welches System des vegetativen Nervensystems verursacht den erhöhten Puls und das Schwitzen bei Herrn Lehmann?",
+        "options": [
+          "Sympathikus",
+          "Parasympathikus",
+          "Zentralnervensystem",
+          "Willkürliches Nervensystem"
+        ],
+        "correct_answer": 0,
+        "hint": "Das ist die 'Fight or Flight'-Reaktion."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne 3 Organfunktionen, die der Parasympathikus im Gegensatz zum Sympathikus steigert.",
+        "correct_answer": "1. Verdauungstätigkeit (Darmmotilität); 2. Sekretion der Speicheldrüsen; 3. Harndrang (Blasenkontraktion).",
+        "hint": "Denke an den 'Rest and Digest'-Modus."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Wo im Gehirn liegen die Zentren für Reflexe wie Schlucken, Husten und Erbrechen?",
+        "correct_answer": "In der Medulla oblongata (verlängertes Mark).",
+        "hint": "Es ist der unterste Teil des Hirnstamms."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_09",
+    "title": "Neuroanatomie und Schutzmechanismen des Gehirns",
+    "scenario": "Nach einem Sturzereignis wird bei einer Patientin eine Lumbalpunktion durchgeführt, um den Liquor zu untersuchen. Die Patientin hat Fragen zur Anatomie: Sie möchte wissen, wie ihr Gehirn vor Stößen geschützt wird und warum Medikamente oft nicht direkt im Gehirn wirken. Die Pflegekraft Mike erklärt ihr das Ventrikelsystem, die Meningen und die Blut-Liquor-Schranke.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 3 bindegewebigen Hirnhäute von außen nach innen.",
+        "correct_answer": "1. Dura mater; 2. Arachnoidea; 3. Pia mater.",
+        "hint": "Die mittlere Schicht wird auch Spinnwebhaut genannt."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erläutere die 3 Hauptaufgaben des Liquors.",
+        "correct_answer": "1. Mechanischer Schutz (Wasserkissen gegen Stöße); 2. Versorgung des Gehirns mit Nährstoffen; 3. Abtransport von Stoffwechselendprodukten.",
+        "hint": "Denke an Schutz, Ernährung und Entsorgung."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Was versteht man unter der Blut-Liquor-Schranke und welche klinische Bedeutung hat sie?",
+        "correct_answer": "Sie ist eine Barriere (gebildet von Gliazellen/Pia mater), die verhindert, dass schädliche Stoffe aus dem Blut ins Gehirn gelangen. Bedeutung: Viele Medikamente können diese Schranke nicht passieren.",
+        "hint": "Es ist ein Filter zwischen Blutkreislauf und Nervengewebe."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "In welchem Raum befindet sich der Liquor außerhalb des Gehirns?",
+        "options": [
+          "Subarachnoidalraum",
+          "Epiduralraum",
+          "Zentralkanal",
+          "Vorderhorn"
+        ],
+        "correct_answer": 0,
+        "hint": "Er liegt zwischen der Spinnwebhaut und der weichen Hirnhaut."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Wie nennt man die kleinste funktionale Einheit des Nervensystems, die Signale verarbeitet?",
+        "correct_answer": "Neuron (Nervenzelle).",
+        "hint": "Sie arbeitet mit 'An' und 'Aus' Zuständen."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_10",
+    "title": "Anschlussheilbehandlung und soziale Reintegration",
+    "scenario": "Herr Wagner (55 J.) hat die Akutphase und die Frühreha erfolgreich hinter sich gebracht. Er befindet sich nun in der Phase D der Rehabilitation. Sein Ziel ist die Rückkehr in sein Haus und eventuell eine berufliche Wiedereingliederung. Er erreicht im Barthel-Index 85 Punkte. Mike berät ihn zu Hilfsmitteln für die Mobilität und die Sicherheit zu Hause, da Herr Wagner noch leichte Unsicherheiten beim Gehen zeigt. Zudem wird über die 'Soziale Rehabilitation' gesprochen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Definiere den Begriff 'Rehabilitation' nach der WHO-Definition (Modul 9).",
+        "correct_answer": "Eine Reihe von Interventionen, die darauf abzielen, die Funktionsfähigkeit zu optimieren und Behinderungen bei Personen mit Gesundheitsproblemen in Interaktion mit ihrer Umgebung zu reduzieren.",
+        "hint": "Es geht um Funktionsfähigkeit und Umgebung."
+      },
+      {
+        "type": "mc",
+        "context": "fallabhängig",
+        "question": "Welche Voraussetzung für Phase D erfüllt Herr Wagner mit seinen 85 Punkten im Barthel-Index?",
+        "options": [
+          "Mindestens 70 bis 100 Punkte erreicht",
+          "Über 35 Punkte erreicht",
+          "Vollständige Heilung",
+          "Bettlägerigkeit"
+        ],
+        "correct_answer": 0,
+        "hint": "In Phase D müssen Patienten weitestgehend selbstständig sein."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne das Hauptziel der 'Sozialen Rehabilitation'.",
+        "correct_answer": "Teilhabe am sozialen Leben, am Leben in der Gesellschaft und in den Gemeinschaften (z. B. durch barrierefreie Zugänge).",
+        "hint": "Es geht um die Eingliederung in das soziale Umfeld."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Nenne jeweils ein Hilfsmittel für Herrn Wagner in den Bereichen 'Mobilität' und 'Sicherheit'.",
+        "correct_answer": "Mobilität: Gehstock, Rollator oder Rollstuhl; Sicherheit: Notrufsystem oder rutschfestes Schuhwerk.",
+        "hint": "Siehe Hilfsmittelliste in Quelle 49."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wie nennt man die fachsprachliche Bewegung des 'Streckens' im Kniegelenk bei der Mobilisation?",
+        "options": [
+          "Extension",
+          "Flexion",
+          "Abduktion",
+          "Adduktion"
+        ],
+        "correct_answer": 0,
+        "hint": "Das Gegenteil von Flexion (Beugung)."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_11",
+    "title": "Rückenmarkstrauma und segmentale Versorgung",
+    "scenario": "Der 24-jährige Tim erlitt bei einem Sportunfall eine Verletzung der Wirbelsäule auf Höhe der unteren Halswirbelsäule. Er weist motorische und sensible Ausfälle in den Extremitäten auf. Im Krankenhaus wird Mike Thiele erklärt, dass die Medulla spinalis (Rückenmark) bei Erwachsenen etwa 45 cm lang ist und in der Regel auf Höhe des 1. bis 2. Lendenwirbels endet. Die interdisziplinäre Überwachung konzentriert sich besonders auf die Atemmuskulatur, da die Halssegmente betroffen sind.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Warum ist die Überwachung der Atmung bei Tim aufgrund der Verletzungshöhe (Halssegmente) so kritisch?",
+        "correct_answer": "Die 8 Halssegmente des Rückenmarks versorgen primär die Atemmuskulatur sowie die oberen Extremitäten. Eine Schädigung in diesem Bereich kann daher zu lebensbedrohlichen Atemstörungen führen.",
+        "hint": "Denke an die Zuordnung der Rückenmarkssegmente."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welche Struktur im Rückenmark enthält die motorischen Neurone zur Versorgung der Skelettmuskulatur?",
+        "options": [
+          "Hinterhorn",
+          "Vorderhorn",
+          "Seitenhorn",
+          "Zentralkanal"
+        ],
+        "correct_answer": 1,
+        "hint": "Diese Neurone liegen in der zentralen grauen Substanz."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erläutere den Unterschied zwischen einer peripheren und einer zentralen Lähmung hinsichtlich des Muskeltonus.",
+        "correct_answer": "Eine periphere Lähmung (Schädigung der Vorderhornzellen oder Axone) führt zu einer schlaffen Lähmung. Eine zentrale Lähmung (Schädigung im Rindenfeld oder der Pyramidenbahn) führt aufgrund der fehlenden zentralen Steuerung bei erhaltenen Eigenreflexen zu einer spastischen Lähmung mit erhöhtem Muskeltonus.",
+        "hint": "Denke an 'schlaff' vs. 'spastisch'."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wo liegen die Zellkörper der sensiblen Nervenfasern, die Impulse aus der Peripherie zum Rückenmark leiten?",
+        "options": [
+          "Vorderhorn",
+          "Thalamus",
+          "Spinalganglion",
+          "Balken"
+        ],
+        "correct_answer": 2,
+        "hint": "Dies ist eine Ansammlung von Neuronen außerhalb des ZNS."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 3 Arten von Segmenten, die auf die 12 Brustsegmente im Rückenmark folgen.",
+        "correct_answer": "1. 5 Lendensegmente, 2. 5 Kreuzbeinsegmente, 3. 1–3 Steißbeinsegmente.",
+        "hint": "Diese versorgen die unteren Extremitäten und den Afterbereich."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_12",
+    "title": "Neurotransmitter-Gleichgewicht und Morbus Parkinson",
+    "scenario": "Frau Berg (72 J.) leidet an Morbus Parkinson. Sie zeigt das typische Ruhetittern (Tremor) und eine zunehmende Bewegungssteifigkeit (Rigor). In der Unterrichtspräsentation wurde Mike erklärt, dass die Ursache ein Untergang dopaminproduzierender Neurone im Mittelhirn (Mesencephalon) ist. Frau Berg erhält Medikamente, die direkt in den Neurotransmitterhaushalt eingreifen, um ihre Bewegungsentwürfe wieder besser steuern zu können.",
+    "questions": [
+      {
+        "type": "mc",
+        "context": "fallabhängig",
+        "question": "In welchem Gehirnabschnitt liegt die primäre Schädigung bei Frau Bergs Parkinson-Erkrankung?",
+        "options": [
+          "Großhirn",
+          "Zwischenhirn",
+          "Mittelhirn",
+          "Kleinhirn"
+        ],
+        "correct_answer": 2,
+        "hint": "Es ist ein Teil des Hirnstamms."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne zwei Neurotransmitter, deren Mangel primär mit Depressionen in Verbindung gebracht wird.",
+        "correct_answer": "1. Noradrenalin, 2. Serotonin.",
+        "hint": "Diese Stoffe steuern die Aufmerksamkeit und das Gefühlsleben."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welcher Neurotransmitter ist der häufigste im ZNS und an Lern- und Gedächtnisfunktionen beteiligt?",
+        "options": [
+          "Dopamin",
+          "GABA",
+          "Glutamat",
+          "Acetylcholin"
+        ],
+        "correct_answer": 2,
+        "hint": "Es ist eine Aminosäure."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Was ist die spezifische Aufgabe des Neurotransmitters Acetylcholin an der motorischen Endplatte?",
+        "correct_answer": "Es sorgt für die Erregungsübertragung vom efferenten Neuron zum Muskel.",
+        "hint": "Es verbindet Nervensystem und Muskulatur."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wie nennt man den Botenstoff, der als wichtigster Hemmstoff im ZNS fungiert?",
+        "options": [
+          "Serotonin",
+          "GABA",
+          "Noradrenalin",
+          "Glutamat"
+        ],
+        "correct_answer": 1,
+        "hint": "Die Abkürzung steht für Gamma-Aminobuttersäure."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_13",
+    "title": "Höhere Hirnleistungen und Informationsfilterung",
+    "scenario": "Herr Krause ist nach einem leichten Schlaganfall orientiert, zeigt aber Veränderungen in seiner Kreativität und seinem Sozialverhalten. Sein Arzt erklärt, dass der Stirnlappen seines Großhirns (Cerebrum) betroffen ist, welcher der Sitz bewusster Empfindungen und 'höherer' Leistungen wie Moralvorstellung und Gedächtnis ist. Zudem klagt er über eine schnelle Reizüberflutung. Mike erinnert sich, dass der Thalamus im Zwischenhirn normalerweise als Filter fungiert, um das Bewusstsein vor Signalüberflutung zu schützen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallabhängig",
+        "question": "Welche 3 höheren Hirnleistungen sind laut Steckbrief im Großhirn angesiedelt?",
+        "correct_answer": "1. Gedächtnis, 2. Moralvorstellung, 3. Kreativität.",
+        "hint": "Diese machen den Menschen in seinem Wesen aus."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wie heißt die größte Kommissurenbahn, die die linke und rechte Gehirnhälfte miteinander verbindet?",
+        "options": [
+          "Thalamus",
+          "Balken",
+          "Projektionsbahn",
+          "Pyramidenbahn"
+        ],
+        "correct_answer": 1,
+        "hint": "Sie ist Teil der weißen Substanz."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Was ist der Unterschied zwischen Windungen (Gyri) und Furchen (Sulci) der Hirnoberfläche?",
+        "correct_answer": "Windungen (Gyri) sind die Erhebungen der Hirnoberfläche, während Furchen (Sulci) bzw. Fissuren die Vertiefungen dazwischen darstellen.",
+        "hint": "Dies dient der Oberflächenvergrößerung."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Wo befindet sich die graue Substanz (Großhirnrinde) im Vergleich zur weißen Substanz im Gehirn?",
+        "options": [
+          "Graue Substanz liegt innen, weiße außen",
+          "Graue Substanz bedeckt als dünne Schicht die Oberfläche, weiße liegt darunter",
+          "Beide sind willkürlich gemischt",
+          "Es gibt im Gehirn keine weiße Substanz"
+        ],
+        "correct_answer": 1,
+        "hint": "Die Rinde enthält ca. 70% aller Neurone."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Welche Funktion hat der Hypothalamus in Verbindung mit der Hypophyse?",
+        "correct_answer": "Er steuert zahlreiche Körperfunktionen (z. B. Temperatur, Wasserhaushalt) und dient als zentrales Bindeglied zwischen Nerven- und Hormonsystem.",
+        "hint": "Er regelt das innere Milieu."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_14",
+    "title": "Vegetative Regulation und Schlafphasen",
+    "scenario": "Herr Hadad (68 J.) liegt auf der Stroke Unit und hatte eine sehr unruhige Nacht. Mike Thiele stellt bei der Vitalzeichenkontrolle fest, dass Herr Hadad schwitzt und sein Puls leicht erhöht ist, was auf eine Dominanz des Sympathikus hindeutet. Mike weiß, dass Schlaf für die Regeneration entscheidend ist und dieser in REM-Phasen (paradoxer Schlaf) mit schnellen Augenbewegungen und Non-REM-Phasen (orthodoxer Schlaf) abläuft.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "In welche 4 Stadien wird die Non-REM-Schlafphase nach der Schlaftiefe eingeteilt?",
+        "correct_answer": "1. Übergangsstadium, 2. Leichter Schlaf, 3. Mittlerer Schlaf, 4. Tiefer Schlaf.",
+        "hint": "Die Schlaftiefe nimmt von 1 bis 4 zu."
+      },
+      {
+        "type": "mc",
+        "context": "fallabhängig",
+        "question": "Welcher Teil des vegetativen Nervensystems ist bei Herrn Hadad für die Zunahme der Herzfrequenz und das Schwitzen verantwortlich?",
+        "options": [
+          "Parasympathikus",
+          "Sympathikus",
+          "Somatisches Nervensystem",
+          "Kleinhirn"
+        ],
+        "correct_answer": 1,
+        "hint": "Dieses System dominiert bei Aktivität und Stress ('flight or fight')."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Erläutere die gegensätzliche Wirkung von Sympathikus und Parasympathikus auf den Magen-Darm-Trakt.",
+        "correct_answer": "Der Sympathikus vermindert Tonus und Bewegungen (Sekretionshemmung), während der Parasympathikus Tonus, Bewegungen und die Sekretion steigert ('rest and digest').",
+        "hint": "Denke an Verdauung vs. Aktivität."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welches Merkmal kennzeichnet die REM-Schlafphase zusätzlich zu den schnellen Augenbewegungen?",
+        "options": [
+          "Absinken der Körpertemperatur",
+          "Vollständige Wachheit",
+          "Herabgesetzter Muskeltonus und häufiges Träumen",
+          "Ausschließlich tiefer Schlaf ohne Träume"
+        ],
+        "correct_answer": 2,
+        "hint": "Es ist die 'paradoxe' Phase."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Welcher Hirnnerv steuert die mimische Muskulatur und wie heißt die Störung bei seiner Lähmung?",
+        "correct_answer": "Der Nervus facialis; die Störung heißt Fazialisparese.",
+        "hint": "Er ist ein wichtiger Hirnnerv für das Gesicht."
+      }
+    ]
+  },
+  {
+    "case_id": "K27_CASE_15",
+    "title": "Systematik der Rehabilitation und Teilhabe",
+    "scenario": "Ein Patient hat alle Phasen der Akut- und Frührehabilitation durchlaufen. Er befindet sich nun im Gespräch über seine langfristige Perspektive. Die Rehabilitation wird laut WHO (2021) als eine Reihe von Interventionen definiert, die darauf abzielen, die Funktionsfähigkeit zu optimieren und Behinderungen in Interaktion mit der Umgebung zu reduzieren. Das Hauptziel ist die Wiederherstellung von Fähigkeiten und Gesundheit, um ein weitestgehend selbstständiges und selbstbestimmtes Leben zu ermöglichen.",
+    "questions": [
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne die 3 Hauptformen der Rehabilitation und ordne ihnen jeweils ein Ziel zu.",
+        "correct_answer": "1. Medizinische Reha (Behinderung mildern/vorbeugen), 2. Beruflich-schulische Reha (Integration ins Arbeitsleben), 3. Soziale Reha (Teilhabe am sozialen Leben/Eingliederung in die Umwelt).",
+        "hint": "Denke an Gesundheit, Job und Gesellschaft."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welcher Barthel-Index-Wert ist eine Voraussetzung für die Aufnahme in die Phase C der Rehabilitation?",
+        "options": [
+          "0 bis 20 Punkte",
+          "35 bis 65 Punkte",
+          "70 bis 100 Punkte",
+          "Immer 100 Punkte"
+        ],
+        "correct_answer": 1,
+        "hint": "Patienten müssen bereits kooperativ sein."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Beschreibe die Phase F des neurologischen Phasenmodells.",
+        "correct_answer": "Phase F ist die Langzeitpflege (Betreuungs- und Erhaltungsphase), in der dauerhaft unterstützende Leistungen und aktivierende Pflege im Vordergrund stehen.",
+        "hint": "Es ist die finale Phase im Modell."
+      },
+      {
+        "type": "mc",
+        "context": "fallunabhängig",
+        "question": "Welche Rehabilitationsform bietet Leistungen wie 'barrierefreie Zugänge zu Gebäuden'?",
+        "options": [
+          "Medizinische Rehabilitation",
+          "Berufliche Rehabilitation",
+          "Soziale Rehabilitation",
+          "Schulische Rehabilitation"
+        ],
+        "correct_answer": 2,
+        "hint": "Es geht um die Teilhabe in der Gemeinschaft."
+      },
+      {
+        "type": "nennen_offen",
+        "context": "fallunabhängig",
+        "question": "Nenne zwei Beispiele für Hilfsmittel im Lebensbereich 'Ernährung'.",
+        "correct_answer": "1. Spezielles Geschirr, 2. Besteck mit breiteren Griffen.",
+        "hint": "Diese kompensieren motorische Defizite beim Essen."
+      }
+    ]
+  }
+]
