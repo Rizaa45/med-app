@@ -5,10 +5,10 @@
 
 let currentQuestions = [];
 let currentIndex = 0;
-let currentModuleId = 9; // Default auf 9 für Klausurvorbereitung
+let currentModuleId = 9; 
 let currentMode = 'classic'; 
 let activeCase = null;
-let userAnswersLog = []; // Speichert Antworten für die KI-Notengebung
+let userAnswersLog = []; 
 
 window.onload = () => {
     const isDashboard = document.getElementById('total-percent') !== null;
@@ -48,60 +48,84 @@ async function loadModuleData(id) {
     try {
         const response = await fetch(jsonPath);
         const data = await response.json();
+        
+        // Titel setzen
         document.getElementById('mod-title').innerText = data.moduleName || `Modul ${id}`;
-        // PDF Render Logik hier... (wie gehabt)
+        
+        // Lerninhalte (PDF-Liste) rendern
+        const pdfList = document.getElementById('pdf-list');
+        if (pdfList && data.pdfs) {
+            pdfList.innerHTML = data.pdfs.map(pdf => `
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 flex justify-between items-center hover:shadow-md transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-red-50 text-red-500 p-3 rounded-xl font-bold text-xs tracking-tighter">PDF</div>
+                        <span class="font-bold text-slate-700">${pdf.name}</span>
+                    </div>
+                    <a href="${pdf.url}" target="_blank" class="bg-slate-100 hover:bg-indigo-600 hover:text-white px-4 py-2 rounded-lg text-xs font-black uppercase transition-all">Öffnen</a>
+                </div>
+            `).join('');
+        }
     } catch (err) {
-        console.log("Basisdaten geladen oder übersprungen.");
+        console.error("Fehler beim Laden der Moduldaten:", err);
+    }
+}
+
+// --- TAB WECHSEL ---
+function switchTab(tab) {
+    const inhalt = document.getElementById('section-inhalt');
+    const quiz = document.getElementById('section-quiz');
+    const btnInhalt = document.getElementById('tab-inhalt');
+    const btnQuiz = document.getElementById('tab-quiz');
+
+    if (tab === 'inhalt') {
+        inhalt.classList.remove('hidden');
+        quiz.classList.add('hidden');
+        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
+    } else {
+        inhalt.classList.add('hidden');
+        quiz.classList.remove('hidden');
+        btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+        btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
     }
 }
 
 // --- QUIZ MODUS STARTEN ---
 async function startQuizMode(mode) {
     currentMode = mode;
-    userAnswersLog = []; // Reset Log
+    userAnswersLog = [];
     document.getElementById('quiz-selection').classList.add('hidden');
     document.getElementById('quiz-container').classList.remove('hidden');
 
     try {
         if (mode === 'drill') {
-            // Lade 150 Fragen, wähle 30 zufällige
             const response = await fetch('data/klausur27_questions.json');
             const allQuestions = await response.json();
-            // Shuffle und nimm 30
             currentQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 30);
             document.getElementById('scenario-display').classList.add('hidden');
         
         } else if (mode === 'simulator') {
-            // Lade 1 Fall + 2 Drill Fragen
             const casesResp = await fetch('data/klausur27_cases.json');
             const drillResp = await fetch('data/klausur27_questions.json');
             const cases = await casesResp.json();
             const drills = await drillResp.json();
 
-            // 1. Zufälliger Fall
             activeCase = cases[Math.floor(Math.random() * cases.length)];
-            const caseQuestions = activeCase.questions; // ca 12 Stück
-
-            // 2. Zwei zufällige Drill Fragen
             const randomDrills = drills.sort(() => 0.5 - Math.random()).slice(0, 2);
+            currentQuestions = [...activeCase.questions, ...randomDrills];
 
-            // 3. Kombinieren
-            currentQuestions = [...caseQuestions, ...randomDrills];
-
-            // UI Setup
             document.getElementById('scenario-display').classList.remove('hidden');
             document.getElementById('scenario-text').innerText = activeCase.scenario;
             document.getElementById('setting-badge').innerText = "Klausur 27.02.26";
 
         } else if (mode === 'cases') {
-            const response = await fetch(`data/mod${currentModuleId}_cases_master.json`); // Oder klausur27_cases
+            const response = await fetch(`data/mod${currentModuleId}_cases_master.json`);
             const data = await response.json();
             activeCase = data[Math.floor(Math.random() * data.length)];
             currentQuestions = activeCase.questions;
             document.getElementById('scenario-display').classList.remove('hidden');
             document.getElementById('scenario-text').innerText = activeCase.scenario;
         } else {
-            // Classic
             const response = await fetch(`data/mod_${currentModuleId}.json`);
             const data = await response.json();
             currentQuestions = data.questions;
@@ -114,7 +138,6 @@ async function startQuizMode(mode) {
 
     } catch (err) {
         alert("Fehler beim Laden: " + err.message);
-        console.error(err);
     }
 }
 
@@ -126,22 +149,10 @@ function showQuestion() {
     }
 
     const q = currentQuestions[currentIndex];
-    
-    // UI Updates
     document.getElementById('q-current').innerText = currentIndex + 1;
     document.getElementById('question-text').innerText = q.question || q.q;
     document.getElementById('type-badge').innerText = q.type ? q.type.toUpperCase() : "FRAGE";
     
-    // Bild-Logik
-    const imgContainer = document.getElementById('image-container') || createImageContainer();
-    if (q.image) {
-        imgContainer.innerHTML = `<img src="${q.image}" class="max-h-64 rounded-xl mx-auto mb-6 shadow-md border border-slate-200">`;
-        imgContainer.classList.remove('hidden');
-    } else {
-        imgContainer.classList.add('hidden');
-    }
-
-    // Feedback verstecken & Grid leeren
     document.getElementById('feedback').classList.add('hidden');
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
@@ -153,16 +164,6 @@ function showQuestion() {
     }
 }
 
-function createImageContainer() {
-    const div = document.createElement('div');
-    div.id = 'image-container';
-    div.className = "hidden";
-    const parent = document.getElementById('question-text').parentNode;
-    parent.insertBefore(div, document.getElementById('question-text'));
-    return div;
-}
-
-// --- RENDER FUNKTIONEN ---
 function renderMCQuestion(q, grid) {
     q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
@@ -193,7 +194,6 @@ function renderOpenQuestion(q, grid) {
     grid.appendChild(container);
 }
 
-// --- ANTWORT LOGIK ---
 function revealOpenSol() {
     document.getElementById('sol-btn').classList.add('hidden');
     document.getElementById('sol-area').classList.remove('hidden');
@@ -201,36 +201,18 @@ function revealOpenSol() {
 
 function handleAnswer(selectedIndex, btn, q) {
     const isCorrect = selectedIndex === q.correct_answer;
-    
-    // Log für KI
-    userAnswersLog.push({
-        question: q.question,
-        userAnswer: q.options[selectedIndex],
-        correct: isCorrect,
-        type: 'mc'
-    });
-
-    // Visuelles Feedback
+    userAnswersLog.push({ question: q.question, userAnswer: q.options[selectedIndex], correct: isCorrect, type: 'mc' });
     const all = document.querySelectorAll('#options-grid button');
     all.forEach(b => b.disabled = true);
     btn.classList.add(isCorrect ? 'bg-green-100' : 'bg-red-100');
     btn.classList.add(isCorrect ? 'border-green-500' : 'border-red-500');
-    
     processResult(isCorrect, q);
 }
 
 function handleSelfCheck(isCorrect) {
     const q = currentQuestions[currentIndex];
     const userText = document.getElementById('user-open-answer').value;
-    
-    // Log für KI
-    userAnswersLog.push({
-        question: q.question,
-        userAnswer: userText,
-        correct: isCorrect,
-        type: 'open'
-    });
-
+    userAnswersLog.push({ question: q.question, userAnswer: userText, correct: isCorrect, type: 'open' });
     processResult(isCorrect, q);
 }
 
@@ -238,20 +220,16 @@ function processResult(isCorrect, q) {
     const feedback = document.getElementById('feedback');
     const txt = document.getElementById('feedback-text');
     
-    // DRILL MODE LOGIC: Wiederholung bei Fehler
     if (!isCorrect && currentMode === 'drill') {
         txt.innerText = "WIEDERHOLUNG!";
         txt.className = "text-orange-600 font-black text-xl uppercase";
-        document.getElementById('hint-text').innerText = "Diese Frage wird hinten angestellt, bis du sie kannst.";
-        // Frage hinten anfügen
         currentQuestions.push(q);
-        document.getElementById('q-total').innerText = currentQuestions.length; // Update Counter
+        document.getElementById('q-total').innerText = currentQuestions.length;
     } else {
         txt.innerText = isCorrect ? "KORREKT" : "FALSCH";
         txt.className = isCorrect ? "text-green-600 font-black text-xl uppercase" : "text-red-600 font-black text-xl uppercase";
-        document.getElementById('hint-text').innerText = q.hint || "";
     }
-
+    document.getElementById('hint-text').innerText = q.hint || "";
     feedback.classList.remove('hidden');
 }
 
@@ -260,70 +238,34 @@ function nextQuestion() {
     showQuestion();
 }
 
-// --- FINISH & GRADING ---
+function exitQuiz() {
+    document.getElementById('quiz-selection').classList.remove('hidden');
+    document.getElementById('quiz-container').classList.add('hidden');
+}
+
 async function finishQuiz() {
     const container = document.getElementById('quiz-container');
-    
     if (currentMode === 'simulator') {
-        // KI Notengebung starten
-        container.innerHTML = `
-            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
-                <div class="animate-bounce text-6xl mb-6">🤖</div>
-                <h2 class="text-2xl font-black text-slate-900 uppercase">Klausur eingereicht</h2>
-                <p class="text-slate-500 mt-2 mb-8">Prodigy berechnet deine Note (1-6)...</p>
-                <div id="ai-grading-result" class="max-w-xl mx-auto text-left space-y-4"></div>
-            </div>`;
-        
+        container.innerHTML = `<div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100"><div class="animate-bounce text-6xl mb-6">🤖</div><h2 class="text-2xl font-black text-slate-900 uppercase">Klausur eingereicht</h2><div id="ai-grading-result" class="max-w-xl mx-auto text-left space-y-4"></div></div>`;
         await calculateExamGrade();
     } else {
-        // Standard Ende
-        container.innerHTML = `
-            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
-                <div class="text-6xl mb-6">🏁</div>
-                <h2 class="text-3xl font-black text-slate-900 uppercase">Training Beendet</h2>
-                <button onclick="location.reload()" class="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold">Zurück</button>
-            </div>`;
+        container.innerHTML = `<div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100"><div class="text-6xl mb-6">🏁</div><h2 class="text-3xl font-black text-slate-900 uppercase">Training Beendet</h2><button onclick="location.reload()" class="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold">Zurück</button></div>`;
     }
 }
 
-async function calculateExamGrade() {
-    const API_KEY = "DEIN_KEY_HIER"; // Füge hier deinen Key ein
-    const resultDiv = document.getElementById('ai-grading-result');
+// PRODIGY SIDEBAR LOGIK
+function toggleProdigy() {
+    const sidebar = document.getElementById('prodigy-sidebar');
+    const overlay = document.getElementById('prodigy-overlay');
+    const isOpen = sidebar.style.transform === 'translateX(0%)';
     
-    // Daten für Prompt aufbereiten
-    const summary = userAnswersLog.map((log, i) => 
-        `F${i+1}: ${log.question.substring(0, 50)}... | Antwort: ${log.userAnswer} | War: ${log.correct ? "Richtig" : "Falsch"}`
-    ).join('\n');
-
-    const PROMPT = `
-    Handle als strenger deutscher Lehrer. Bewerte diese Klausur-Leistung (Notenschlüssel 1-6).
-    
-    Daten:
-    ${summary}
-    
-    Ausgabeformat:
-    <h1>Note: [X]</h1>
-    <p>Kurzes Feedback (max 3 Sätze).</p>
-    `;
-
-    try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: PROMPT }] }] })
-        });
-        const data = await response.json();
-        const html = data.candidates[0].content.parts[0].text;
-        
-        resultDiv.innerHTML = `<div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 prose prose-indigo">${html}</div>
-        <button onclick="location.reload()" class="w-full mt-4 bg-indigo-600 text-white py-3 rounded-xl font-bold">Neue Klausur</button>`;
-        
-    } catch (e) {
-        resultDiv.innerHTML = `<p class="text-red-500">Fehler bei der Benotung. Bitte Netzwerk prüfen.</p>`;
+    if(isOpen) {
+        sidebar.style.transform = 'translateX(100%)';
+        overlay.classList.add('hidden');
+        overlay.style.opacity = '0';
+    } else {
+        sidebar.style.transform = 'translateX(0%)';
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.style.opacity = '1', 10);
     }
 }
-
-// Prodigy Sidebar (bleibt gleich)
-function toggleProdigy() { /* ... wie vorher ... */ }
-function askProdigy() { /* ... wie vorher ... */ }
-function switchTab(t) { /* ... wie vorher ... */ }
