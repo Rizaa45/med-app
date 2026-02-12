@@ -11,6 +11,10 @@
         .fade-in { animation: fadeIn 0.5s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .scenario-box { max-height: 250px; overflow-y: auto; scrollbar-width: thin; }
+        /* Custom Scrollbar für Szenarien */
+        .scenario-box::-webkit-scrollbar { width: 6px; }
+        .scenario-box::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
+        .scenario-box::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
     </style>
 </head>
 <body class="bg-[#fcfdfe] min-h-screen font-['Inter'] overflow-x-hidden">
@@ -27,7 +31,7 @@
             </button>
             <div class="flex flex-col items-center text-center">
                 <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tight leading-none tracking-tighter">Lädt...</span>
-                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.2.6</span>
+                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.2.7</span>
             </div>
             <div class="w-10"></div>
         </div>
@@ -45,37 +49,74 @@
 
         <div id="section-quiz" class="hidden">
             
-            <div id="quiz-selection" class="fade-in grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div onclick="startQuizMode('classic')" class="bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-indigo-500 transition-all cursor-pointer group shadow-sm">
-                    <div class="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+            <div id="quiz-selection" class="fade-in space-y-6 mb-8">
+                
+                <div class="bg-indigo-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-xl border border-indigo-700/50">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-16 -mt-16 pointer-events-none"></div>
+                    
+                    <div class="relative z-10 mb-6">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                            <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-300">Prüfungstermin: 27.02.2026</h3>
+                        </div>
+                        <h2 class="text-2xl font-black tracking-tight">Klausur-Vorbereitung</h2>
                     </div>
-                    <h3 class="font-black text-slate-900 uppercase tracking-tight text-lg">Klassisches Quiz</h3>
-                    <p class="text-slate-500 text-sm mt-2 font-medium">Einzelne Fragen zu allen Themen des Moduls.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                        <button onclick="startQuizMode('drill')" class="bg-white/10 hover:bg-white/20 border border-white/10 p-4 rounded-2xl text-left transition-all group backdrop-blur-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-indigo-500 text-white p-2 rounded-lg group-hover:scale-110 transition-transform shadow-lg">🏋️</span>
+                                <span class="font-bold text-sm">Der 30er Drill</span>
+                            </div>
+                            <p class="text-xs text-indigo-200 leading-relaxed">30 zufällige Fragen. Fehler werden sofort wiederholt (Endlosschleife), bis sie sitzen.</p>
+                        </button>
+
+                        <button onclick="startQuizMode('simulator')" class="bg-gradient-to-br from-orange-500 to-red-600 border border-orange-400/30 p-4 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-lg group">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-white text-orange-600 p-2 rounded-lg shadow-sm">🎓</span>
+                                <span class="font-bold text-sm">Klausur-Simulator</span>
+                            </div>
+                            <p class="text-xs text-white/90 leading-relaxed">Echte Bedingungen: 1 Fallstudie + 2 Zusatzfragen. Inklusive KI-Note (1-6).</p>
+                        </button>
+                    </div>
                 </div>
 
-                <div onclick="startQuizMode('cases')" class="bg-white p-8 rounded-3xl border-2 border-slate-100 hover:border-indigo-500 transition-all cursor-pointer group shadow-sm">
-                    <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 mb-4 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div onclick="startQuizMode('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer group">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-500 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-700">Basis-Wissen</h3>
+                        </div>
+                        <p class="text-xs text-slate-400">Standardfragen des Moduls ohne Szenarien.</p>
                     </div>
-                    <h3 class="font-black text-slate-900 uppercase tracking-tight text-lg">Fallbeispiel-Analyse</h3>
-                    <p class="text-slate-500 text-sm mt-2 font-medium">Ein Szenario, 12 tiefergehende Folgefragen.</p>
+
+                    <div onclick="startQuizMode('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer group">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-700">Fall-Archiv</h3>
+                        </div>
+                        <p class="text-xs text-slate-400">Durchstöbere alle 24 Szenarien einzeln.</p>
+                    </div>
                 </div>
             </div>
 
             <div id="quiz-container" class="hidden">
-                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white shadow-xl border-b-4 border-orange-500">
-                    <div class="flex items-center gap-2 mb-4">
+                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white shadow-xl border-b-4 border-orange-500 relative overflow-hidden">
+                    <div class="flex items-center gap-2 mb-4 relative z-10">
                         <span id="setting-badge" class="bg-orange-500 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">Setting</span>
                         <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Aktuelle Fallsituation</h4>
                     </div>
-                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic scenario-box"></p>
+                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic scenario-box relative z-10"></p>
                 </div>
 
                 <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 px-8 py-4 flex justify-between items-center text-white">
-                        <span class="text-[10px] font-black tracking-widest uppercase">Frage <span id="q-current">1</span>/<span id="q-total">12</span></span>
-                        <button onclick="exitQuiz()" class="text-[10px] font-bold text-slate-400 hover:text-white uppercase tracking-widest">Abbrechen</button>
+                        <span class="text-[10px] font-black tracking-widest uppercase">Frage <span id="q-current">1</span>/<span id="q-total">--</span></span>
+                        <button onclick="exitQuiz()" class="text-[10px] font-bold text-slate-400 hover:text-white uppercase tracking-widest transition-colors">Beenden</button>
                     </div>
                     <div class="p-8 md:p-12">
                         <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Analyse</div>
@@ -84,14 +125,51 @@
                         
                         <div id="feedback" class="mt-8 p-6 rounded-2xl hidden border-l-8 bg-slate-50 shadow-inner">
                             <p id="feedback-text" class="font-black text-lg uppercase mb-1"></p>
-                            <p id="hint-text" class="text-slate-600 text-xs italic"></p>
-                            <button onclick="nextQuestion()" class="mt-6 w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all shadow-lg uppercase text-xs tracking-widest">Nächste Frage</button>
+                            <p id="hint-text" class="text-slate-600 text-xs italic mb-4"></p>
+                            <button onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all shadow-lg uppercase text-xs tracking-widest">Weiter</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 w-16 h-16 bg-indigo-600 text-white rounded-2xl shadow-[0_15px_40px_rgba(79,70,229,0.4)] hover:scale-110 active:scale-95 transition-all z-[100] flex items-center justify-center border-2 border-indigo-400 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+    </button>
+
+    <div id="prodigy-sidebar" class="fixed top-0 right-0 h-full w-full max-w-[400px] bg-slate-900 shadow-[-20px_0_60px_rgba(0,0,0,0.5)] z-[110] translate-x-full transition-transform duration-500 ease-in-out flex flex-col border-l border-indigo-500/20">
+        <div class="p-8 bg-indigo-600 text-white shadow-lg">
+            <div class="flex justify-between items-center mb-2">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center font-black italic">P</div>
+                    <h4 class="font-black uppercase tracking-widest text-lg">Prodigy AI</h4>
+                </div>
+                <button onclick="toggleProdigy()" class="p-2 hover:bg-white/10 rounded-xl transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <p class="text-[10px] text-indigo-200 font-bold uppercase tracking-[0.3em]">Exam Analysis Engine</p>
+        </div>
+
+        <div id="prodigy-chat-content" class="flex-1 overflow-y-auto p-8 space-y-6">
+            <div class="bg-indigo-500/10 border border-indigo-500/20 rounded-2xl p-5 text-sm text-indigo-100 leading-relaxed italic">
+                "Ich überwache deine Prüfungsvorbereitung. Frag mich, wenn du bei einer offenen Frage unsicher bist."
+            </div>
+            <div id="prodigy-response" class="text-sm text-slate-300 leading-relaxed space-y-4"></div>
+        </div>
+
+        <div class="p-8 border-t border-slate-800 bg-slate-950/50">
+            <button onclick="askProdigy()" id="prodigy-btn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all shadow-lg flex items-center justify-center gap-3 group">
+                <span>Antwort prüfen lassen</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[105] hidden opacity-0 transition-opacity duration-500"></div>
 
     <script src="app.js"></script>
 </body>
