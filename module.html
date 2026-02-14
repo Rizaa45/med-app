@@ -40,11 +40,12 @@
         </div>
 
         <div id="section-quiz" class="hidden">
+            
             <div id="quiz-selection" class="fade-in space-y-6 mb-8">
                 <div class="bg-indigo-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-xl border border-indigo-700/50">
                     <h2 class="text-2xl font-black tracking-tight mb-6">Klausur-Vorbereitung</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
-                        <button onclick="startQuizMode('drill')" class="bg-white/10 hover:bg-white/20 border border-white/10 p-5 rounded-2xl text-left transition-all group">
+                        <button onclick="initQuiz('drill')" class="bg-white/10 hover:bg-white/20 border border-white/10 p-5 rounded-2xl text-left transition-all group">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="bg-indigo-500 text-white w-10 h-10 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
                                     <i class="fas fa-dumbbell"></i>
@@ -54,7 +55,7 @@
                             <p class="text-xs text-indigo-200 leading-relaxed">Zufällige Fragen im Endlosmodus.</p>
                         </button>
 
-                        <button onclick="startQuizMode('simulator')" class="bg-gradient-to-br from-orange-500 to-red-600 p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-lg group">
+                        <button onclick="initQuiz('simulator')" class="bg-gradient-to-br from-orange-500 to-red-600 p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-lg group">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="bg-white text-orange-600 w-10 h-10 flex items-center justify-center rounded-xl shadow-sm">
                                     <i class="fas fa-graduation-cap"></i>
@@ -67,7 +68,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div onclick="startQuizMode('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 cursor-pointer group transition-all">
+                    <div onclick="initQuiz('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 cursor-pointer group transition-all">
                         <div class="flex items-center gap-4 mb-2">
                             <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                                 <i class="fas fa-book"></i>
@@ -75,7 +76,7 @@
                             <h3 class="font-bold text-slate-700">Basis-Wissen</h3>
                         </div>
                     </div>
-                    <div onclick="startQuizMode('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-orange-400 cursor-pointer group transition-all">
+                    <div onclick="initQuiz('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-orange-400 cursor-pointer group transition-all">
                         <div class="flex items-center gap-4 mb-2">
                             <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
                                 <i class="fas fa-folder-open"></i>
@@ -86,14 +87,30 @@
                 </div>
             </div>
 
-            <div id="quiz-container" class="hidden">
-                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white border-b-4 border-orange-500">
-                    <div class="flex items-center gap-2 mb-4">
-                        <i class="fas fa-file-alt text-orange-500 text-xs"></i>
-                        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Aktuelle Fallsituation</h4>
+            <div id="quiz-start-screen" class="hidden fade-in">
+                <div class="bg-white rounded-[2.5rem] p-10 shadow-xl border border-slate-200 text-center max-w-2xl mx-auto">
+                    <div id="rules-icon" class="w-20 h-20 mx-auto bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-inner">
+                        <i class="fas fa-info"></i>
                     </div>
-                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic"></p>
+                    <h2 id="rules-title" class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">Modus Regeln</h2>
+                    <div id="rules-content" class="text-slate-500 text-sm leading-relaxed mb-8 space-y-2">
+                        </div>
+                    <button onclick="startRealQuiz()" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all shadow-lg uppercase tracking-widest text-xs">
+                        Starten <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button onclick="exitQuiz()" class="block w-full mt-4 text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-slate-600">Abbrechen</button>
                 </div>
+            </div>
+
+            <div id="quiz-container" class="hidden">
+                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white border-b-4 border-orange-500 relative overflow-hidden">
+                     <div class="flex items-center gap-2 mb-4 relative z-10">
+                        <span id="setting-badge" class="bg-orange-500 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">Setting</span>
+                        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Fallstudie</h4>
+                    </div>
+                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic relative z-10"></p>
+                </div>
+
                 <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 px-8 py-4 flex justify-between items-center text-white text-[10px] font-black uppercase tracking-widest">
                         <span>Frage <span id="q-current">1</span>/<span id="q-total">--</span></span>
@@ -104,11 +121,13 @@
                     <div class="p-8 md:p-12">
                         <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Analyse</div>
                         <h2 id="question-text" class="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-tight"></h2>
+                        
                         <div id="options-grid" class="grid gap-3"></div>
+                        
                         <div id="feedback" class="mt-8 p-6 rounded-2xl hidden border-l-8 bg-slate-50">
                             <p id="feedback-text" class="font-black text-lg uppercase mb-1"></p>
                             <p id="hint-text" class="text-slate-600 text-xs italic mb-4"></p>
-                            <button onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2">
+                            <button id="next-btn" onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all">
                                 <span>Weiter</span> <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
@@ -148,7 +167,6 @@
             </div>
         </div>
     </div>
-
     <div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[105] hidden opacity-0 transition-opacity duration-500"></div>
 
     <script src="app.js"></script>
