@@ -7,9 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #fcfdfe; }
+        .fade-in { animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
 </head>
-<body class="bg-[#fcfdfe] min-h-screen font-['Inter'] overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden">
     
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -20,8 +25,8 @@
                 <span class="hidden sm:inline text-sm uppercase tracking-wider">Dashboard</span>
             </button>
             <div class="flex flex-col items-center text-center">
-                <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Lädt...</span>
-                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.3.0</span>
+                <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 9: Analyse</span>
+                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.4.0</span>
             </div>
             <div class="w-10"></div>
         </div>
@@ -29,107 +34,78 @@
 
     <div class="max-w-4xl mx-auto px-6 py-8">
         <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-8 border border-slate-200">
-            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm">Lerninhalte</button>
+            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50">Lerninhalte</button>
             <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500">Prüfungsvorbereitung</button>
         </div>
 
-        <div id="section-inhalt" class="space-y-6">
+        <div id="section-inhalt" class="space-y-6 fade-in">
             <div id="summary-dropdown-container"></div>
             <div id="summary-display-area" class="hidden"></div>
-            <div id="pdf-list" class="grid gap-4"></div>
+            
+            <div class="flex items-center gap-4 py-4">
+                <div class="h-px flex-1 bg-slate-200"></div>
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Original Handouts</span>
+                <div class="h-px flex-1 bg-slate-200"></div>
+            </div>
+            
+            <div id="pdf-list" class="grid gap-4">
+                </div>
         </div>
 
-        <div id="section-quiz" class="hidden">
-            
-            <div id="quiz-selection" class="fade-in space-y-6 mb-8">
-                <div class="bg-indigo-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-xl border border-indigo-700/50">
+        <div id="section-quiz" class="hidden space-y-8 fade-in">
+            <div id="quiz-selection" class="space-y-6">
+                <div class="bg-indigo-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden shadow-xl border border-indigo-700/50">
                     <h2 class="text-2xl font-black tracking-tight mb-6">Klausur-Vorbereitung</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
-                        <button onclick="initQuiz('drill')" class="bg-white/10 hover:bg-white/20 border border-white/10 p-5 rounded-2xl text-left transition-all group">
+                        <button onclick="startQuizMode('drill')" class="bg-white/10 hover:bg-white/20 border border-white/10 p-5 rounded-2xl text-left transition-all group">
                             <div class="flex items-center gap-3 mb-2">
-                                <span class="bg-indigo-500 text-white w-10 h-10 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-dumbbell"></i>
-                                </span>
+                                <span class="bg-indigo-500 text-white w-10 h-10 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform"><i class="fas fa-dumbbell"></i></span>
                                 <span class="font-bold">Der 30er Drill</span>
                             </div>
-                            <p class="text-xs text-indigo-200 leading-relaxed">Zufällige Fragen im Endlosmodus.</p>
+                            <p class="text-xs text-indigo-200">Wiederhole Fragen bis sie sitzen.</p>
                         </button>
-
-                        <button onclick="initQuiz('simulator')" class="bg-gradient-to-br from-orange-500 to-red-600 p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-lg group">
+                        <button onclick="startQuizMode('simulator')" class="bg-gradient-to-br from-orange-500 to-red-600 p-5 rounded-2xl text-left transition-all hover:scale-[1.02] shadow-lg group">
                             <div class="flex items-center gap-3 mb-2">
-                                <span class="bg-white text-orange-600 w-10 h-10 flex items-center justify-center rounded-xl shadow-sm">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </span>
-                                <span class="font-bold">Klausur-Simulator</span>
+                                <span class="bg-white text-orange-600 w-10 h-10 flex items-center justify-center rounded-xl shadow-sm"><i class="fas fa-graduation-cap"></i></span>
+                                <span class="font-bold text-white">Simulator</span>
                             </div>
-                            <p class="text-xs text-white/90 leading-relaxed">Echte Bedingungen mit KI-Note.</p>
+                            <p class="text-xs text-white/90">Echte Bedingungen mit KI-Note.</p>
                         </button>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div onclick="initQuiz('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 cursor-pointer group transition-all">
-                        <div class="flex items-center gap-4 mb-2">
-                            <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h3 class="font-bold text-slate-700">Basis-Wissen</h3>
-                        </div>
+                    <div onclick="startQuizMode('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 cursor-pointer group transition-all flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-indigo-600 group-hover:text-white transition-all"><i class="fas fa-book"></i></div>
+                        <div><h3 class="font-bold text-slate-700">Basis-Wissen</h3><p class="text-[10px] text-slate-400 font-bold uppercase">Standard Katalog</p></div>
                     </div>
-                    <div onclick="initQuiz('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-orange-400 cursor-pointer group transition-all">
-                        <div class="flex items-center gap-4 mb-2">
-                            <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                                <i class="fas fa-folder-open"></i>
-                            </div>
-                            <h3 class="font-bold text-slate-700">Fall-Archiv</h3>
-                        </div>
+                    <div onclick="startQuizMode('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-orange-400 cursor-pointer group transition-all flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-500 group-hover:text-white transition-all"><i class="fas fa-folder-open"></i></div>
+                        <div><h3 class="font-bold text-slate-700">Fall-Archiv</h3><p class="text-[10px] text-slate-400 font-bold uppercase">Pflegesituationen</p></div>
                     </div>
-                </div>
-            </div>
-
-            <div id="quiz-start-screen" class="hidden fade-in">
-                <div class="bg-white rounded-[2.5rem] p-10 shadow-xl border border-slate-200 text-center max-w-2xl mx-auto">
-                    <div id="rules-icon" class="w-20 h-20 mx-auto bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-inner">
-                        <i class="fas fa-info"></i>
-                    </div>
-                    <h2 id="rules-title" class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tight">Modus Regeln</h2>
-                    <div id="rules-content" class="text-slate-500 text-sm leading-relaxed mb-8 space-y-2">
-                        </div>
-                    <button onclick="startRealQuiz()" class="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-indigo-600 transition-all shadow-lg uppercase tracking-widest text-xs">
-                        Starten <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                    <button onclick="exitQuiz()" class="block w-full mt-4 text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-slate-600">Abbrechen</button>
                 </div>
             </div>
 
             <div id="quiz-container" class="hidden">
-                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white border-b-4 border-orange-500 relative overflow-hidden">
-                     <div class="flex items-center gap-2 mb-4 relative z-10">
-                        <span id="setting-badge" class="bg-orange-500 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">Setting</span>
-                        <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Fallstudie</h4>
-                    </div>
-                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic relative z-10"></p>
+                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white border-b-4 border-orange-500">
+                    <span id="setting-badge" class="bg-orange-500 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest mb-4 inline-block">Setting</span>
+                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic"></p>
                 </div>
 
                 <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
                     <div class="bg-slate-900 px-8 py-4 flex justify-between items-center text-white text-[10px] font-black uppercase tracking-widest">
                         <span>Frage <span id="q-current">1</span>/<span id="q-total">--</span></span>
-                        <button onclick="exitQuiz()" class="hover:text-red-400 transition-colors">
-                            <i class="fas fa-times-circle mr-1"></i> Beenden
-                        </button>
+                        <button onclick="location.reload()" class="hover:text-red-400 transition-colors">Beenden</button>
                     </div>
                     <div class="p-8 md:p-12">
                         <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Analyse</div>
                         <h2 id="question-text" class="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-tight"></h2>
-                        
                         <div id="options-grid" class="grid gap-3"></div>
                         
-                        <div id="feedback" class="mt-8 p-6 rounded-2xl hidden border-l-8 bg-slate-50">
+                        <div id="feedback" class="mt-8 p-6 rounded-2xl hidden border-l-8 bg-slate-50 border-indigo-500">
                             <p id="feedback-text" class="font-black text-lg uppercase mb-1"></p>
                             <p id="hint-text" class="text-slate-600 text-xs italic mb-4"></p>
-                            <button id="next-btn" onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all">
-                                <span>Weiter</span> <i class="fas fa-arrow-right"></i>
-                            </button>
+                            <button id="next-btn" onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all shadow-lg">Weiter <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -137,37 +113,29 @@
         </div>
     </div>
 
-    <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 w-16 h-16 bg-indigo-600 text-white rounded-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all z-[100] flex items-center justify-center border-2 border-indigo-400 group">
-        <i class="fas fa-robot text-2xl group-hover:rotate-12 transition-transform"></i>
-    </button>
-
     <div id="prodigy-sidebar" class="fixed top-0 right-0 h-full w-full max-w-[420px] bg-white shadow-2xl z-[110] translate-x-full transition-transform duration-500 flex flex-col">
         <div class="p-6 bg-slate-900 text-white flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-inner">
-                    <i class="fas fa-brain"></i>
-                </div>
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-inner"><i class="fas fa-brain"></i></div>
                 <h4 class="font-black uppercase tracking-widest text-sm">Prodigy AI</h4>
             </div>
-            <button onclick="toggleProdigy()" class="text-slate-400 hover:text-white">
-                <i class="fas fa-times text-xl"></i>
-            </button>
+            <button onclick="toggleProdigy()" class="text-slate-400 hover:text-white"><i class="fas fa-times text-xl"></i></button>
         </div>
-        <div id="prodigy-chat-box" class="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50/50">
-            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tl-none text-sm shadow-md">
-                Bereit für deine Fragen zum Lerninhalt!
-            </div>
+        <div id="prodigy-chat-box" class="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50/50 no-scrollbar">
+            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tl-none text-sm shadow-md">Bereit für deine Fragen zum Lerninhalt!</div>
         </div>
         <div class="p-6 border-t border-slate-100 bg-white">
             <div class="relative flex items-center">
                 <textarea id="prodigy-input" rows="1" placeholder="Frag Prodigy..." class="w-full p-4 pr-14 bg-slate-100 border-none rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
-                <button onclick="askProdigy()" class="absolute right-2 p-3 text-indigo-600 hover:text-indigo-800 transition-all">
-                    <i class="fas fa-paper-plane text-xl"></i>
-                </button>
+                <button onclick="askProdigy()" class="absolute right-2 p-3 text-indigo-600 hover:text-indigo-800 transition-all"><i class="fas fa-paper-plane text-xl"></i></button>
             </div>
         </div>
     </div>
     <div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[105] hidden opacity-0 transition-opacity duration-500"></div>
+
+    <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 w-16 h-16 bg-indigo-600 text-white rounded-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all z-[100] flex items-center justify-center border-2 border-indigo-400 group">
+        <i class="fas fa-robot text-2xl group-hover:rotate-12 transition-transform"></i>
+    </button>
 
     <script src="app.js"></script>
 </body>
