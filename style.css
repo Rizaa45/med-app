@@ -1,40 +1,41 @@
-/* Globale Veredelung */
+/* --- Basis & Typografie --- */
 body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     color: #1e293b;
+    scroll-behavior: smooth;
 }
 
-/* Profi-Buttons */
+/* --- Quiz Optionen --- */
 .btn-option {
     width: 100%;
     text-align: left;
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     border-radius: 1.25rem;
     border: 2px solid #f1f5f9;
     background-color: #ffffff;
     font-weight: 600;
     color: #475569;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-option:hover:not(:disabled) {
     border-color: #818cf8;
     background-color: #f8faff;
     color: #4f46e5;
-    transform: translateX(4px);
+    transform: translateX(6px);
 }
 
 .btn-option:disabled {
     cursor: default;
 }
 
-/* Feedback-Zustände */
+/* --- Feedback Zustände --- */
 .correct-answer {
     background-color: #f0fdf4 !important;
     border-color: #22c55e !important;
     color: #15803d !important;
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15) !important;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15) !important;
 }
 
 .wrong-answer {
@@ -43,30 +44,95 @@ body {
     color: #b91c1c !important;
 }
 
-/* Feedback-Panel Styling */
-.feedback-success {
-    background-color: #f0fdf4;
-    border-color: #22c55e;
-    color: #166534;
+/* --- Summary Display Styling (Digitale Einheiten) --- */
+.summary-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    line-height: 1.7;
 }
 
-.feedback-error {
-    background-color: #fff1f2;
-    border-color: #e11d48;
-    color: #9f1239;
+.summary-content h2 {
+    font-weight: 800;
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-/* Soft Animations */
+.summary-content b {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.summary-content section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.summary-content section:last-child {
+    border-bottom: none;
+}
+
+/* --- Prodigy Chat Bubbles --- */
+.chat-msg {
+    max-width: 85%;
+    padding: 1rem 1.25rem;
+    border-radius: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.msg-ai {
+    background: #f1f5f9;
+    color: #1e293b;
+    border-top-left-radius: 2px;
+}
+
+.msg-user {
+    background: #4f46e5;
+    color: white;
+    margin-left: auto;
+    border-top-right-radius: 2px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+/* --- Custom Scrollbar für Sidebar & Boxen --- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+}
+
+/* --- Animationen --- */
 .fade-in {
-    animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 0.4s ease-out forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 /* Progress-Bar Animation */
-#total-progress-bar {
-    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+#total-progress-bar, [id$="-bar"] {
+    transition: width 1.2s cubic-bezier(0.65, 0, 0.35, 1);
 }
