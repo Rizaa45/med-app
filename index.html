@@ -5,97 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLM System | Professional Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
     <div class="max-w-6xl mx-auto px-6 py-10">
         
-        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="bg-indigo-600 text-white px-3 py-1 rounded-md text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-xs tracking-[0.3em] uppercase font-bold">Core Engine v.2.7</span>
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.3.0</span>
                 </div>
-                <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
-                <p class="text-slate-500 mt-1 font-medium italic">Fokussierte Vorbereitung auf das Examen 2026</p>
+                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
+                <p class="text-slate-500 mt-2 font-medium italic flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-indigo-500"></i> 
+                    Examenstraining für die staatliche Prüfung 2026
+                </p>
             </div>
             
-            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
-                <div>
-                    <span class="text-[10px] text-slate-400 block uppercase tracking-widest font-black">Nächste Klausur</span>
+            <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex items-center">
+                <div class="px-5 py-3">
+                    <span class="text-[9px] text-slate-400 block uppercase tracking-widest font-black mb-1">Status: Prüfungsvorbereitung</span>
                     <span class="text-slate-900 text-sm font-bold flex items-center gap-2">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> 27.02.2026
+                        <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span> 
+                        Klausur am 27.02.2026
                     </span>
                 </div>
-                <div class="w-px h-8 bg-slate-100"></div>
-                <div class="text-green-500 text-sm font-bold">Aktiv</div>
+                <div class="bg-slate-50 px-4 py-3 rounded-xl border-l border-slate-100 hidden sm:block">
+                    <span id="days-left" class="text-indigo-600 font-black text-lg tracking-tighter">Aktiv</span>
+                </div>
             </div>
         </header>
 
-        <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 mb-12 border border-slate-100 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-indigo-50 rounded-full -mr-24 -mt-24 opacity-50 pointer-events-none"></div>
+        <div class="bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-10 mb-12 border border-slate-100 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full -mr-32 -mt-32 opacity-40 transition-transform group-hover:scale-110 duration-700 pointer-events-none"></div>
             <div class="relative z-10">
-                <div class="flex justify-between items-end mb-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
                     <div>
-                        <h2 class="text-slate-800 font-black text-xl uppercase tracking-tight">Lernfortschritt</h2>
-                        <p class="text-slate-400 text-sm font-medium italic">Gesamtdurchschnitt der aktiven Fachmodule</p>
+                        <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight">Gesamtfortschritt</h2>
+                        <p class="text-slate-400 text-sm font-medium">Kombinierte Auswertung aller Lernmodule & Simulationen</p>
                     </div>
-                    <span id="total-percent" class="text-5xl font-black text-indigo-600 tracking-tighter">0%</span>
+                    <div class="flex items-baseline gap-1">
+                        <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">0%</span>
+                    </div>
                 </div>
-                <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden shadow-inner">
-                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 to-indigo-700 h-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(79,70,229,0.3)]" style="width: 0%"></div>
+                <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
+                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 ease-out shadow-lg" style="width: 0%"></div>
                 </div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="module-grid">
             
-            <div onclick="location.href='module.html?id=1'" class="group bg-white p-7 rounded-3xl shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden">
-                <div class="flex justify-between items-start mb-6">
-                    <div class="bg-indigo-50 text-indigo-600 p-3 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+            <div onclick="location.href='module.html?id=1'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="bg-indigo-50 text-indigo-600 p-4 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                        <i class="fas fa-book-open text-2xl"></i>
                     </div>
                     <span id="mod1-percent" class="font-black text-slate-300 group-hover:text-indigo-600 transition-colors text-xl">0%</span>
                 </div>
-                <h3 class="text-lg font-black text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">Modul 1</h3>
-                <p class="text-sm text-slate-500 mb-6 font-medium">Kommunikation & Biografie</p>
-                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div id="mod1-bar" class="bg-indigo-600 h-full transition-all" style="width: 0%"></div>
+                <h3 class="text-xl font-black text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">Modul 1</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Kommunikation & Biografie</p>
+                <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                    <div id="mod1-bar" class="bg-indigo-600 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module.html?id=9'" class="group bg-white p-7 rounded-3xl shadow-sm border-2 border-orange-100 hover:border-orange-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer relative overflow-hidden bg-gradient-to-br from-white to-orange-50/30">
-                <div class="absolute -right-8 -top-2 bg-orange-500 text-white text-[9px] font-black px-10 py-1 rotate-45 uppercase tracking-widest shadow-md">
-                    Simulator
+            <div onclick="location.href='module.html?id=9'" class="group bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 hover:shadow-orange-200/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+                <div class="absolute -right-10 -top-2 bg-orange-500 text-white text-[10px] font-black px-12 py-1.5 rotate-45 uppercase tracking-widest shadow-lg z-20">
+                    Spezial
                 </div>
 
-                <div class="flex justify-between items-start mb-6">
-                    <div class="bg-orange-100 text-orange-600 p-3 rounded-2xl group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                <div class="flex justify-between items-start mb-8 relative z-10">
+                    <div class="bg-orange-500 text-white p-4 rounded-2xl shadow-[0_0_20px_rgba(249,115,22,0.4)]">
+                        <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <span id="mod9-percent" class="font-black text-orange-300 group-hover:text-orange-600 transition-colors text-xl">0%</span>
+                    <span id="mod9-percent" class="font-black text-slate-600 group-hover:text-orange-500 transition-colors text-xl">0%</span>
                 </div>
-                <h3 class="text-lg font-black text-slate-900 mb-1 group-hover:text-orange-600 transition-colors uppercase tracking-tight">Klausur 2026</h3>
-                <p class="text-sm text-slate-500 mb-6 font-medium">Drill & Klausur-Simulator</p>
-                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div id="mod9-bar" class="bg-orange-500 h-full transition-all" style="width: 0%"></div>
+                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Klausur 2026</h3>
+                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">KI-Simulator & Drill-Mode</p>
+                <div class="w-full bg-white/10 h-2.5 rounded-full overflow-hidden relative z-10">
+                    <div id="mod9-bar" class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 0%"></div>
                 </div>
             </div>
 
             <script>
-                for(let i=2; i<=8; i++) {
+                const futureModules = [
+                    {id: 2, title: "Recht & Ethik"},
+                    {id: 3, title: "Pflegeprozesse"},
+                    {id: 4, title: "Anatomie"},
+                    {id: 5, title: "Pharmakologie"}
+                ];
+                futureModules.forEach(m => {
                     document.write(`
-                    <div class="bg-slate-50/50 p-7 rounded-3xl border border-dashed border-slate-200 flex flex-col justify-center items-center grayscale opacity-40">
-                        <span class="text-slate-400 font-black text-lg italic uppercase tracking-widest">Modul ${i}</span>
-                        <span class="text-[10px] text-slate-400 mt-2 font-black tracking-tighter uppercase">Demnächst Verfügbar</span>
+                    <div class="bg-slate-100/50 p-8 rounded-[2rem] border border-dashed border-slate-300 flex flex-col justify-center items-center grayscale opacity-60">
+                        <i class="fas fa-lock text-slate-400 mb-4 text-xl"></i>
+                        <span class="text-slate-500 font-black text-sm uppercase tracking-widest text-center">${m.title}</span>
+                        <span class="text-[9px] text-slate-400 mt-2 font-black tracking-tighter uppercase">In Vorbereitung</span>
                     </div>
                     `);
-                }
+                });
             </script>
         </div>
     </div>
