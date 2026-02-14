@@ -7,13 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         @keyframes modalFadeIn {
             from { opacity: 0; transform: scale(0.95) translateY(20px); }
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
         .animate-modal { animation: modalFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        .prasanth-label {
+            background: linear-gradient(90deg, #6366f1, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
@@ -25,31 +30,31 @@
                 <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v4.0 Live</div>
                 <i class="fas fa-rocket text-4xl mb-4"></i>
                 <h2 class="text-3xl font-black tracking-tight uppercase italic">Update Erfolgreich!</h2>
-                <p class="text-indigo-100 font-medium">Core Engine wurde erfolgreich auf die neueste Version aktualisiert.</p>
+                <p class="text-indigo-100 font-medium">Das SLM System von Prasanth wurde aktualisiert.</p>
             </div>
             <div class="p-8 space-y-6">
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-check-circle"></i></div>
                     <div>
                         <h4 class="font-bold text-slate-900">Modul 9: Vollständig einsatzbereit</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Fokus auf die **Klausur am 27.02.**. Alle Inhalte wurden fachlich geprüft und strukturiert.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Fokus auf die **Klausur am 27.02.**. Strukturierte Lernpfade für maximale Effizienz.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-layer-group"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Kurse-Zusammenfassungen</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Neu: Didaktisch aufbereitete Zusammenfassungen direkt vor den Raw-PDFs für effizienteres Lernen.</p>
+                        <h4 class="font-bold text-slate-900">Kurs-Zusammenfassungen</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Didaktische Kurzfassungen wurden vor den Raw-PDFs eingefügt, um den Kerninhalt sofort zu erfassen.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-alt"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Optimierte Klausurvorbereitung</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Simulator & Drill-Mode sind nun vollständig mit der neuen Fragen-Datenbank verknüpft.</p>
+                        <h4 class="font-bold text-slate-900">Klausur-Simulator</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Der Simulator & Drill-Mode für die Prüfungsvorbereitung ist jetzt voll funktionsfähig.</p>
                     </div>
                 </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">Verstanden & Starten</button>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">System starten</button>
             </div>
         </div>
     </div>
@@ -58,10 +63,14 @@
         
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-                <div class="flex items-center gap-3 mb-3">
+                <div class="flex items-center gap-3 mb-1">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
                     <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.4.0</span>
                 </div>
+                <div class="mb-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth SLM System</span></span>
+                </div>
+
                 <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
                 <p class="text-slate-500 mt-2 font-medium italic flex items-center gap-2">
                     <i class="fas fa-graduation-cap text-indigo-500"></i> 
@@ -138,7 +147,7 @@
     </div>
 
     <script>
-        // Modal Logik
+        // Modal & Startup Logik
         window.addEventListener('DOMContentLoaded', () => {
             const hasSeenUpdate = localStorage.getItem('v4_update_seen');
             if (!hasSeenUpdate) {
@@ -147,11 +156,13 @@
         });
 
         function closeUpdateModal() {
-            document.getElementById('update-modal').style.opacity = '0';
+            const modal = document.getElementById('update-modal');
+            modal.style.transition = 'opacity 0.4s ease';
+            modal.style.opacity = '0';
             setTimeout(() => {
-                document.getElementById('update-modal').classList.add('hidden');
+                modal.classList.add('hidden');
                 localStorage.setItem('v4_update_seen', 'true');
-            }, 300);
+            }, 400);
         }
     </script>
     <script src="app.js"></script>
