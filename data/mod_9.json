@@ -1,14 +1,12 @@
 {
-  "moduleID": 9,
-  "moduleName": "Menschen mit cerebralen Schädigungen durch rehabilitative Pflege fördern",
-  "lastUpdated": "2026-02-08",
+  "moduleName": "Modul 9: Nervensystem & Schlaganfall",
   "pdfs": [
-    "M9.4.pdf",
-    "16-12-2025 Handout.pdf",
-    "17 und 18-12-2025 ME 9.14 und 9.15 Handout.pdf",
-    "2 Apoplex und seine Folgen.pdf",
-    "M 9.16_Leben mit Behinderung A.E.A. Handout.pdf",
-    "M 9.17_Apoplex_Dysphagie_Fazialisparese_Aphasie_Dysarthrie.pdf"
+    { "name": "16-12-2025 Handout", "url": "docs/m9/16-12-2025 Handout.pdf" },
+    { "name": "17 & 18-12-2025 Handout (ME 9.14/9.15)", "url": "docs/m9/17 und 18-12-2025 ME 9.14 und 9.15 Handout.pdf" },
+    { "name": "2 Apoplex und seine Folgen", "url": "docs/m9/2 Apoplex und seine Folgen.pdf" },
+    { "name": "M 9.16 Leben mit Behinderung", "url": "docs/m9/M 9.16_Leben mit Behinderung A.E.A. Handout.pdf" },
+    { "name": "M 9.17 Apoplex & Symptome", "url": "docs/m9/M 9.17_Apoplex_Dysphagie_Fazialisparese_Aphasie_Dysarthrie.pdf" },
+    { "name": "M9.4 Basis Dokument", "url": "docs/m9/M9.4.pdf" }
   ],
   "questions": [
     {
@@ -4562,4 +4560,5 @@
       "difficulty": "medium"
     }
   ]
+
 }
