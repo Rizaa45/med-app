@@ -8,15 +8,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-modal { animation: modalFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
+
+    <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
+        <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl relative z-10 overflow-hidden animate-modal border border-white/20">
+            <div class="bg-indigo-600 p-8 text-white relative">
+                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v4.0 Live</div>
+                <i class="fas fa-rocket text-4xl mb-4"></i>
+                <h2 class="text-3xl font-black tracking-tight uppercase italic">Update Erfolgreich!</h2>
+                <p class="text-indigo-100 font-medium">Core Engine wurde erfolgreich auf die neueste Version aktualisiert.</p>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Modul 9: Vollständig einsatzbereit</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Fokus auf die **Klausur am 27.02.**. Alle Inhalte wurden fachlich geprüft und strukturiert.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-layer-group"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Kurse-Zusammenfassungen</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Neu: Didaktisch aufbereitete Zusammenfassungen direkt vor den Raw-PDFs für effizienteres Lernen.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Optimierte Klausurvorbereitung</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Simulator & Drill-Mode sind nun vollständig mit der neuen Fragen-Datenbank verknüpft.</p>
+                    </div>
+                </div>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">Verstanden & Starten</button>
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-6xl mx-auto px-6 py-10">
         
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
                 <div class="flex items-center gap-3 mb-3">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.3.0</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.4.0</span>
                 </div>
                 <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
                 <p class="text-slate-500 mt-2 font-medium italic flex items-center gap-2">
@@ -92,6 +136,24 @@
             </script>
         </div>
     </div>
+
+    <script>
+        // Modal Logik
+        window.addEventListener('DOMContentLoaded', () => {
+            const hasSeenUpdate = localStorage.getItem('v4_update_seen');
+            if (!hasSeenUpdate) {
+                document.getElementById('update-modal').classList.remove('hidden');
+            }
+        });
+
+        function closeUpdateModal() {
+            document.getElementById('update-modal').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('update-modal').classList.add('hidden');
+                localStorage.setItem('v4_update_seen', 'true');
+            }, 300);
+        }
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
