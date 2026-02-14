@@ -240,7 +240,6 @@ function handleAnswer(selectedIndex, btn, q) {
     
     all.forEach(b => {
         b.disabled = true;
-        // Zeige die richtige Lösung immer an, wenn falsch gewählt wurde
         const idx = Array.from(all).indexOf(b);
         if(idx === q.correct_answer) b.classList.add('border-green-500', 'bg-green-50');
     });
@@ -265,7 +264,7 @@ function processResult(isCorrect, q) {
     if (!isCorrect && currentMode === 'drill') {
         txt.innerText = "WIEDERHOLUNG!";
         txt.className = "text-orange-600 font-black text-xl uppercase tracking-tighter";
-        currentQuestions.push(q); // Drill-Logik: Hinten anstellen
+        currentQuestions.push(q); 
         document.getElementById('q-total').innerText = currentQuestions.length;
     } else {
         txt.innerText = isCorrect ? "EXZELLENT!" : "LEIDER FALSCH";
