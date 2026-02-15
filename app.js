@@ -379,14 +379,18 @@ async function finishQuiz() {
 // --- AI FUNKTIONEN (VERCEL OPTIMIZED) ---
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
-    resultDiv.innerHTML = `<p class="text-center text-slate-500 animate-pulse">Prodigy wertet deine Antworten fachlich aus...</p>`;
+    resultDiv.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-12">
+            <div class="w-16 h-16 border-4 border-indigo-600/20 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
+            <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Prodigy analysiert deine Performance...</p>
+        </div>`;
     
     const summary = userAnswersLog.map((log, i) => 
         `Frage ${i+1}: ${log.question}\nUser-Antwort: ${log.userAnswer}\nKorrekt: ${log.correct ? "Ja" : "Nein"}`
     ).join('\n\n');
 
     const PROMPT = `Du bist Fachprüfer für Pflegeberufe. Analysiere diese Ergebnisse der Klausurvorbereitung 2026: ${summary}. 
-    Erstelle ein Feedback in HTML: Note (1-6), fachliche Analyse und konkrete Tipps zur Verbesserung. Antworte direkt mit HTML Tags.`;
+    Erstelle ein Feedback in HTML: Note (1-6) in einem großen Badge, fachliche Analyse der Stärken/Schwächen und konkrete Tipps. Antworte direkt mit HTML Tags, nutze Tailwind Klassen für Styling.`;
 
     try {
         const response = await fetch('/api/grade', { 
@@ -399,13 +403,24 @@ async function calculateExamGrade() {
         
         const data = await response.json();
         resultDiv.innerHTML = `
-            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 prose prose-indigo shadow-inner overflow-y-auto max-h-[500px]">
-                ${data.text}
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xl overflow-y-auto max-h-[600px] fade-in">
+                <div class="prose prose-slate prose-indigo max-w-none">
+                    ${data.text}
+                </div>
             </div>
-            <button onclick="location.reload()" class="w-full mt-6 bg-indigo-600 text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl">Neu starten</button>`;
+            <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:bg-indigo-600 transition-all flex items-center justify-center gap-3">
+                <i class="fas fa-redo-alt"></i> Simulations-Reset
+            </button>`;
     } catch (e) { 
         console.error("AI Error:", e);
-        resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-600 rounded-xl">KI-Verbindung via Vercel fehlgeschlagen. Bitte API-Key prüfen.</div>`; 
+        resultDiv.innerHTML = `
+            <div class="p-6 bg-red-50 border-2 border-red-100 text-red-600 rounded-2xl flex items-center gap-4">
+                <i class="fas fa-exclamation-triangle text-2xl"></i>
+                <div>
+                    <p class="font-bold uppercase text-xs">Vercel API Error</p>
+                    <p class="text-sm italic text-red-500">Die KI-Verbindung konnte nicht hergestellt werden.</p>
+                </div>
+            </div>`; 
     }
 }
 
@@ -415,17 +430,45 @@ async function askProdigy() {
     const query = input.value.trim();
     if(!query) return;
 
-    chatBox.innerHTML += `<div class="flex justify-end mb-4"><div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-none text-sm max-w-[85%] shadow-md">${query}</div></div>`;
+    // User Message Bubble
+    chatBox.innerHTML += `
+        <div class="flex flex-col gap-2 items-end ml-auto max-w-[85%] fade-in">
+            <div class="flex items-center gap-2 mb-1">
+                <span class="text-[9px] text-slate-400 font-bold uppercase">Du</span>
+            </div>
+            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-none text-sm shadow-lg shadow-indigo-100 leading-relaxed font-medium">
+                ${query}
+            </div>
+        </div>`;
+    
     input.value = "";
+    input.style.height = 'auto'; // Reset textarea height
     chatBox.scrollTop = chatBox.scrollHeight;
 
     const loadingId = "ai-load-" + Date.now();
-    chatBox.innerHTML += `<div id="${loadingId}" class="flex justify-start mb-4"><div class="bg-slate-100 text-slate-400 p-4 rounded-2xl rounded-tl-none text-xs animate-pulse">Prodigy schreibt...</div></div>`;
+    
+    // Modern Loading Bubble
+    chatBox.innerHTML += `
+        <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] fade-in">
+            <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-black text-indigo-600 uppercase tracking-widest">Prodigy</span>
+            </div>
+            <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none flex items-center gap-3 shadow-sm">
+                <div class="flex gap-1">
+                    <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce"></div>
+                    <div class="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                    <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                </div>
+                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Analysiere Kontext...</span>
+            </div>
+        </div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-    const PROMPT = `Du bist der Tutor des SLM Systems, und deine name ist Prodigy.Wenn grafragt darfst du sagen du bist ein lokale KI version1.2 . 
-    Kontext zum aktuellen Thema: ${currentSummaryContext}
+    const PROMPT = `Du bist der Tutor des SLM Systems, Name: Prodigy. Version 1.2 (Lokal).
+    Themen-Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Allgemeine Pflegeanalyse'}
     Benutzer fragt: ${query}
-    Antworte präzise, fachlich korrekt und motivierend. Nutze HTML für Formatierung (fett, Listen).`;
+    Antworte im "Pro" Style: Professionell, pflegewissenschaftlich fundiert, aber motivierend. 
+    WICHTIG: Nutze HTML (<b>, <ul>, <li>). Halte dich kurz und prägnant.`;
 
     try {
         const response = await fetch('/api/grade', {
@@ -435,19 +478,31 @@ async function askProdigy() {
         });
         
         const data = await response.json();
-        document.getElementById(loadingId).remove();
+        const loadingElement = document.getElementById(loadingId);
+        if(loadingElement) loadingElement.remove();
+
+        // AI Response Bubble
         chatBox.innerHTML += `
-            <div class="flex justify-start mb-4">
-                <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none text-sm text-slate-700 shadow-sm prose prose-indigo">
+            <div class="flex flex-col gap-2 max-w-[92%] fade-in">
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="text-[10px] font-black text-indigo-600 uppercase tracking-widest">Prodigy</span>
+                    <span class="text-[9px] text-slate-400 font-bold italic">AI Response</span>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-3xl rounded-tl-none text-sm text-slate-700 shadow-sm leading-relaxed prose prose-indigo prose-sm">
                     ${data.text}
                 </div>
             </div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
     } catch (e) {
-        document.getElementById(loadingId).innerHTML = `<div class="text-red-500 text-[10px] uppercase font-bold p-2">Verbindungsfehler zur Vercel API.</div>`;
+        const loadingElement = document.getElementById(loadingId);
+        if(loadingElement) {
+            loadingElement.innerHTML = `
+                <div class="bg-red-50 border border-red-100 p-3 rounded-xl text-red-500 text-[10px] font-black uppercase flex items-center gap-2">
+                    <i class="fas fa-wifi-slash"></i> Vercel Timeout - Versuche es erneut
+                </div>`;
+        }
     }
 }
-
 // --- UI HELPER ---
 function switchTab(tab) {
     document.getElementById('section-inhalt').classList.toggle('hidden', tab !== 'inhalt');
@@ -485,3 +540,4 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
+
