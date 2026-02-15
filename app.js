@@ -1,6 +1,7 @@
 /**
  * SLM System Core Engine 2026
- * Version: 4.0 - Full Integration (Drill, Simulator, Open Questions & AI)
+ * Version: 4.0 - Vercel AI Optimized
+ * Project by Prasanth SLM System
  */
 
 // --- GLOBALE VARIABLEN ---
@@ -246,14 +247,14 @@ function handleAnswer(selectedIndex, btn, q) {
 
     if(!isCorrect) btn.classList.add('border-red-500', 'bg-red-50');
 
-    userAnswersLog.push({ question: q.question, userAnswer: q.options[selectedIndex], correct: isCorrect, type: 'mc' });
+    userAnswersLog.push({ question: q.question || q.q, userAnswer: q.options[selectedIndex], correct: isCorrect, type: 'mc' });
     processResult(isCorrect, q);
 }
 
 function handleSelfCheck(isCorrect) {
     const q = currentQuestions[currentIndex];
     const userText = document.getElementById('user-open-answer').value;
-    userAnswersLog.push({ question: q.question, userAnswer: userText, correct: isCorrect, type: 'open' });
+    userAnswersLog.push({ question: q.question || q.q, userAnswer: userText, correct: isCorrect, type: 'open' });
     processResult(isCorrect, q);
 }
 
@@ -306,7 +307,7 @@ async function finishQuiz() {
     }
 }
 
-// --- AI FUNKTIONEN ---
+// --- AI FUNKTIONEN (VERCEL OPTIMIZED) ---
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
     resultDiv.innerHTML = `<p class="text-center text-slate-500 animate-pulse">Prodigy wertet deine Antworten fachlich aus...</p>`;
@@ -315,8 +316,8 @@ async function calculateExamGrade() {
         `Frage ${i+1}: ${log.question}\nUser-Antwort: ${log.userAnswer}\nKorrekt: ${log.correct ? "Ja" : "Nein"}`
     ).join('\n\n');
 
-    const PROMPT = `Du bist Fachprüfer für Pflegeberufe. Analysiere diese Ergebnisse: ${summary}. 
-    Erstelle ein Feedback in HTML: Note (1-6), fachliche Analyse und konkrete Tipps.`;
+    const PROMPT = `Du bist Fachprüfer für Pflegeberufe. Analysiere diese Ergebnisse der Klausurvorbereitung 2026: ${summary}. 
+    Erstelle ein Feedback in HTML: Note (1-6), fachliche Analyse und konkrete Tipps zur Verbesserung. Antworte direkt mit HTML Tags.`;
 
     try {
         const response = await fetch('/api/grade', { 
@@ -324,6 +325,9 @@ async function calculateExamGrade() {
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify({ prompt: PROMPT }) 
         });
+        
+        if (!response.ok) throw new Error("API Route nicht erreichbar");
+        
         const data = await response.json();
         resultDiv.innerHTML = `
             <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 prose prose-indigo shadow-inner overflow-y-auto max-h-[500px]">
@@ -331,7 +335,8 @@ async function calculateExamGrade() {
             </div>
             <button onclick="location.reload()" class="w-full mt-6 bg-indigo-600 text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl">Neu starten</button>`;
     } catch (e) { 
-        resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-600 rounded-xl">KI-Verbindung fehlgeschlagen. Bitte versuche es später erneut.</div>`; 
+        console.error("AI Error:", e);
+        resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-600 rounded-xl">KI-Verbindung via Vercel fehlgeschlagen. Bitte API-Key prüfen.</div>`; 
     }
 }
 
@@ -348,7 +353,10 @@ async function askProdigy() {
     const loadingId = "ai-load-" + Date.now();
     chatBox.innerHTML += `<div id="${loadingId}" class="flex justify-start mb-4"><div class="bg-slate-100 text-slate-400 p-4 rounded-2xl rounded-tl-none text-xs animate-pulse">Prodigy schreibt...</div></div>`;
 
-    const PROMPT = `Kontext: ${currentSummaryContext}\n\nFrage: ${query}\nAntworte als Tutor.`;
+    const PROMPT = `Du bist der Tutor des SLM Systems von Prasanth. 
+    Kontext zum aktuellen Thema: ${currentSummaryContext}
+    Benutzer fragt: ${query}
+    Antworte präzise, fachlich korrekt und motivierend. Nutze HTML für Formatierung (fett, Listen).`;
 
     try {
         const response = await fetch('/api/grade', {
@@ -356,6 +364,7 @@ async function askProdigy() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: PROMPT })
         });
+        
         const data = await response.json();
         document.getElementById(loadingId).remove();
         chatBox.innerHTML += `
@@ -366,7 +375,7 @@ async function askProdigy() {
             </div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
     } catch (e) {
-        document.getElementById(loadingId).innerHTML = `<div class="text-red-500">Offline.</div>`;
+        document.getElementById(loadingId).innerHTML = `<div class="text-red-500 text-[10px] uppercase font-bold p-2">Verbindungsfehler zur Vercel API.</div>`;
     }
 }
 
