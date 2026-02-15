@@ -12,6 +12,8 @@
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Schwebender Pin-Effekt */
+        #pin-btn { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     </style>
 </head>
 <body class="min-h-screen overflow-x-hidden">
@@ -26,9 +28,11 @@
             </button>
             <div class="flex flex-col items-center text-center">
                 <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 9: Analyse</span>
-                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.4.0</span>
+                <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.0</span>
             </div>
-            <div class="w-10"></div>
+            <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-indigo-600 transition-all">
+                <i class="fas fa-thumbtack text-lg"></i>
+            </button>
         </div>
     </nav>
 
@@ -48,8 +52,7 @@
                 <div class="h-px flex-1 bg-slate-200"></div>
             </div>
             
-            <div id="pdf-list" class="grid gap-4">
-                </div>
+            <div id="pdf-list" class="grid gap-4"></div>
         </div>
 
         <div id="section-quiz" class="hidden space-y-8 fade-in">
@@ -98,7 +101,13 @@
                         <button onclick="location.reload()" class="hover:text-red-400 transition-colors">Beenden</button>
                     </div>
                     <div class="p-8 md:p-12">
-                        <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Analyse</div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em]">Analyse</div>
+                            <button id="pin-btn" onclick="togglePin()" class="bg-slate-100 text-slate-400 p-3 rounded-xl hover:bg-slate-200 transition-all shadow-sm">
+                                <i class="fas fa-thumbtack"></i>
+                            </button>
+                        </div>
+                        
                         <h2 id="question-text" class="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-tight"></h2>
                         <div id="options-grid" class="grid gap-3"></div>
                         
