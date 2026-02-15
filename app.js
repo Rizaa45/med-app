@@ -353,7 +353,7 @@ async function askProdigy() {
     const loadingId = "ai-load-" + Date.now();
     chatBox.innerHTML += `<div id="${loadingId}" class="flex justify-start mb-4"><div class="bg-slate-100 text-slate-400 p-4 rounded-2xl rounded-tl-none text-xs animate-pulse">Prodigy schreibt...</div></div>`;
 
-    const PROMPT = `Du bist der Tutor des SLM Systems von Prasanth. 
+    const PROMPT = `Du bist der Tutor des SLM Systems, und deine name ist Prodigy.Wenn grafragt darfst du sagen du bist ein lokale KI version1.2 . 
     Kontext zum aktuellen Thema: ${currentSummaryContext}
     Benutzer fragt: ${query}
     Antworte präzise, fachlich korrekt und motivierend. Nutze HTML für Formatierung (fett, Listen).`;
@@ -416,3 +416,4 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
+
