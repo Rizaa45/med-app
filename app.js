@@ -376,21 +376,51 @@ async function finishQuiz() {
     }
 }
 
-// --- AI FUNKTIONEN (VERCEL OPTIMIZED) ---
+// --- AI SYSTEM CORE v5.0 (Optimized & Animated) ---
+
+// 1. CSS für professionelle Animationen injizieren
+const aiStyles = document.createElement("style");
+aiStyles.innerText = `
+    @keyframes slideUpFade {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    .msg-animate { animation: slideUpFade 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    
+    .typing-dot {
+        width: 5px; height: 5px; background: #94a3b8; border-radius: 50%;
+        animation: typing 1.4s infinite ease-in-out both;
+    }
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+`;
+document.head.appendChild(aiStyles);
+
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
+    // Professioneller Lade-Screen für die Analyse
     resultDiv.innerHTML = `
-        <div class="flex flex-col items-center justify-center py-12">
-            <div class="w-16 h-16 border-4 border-indigo-600/20 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
-            <p class="text-slate-500 font-bold uppercase text-xs tracking-widest">Prodigy analysiert deine Performance...</p>
+        <div class="flex flex-col items-center justify-center py-12 msg-animate">
+            <div class="relative w-16 h-16 mb-4">
+                <div class="absolute inset-0 border-4 border-slate-100 rounded-full"></div>
+                <div class="absolute inset-0 border-4 border-indigo-600 rounded-full border-t-transparent animate-spin"></div>
+                <i class="fas fa-graduation-cap absolute inset-0 m-auto text-indigo-600 flex items-center justify-center"></i>
+            </div>
+            <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em] animate-pulse">Erstelle Gutachten...</p>
         </div>`;
     
     const summary = userAnswersLog.map((log, i) => 
-        `Frage ${i+1}: ${log.question}\nUser-Antwort: ${log.userAnswer}\nKorrekt: ${log.correct ? "Ja" : "Nein"}`
-    ).join('\n\n');
+        `F${i+1}: ${log.question} | Antwort: ${log.userAnswer} | ${log.correct ? "KORREKT" : "FALSCH"}`
+    ).join('\n');
 
-    const PROMPT = `Du bist Fachprüfer für Pflegeberufe. Analysiere diese Ergebnisse der Klausurvorbereitung 2026: ${summary}. 
-    Erstelle ein Feedback in HTML: Note (1-6) in einem großen Badge, fachliche Analyse der Stärken/Schwächen und konkrete Tipps. Antworte direkt mit HTML Tags, nutze Tailwind Klassen für Styling.`;
+    const PROMPT = `Rolle: Strenger Fachprüfer Pflege. Aufgabe: Bewerte diese Klausurleistung kurz und knapp.
+    Daten: ${summary}
+    Output Format: HTML (Tailwind).
+    1. Zeige eine Note (1-6) als großes Element.
+    2. Liste 2 Stärken und 2 Schwächen auf.
+    3. Gib 1 konkreten Lerntipp.
+    WICHTIG: Keine Einleitung, direkt das HTML.`;
 
     try {
         const response = await fetch('/api/grade', { 
@@ -399,28 +429,20 @@ async function calculateExamGrade() {
             body: JSON.stringify({ prompt: PROMPT }) 
         });
         
-        if (!response.ok) throw new Error("API Route nicht erreichbar");
+        if (!response.ok) throw new Error("API Error");
         
         const data = await response.json();
         resultDiv.innerHTML = `
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xl overflow-y-auto max-h-[600px] fade-in">
-                <div class="prose prose-slate prose-indigo max-w-none">
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] overflow-y-auto max-h-[600px] msg-animate">
+                <div class="prose prose-sm prose-indigo max-w-none">
                     ${data.text}
                 </div>
             </div>
-            <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-2xl hover:bg-indigo-600 transition-all flex items-center justify-center gap-3">
-                <i class="fas fa-redo-alt"></i> Simulations-Reset
+            <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-600 transition-all shadow-lg msg-animate" style="animation-delay: 0.1s">
+                <i class="fas fa-redo mr-2"></i> Neue Simulation
             </button>`;
     } catch (e) { 
-        console.error("AI Error:", e);
-        resultDiv.innerHTML = `
-            <div class="p-6 bg-red-50 border-2 border-red-100 text-red-600 rounded-2xl flex items-center gap-4">
-                <i class="fas fa-exclamation-triangle text-2xl"></i>
-                <div>
-                    <p class="font-bold uppercase text-xs">Vercel API Error</p>
-                    <p class="text-sm italic text-red-500">Die KI-Verbindung konnte nicht hergestellt werden.</p>
-                </div>
-            </div>`; 
+        resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-500 rounded-xl text-center text-xs font-bold uppercase">Verbindungsfehler - Bitte neu laden</div>`; 
     }
 }
 
@@ -430,45 +452,45 @@ async function askProdigy() {
     const query = input.value.trim();
     if(!query) return;
 
-    // User Message Bubble
+    // 1. USER BUBBLE (Rechts, Indigo)
     chatBox.innerHTML += `
-        <div class="flex flex-col gap-2 items-end ml-auto max-w-[85%] fade-in">
-            <div class="flex items-center gap-2 mb-1">
-                <span class="text-[9px] text-slate-400 font-bold uppercase">Du</span>
-            </div>
-            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-none text-sm shadow-lg shadow-indigo-100 leading-relaxed font-medium">
+        <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
+            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md shadow-indigo-200/50 font-medium">
                 ${query}
             </div>
         </div>`;
     
     input.value = "";
-    input.style.height = 'auto'; // Reset textarea height
+    input.style.height = 'auto';
     chatBox.scrollTop = chatBox.scrollHeight;
 
     const loadingId = "ai-load-" + Date.now();
     
-    // Modern Loading Bubble
+    // 2. LOADER BUBBLE (Links, Minimalistisch)
     chatBox.innerHTML += `
-        <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] fade-in">
-            <div class="flex items-center gap-2 mb-1">
-                <span class="text-[10px] font-black text-indigo-600 uppercase tracking-widest">Prodigy</span>
-            </div>
-            <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none flex items-center gap-3 shadow-sm">
-                <div class="flex gap-1">
-                    <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce"></div>
-                    <div class="w-1.5 h-1.5 bg-indigo-600 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                    <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+        <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
+            <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
+                <div class="flex gap-1.5 items-center px-1">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
                 </div>
-                <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Analysiere Kontext...</span>
             </div>
         </div>`;
     chatBox.scrollTop = chatBox.scrollHeight;
 
-    const PROMPT = `Du bist der Tutor des SLM Systems, Name: Prodigy. Version 1.2 (Lokal).
-    Themen-Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Allgemeine Pflegeanalyse'}
-    Benutzer fragt: ${query}
-    Antworte im "Pro" Style: Professionell, pflegewissenschaftlich fundiert, aber motivierend. 
-    WICHTIG: Nutze HTML (<b>, <ul>, <li>). Halte dich kurz und prägnant.`;
+    // 3. SYSTEM PROMPT (Optimiert gegen Wiederholungen)
+    const PROMPT = `
+    SYSTEM INSTRUKTION:
+    Du bist Prodigy, ein Lern-Assistent.
+    REGELN:
+    1. Antworte DIREKT auf die Frage. Keine Einleitungen wie "Hallo", "Gerne", "Als KI".
+    2. Nenne deinen Namen NIE, außer du wirst explizit gefragt "Wer bist du?".
+    3. Sei professionell, kurz und präzise.
+    4. Nutze HTML (<b>, <ul>, <br>) für Lesbarkeit.
+    
+    Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Pflegewissen'}
+    Frage: ${query}`;
 
     try {
         const response = await fetch('/api/grade', {
@@ -478,27 +500,33 @@ async function askProdigy() {
         });
         
         const data = await response.json();
+        
+        // Loader entfernen
         const loadingElement = document.getElementById(loadingId);
         if(loadingElement) loadingElement.remove();
 
-        // AI Response Bubble
+        // 4. AI RESPONSE BUBBLE (Links, mit Avatar)
         chatBox.innerHTML += `
-            <div class="flex flex-col gap-2 max-w-[92%] fade-in">
-                <div class="flex items-center gap-2 mb-1">
-                    <span class="text-[10px] font-black text-indigo-600 uppercase tracking-widest">Prodigy</span>
-                    <span class="text-[9px] text-slate-400 font-bold italic">AI Response</span>
+            <div class="flex flex-col gap-2 max-w-[95%] mb-6 msg-animate">
+                <div class="flex items-center gap-2 mb-1 pl-1">
+                    <div class="w-5 h-5 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center text-[9px] text-white shadow-sm">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="text-[10px] font-black text-slate-700 uppercase tracking-widest">Prodigy</span>
                 </div>
-                <div class="bg-white border border-slate-200 p-5 rounded-3xl rounded-tl-none text-sm text-slate-700 shadow-sm leading-relaxed prose prose-indigo prose-sm">
+                <div class="bg-white border border-slate-200/80 p-5 rounded-2xl rounded-tl-sm text-sm text-slate-700 shadow-sm prose prose-indigo prose-sm max-w-none">
                     ${data.text}
                 </div>
             </div>`;
+        
         chatBox.scrollTop = chatBox.scrollHeight;
+
     } catch (e) {
         const loadingElement = document.getElementById(loadingId);
         if(loadingElement) {
             loadingElement.innerHTML = `
-                <div class="bg-red-50 border border-red-100 p-3 rounded-xl text-red-500 text-[10px] font-black uppercase flex items-center gap-2">
-                    <i class="fas fa-wifi-slash"></i> Vercel Timeout - Versuche es erneut
+                <div class="bg-red-50 border border-red-100 p-3 rounded-xl text-red-500 text-[10px] font-bold uppercase flex items-center gap-2">
+                    <i class="fas fa-wifi-slash"></i> Offline
                 </div>`;
         }
     }
@@ -540,4 +568,5 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
+
 
