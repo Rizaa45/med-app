@@ -1,6 +1,6 @@
 /**
  * SLM System Core Engine 2026
- * Version: 4.0 - Vercel AI Optimized
+ * Version: 5.0 - Vault & Pinning Update
  * Project by Prasanth SLM System
  */
 
@@ -12,10 +12,12 @@ let currentMode = 'classic';
 let activeCase = null;
 let userAnswersLog = []; 
 let currentSummaryContext = ""; // Speichert Text für Prodigy AI
+let pinnedQuestions = JSON.parse(localStorage.getItem('slm_pinned_v1')) || [];
 
 window.onload = () => {
     const isDashboard = document.getElementById('total-percent') !== null;
     const isModulePage = document.getElementById('mod-title') !== null;
+    const isVaultPage = document.getElementById('vault-container') !== null;
 
     if (isDashboard) {
         initDashboard();
@@ -24,8 +26,72 @@ window.onload = () => {
         currentModuleId = params.get('id') || 9;
         loadModuleData(currentModuleId);
         renderSummaryDropdown(); 
+    } else if (isVaultPage) {
+        initVault();
     }
 };
+
+// --- VAULT LOGIC (Gemerkt-Liste) ---
+function togglePin() {
+    const q = currentQuestions[currentIndex];
+    const qId = q.id || q.question || q.q; // Eindeutiger Identifier
+    
+    const index = pinnedQuestions.findIndex(item => (item.id || item.question || item.q) === qId);
+    
+    if (index > -1) {
+        pinnedQuestions.splice(index, 1);
+    } else {
+        pinnedQuestions.push(q);
+    }
+    
+    localStorage.setItem('slm_pinned_v1', JSON.stringify(pinnedQuestions));
+    updatePinUI();
+}
+
+function updatePinUI() {
+    const pinBtn = document.getElementById('pin-btn');
+    if (!pinBtn) return;
+    
+    const q = currentQuestions[currentIndex];
+    const qId = q.id || q.question || q.q;
+    const isPinned = pinnedQuestions.some(item => (item.id || item.question || item.q) === qId);
+    
+    pinBtn.innerHTML = isPinned ? '<i class="fas fa-thumbtack"></i>' : '<i class="outline fas fa-thumbtack opacity-20"></i>';
+    pinBtn.className = isPinned 
+        ? "bg-indigo-600 text-white p-3 rounded-xl transition-all shadow-lg" 
+        : "bg-slate-100 text-slate-400 p-3 rounded-xl hover:bg-slate-200 transition-all";
+}
+
+function initVault() {
+    const container = document.getElementById('vault-container');
+    if (pinnedQuestions.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-20">
+                <div class="text-6xl mb-4">Empty</div>
+                <p class="text-slate-500">Du hast noch keine Fragen angepinnt.</p>
+            </div>`;
+        return;
+    }
+
+    container.innerHTML = pinnedQuestions.map((q, i) => `
+        <div class="bg-white p-6 rounded-3xl border border-slate-100 mb-4 shadow-sm hover:shadow-md transition-all">
+            <div class="flex justify-between items-start mb-4">
+                <span class="bg-indigo-50 text-indigo-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Gemerkt</span>
+                <button onclick="removePinFromVault(${i})" class="text-red-300 hover:text-red-500"><i class="fas fa-trash"></i></button>
+            </div>
+            <h3 class="font-bold text-slate-800 mb-3">${q.question || q.q}</h3>
+            <div class="p-4 bg-slate-50 rounded-2xl text-xs text-slate-600 leading-relaxed border-l-4 border-indigo-500">
+                <strong>Lösung:</strong> ${q.correct_answer !== undefined && q.options ? q.options[q.correct_answer] : q.correct_answer}
+            </div>
+        </div>
+    `).join('');
+}
+
+function removePinFromVault(index) {
+    pinnedQuestions.splice(index, 1);
+    localStorage.setItem('slm_pinned_v1', JSON.stringify(pinnedQuestions));
+    initVault();
+}
 
 // --- DASHBOARD ---
 function initDashboard() {
@@ -189,6 +255,9 @@ function showQuestion() {
     document.getElementById('question-text').innerText = q.question || q.q;
     document.getElementById('type-badge').innerText = q.type ? q.type.toUpperCase() : "ANALYSE";
     document.getElementById('feedback').classList.add('hidden');
+    
+    // Pin-Button UI Update
+    updatePinUI();
     
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
@@ -416,4 +485,3 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
-
