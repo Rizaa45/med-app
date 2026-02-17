@@ -19,6 +19,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
@@ -44,14 +52,7 @@
                     <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-layer-group"></i></div>
                     <div>
                         <h4 class="font-bold text-slate-900">Kurs-Zusammenfassungen</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Didaktische Kurzfassungen wurden vor den Raw-PDFs eingefügt, um den Kerninhalt sofort zu erfassen.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-alt"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Klausur-Simulator</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Der Simulator & Drill-Mode für die Prüfungsvorbereitung ist jetzt voll funktionsfähig.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Didaktische Kurzfassungen wurden vor den Raw-PDFs eingefügt.</p>
                     </div>
                 </div>
                 <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">System starten</button>
@@ -68,7 +69,7 @@
                     <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.4.0</span>
                 </div>
                 <div class="mb-4">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth</span></span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label font-black">Prasanth</span></span>
                 </div>
 
                 <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
@@ -103,32 +104,32 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="module-grid">
             
-            <div onclick="location.href='module.html?id=1'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module.html?id=1'" class="group card-hover bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
-                    <div class="bg-indigo-50 text-indigo-600 p-4 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                    <div class="bg-indigo-50 text-indigo-600 p-4 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all">
                         <i class="fas fa-book-open text-2xl"></i>
                     </div>
-                    <span id="mod1-percent" class="font-black text-slate-300 group-hover:text-indigo-600 transition-colors text-xl">0%</span>
+                    <span id="mod1-percent" class="font-black text-slate-300 group-hover:text-indigo-600 transition-colors text-xl">12%</span>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">Modul 1</h3>
                 <p class="text-sm text-slate-500 mb-8 font-medium">Kommunikation & Biografie</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod1-bar" class="bg-indigo-600 h-full transition-all duration-1000" style="width: 0%"></div>
+                    <div id="mod1-bar" class="bg-indigo-600 h-full transition-all duration-1000" style="width: 12%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module.html?id=9'" class="group bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 hover:shadow-orange-200/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+            <div onclick="location.href='module.html?id=9'" class="group card-hover bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
                 <div class="absolute -right-10 -top-2 bg-orange-500 text-white text-[10px] font-black px-12 py-1.5 rotate-45 uppercase tracking-widest z-20">Spezial</div>
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-orange-500 text-white p-4 rounded-2xl shadow-[0_0_20px_rgba(249,115,22,0.4)]">
                         <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <span id="mod9-percent" class="font-black text-slate-600 text-xl">0%</span>
+                    <span id="mod9-percent" class="font-black text-slate-600 text-xl">45%</span>
                 </div>
                 <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight">Module 9</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium">Klasur 27.02 Simulator</p>
+                <p class="text-sm text-slate-400 mb-8 font-medium">Klausur 27.02 Simulator</p>
                 <div class="w-full bg-white/10 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod9-bar" class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 0%"></div>
+                    <div id="mod9-bar" class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 45%"></div>
                 </div>
             </div>
 
@@ -147,12 +148,18 @@
     </div>
 
     <script>
-        // Modal & Startup Logik
+        // Modal & Startup Logic
         window.addEventListener('DOMContentLoaded', () => {
             const hasSeenUpdate = localStorage.getItem('v4_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
+            
+            // Progress Bar Animation simulation
+            setTimeout(() => {
+                document.getElementById('total-progress-bar').style.width = '28%';
+                document.getElementById('total-percent').innerText = '28%';
+            }, 500);
         });
 
         function closeUpdateModal() {
@@ -168,5 +175,4 @@
     <script src="app.js"></script>
 </body>
 </html>
-
 
