@@ -1,6 +1,6 @@
 /**
  * SLM System Core Engine 2026
- * Version: 5.0 - Vault & Pinning Update
+ * Version: 5.1 - Perfect Simulator + Deep AI Review
  * Project by Prasanth SLM System
  */
 
@@ -34,7 +34,7 @@ window.onload = () => {
 // --- VAULT LOGIC (Gemerkt-Liste) ---
 function togglePin() {
     const q = currentQuestions[currentIndex];
-    const qId = q.id || q.question || q.q; // Eindeutiger Identifier
+    const qId = q.id || q.question || q.q; 
     
     const index = pinnedQuestions.findIndex(item => (item.id || item.question || item.q) === qId);
     
@@ -176,7 +176,7 @@ async function loadSummaryContent(num) {
         const data = await response.json();
         const content = data[0].content;
 
-        currentSummaryContext = content.replace(/<[^>]*>?/gm, ''); // Für KI-Kontext
+        currentSummaryContext = content.replace(/<[^>]*>?/gm, '');
 
         displayArea.innerHTML = `
             <div class="fade-in bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden mb-10">
@@ -224,13 +224,37 @@ async function startQuizMode(mode) {
             const drillResp = await fetch('data/klausur27_questions.json');
             const cases = await casesResp.json();
             const drills = await drillResp.json();
+
             activeCase = cases[Math.floor(Math.random() * cases.length)];
-            const randomDrills = drills.sort(() => 0.5 - Math.random()).slice(0, 2);
-            currentQuestions = [...activeCase.questions, ...randomDrills];
+
+            let tempQuestions = [...(activeCase.questions || [])];
+            const targetTotal = 16;
+            const needed = targetTotal - tempQuestions.length;
+
+            if (needed > 0) {
+                const shuffledDrills = drills.sort(() => 0.5 - Math.random());
+                const randomDrills = shuffledDrills.slice(0, needed);
+                tempQuestions = [...tempQuestions, ...randomDrills];
+            } else if (needed < 0) {
+                tempQuestions = tempQuestions.sort(() => 0.5 - Math.random()).slice(0, targetTotal);
+            }
+
+            currentQuestions = tempQuestions.sort(() => 0.5 - Math.random()); // perfekt gemischt
+
             document.getElementById('scenario-display').classList.remove('hidden');
-            document.getElementById('scenario-text').innerText = activeCase.scenario;
-            document.getElementById('setting-badge').innerText = "Prüfungssimulation";
+            document.getElementById('scenario-text').innerText = activeCase.scenario || "Fallbeispiel-Szenario";
+            document.getElementById('setting-badge').innerText = "Prüfungssimulator – 16 Aufgaben";
         } 
+        else if (mode === 'cases') {
+            const casesResp = await fetch('data/klausur27_cases.json');
+            const cases = await casesResp.json();
+            activeCase = cases[Math.floor(Math.random() * cases.length)];
+            currentQuestions = [...(activeCase.questions || [])];
+
+            document.getElementById('scenario-display').classList.remove('hidden');
+            document.getElementById('scenario-text').innerText = activeCase.scenario || "";
+            document.getElementById('setting-badge').innerText = "Reines Fallbeispiel";
+        }
         else {
             const response = await fetch(`data/mod_${currentModuleId}.json`);
             const data = await response.json();
@@ -256,7 +280,6 @@ function showQuestion() {
     document.getElementById('type-badge').innerText = q.type ? q.type.toUpperCase() : "ANALYSE";
     document.getElementById('feedback').classList.add('hidden');
     
-    // Pin-Button UI Update
     updatePinUI();
     
     const grid = document.getElementById('options-grid');
@@ -361,7 +384,7 @@ async function finishQuiz() {
         container.innerHTML = `
             <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
                 <div class="animate-bounce text-6xl mb-6">🤖</div>
-                <h2 class="text-2xl font-black text-slate-900 uppercase">Analyse läuft...</h2>
+                <h2 class="text-2xl font-black text-slate-900 uppercase">Tiefenanalyse läuft...</h2>
                 <div id="ai-grading-result" class="max-w-xl mx-auto text-left space-y-4 px-6 mt-8"></div>
             </div>`;
         await calculateExamGrade();
@@ -380,7 +403,6 @@ async function finishQuiz() {
 // --- PRODIGY AI SYSTEM CORE v5.2 ---
 // ==========================================
 
-// 1. CSS FÜR ANIMATIONEN (Wird automatisch injiziert)
 const aiStyles = document.createElement("style");
 aiStyles.innerText = `
     @keyframes slideUpFade {
@@ -397,13 +419,11 @@ aiStyles.innerText = `
     .typing-dot:nth-child(2) { animation-delay: -0.16s; }
     @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
 
-    /* Fix für Overlay-Transition */
     #prodigy-overlay { transition: opacity 0.4s ease, visibility 0.4s; }
     #prodigy-overlay.hidden { display: none; visibility: hidden; }
 `;
 document.head.appendChild(aiStyles);
 
-// 2. SIDEBAR STEUERUNG (GLOBAL)
 window.toggleProdigy = function() {
     const sidebar = document.getElementById('prodigy-sidebar');
     const overlay = document.getElementById('prodigy-overlay');
@@ -414,7 +434,6 @@ window.toggleProdigy = function() {
     const isOpening = sidebar.classList.contains('translate-x-full');
 
     if (isOpening) {
-        // Öffnen
         sidebar.classList.remove('translate-x-full');
         overlay.classList.remove('hidden');
         setTimeout(() => {
@@ -422,14 +441,13 @@ window.toggleProdigy = function() {
             if(input) input.focus();
         }, 10);
     } else {
-        // Schließen
         sidebar.classList.add('translate-x-full');
         overlay.classList.add('opacity-0');
         setTimeout(() => overlay.classList.add('hidden'), 400);
     }
 };
 
-// 3. KLASUR-AUSWERTUNG (AI GRADING)
+// 3. TIEFEN-AUSWERTUNG (DEEP AI GRADING)
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
     if(!resultDiv) return;
@@ -441,16 +459,31 @@ async function calculateExamGrade() {
                 <div class="absolute inset-0 border-4 border-indigo-600 rounded-full border-t-transparent animate-spin"></div>
                 <i class="fas fa-graduation-cap absolute inset-0 m-auto text-indigo-600 flex items-center justify-center"></i>
             </div>
-            <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em] animate-pulse">Erstelle Gutachten...</p>
+            <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em] animate-pulse">Erstelle detailliertes Gutachten...</p>
         </div>`;
     
-    const summary = (typeof userAnswersLog !== 'undefined') ? userAnswersLog.map((log, i) => 
+    const summary = userAnswersLog.map((log, i) => 
         `F${i+1}: ${log.question} | Antwort: ${log.userAnswer} | ${log.correct ? "KORREKT" : "FALSCH"}`
-    ).join('\n') : "Keine Daten verfügbar.";
+    ).join('\n');
 
-    const PROMPT = `Rolle: Strenger Fachprüfer Pflege. Aufgabe: Bewerte diese Klausurleistung kurz und knapp.
-    Daten: ${summary}
-    Output Format: HTML (Tailwind). Keine Einleitung, direkt das HTML mit Note (1-6), Stärken, Schwächen und 1 Tipp.`;
+    const PROMPT = `Rolle: Strenger aber fairer Fachprüfer für die Pflegeausbildung (Examen Gesundheits- und Krankenpflege).
+
+Aufgabe: Erstelle ein AUSFÜHRLICHES, professionelles Leistungs-Gutachten für diese Prüfungssimulation.
+
+Daten:
+${summary}
+
+Output: NUR reines HTML mit Tailwind CSS. Keine Einleitung.
+
+Struktur exakt:
+- Große Note als Hero (1.0–6.0) mit passender Farbe (grün 1.0-2.0, gelb 2.1-3.0, orange 3.1-4.0, rot >4.0)
+- Punkte: X/16 richtig + Prozent
+- Stärken (Bullet-Liste mit 3-5 Punkten)
+- Schwächen (Bullet-Liste mit kurzen Zitaten der falschen Fragen)
+- Persönliche Verbesserungsvorschläge (nummerierte Liste mit 4-6 konkreten, sofort umsetzbaren Tipps)
+- Abschließendes motivierendes Fazit in einer schönen Box
+
+Visuell hochwertig, klare Überschriften, Farben, Abstände.`;
 
     try {
         const response = await fetch('/api/grade', { 
@@ -465,7 +498,7 @@ async function calculateExamGrade() {
                 <div class="prose prose-sm prose-indigo max-w-none">${data.text}</div>
             </div>
             <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-600 transition-all shadow-lg msg-animate">
-                <i class="fas fa-redo mr-2"></i> Neue Simulation
+                <i class="fas fa-redo mr-2"></i> Neue Simulation starten
             </button>`;
     } catch (e) { 
         resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-500 rounded-xl text-center text-xs font-bold uppercase">Fehler bei der AI-Analyse</div>`; 
@@ -479,7 +512,6 @@ async function askProdigy() {
     const query = input.value.trim();
     if(!query || !chatBox) return;
 
-    // User Message
     chatBox.innerHTML += `
         <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
             <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md font-medium">
@@ -488,12 +520,10 @@ async function askProdigy() {
         </div>`;
     
     input.value = "";
-    input.style.height = 'auto';
     chatBox.scrollTop = chatBox.scrollHeight;
 
     const loadingId = "ai-load-" + Date.now();
     
-    // Loader
     chatBox.innerHTML += `
         <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
             <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
@@ -507,7 +537,7 @@ async function askProdigy() {
     chatBox.scrollTop = chatBox.scrollHeight;
 
     const PROMPT = `Du bist Prodigy, ein Lern-Assistent. 
-    REGELN: 1. Antworte DIREKT. 2. Keine Begrüßung. 3. Sage NIE deinen Namen/Version, außer man fragt wer du bist. 4. Nutze HTML (<b>, <ul>).
+    REGELN: 1. Antworte DIREKT. 2. Keine Begrüßung. 3. Nutze HTML (<b>, <ul>).
     Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Pflegewissen'}
     User Frage: ${query}`;
 
@@ -541,7 +571,6 @@ async function askProdigy() {
     }
 }
 
-// 5. EVENT LISTENERS & UI HELPERS
 document.addEventListener('DOMContentLoaded', () => {
     const pInput = document.getElementById('prodigy-input');
     if(pInput) {
