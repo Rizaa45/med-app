@@ -140,7 +140,7 @@
             </div>
         </div>
         
-        <button onclick="toggleProdigy()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-all">
+        <button onclick="toggleProdigy()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-all cursor-pointer">
             <i class="fas fa-times"></i>
         </button>
     </div>
@@ -160,6 +160,7 @@
     <div class="p-6 bg-white border-t border-slate-100">
         <div class="relative flex items-center group">
             <div class="absolute inset-0 bg-indigo-600/5 rounded-[2rem] blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity"></div>
+            
             <textarea id="prodigy-input" 
                       rows="1" 
                       placeholder="Stelle eine Fachfrage..." 
@@ -174,7 +175,7 @@
     </div>
 </div>
 
-<div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[105] hidden opacity-0 transition-all duration-500"></div>
+<div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[105] hidden opacity-0 transition-all duration-500 cursor-pointer"></div>
 
 <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 group z-[100]">
     <div class="absolute inset-0 bg-indigo-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
@@ -189,4 +190,5 @@
     <script src="app.js"></script>
 </body>
 </html>
+
 
