@@ -1,6 +1,6 @@
 /**
  * SLM System Core Engine 2026
- * Version: 5.5 - Exam Logic & Dynamic Progress Update
+ * Version: 5.0 - Vault & Pinning Update
  * Project by Prasanth SLM System
  */
 
@@ -11,10 +11,8 @@ let currentModuleId = 9;
 let currentMode = 'classic'; 
 let activeCase = null;
 let userAnswersLog = []; 
-let currentSummaryContext = ""; 
+let currentSummaryContext = ""; // Speichert Text für Prodigy AI
 let pinnedQuestions = JSON.parse(localStorage.getItem('slm_pinned_v1')) || [];
-let examTimerInterval = null;
-let examTimeLeft = 90 * 60; // 90 Minuten in Sekunden
 
 window.onload = () => {
     const isDashboard = document.getElementById('total-percent') !== null;
@@ -33,34 +31,10 @@ window.onload = () => {
     }
 };
 
-// --- PROGRESS SYSTEM (Dynamic Calculation) ---
-function updateModuleProgress(moduleId, scorePercent) {
-    const key = `mod${moduleId}_percent`;
-    let currentP = parseInt(localStorage.getItem(key)) || 0;
-    
-    // Algorithmus: Der Fortschritt ist ein gewichteter Durchschnitt.
-    // Ein sehr gutes Ergebnis (z.B. 100%) hebt den Fortschritt stark an.
-    // Ein sehr schlechtes Ergebnis senkt ihn (Vergessen-Faktor).
-    let newProgress;
-    if (scorePercent > currentP) {
-        // Verbesserung: 40% Gewichtung auf das neue Top-Ergebnis
-        newProgress = Math.round((currentP * 0.6) + (scorePercent * 0.4));
-    } else {
-        // Verschlechterung: 20% Gewichtung nach unten
-        newProgress = Math.round((currentP * 0.8) + (scorePercent * 0.2));
-    }
-
-    // Grenzwerte
-    newProgress = Math.max(0, Math.min(100, newProgress));
-    
-    localStorage.setItem(key, newProgress);
-    console.log(`Progress Update Modul ${moduleId}: ${newProgress}% (Letzter Score: ${scorePercent}%)`);
-}
-
 // --- VAULT LOGIC (Gemerkt-Liste) ---
 function togglePin() {
     const q = currentQuestions[currentIndex];
-    const qId = q.id || q.question || q.q; 
+    const qId = q.id || q.question || q.q; // Eindeutiger Identifier
     
     const index = pinnedQuestions.findIndex(item => (item.id || item.question || item.q) === qId);
     
@@ -202,7 +176,7 @@ async function loadSummaryContent(num) {
         const data = await response.json();
         const content = data[0].content;
 
-        currentSummaryContext = content.replace(/<[^>]*>?/gm, ''); 
+        currentSummaryContext = content.replace(/<[^>]*>?/gm, ''); // Für KI-Kontext
 
         displayArea.innerHTML = `
             <div class="fade-in bg-white rounded-[2.5rem] shadow-2xl border border-slate-100 overflow-hidden mb-10">
@@ -231,14 +205,10 @@ function closeSummary() {
     currentSummaryContext = "";
 }
 
-// --- QUIZ ENGINE UPDATED ---
+// --- QUIZ ENGINE ---
 async function startQuizMode(mode) {
     currentMode = mode;
     userAnswersLog = [];
-    currentIndex = 0;
-    examTimeLeft = 90 * 60; // Reset Timer
-    clearInterval(examTimerInterval);
-
     document.getElementById('quiz-selection').classList.add('hidden');
     document.getElementById('quiz-container').classList.remove('hidden');
 
@@ -246,31 +216,20 @@ async function startQuizMode(mode) {
         if (mode === 'drill') {
             const response = await fetch('data/klausur27_questions.json');
             const allQuestions = await response.json();
-            // Jetzt 15 Fragen Drill
-            currentQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
+            currentQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 30);
             document.getElementById('scenario-display').classList.add('hidden');
-            document.getElementById('exam-timer-wrapper')?.classList.add('hidden');
         } 
         else if (mode === 'simulator') {
             const casesResp = await fetch('data/klausur27_cases.json');
             const drillResp = await fetch('data/klausur27_questions.json');
             const cases = await casesResp.json();
             const drills = await drillResp.json();
-            
             activeCase = cases[Math.floor(Math.random() * cases.length)];
-            // Simulator Logik: Case Questions + Random Drills = 16 Fragen total
-            const caseQuestions = activeCase.questions;
-            const neededDrills = 16 - caseQuestions.length;
-            const randomDrills = drills.sort(() => 0.5 - Math.random()).slice(0, neededDrills);
-            
-            currentQuestions = [...caseQuestions, ...randomDrills];
-            
+            const randomDrills = drills.sort(() => 0.5 - Math.random()).slice(0, 2);
+            currentQuestions = [...activeCase.questions, ...randomDrills];
             document.getElementById('scenario-display').classList.remove('hidden');
             document.getElementById('scenario-text').innerText = activeCase.scenario;
             document.getElementById('setting-badge').innerText = "Prüfungssimulation";
-            
-            // Timer starten
-            startExamTimer();
         } 
         else {
             const response = await fetch(`data/mod_${currentModuleId}.json`);
@@ -279,32 +238,13 @@ async function startQuizMode(mode) {
             document.getElementById('scenario-display').classList.add('hidden');
         }
 
+        currentIndex = 0;
         document.getElementById('q-total').innerText = currentQuestions.length;
         showQuestion();
     } catch (err) { 
         alert("Fehler beim Laden der Fragen."); 
         exitQuiz();
     }
-}
-
-function startExamTimer() {
-    const timerWrapper = document.getElementById('exam-timer-wrapper');
-    if(timerWrapper) timerWrapper.classList.remove('hidden');
-    
-    const timerDisplay = document.getElementById('exam-timer');
-    
-    examTimerInterval = setInterval(() => {
-        examTimeLeft--;
-        const mins = Math.floor(examTimeLeft / 60);
-        const secs = examTimeLeft % 60;
-        if(timerDisplay) timerDisplay.innerText = `${mins}:${secs.toString().padStart(2, '0')}`;
-        
-        if (examTimeLeft <= 0) {
-            clearInterval(examTimerInterval);
-            alert("Die Zeit ist abgelaufen! Die Prüfung wird automatisch ausgewertet.");
-            finishQuiz();
-        }
-    }, 1000);
 }
 
 function showQuestion() {
@@ -316,6 +256,7 @@ function showQuestion() {
     document.getElementById('type-badge').innerText = q.type ? q.type.toUpperCase() : "ANALYSE";
     document.getElementById('feedback').classList.add('hidden');
     
+    // Pin-Button UI Update
     updatePinUI();
     
     const grid = document.getElementById('options-grid');
@@ -351,7 +292,7 @@ function renderOpenQuestion(q, grid) {
             </div>
             <div class="flex gap-3">
                 <button onclick="handleSelfCheck(true)" class="flex-1 bg-green-500 text-white py-4 rounded-xl font-bold text-xs uppercase">Richtig</button>
-                <button onclick="handleSelfCheck(false)" class="flex-1 bg-red-400 text-white py-4 rounded-xl font-bold text-xs uppercase">Falsch</button>
+                <button onclick="handleSelfCheck(false)" class="flex-1 bg-red-400 text-white py-4 rounded-xl font-bold text-xs uppercase">Falsch / Unvollständig</button>
             </div>
         </div>
     `;
@@ -393,7 +334,6 @@ function processResult(isCorrect, q) {
     if (!isCorrect && currentMode === 'drill') {
         txt.innerText = "WIEDERHOLUNG!";
         txt.className = "text-orange-600 font-black text-xl uppercase tracking-tighter";
-        // In Drill Mode wird die Frage hinten angestellt
         currentQuestions.push(q); 
         document.getElementById('q-total').innerText = currentQuestions.length;
     } else {
@@ -411,61 +351,27 @@ function nextQuestion() {
 }
 
 function exitQuiz() { 
-    clearInterval(examTimerInterval);
     document.getElementById('quiz-selection').classList.remove('hidden'); 
     document.getElementById('quiz-container').classList.add('hidden'); 
 }
 
 async function finishQuiz() {
-    clearInterval(examTimerInterval);
     const container = document.getElementById('quiz-container');
-    
-    // Berechnung des Scores
-    const correctCount = userAnswersLog.filter(l => l.correct).length;
-    const totalCount = userAnswersLog.length;
-    const scorePercent = Math.round((correctCount / totalCount) * 100);
-
-    // Progress Update triggern
-    updateModuleProgress(currentModuleId, scorePercent);
-
     if (currentMode === 'simulator') {
         container.innerHTML = `
             <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
                 <div class="animate-bounce text-6xl mb-6">🤖</div>
                 <h2 class="text-2xl font-black text-slate-900 uppercase">Analyse läuft...</h2>
-                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-2">Score: ${scorePercent}%</p>
                 <div id="ai-grading-result" class="max-w-xl mx-auto text-left space-y-4 px-6 mt-8"></div>
             </div>`;
         await calculateExamGrade();
     } else {
-        // Drill Overview
         container.innerHTML = `
-            <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
-                <div class="bg-indigo-600 p-10 text-center text-white">
-                    <div class="text-5xl mb-4">🏁</div>
-                    <h2 class="text-3xl font-black uppercase">Training Beendet</h2>
-                    <div class="mt-4 flex justify-center gap-8">
-                        <div><p class="text-indigo-200 text-[10px] font-black uppercase">Ergebnis</p><p class="text-2xl font-bold">${scorePercent}%</p></div>
-                        <div><p class="text-indigo-200 text-[10px] font-black uppercase">Korrekt</p><p class="text-2xl font-bold">${correctCount}/${totalCount}</p></div>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="font-black text-slate-800 uppercase text-sm mb-6 tracking-widest">Leistungs-Übersicht</h3>
-                    <div class="space-y-3 max-h-80 overflow-y-auto pr-2 mb-8">
-                        ${userAnswersLog.map((log, i) => `
-                            <div class="flex items-center justify-between p-4 rounded-2xl ${log.correct ? 'bg-green-50 border border-green-100' : 'bg-red-50 border border-red-100'}">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-6 h-6 rounded-full ${log.correct ? 'bg-green-500' : 'bg-red-500'} text-white flex items-center justify-center text-[10px]">
-                                        <i class="fas ${log.correct ? 'fa-check' : 'fa-times'}"></i>
-                                    </div>
-                                    <span class="text-xs font-bold text-slate-700 truncate max-w-[200px]">${log.question}</span>
-                                </div>
-                                <span class="text-[10px] font-black uppercase ${log.correct ? 'text-green-600' : 'text-red-600'}">${log.correct ? 'Richtig' : 'Falsch'}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <button onclick="location.reload()" class="w-full bg-slate-900 text-white py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] shadow-lg hover:bg-indigo-600 transition-all">Zum Dashboard</button>
-                </div>
+            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
+                <div class="text-6xl mb-6">🏁</div>
+                <h2 class="text-3xl font-black text-slate-900 uppercase">Training Beendet</h2>
+                <p class="text-slate-500 mt-2 mb-8">Modul erfolgreich bearbeitet.</p>
+                <button onclick="location.reload()" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold uppercase shadow-lg shadow-indigo-200">Zum Dashboard</button>
             </div>`;
     }
 }
@@ -474,6 +380,7 @@ async function finishQuiz() {
 // --- PRODIGY AI SYSTEM CORE v5.2 ---
 // ==========================================
 
+// 1. CSS FÜR ANIMATIONEN (Wird automatisch injiziert)
 const aiStyles = document.createElement("style");
 aiStyles.innerText = `
     @keyframes slideUpFade {
@@ -490,11 +397,13 @@ aiStyles.innerText = `
     .typing-dot:nth-child(2) { animation-delay: -0.16s; }
     @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
 
+    /* Fix für Overlay-Transition */
     #prodigy-overlay { transition: opacity 0.4s ease, visibility 0.4s; }
     #prodigy-overlay.hidden { display: none; visibility: hidden; }
 `;
 document.head.appendChild(aiStyles);
 
+// 2. SIDEBAR STEUERUNG (GLOBAL)
 window.toggleProdigy = function() {
     const sidebar = document.getElementById('prodigy-sidebar');
     const overlay = document.getElementById('prodigy-overlay');
@@ -505,6 +414,7 @@ window.toggleProdigy = function() {
     const isOpening = sidebar.classList.contains('translate-x-full');
 
     if (isOpening) {
+        // Öffnen
         sidebar.classList.remove('translate-x-full');
         overlay.classList.remove('hidden');
         setTimeout(() => {
@@ -512,12 +422,14 @@ window.toggleProdigy = function() {
             if(input) input.focus();
         }, 10);
     } else {
+        // Schließen
         sidebar.classList.add('translate-x-full');
         overlay.classList.add('opacity-0');
         setTimeout(() => overlay.classList.add('hidden'), 400);
     }
 };
 
+// 3. KLASUR-AUSWERTUNG (AI GRADING)
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
     if(!resultDiv) return;
@@ -538,7 +450,7 @@ async function calculateExamGrade() {
 
     const PROMPT = `Rolle: Strenger Fachprüfer Pflege. Aufgabe: Bewerte diese Klausurleistung kurz und knapp.
     Daten: ${summary}
-    Output Format: HTML (Tailwind). Keine Einleitung, direkt das HTML mit Note (1-6), Stärken, Schwächen und 1 Tipp. Nutze <div class="space-y-4">.`;
+    Output Format: HTML (Tailwind). Keine Einleitung, direkt das HTML mit Note (1-6), Stärken, Schwächen und 1 Tipp.`;
 
     try {
         const response = await fetch('/api/grade', { 
@@ -560,12 +472,14 @@ async function calculateExamGrade() {
     }
 }
 
+// 4. CHAT LOGIK (ASK PRODIGY)
 async function askProdigy() {
     const input = document.getElementById('prodigy-input');
     const chatBox = document.getElementById('prodigy-chat-box');
     const query = input.value.trim();
     if(!query || !chatBox) return;
 
+    // User Message
     chatBox.innerHTML += `
         <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
             <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md font-medium">
@@ -578,17 +492,24 @@ async function askProdigy() {
     chatBox.scrollTop = chatBox.scrollHeight;
 
     const loadingId = "ai-load-" + Date.now();
+    
+    // Loader
     chatBox.innerHTML += `
         <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
             <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
                 <div class="flex gap-1.5 items-center px-1">
-                    <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
                 </div>
             </div>
         </div>`;
     chatBox.scrollTop = chatBox.scrollHeight;
 
-    const PROMPT = `Du bist Prodigy, ein Lern-Assistent. REGELN: 1. Antworte DIREKT. 2. Keine Begrüßung. 3. Kontext: ${currentSummaryContext || 'Pflegewissen'}. User Frage: ${query}`;
+    const PROMPT = `Du bist Prodigy, ein Lern-Assistent. 
+    REGELN: 1. Antworte DIREKT. 2. Keine Begrüßung. 3. Sage NIE deinen Namen/Version, außer man fragt wer du bist. 4. Nutze HTML (<b>, <ul>).
+    Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Pflegewissen'}
+    User Frage: ${query}`;
 
     try {
         const response = await fetch('/api/grade', {
@@ -598,7 +519,8 @@ async function askProdigy() {
         });
         
         const data = await response.json();
-        document.getElementById(loadingId)?.remove();
+        const loadingElement = document.getElementById(loadingId);
+        if(loadingElement) loadingElement.remove();
 
         chatBox.innerHTML += `
             <div class="flex flex-col gap-2 max-w-[95%] mb-6 msg-animate">
@@ -614,10 +536,12 @@ async function askProdigy() {
             </div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
     } catch (e) {
-        document.getElementById(loadingId).innerHTML = `<div class="text-red-500 text-[10px] font-bold p-2">Netzwerkfehler</div>`;
+        const loadingElement = document.getElementById(loadingId);
+        if(loadingElement) loadingElement.innerHTML = `<div class="text-red-500 text-[10px] font-bold p-2">Netzwerkfehler</div>`;
     }
 }
 
+// 5. EVENT LISTENERS & UI HELPERS
 document.addEventListener('DOMContentLoaded', () => {
     const pInput = document.getElementById('prodigy-input');
     if(pInput) {
@@ -634,12 +558,16 @@ function switchTab(tab) {
     const secInhalt = document.getElementById('section-inhalt');
     const secQuiz = document.getElementById('section-quiz');
     if(!secInhalt || !secQuiz) return;
+
     secInhalt.classList.toggle('hidden', tab !== 'inhalt');
     secQuiz.classList.toggle('hidden', tab !== 'quiz');
+    
     const btnInhalt = document.getElementById('tab-inhalt');
     const btnQuiz = document.getElementById('tab-quiz');
-    const activeStyle = "flex-1 py-3 rounded-xl font-bold bg-white text-indigo-600 shadow-sm border border-slate-200/50";
-    const inactiveStyle = "flex-1 py-3 rounded-xl font-bold text-slate-500 hover:text-slate-700";
+    
+    const activeStyle = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
+    const inactiveStyle = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
+    
     if(btnInhalt) btnInhalt.className = tab === 'inhalt' ? activeStyle : inactiveStyle;
     if(btnQuiz) btnQuiz.className = tab === 'quiz' ? activeStyle : inactiveStyle;
 }
