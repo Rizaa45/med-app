@@ -206,74 +206,118 @@ function closeSummary() {
 }
 
 // --- QUIZ ENGINE ---
+
+/**
+ * Starts the quiz based on the selected mode.
+ * Simulator Mode: 16 Tasks (Case Questions + Fillers)
+ * Drill Mode: 30 Random Questions + Infinite loop for mistakes
+ */
 async function startQuizMode(mode) {
     currentMode = mode;
     userAnswersLog = [];
+    currentIndex = 0;
+    
+    // UI Reset
     document.getElementById('quiz-selection').classList.add('hidden');
     document.getElementById('quiz-container').classList.remove('hidden');
+    const grid = document.getElementById('options-grid');
+    grid.innerHTML = `<div class="p-10 text-center"><i class="fas fa-circle-notch fa-spin text-3xl text-indigo-600"></i></div>`;
 
     try {
         if (mode === 'drill') {
-            const response = await fetch('data/klausur27_questions.json');
-            const allQuestions = await response.json();
-            currentQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 30);
+            const resp = await fetch('data/klausur27_questions.json');
+            const allDrills = await resp.json();
+            // Pick 30 random ones for a training session
+            currentQuestions = allDrills.sort(() => 0.5 - Math.random()).slice(0, 30);
             document.getElementById('scenario-display').classList.add('hidden');
         } 
+        
         else if (mode === 'simulator') {
             const casesResp = await fetch('data/klausur27_cases.json');
             const drillResp = await fetch('data/klausur27_questions.json');
             const cases = await casesResp.json();
             const drills = await drillResp.json();
+
+            // 1. Pick a random Case Study
             activeCase = cases[Math.floor(Math.random() * cases.length)];
-            const randomDrills = drills.sort(() => 0.5 - Math.random()).slice(0, 2);
-            currentQuestions = [...activeCase.questions, ...randomDrills];
+            const caseQuestions = activeCase.questions; // Usually 6-10 questions
+
+            // 2. Fill the rest with random Drills to hit exactly 16 tasks
+            const remainingCount = 16 - caseQuestions.length;
+            const randomFillers = drills
+                .sort(() => 0.5 - Math.random())
+                .slice(0, Math.max(0, remainingCount));
+
+            currentQuestions = [...caseQuestions, ...randomFillers];
+            
+            // Setup Scenario UI
             document.getElementById('scenario-display').classList.remove('hidden');
             document.getElementById('scenario-text').innerText = activeCase.scenario;
-            document.getElementById('setting-badge').innerText = "Prüfungssimulation";
-        } 
-        else {
-            const response = await fetch(`data/mod_${currentModuleId}.json`);
-            const data = await response.json();
-            currentQuestions = data.questions;
-            document.getElementById('scenario-display').classList.add('hidden');
+            document.getElementById('setting-badge').innerText = "STAATSEXAMEN SIMULATION (2026)";
         }
 
-        currentIndex = 0;
         document.getElementById('q-total').innerText = currentQuestions.length;
         showQuestion();
-    } catch (err) { 
-        alert("Fehler beim Laden der Fragen."); 
+    } catch (err) {
+        console.error(err);
+        alert("Systemfehler: Content-Daten konnten nicht geladen werden.");
         exitQuiz();
     }
 }
 
+/**
+ * Renders the current question based on type
+ */
 function showQuestion() {
-    if (currentIndex >= currentQuestions.length) { finishQuiz(); return; }
+    if (currentIndex >= currentQuestions.length) {
+        finishQuiz();
+        return;
+    }
+
     const q = currentQuestions[currentIndex];
     
+    // Header Info
     document.getElementById('q-current').innerText = currentIndex + 1;
+    document.getElementById('type-badge').innerText = (q.type || 'Analyse').toUpperCase();
     document.getElementById('question-text').innerText = q.question || q.q;
-    document.getElementById('type-badge').innerText = q.type ? q.type.toUpperCase() : "ANALYSE";
     document.getElementById('feedback').classList.add('hidden');
-    
-    // Pin-Button UI Update
-    updatePinUI();
     
     const grid = document.getElementById('options-grid');
     grid.innerHTML = "";
 
-    if (q.type === "nennen_offen" || q.type === "lueckentext") { 
-        renderOpenQuestion(q, grid); 
-    } else { 
-        renderMCQuestion(q, grid); 
+    // Multi-Type Rendering
+    if (q.type === "nennen_offen" || q.type === "lueckentext" || q.type === "fall_analyse") {
+        renderOpenQuestion(q, grid);
+    } 
+    else if (q.type === "wahr_falsch") {
+        renderTrueFalse(q, grid);
+    }
+    else {
+        renderMCQuestion(q, grid); // Default Multiple Choice
     }
 }
+
+// --- RENDERERS ---
 
 function renderMCQuestion(q, grid) {
     q.options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = "w-full text-left p-5 rounded-2xl border-2 border-slate-100 hover:border-indigo-400 transition-all font-medium mb-2 bg-white text-slate-700 flex justify-between items-center group";
-        btn.innerHTML = `<span>${opt}</span><i class="fas fa-check opacity-0 group-hover:opacity-20"></i>`;
+        btn.className = "w-full text-left p-5 rounded-2xl border-2 border-slate-100 hover:border-indigo-400 hover:bg-slate-50 transition-all font-medium mb-2 bg-white text-slate-700 flex justify-between items-center group";
+        btn.innerHTML = `<span>${opt}</span><i class="fas fa-chevron-right opacity-0 group-hover:opacity-100 transition-all text-indigo-400"></i>`;
+        btn.onclick = () => handleAnswer(i, btn, q);
+        grid.appendChild(btn);
+    });
+}
+
+function renderTrueFalse(q, grid) {
+    const options = ["Wahr", "Falsch"];
+    const colors = ["border-green-100 hover:border-green-500", "border-red-100 hover:border-red-500"];
+    
+    options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = `w-full text-center p-6 rounded-2xl border-2 ${colors[i]} transition-all font-bold mb-2 bg-white text-slate-800 uppercase tracking-widest`;
+        btn.innerText = opt;
+        // Logic: if correct_answer is 0 (Wahr) or 1 (Falsch)
         btn.onclick = () => handleAnswer(i, btn, q);
         grid.appendChild(btn);
     });
@@ -281,99 +325,162 @@ function renderMCQuestion(q, grid) {
 
 function renderOpenQuestion(q, grid) {
     const container = document.createElement('div');
-    container.className = "space-y-4 w-full";
+    container.className = "space-y-4 w-full animate-fade-in";
     container.innerHTML = `
-        <textarea id="user-open-answer" class="w-full p-5 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 outline-none text-sm h-32" placeholder="Deine Antwort hier..."></textarea>
-        <button id="sol-btn" onclick="revealOpenSol()" class="w-full bg-indigo-600 text-white py-4 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-lg">Lösung prüfen</button>
-        <div id="sol-area" class="hidden space-y-4 fade-in">
+        <textarea id="user-open-answer" class="w-full p-5 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 outline-none text-sm h-40 bg-slate-50 focus:bg-white transition-all" placeholder="Stichpunkte oder Fließtext..."></textarea>
+        <button id="sol-btn" onclick="revealOpenSol()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase text-xs tracking-[0.2em] shadow-lg hover:bg-indigo-600 transition-all">Antwort einloggen & Lösung vergleichen</button>
+        
+        <div id="sol-area" class="hidden space-y-4">
             <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-sm">
-                <span class="font-black text-indigo-600 block mb-2 uppercase tracking-tighter">Musterlösung:</span>
-                <p class="text-slate-700 leading-relaxed">${q.correct_answer}</p>
+                <span class="font-black text-indigo-600 block mb-2 uppercase tracking-tighter italic">Offizielle Musterlösung:</span>
+                <p class="text-slate-700 leading-relaxed font-medium">${q.correct_answer || q.answer}</p>
             </div>
             <div class="flex gap-3">
-                <button onclick="handleSelfCheck(true)" class="flex-1 bg-green-500 text-white py-4 rounded-xl font-bold text-xs uppercase">Richtig</button>
-                <button onclick="handleSelfCheck(false)" class="flex-1 bg-red-400 text-white py-4 rounded-xl font-bold text-xs uppercase">Falsch / Unvollständig</button>
+                <button onclick="handleSelfCheck(true)" class="flex-1 bg-green-500 text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-green-600 shadow-md">Vollständig Korrekt</button>
+                <button onclick="handleSelfCheck(false)" class="flex-1 bg-orange-400 text-white py-4 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-orange-500 shadow-md">Teilweise / Falsch</button>
             </div>
         </div>
     `;
     grid.appendChild(container);
 }
 
+// --- LOGIC HANDLERS ---
+
 function revealOpenSol() {
+    const val = document.getElementById('user-open-answer').value;
+    if(val.length < 3) { alert("Bitte schreibe zuerst eine Antwort."); return; }
     document.getElementById('sol-btn').classList.add('hidden');
     document.getElementById('sol-area').classList.remove('hidden');
 }
 
 function handleAnswer(selectedIndex, btn, q) {
     const isCorrect = selectedIndex === q.correct_answer;
-    const all = document.querySelectorAll('#options-grid button');
     
-    all.forEach(b => {
-        b.disabled = true;
-        const idx = Array.from(all).indexOf(b);
-        if(idx === q.correct_answer) b.classList.add('border-green-500', 'bg-green-50');
-    });
+    // Disable all buttons in grid
+    const all = document.querySelectorAll('#options-grid button');
+    all.forEach(b => b.disabled = true);
 
-    if(!isCorrect) btn.classList.add('border-red-500', 'bg-red-50');
+    if (isCorrect) {
+        btn.classList.add('border-green-500', 'bg-green-50', 'text-green-700');
+    } else {
+        btn.classList.add('border-red-500', 'bg-red-50', 'text-red-700');
+        // Highlight correct one
+        all[q.correct_answer].classList.add('border-green-500', 'bg-green-50');
+    }
 
-    userAnswersLog.push({ question: q.question || q.q, userAnswer: q.options[selectedIndex], correct: isCorrect, type: 'mc' });
-    processResult(isCorrect, q);
+    userAnswersLog.push({ q: q.question || q.q, correct: isCorrect, category: q.category || 'Allgemein' });
+    processFeedback(isCorrect, q);
 }
 
 function handleSelfCheck(isCorrect) {
     const q = currentQuestions[currentIndex];
-    const userText = document.getElementById('user-open-answer').value;
-    userAnswersLog.push({ question: q.question || q.q, userAnswer: userText, correct: isCorrect, type: 'open' });
-    processResult(isCorrect, q);
+    userAnswersLog.push({ q: q.question || q.q, correct: isCorrect, category: q.category || 'Fachwissen' });
+    processFeedback(isCorrect, q);
 }
 
-function processResult(isCorrect, q) {
+function processFeedback(isCorrect, q) {
     const feedback = document.getElementById('feedback');
     const txt = document.getElementById('feedback-text');
     
-    if (!isCorrect && currentMode === 'drill') {
-        txt.innerText = "WIEDERHOLUNG!";
-        txt.className = "text-orange-600 font-black text-xl uppercase tracking-tighter";
-        currentQuestions.push(q); 
-        document.getElementById('q-total').innerText = currentQuestions.length;
+    feedback.classList.remove('hidden');
+    
+    if (isCorrect) {
+        txt.innerText = "Korrekt";
+        txt.className = "text-green-600 font-black text-xl uppercase tracking-tighter";
     } else {
-        txt.innerText = isCorrect ? "EXZELLENT!" : "LEIDER FALSCH";
-        txt.className = isCorrect ? "text-green-600 font-black text-xl uppercase" : "text-red-600 font-black text-xl uppercase";
+        txt.innerText = "Analyse";
+        txt.className = "text-orange-500 font-black text-xl uppercase tracking-tighter";
+        
+        // DRILL MODE LOGIC: Push wrong question to the end of the list
+        if (currentMode === 'drill') {
+            currentQuestions.push(q);
+            document.getElementById('q-total').innerText = currentQuestions.length;
+        }
     }
     
-    document.getElementById('hint-text').innerText = q.hint || q.explanation || "";
-    feedback.classList.remove('hidden');
+    document.getElementById('hint-text').innerText = q.hint || q.explanation || "Prüfungswissen: Achte auf die Details im Fallbeispiel.";
 }
 
-function nextQuestion() { 
-    currentIndex++; 
-    showQuestion(); 
+function nextQuestion() {
+    currentIndex++;
+    showQuestion();
 }
 
-function exitQuiz() { 
-    document.getElementById('quiz-selection').classList.remove('hidden'); 
-    document.getElementById('quiz-container').classList.add('hidden'); 
-}
+// --- THE FINALE: EVALUATION ---
 
 async function finishQuiz() {
     const container = document.getElementById('quiz-container');
-    if (currentMode === 'simulator') {
-        container.innerHTML = `
-            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
-                <div class="animate-bounce text-6xl mb-6">🤖</div>
-                <h2 class="text-2xl font-black text-slate-900 uppercase">Analyse läuft...</h2>
-                <div id="ai-grading-result" class="max-w-xl mx-auto text-left space-y-4 px-6 mt-8"></div>
-            </div>`;
-        await calculateExamGrade();
-    } else {
-        container.innerHTML = `
-            <div class="text-center py-20 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
-                <div class="text-6xl mb-6">🏁</div>
-                <h2 class="text-3xl font-black text-slate-900 uppercase">Training Beendet</h2>
-                <p class="text-slate-500 mt-2 mb-8">Modul erfolgreich bearbeitet.</p>
-                <button onclick="location.reload()" class="bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold uppercase shadow-lg shadow-indigo-200">Zum Dashboard</button>
-            </div>`;
-    }
+    const correctCount = userAnswersLog.filter(a => a.correct).length;
+    const percent = Math.round((correctCount / userAnswersLog.length) * 100);
+    
+    // Dynamic Grading
+    let grade = "6";
+    let color = "text-red-600";
+    if(percent >= 92) { grade = "1"; color = "text-green-600"; }
+    else if(percent >= 81) { grade = "2"; color = "text-emerald-500"; }
+    else if(percent >= 67) { grade = "3"; color = "text-blue-500"; }
+    else if(percent >= 50) { grade = "4"; color = "text-orange-500"; }
+    else { grade = "5"; color = "text-red-400"; }
+
+    container.innerHTML = `
+        <div class="bg-white rounded-[3rem] p-10 shadow-2xl border border-slate-100 animate-modal overflow-hidden relative">
+            <div class="absolute top-0 left-0 w-full h-2 bg-indigo-600"></div>
+            
+            <div class="text-center mb-10">
+                <span class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Prüfungs-Ergebnis</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-2">SIMULATION BEENDET</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+                <div class="text-center p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100">
+                    <div class="text-sm font-bold text-slate-400 uppercase mb-1">Deine Note</div>
+                    <div class="text-8xl font-black ${color} tracking-tighter">${grade}</div>
+                    <div class="text-xs font-bold text-slate-400 mt-2 uppercase">${percent}% Score</div>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="font-black text-slate-900 uppercase text-xs tracking-widest">Kompetenz-Check</h4>
+                    ${generateCategoryStats()}
+                </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-6 mb-8">
+                <div class="flex items-center gap-4 mb-3">
+                    <div class="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white"><i class="fas fa-robot"></i></div>
+                    <h4 class="text-white font-bold text-sm">Prodigy AI Analyse</h4>
+                </div>
+                <p class="text-indigo-100/80 text-xs leading-relaxed italic">
+                    "${percent > 70 ? 'Starke Performance. Dein klinisches Urteilsvermögen ist auf Examens-Niveau. Fokus auf Recht & Ethik beibehalten.' : 'Achtung: Kritische Lücken in der Fall-Analyse. Wiederhole die Handouts zu Modul 9 vor dem 27.02.'}"
+                </p>
+            </div>
+
+            <button onclick="location.reload()" class="w-full bg-indigo-600 text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-slate-900 transition-all shadow-xl shadow-indigo-100">Dashboard aktualisieren</button>
+        </div>
+    `;
+}
+
+function generateCategoryStats() {
+    const cats = [...new Set(userAnswersLog.map(a => a.category))];
+    return cats.map(cat => {
+        const catAnswers = userAnswersLog.filter(a => a.category === cat);
+        const catCorrect = catAnswers.filter(a => a.correct).length;
+        const catPercent = Math.round((catCorrect / catAnswers.length) * 100);
+        return `
+            <div>
+                <div class="flex justify-between text-[10px] font-black uppercase mb-1">
+                    <span class="text-slate-600">${cat}</span>
+                    <span class="text-indigo-600">${catPercent}%</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-indigo-500 h-full" style="width: ${catPercent}%"></div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function exitQuiz() {
+    location.reload();
 }
 
 // ==========================================
@@ -584,3 +691,4 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
+
