@@ -376,9 +376,9 @@ async function finishQuiz() {
     }
 }
 
-// --- AI SYSTEM CORE v5.0 (Optimized & Animated) ---
+// --- AI SYSTEM CORE v5.1 (Fixed Controls) ---
 
-// 1. CSS für professionelle Animationen injizieren
+// 1. CSS Injection (Unchanged)
 const aiStyles = document.createElement("style");
 aiStyles.innerText = `
     @keyframes slideUpFade {
@@ -397,9 +397,32 @@ aiStyles.innerText = `
 `;
 document.head.appendChild(aiStyles);
 
+// --- NEU: Sidebar Toggle Funktion ---
+function toggleProdigy() {
+    const sidebar = document.getElementById('prodigy-sidebar');
+    const overlay = document.getElementById('prodigy-overlay');
+    
+    // Toggle Sidebar Position
+    if (sidebar.classList.contains('translate-x-full')) {
+        // Öffnen
+        sidebar.classList.remove('translate-x-full');
+        // Overlay anzeigen
+        overlay.classList.remove('hidden');
+        // Kleiner Timeout für Fade-In Effekt
+        setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+        // Fokus auf Input setzen
+        setTimeout(() => document.getElementById('prodigy-input').focus(), 300);
+    } else {
+        // Schließen
+        sidebar.classList.add('translate-x-full');
+        // Overlay ausblenden
+        overlay.classList.add('opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 500);
+    }
+}
+
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
-    // Professioneller Lade-Screen für die Analyse
     resultDiv.innerHTML = `
         <div class="flex flex-col items-center justify-center py-12 msg-animate">
             <div class="relative w-16 h-16 mb-4">
@@ -452,7 +475,7 @@ async function askProdigy() {
     const query = input.value.trim();
     if(!query) return;
 
-    // 1. USER BUBBLE (Rechts, Indigo)
+    // 1. USER BUBBLE
     chatBox.innerHTML += `
         <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
             <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md shadow-indigo-200/50 font-medium">
@@ -466,7 +489,7 @@ async function askProdigy() {
 
     const loadingId = "ai-load-" + Date.now();
     
-    // 2. LOADER BUBBLE (Links, Minimalistisch)
+    // 2. LOADER BUBBLE
     chatBox.innerHTML += `
         <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
             <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
@@ -479,7 +502,7 @@ async function askProdigy() {
         </div>`;
     chatBox.scrollTop = chatBox.scrollHeight;
 
-    // 3. SYSTEM PROMPT (Optimiert gegen Wiederholungen)
+    // 3. SYSTEM PROMPT
     const PROMPT = `
     SYSTEM INSTRUKTION:
     Du bist Prodigy, ein Lern-Assistent.
@@ -501,11 +524,10 @@ async function askProdigy() {
         
         const data = await response.json();
         
-        // Loader entfernen
         const loadingElement = document.getElementById(loadingId);
         if(loadingElement) loadingElement.remove();
 
-        // 4. AI RESPONSE BUBBLE (Links, mit Avatar)
+        // 4. AI RESPONSE BUBBLE
         chatBox.innerHTML += `
             <div class="flex flex-col gap-2 max-w-[95%] mb-6 msg-animate">
                 <div class="flex items-center gap-2 mb-1 pl-1">
@@ -531,6 +553,21 @@ async function askProdigy() {
         }
     }
 }
+
+// --- NEU: Enter-Key Logic ---
+// Warte bis das Element existiert und füge dann den Listener hinzu
+document.addEventListener('DOMContentLoaded', () => {
+    const pInput = document.getElementById('prodigy-input');
+    if(pInput) {
+        pInput.addEventListener('keydown', function(e) {
+            // Wenn Enter gedrückt wird (ohne Shift)
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault(); // Verhindere neue Zeile
+                askProdigy();       // Sende Nachricht
+            }
+        });
+    }
+});
 // --- UI HELPER ---
 function switchTab(tab) {
     document.getElementById('section-inhalt').classList.toggle('hidden', tab !== 'inhalt');
@@ -568,5 +605,6 @@ function showProactiveAiBubble() {
     document.body.appendChild(bubble);
     setTimeout(() => { if(bubble) bubble.remove(); }, 8000);
 }
+
 
 
