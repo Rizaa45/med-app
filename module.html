@@ -12,12 +12,8 @@
         .fade-in { animation: fadeIn 0.4s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        
-        /* Sidebar Control */
-        #prodigy-sidebar.active { transform: translateX(0); }
-        #prodigy-overlay.active { display: block; opacity: 1; }
-        
-        .tab-active { @apply bg-white text-indigo-600 shadow-sm border border-slate-200/50; }
+        /* Schwebender Pin-Effekt */
+        #pin-btn { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     </style>
 </head>
 <body class="min-h-screen overflow-x-hidden">
@@ -34,7 +30,7 @@
                 <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 9: Analyse</span>
                 <span class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.0</span>
             </div>
-            <button class="p-2 text-slate-400 hover:text-indigo-600 transition-all">
+            <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-indigo-600 transition-all">
                 <i class="fas fa-thumbtack text-lg"></i>
             </button>
         </div>
@@ -42,29 +38,21 @@
 
     <div class="max-w-4xl mx-auto px-6 py-8">
         <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-8 border border-slate-200">
-            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border">Lerninhalte</button>
+            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50">Lerninhalte</button>
             <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500">Prüfungsvorbereitung</button>
         </div>
 
         <div id="section-inhalt" class="space-y-6 fade-in">
-            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
-                <h3 class="font-black text-slate-800 uppercase text-sm mb-4">Übersicht</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Hier findest du alle relevanten Materialien für die Prüfung am 27.02.</p>
-            </div>
+            <div id="summary-dropdown-container"></div>
+            <div id="summary-display-area" class="hidden"></div>
+            
             <div class="flex items-center gap-4 py-4">
                 <div class="h-px flex-1 bg-slate-200"></div>
-                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Handouts & PDFs</span>
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Original Handouts</span>
                 <div class="h-px flex-1 bg-slate-200"></div>
             </div>
-            <div id="pdf-list" class="grid gap-4">
-                <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between hover:border-indigo-300 transition-all cursor-pointer shadow-sm">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center"><i class="fas fa-file-pdf text-xl"></i></div>
-                        <div><h4 class="font-bold text-slate-800 text-sm">Prüfungsrelevante Themen M9</h4><p class="text-[10px] text-slate-400 uppercase">PDF • 2.4 MB</p></div>
-                    </div>
-                    <i class="fas fa-download text-slate-300"></i>
-                </div>
-            </div>
+            
+            <div id="pdf-list" class="grid gap-4"></div>
         </div>
 
         <div id="section-quiz" class="hidden space-y-8 fade-in">
@@ -88,110 +76,119 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div onclick="startQuizMode('classic')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-indigo-400 cursor-pointer group transition-all flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-indigo-600 group-hover:text-white transition-all"><i class="fas fa-book"></i></div>
+                        <div><h3 class="font-bold text-slate-700">Basis-Wissen</h3><p class="text-[10px] text-slate-400 font-bold uppercase">Standard Katalog</p></div>
+                    </div>
+                    <div onclick="startQuizMode('cases')" class="bg-white p-6 rounded-3xl border border-slate-200 hover:border-orange-400 cursor-pointer group transition-all flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-orange-500 group-hover:text-white transition-all"><i class="fas fa-folder-open"></i></div>
+                        <div><h3 class="font-bold text-slate-700">Fall-Archiv</h3><p class="text-[10px] text-slate-400 font-bold uppercase">Pflegesituationen</p></div>
+                    </div>
+                </div>
             </div>
 
             <div id="quiz-container" class="hidden">
-                 <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
-                    <div class="bg-slate-900 px-8 py-4 flex justify-between items-center text-white text-[10px] font-black uppercase">
-                        <span>Frage <span id="q-current">1</span>/30</span>
-                        <button onclick="location.reload()" class="hover:text-red-400">Beenden</button>
+                <div id="scenario-display" class="hidden bg-slate-900 rounded-[2rem] p-8 mb-6 text-white border-b-4 border-orange-500">
+                    <span id="setting-badge" class="bg-orange-500 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest mb-4 inline-block">Setting</span>
+                    <p id="scenario-text" class="text-slate-200 text-sm leading-relaxed italic"></p>
+                </div>
+
+                <div class="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
+                    <div class="bg-slate-900 px-8 py-4 flex justify-between items-center text-white text-[10px] font-black uppercase tracking-widest">
+                        <span>Frage <span id="q-current">1</span>/<span id="q-total">--</span></span>
+                        <button onclick="location.reload()" class="hover:text-red-400 transition-colors">Beenden</button>
                     </div>
                     <div class="p-8 md:p-12">
-                        <h2 id="question-text" class="text-xl md:text-2xl font-extrabold text-slate-900 mb-8">Lädt Frage...</h2>
+                        <div class="flex justify-between items-center mb-4">
+                            <div id="type-badge" class="text-indigo-600 text-[10px] font-black uppercase tracking-[0.2em]">Analyse</div>
+                            <button id="pin-btn" onclick="togglePin()" class="bg-slate-100 text-slate-400 p-3 rounded-xl hover:bg-slate-200 transition-all shadow-sm">
+                                <i class="fas fa-thumbtack"></i>
+                            </button>
+                        </div>
+                        
+                        <h2 id="question-text" class="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-tight"></h2>
                         <div id="options-grid" class="grid gap-3"></div>
+                        
+                        <div id="feedback" class="mt-8 p-6 rounded-2xl hidden border-l-8 bg-slate-50 border-indigo-500">
+                            <p id="feedback-text" class="font-black text-lg uppercase mb-1"></p>
+                            <p id="hint-text" class="text-slate-600 text-xs italic mb-4"></p>
+                            <button id="next-btn" onclick="nextQuestion()" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all shadow-lg">Weiter <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="prodigy-sidebar" class="fixed top-0 right-0 h-full w-full max-w-[440px] bg-white shadow-[-20px_0_50px_rgba(0,0,0,0.1)] z-[110] translate-x-full transition-transform duration-500 flex flex-col border-l border-slate-200">
-        <div class="p-6 bg-slate-900 text-white flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-lg"><i class="fas fa-brain"></i></div>
-                <div><h4 class="font-black uppercase text-sm">Prodigy <span class="text-indigo-400">AI</span></h4><p class="text-[9px] text-slate-400 font-bold uppercase">Medical Tutor v1.2</p></div>
+<div id="prodigy-sidebar" class="fixed top-0 right-0 h-full w-full max-w-[440px] bg-white/95 backdrop-blur-xl shadow-[-20px_0_50px_rgba(0,0,0,0.1)] z-[110] translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col border-l border-slate-200/50">
+    
+<div class="p-6 bg-slate-900 text-white flex justify-between items-center relative overflow-hidden">
+    
+    <div class="absolute top-[-20px] right-[-20px] w-32 h-32 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="flex items-center gap-4 relative z-10">
+        <div class="relative">
+            <div class="w-12 h-12 bg-gradient-to-tr from-indigo-600 to-violet-500 rounded-2xl flex items-center justify-center shadow-lg transform -rotate-3">
+                <i class="fas fa-brain text-xl"></i>
             </div>
-            <button onclick="toggleProdigy()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-all"><i class="fas fa-times"></i></button>
+            <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-4 border-slate-900 rounded-full"></div>
         </div>
-        <div id="prodigy-chat-box" class="flex-1 overflow-y-auto p-6 space-y-6 bg-slate-50 no-scrollbar">
-            <div class="bg-white border border-slate-200 p-4 rounded-2xl text-sm text-slate-700 shadow-sm">
-                Willkommen zurück! 👋 Wie kann ich dir heute beim Analysieren von Modul 9 helfen?
-            </div>
-        </div>
-        <div class="p-6 bg-white border-t border-slate-100">
-            <div class="relative flex items-center">
-                <textarea id="prodigy-input" rows="1" placeholder="Stelle eine Fachfrage..." class="w-full p-4 pr-16 bg-slate-100 border-2 border-transparent focus:border-indigo-500 focus:bg-white rounded-2xl text-sm outline-none resize-none transition-all"></textarea>
-                <button onclick="askProdigy()" class="absolute right-2 w-11 h-11 bg-indigo-600 text-white rounded-xl flex items-center justify-center hover:bg-indigo-700 transition-all"><i class="fas fa-paper-plane"></i></button>
-            </div>
+        <div>
+            <h4 class="font-black uppercase tracking-[0.15em] text-sm">Prodigy <span class="text-indigo-400">AI</span></h4>
+            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Medical Tutor v1.2</p>
         </div>
     </div>
-
-    <div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[105] hidden transition-all cursor-pointer"></div>
-
-    <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 group z-[100]">
-        <div class="absolute inset-0 bg-indigo-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
-        <div class="relative w-16 h-16 bg-indigo-600 text-white rounded-3xl shadow-2xl flex items-center justify-center border-2 border-indigo-400/50 transform group-hover:scale-110 transition-all">
-            <i class="fas fa-robot text-2xl"></i>
-        </div>
+    
+    <button onclick="toggleProdigy()" class="relative z-50 w-10 h-10 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 hover:scale-105 active:scale-95 transition-all cursor-pointer">
+        <i class="fas fa-times"></i>
     </button>
+</div>
 
-    <script>
-        // Tab Switching Logic
-        function switchTab(tab) {
-            const inhaltSec = document.getElementById('section-inhalt');
-            const quizSec = document.getElementById('section-quiz');
-            const tabInhaltBtn = document.getElementById('tab-inhalt');
-            const tabQuizBtn = document.getElementById('tab-quiz');
+    <div id="prodigy-chat-box" class="flex-1 overflow-y-auto p-6 space-y-6 bg-gradient-to-b from-slate-50 to-white no-scrollbar">
+        <div class="flex flex-col gap-2 max-w-[85%]">
+            <div class="flex items-center gap-2 mb-1">
+                <span class="text-[10px] font-black text-indigo-600 uppercase">Prodigy</span>
+                <span class="text-[9px] text-slate-400">Gerade eben</span>
+            </div>
+            <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none text-sm text-slate-700 shadow-sm leading-relaxed">
+                Willkommen zurück! 👋 Ich habe den Kontext der aktuellen Lerneinheit geladen. Wie kann ich dir heute beim Analysieren helfen?
+            </div>
+        </div>
+    </div>
 
-            if (tab === 'inhalt') {
-                inhaltSec.classList.remove('hidden');
-                quizSec.classList.add('hidden');
-                tabInhaltBtn.classList.add('bg-white', 'text-indigo-600', 'shadow-sm', 'border');
-                tabQuizBtn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm', 'border');
-                tabQuizBtn.classList.add('text-slate-500');
-            } else {
-                inhaltSec.classList.add('hidden');
-                quizSec.classList.remove('hidden');
-                tabQuizBtn.classList.add('bg-white', 'text-indigo-600', 'shadow-sm', 'border');
-                tabInhaltBtn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm', 'border');
-                tabInhaltBtn.classList.add('text-slate-500');
-            }
-        }
-
-        // Sidebar Logic
-        function toggleProdigy() {
-            const sidebar = document.getElementById('prodigy-sidebar');
-            const overlay = document.getElementById('prodigy-overlay');
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('hidden');
-            overlay.classList.toggle('active');
-        }
-
-        // Quiz Mode Start
-        function startQuizMode(mode) {
-            document.getElementById('quiz-selection').classList.add('hidden');
-            document.getElementById('quiz-container').classList.remove('hidden');
-            console.log("Starting mode:", mode);
-        }
-
-        // Mock AI interaction
-        function askProdigy() {
-            const input = document.getElementById('prodigy-input');
-            const chatBox = document.getElementById('prodigy-chat-box');
-            if(!input.value) return;
-
-            // User message
-            const userDiv = document.createElement('div');
-            userDiv.className = "bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-none text-sm self-end ml-12 shadow-sm";
-            userDiv.innerText = input.value;
-            chatBox.appendChild(userDiv);
+    <div class="p-6 bg-white border-t border-slate-100">
+        <div class="relative flex items-center group">
+            <div class="absolute inset-0 bg-indigo-600/5 rounded-[2rem] blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity"></div>
             
-            input.value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    </script>
+            <textarea id="prodigy-input" 
+                      rows="1" 
+                      placeholder="Stelle eine Fachfrage..." 
+                      class="relative w-full p-4 pr-16 bg-slate-100 border-2 border-transparent focus:border-indigo-500/20 focus:bg-white rounded-[1.5rem] text-sm focus:ring-4 focus:ring-indigo-500/5 outline-none resize-none transition-all placeholder:text-slate-400 font-medium"></textarea>
+            
+            <button onclick="askProdigy()" 
+                    class="absolute right-2 w-11 h-11 bg-indigo-600 text-white rounded-xl flex items-center justify-center hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-200 active:scale-90 transition-all">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        <p class="text-center text-[9px] text-slate-400 mt-4 uppercase tracking-tighter font-bold">Bitte nicht gleichzeitig Viele Fragen stellen!!</p>
+    </div>
+</div>
+
+<div id="prodigy-overlay" onclick="toggleProdigy()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[105] hidden opacity-0 transition-all duration-500 cursor-pointer"></div>
+
+<button onclick="toggleProdigy()" class="fixed bottom-8 right-8 group z-[100]">
+    <div class="absolute inset-0 bg-indigo-600 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-pulse"></div>
+    <div class="relative w-18 h-18 sm:w-20 sm:h-20 bg-indigo-600 text-white rounded-3xl shadow-2xl flex items-center justify-center border-2 border-indigo-400/50 transform group-hover:scale-110 group-active:scale-95 transition-all">
+        <div class="relative">
+            <i class="fas fa-robot text-3xl group-hover:rotate-12 transition-transform"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 border-2 border-indigo-600 rounded-full animate-ping"></span>
+        </div>
+    </div>
+</button>
+
     <script src="app.js"></script>
 </body>
 </html>
-
 
