@@ -402,122 +402,134 @@ async function finishQuiz() {
 // ==========================================
 // --- PRODIGY AI SYSTEM CORE v5.2 ---
 // ==========================================
-
-
+// 1. CSS FÜR ANIMATIONEN (Wird automatisch injiziert)
 const aiStyles = document.createElement("style");
 aiStyles.innerText = `
-    @keyframes slideUpFade { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes slideUpFade {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
     .msg-animate { animation: slideUpFade 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
-    .typing-dot { width: 5px; height: 5px; background: #94a3b8; border-radius: 50%; animation: typing 1.4s infinite ease-in-out both; }
+   
+    .typing-dot {
+        width: 5px; height: 5px; background: #94a3b8; border-radius: 50%;
+        animation: typing 1.4s infinite ease-in-out both;
+    }
     .typing-dot:nth-child(1) { animation-delay: -0.32s; }
     .typing-dot:nth-child(2) { animation-delay: -0.16s; }
     @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+    /* Fix für Overlay-Transition */
     #prodigy-overlay { transition: opacity 0.4s ease, visibility 0.4s; }
     #prodigy-overlay.hidden { display: none; visibility: hidden; }
 `;
 document.head.appendChild(aiStyles);
-
-window.toggleProdigy = function() { /* ... same as before ... */ };
-
-// === SAFE AI RESPONSE PARSER ===
-function getAiText(data) {
-    if (!data) return "Fehler: Keine Antwort vom Server.";
-    if (typeof data === 'string') return data;
-    if (data.text) return data.text;
-    if (data.content) return data.content;
-    if (data.response) return data.response;
-    if (data.message) return data.message;
-    if (data.result) return data.result;
-    return JSON.stringify(data).substring(0, 500); // fallback
-}
-
-// 3. TIEFEN-AUSWERTUNG (unchanged except safe parser)
+// 2. SIDEBAR STEUERUNG (GLOBAL)
+window.toggleProdigy = function() {
+    const sidebar = document.getElementById('prodigy-sidebar');
+    const overlay = document.getElementById('prodigy-overlay');
+    const input = document.getElementById('prodigy-input');
+   
+    if (!sidebar || !overlay) return;
+    const isOpening = sidebar.classList.contains('translate-x-full');
+    if (isOpening) {
+        // Öffnen
+        sidebar.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+            overlay.classList.remove('opacity-0');
+            if(input) input.focus();
+        }, 10);
+    } else {
+        // Schließen
+        sidebar.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 400);
+    }
+};
+// 3. KLASUR-AUSWERTUNG (AI GRADING)
 async function calculateExamGrade() {
     const resultDiv = document.getElementById('ai-grading-result');
     if(!resultDiv) return;
-
-    resultDiv.innerHTML = `... same loading spinner as before ...`;
-    
-    const summary = userAnswersLog.map((log, i) => 
+    resultDiv.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-12 msg-animate">
+            <div class="relative w-16 h-16 mb-4">
+                <div class="absolute inset-0 border-4 border-slate-100 rounded-full"></div>
+                <div class="absolute inset-0 border-4 border-indigo-600 rounded-full border-t-transparent animate-spin"></div>
+                <i class="fas fa-graduation-cap absolute inset-0 m-auto text-indigo-600 flex items-center justify-center"></i>
+            </div>
+            <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em] animate-pulse">Erstelle Gutachten...</p>
+        </div>`;
+   
+    const summary = (typeof userAnswersLog !== 'undefined') ? userAnswersLog.map((log, i) =>
         `F${i+1}: ${log.question} | Antwort: ${log.userAnswer} | ${log.correct ? "KORREKT" : "FALSCH"}`
-    ).join('\n');
-
-    const PROMPT = `... same long prompt as in v5.1 ...`;
-
-    try {
-        const response = await fetch('/api/grade', { 
-            method: 'POST', 
-            headers: { 'Content-Type': 'application/json' }, 
-            body: JSON.stringify({ prompt: PROMPT }) 
-        });
-        
-        const data = await response.json();
-        const aiText = getAiText(data);
-
-        resultDiv.innerHTML = `
-            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xl overflow-y-auto max-h-[600px] msg-animate">
-                <div class="prose prose-sm prose-indigo max-w-none">${aiText}</div>
-            </div>
-            <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-600 transition-all shadow-lg msg-animate">
-                <i class="fas fa-redo mr-2"></i> Neue Simulation starten
-            </button>`;
-    } catch (e) { 
-        resultDiv.innerHTML = `<div class="p-6 bg-red-50 text-red-600 rounded-2xl text-sm">Netzwerk- oder Serverfehler bei der KI-Auswertung.<br>Fehlermeldung: ${e.message}</div>`; 
-    }
-}
-
-// 4. CHAT LOGIK – NOW BULLETPROOF
-async function askProdigy() {
-    const input = document.getElementById('prodigy-input');
-    const chatBox = document.getElementById('prodigy-chat-box');
-    const query = input.value.trim();
-    if(!query || !chatBox) return;
-
-    // User message
-    chatBox.innerHTML += `
-        <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
-            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md font-medium">${query}</div>
-        </div>`;
-    
-    input.value = "";
-    chatBox.scrollTop = chatBox.scrollHeight;
-
-    const loadingId = "ai-load-" + Date.now();
-    chatBox.innerHTML += `
-        <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
-            <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
-                <div class="flex gap-1.5 items-center px-1">
-                    <div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>
-                </div>
-            </div>
-        </div>`;
-    chatBox.scrollTop = chatBox.scrollHeight;
-
-    // BETTER CONTEXT FALLBACK
-    const safeContext = (currentSummaryContext && currentSummaryContext.trim() !== "") 
-        ? currentSummaryContext 
-        : "Allgemeines Pflegewissen für die Gesundheits- und Krankenpflege Ausbildung (Examen 2026).";
-
-    const PROMPT = `Du bist Prodigy, ein Lern-Assistent. 
-REGELN: 1. Antworte DIREKT und hilfreich. 2. Keine Begrüßung. 3. Nutze HTML wenn sinnvoll (<b>, <ul>, <li>).
-Kontext: ${safeContext}
-User Frage: ${query}`;
-
+    ).join('\n') : "Keine Daten verfügbar.";
+    const PROMPT = `Rolle: Strenger Fachprüfer Pflege. Aufgabe: Bewerte diese Klausurleistung kurz und knapp.
+    Daten: ${summary}
+    Output Format: HTML (Tailwind). Keine Einleitung, direkt das HTML mit Note (1-6), Stärken, Schwächen und 1 Tipp.`;
     try {
         const response = await fetch('/api/grade', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: PROMPT })
         });
-
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
+       
         const data = await response.json();
-        const aiText = getAiText(data);
-
+        resultDiv.innerHTML = `
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-xl overflow-y-auto max-h-[600px] msg-animate">
+                <div class="prose prose-sm prose-indigo max-w-none">${data.text}</div>
+            </div>
+            <button onclick="location.reload()" class="w-full mt-6 bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-600 transition-all shadow-lg msg-animate">
+                <i class="fas fa-redo mr-2"></i> Neue Simulation
+            </button>`;
+    } catch (e) {
+        resultDiv.innerHTML = `<div class="p-4 bg-red-50 text-red-500 rounded-xl text-center text-xs font-bold uppercase">Fehler bei der AI-Analyse</div>`;
+    }
+}
+// 4. CHAT LOGIK (ASK PRODIGY)
+async function askProdigy() {
+    const input = document.getElementById('prodigy-input');
+    const chatBox = document.getElementById('prodigy-chat-box');
+    const query = input.value.trim();
+    if(!query || !chatBox) return;
+    // User Message
+    chatBox.innerHTML += `
+        <div class="flex flex-col gap-1 items-end ml-auto max-w-[85%] mb-6 msg-animate">
+            <div class="bg-indigo-600 text-white p-4 rounded-2xl rounded-tr-sm text-sm shadow-md font-medium">
+                ${query}
+            </div>
+        </div>`;
+   
+    input.value = "";
+    input.style.height = 'auto';
+    chatBox.scrollTop = chatBox.scrollHeight;
+    const loadingId = "ai-load-" + Date.now();
+   
+    // Loader
+    chatBox.innerHTML += `
+        <div id="${loadingId}" class="flex flex-col gap-2 max-w-[85%] mb-6 msg-animate">
+            <div class="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm shadow-sm w-fit">
+                <div class="flex gap-1.5 items-center px-1">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        </div>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+    const PROMPT = `Du bist Prodigy, ein Lern-Assistent.
+    REGELN: 1. Antworte DIREKT. 2. Keine Begrüßung. 3. Sage NIE deinen Namen/Version, außer man fragt wer du bist. 4. Nutze HTML (<b>, <ul>).
+    Kontext: ${typeof currentSummaryContext !== 'undefined' ? currentSummaryContext : 'Pflegewissen'}
+    User Frage: ${query}`;
+    try {
+        const response = await fetch('/api/grade', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: PROMPT })
+        });
+       
+        const data = await response.json();
         const loadingElement = document.getElementById(loadingId);
         if(loadingElement) loadingElement.remove();
-
         chatBox.innerHTML += `
             <div class="flex flex-col gap-2 max-w-[95%] mb-6 msg-animate">
                 <div class="flex items-center gap-2 mb-1 pl-1">
@@ -527,27 +539,16 @@ User Frage: ${query}`;
                     <span class="text-[10px] font-black text-slate-700 uppercase tracking-widest">Prodigy</span>
                 </div>
                 <div class="bg-white border border-slate-200/80 p-5 rounded-2xl rounded-tl-sm text-sm text-slate-700 shadow-sm prose prose-indigo prose-sm max-w-none">
-                    ${aiText}
+                    ${data.text}
                 </div>
             </div>`;
         chatBox.scrollTop = chatBox.scrollHeight;
-
     } catch (e) {
         const loadingElement = document.getElementById(loadingId);
-        if(loadingElement) loadingElement.remove();
-        
-        chatBox.innerHTML += `
-            <div class="flex flex-col gap-2 max-w-[95%] mb-6 msg-animate">
-                <div class="bg-red-50 border border-red-200 p-4 rounded-2xl text-red-600 text-sm">
-                    <strong>Verbindungsfehler</strong><br>
-                    ${e.message}<br>
-                    <small>Überprüfe ob dein /api/grade Server läuft.</small>
-                </div>
-            </div>`;
-        chatBox.scrollTop = chatBox.scrollHeight;
+        if(loadingElement) loadingElement.innerHTML = `<div class="text-red-500 text-[10px] font-bold p-2">Netzwerkfehler</div>`;
     }
 }
-
+// 5. EVENT LISTENERS & UI HELPERS
 document.addEventListener('DOMContentLoaded', () => {
     const pInput = document.getElementById('prodigy-input');
     if(pInput) {
@@ -559,25 +560,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 function switchTab(tab) {
     const secInhalt = document.getElementById('section-inhalt');
     const secQuiz = document.getElementById('section-quiz');
     if(!secInhalt || !secQuiz) return;
-
     secInhalt.classList.toggle('hidden', tab !== 'inhalt');
     secQuiz.classList.toggle('hidden', tab !== 'quiz');
-    
+   
     const btnInhalt = document.getElementById('tab-inhalt');
     const btnQuiz = document.getElementById('tab-quiz');
-    
+   
     const activeStyle = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-600 shadow-sm border border-slate-200/50";
     const inactiveStyle = "flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-slate-700";
-    
+   
     if(btnInhalt) btnInhalt.className = tab === 'inhalt' ? activeStyle : inactiveStyle;
     if(btnQuiz) btnQuiz.className = tab === 'quiz' ? activeStyle : inactiveStyle;
 }
-
 function showProactiveAiBubble() {
     if(document.getElementById('proactive-ai-bubble')) return;
     const bubble = document.createElement('div');
