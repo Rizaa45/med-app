@@ -1,0 +1,15 @@
+{
+  "unit_id": 4,
+  "title": "Rechtliche Grundlagen des Medizinprodukterechts",
+  "icon": "fa-file-shield",
+  "category": "Modul 2 Kernwissen",
+  "content": [
+    "Punkt 1: Medizinprodukte wirken im Gegensatz zu Arzneimitteln primär physikalisch oder physikochemisch und nicht pharmakologisch, immunologisch oder metabolisch [1].",
+    "Punkt 2: Das Medizinprodukte-Durchführungsgesetz (MPDG) dient seit Mai 2021 der Durchführung der EU-Verordnung 2017/745 (MDR) im nationalen Recht [2, 3].",
+    "Punkt 3: Einteilung in Risikoklassen von Klasse I (geringes Risiko, z. B. Gehhilfen) bis Klasse III (sehr hohes Risiko, z. B. Herzkatheter oder aktive Implantate) [4-6].",
+    "Punkt 4: Die Medizinprodukte-Betreiberverordnung (MPBetreibV) verpflichtet Betreiber zur Führung eines Bestandsverzeichnisses sowie für bestimmte Geräte (Anlage 1 & 2) eines Medizinproduktebuchs [7-9].",
+    "Punkt 5: Ein 'Übernahmeverschulden' liegt vor, wenn eine Pflegekraft Aufgaben an einem Gerät übernimmt, für das sie nicht ausreichend qualifiziert oder eingewiesen ist [10]."
+  ],
+  "exam_focus": "Zentral sind die Abgrenzung zum Arzneimittelrecht, die Kenntnis über das Übernahmeverschulden des Anwenders sowie die unverzügliche Meldepflicht von Vorkommnissen an das BfArM [1, 10, 11].",
+  "html_snippet": "<div class='bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden mb-4'><div class='p-6'><div class='flex items-center gap-4 mb-4'><div class='w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center'><i class='fas fa-file-shield text-xl'></i></div><div><h3 class='text-lg font-black text-slate-900 uppercase'>Rechtliche Grundlagen des Medizinprodukterechts</h3><p class='text-[10px] text-indigo-500 font-bold uppercase'>Kernwissen Modul 2</p></div></div><div class='space-y-3 text-sm text-slate-600'><ul class='list-disc pl-5 space-y-1'><li>Medizinprodukte wirken primär physikalisch oder physikochemisch und nicht pharmakologisch oder metabolisch wie Arzneimittel [1].</li><li>Das MPDG setzt die europäischen MDR-Vorgaben national um und regelt Inverkehrbringung und Betrieb [2, 3].</li><li>Klassifizierung erfolgt nach Risiko (I bis III); alle aktiven implantierbaren Produkte gehören zur Klasse III [4, 5].</li><li>Betreiber müssen für aktive nicht implantierbare Produkte ein Bestandsverzeichnis und oft ein Medizinproduktebuch führen [8, 9].</li><li>Anwender haften bei 'Übernahmeverschulden', wenn sie ohne Einweisung oder Qualifikation handeln [10].</li></ul></div><div class='mt-4 p-4 bg-orange-50 rounded-2xl border border-orange-100'><span class='text-[10px] font-black text-orange-600 uppercase block mb-1'>Prüfungs-Fokus:</span><p class='text-xs text-orange-800 italic'>Zentral sind die Abgrenzung zum Arzneimittelrecht, die Kenntnis über das Übernahmeverschulden des Anwenders sowie die unverzügliche Meldepflicht von Vorkommnissen an das BfArM [1, 10, 11].</p></div></div></div>"
+}

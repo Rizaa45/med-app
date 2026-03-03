@@ -1,0 +1,15 @@
+{
+  "unit_id": 3,
+  "title": "Neurologie und neurologische Krankheitsbilder",
+  "icon": "fa-brain",
+  "category": "Modul 2 Kernwissen",
+  "content": [
+    "Punkt 1: Das Nervensystem gliedert sich in das Zentrale Nervensystem (ZNS) mit Gehirn und Rückenmark sowie das Periphere Nervensystem (PNS), welches 12 Hirnnervenpaare und 31 Spinalnervenpaare umfasst [1-4].",
+    "Punkt 2: Die arterielle Blutversorgung des Gehirns wird durch den Circulus arteriosus (Gefäßring) sichergestellt, der durch die A. carotis interna und die A. vertebralis gespeist wird [5, 6].",
+    "Punkt 3: Ein Schlaganfall äußert sich durch typische Zeichen wie hängende Mundwinkel, Halbseitenlähmung (Hemiparese) und Sprachstörungen, während Parkinson durch Rigor (Muskelsteifigkeit), Tremor (Zittern) und Hypokinese (Bewegungsarmut) gekennzeichnet ist [7, 8].",
+    "Punkt 4: Das Gehirn wird von drei Hirnhäuten (Dura mater, Arachnoidea, Pia mater) umhüllt und vom Liquor cerebrospinalis geschützt, der in den Plexus choroidei der Ventrikel mit ca. 500–700 ml pro Tag gebildet wird [9-11].",
+    "Punkt 5: Ein Reflex ist eine unwillkürliche, schnelle Reaktion, bei der der Reizweg über einen Reflexbogen (Rezeptor, sensibler Nerv, Reflexzentrum im Rückenmark, motorischer Nerv, Erfolgsorgan) verläuft [11-13]."
+  ],
+  "exam_focus": "Für das Examen sind die funktionelle Anatomie des ZNS und PNS, die Leitsymptome neurologischer Notfälle wie Schlaganfall und Krampfanfall sowie die Blutversorgung über den Circulus arteriosus von zentraler Bedeutung [2, 5, 7, 14].",
+  "html_snippet": "<div class='bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden mb-4'><div class='p-6'><div class='flex items-center gap-4 mb-4'><div class='w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center'><i class='fas fa-brain text-xl'></i></div><div><h3 class='text-lg font-black text-slate-900 uppercase'>Neurologie und neurologische Krankheitsbilder</h3><p class='text-[10px] text-indigo-500 font-bold uppercase'>Kernwissen Modul 2</p></div></div><div class='space-y-3 text-sm text-slate-600'><ul class='list-disc pl-5 space-y-1'><li>Das Nervensystem gliedert sich in das Zentrale Nervensystem (ZNS) und das Periphere Nervensystem (PNS) mit 12 Hirn- und 31 Spinalnervenpaaren [1, 2].</li><li>Die Blutversorgung erfolgt über den Circulus arteriosus, gespeist durch A. carotis interna und A. vertebralis [5].</li><li>Leitsymptome Schlaganfall: Hemiparese, Sprachstörungen; Parkinson: Rigor, Tremor, Hypokinese [7, 8].</li><li>Schutz durch Meningen und Liquor (500–700 ml Tagesproduktion in den Ventrikeln) [9, 10].</li><li>Reflexe verlaufen als unwillkürliche Reaktionen über den Reflexbogen im Rückenmark [11, 12].</li></ul></div><div class='mt-4 p-4 bg-orange-50 rounded-2xl border border-orange-100'><span class='text-[10px] font-black text-orange-600 uppercase block mb-1'>Prüfungs-Fokus:</span><p class='text-xs text-orange-800 italic'>Die Differenzierung zwischen ZNS/PNS, die Symptomerkennung von Schlaganfall und Parkinson sowie die Anatomie des Liquorsystems sind essenzielle Prüfungsinhalte.</p></div></div></div>"
+}

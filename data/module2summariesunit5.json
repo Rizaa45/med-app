@@ -1,0 +1,15 @@
+{
+  "unit_id": 5,
+  "title": "Degenerative Erkrankungen und Folgen von Immobilität",
+  "icon": "fa-wheelchair",
+  "category": "Modul 2 Kernwissen",
+  "content": [
+    "Punkt 1: Osteoporose ist ein krankhafter Knochenschwund, bei dem die Belastbarkeit der Knochenbälkchen (Spongiosa) massiv sinkt, was häufig zu Frakturen der Wirbel und des Oberschenkels führt [1].",
+    "Punkt 2: Typische klinische Zeichen einer fortgeschrittenen Osteoporose sind das Tannenbaumphänomen (seitliche Hautfalten am Rücken), der sogenannte Witwenbuckel (Kyphose) und Wirbelfrakturen [2].",
+    "Punkt 3: Ein gesunder Knochenstoffwechsel erfordert ein Zusammenspiel aus Kalzium, Vitamin D (aktiviert durch Sonnenlicht), Sauerstoff, Bewegung sowie der Aktivität von Osteoblasten und Osteoklasten [1].",
+    "Punkt 4: Körperliche Folgen von Immobilität umfassen ein erhöhtes Risiko für Dekubitus, Kontrakturen und Thrombosen sowie eine Verminderung orthostatischer Reaktionen und ein gesteigertes Infektionsrisiko [2].",
+    "Punkt 5: Psychisch führt Immobilität bei alten Menschen oft zu verkümmernden kognitiven und kommunikativen Fähigkeiten sowie zum Verlust von Selbstvertrauen und Lebensmut [2]."
+  ],
+  "exam_focus": "Die Kenntnis der notwendigen Faktoren für den Knochenstoffwechsel (Kalzium, Vitamin D, Bewegung) sowie die Differenzierung zwischen physischen Sekundärerkrankungen und psychischen Folgen der Immobilität ist prüfungsrelevant.",
+  "html_snippet": "<div class='bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden mb-4'><div class='p-6'><div class='flex items-center gap-4 mb-4'><div class='w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center'><i class='fas fa-wheelchair text-xl'></i></div><div><h3 class='text-lg font-black text-slate-900 uppercase'>Degenerative Erkrankungen und Folgen von Immobilität</h3><p class='text-[10px] text-indigo-500 font-bold uppercase'>Kernwissen Modul 2</p></div></div><div class='space-y-3 text-sm text-slate-600'><ul class='list-disc pl-5 space-y-1'><li>Osteoporose reduziert die Belastbarkeit der Spongiosa und führt oft zu Wirbel- oder Oberschenkelfrakturen.</li><li>Leitsymptome sind Tannenbaumphänomen, Witwenbuckel und Größenverlust.</li><li>Knochenstoffwechsel benötigt zwingend Kalzium, Vitamin D und mechanische Reize durch Bewegung.</li><li>Körperliche Immobilitätsfolgen: Dekubitus-, Kontrakturen- und Thromboserisiko.</li><li>Psychische Immobilitätsfolgen: Abbau kognitiver Fähigkeiten und Verlust des Lebensmutes.</li></ul></div><div class='mt-4 p-4 bg-orange-50 rounded-2xl border border-orange-100'><span class='text-[10px] font-black text-orange-600 uppercase block mb-1'>Prüfungs-Fokus:</span><p class='text-xs text-orange-800 italic'>Die Kenntnis der notwendigen Faktoren für den Knochenstoffwechsel (Kalzium, Vitamin D, Bewegung) sowie die Differenzierung zwischen physischen Sekundärerkrankungen und psychischen Folgen der Immobilität ist prüfungsrelevant.</p></div></div></div>"
+}

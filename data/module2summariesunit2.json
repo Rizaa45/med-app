@@ -1,0 +1,15 @@
+{
+  "unit_id": 2,
+  "title": "Anatomie und Physiologie des Bewegungsapparates",
+  "icon": "fa-bone",
+  "category": "Modul 2 Kernwissen",
+  "content": [
+    "Punkt 1: Gliederung in den passiven Bewegungsapparat (Skelettsystem mit >200 Knochen, ca. 12 % des Körpergewichts) und den aktiven Bewegungsapparat (Skelettmuskulatur).",
+    "Punkt 2: Aufbau der Knochen aus Knochenhaut (Periost) zur Ernährung, harter Kompakta und schwammartiger Spongiosa (Knochenbälkchen).",
+    "Punkt 3: Differenzierung echter Gelenke (Diarthrosen) nach Bewegungsachsen: Kugelgelenk (3 Achsen, z. B. Hüfte), Eigelenk/Sattelgelenk (2 Achsen) und Scharnier-/Radgelenk (1 Achse).",
+    "Punkt 4: Aufbau der Wirbelsäule in Segmente (7 HWS, 12 BWS, 5 LWS) mit physiologischer Krümmung nach vorne (Lordose) und hinten (Kyphose).",
+    "Punkt 5: Physiologie der Muskelkontraktion durch das Ineinandergleiten von Aktin- und Myosinfilamenten sowie das Zusammenspiel von Agonist und Antagonist."
+  ],
+  "exam_focus": "Die präzise Kenntnis der Wirbelanzahl (7-12-5), der Gelenkformen mit ihren jeweiligen Freiheitsgraden sowie der Aufbau des Knochengewebes (Spongiosa vs. Kompakta) sind Kernbestandteile der Anatomieprüfung.",
+  "html_snippet": "<div class='bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden mb-4'><div class='p-6'><div class='flex items-center gap-4 mb-4'><div class='w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center'><i class='fas fa-bone text-xl'></i></div><div><h3 class='text-lg font-black text-slate-900 uppercase'>Anatomie und Physiologie des Bewegungsapparates</h3><p class='text-[10px] text-indigo-500 font-bold uppercase'>Kernwissen Modul 2</p></div></div><div class='space-y-3 text-sm text-slate-600'><ul class='list-disc pl-5 space-y-1'><li>Gliederung in den passiven Bewegungsapparat (Skelettsystem mit >200 Knochen, ca. 12 % des Körpergewichts) und den aktiven Bewegungsapparat (Skelettmuskulatur).</li><li>Aufbau der Knochen aus Knochenhaut (Periost) zur Ernährung, harter Kompakta und schwammartiger Spongiosa (Knochenbälkchen).</li><li>Differenzierung echter Gelenke (Diarthrosen) nach Bewegungsachsen: Kugelgelenk (3 Achsen, z. B. Hüfte), Eigelenk/Sattelgelenk (2 Achsen) und Scharnier-/Radgelenk (1 Achse).</li><li>Aufbau der Wirbelsäule in Segmente (7 HWS, 12 BWS, 5 LWS) mit physiologischer Krümmung nach vorne (Lordose) und hinten (Kyphose).</li><li>Physiologie der Muskelkontraktion durch das Ineinandergleiten von Aktin- und Myosinfilamenten sowie das Zusammenspiel von Agonist und Antagonist.</li></ul></div><div class='mt-4 p-4 bg-orange-50 rounded-2xl border border-orange-100'><span class='text-[10px] font-black text-orange-600 uppercase block mb-1'>Prüfungs-Fokus:</span><p class='text-xs text-orange-800 italic'>Die präzise Kenntnis der Wirbelanzahl (7-12-5), der Gelenkformen mit ihren jeweiligen Freiheitsgraden sowie der Aufbau des Knochengewebes (Spongiosa vs. Kompakta) sind Kernbestandteile der Anatomieprüfung.</p></div></div></div>"
+}
