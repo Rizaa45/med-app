@@ -19,6 +19,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        
+        /* Progress Glow Effect */
+        .progress-glow {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
     </style>
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
@@ -27,34 +32,27 @@
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
         <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl relative z-10 overflow-hidden animate-modal border border-white/20">
             <div class="bg-indigo-600 p-8 text-white relative">
-                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v4.0 Live</div>
-                <i class="fas fa-rocket text-4xl mb-4"></i>
-                <h2 class="text-3xl font-black tracking-tight uppercase italic">Update Erfolgreich!</h2>
-                <p class="text-indigo-100 font-medium">Das SLM System von Prasanth wurde aktualisiert.</p>
+                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.1 Live</div>
+                <i class="fas fa-microchip text-4xl mb-4"></i>
+                <h2 class="text-3xl font-black tracking-tight uppercase italic">Core Upgrade!</h2>
+                <p class="text-indigo-100 font-medium">Das SLM System wurde für Modul 2 optimiert.</p>
             </div>
             <div class="p-8 space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-check-circle"></i></div>
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-folder-plus"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Modul 9: Vollständig einsatzbereit</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Fokus auf die **Klausur am 27.02.**. Strukturierte Lernpfade für maximale Effizienz.</p>
+                        <h4 class="font-bold text-slate-900">Modul 2: Dynamische Architektur</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">6 neue Lerneinheiten wurden über das JSON-Batch-System integriert.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-layer-group"></i></div>
+                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-clock"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Kurs-Zusammenfassungen</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Didaktische Kurzfassungen wurden vor den Raw-PDFs eingefügt, um den Kerninhalt sofort zu erfassen.</p>
+                        <h4 class="font-bold text-slate-900">8-Wochen-Countdown</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Der Fokus liegt nun exakt auf dem Staatsexamen am **27.04.2026**.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-alt"></i></div>
-                    <div>
-                        <h4 class="font-bold text-slate-900">Klausur-Simulator</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Der Simulator & Drill-Mode für die Prüfungsvorbereitung ist jetzt voll funktionsfähig.</p>
-                    </div>
-                </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">System starten</button>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">Modul 2 starten</button>
             </div>
         </div>
     </div>
@@ -65,7 +63,7 @@
             <div>
                 <div class="flex items-center gap-3 mb-1">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.4.0</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.1</span>
                 </div>
                 <div class="mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -74,15 +72,15 @@
                 <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Lern-Management-System</h1>
                 <p class="text-slate-500 mt-2 font-medium italic flex items-center gap-2">
                     <i class="fas fa-graduation-cap text-indigo-500"></i> 
-                    Examenstraining für die staatliche Prüfung 2026
+                    Examenstraining für das Staatsexamen 2026
                 </p>
             </div>
             
             <div class="bg-white p-1 rounded-2xl border border-slate-200 shadow-sm flex items-center">
-                <div class="px-5 py-3">
-                    <span class="text-[9px] text-slate-400 block uppercase tracking-widest font-black mb-1">Status: Aktiv</span>
+                <div class="px-5 py-3 text-right">
+                    <span class="text-[9px] text-slate-400 block uppercase tracking-widest font-black mb-1">Ziel-Datum</span>
                     <span class="text-slate-900 text-sm font-bold flex items-center gap-2">
-                        <i class="fas fa-calendar-alt text-orange-500"></i> 27.02.2026
+                        <i class="fas fa-flag-checkered text-orange-500"></i> 27.04.2026
                     </span>
                 </div>
             </div>
@@ -92,12 +90,12 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
                 <div>
                     <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight italic">Gesamtfortschritt</h2>
-                    <p class="text-slate-400 text-sm font-medium">Kombinierte Auswertung deiner Leistung</p>
+                    <p class="text-slate-400 text-sm font-medium italic">8 Wochen verbleibend</p>
                 </div>
                 <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">0%</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
-                <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
+                <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 0%"></div>
             </div>
         </div>
 
@@ -117,8 +115,28 @@
                 </div>
             </div>
 
+            <div onclick="location.href='module2.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-indigo-100 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <div class="absolute right-4 top-4">
+                    <span class="flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+                    </span>
+                </div>
+                <div class="flex justify-between items-start mb-8">
+                    <div class="bg-indigo-600 text-white p-4 rounded-2xl shadow-lg shadow-indigo-100">
+                        <i class="fas fa-stethoscope text-2xl"></i>
+                    </div>
+                    <span id="mod2-percent" class="font-black text-indigo-600 text-xl">NEW</span>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 2</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Medizinisches Kernwissen</p>
+                <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                    <div id="mod2-bar" class="bg-indigo-500 h-full transition-all duration-1000" style="width: 10%"></div>
+                </div>
+            </div>
+
             <div onclick="location.href='module.html?id=9'" class="group bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 hover:shadow-orange-200/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
-                <div class="absolute -right-10 -top-2 bg-orange-500 text-white text-[10px] font-black px-12 py-1.5 rotate-45 uppercase tracking-widest z-20">Spezial</div>
+                <div class="absolute -right-10 -top-2 bg-orange-500 text-white text-[10px] font-black px-12 py-1.5 rotate-45 uppercase tracking-widest z-20">Simulator</div>
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-orange-500 text-white p-4 rounded-2xl shadow-[0_0_20px_rgba(249,115,22,0.4)]">
                         <i class="fas fa-bolt text-2xl"></i>
@@ -126,15 +144,15 @@
                     <span id="mod9-percent" class="font-black text-slate-600 text-xl">0%</span>
                 </div>
                 <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight">Module 9</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium">Klasur 27.02 Simulator</p>
+                <p class="text-sm text-slate-400 mb-8 font-medium">Prüfungssimulation v.1</p>
                 <div class="w-full bg-white/10 h-2.5 rounded-full overflow-hidden">
                     <div id="mod9-bar" class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 0%"></div>
                 </div>
             </div>
 
             <script>
-                const modules = ["Recht & Ethik", "Pflegeprozesse", "Anatomie"];
-                modules.forEach(m => {
+                const placeholders = ["Recht & Ethik", "Pflegeprozesse", "Anatomie Deep-Dive"];
+                placeholders.forEach(m => {
                     document.write(`
                     <div class="bg-slate-100/50 p-8 rounded-[2rem] border border-dashed border-slate-300 flex flex-col justify-center items-center opacity-60">
                         <i class="fas fa-lock text-slate-400 mb-4 text-xl"></i>
@@ -149,7 +167,7 @@
     <script>
         // Modal & Startup Logik
         window.addEventListener('DOMContentLoaded', () => {
-            const hasSeenUpdate = localStorage.getItem('v4_update_seen');
+            const hasSeenUpdate = localStorage.getItem('v5_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
@@ -161,11 +179,10 @@
             modal.style.opacity = '0';
             setTimeout(() => {
                 modal.classList.add('hidden');
-                localStorage.setItem('v4_update_seen', 'true');
+                localStorage.setItem('v5_update_seen', 'true');
             }, 400);
         }
     </script>
     <script src="app.js"></script>
 </body>
 </html>
-
