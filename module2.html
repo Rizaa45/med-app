@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Modul 2 Kernwissen</title>
+    <title>SLM System | Modul 2</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,6 @@
     </style>
 </head>
 <body class="min-h-screen">
-   
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
             <button onclick="location.href='index.html'" class="group flex items-center text-slate-500 hover:text-indigo-600 font-semibold transition-all">
@@ -23,8 +22,8 @@
                 <span class="text-sm uppercase tracking-wider">Dashboard</span>
             </button>
             <div class="text-center">
-                <span class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 2: Kernwissen</span>
-                <p class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase">SLM Core v.5.1</p>
+                <span id="mod-title" class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 2: Kernwissen</span>
+                <p class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.1</p>
             </div>
             <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-indigo-600 transition-all">
                 <i class="fas fa-thumbtack text-lg"></i>
@@ -39,12 +38,9 @@
         </div>
 
         <div id="section-inhalt" class="space-y-6 fade-in">
-            <div id="summary-dropdown-container" class="space-y-4">
-                <div class="flex flex-col items-center justify-center py-12 text-slate-400" id="loading-spinner">
-                    <i class="fas fa-circle-notch animate-spin text-3xl mb-4"></i>
-                    <p class="text-xs font-black uppercase tracking-widest">Initialisiere Analyse...</p>
-                </div>
-            </div>
+            <div id="summary-dropdown-container"></div>
+            
+            <div id="summary-display-area" class="hidden"></div>
            
             <div class="flex items-center gap-4 py-4">
                 <div class="h-px flex-1 bg-slate-200"></div>
@@ -55,16 +51,13 @@
             <div id="pdf-list" class="grid gap-4"></div>
         </div>
 
-        <div id="section-quiz" class="hidden space-y-8 fade-in text-center py-20 bg-white rounded-[2.5rem] border border-slate-100">
-             <i class="fas fa-lock text-4xl text-slate-200 mb-4"></i>
-             <h3 class="font-bold text-slate-900">Simulator gesperrt</h3>
-             <p class="text-slate-500 text-sm">Bitte erst Lerninhalte abschließen.</p>
+        <div id="section-quiz" class="hidden space-y-8 fade-in">
+             <div class="text-center py-20 bg-white rounded-3xl border border-slate-100">
+                <i class="fas fa-brain text-4xl text-indigo-200 mb-4"></i>
+                <p class="font-bold text-slate-400 uppercase text-xs">Simulator in Vorbereitung</p>
+             </div>
         </div>
     </div>
-
-    <button onclick="toggleProdigy()" class="fixed bottom-8 right-8 w-18 h-18 bg-indigo-600 text-white rounded-3xl shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-all">
-        <i class="fas fa-robot text-2xl"></i>
-    </button>
 
     <script src="module2.js"></script>
 </body>
