@@ -20,7 +20,6 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* Progress Glow Effect */
         .progress-glow {
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
         }
@@ -31,28 +30,28 @@
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
         <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl relative z-10 overflow-hidden animate-modal border border-white/20">
-            <div class="bg-indigo-600 p-8 text-white relative">
-                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.3 Live</div>
-                <i class="fas fa-microchip text-4xl mb-4"></i>
-                <h2 class="text-3xl font-black tracking-tight uppercase italic">Core Upgrade!</h2>
-                <p class="text-indigo-100 font-medium">Das SLM System wurde für Modul 4 erweitert.</p>
+            <div class="bg-green-600 p-8 text-white relative">
+                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.4 Live</div>
+                <i class="fas fa-brain text-4xl mb-4"></i>
+                <h2 class="text-3xl font-black tracking-tight uppercase italic">Reha-Update!</h2>
+                <p class="text-green-100 font-medium">Modul 5: Neurologie & Reha ist nun vollständig integriert.</p>
             </div>
             <div class="p-8 space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-folder-plus"></i></div>
+                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-wheelchair"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Modul 4: Recht & Ethik</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Die dynamische JSON-Architektur ist nun für das vierte Modul freigeschaltet.</p>
+                        <h4 class="font-bold text-slate-900">Modul 5: Neurologische Konzepte</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Bobath, Phasenmodell und pflegetherapeutische Ansätze sind jetzt verfügbar.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-clock"></i></div>
+                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-check-double"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Examen-Fokus</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Zielkorridor für das Staatsexamen am **27.04.2026** bleibt aktiv.</p>
+                        <h4 class="font-bold text-slate-900">Symmetrisches Grid</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Das Dashboard wurde für die finale Modul-Struktur optimiert.</p>
                     </div>
                 </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">Dashboard starten</button>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition-all shadow-lg shadow-green-100">Dashboard starten</button>
             </div>
         </div>
     </div>
@@ -63,7 +62,7 @@
             <div>
                 <div class="flex items-center gap-3 mb-1">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.3</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.4</span>
                 </div>
                 <div class="mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -143,23 +142,37 @@
                 </div>
             </div>
 
-            <div onclick="location.href='module4.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-indigo-100 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
-                <div class="absolute right-4 top-4">
-                    <span class="flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
-                    </span>
-                </div>
+            <div onclick="location.href='module4.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-indigo-600 text-white p-4 rounded-2xl shadow-lg shadow-indigo-100">
                         <i class="fas fa-balance-scale text-2xl"></i>
                     </div>
-                    <span id="mod4-percent" class="font-black text-indigo-600 text-xl">NEW</span>
+                    <span id="mod4-percent" class="font-black text-indigo-600 text-xl">LIVE</span>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 4</h3>
                 <p class="text-sm text-slate-500 mb-8 font-medium">Recht & Ethik</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
                     <div id="mod4-bar" class="bg-indigo-500 h-full transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div onclick="location.href='module5.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-green-100 hover:border-green-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                <div class="absolute right-4 top-4">
+                    <span class="flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                </div>
+                <div class="flex justify-between items-start mb-8">
+                    <div class="bg-green-600 text-white p-4 rounded-2xl shadow-lg shadow-green-100">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <span id="mod5-percent" class="font-black text-green-600 text-xl">NEW</span>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 5</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Neuro-Rehabilitation</p>
+                <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                    <div id="mod5-bar" class="bg-green-500 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
@@ -178,24 +191,12 @@
                 </div>
             </div>
 
-            <script>
-                const placeholders = ["Pflegeprozesse"];
-                placeholders.forEach(m => {
-                    document.write(`
-                    <div class="bg-slate-100/50 p-8 rounded-[2rem] border border-dashed border-slate-300 flex flex-col justify-center items-center opacity-60">
-                        <i class="fas fa-lock text-slate-400 mb-4 text-xl"></i>
-                        <span class="text-slate-500 font-black text-sm uppercase tracking-widest text-center">${m}</span>
-                    </div>
-                    `);
-                });
-            </script>
         </div>
     </div>
 
     <script>
-        // Modal & Startup Logik
         window.addEventListener('DOMContentLoaded', () => {
-            const hasSeenUpdate = localStorage.getItem('v5.3_update_seen');
+            const hasSeenUpdate = localStorage.getItem('v5.4_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
@@ -207,7 +208,7 @@
             modal.style.opacity = '0';
             setTimeout(() => {
                 modal.classList.add('hidden');
-                localStorage.setItem('v5.3_update_seen', 'true');
+                localStorage.setItem('v5.4_update_seen', 'true');
             }, 400);
         }
     </script>
