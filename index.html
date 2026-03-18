@@ -24,11 +24,22 @@
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
         }
 
+        .ai-glow {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+            animation: pulse-indigo 3s infinite;
+        }
+
+        @keyframes pulse-indigo {
+            0% { box-shadow: 0 0 15px rgba(99, 102, 241, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); }
+            100% { box-shadow: 0 0 15px rgba(99, 102, 241, 0.2); }
+        }
+
         /* Smooth Card Hover */
         .module-card { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
     </style>
 </head>
-<body class="bg-[#f8fafc] min-h-screen font-['Inter']">
+<body class="bg-[#f8fafc] min-h-screen font-['Inter'] pb-20">
 
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
@@ -88,16 +99,34 @@
             </div>
         </header>
 
-        <div class="bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-10 mb-12 border border-slate-100 relative overflow-hidden">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
-                <div>
-                    <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight italic">Gesamtfortschritt</h2>
-                    <p class="text-slate-400 text-sm font-medium italic">Vorbereitungsphase: Chirurgie & Notfall</p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2 bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] p-10 border border-slate-100 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+                    <div>
+                        <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight italic">Gesamtfortschritt</h2>
+                        <p class="text-slate-400 text-sm font-medium italic">Vorbereitungsphase: Chirurgie & Notfall</p>
+                    </div>
+                    <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">15%</span>
                 </div>
-                <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">15%</span>
+                <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
+                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 15%"></div>
+                </div>
             </div>
-            <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
-                <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 15%"></div>
+
+            <div onclick="location.href='creator.html'" class="group bg-indigo-600 rounded-[2.5rem] p-1 shadow-xl cursor-pointer hover:scale-[1.02] transition-all ai-glow">
+                <div class="bg-slate-900 h-full w-full rounded-[2.3rem] p-8 flex flex-col justify-between overflow-hidden relative">
+                    <div class="absolute -right-4 -top-4 bg-indigo-500/10 w-32 h-32 rounded-full blur-3xl group-hover:bg-indigo-500/30 transition-all"></div>
+                    <div class="flex justify-between items-start z-10">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                            <i class="fas fa-wand-magic-sparkles text-white text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] border border-indigo-400/30 px-3 py-1 rounded-full">Pro Tool</span>
+                    </div>
+                    <div class="z-10">
+                        <h3 class="text-white font-black text-xl uppercase tracking-tight leading-none mb-2">SLM Synthesis</h3>
+                        <p class="text-slate-400 text-xs font-medium">KI-Creator für Handouts, Flyer & Sprecherskripte.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -196,6 +225,10 @@
 
         </div>
     </div>
+
+    <button onclick="location.href='creator.html'" class="fixed bottom-8 right-8 w-16 h-16 bg-indigo-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 ai-glow">
+        <i class="fas fa-magic text-xl"></i>
+    </button>
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
