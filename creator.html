@@ -3,122 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Synthesis | Pro Presentation & Flyer Engine</title>
+    <title>SLM Synthesis | Pro Document Engine v2.1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { background: #0f172a; font-family: 'Inter', sans-serif; color: #f8fafc; overflow-x: hidden; }
+        body { background: #0f172a; font-family: 'Inter', sans-serif; color: #f8fafc; overflow-x: hidden; position: relative; }
         
-        /* Dynamic Print Styles (Injected via JS based on type) */
+        /* -- NEU: Medizinischer Hintergrund-Effekt -- */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM0ZjQ2ZTUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwaDIwdjIwSDIWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=');
+            opacity: 0.3;
+            z-index: -2;
+        }
+
+        /* -- NEU: Blurring Glow Effekte -- */
+        .bg-glow-1 { position: fixed; top: -10%; left: -10%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, rgba(15,23,42,0) 70%); filter: blur(100px); z-index: -1; }
+        .bg-glow-2 { position: fixed; bottom: -10%; right: -10%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(234,179,8,0.08) 0%, rgba(15,23,42,0) 70%); filter: blur(100px); z-index: -1; }
+
         @media print {
-            nav, .sidebar, .no-print { display: none !important; }
+            nav, .sidebar, .no-print, .edit-controls { display: none !important; }
             body { background: white; padding: 0; color: black; }
+            body::before, .bg-glow-1, .bg-glow-2 { display: none !important; }
             .canvas-container { padding: 0 !important; background: transparent !important; }
             .document-page { box-shadow: none !important; margin: 0 !important; border: none !important; page-break-after: always; }
-            .document-page:last-child { page-break-after: auto; }
-            /* Force background colors to print */
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; contenteditable: false !important; }
         }
 
         /* Presentation Style (16:9) */
-        .page-presentation {
-            aspect-ratio: 16/9;
-            width: 100%;
-            max-width: 1100px;
-            background: white;
-            color: #1e293b;
-            margin: 0 auto 3rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
+        .page-presentation { aspect-ratio: 16/9; width: 100%; max-width: 1100px; background: white; color: #1e293b; margin: 0 auto 3rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; display: flex; flex-direction: column; position: relative; }
         /* Flyer Style (A4 Portrait) */
-        .page-flyer {
-            width: 210mm;
-            min-height: 297mm;
-            background: white;
-            color: #1e293b;
-            margin: 0 auto 3rem;
-            padding: 20mm;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            position: relative;
-        }
+        .page-flyer { width: 210mm; min-height: 297mm; background: white; color: #1e293b; margin: 0 auto 3rem; padding: 20mm; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative; }
 
-        .glow-button { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); transition: all 0.3s ease; }
-        .glow-button:hover { box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); transform: translateY(-2px); }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        .prose-indigo :where(strong) { color: #4f46e5; }
+        
+        /* contenteditable Styling */
+        [contenteditable="true"] { border: 1px dashed transparent; padding: 2px; transition: border 0.3s; cursor: text; }
+        [contenteditable="true"]:hover { border-color: #cbd5e1; background: rgba(241,245,249,0.5); }
+        [contenteditable="true"]:focus { border-color: #4f46e5; background: white; outline: none; box-shadow: 0 0 10px rgba(79,70,229,0.1); }
 
         .medical-border { border-left: 8px solid #4f46e5; padding-left: 1.5rem; }
     </style>
     <style id="print-orientation"></style>
 </head>
 <body class="h-screen flex flex-col">
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
 
-    <nav class="h-20 border-b border-slate-800 bg-slate-900/80 backdrop-blur-xl flex items-center justify-between px-8 z-50 no-print shrink-0">
-        <div class="flex items-center gap-6">
-            <button onclick="location.href='index.html'" class="text-slate-400 hover:text-white transition-all group">
+    <nav class="h-20 border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50 no-print shrink-0">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <button onclick="location.href='index.html'" class="text-slate-400 hover:text-white transition-all group font-bold">
                 <i class="fas fa-arrow-left group-hover:-translate-x-1 mr-2"></i> Dashboard
             </button>
-            <div class="h-6 w-px bg-slate-700"></div>
-            <div class="leading-none">
-                <span class="font-black tracking-tighter uppercase text-lg italic">SLM <span class="text-indigo-500">Synthesis</span></span>
-                <p class="text-[8px] text-slate-500 font-bold tracking-[0.4em] uppercase">Pro Document Engine v.2.0</p>
+            <div class="leading-none text-center">
+                <span class="font-black tracking-tighter uppercase text-xl italic">SLM <span class="text-indigo-500">Synthesis</span></span>
+                <p class="text-[8px] text-slate-500 font-bold tracking-[0.4em] uppercase">Pro Document Engine v.2.1</p>
             </div>
+            <button onclick="window.print()" class="bg-white text-slate-900 px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all shadow-xl">
+                <i class="fas fa-file-pdf mr-2"></i> PDF Download
+            </button>
         </div>
-        <button onclick="window.print()" class="bg-white text-slate-900 px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all shadow-xl">
-            <i class="fas fa-file-pdf mr-2"></i> PDF Download
-        </button>
     </nav>
 
     <div class="flex flex-1 overflow-hidden">
-        
-        <aside class="sidebar w-[400px] bg-slate-900 border-r border-slate-800 flex flex-col no-print shrink-0">
+        <aside class="sidebar w-[380px] bg-slate-900/80 border-r border-slate-800 flex flex-col no-print shrink-0 backdrop-blur-sm">
             <div class="p-8 overflow-y-auto flex-1 space-y-8">
-                
                 <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block">1. Dokumenten-Format</label>
+                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block">1. Format</label>
                     <div class="grid grid-cols-2 gap-3 bg-slate-800 p-1 rounded-2xl">
                         <button onclick="setType('presentation')" id="btn-presentation" class="py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-indigo-600 text-white shadow-lg">Präsentation</button>
-                        <button onclick="setType('flyer')" id="btn-flyer" class="py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white">Flyer (A4)</button>
+                        <button onclick="setType('flyer')" id="btn-flyer" class="py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white">Flyer</button>
                     </div>
                 </div>
 
                 <div>
                     <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block">2. Inhalt & Fokus</label>
                     <div class="space-y-3">
-                        <input type="text" id="topic" placeholder="Hauptthema (z.B. Herzinsuffizienz)" class="w-full bg-slate-800 border border-slate-700 rounded-2xl p-4 text-sm font-medium outline-none focus:border-indigo-500 text-white transition-all">
-                        <textarea id="instructions" rows="3" placeholder="Spezielle Modifikationen (z.B. Fokus auf Pflege-Interventionen, Zielgruppe: Azubis)..." class="w-full bg-slate-800 border border-slate-700 rounded-2xl p-4 text-sm outline-none focus:border-indigo-500 text-white transition-all"></textarea>
+                        <input type="text" id="topic" placeholder="Thema (z.B. Schmerztherapie)" class="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-sm outline-none focus:border-indigo-500 text-white transition-all">
+                        <textarea id="instructions" rows="3" placeholder="Fokus-Punkte oder Modifikationen..." class="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-sm outline-none focus:border-indigo-500 text-white transition-all"></textarea>
                     </div>
                 </div>
 
                 <div id="slide-count-container">
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block flex justify-between">
-                        <span>3. Layout</span>
-                        <span id="slide-label" class="text-indigo-400">5 Slides</span>
-                    </label>
-                    <input type="range" id="slideCount" min="3" max="15" value="5" oninput="document.getElementById('slide-label').innerText = this.value + ' Slides'" class="w-full accent-indigo-500">
+                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block flex justify-between">3. Slides: <span id="slide-label" class="text-indigo-400">5</span></label>
+                    <input type="range" id="slideCount" min="3" max="15" value="5" oninput="document.getElementById('slide-label').innerText = this.value" class="w-full accent-indigo-500">
                 </div>
 
                 <div>
                     <div class="flex items-center justify-between mb-3">
-                        <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">4. Projekt-Team</label>
-                        <button onclick="addTeamMember()" class="text-[10px] bg-slate-800 hover:bg-slate-700 text-indigo-400 px-3 py-1 rounded-lg font-bold transition-all"><i class="fas fa-plus"></i></button>
+                        <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">4. Team</label>
+                        <button onclick="addTeamMember()" class="text-[10px] bg-slate-800 hover:bg-slate-700 text-indigo-400 px-3 py-1 rounded-lg font-bold"><i class="fas fa-plus"></i></button>
                     </div>
                     <div id="team-list" class="space-y-2">
-                        <div class="flex gap-2 team-member-row">
-                            <input type="text" placeholder="Name" class="team-name flex-1 bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm outline-none focus:border-indigo-500 text-white">
-                        </div>
+                        <input type="text" placeholder="Name 1" class="team-name w-full bg-slate-800/50 border border-slate-700 rounded-xl p-3 text-sm text-white">
                     </div>
                 </div>
-
             </div>
             
             <div class="p-8 border-t border-slate-800 bg-slate-900/50">
@@ -128,11 +110,13 @@
             </div>
         </aside>
 
-        <main class="flex-1 overflow-y-auto bg-slate-950 p-8 md:p-12 scroll-smooth canvas-container">
-            <div id="output-area" class="pb-20">
-                <div class="flex flex-col items-center justify-center h-[60vh] text-slate-200 opacity-30">
-                    <i class="fas fa-layer-group text-6xl mb-6"></i>
-                    <p class="font-black uppercase tracking-widest text-sm">Bereit für die Generierung</p>
+        <main class="flex-1 overflow-y-auto bg-slate-950/20 p-8 md:p-12 scroll-smooth canvas-container">
+            <div id="output-area">
+                <div class="paper-preview rounded-sm flex flex-col items-center justify-center text-slate-200">
+                    <div class="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center mb-6 shadow-xl border border-slate-700">
+                        <i class="fas fa-file-signature text-3xl text-indigo-400"></i>
+                    </div>
+                    <p class="font-black uppercase tracking-widest text-xs opacity-50">Warten auf Eingabe...</p>
                 </div>
             </div>
         </main>
@@ -140,18 +124,12 @@
 
     <script>
         let currentType = "presentation";
-
         function setType(type) {
             currentType = type;
             const btnPres = document.getElementById('btn-presentation');
             const btnFlyer = document.getElementById('btn-flyer');
             const slideContainer = document.getElementById('slide-count-container');
-            
-            // Print Orientation Update
-            document.getElementById('print-orientation').innerHTML = type === 'presentation' 
-                ? `@media print { @page { size: landscape; margin: 0; } }` 
-                : `@media print { @page { size: portrait; margin: 0; } }`;
-
+            document.getElementById('print-orientation').innerHTML = type === 'presentation' ? `@media print { @page { size: landscape; margin: 0; } }` : `@media print { @page { size: portrait; margin: 0; } }`;
             if(type === 'presentation') {
                 btnPres.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-indigo-600 text-white shadow-lg";
                 btnFlyer.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white";
@@ -165,115 +143,113 @@
 
         function addTeamMember() {
             const list = document.getElementById('team-list');
+            const newIndex = list.querySelectorAll('.team-member-row').length + 2;
             const row = document.createElement('div');
             row.className = 'flex gap-2 team-member-row';
-            row.innerHTML = `
-                <input type="text" placeholder="Name" class="team-name flex-1 bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm outline-none focus:border-indigo-500 text-white">
-                <button onclick="this.parentElement.remove()" class="bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white w-12 rounded-xl flex items-center justify-center transition-all"><i class="fas fa-trash text-xs"></i></button>
-            `;
+            row.innerHTML = `<input type="text" placeholder="Name ${newIndex}" class="team-name flex-1 bg-slate-800/50 border border-slate-700 rounded-xl p-3 text-sm text-white">
+                <button onclick="this.parentElement.remove()" class="bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white w-12 rounded-xl flex transiton-all items-center justify-center"><i class="fas fa-times"></i></button>`;
             list.appendChild(row);
         }
 
-        // Initialize default orientation
-        setType('presentation');
-
         async function generateDocument() {
             const topic = document.getElementById('topic').value;
-            if(!topic) return alert("Bitte Hauptthema eingeben!");
-
+            if(!topic) return alert("Bitte Thema eingeben!");
             const instructions = document.getElementById('instructions').value;
             const slideCount = document.getElementById('slideCount').value;
-            
-            // Get Team Names
-            const teamInputs = document.querySelectorAll('.team-name');
-            const teamNames = Array.from(teamInputs).map(i => i.value.trim()).filter(i => i !== "");
+            const teamNames = Array.from(document.querySelectorAll('.team-name')).map(i => i.value.trim()).filter(i => i !== "");
             if(teamNames.length === 0) teamNames.push("Projekt-Team");
-
             const btn = document.getElementById('genBtn');
             btn.disabled = true;
-            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin text-lg"></i> Engine arbeitet...`;
+            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Processing...`;
 
-            // Building the prompt specifically for the backend to return JSON
             const finalPrompt = `
-                Du bist ein professioneller medizinischer Redakteur und Designer.
-                Erstelle ein Dokument vom Typ "${currentType}" zum Thema: "${topic}".
-                Spezielle Anforderungen: "${instructions || 'Keine'}".
-                Projekt-Team Mitglieder: ${teamNames.join(', ')}.
-                ${currentType === 'presentation' ? `Anzahl der inhaltlichen Slides/Seiten (ohne Titel/Danke/Quellen): ${slideCount}.` : 'Erstelle 2-3 inhaltliche Sektionen.'}
+                Handle als medizinischer Redakteur. Erstelle ein professionelles ${currentType} zum Thema: "${topic}".
+                Fokus: "${instructions || 'Keine'}".
+                Team: ${teamNames.join(', ')}.
+                ${currentType === 'presentation' ? `Erstelle ${slideCount} inhaltliche Sektionen (ohne Titel/Danke/Quellen).` : 'Erstelle 3 inhaltliche Sektionen.'}
 
-                Die Ausgabe MUSS AUSSCHLIESSLICH als korrekt formatiertes JSON erfolgen (ohne Markdown-Blöcke \`\`\`json).
-                Struktur:
+                Antworte AUSSCHLIESSLICH als JSON-Objekt (ohne Markdown-Blöcke):
                 {
                   "title": "Titel",
                   "subtitle": "Untertitel",
                   "pages": [
                     {
-                      "title": "Überschrift dieser Sektion/Slide",
-                      "contentHtml": "<p>Der Text formatiert mit p, ul, li, strong...</p>",
-                      "imageKeyword": "1-3 englische Suchbegriffe für ein passendes Bild (z.B. 'surgery hospital', oder null wenn kein Bild passt)",
+                      "title": "Überschrift",
+                      "contentHtml": "<p>Text mit p, ul, li, strong...</p>",
+                      "imageKeyword": "3 englische Begriffe für professionelles medizinisches Bild",
                       "imageCaption": "Kurze Bildbeschreibung"
                     }
                   ],
-                  "sources": ["Wissenschaftliche Quelle 1", "Wissenschaftliche Quelle 2"],
-                  "scripts": [
-                    {
-                      "name": "Name aus dem Projekt-Team",
-                      "text": "NUR harte Fakten und Kernpunkte, die diese Person vortragen soll. KEINE Begrüßungsfloskeln. Direkt zur Sache."
-                    }
-                  ]
+                  "sources": ["Quelle 1", "Quelle 2"],
+                  "scripts": [{"name": "Name aus Team", "text": "NUR Fakten/Kernpunkte für diese Person."}]
                 }
             `;
 
             try {
-                // Using your existing Vercel Backend
                 const response = await fetch('/api/grade', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ prompt: finalPrompt })
                 });
-
-                const data = await response.json();
-                
-                // Clean markdown if AI included it
-                let cleanJsonString = data.text.replace(/```json/g, '').replace(/```/g, '').trim();
-                const cleanJson = JSON.parse(cleanJsonString);
-                
-                renderResult(cleanJson, teamNames);
+                const rawData = await response.json();
+                const jsonText = rawData.text.replace(/```json|```/g, '').trim();
+                const cleanJson = JSON.parse(jsonText);
+                await renderResult(cleanJson, teamNames, topic);
             } catch (error) {
                 console.error(error);
-                alert("Fehler bei der AI-Generierung. Bitte versuche es erneut.");
+                alert("Fehler bei der AI-Generierung.");
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Synthesis starten`;
             }
         }
 
-        function renderResult(data, teamNames) {
+        async function renderResult(data, teamNames, topic) {
             const output = document.getElementById('output-area');
+            output.innerHTML = ""; 
             let html = '';
             
-            // Image URLs collector for sources page
-            let imageLinks = [];
+            // --- Bild-Generierung über sicheres Backend ---
+            const imageSources = [];
+            const fetchedImages = {};
+
+            // Alle Keywords sammeln
+            const keywords = data.pages.filter(p => p.imageKeyword).map(p => p.imageKeyword);
+            
+            // Lade-Anzeige für Bilder
+            output.innerHTML = `<div class="p-10 text-center text-slate-300 font-medium">Sichere Bild-Generierung aktiv...</div>`;
+
+            // Bilder parallel über das Backend laden
+            await Promise.all(keywords.map(async (kw) => {
+                try {
+                    const imgResponse = await fetch('/api/grade', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ prompt: kw, type: 'image' }) // Spezieller Bild-Aufruf
+                    });
+                    const imgData = await imgResponse.json();
+                    if(imgData.imageUrl) {
+                        fetchedImages[kw] = imgData.imageUrl;
+                        imageSources.push({ kw: kw, url: imgData.imageUrl });
+                    }
+                } catch (e) {
+                    console.error("Image Fetch error for:", kw, e);
+                    fetchedImages[kw] = null; // Fehler-Platzhalter
+                }
+            }));
+
+            output.innerHTML = ""; // Lade-Anzeige entfernen
 
             // --- 1. TITLE PAGE ---
             html += generatePage(currentType, `
-                <div class="h-full flex flex-col justify-center items-center text-center p-12 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-slate-50 opacity-50"></div>
-                    <div class="absolute -right-32 -top-32 w-96 h-96 bg-indigo-100 rounded-full blur-3xl"></div>
-                    <div class="absolute -left-32 -bottom-32 w-96 h-96 bg-blue-100 rounded-full blur-3xl"></div>
-                    
-                    <div class="relative z-10 w-full max-w-4xl">
-                        <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-600 text-white font-black uppercase tracking-widest text-[10px] mb-8 shadow-lg shadow-indigo-200">Offizielles Dokument</span>
-                        <h1 class="font-['Playfair_Display'] text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">${data.title}</h1>
-                        <p class="text-xl text-slate-500 font-medium italic mb-12">${data.subtitle}</p>
-                        
-                        <div class="pt-10 border-t border-slate-200 flex justify-center gap-8">
-                            ${teamNames.map(name => `
-                                <div class="text-center">
-                                    <div class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-sm mx-auto mb-2">${name.charAt(0).toUpperCase()}</div>
-                                    <span class="text-xs font-bold uppercase tracking-widest text-slate-400">${name}</span>
-                                </div>
-                            `).join('')}
+                <div class="h-full flex flex-col justify-center items-center text-center p-12 relative overflow-hidden bg-slate-50">
+                    <div class="absolute inset-0 bg-slate-100 opacity-50"></div>
+                    <div class="relative z-10 w-full max-w-4xl fade-in">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-600 text-white font-black uppercase tracking-widest text-[10px] mb-6 shadow-lg">Synthesis v2.1</span>
+                        <h1 contenteditable="true" class="font-['Playfair_Display'] text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6 outline-none">${data.title.toUpperCase()}</h1>
+                        <p contenteditable="true" class="text-xl text-slate-500 font-medium italic mb-12 outline-none">${data.subtitle}</p>
+                        <div class="pt-10 border-t border-slate-200 flex flex-wrap justify-center gap-6">
+                            ${teamNames.map(name => `<div class="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest shadow">${name}</div>`).join('')}
                         </div>
                     </div>
                 </div>
@@ -281,43 +257,52 @@
 
             // --- 2. CONTENT PAGES ---
             data.pages.forEach((page, index) => {
-                let imageUrl = '';
                 let imageBlock = '';
-                
-                // Using Pollinations AI for dynamic images based on keywords
-                if(page.imageKeyword) {
-                    const encodedKw = encodeURIComponent(page.imageKeyword + " medical high quality");
-                    imageUrl = `https://image.pollinations.ai/prompt/${encodedKw}?width=1280&height=720&nologo=true`;
-                    imageLinks.push({ kw: page.imageKeyword, url: imageUrl });
-                    
+                let imageUrl = fetchedImages[page.imageKeyword];
+
+                // --- Bild-Sektion mit Upload-Möglichkeit ---
+                if(imageUrl) {
+                    const uniqueId = `img-page-${index}`;
                     if(currentType === 'presentation') {
                         imageBlock = `
-                            <div class="w-full md:w-5/12 h-64 md:h-full relative shrink-0">
-                                <img src="${imageUrl}" class="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-2xl">
-                                <span class="absolute bottom-4 left-4 bg-black/50 backdrop-blur text-white text-[8px] px-2 py-1 rounded uppercase tracking-widest">Abb ${index+1}: ${page.imageCaption || page.imageKeyword}</span>
+                            <div class="w-full md:w-5/12 h-64 md:h-full relative shrink-0 group">
+                                <img src="${imageUrl}" id="${uniqueId}" class="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-2xl transition-all">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white rounded-b-3xl">
+                                    <p contenteditable="true" class="text-[10px] px-2 py-1 rounded tracking-widest uppercase font-bold text-center">${page.imageCaption || page.imageKeyword}</p>
+                                </div>
+                                <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl edit-controls">
+                                    <button onclick="document.getElementById('${uniqueId}-input').click()" class="bg-white/20 hover:bg-white text-white hover:text-indigo-600 px-4 py-2 rounded-full font-bold text-xs">Anderes Bild laden</button>
+                                    <input type="file" id="${uniqueId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${uniqueId}')">
+                                </div>
                             </div>
                         `;
                     } else {
                         imageBlock = `
-                            <div class="w-full h-64 my-6 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                                <img src="${imageUrl}" class="w-full h-full object-cover">
-                                <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur text-white text-[8px] px-2 py-1 rounded uppercase tracking-widest">${page.imageCaption || 'Illustration'}</span>
+                            <div class="w-full h-64 my-6 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 group">
+                                <img src="${imageUrl}" id="${uniqueId}" class="w-full h-full object-cover">
+                                <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-center">
+                                    <p contenteditable="true" class="text-[9px] font-bold uppercase tracking-widest">${page.imageCaption || 'Illustration'}</p>
+                                </div>
+                                <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl edit-controls">
+                                    <button onclick="document.getElementById('${uniqueId}-input').click()" class="bg-white/20 hover:bg-white text-white hover:text-indigo-600 px-4 py-2 rounded-full font-bold text-xs">Anderes Bild laden</button>
+                                    <input type="file" id="${uniqueId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${uniqueId}')">
+                                </div>
                             </div>
                         `;
                     }
                 }
 
-                // Layout logic based on type and presence of image
+                // Layout logic
                 let pageContent = '';
                 if(currentType === 'presentation') {
                     pageContent = `
                         <div class="h-full flex flex-col p-10 md:p-16">
                             <div class="flex items-center gap-4 mb-10 pb-4 border-b-2 border-slate-100">
                                 <span class="text-4xl font-black text-indigo-100">${String(index+1).padStart(2, '0')}</span>
-                                <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">${page.title}</h2>
+                                <h2 contenteditable="true" class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight outline-none">${page.title}</h2>
                             </div>
                             <div class="flex-1 flex flex-col md:flex-row gap-12 overflow-hidden">
-                                <div class="flex-1 prose prose-lg prose-indigo max-w-none text-slate-700 leading-relaxed font-medium">
+                                <div contenteditable="true" class="flex-1 prose prose-lg prose-indigo max-w-none text-slate-700 font-medium outline-none">
                                     ${page.contentHtml}
                                 </div>
                                 ${imageBlock}
@@ -327,42 +312,40 @@
                 } else {
                     pageContent = `
                         <div class="medical-border mb-8 mt-4">
-                            <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight">${page.title}</h2>
+                            <h2 contenteditable="true" class="text-2xl font-black text-slate-900 uppercase tracking-tight outline-none">${page.title}</h2>
                         </div>
                         ${imageBlock}
-                        <div class="prose prose-sm md:prose-base prose-indigo max-w-none text-slate-700 leading-relaxed">
+                        <div contenteditable="true" class="prose prose-sm md:prose-base prose-indigo max-w-none text-slate-700 leading-relaxed outline-none">
                             ${page.contentHtml}
                         </div>
                     `;
                 }
-                
                 html += generatePage(currentType, pageContent);
             });
 
             // --- 3. SOURCES PAGE ---
-            let sourcesList = data.sources.map(s => `<li class="mb-3">${s}</li>`).join('');
-            let imageSourcesList = imageLinks.map((img, i) => `
-                <li class="mb-2">
-                    <strong>Abbildung ${i+1}:</strong> KI-Generiertes Bild (Pollinations AI) für "${img.kw}". 
-                    <br><a href="${img.url}" class="text-indigo-500 text-[10px] break-all" target="_blank">${img.url}</a>
+            let sourcesList = data.sources.map(s => `<li contenteditable="true" class="mb-3 outline-none">${s}</li>`).join('');
+            let imageSourcesList = imageSources.map((img, i) => `
+                <li class="mb-3">
+                    <strong contenteditable="true" class="outline-none">Abbildung ${i+1}:</strong> Medizinisches Bild generiert für "${img.kw}". 
                 </li>
             `).join('');
 
             html += generatePage(currentType, `
                 <div class="h-full p-10 md:p-16 flex flex-col bg-slate-50">
-                    <h2 class="text-3xl font-black text-slate-900 mb-10 border-b-4 border-indigo-600 pb-4 inline-block">Quellenverzeichnis</h2>
+                    <h2 contenteditable="true" class="text-3xl font-black text-slate-900 mb-10 border-b-4 border-indigo-600 pb-4 inline-block outline-none leading-none">Quellenverzeichnis</h2>
                     <div class="flex-1 overflow-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <div>
-                                <h3 class="font-bold text-slate-400 uppercase tracking-widest text-xs mb-4">Wissenschaftliche Literatur</h3>
-                                <ul class="list-decimal pl-5 text-sm text-slate-600 font-medium leading-relaxed space-y-2">
+                                <h3 class="font-bold text-slate-400 uppercase tracking-widest text-xs mb-4">Literatur</h3>
+                                <ul class="list-decimal pl-5 text-sm text-slate-600 font-medium leading-relaxed space-y-1">
                                     ${sourcesList}
                                 </ul>
                             </div>
-                            ${imageLinks.length > 0 ? `
+                            ${imageSources.length > 0 ? `
                                 <div>
-                                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-xs mb-4">Bildquellen (Internet)</h3>
-                                    <ul class="list-decimal pl-5 text-sm text-slate-600 font-medium leading-relaxed space-y-2">
+                                    <h3 class="font-bold text-slate-400 uppercase tracking-widest text-xs mb-4">Bildquellen</h3>
+                                    <ul class="list-decimal pl-5 text-sm text-slate-600 font-medium leading-relaxed space-y-1">
                                         ${imageSourcesList}
                                     </ul>
                                 </div>
@@ -376,14 +359,10 @@
             html += generatePage(currentType, `
                 <div class="h-full flex flex-col justify-center items-center text-center p-12 bg-slate-900 text-white relative">
                     <i class="fas fa-hand-holding-heart text-6xl text-indigo-500 mb-8 opacity-50"></i>
-                    <h2 class="font-['Playfair_Display'] text-6xl md:text-8xl font-black mb-6">Vielen Dank!</h2>
-                    <p class="text-xl text-slate-400 font-medium italic mb-16">Für Ihre Aufmerksamkeit und Mitarbeit.</p>
-                    
-                    <div class="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-700 pb-2">Präsentiert von</div>
+                    <h2 contenteditable="true" class="font-['Playfair_Display'] text-6xl md:text-8xl font-black mb-6 outline-none leading-none">Vielen Dank!</h2>
+                    <p contenteditable="true" class="text-xl text-slate-400 font-medium italic mb-16 outline-none">Für Ihre Aufmerksamkeit.</p>
                     <div class="flex flex-wrap justify-center gap-6">
-                        ${teamNames.map(name => `
-                            <span class="bg-white/10 px-6 py-3 rounded-xl text-lg font-black tracking-tight">${name}</span>
-                        `).join('')}
+                        ${teamNames.map(name => `<span class="bg-white/10 px-6 py-3 rounded-xl text-lg font-black tracking-tight">${name}</span>`).join('')}
                     </div>
                 </div>
             `);
@@ -391,30 +370,28 @@
             // --- 5. SPEAKER SCRIPTS (Separate Section for Print) ---
             if(data.scripts && data.scripts.length > 0) {
                 html += `
-                    <div class="document-page page-flyer !h-auto !min-h-0 !bg-transparent !shadow-none !p-0 mt-20">
-                        <div class="mb-10 pb-6 border-b border-slate-700">
-                            <h2 class="text-3xl font-black text-white flex items-center gap-4">
-                                <i class="fas fa-microphone-alt text-indigo-500"></i>
-                                Sprecher-Skripte (Hard Facts)
-                            </h2>
-                            <p class="text-slate-400 text-sm mt-2 font-medium">Diese Seiten enthalten nur die fokussierten Kernpunkte für das Team.</p>
+                    <div class="page-break document-page page-flyer !h-auto !min-h-0 !bg-transparent !shadow-none !p-0 mt-20 no-print">
+                        <div class="mb-10 pb-6 border-b-2 border-slate-700 flex items-center gap-4">
+                            <i class="fas fa-microphone-alt text-indigo-500 text-3xl opacity-60"></i>
+                            <div>
+                                <h2 class="text-3xl font-black text-white leading-none">Sprecher-Skripte (Kernpunkte)</h2>
+                                <p class="text-slate-500 text-sm mt-1 font-medium italic">Fokussierte Fakten für den Vortrag - ohne Begrüßung.</p>
+                            </div>
                         </div>
-                        
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            ${data.scripts.map(script => `
-                                <div class="bg-slate-900 border border-slate-800 p-8 rounded-[2rem] shadow-xl">
+                            ${data.scripts.map(s => `
+                                <div class="bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] shadow-xl hover:border-indigo-500 transition-all">
                                     <div class="flex items-center gap-4 mb-6">
-                                        <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center font-black text-white text-lg shadow-lg shadow-indigo-500/20">
-                                            ${script.name.charAt(0).toUpperCase()}
+                                        <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center font-black text-white text-lg shadow-lg">
+                                            ${s.name.charAt(0).toUpperCase()}
                                         </div>
                                         <div>
-                                            <h4 class="text-xs font-black uppercase text-indigo-400 tracking-widest">Speaker</h4>
-                                            <span class="text-lg font-bold text-white">${script.name}</span>
+                                            <span class="text-lg font-bold text-white">${s.name}</span>
                                         </div>
                                     </div>
-                                    <div class="prose prose-sm prose-invert text-slate-300 leading-relaxed font-medium italic">
+                                    <div contenteditable="true" class="prose prose-sm prose-invert text-slate-300 ledading-relaxed font-medium italic outline-none">
                                         <i class="fas fa-quote-left text-slate-700 text-2xl mb-2 block"></i>
-                                        ${script.text.replace(/\n/g, '<br>')}
+                                        ${s.text.replace(/\n/g, '<br>')}
                                     </div>
                                 </div>
                             `).join('')}
@@ -422,14 +399,22 @@
                     </div>
                 `;
             }
-
             output.innerHTML = html;
         }
 
-        // Helper function to wrap content in the correct page CSS class
+        // --- Bild-Upload Logik ---
+        function handleImageUpload(input, targetId) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById(targetId).setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
         function generatePage(type, content) {
-            const classname = type === 'presentation' ? 'page-presentation' : 'page-flyer';
-            return `<div class="document-page ${classname}">${content}</div>`;
+            return `<div class="document-page ${type === 'presentation' ? 'page-presentation' : 'page-flyer'}">${content}</div>`;
         }
     </script>
 </body>
