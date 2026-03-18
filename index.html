@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Professional Dashboard</title>
+    <title>SLM System | Professional Dashboard v5.5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,6 +23,9 @@
         .progress-glow {
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
         }
+
+        /* Smooth Card Hover */
+        .module-card { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
     </style>
 </head>
 <body class="bg-[#f8fafc] min-h-screen font-['Inter']">
@@ -30,28 +33,28 @@
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
         <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl relative z-10 overflow-hidden animate-modal border border-white/20">
-            <div class="bg-green-600 p-8 text-white relative">
-                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.4 Live</div>
-                <i class="fas fa-brain text-4xl mb-4"></i>
-                <h2 class="text-3xl font-black tracking-tight uppercase italic">Reha-Update!</h2>
-                <p class="text-green-100 font-medium">Modul 5: Neurologie & Reha ist nun vollständig integriert.</p>
+            <div class="bg-red-600 p-8 text-white relative">
+                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.5 Live</div>
+                <i class="fas fa-ambulance text-4xl mb-4"></i>
+                <h2 class="text-3xl font-black tracking-tight uppercase italic">Akut-Update!</h2>
+                <p class="text-red-100 font-medium">Modul 5 (Chirurgie) & Modul 6 (Notfall) integriert.</p>
             </div>
             <div class="p-8 space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-wheelchair"></i></div>
+                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-scalpel"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Modul 5: Neurologische Konzepte</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Bobath, Phasenmodell und pflegetherapeutische Ansätze sind jetzt verfügbar.</p>
+                        <h4 class="font-bold text-slate-900">Modul 5: Chirurgie Online</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Prä/Post-OP, Wundmanagement und pädiatrische Chirurgie sind bereit.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-check-double"></i></div>
+                    <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-heart-pulse"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Symmetrisches Grid</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Das Dashboard wurde für die finale Modul-Struktur optimiert.</p>
+                        <h4 class="font-bold text-slate-900">Modul 6: Notfall-System</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Basisreanimation, HLW und Herz-Kreislauf-Physiologie hinzugefügt.</p>
                     </div>
                 </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition-all shadow-lg shadow-green-100">Dashboard starten</button>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-red-600 transition-all shadow-lg shadow-red-100">System starten</button>
             </div>
         </div>
     </div>
@@ -62,7 +65,7 @@
             <div>
                 <div class="flex items-center gap-3 mb-1">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.4</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.5</span>
                 </div>
                 <div class="mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -89,105 +92,105 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
                 <div>
                     <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight italic">Gesamtfortschritt</h2>
-                    <p class="text-slate-400 text-sm font-medium italic">8 Wochen verbleibend</p>
+                    <p class="text-slate-400 text-sm font-medium italic">Vorbereitungsphase: Chirurgie & Notfall</p>
                 </div>
-                <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">0%</span>
+                <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">15%</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
-                <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 0%"></div>
+                <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 15%"></div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="module-grid">
             
-            <div onclick="location.href='module.html?id=1'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module.html?id=1'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-indigo-50 text-indigo-600 p-4 rounded-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
                         <i class="fas fa-book-open text-2xl"></i>
                     </div>
-                    <span id="mod1-percent" class="font-black text-slate-300 group-hover:text-indigo-600 transition-colors text-xl">0%</span>
+                    <span class="font-black text-slate-300 group-hover:text-indigo-600 transition-colors text-xl">0%</span>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">Modul 1</h3>
                 <p class="text-sm text-slate-500 mb-8 font-medium">Kommunikation & Biografie</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod1-bar" class="bg-indigo-600 h-full transition-all duration-1000" style="width: 0%"></div>
+                    <div class="bg-indigo-600 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module2.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module2.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-indigo-600 text-white p-4 rounded-2xl shadow-lg shadow-indigo-100">
                         <i class="fas fa-stethoscope text-2xl"></i>
                     </div>
-                    <span id="mod2-percent" class="font-black text-indigo-600 text-xl">LIVE</span>
+                    <span class="font-black text-indigo-600 text-xl">LIVE</span>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 2</h3>
                 <p class="text-sm text-slate-500 mb-8 font-medium">Medizinisches Kernwissen</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod2-bar" class="bg-indigo-500 h-full transition-all duration-1000" style="width: 10%"></div>
+                    <div class="bg-indigo-500 h-full transition-all duration-1000" style="width: 10%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module3.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module3.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-indigo-600 text-white p-4 rounded-2xl shadow-lg shadow-indigo-100">
                         <i class="fas fa-viruses text-2xl"></i>
                     </div>
-                    <span id="mod3-percent" class="font-black text-indigo-600 text-xl">LIVE</span>
+                    <span class="font-black text-indigo-600 text-xl">LIVE</span>
                 </div>
                 <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 3</h3>
                 <p class="text-sm text-slate-500 mb-8 font-medium">Krankheitslehre</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod3-bar" class="bg-indigo-500 h-full transition-all duration-1000" style="width: 5%"></div>
+                    <div class="bg-indigo-500 h-full transition-all duration-1000" style="width: 5%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module4.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-200 hover:border-indigo-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module5.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-green-100 hover:border-green-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
-                    <div class="bg-indigo-600 text-white p-4 rounded-2xl shadow-lg shadow-indigo-100">
-                        <i class="fas fa-balance-scale text-2xl"></i>
+                    <div class="bg-green-600 text-white p-4 rounded-2xl shadow-lg shadow-green-100">
+                        <i class="fas fa-stethoscope text-2xl"></i>
                     </div>
-                    <span id="mod4-percent" class="font-black text-indigo-600 text-xl">LIVE</span>
+                    <span class="font-black text-green-600 text-xl">NEW</span>
                 </div>
-                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 4</h3>
-                <p class="text-sm text-slate-500 mb-8 font-medium">Recht & Ethik</p>
+                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 5</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Chirurgie & Akutpflege</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod4-bar" class="bg-indigo-500 h-full transition-all duration-1000" style="width: 0%"></div>
+                    <div class="bg-green-500 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module5.html'" class="group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-green-100 hover:border-green-500 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden">
+            <div onclick="location.href='module6.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-red-100 hover:border-red-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="absolute right-4 top-4">
                     <span class="flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                     </span>
                 </div>
                 <div class="flex justify-between items-start mb-8">
-                    <div class="bg-green-600 text-white p-4 rounded-2xl shadow-lg shadow-green-100">
-                        <i class="fas fa-brain text-2xl"></i>
+                    <div class="bg-red-600 text-white p-4 rounded-2xl shadow-lg shadow-red-100">
+                        <i class="fas fa-heart-pulse text-2xl"></i>
                     </div>
-                    <span id="mod5-percent" class="font-black text-green-600 text-xl">NEW</span>
+                    <span class="font-black text-red-600 text-xl">NEU</span>
                 </div>
-                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 5</h3>
-                <p class="text-sm text-slate-500 mb-8 font-medium">Neuro-Rehabilitation</p>
+                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 6</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Notfall & Reanimation</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod5-bar" class="bg-green-500 h-full transition-all duration-1000" style="width: 0%"></div>
+                    <div class="bg-red-500 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
-            <div onclick="location.href='module.html?id=9'" class="group bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 hover:shadow-orange-200/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
+            <div onclick="location.href='module.html?id=9'" class="module-card group bg-slate-900 p-8 rounded-[2rem] shadow-xl border-2 border-orange-500/30 hover:border-orange-500 hover:shadow-orange-200/20 hover:-translate-y-2 cursor-pointer relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800">
                 <div class="absolute -right-10 -top-2 bg-orange-500 text-white text-[10px] font-black px-12 py-1.5 rotate-45 uppercase tracking-widest z-20">Simulator</div>
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-orange-500 text-white p-4 rounded-2xl shadow-[0_0_20px_rgba(249,115,22,0.4)]">
                         <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <span id="mod9-percent" class="font-black text-slate-600 text-xl">0%</span>
+                    <span class="font-black text-slate-600 text-xl">0%</span>
                 </div>
                 <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight">Module 9</h3>
                 <p class="text-sm text-slate-400 mb-8 font-medium">Prüfungssimulation v.1</p>
                 <div class="w-full bg-white/10 h-2.5 rounded-full overflow-hidden">
-                    <div id="mod9-bar" class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 0%"></div>
+                    <div class="bg-orange-500 h-full transition-all duration-1000 shadow-[0_0_10px_#f97316]" style="width: 0%"></div>
                 </div>
             </div>
 
@@ -196,7 +199,8 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            const hasSeenUpdate = localStorage.getItem('v5.4_update_seen');
+            // Check for v5.5 update
+            const hasSeenUpdate = localStorage.getItem('v5.5_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
@@ -208,7 +212,7 @@
             modal.style.opacity = '0';
             setTimeout(() => {
                 modal.classList.add('hidden');
-                localStorage.setItem('v5.4_update_seen', 'true');
+                localStorage.setItem('v5.5_update_seen', 'true');
             }, 400);
         }
     </script>
