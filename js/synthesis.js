@@ -1,148 +1,121 @@
 // js/synthesis.js
-
 let speakers = [];
 
-// Sprecher-Verwaltung
-document.getElementById('add-speaker-btn').addEventListener('click', () => {
-    const name = prompt("Name des Sprechers:");
-    if (name) {
+document.getElementById('add-speaker').onclick = () => {
+    const name = document.getElementById('speaker-input').value;
+    if(name) {
         speakers.push(name);
-        renderSpeakerList();
+        document.getElementById('speaker-input').value = '';
+        renderSpeakerChips();
     }
-});
+};
 
-function renderSpeakerList() {
-    const list = document.getElementById('speaker-list');
-    list.innerHTML = speakers.map((s, i) => `
-        <div class="flex items-center justify-between bg-slate-800 p-2 rounded-lg border border-slate-700">
-            <span class="text-xs font-bold">${s}</span>
-            <button onclick="speakers.splice(${i}, 1); renderSpeakerList();" class="text-red-400 hover:text-red-300 text-xs">
-                <i class="fas fa-trash"></i>
-            </button>
-        </div>
-    `).join('');
+function renderSpeakerChips() {
+    const container = document.getElementById('speaker-chips');
+    container.innerHTML = speakers.map(s => `<span class="bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded text-[10px] font-bold border border-indigo-500/30">${s}</span>`).join('');
 }
 
-// Haupt-Generierung
-document.getElementById('generate-btn').addEventListener('click', async () => {
+document.getElementById('generate-btn').onclick = async () => {
     const topic = document.getElementById('topic').value;
-    const caseStudy = document.getElementById('case-study').value;
-    const slideCount = document.getElementById('slide-count').value;
-    const scriptType = document.getElementById('script-type').value;
-
-    if (!topic) return alert("Thema angeben!");
+    const count = document.getElementById('slide-count').value;
+    const mode = document.getElementById('script-mode').value;
 
     const btn = document.getElementById('generate-btn');
-    btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Synthese läuft...`;
+    btn.innerText = "SYNTHETISIERE...";
     btn.disabled = true;
 
-    // Prompt für die KI (Extrem präzise für Layouts)
+    // Prompt Engineering für Bulletpoints und Design
     const prompt = `
-        Erstelle ein professionelles medizinisches Dokument über "${topic}".
-        Kontext/Fallbeispiel: "${caseStudy}".
-        Sprecher-Team: ${speakers.join(', ')}.
-        Erzeuge ${slideCount} inhaltliche Sektionen.
-        
-        WICHTIG: Nutze für mindestens eine Sektion ein Timeline-Format (JSON: layout: "timeline") 
-        und für eine andere ein Tabellen-Format (JSON: layout: "table").
-        Weise jeder Folie einen Sprecher aus der Liste zu.
-        
-        Antworte NUR als JSON:
-        {
-          "title": "Haupttitel",
-          "slides": [
-            {
-              "speaker": "Name",
-              "title": "Folientitel",
-              "layout": "standard" | "timeline" | "table",
-              "content": "HTML Content oder Array für Timeline/Table",
-              "script": "Text für den Sprecher"
-            }
-          ]
-        }
+    Thema: ${topic}. 
+    Fallbeispiel: ${document.getElementById('case-study').value}.
+    Teilnehmer: ${speakers.join(', ')}.
+    Anzahl Folien: ${count == 0 ? 'KI entscheidet' : count}.
+
+    REGELN:
+    1. Folie 1 ist IMMER eine Titelfolie (layout: "title").
+    2. Fakten NUR in kurzen Bulletpoints (maximal 5 pro Folie).
+    3. Nutze Layouts: "standard", "timeline", "table", "split-image".
+    4. Weise jedem Slide einen Sprecher zu.
+    5. Wenn ein Fallbeispiel da ist, erstelle eine "Analyse-Folie".
+
+    ANTWORTE NUR ALS JSON:
+    {
+      "slides": [
+        { "type": "title", "headline": "...", "sub": "...", "speaker": "Alle" },
+        { "type": "standard", "headline": "...", "bullets": ["Point 1", "Point 2"], "speaker": "Name" },
+        { "type": "timeline", "headline": "...", "steps": [{"time": "...", "text": "..."}], "speaker": "Name" }
+      ]
+    }
     `;
 
-    try {
-        const response = await fetch('/api/grade', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt })
-        });
+    // Hier würde dein API Call stehen (fetch)
+    // Ich simuliere hier das Resultat für die Demonstration:
+    const mockResult = {
+        slides: [
+            { type: "title", headline: topic, sub: "Präsentiert von " + speakers.join(", "), speaker: "Team" },
+            { type: "standard", headline: "Diagnose & Befund", bullets: ["Hoher Blutdruck (160/95)", "Anhaltender Schwindel", "Verdacht auf TIA"], speaker: speakers[0] || "Referent" },
+            { type: "timeline", headline: "Krankheitsverlauf", steps: [{time: "08:00", text: "Symptombeginn"}, {time: "09:30", text: "Einlieferung"}], speaker: speakers[1] || "Referent" }
+        ]
+    };
 
-        const data = await response.json();
-        const jsonText = data.text.replace(/```json|```/g, '').trim();
-        const result = JSON.parse(jsonText);
-        
-        renderSlides(result);
-
-    } catch (error) {
-        console.error("AI Error:", error);
-        alert("Fehler bei der Synthese.");
-    } finally {
-        btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Synthese Starten`;
+    setTimeout(() => {
+        renderAllSlides(mockResult);
+        btn.innerText = "Synthese Starten";
         btn.disabled = false;
-    }
-});
+    }, 1500);
+};
 
-function renderSlides(data) {
-    const container = document.getElementById('document-container');
-    container.innerHTML = ''; // Clear
+function renderAllSlides(data) {
+    const canvas = document.getElementById('canvas');
+    canvas.innerHTML = '';
 
-    data.slides.forEach((slide, index) => {
-        const slideEl = document.createElement('div');
-        slideEl.className = 'page-presentation';
+    data.slides.forEach((s, idx) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = `slide slide-type-${s.type}`;
         
-        // Sprecher Badge
-        let speakerHtml = slide.speaker ? `<div class="speaker-badge no-print">Sprecher: ${slide.speaker}</div>` : '';
-        
-        // Content Layout Logik
         let contentHtml = '';
-        if (slide.layout === 'timeline') {
-            contentHtml = `<div class="timeline-container">` + 
-                slide.content.map(item => `
-                    <div class="timeline-item">
-                        <h4 class="font-bold text-indigo-600">${item.time || ''}</h4>
-                        <p>${item.text}</p>
-                    </div>
-                `).join('') + `</div>`;
-        } else if (slide.layout === 'table') {
-            contentHtml = `<table class="pro-table">
-                <thead><tr>${slide.content.headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>
-                <tbody>${slide.content.rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody>
-            </table>`;
-        } else {
-            contentHtml = slide.content; // Standard HTML
-        }
 
-        slideEl.innerHTML = `
-            ${speakerHtml}
-            <div class="p-12 h-full flex flex-col">
-                <div class="editable-block" style="top: 40px; left: 60px; width: 80%;">
-                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i></div>
-                    <h2 contenteditable="true" class="text-4xl font-black text-slate-900 border-b-4 border-indigo-500 pb-2 inline-block">${slide.title}</h2>
-                    <div class="resize-handle"></div>
+        if (s.type === 'title') {
+            contentHtml = `
+                <div class="block" style="top:250px; width:100%; text-align:center;">
+                    <h1 contenteditable="true" class="text-6xl font-black mb-4">${s.headline}</h1>
+                    <p contenteditable="true" class="text-xl opacity-80">${s.sub}</p>
                 </div>
-                
-                <div class="editable-block" style="top: 150px; left: 60px; width: 85%; height: 60%;">
-                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i></div>
-                    <div contenteditable="true" class="text-xl text-slate-700 leading-relaxed">${contentHtml}</div>
-                    <div class="resize-handle"></div>
-                </div>
-            </div>
-        `;
-
-        // Skript Sektion (Nur falls gewünscht)
-        if (slide.script) {
-            const scriptEl = document.createElement('div');
-            scriptEl.className = 'w-full max-w-[1200px] bg-slate-900/50 p-4 rounded-xl border border-dashed border-slate-700 mt-2 no-print';
-            scriptEl.innerHTML = `
-                <p class="text-[10px] font-black uppercase text-indigo-400 mb-2">Manuskript für ${slide.speaker || 'Alle'}</p>
-                <div contenteditable="true" class="text-sm text-slate-300 italic">"${slide.script}"</div>
             `;
-            container.appendChild(slideEl);
-            container.appendChild(scriptEl);
-        } else {
-            container.appendChild(slideEl);
+        } else if (s.type === 'standard') {
+            contentHtml = `
+                <div class="block" style="top:40px; left:60px;">
+                    <h2 contenteditable="true" class="text-4xl font-extrabold border-b-4 border-indigo-500 pb-2">${s.headline}</h2>
+                </div>
+                <div class="block" style="top:180px; left:60px; width:800px;">
+                    <ul class="bullet-list" contenteditable="true">
+                        ${s.bullets.map(b => `<li>${b}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        } else if (s.type === 'timeline') {
+            contentHtml = `
+                <div class="block" style="top:40px; left:60px;">
+                    <h2 contenteditable="true" class="text-4xl font-extrabold">${s.headline}</h2>
+                </div>
+                <div class="block timeline-grid" style="top:250px; left:60px; width:90%;">
+                    ${s.steps.map(step => `
+                        <div class="timeline-node">
+                            <div class="time">${step.time}</div>
+                            <div contenteditable="true" class="text-sm font-bold">${step.text}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
+
+        slideDiv.innerHTML = contentHtml + `<div class="speaker-tag">Sprecher: ${s.speaker}</div><div class="resize-handle"></div>`;
+        canvas.appendChild(slideDiv);
+
+        // Skript-Bereich unter der Folie
+        const scriptDiv = document.createElement('div');
+        scriptDiv.className = "w-[1120px] bg-slate-900 border border-slate-800 p-4 rounded-b-xl -mt-2 mb-10 text-slate-400 text-sm italic no-print";
+        scriptDiv.innerHTML = `<strong>Sprecher-Skript:</strong> <span contenteditable="true">Stelle die ${s.headline} vor und gehe besonders auf die Punkte ein...</span>`;
+        canvas.appendChild(scriptDiv);
     });
 }
