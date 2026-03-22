@@ -1,929 +1,914 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLM Studio Pro | V9 Ultimate</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-*{box-sizing:border-box}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#0a0e1a;color:#f1f5f9;overflow:hidden;margin:0}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM Studio Pro | Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body{font-family:'Plus Jakarta Sans',sans-serif;background:#0b0f19;color:#f8fafc;overflow:hidden}
+        #sidebar{transition:transform .4s cubic-bezier(.4,0,.2,1),width .4s}
+        .sidebar-closed{transform:translateX(-100%);position:absolute}
+        #workspace-container{flex:1;display:flex;flex-direction:column;align-items:center;background:radial-gradient(ellipse at center,#131826 0%,#0b0f19 70%);overflow-y:auto;overflow-x:hidden;padding:2.5rem 0 4rem;transition:padding-bottom .3s}
+        #slide-scaler{transform-origin:top center;display:flex;flex-direction:column;gap:3rem;transition:transform .3s ease-out}
+        .presentation-slide{width:1280px;height:720px;background:#fff;box-shadow:0 25px 60px -12px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05);position:relative;overflow:hidden;border-radius:.75rem;flex-shrink:0;color:#0f172a}
 
-/* SIDEBAR */
-#sidebar{transition:transform .4s cubic-bezier(.4,0,.2,1);will-change:transform}
-.sidebar-closed{transform:translateX(-100%)!important;position:absolute!important}
+        /* THEMES */
+        .theme-midnight{background:linear-gradient(145deg,#0c0a1d 0%,#1e1b4b 50%,#252270 100%);color:#fff}
+        .theme-ocean{background:linear-gradient(145deg,#041525 0%,#0c4a6e 50%,#075985 100%);color:#fff}
+        .theme-forest{background:linear-gradient(145deg,#021a13 0%,#064e3b 50%,#047857 100%);color:#fff}
+        .theme-crimson{background:linear-gradient(145deg,#1a0610 0%,#6b1032 50%,#881337 100%);color:#fff}
+        .theme-sunset{background:linear-gradient(145deg,#1a0800 0%,#7c2d12 50%,#9a3412 100%);color:#fff}
+        .theme-slate{background:linear-gradient(145deg,#0f172a 0%,#1e293b 100%);color:#fff}
+        .theme-clean{background:#ffffff;color:#0f172a}
+        .theme-warm{background:linear-gradient(145deg,#fffbeb 0%,#fef3c7 100%);color:#0f172a}
+        .theme-soft{background:linear-gradient(145deg,#f8fafc 0%,#eef2ff 100%);color:#0f172a}
 
-/* WORKSPACE */
-#workspace-container{flex:1;display:flex;flex-direction:column;align-items:center;background:radial-gradient(ellipse at 50% 30%,#151b2e 0%,#0a0e1a 70%);overflow-y:auto;overflow-x:hidden;padding:2rem 0 4rem;transition:padding-bottom .3s}
-#slide-scaler{transform-origin:top center;display:flex;flex-direction:column;gap:2.5rem;transition:transform .25s ease-out;padding-bottom:2rem}
+        .glass-card{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:1.25rem}
+        [contenteditable="true"]{outline:none;transition:all .2s;border:1px dashed transparent;border-radius:4px}
+        [contenteditable="true"]:hover{border-color:rgba(99,102,241,.4);background:rgba(99,102,241,.04)}
+        [contenteditable="true"]:focus{border-color:#6366f1;background:rgba(99,102,241,.08)}
+        ::-webkit-scrollbar{width:8px;height:8px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:#1e293b;border-radius:10px;border:2px solid #0b0f19}
+        ::-webkit-scrollbar-thumb:hover{background:#334155}
 
-/* SLIDE */
-.presentation-slide{width:1280px;height:720px;background:#fff;box-shadow:0 20px 50px -10px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);position:relative;overflow:hidden;border-radius:10px;flex-shrink:0;color:#0f172a}
+        .img-loading{background:linear-gradient(90deg,#e2e8f0 25%,#cbd5e1 50%,#e2e8f0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+        .dark-slide .img-loading{background:linear-gradient(90deg,#1e293b 25%,#334155 50%,#1e293b 75%);background-size:200% 100%}
+        @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+        @keyframes slideIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+        .slide-animate{animation:slideIn .6s cubic-bezier(.22,1,.36,1) forwards}
 
-/* THEMES */
-.theme-midnight{background:linear-gradient(145deg,#0c0a1d,#1e1b4b 50%,#252270);color:#fff}
-.theme-ocean{background:linear-gradient(145deg,#041525,#0c4a6e 50%,#075985);color:#fff}
-.theme-forest{background:linear-gradient(145deg,#021a13,#064e3b 50%,#047857);color:#fff}
-.theme-crimson{background:linear-gradient(145deg,#1a0610,#6b1032 50%,#881337);color:#fff}
-.theme-sunset{background:linear-gradient(145deg,#1a0800,#7c2d12 50%,#9a3412);color:#fff}
-.theme-slate{background:linear-gradient(145deg,#0f172a,#1e293b);color:#fff}
-.theme-clean{background:#fff;color:#0f172a}
-.theme-warm{background:linear-gradient(145deg,#fffbeb,#fef3c7);color:#0f172a}
-.theme-soft{background:linear-gradient(145deg,#f8fafc,#eef2ff);color:#0f172a}
+        /* ELEMENT EDITING - FIXED */
+        .added-element{position:absolute;z-index:20;border:2px solid transparent;border-radius:8px;transition:border-color .15s;cursor:default}
+        .added-element::before{content:'';position:absolute;top:-30px;left:-4px;right:-4px;height:34px;z-index:1}
+        .added-element.el-selected{border-color:#6366f1;box-shadow:0 0 0 1px #6366f1}
+        .el-controls{position:absolute;top:-30px;left:50%;transform:translateX(-50%);display:none;gap:2px;align-items:center;background:#1e293b;border:1px solid #475569;border-radius:8px;padding:2px 4px;white-space:nowrap;z-index:60}
+        .added-element.el-selected .el-controls{display:flex}
+        .el-drag{cursor:grab;padding:2px 6px;background:#6366f1;color:#fff;border-radius:5px;font-size:9px;display:flex;align-items:center;gap:2px;user-select:none;border:none}
+        .el-drag:active{cursor:grabbing}
+        .el-btn{padding:2px 6px;color:#fff;border-radius:5px;font-size:9px;border:none;cursor:pointer;display:flex;align-items:center}
+        .el-del{background:#ef4444}
+        .el-dup{background:#6366f1}
+        .el-resize{position:absolute;bottom:-5px;right:-5px;width:12px;height:12px;background:#6366f1;border-radius:3px;cursor:nwse-resize;display:none;z-index:61}
+        .added-element.el-selected .el-resize{display:block}
 
-.glass-card{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:1.25rem}
+        .slide-tools{opacity:0;transition:opacity .2s}
+        .presentation-slide:hover .slide-tools{opacity:1}
+        .add-menu-dropdown{display:none}
+        .add-menu-dropdown.open{display:block}
 
-/* CONTENTEDITABLE */
-[contenteditable="true"]{outline:none;transition:border-color .15s,background .15s;border:1.5px dashed transparent;border-radius:4px}
-[contenteditable="true"]:hover{border-color:rgba(99,102,241,.35);background:rgba(99,102,241,.03)}
-[contenteditable="true"]:focus{border-color:#6366f1;background:rgba(99,102,241,.07)}
+        #script-panel{transform:translateY(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+        #script-panel.panel-open{transform:translateY(0)}
+        .script-tab{transition:all .15s}
+        .script-tab.tab-active{background:#6366f1;color:#fff}
 
-/* SCROLLBAR */
-::-webkit-scrollbar{width:7px;height:7px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:#1e293b;border-radius:10px}
-::-webkit-scrollbar-thumb:hover{background:#334155}
+        .tb-select{background:#1e293b;border:1px solid #334155;color:#cbd5e1;border-radius:8px;padding:2px 6px;font-size:11px;outline:none;cursor:pointer;height:32px}
+        .tb-select:focus{border-color:#6366f1}
+        .tb-btn{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:all .15s;background:transparent;color:#94a3b8;font-size:13px}
+        .tb-btn:hover{background:#334155;color:#fff}
+        .tb-divider{width:1px;height:20px;background:#334155;margin:0 4px}
 
-/* IMAGE SHIMMER */
-.img-loading{background:linear-gradient(90deg,#e2e8f0 25%,#cbd5e1 50%,#e2e8f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite}
-[class*="theme-midnight"] .img-loading,[class*="theme-ocean"] .img-loading,[class*="theme-forest"] .img-loading,[class*="theme-crimson"] .img-loading,[class*="theme-sunset"] .img-loading,[class*="theme-slate"] .img-loading{background:linear-gradient(90deg,#1e293b 25%,#334155 50%,#1e293b 75%);background-size:200% 100%}
-@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-@keyframes slideIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.slide-animate{animation:slideIn .5s cubic-bezier(.22,1,.36,1) forwards}
+        /* PRESENT MODE */
+        #present-overlay{background:#000;z-index:200}
+        .present-slide{position:absolute;top:50%;left:50%;transform-origin:center center;display:none}
+        .present-slide.active{display:block}
+        .present-controls{opacity:0;transition:opacity .3s}
+        .present-controls.show{opacity:1}
 
-/* ====== ELEMENT SYSTEM (Click-to-Select) ====== */
-.added-element{position:absolute;z-index:20;border:2px solid transparent;border-radius:6px;transition:border-color .1s;min-width:30px;min-height:10px}
-.added-element.el-selected{border-color:#6366f1;z-index:25}
-.el-toolbar{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);display:none;align-items:center;gap:3px;padding:4px 6px;background:#1e1e2e;border:1px solid #4338ca;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.4);white-space:nowrap;z-index:50;pointer-events:auto}
-.added-element.el-selected .el-toolbar{display:flex}
-.elt-btn{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;background:transparent;color:#a5b4fc;font-size:11px;transition:all .12s}
-.elt-btn:hover{background:#3730a3;color:#fff}
-.elt-del{color:#fca5a5}.elt-del:hover{background:#dc2626;color:#fff}
-.elt-sep{width:1px;height:18px;background:#4338ca;margin:0 2px}
-.el-handle{position:absolute;width:10px;height:10px;background:#6366f1;border:2px solid #fff;border-radius:3px;display:none;z-index:30;pointer-events:auto}
-.added-element.el-selected .el-handle{display:block}
-.el-handle-nw{top:-5px;left:-5px;cursor:nwse-resize}
-.el-handle-ne{top:-5px;right:-5px;cursor:nesw-resize}
-.el-handle-sw{bottom:-5px;left:-5px;cursor:nesw-resize}
-.el-handle-se{bottom:-5px;right:-5px;cursor:nwse-resize}
-
-/* SNAP GUIDES */
-.snap-guide{position:absolute;z-index:100;pointer-events:none;display:none}
-.snap-guide-v{width:1px;top:0;bottom:0;background:#6366f1;left:50%}
-.snap-guide-h{height:1px;left:0;right:0;background:#6366f1;top:50%}
-
-/* SLIDE TOOLS */
-.slide-tools{opacity:0;transition:opacity .2s}
-.presentation-slide:hover .slide-tools{opacity:1}
-.slide-mgmt{opacity:0;transition:opacity .2s}
-.presentation-slide:hover .slide-mgmt{opacity:1}
-.add-panel{display:none;position:absolute;right:0;top:42px;width:240px;max-height:400px;overflow-y:auto;background:#141825;border:1px solid rgba(99,102,241,.3);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.5);z-index:50;padding:6px}
-.add-panel.open{display:block}
-.add-panel-tab{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:6px 10px;border-radius:8px;cursor:pointer;color:#64748b;transition:all .12s;border:none;background:none}
-.add-panel-tab.apt-active{background:#6366f1;color:#fff}
-.add-panel-section{display:none}.add-panel-section.aps-active{display:block}
-.add-item{width:100%;text-align:left;padding:7px 10px;font-size:11px;color:#cbd5e1;border:none;background:none;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:500;transition:background .1s}
-.add-item:hover{background:rgba(99,102,241,.15)}
-.icon-grid-pick{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:6px}
-.icon-pick-btn{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid transparent;background:none;color:#94a3b8;font-size:15px;cursor:pointer;transition:all .1s}
-.icon-pick-btn:hover{background:rgba(99,102,241,.2);color:#a5b4fc;border-color:rgba(99,102,241,.3)}
-.stock-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;padding:6px}
-.stock-thumb{width:100%;height:60px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:all .15s}
-.stock-thumb:hover{border-color:#6366f1;transform:scale(1.04)}
-
-/* SCRIPT PANEL */
-#script-panel{transform:translateY(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
-#script-panel.panel-open{transform:translateY(0)}
-.script-tab{transition:all .15s;border:none;background:none;cursor:pointer}
-.script-tab.tab-active{background:#6366f1!important;color:#fff!important}
-
-/* TOOLBAR */
-.tb-select{background:#1e293b;border:1px solid #334155;color:#cbd5e1;border-radius:8px;padding:2px 6px;font-size:11px;outline:none;cursor:pointer;height:30px}
-.tb-select:focus{border-color:#6366f1}
-.tb-btn{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;background:transparent;color:#94a3b8;font-size:12px;transition:all .1s}
-.tb-btn:hover{background:#334155;color:#fff}
-.tb-divider{width:1px;height:18px;background:#334155;margin:0 3px}
-
-/* PDF UPLOAD */
-.pdf-drop{border:2px dashed #334155;border-radius:14px;padding:16px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
-.pdf-drop:hover,.pdf-drop.drag-over{border-color:#6366f1;background:rgba(99,102,241,.06)}
-.pdf-drop input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer}
-
-/* ADVANCED TOGGLE */
-.adv-toggle{transition:transform .2s}
-.adv-toggle.adv-open{transform:rotate(180deg)}
-.adv-section{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.adv-section.adv-expanded{max-height:600px}
-
-/* ZOOM */
-.zoom-bar{position:fixed;bottom:16px;right:16px;z-index:55;display:flex;align-items:center;gap:2px;background:#141825;border:1px solid #1e293b;border-radius:12px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
-.zoom-btn{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;background:transparent;color:#94a3b8;font-size:12px;transition:all .1s}
-.zoom-btn:hover{background:#1e293b;color:#fff}
-
-/* PRINT */
-@media print{
-nav,#sidebar,.no-print,#sidebar-toggle,.slide-number,.slide-tools,.slide-mgmt,#script-panel,#script-toggle-btn,.el-toolbar,.el-handle,.snap-guide,.zoom-bar,.add-panel{display:none!important}
-body,#workspace-container{background:#fff!important;padding:0!important;overflow:visible!important;display:block!important}
-#slide-scaler{transform:none!important;margin:0!important;gap:0!important;display:block!important}
-.presentation-slide{box-shadow:none!important;border-radius:0!important;page-break-after:always;margin:0!important;animation:none!important;opacity:1!important}
-.added-element{border-color:transparent!important}
-*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-}
-</style>
+        @media print{
+            nav,#sidebar,.no-print,#sidebar-toggle,.slide-number,.slide-tools,#script-panel,#script-toggle-btn,.el-controls,.el-resize,#present-overlay{display:none!important}
+            body,#workspace-container{background:#fff!important;padding:0!important;overflow:visible!important;display:block!important}
+            #slide-scaler{transform:none!important;margin:0!important;gap:0!important;display:block!important}
+            .presentation-slide{box-shadow:none!important;border-radius:0!important;page-break-after:always;margin:0!important;animation:none!important;opacity:1!important}
+            .added-element{border-color:transparent!important;box-shadow:none!important}
+            *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+        }
+    </style>
 </head>
 <body class="flex flex-col h-screen">
 
-<!-- ═══════════ NAVIGATION ═══════════ -->
-<nav class="h-[52px] border-b border-white/[.06] bg-[#0a0e1a]/90 backdrop-blur-2xl flex items-center justify-between px-4 z-50 shrink-0">
-<div class="flex items-center gap-4">
-    <a href="index.html" class="flex items-center gap-1.5 text-slate-400 hover:text-white text-[11px] font-bold bg-white/[.04] hover:bg-white/[.08] px-3 py-1.5 rounded-lg border border-white/[.06] transition-all"><i class="fas fa-arrow-left text-[9px]"></i>Dashboard</a>
-    <div class="h-4 w-px bg-white/[.08]"></div>
-    <div class="flex items-center gap-2">
-        <div class="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-microscope text-white text-[10px]"></i></div>
-        <span class="font-black text-base tracking-tighter">SLM<span class="text-indigo-400">.studio</span><sup class="text-[8px] text-indigo-500 ml-0.5">V9</sup></span>
+<nav class="h-14 border-b border-slate-800 bg-[#0b0f19]/95 backdrop-blur-xl flex items-center justify-between px-5 z-50 shrink-0">
+    <div class="flex items-center gap-5">
+        <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-xs bg-slate-800/50 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700/50">
+            <i class="fas fa-arrow-left"></i> Dashboard
+        </a>
+        <div class="h-5 w-px bg-slate-800"></div>
+        <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-microscope text-white text-[10px]"></i></div>
+            <span class="font-black text-lg tracking-tighter">SLM<span class="text-indigo-500">.studio</span></span>
+        </div>
     </div>
-</div>
 
-<!-- EDITOR TOOLBAR -->
-<div id="editor-toolbar" class="hidden items-center gap-0.5 bg-[#111827]/95 backdrop-blur-xl p-1 rounded-xl border border-white/[.08] shadow-2xl no-print absolute left-1/2 -translate-x-1/2 max-w-[92vw] overflow-x-auto">
-    <select onchange="document.execCommand('fontName',false,this.value);this.blur()" class="tb-select w-[100px]"><option value="Plus Jakarta Sans">Jakarta</option><option value="Playfair Display">Playfair</option><option value="Inter">Inter</option><option value="DM Sans">DM Sans</option><option value="Georgia">Georgia</option><option value="Arial">Arial</option></select>
-    <select onchange="setFontSize(this.value);this.blur()" class="tb-select w-[60px]"><option value="12">12</option><option value="14">14</option><option value="16" selected>16</option><option value="18">18</option><option value="20">20</option><option value="24">24</option><option value="28">28</option><option value="32">32</option><option value="40">40</option><option value="48">48</option><option value="64">64</option></select>
-    <div class="tb-divider"></div>
-    <button onclick="document.execCommand('bold')" class="tb-btn" title="Fett"><i class="fas fa-bold"></i></button>
-    <button onclick="document.execCommand('italic')" class="tb-btn" title="Kursiv"><i class="fas fa-italic"></i></button>
-    <button onclick="document.execCommand('underline')" class="tb-btn" title="Unterstrichen"><i class="fas fa-underline"></i></button>
-    <button onclick="document.execCommand('strikeThrough')" class="tb-btn"><i class="fas fa-strikethrough"></i></button>
-    <div class="tb-divider"></div>
-    <label class="tb-btn relative" title="Textfarbe"><i class="fas fa-font"></i><input type="color" value="#000000" onchange="document.execCommand('foreColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
-    <label class="tb-btn relative" title="Hervorhebung"><i class="fas fa-highlighter"></i><input type="color" value="#fef08a" onchange="document.execCommand('hiliteColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
-    <div class="tb-divider"></div>
-    <button onclick="document.execCommand('justifyLeft')" class="tb-btn"><i class="fas fa-align-left"></i></button>
-    <button onclick="document.execCommand('justifyCenter')" class="tb-btn"><i class="fas fa-align-center"></i></button>
-    <button onclick="document.execCommand('justifyRight')" class="tb-btn"><i class="fas fa-align-right"></i></button>
-    <div class="tb-divider"></div>
-    <button onclick="document.execCommand('insertUnorderedList')" class="tb-btn"><i class="fas fa-list-ul"></i></button>
-    <button onclick="document.execCommand('insertOrderedList')" class="tb-btn"><i class="fas fa-list-ol"></i></button>
-    <div class="tb-divider"></div>
-    <button onclick="document.execCommand('removeFormat')" class="tb-btn" title="Format entfernen"><i class="fas fa-eraser"></i></button>
-</div>
+    <div id="editor-toolbar" class="hidden items-center gap-1 bg-[#111827]/95 backdrop-blur-xl p-1.5 rounded-xl border border-slate-700 shadow-2xl no-print absolute left-1/2 -translate-x-1/2 max-w-[95vw] overflow-x-auto">
+        <select onchange="document.execCommand('fontName',false,this.value);this.blur()" class="tb-select w-[110px]">
+            <option value="Plus Jakarta Sans">Jakarta</option><option value="Playfair Display">Playfair</option><option value="Inter">Inter</option><option value="DM Sans">DM Sans</option><option value="Georgia">Georgia</option><option value="Arial">Arial</option>
+        </select>
+        <select onchange="setFontSize(this.value);this.blur()" class="tb-select w-[68px]">
+            <option value="12">12px</option><option value="14">14px</option><option value="16" selected>16px</option><option value="18">18px</option><option value="20">20px</option><option value="24">24px</option><option value="28">28px</option><option value="32">32px</option><option value="48">48px</option>
+        </select>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('bold')" class="tb-btn" title="Fett"><i class="fas fa-bold"></i></button>
+        <button onclick="document.execCommand('italic')" class="tb-btn" title="Kursiv"><i class="fas fa-italic"></i></button>
+        <button onclick="document.execCommand('underline')" class="tb-btn"><i class="fas fa-underline"></i></button>
+        <button onclick="document.execCommand('strikeThrough')" class="tb-btn"><i class="fas fa-strikethrough"></i></button>
+        <div class="tb-divider"></div>
+        <label class="tb-btn relative" title="Textfarbe"><i class="fas fa-font"></i><input type="color" value="#000000" onchange="document.execCommand('foreColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+        <label class="tb-btn relative" title="Hervorhebung"><i class="fas fa-highlighter"></i><input type="color" value="#fef08a" onchange="document.execCommand('hiliteColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('justifyLeft')" class="tb-btn"><i class="fas fa-align-left"></i></button>
+        <button onclick="document.execCommand('justifyCenter')" class="tb-btn"><i class="fas fa-align-center"></i></button>
+        <button onclick="document.execCommand('justifyRight')" class="tb-btn"><i class="fas fa-align-right"></i></button>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('insertUnorderedList')" class="tb-btn"><i class="fas fa-list-ul"></i></button>
+        <button onclick="document.execCommand('insertOrderedList')" class="tb-btn"><i class="fas fa-list-ol"></i></button>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('removeFormat')" class="tb-btn"><i class="fas fa-eraser"></i></button>
+    </div>
 
-<div class="flex gap-2 items-center">
-    <button id="script-toggle-btn" onclick="toggleScriptPanel()" class="hidden bg-white/[.04] text-slate-300 hover:text-white hover:bg-white/[.08] px-3 py-1.5 rounded-lg font-bold text-[11px] uppercase tracking-wider transition-all border border-white/[.06] items-center gap-1.5 no-print"><i class="fas fa-scroll text-[10px]"></i>Skript</button>
-    <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-4 py-1.5 rounded-lg font-bold text-[11px] uppercase tracking-widest transition-all shadow-xl flex items-center gap-1.5"><i class="fas fa-file-pdf"></i>Export</button>
-</div>
+    <div class="flex gap-3 items-center">
+        <button id="present-btn" onclick="startPresentation()" class="hidden bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all items-center gap-2 no-print">
+            <i class="fas fa-play"></i> Präsentieren
+        </button>
+        <button id="script-toggle-btn" onclick="toggleScriptPanel()" class="hidden bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all border border-slate-700 items-center gap-2 no-print">
+            <i class="fas fa-scroll"></i> Skript
+        </button>
+        <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all shadow-xl flex items-center gap-2">
+            <i class="fas fa-file-pdf"></i> Export
+        </button>
+    </div>
 </nav>
 
-<!-- ═══════════ MAIN LAYOUT ═══════════ -->
 <div class="flex flex-1 overflow-hidden relative">
 
-<!-- ── SIDEBAR ── -->
-<aside id="sidebar" class="w-[380px] border-r border-white/[.06] bg-[#0f1320] flex flex-col z-40 shrink-0 relative">
-<div class="p-4 overflow-y-auto flex-1 space-y-5">
-
-    <!-- PDF UPLOAD -->
-    <section class="space-y-2">
-        <h3 class="text-[9px] font-black text-indigo-400 uppercase tracking-[.15em] border-b border-white/[.06] pb-1.5 flex items-center gap-2"><i class="fas fa-file-pdf text-[10px]"></i>PDF importieren</h3>
-        <div class="pdf-drop" id="pdf-dropzone">
-            <input type="file" accept=".pdf" onchange="handlePDFFile(this.files[0])">
-            <div id="pdf-idle"><i class="fas fa-cloud-arrow-up text-2xl text-slate-600 mb-1"></i><p class="text-[10px] text-slate-500 font-medium">PDF ablegen oder klicken</p></div>
-            <div id="pdf-loading" class="hidden"><i class="fas fa-circle-notch animate-spin text-xl text-indigo-400 mb-1"></i><p class="text-[10px] text-indigo-400 font-medium">Analysiere PDF…</p></div>
-            <div id="pdf-done" class="hidden"><i class="fas fa-check-circle text-xl text-emerald-400 mb-1"></i><p class="text-[10px] text-emerald-400 font-bold" id="pdf-filename"></p></div>
+    <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
+        <div class="p-5 overflow-y-auto flex-1 space-y-7">
+            <section class="space-y-3">
+                <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
+                <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
+                <textarea id="context" rows="5" placeholder="Fallbeispiel, Symptome oder Stichpunkte hier einfügen..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors"></textarea>
+            </section>
+            <section class="space-y-3">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">2. Sprecher-Team</h3>
+                    <button onclick="addSpeaker()" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fas fa-plus-circle text-lg"></i></button>
+                </div>
+                <div id="speaker-list" class="flex flex-wrap gap-2"></div>
+            </section>
+            <section class="space-y-3">
+                <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Einstellungen</h3>
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-400">Folienanzahl</span>
+                    <span id="slide-val" class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">KI entscheidet</span>
+                </div>
+                <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="text-xs font-bold text-slate-400">Skript-Modus</span>
+                    <div class="flex gap-2">
+                        <label class="flex-1 cursor-pointer"><input type="radio" name="scriptMode" value="notes" checked class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-slate-800 border border-slate-700 text-slate-400 text-center py-2 rounded-lg text-xs font-bold transition-all">Stichpunkte</div></label>
+                        <label class="flex-1 cursor-pointer"><input type="radio" name="scriptMode" value="full" class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-slate-800 border border-slate-700 text-slate-400 text-center py-2 rounded-lg text-xs font-bold transition-all">Volltext</div></label>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <!-- CONTENT -->
-    <section class="space-y-2">
-        <h3 class="text-[9px] font-black text-indigo-400 uppercase tracking-[.15em] border-b border-white/[.06] pb-1.5">1. Inhalt & Kontext</h3>
-        <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-white/[.03] border border-white/[.08] rounded-lg p-2.5 text-sm text-white outline-none focus:border-indigo-500 transition-colors placeholder:text-slate-600">
-        <textarea id="context" rows="4" placeholder="Fallbeispiel, Symptome oder Stichpunkte…" class="w-full bg-white/[.03] border border-white/[.08] rounded-lg p-2.5 text-sm text-white outline-none focus:border-indigo-500 transition-colors placeholder:text-slate-600"></textarea>
-    </section>
-
-    <!-- SPEAKERS -->
-    <section class="space-y-2">
-        <div class="flex justify-between items-center border-b border-white/[.06] pb-1.5">
-            <h3 class="text-[9px] font-black text-indigo-400 uppercase tracking-[.15em]">2. Sprecher-Team</h3>
-            <button onclick="addSpeaker()" class="text-slate-500 hover:text-indigo-400 transition-colors"><i class="fas fa-plus-circle"></i></button>
+        <div class="p-5 bg-[#0b0f19] border-t border-slate-800 space-y-3">
+            <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-3.5 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
+                <i class="fas fa-wand-magic-sparkles"></i> Generieren
+            </button>
+            <button id="restore-btn" onclick="restoreHistory()" class="hidden w-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2 border border-slate-700">
+                <i class="fas fa-history"></i> Letzte Präsentation wiederherstellen
+            </button>
         </div>
-        <div id="speaker-list" class="flex flex-wrap gap-1.5"></div>
-    </section>
+    </aside>
 
-    <!-- SETTINGS -->
-    <section class="space-y-3">
-        <h3 class="text-[9px] font-black text-indigo-400 uppercase tracking-[.15em] border-b border-white/[.06] pb-1.5">3. Einstellungen</h3>
-        <div class="flex justify-between items-center"><span class="text-[11px] font-bold text-slate-400">Folienanzahl</span><span id="slide-val" class="text-[11px] font-black text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">KI</span></div>
-        <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
-        <div class="pt-2 space-y-2">
-            <span class="text-[11px] font-bold text-slate-400">Skript-Modus</span>
-            <div class="flex gap-1.5">
-                <label class="flex-1 cursor-pointer"><input type="radio" name="scriptMode" value="notes" checked class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-white/[.03] border border-white/[.06] text-slate-500 text-center py-1.5 rounded-lg text-[10px] font-bold transition-all">Stichpunkte</div></label>
-                <label class="flex-1 cursor-pointer"><input type="radio" name="scriptMode" value="full" class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-white/[.03] border border-white/[.06] text-slate-500 text-center py-1.5 rounded-lg text-[10px] font-bold transition-all">Volltext</div></label>
-            </div>
-        </div>
-    </section>
+    <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl no-print" id="sidebar-toggle">
+        <i class="fas fa-chevron-left text-xs"></i>
+    </button>
 
-    <!-- ADVANCED SETTINGS -->
-    <section>
-        <button onclick="toggleAdvanced()" class="w-full flex justify-between items-center border-b border-white/[.06] pb-1.5">
-            <h3 class="text-[9px] font-black text-indigo-400 uppercase tracking-[.15em]">4. Erweiterte Einstellungen</h3>
-            <i class="fas fa-chevron-down text-[8px] text-slate-500 adv-toggle" id="adv-arrow"></i>
-        </button>
-        <div class="adv-section space-y-3 pt-3" id="adv-panel">
-            <div>
-                <label class="text-[10px] font-bold text-slate-400 block mb-1">Design-Stil</label>
-                <select id="design-style" class="w-full bg-white/[.03] border border-white/[.08] rounded-lg p-2 text-xs text-white outline-none focus:border-indigo-500"><option value="medical">Medizinisch-Professionell</option><option value="minimal">Modern-Minimalistisch</option><option value="creative">Kreativ-Bunt</option><option value="dark">Dunkel-Elegant</option></select>
-            </div>
-            <div>
-                <label class="text-[10px] font-bold text-slate-400 block mb-1">Primärfarbe</label>
-                <div class="flex gap-2 items-center">
-                    <input type="color" id="primary-color" value="#6366f1" class="w-8 h-8 rounded-lg cursor-pointer bg-transparent border border-white/[.08]">
-                    <div class="flex gap-1"  id="color-presets">
-                        <button onclick="document.getElementById('primary-color').value='#6366f1'" class="w-6 h-6 rounded-full bg-indigo-500 border-2 border-transparent hover:border-white/50"></button>
-                        <button onclick="document.getElementById('primary-color').value='#06b6d4'" class="w-6 h-6 rounded-full bg-cyan-500 border-2 border-transparent hover:border-white/50"></button>
-                        <button onclick="document.getElementById('primary-color').value='#10b981'" class="w-6 h-6 rounded-full bg-emerald-500 border-2 border-transparent hover:border-white/50"></button>
-                        <button onclick="document.getElementById('primary-color').value='#f43f5e'" class="w-6 h-6 rounded-full bg-rose-500 border-2 border-transparent hover:border-white/50"></button>
-                        <button onclick="document.getElementById('primary-color').value='#f59e0b'" class="w-6 h-6 rounded-full bg-amber-500 border-2 border-transparent hover:border-white/50"></button>
+    <main id="workspace-container">
+        <div id="slide-scaler">
+            <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
+                <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
+                <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
+                <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>
+                <div class="z-10 glass-card p-12 max-w-3xl">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/30"><i class="fas fa-layer-group text-3xl text-white"></i></div>
+                    <h2 class="text-4xl font-black mb-4 tracking-tight">Willkommen im Studio</h2>
+                    <p class="text-slate-400 text-lg mb-10">Füttere die KI mit deinem Thema und Kontext. Das System generiert automatisch vielfältige Layouts, KI-Bilder, Sprecher-Skripte und ein Quellenverzeichnis.</p>
+                    <div class="flex gap-4 justify-center flex-wrap">
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-1 text-xl text-slate-600"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">Kontext<br>eingeben</span></div>
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-2 text-xl text-slate-600"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">Team<br>festlegen</span></div>
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-3 text-xl text-indigo-500"></i><span class="text-[10px] font-bold text-indigo-400 uppercase leading-tight">KI<br>starten</span></div>
                     </div>
                 </div>
             </div>
-            <div>
-                <label class="text-[10px] font-bold text-slate-400 block mb-1">Bild-Stil</label>
-                <select id="image-style" class="w-full bg-white/[.03] border border-white/[.08] rounded-lg p-2 text-xs text-white outline-none focus:border-indigo-500"><option value="photo">Fotorealistisch</option><option value="illustration">Medizinische Illustration</option><option value="abstract">Abstrakt / Konzeptuell</option><option value="none">Keine Bilder</option></select>
-            </div>
-            <div>
-                <label class="text-[10px] font-bold text-slate-400 block mb-1">Inhaltsdichte</label>
-                <div class="flex gap-1.5">
-                    <label class="flex-1 cursor-pointer"><input type="radio" name="density" value="compact" class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-white/[.03] border border-white/[.06] text-slate-500 text-center py-1.5 rounded-lg text-[10px] font-bold transition-all">Kompakt</div></label>
-                    <label class="flex-1 cursor-pointer"><input type="radio" name="density" value="normal" checked class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-white/[.03] border border-white/[.06] text-slate-500 text-center py-1.5 rounded-lg text-[10px] font-bold transition-all">Normal</div></label>
-                    <label class="flex-1 cursor-pointer"><input type="radio" name="density" value="spacious" class="hidden peer"><div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-white/[.03] border border-white/[.06] text-slate-500 text-center py-1.5 rounded-lg text-[10px] font-bold transition-all">Locker</div></label>
+        </div>
+    </main>
+</div>
+
+<!-- SCRIPT PANEL -->
+<div id="script-panel" class="fixed bottom-0 left-0 right-0 bg-[#0d1117] border-t border-slate-700 z-[60] shadow-2xl no-print" style="height:420px">
+    <div class="h-full flex flex-col">
+        <div class="flex items-center justify-between px-6 py-3 border-b border-slate-800 shrink-0">
+            <div class="flex items-center gap-3"><i class="fas fa-scroll text-indigo-500"></i><h3 class="font-black text-sm uppercase tracking-wider">Sprecher-Skript</h3></div>
+            <div class="flex items-center gap-2">
+                <div class="flex bg-slate-800 rounded-lg p-0.5">
+                    <button onclick="setScriptView('notes')" class="script-tab tab-active px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md" data-mode="notes">Stichpunkte</button>
+                    <button onclick="setScriptView('full')" class="script-tab px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md text-slate-400" data-mode="full">Volltext</button>
                 </div>
+                <div class="w-px h-5 bg-slate-700"></div>
+                <button onclick="exportScript()" class="text-slate-400 hover:text-white text-xs px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-all flex items-center gap-1.5"><i class="fas fa-download"></i> Export</button>
+                <button onclick="printScriptOnly()" class="text-slate-400 hover:text-white text-xs px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-all"><i class="fas fa-print"></i></button>
+                <button onclick="toggleScriptPanel()" class="text-slate-400 hover:text-white text-xs w-8 h-8 rounded-lg hover:bg-slate-800 transition-all flex items-center justify-center"><i class="fas fa-times"></i></button>
             </div>
         </div>
-    </section>
-</div>
-
-<div class="p-4 bg-[#0a0e1a] border-t border-white/[.06]">
-    <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-3 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-[11px] transition-all flex items-center justify-center gap-2.5">
-        <i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren
-    </button>
-</div>
-</aside>
-
-<!-- SIDEBAR TOGGLE -->
-<button onclick="toggleSidebar()" class="absolute left-[380px] top-1/2 -translate-y-1/2 bg-[#141825] border border-white/[.08] text-slate-400 w-5 h-14 rounded-r-lg flex items-center justify-center hover:text-white hover:bg-indigo-600 transition-all z-50 shadow-xl no-print" id="sidebar-toggle"><i class="fas fa-chevron-left text-[9px]"></i></button>
-
-<!-- ── WORKSPACE ── -->
-<main id="workspace-container">
-    <div id="slide-scaler">
-        <!-- Welcome Slide -->
-        <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
-            <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
-            <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
-            <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>
-            <div class="z-10 glass-card p-10 max-w-3xl">
-                <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-500/30"><i class="fas fa-layer-group text-2xl text-white"></i></div>
-                <h2 class="text-3xl font-black mb-3 tracking-tight">Willkommen im Studio V9</h2>
-                <p class="text-slate-400 mb-8 text-sm leading-relaxed">Lade ein PDF hoch oder gib dein Thema ein. Die KI generiert automatisch eine vollständige Präsentation mit Sprecher-Skripten, KI-Bildern und professionellen Layouts.</p>
-                <div class="flex gap-3 justify-center flex-wrap">
-                    <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl flex items-center gap-3"><i class="fas fa-file-pdf text-lg text-rose-400"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">PDF<br>hochladen</span></div>
-                    <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl flex items-center gap-3"><i class="fas fa-users text-lg text-sky-400"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">Team<br>festlegen</span></div>
-                    <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl flex items-center gap-3"><i class="fas fa-wand-magic-sparkles text-lg text-indigo-400"></i><span class="text-[10px] font-bold text-indigo-400 uppercase leading-tight">KI<br>starten</span></div>
-                </div>
-            </div>
-        </div>
+        <div id="script-content" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
     </div>
-</main>
 </div>
 
-<!-- ═══════════ SCRIPT PANEL ═══════════ -->
-<div id="script-panel" class="fixed bottom-0 left-0 right-0 bg-[#0d1117] border-t border-white/[.08] z-[60] shadow-2xl no-print" style="height:380px">
-<div class="h-full flex flex-col">
-    <div class="flex items-center justify-between px-5 py-2.5 border-b border-white/[.06] shrink-0">
-        <div class="flex items-center gap-2.5"><i class="fas fa-scroll text-indigo-500 text-xs"></i><h3 class="font-black text-xs uppercase tracking-wider">Sprecher-Skript</h3></div>
-        <div class="flex items-center gap-2">
-            <div class="flex bg-white/[.04] rounded-lg p-0.5"><button onclick="setScriptView('notes')" class="script-tab tab-active px-3 py-1 text-[9px] font-bold uppercase tracking-wider rounded-md" data-mode="notes">Stichpunkte</button><button onclick="setScriptView('full')" class="script-tab px-3 py-1 text-[9px] font-bold uppercase tracking-wider rounded-md text-slate-500" data-mode="full">Volltext</button></div>
-            <button onclick="exportScript()" class="text-slate-400 hover:text-white text-[10px] px-2.5 py-1 rounded-lg hover:bg-white/[.06] flex items-center gap-1"><i class="fas fa-download"></i>Export</button>
-            <button onclick="printScriptOnly()" class="text-slate-400 hover:text-white text-[10px] px-2.5 py-1 rounded-lg hover:bg-white/[.06]"><i class="fas fa-print"></i></button>
-            <button onclick="toggleScriptPanel()" class="text-slate-400 hover:text-white w-7 h-7 rounded-lg hover:bg-white/[.06] flex items-center justify-center"><i class="fas fa-times text-xs"></i></button>
+<!-- PRESENT MODE -->
+<div id="present-overlay" class="fixed inset-0 hidden flex items-center justify-center">
+    <div id="present-container" class="relative w-full h-full flex items-center justify-center bg-black"></div>
+    <div id="present-controls" class="present-controls fixed bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent py-6 px-8 flex items-center justify-between z-[201]">
+        <button onclick="exitPresentation()" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 transition-colors"><i class="fas fa-times"></i> Beenden (ESC)</button>
+        <div class="flex items-center gap-4">
+            <button onclick="presentPrev()" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"><i class="fas fa-chevron-left"></i></button>
+            <span id="present-counter" class="text-white text-sm font-bold min-w-[60px] text-center">1 / 1</span>
+            <button onclick="presentNext()" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"><i class="fas fa-chevron-right"></i></button>
         </div>
+        <div class="w-[120px]"></div>
     </div>
-    <div id="script-content" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
-</div>
 </div>
 
-<!-- ═══════════ ZOOM CONTROLS ═══════════ -->
-<div class="zoom-bar no-print">
-    <button class="zoom-btn" onclick="zoomOut()" title="Verkleinern"><i class="fas fa-minus"></i></button>
-    <span id="zoom-val" class="text-[10px] font-bold text-slate-400 w-10 text-center">100%</span>
-    <button class="zoom-btn" onclick="zoomIn()" title="Vergrößern"><i class="fas fa-plus"></i></button>
-    <div class="w-px h-4 bg-white/[.06]"></div>
-    <button class="zoom-btn" onclick="zoomReset()" title="Zurücksetzen"><i class="fas fa-expand"></i></button>
-</div>
-
-<!-- ═══════════ ALL JAVASCRIPT ═══════════ -->
 <script>
-// ============================================================
+// ════════════════════════════════════════
 //  STATE
-// ============================================================
+// ════════════════════════════════════════
 let isSidebarOpen=true, scriptPanelOpen=false, scriptViewMode='notes';
 const speakers=[];
-let slideScripts=[];
-let manualZoom=1.0;
+let slideScripts=[], currentSlidesData=null;
+let activeElement=null, isDragging=false, isResizing=false;
+let dragStartX,dragStartY,dragElStartLeft,dragElStartTop,resizeStartW,resizeStartH;
+let presentIdx=0, presentTotal=0;
+let controlsTimer=null;
 
-// Element System
-let selectedEl=null, dragState=null; // null | 'drag' | 'resize'
-let dragData={};
-
-// ============================================================
-//  THEMES & DECORATIONS
-// ============================================================
-const darkThemes=[
-    {cls:'theme-midnight',accent:'#818cf8'},{cls:'theme-ocean',accent:'#38bdf8'},
-    {cls:'theme-forest',accent:'#34d399'},{cls:'theme-crimson',accent:'#fb7185'},
-    {cls:'theme-sunset',accent:'#fb923c'}
+// ════════════════════════════════════════
+//  PALETTES – one per presentation
+// ════════════════════════════════════════
+const palettes=[
+    {id:'indigo',  dark:'theme-midnight', light:'theme-soft',  accent:'#818cf8'},
+    {id:'ocean',   dark:'theme-ocean',    light:'theme-clean', accent:'#38bdf8'},
+    {id:'forest',  dark:'theme-forest',   light:'theme-warm',  accent:'#34d399'},
+    {id:'rose',    dark:'theme-crimson',   light:'theme-soft',  accent:'#fb7185'},
+    {id:'sunset',  dark:'theme-sunset',   light:'theme-warm',  accent:'#fb923c'},
 ];
-const lightThemes=[{cls:'theme-clean',accent:'#6366f1'},{cls:'theme-warm',accent:'#d97706'},{cls:'theme-soft',accent:'#6366f1'}];
-let dkI=0,ltI=0,deI=0;
-function nxtD(){const t=darkThemes[dkI%darkThemes.length];dkI++;return t;}
-function nxtL(){const t=lightThemes[ltI%lightThemes.length];ltI++;return t;}
+let activePalette=palettes[0];
 
-const decos=[
-a=>`<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:.08"></div><div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:.06"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
-a=>`<div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
-a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)"></div><div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:.06"></div>`,
-a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)"></div><div class="absolute top-10 right-10 w-48 h-48 rounded-full blur-3xl" style="background:${a};opacity:.1"></div>`,
-a=>`<div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 20% 50%,${a}10,transparent 50%),radial-gradient(ellipse at 80% 80%,${a}08,transparent 50%)"></div><div class="absolute bottom-0 right-0 w-[500px] h-[300px]" style="background:linear-gradient(135deg,transparent 40%,${a}08)"></div>`
+const decoTemplates=[
+    a=>`<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:.08"></div><div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:.06"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
+    a=>`<div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
+    a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)"></div><div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:.06"></div>`,
+    a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)"></div><div class="absolute top-10 right-10 w-48 h-48 rounded-full blur-3xl" style="background:${a};opacity:.1"></div>`,
+    a=>`<div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 20% 50%,${a}10,transparent 50%),radial-gradient(ellipse at 80% 80%,${a}08,transparent 50%)"></div>`,
 ];
-function getDeco(a){const fn=decos[deI%decos.length];deI++;return fn(a);}
+let decoA=0,decoB=0;
 
-// ============================================================
-//  IMAGE ENGINE (Truly Unique)
-// ============================================================
-const imgStyles=['professional DSLR photograph f2.8 natural soft lighting clinical setting','documentary photography ambient window light candid warm tones','medical textbook illustration clean detailed anatomical precision','editorial magazine photography compassionate shallow DOF','cinematic still frame dramatic side lighting moody atmosphere','modern minimalist photography negative space clean composition','photojournalism style authentic natural colors available light','fine art medical photography conceptual creative composition','macro close up extreme detail studio controlled lighting','wide angle environmental context rich establishing shot'];
-const imgMods=['shot from slight above angle','eye level centered composition','wide establishing panoramic view','intimate over shoulder perspective','extreme close up detail crop','side profile dramatic view','hands and equipment in frame','soft creamy bokeh background','symmetrical centered framing','leading lines dynamic composition','low angle heroic perspective','birds eye view looking down'];
-const fallbackImgs=['https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80'];
-const stockImages=[
-    {url:'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400',cat:'Medical'},
-    {url:'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400',cat:'Medical'},
-    {url:'https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=400',cat:'Team'},
-    {url:'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400',cat:'Care'},
-    {url:'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=400',cat:'Technology'},
-    {url:'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400',cat:'Pharmacy'},
-    {url:'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400',cat:'Hospital'},
-    {url:'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=400',cat:'Equipment'}
+function pickPalette(){activePalette=palettes[Math.floor(Math.random()*palettes.length)]; decoA=Math.floor(Math.random()*decoTemplates.length); decoB=(decoA+1+Math.floor(Math.random()*(decoTemplates.length-1)))%decoTemplates.length;}
+function getDeco(idx){return decoTemplates[idx%2===0?decoA:decoB](activePalette.accent);}
+
+const fallbackImgs=[
+    'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80',
 ];
-const medIcons=['fa-heart-pulse','fa-stethoscope','fa-syringe','fa-pills','fa-hospital','fa-user-doctor','fa-bed-pulse','fa-notes-medical','fa-lungs','fa-brain','fa-bone','fa-dna','fa-microscope','fa-vials','fa-wheelchair','fa-crutch','fa-tooth','fa-eye','fa-hand-holding-medical','fa-kit-medical','fa-thermometer','fa-virus','fa-bacteria','fa-biohazard'];
 
-function getImageUrl(prompt,index){
-    const imgSty=document.getElementById('image-style').value;
-    if(imgSty==='none'||!prompt)return fallbackImgs[index%fallbackImgs.length];
-    const styleMap={photo:imgStyles,illustration:['detailed medical illustration textbook style clean white background','scientific illustration anatomical diagram educational','watercolor medical illustration artistic professional'],abstract:['abstract geometric shapes representing medical concepts','abstract flowing gradients health wellness','minimalist abstract medical concept art']};
-    const styles=styleMap[imgSty]||imgStyles;
-    const style=styles[index%styles.length];
-    const mod=imgMods[(index*7+3)%imgMods.length];
-    const seed=Math.floor(Math.random()*999999)+Date.now()%99999+index*19937;
-    const enhanced=`${prompt.trim()}, ${style}, ${mod}`;
-    return `https://image.pollinations.ai/prompt/${encodeURIComponent(enhanced)}?width=800&height=720&nologo=true&seed=${seed}&t=${Date.now()+index}`;
-}
-
-function buildImgBlock(url,idx){
-    const fb=fallbackImgs[idx%fallbackImgs.length];
-    return `<div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group/img bg-slate-200">
-        <div class="img-loading absolute inset-0 z-0"></div>
-        <img src="${url}" class="w-full h-full object-cover relative z-10" alt="" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.src='${fb}';this.previousElementSibling.style.display='none'">
-        <div class="absolute inset-0 bg-slate-900/70 opacity-0 group-hover/img:opacity-100 flex flex-col items-center justify-center gap-2 transition-all duration-200 z-20 no-print rounded-2xl">
-            <button onclick="this.closest('.group\\/img').querySelector('.iuf').click()" class="bg-white text-slate-900 px-3 py-1.5 rounded-lg font-bold text-[10px] shadow-lg hover:bg-indigo-500 hover:text-white transition-colors"><i class="fas fa-upload mr-1"></i>Datei</button>
-            <button onclick="promptImgUrl(this)" class="bg-white/20 text-white px-3 py-1.5 rounded-lg font-bold text-[10px] hover:bg-white/30 transition-colors"><i class="fas fa-link mr-1"></i>URL</button>
-            <button onclick="regenImage(this)" class="bg-white/20 text-white px-3 py-1.5 rounded-lg font-bold text-[10px] hover:bg-white/30 transition-colors"><i class="fas fa-refresh mr-1"></i>Neu generieren</button>
-        </div>
-        <input type="file" class="iuf hidden" accept="image/*" onchange="const r=new FileReader();r.onload=e=>this.closest('.group\\/img').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0]);">
-    </div>`;
-}
-function promptImgUrl(b){const u=prompt('Bild-URL:');if(u)b.closest('.group\\/img').querySelector('img').src=u.trim();}
-function regenImage(b){const img=b.closest('.group\\/img').querySelector('img');const u=new URL(img.src);u.searchParams.set('seed',Math.floor(Math.random()*999999));u.searchParams.set('t',Date.now());b.closest('.group\\/img').querySelector('.img-loading').style.display='block';img.src=u.toString();}
-
-// ============================================================
-//  1. UI FUNCTIONS
-// ============================================================
+// ════════════════════════════════════════
+//  1. UI
+// ════════════════════════════════════════
 function toggleSidebar(){
     const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');
     isSidebarOpen=!isSidebarOpen;
-    if(isSidebarOpen){sb.classList.remove('sidebar-closed');btn.style.left='380px';ico.classList.replace('fa-chevron-right','fa-chevron-left');}
+    if(isSidebarOpen){sb.classList.remove('sidebar-closed');btn.style.left='400px';ico.classList.replace('fa-chevron-right','fa-chevron-left');}
     else{sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right');}
-    setTimeout(scaleSlides,350);
+    setTimeout(scaleSlideToFit,350);
 }
-function updateSlideLabel(v){document.getElementById('slide-val').innerText=v==0?'KI':v;}
+function updateSlideLabel(v){document.getElementById('slide-val').innerText=v==0?'KI entscheidet':v;}
 function addSpeaker(){const n=prompt("Name des Sprechers:");if(n&&n.trim()){speakers.push(n.trim());renderSpeakers();}}
-function renderSpeakers(){document.getElementById('speaker-list').innerHTML=speakers.map((s,i)=>`<div class="bg-indigo-900/30 border border-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1.5">${s}<button onclick="speakers.splice(${i},1);renderSpeakers()" class="hover:text-red-400 ml-0.5"><i class="fas fa-times text-[8px]"></i></button></div>`).join('');}
-function toggleAdvanced(){const p=document.getElementById('adv-panel'),a=document.getElementById('adv-arrow');p.classList.toggle('adv-expanded');a.classList.toggle('adv-open');}
-function setFontSize(px){document.execCommand('fontSize',false,'1');const c=window.getSelection()?.anchorNode?.parentElement?.closest?.('[contenteditable]');if(!c)return;c.querySelectorAll('font[size="1"]').forEach(el=>{const sp=document.createElement('span');sp.style.fontSize=px+'px';sp.innerHTML=el.innerHTML;el.parentNode.replaceChild(sp,el);});}
+function renderSpeakers(){document.getElementById('speaker-list').innerHTML=speakers.map((s,i)=>`<div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">${s} <button onclick="speakers.splice(${i},1);renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button></div>`).join('');}
 
-// ============================================================
-//  2. SCALING & ZOOM
-// ============================================================
-function scaleSlides(){
-    const c=document.getElementById('workspace-container'),sc=document.getElementById('slide-scaler');
-    const aw=c.clientWidth-60,autoS=Math.min(aw/1280,1),finalS=autoS*manualZoom;
-    sc.style.transform=`scale(${finalS})`;
-    const h=sc.offsetHeight;sc.style.marginBottom=`${h*finalS-h}px`;
-    document.getElementById('zoom-val').textContent=Math.round(finalS*100)+'%';
-}
-function getScale(){const sc=document.getElementById('slide-scaler'),r=sc.getBoundingClientRect();return r.width/sc.offsetWidth;}
-function zoomIn(){manualZoom=Math.min(manualZoom+.1,2);scaleSlides();}
-function zoomOut(){manualZoom=Math.max(manualZoom-.1,.3);scaleSlides();}
-function zoomReset(){manualZoom=1;scaleSlides();}
-window.addEventListener('resize',scaleSlides);
+// ════════════════════════════════════════
+//  2. SCALING
+// ════════════════════════════════════════
+function scaleSlideToFit(){const c=document.getElementById('workspace-container'),sc=document.getElementById('slide-scaler'),aw=c.clientWidth-80,scale=Math.min(aw/1280,1);sc.style.transform=`scale(${scale})`;const h=sc.offsetHeight;sc.style.marginBottom=`${h*scale-h}px`;}
+function getCurrentScale(){const sc=document.getElementById('slide-scaler'),r=sc.getBoundingClientRect();return r.width/sc.offsetWidth;}
+window.addEventListener('resize',()=>{scaleSlideToFit();});
 
-// ============================================================
-//  3. EDITOR TOOLBAR
-// ============================================================
+// ════════════════════════════════════════
+//  3. TOOLBAR
+// ════════════════════════════════════════
 document.addEventListener('focusin',e=>{if(e.target.hasAttribute('contenteditable')){document.getElementById('editor-toolbar').classList.remove('hidden');document.getElementById('editor-toolbar').classList.add('flex');}});
-document.addEventListener('mousedown',e=>{
-    if(!e.target.hasAttribute('contenteditable')&&!e.target.closest('#editor-toolbar')&&!e.target.closest('.tb-select')){
-        document.getElementById('editor-toolbar').classList.add('hidden');
-        document.getElementById('editor-toolbar').classList.remove('flex');
-    }
-});
+document.addEventListener('mousedown',e=>{if(!e.target.hasAttribute('contenteditable')&&!e.target.closest('#editor-toolbar')&&!e.target.closest('.tb-select')){document.getElementById('editor-toolbar').classList.add('hidden');document.getElementById('editor-toolbar').classList.remove('flex');}});
+function setFontSize(px){document.execCommand('fontSize',false,'1');const c=window.getSelection()?.anchorNode?.parentElement?.closest?.('[contenteditable]');if(!c)return;c.querySelectorAll('font[size="1"]').forEach(el=>{const s=document.createElement('span');s.style.fontSize=px+'px';s.innerHTML=el.innerHTML;el.parentNode.replaceChild(s,el);});}
 
-// ============================================================
-//  4. PDF UPLOAD & ANALYSIS
-// ============================================================
-if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-const dz=document.getElementById('pdf-dropzone');
-dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag-over');});
-dz.addEventListener('dragleave',()=>dz.classList.remove('drag-over'));
-dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag-over');if(e.dataTransfer.files[0])handlePDFFile(e.dataTransfer.files[0]);});
-
-async function handlePDFFile(file){
-    if(!file||!file.name.endsWith('.pdf'))return alert('Bitte eine PDF-Datei hochladen.');
-    const idle=document.getElementById('pdf-idle'),load=document.getElementById('pdf-loading'),done=document.getElementById('pdf-done'),fname=document.getElementById('pdf-filename');
-    idle.classList.add('hidden');load.classList.remove('hidden');done.classList.add('hidden');
-    try{
-        const buf=await file.arrayBuffer();
-        const pdf=await pdfjsLib.getDocument(buf).promise;
-        let txt='';
-        for(let i=1;i<=pdf.numPages;i++){const pg=await pdf.getPage(i);const tc=await pg.getTextContent();txt+=tc.items.map(x=>x.str).join(' ')+'\n';}
-        await analyzePDFContent(txt,file.name);
-        load.classList.add('hidden');done.classList.remove('hidden');fname.textContent=file.name+' ✓';
-    }catch(err){console.error(err);alert('Fehler beim Lesen der PDF.');load.classList.add('hidden');idle.classList.remove('hidden');}
+// ════════════════════════════════════════
+//  4. IMAGES – content-aware
+// ════════════════════════════════════════
+function getImageUrl(prompt,headline,index){
+    if(!prompt)return fallbackImgs[index%fallbackImgs.length];
+    const seed=Date.now()+index*9973+Math.floor(Math.random()*100000);
+    // Use headline context to make image more relevant
+    const context=headline?`, related to ${headline.replace(/[^a-zA-Z0-9 ]/g,'').substring(0,40)}`:'';
+    const enhanced=`${prompt.trim()}${context}, professional medical photography, realistic, high detail, soft natural lighting`;
+    return `https://image.pollinations.ai/prompt/${encodeURIComponent(enhanced)}?width=800&height=720&nologo=true&seed=${seed}`;
 }
 
-async function analyzePDFContent(text,filename){
-    const prompt=`Analysiere diesen PDF-Text und extrahiere:
-1. Das Hauptthema / die Aufgabenstellung für eine Präsentation
-2. Das Fallbeispiel mit allen relevanten Patientendaten (Name, Alter, Diagnose, Symptome, Maßnahmen)
-3. Alle wichtigen Anforderungen
-
-PDF-Inhalt (erste 8000 Zeichen):
-"""
-${text.substring(0,8000)}
-"""
-
-Antworte NUR mit JSON:
-{"topic":"Extrahiertes Thema","context":"Vollständiges Fallbeispiel mit allen Details","requirements":"Besondere Anforderungen"}`;
-
-    try{
-        const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
-        const data=await res.json();
-        const j=JSON.parse(data.text.replace(/```json|```/g,'').trim());
-        document.getElementById('topic').value=j.topic||'';
-        document.getElementById('context').value=(j.context||'')+(j.requirements?'\n\nAnforderungen: '+j.requirements:'');
-    }catch(e){console.error(e);document.getElementById('context').value=text.substring(0,3000);}
+function buildImageBlock(imgUrl,idx){
+    const fb=fallbackImgs[idx%fallbackImgs.length];
+    return `<div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group/img bg-slate-200">
+        <div class="img-loading absolute inset-0 z-0"></div>
+        <img src="${imgUrl}" class="w-full h-full object-cover relative z-10" alt="Slide Image" loading="lazy"
+             onload="this.previousElementSibling.style.display='none'"
+             onerror="this.src='${fb}';this.previousElementSibling.style.display='none'">
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover/img:opacity-100 flex flex-col items-center justify-center gap-3 transition-all duration-300 z-20 no-print rounded-2xl">
+            <button onclick="this.closest('.group\\/img').querySelector('.img-upload-file').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs shadow-xl hover:bg-indigo-500 hover:text-white transition-colors"><i class="fas fa-upload mr-1.5"></i>Hochladen</button>
+            <button onclick="promptImageUrl(this)" class="bg-slate-700 text-white px-4 py-2 rounded-lg font-bold text-xs shadow-xl hover:bg-slate-600 transition-colors"><i class="fas fa-link mr-1.5"></i>URL eingeben</button>
+        </div>
+        <input type="file" class="img-upload-file hidden" accept="image/*" onchange="const r=new FileReader();r.onload=e=>this.closest('.group\\/img').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0]);">
+    </div>`;
 }
+function promptImageUrl(btn){const u=prompt('Bild-URL eingeben:');if(u&&u.trim())btn.closest('.group\\/img').querySelector('img').src=u.trim();}
 
-// ============================================================
+// ════════════════════════════════════════
 //  5. AI GENERATION
-// ============================================================
+// ════════════════════════════════════════
 async function generatePresentation(){
-    const topic=document.getElementById('topic').value,context=document.getElementById('context').value;
-    const count=document.getElementById('slide-count').value;
-    const dStyle=document.getElementById('design-style').value;
-    const iStyle=document.getElementById('image-style').value;
-    const density=document.querySelector('input[name="density"]:checked')?.value||'normal';
+    const topic=document.getElementById('topic').value,context=document.getElementById('context').value,count=document.getElementById('slide-count').value;
+    const scriptMode=document.querySelector('input[name="scriptMode"]:checked').value;
     const btn=document.getElementById('generate-btn');
-
     if(!topic&&!context)return alert("Bitte Thema oder Kontext eingeben!");
     btn.innerHTML=`<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;btn.disabled=true;
 
-    const cntRule=count>0?`Erstelle genau ${count} Folien.`:'Erstelle 8-12 Folien.';
-    const densMap={compact:'Verwende viel Inhalt pro Folie, kompakte Darstellung.',normal:'Ausgewogene Menge an Inhalt.',spacious:'Wenig Text pro Folie, großzügige Darstellung.'};
-    const styleMap={medical:'Medizinisch-professioneller Ton.',minimal:'Modern und minimalistisch.',creative:'Kreativ und visuell ansprechend.',dark:'Elegant und dunkel.'};
+    const countRule=count>0?`Erstelle genau ${count} Folien (inklusive Titel, Quellen und Outro).`:'Erstelle so viele Folien wie nötig (ca. 8-12).';
 
     const finalPrompt=`
 Erstelle eine professionelle medizinische Präsentation.
 Thema: "${topic}"
-Kontext: "${context}"
-Sprecher: ${speakers.length>0?speakers.join(', '):'Projekt-Team'}
-${cntRule}
-Stil: ${styleMap[dStyle]||''} ${densMap[density]||''}
-${iStyle==='none'?'Keine Bilder verwenden (kein split-Layout).':''}
+Kontext/Fallbeispiel: "${context}"
+Sprecher-Team: ${speakers.length>0?speakers.join(', '):'Projekt-Team'}
+${countRule}
 
-LAYOUT-TYPEN – NUTZE ABWECHSLUNG:
-- "title": headline, subtitle, speaker
-- "split": headline, contentHtml (HTML), imagePrompt (EINZIGARTIG englisch!), speaker
-- "grid": headline, items [{title,value}] (4 items), speaker
-- "stats": headline, stats [{value,label}] (2-4), speaker
-- "timeline": headline, steps [{title,description}] (3-5), speaker
-- "quote": quote, author, speaker
-- "sources": textSources [], imageSources []
-- "outro": headline, subtitle
+LAYOUT-TYPEN (nutze Abwechslung!):
+- "title": Titelfolie. Felder: headline, subtitle, speaker
+- "split": Text links, Bild rechts. Felder: headline, contentHtml (HTML mit <ul><li>), imagePrompt (englisch!), speaker
+- "grid": 2×2 Karten. Felder: headline, items [{title,value}], speaker
+- "stats": 2-4 große Zahlen. Felder: headline, stats [{value,label}], speaker
+- "timeline": 3-5 Schritte. Felder: headline, steps [{title,description}], speaker
+- "quote": Zitat. Felder: quote, author, speaker
+- "sources": Quellen. Felder: textSources [], imageSources []
+- "outro": Abschluss. Felder: headline, subtitle
 
 REGELN:
-1. Beginne mit title, ende mit sources + outro
-2. VERSCHIEDENE Layouts! Nicht immer dasselbe!
-3. JEDER imagePrompt KOMPLETT ANDERS – verschiedene Szenen, Perspektiven, Objekte
-4. contentHtml: <ul><li>, <strong>, <em>
+1. Beginne IMMER mit "title", ende mit "sources" dann "outro"
+2. VERSCHIEDENE Layout-Typen nutzen!
+3. Jeder imagePrompt muss EINZIGARTIG, auf ENGLISCH und DIREKT RELEVANT zum Folieninhalt sein. Beschreibe die exakte medizinische Szene, die zum Text passt (z.B. wenn die Folie über Wundversorgung handelt: "nurse carefully cleaning patient wound with sterile gauze in bright hospital room")
+4. contentHtml: formatiertes HTML (<ul><li>, <strong>, <em>)
 5. Texte Deutsch, imagePrompts Englisch
 6. stats.value kurz: "85%", "3×", "24h"
 
 SPRECHER-SKRIPT pro Folie:
-- "notes": 3-5 deutsche Stichpunkte (• Aufzählung)
-- "script": Vollständiger deutscher Redetext (3-6 natürliche Sätze)
+- "notes": 3-5 Stichpunkte auf Deutsch (• als Zeichen)
+- "script": Vollständiger Redetext auf Deutsch (3-6 Sätze)
 
 ANTWORTE NUR MIT JSON:
-{"slides":[
-{"type":"title","headline":"...","subtitle":"...","speaker":"...","notes":"• ...","script":"..."},
-{"type":"split","headline":"...","contentHtml":"<ul><li>...</li></ul>","imagePrompt":"unique english scene description","speaker":"...","notes":"...","script":"..."},
-{"type":"grid","headline":"...","items":[{"title":"...","value":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"stats","headline":"...","stats":[{"value":"85%","label":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"timeline","headline":"...","steps":[{"title":"...","description":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"quote","quote":"...","author":"...","speaker":"...","notes":"...","script":"..."},
-{"type":"sources","textSources":["..."],"imageSources":["KI (Pollinations AI)"],"notes":"...","script":"..."},
-{"type":"outro","headline":"Vielen Dank","subtitle":"Fragen?","notes":"...","script":"..."}
-]}`;
+{
+  "slides": [
+    { "type":"title","headline":"...","subtitle":"...","speaker":"...","notes":"• ...","script":"..." },
+    { "type":"split","headline":"...","contentHtml":"<ul><li>...</li></ul>","imagePrompt":"detailed english scene description directly matching slide content","speaker":"...","notes":"...","script":"..." },
+    { "type":"grid","headline":"...","items":[{"title":"...","value":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"stats","headline":"...","stats":[{"value":"85%","label":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"timeline","headline":"...","steps":[{"title":"...","description":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"quote","quote":"...","author":"...","speaker":"...","notes":"...","script":"..." },
+    { "type":"sources","textSources":["..."],"imageSources":["KI-generiert (Pollinations AI)"],"notes":"...","script":"..." },
+    { "type":"outro","headline":"Vielen Dank für Ihre Aufmerksamkeit","subtitle":"Haben Sie Fragen?","notes":"...","script":"..." }
+  ]
+}`;
 
     try{
         const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:finalPrompt})});
         const data=await res.json();
-        const parsed=JSON.parse(data.text.replace(/```json|```/g,'').trim());
+        const jsonStr=data.text.replace(/```json|```/g,'').trim();
+        const parsed=JSON.parse(jsonStr);
+        currentSlidesData=parsed.slides;
+        pickPalette();
         renderPresentation(parsed.slides);
+        saveHistory(topic,context,parsed.slides);
         if(isSidebarOpen)toggleSidebar();
-    }catch(err){console.error(err);alert("KI-Fehler. Bitte erneut versuchen.");}
-    finally{btn.innerHTML=`<i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren`;btn.disabled=false;}
+    }catch(err){
+        console.error(err);
+        alert("Fehler bei der KI-Generierung. Bitte erneut versuchen.");
+    }finally{
+        btn.innerHTML=`<i class="fas fa-wand-magic-sparkles"></i> Generieren`;
+        btn.disabled=false;
+    }
 }
 
-// ============================================================
-//  6. RENDER ENGINE
-// ============================================================
+// ════════════════════════════════════════
+//  6. RENDER ENGINE – consistent palette
+// ════════════════════════════════════════
 function renderPresentation(slides){
-    const sc=document.getElementById('slide-scaler');sc.innerHTML='';
-    dkI=0;ltI=0;deI=0;slideScripts=[];
-    let titleTheme=null;const total=slides.length;
+    const scaler=document.getElementById('slide-scaler');
+    scaler.innerHTML='';
+    slideScripts=[];
+    const total=slides.length;
+    const ac=activePalette.accent;
+    let lightToggle=0;
 
     slides.forEach((s,i)=>{
-        slideScripts.push({n:i+1,h:s.headline||s.quote||s.type,sp:s.speaker||'Alle',notes:s.notes||'',script:s.script||'',type:s.type});
-        const sl=document.createElement('div');
-        sl.className='presentation-slide slide-animate';sl.style.animationDelay=`${i*.07}s`;sl.style.opacity='0';sl.dataset.idx=i;
-        let h='';
-        const num=`<div class="slide-number absolute bottom-3 left-5 text-[9px] font-bold uppercase tracking-[.2em] opacity-20 z-30 no-print">${i+1}/${total}</div>`;
-        const mgmt=buildSlideMgmt();
-        const tools=buildSlideTools();
-        const snaps=`<div class="snap-guide snap-guide-v"></div><div class="snap-guide snap-guide-h"></div>`;
+        slideScripts.push({slideNumber:i+1,headline:s.headline||s.quote||s.type,speaker:s.speaker||'Alle',notes:s.notes||'• Keine Notizen',script:s.script||'Kein Skript.',type:s.type});
 
+        const slide=document.createElement('div');
+        slide.className='presentation-slide slide-animate';
+        slide.style.animationDelay=`${i*0.08}s`;slide.style.opacity='0';
+        slide.dataset.slideIndex=i;
+
+        let html='';
+        const num=`<div class="slide-number absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.2em] opacity-25 z-30 no-print">${i+1} / ${total}</div>`;
+        const tools=buildSlideTools();
+
+        function applyDark(){slide.classList.add(activePalette.dark,'dark-slide');}
+        function applyLight(){slide.classList.add(activePalette.light);}
+
+        // ── TITLE ──
         if(s.type==='title'){
-            const t=nxtD();titleTheme=t;sl.classList.add(t.cls);
-            h=`${getDeco(t.accent)}<div class="h-full flex flex-col justify-center items-center text-center px-20 py-16 relative z-10">
-                <div class="absolute top-10 left-12 uppercase tracking-[.3em] text-[10px] font-bold opacity-35">Klinische Fallstudie</div>
-                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-[1.08] mb-6 max-w-4xl">${s.headline}</h1>
-                <div class="w-24 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
-                <p contenteditable="true" class="text-2xl font-light opacity-55 max-w-2xl">${s.subtitle}</p>
-                <div class="absolute bottom-10 right-12 glass-card px-5 py-2"><span class="text-[10px] uppercase tracking-widest font-bold opacity-50">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span></div>
-            </div>`;
-        }else if(s.type==='split'){
-            const t=nxtL();sl.classList.add(t.cls);const url=getImageUrl(s.imagePrompt,i);
-            h=`<div class="h-full flex"><div class="w-[55%] p-14 flex flex-col justify-center">
-                <div class="w-14 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
-                <h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8">${s.headline}</h2>
-                <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60">${s.contentHtml}</div>
-                <div class="mt-auto pt-6 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-25">🎤 ${s.speaker}</div>
-            </div><div class="w-[45%] p-6 flex items-center">${buildImgBlock(url,i)}</div></div>`;
-        }else if(s.type==='grid'){
-            const dk=i%2===0;const t=dk?nxtD():nxtL();sl.classList.add(t.cls);const items=(s.items||[]).slice(0,4);
-            const cards=items.map((it,x)=>`<div class="${dk?'glass-card':'bg-white rounded-2xl shadow-lg border border-slate-100'} p-7 flex flex-col justify-center hover:${dk?'border-white/20':'shadow-xl'} transition-all">
-                <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(x+1).padStart(2,'0')}</div>
-                <h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-45 mb-2">${it.title}</h3>
-                <p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p></div>`).join('');
-            h=`${dk?getDeco(t.accent):''}<div class="h-full p-14 flex flex-col relative z-10">
-                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-10 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
-                <div class="grid grid-cols-2 gap-5 flex-1">${cards}</div>
-                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-25">🎤 ${s.speaker}</div></div>`;
-        }else if(s.type==='stats'){
-            const t=nxtD();sl.classList.add(t.cls);const stats=(s.stats||[]).slice(0,4);
-            h=`${getDeco(t.accent)}<div class="h-full p-14 flex flex-col relative z-10">
-                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-6 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
-                <div class="flex-1 grid gap-6 items-center" style="grid-template-columns:repeat(${Math.min(stats.length,4)},1fr)">${stats.map(st=>`<div class="text-center glass-card p-8 py-10"><div contenteditable="true" class="text-6xl font-black mb-3" style="color:${t.accent}">${st.value}</div><div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-45">${st.label}</div></div>`).join('')}</div>
-                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-25">🎤 ${s.speaker}</div></div>`;
-        }else if(s.type==='timeline'){
-            const t=nxtL();sl.classList.add(t.cls);const steps=(s.steps||[]).slice(0,5);
-            h=`<div class="h-full p-14 flex flex-col">
-                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-14 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
-                <div class="flex-1 flex items-center"><div class="flex items-start w-full relative">
-                    <div class="absolute top-7 left-8 right-8 h-[3px] rounded-full opacity-15" style="background:${t.accent}"></div>
-                    ${steps.map((st,x)=>`<div class="flex-1 flex flex-col items-center text-center px-3 relative z-10">
-                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg" style="background:${t.accent}">${x+1}</div>
-                        <h3 contenteditable="true" class="text-base font-black mb-2">${st.title}</h3>
-                        <p contenteditable="true" class="text-sm opacity-50 leading-relaxed">${st.description}</p></div>`).join('')}
-                </div></div>
-                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-25">🎤 ${s.speaker}</div></div>`;
-        }else if(s.type==='quote'){
-            const t=nxtD();sl.classList.add(t.cls);
-            h=`${getDeco(t.accent)}<div class="h-full flex flex-col justify-center items-center text-center px-24 relative z-10">
-                <div class="text-[7rem] leading-none opacity-12 mb-2" style="color:${t.accent}"><i class="fas fa-quote-left"></i></div>
+            applyDark();
+            html=`${getDeco(0)}
+            <div class="h-full flex flex-col justify-center items-center text-center px-20 py-16 relative z-10">
+                <div class="absolute top-10 left-12 uppercase tracking-[.3em] text-[10px] font-bold opacity-40">Klinische Fallstudie</div>
+                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-[1.08] mb-6 max-w-4xl drop-shadow-lg">${s.headline}</h1>
+                <div class="w-24 h-1.5 rounded-full mb-6" style="background:${ac}"></div>
+                <p contenteditable="true" class="text-2xl font-light opacity-60 max-w-2xl">${s.subtitle}</p>
+                <div class="absolute bottom-10 right-12 glass-card px-5 py-2.5"><span class="text-[10px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span></div>
+            </div>${tools}${num}`;
+        }
+        // ── SPLIT ──
+        else if(s.type==='split'){
+            applyLight();
+            const imgUrl=getImageUrl(s.imagePrompt,s.headline,i);
+            html=`<div class="h-full flex">
+                <div class="w-[55%] p-14 flex flex-col justify-center">
+                    <div class="w-14 h-1.5 rounded-full mb-6" style="background:${ac}"></div>
+                    <h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8">${s.headline}</h2>
+                    <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60 space-y-1">${s.contentHtml}</div>
+                    <div class="mt-auto pt-6 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+                </div>
+                <div class="w-[45%] p-6 flex items-center">${buildImageBlock(imgUrl,i)}</div>
+            </div>${tools}${num}`;
+        }
+        // ── GRID ──
+        else if(s.type==='grid'){
+            const useDark=lightToggle%2===0;lightToggle++;
+            if(useDark)applyDark();else applyLight();
+            const items=(s.items||[]).slice(0,4);
+            const cardClass=useDark?'glass-card':'bg-white rounded-2xl shadow-lg border border-slate-100';
+            html=`${useDark?getDeco(1):''}
+            <div class="h-full p-14 flex flex-col relative z-10">
+                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-10 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>
+                <div class="grid grid-cols-2 gap-5 flex-1">${items.map((it,idx)=>`
+                    <div class="${cardClass} p-7 flex flex-col justify-center">
+                        <div class="text-3xl font-black mb-2" style="color:${ac}">${String(idx+1).padStart(2,'0')}</div>
+                        <h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">${it.title}</h3>
+                        <p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p>
+                    </div>`).join('')}</div>
+                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ── STATS ──
+        else if(s.type==='stats'){
+            applyDark();
+            const stats=(s.stats||[]).slice(0,4);const cols=Math.min(stats.length,4);
+            html=`${getDeco(2)}
+            <div class="h-full p-14 flex flex-col relative z-10">
+                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-6 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>
+                <div class="flex-1 grid gap-6 items-center" style="grid-template-columns:repeat(${cols},1fr)">${stats.map(st=>`
+                    <div class="text-center glass-card p-8 py-10">
+                        <div contenteditable="true" class="text-6xl font-black mb-3 tracking-tight" style="color:${ac}">${st.value}</div>
+                        <div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div>
+                    </div>`).join('')}</div>
+                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ── TIMELINE ──
+        else if(s.type==='timeline'){
+            applyLight();
+            const steps=(s.steps||[]).slice(0,5);
+            html=`<div class="h-full p-14 flex flex-col">
+                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-14 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>
+                <div class="flex-1 flex items-center">
+                    <div class="flex items-start w-full relative">
+                        <div class="absolute top-7 left-8 right-8 h-[3px] rounded-full opacity-15" style="background:${ac}"></div>
+                        ${steps.map((st,idx)=>`
+                        <div class="flex-1 flex flex-col items-center text-center px-3 relative z-10">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${ac}">${idx+1}</div>
+                            <h3 contenteditable="true" class="text-base font-black mb-2 leading-tight">${st.title}</h3>
+                            <p contenteditable="true" class="text-sm opacity-55 leading-relaxed">${st.description}</p>
+                        </div>`).join('')}
+                    </div>
+                </div>
+                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ── QUOTE ──
+        else if(s.type==='quote'){
+            applyDark();
+            html=`${getDeco(3)}
+            <div class="h-full flex flex-col justify-center items-center text-center px-24 relative z-10">
+                <div class="text-[7rem] leading-none opacity-15 mb-2" style="color:${ac}"><i class="fas fa-quote-left"></i></div>
                 <blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.5rem] font-bold leading-snug mb-8 max-w-3xl italic">${s.quote}</blockquote>
-                <div class="w-16 h-[3px] rounded-full mb-4" style="background:${t.accent}"></div>
-                <cite contenteditable="true" class="text-lg font-bold not-italic opacity-45">— ${s.author}</cite>
-                <div class="absolute bottom-10 text-[10px] font-bold uppercase tracking-widest opacity-25">🎤 ${s.speaker}</div></div>`;
-        }else if(s.type==='sources'){
-            sl.classList.add('theme-slate');
-            h=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>
+                <div class="w-16 h-[3px] rounded-full mb-4" style="background:${ac}"></div>
+                <cite contenteditable="true" class="text-lg font-bold not-italic opacity-50">— ${s.author}</cite>
+                <div class="absolute bottom-10 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ── SOURCES ──
+        else if(s.type==='sources'){
+            slide.classList.add('theme-slate','dark-slide');
+            html=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>
             <div class="h-full p-16 flex flex-col relative z-10">
-                <h2 contenteditable="true" class="text-5xl font-black mb-14 flex items-center gap-4"><span class="w-2 h-12 rounded-full bg-indigo-500 inline-block"></span>Quellenverzeichnis</h2>
+                <h2 contenteditable="true" class="text-5xl font-black mb-14 flex items-center gap-4"><span class="w-2 h-12 rounded-full inline-block" style="background:${ac}"></span>Quellenverzeichnis</h2>
                 <div class="flex gap-8 flex-1">
-                    <div class="w-1/2 glass-card p-8"><h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-book-medical"></i>Textquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-55 space-y-3">${(s.textSources||['Eigene Daten']).map(x=>`<li>${x}</li>`).join('')}</ul></div>
-                    <div class="w-1/2 glass-card p-8"><h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-camera"></i>Bildmaterial</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-55 space-y-3">${(s.imageSources||['KI (Pollinations AI)']).map(x=>`<li>${x}</li>`).join('')}</ul></div>
-                </div></div>`;
-        }else if(s.type==='outro'){
-            const t=titleTheme||darkThemes[0];sl.classList.add(t.cls);
-            h=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${t.accent};opacity:.12"></div>
-            <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${t.accent};opacity:.08"></div>
+                    <div class="w-1/2 glass-card p-8"><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-book-medical"></i> Textquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.textSources||['Eigene Daten']).map(src=>`<li>${src}</li>`).join('')}</ul></div>
+                    <div class="w-1/2 glass-card p-8"><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-camera"></i> Bildmaterial</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.imageSources||['KI-generiert (Pollinations AI)']).map(src=>`<li>${src}</li>`).join('')}</ul></div>
+                </div>
+            </div>${tools}${num}`;
+        }
+        // ── OUTRO ──
+        else if(s.type==='outro'){
+            applyDark();
+            html=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${ac};opacity:.12"></div>
+            <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${ac};opacity:.08"></div>
             <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px"></div>
             <div class="h-full flex flex-col justify-center items-center text-center px-20 relative z-10">
-                <i class="fas fa-hands-clapping text-6xl mb-8" style="color:${t.accent}"></i>
-                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6">${s.headline||'Vielen Dank'}</h1>
-                <p contenteditable="true" class="text-3xl font-light opacity-45">${s.subtitle||'Fragen?'}</p></div>`;
-        }else{
-            const t=nxtL();sl.classList.add(t.cls);
-            h=`<div class="h-full p-16 flex flex-col justify-center items-center text-center"><h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2><p contenteditable="true" class="text-xl opacity-55">${s.subtitle||s.contentHtml||''}</p></div>`;
+                <i class="fas fa-hands-clapping text-6xl mb-8" style="color:${ac}"></i>
+                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6">${s.headline||'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
+                <p contenteditable="true" class="text-3xl font-light opacity-50">${s.subtitle||'Haben Sie Fragen?'}</p>
+            </div>${tools}${num}`;
         }
-        sl.innerHTML=h+tools+mgmt+num+snaps;
-        sc.appendChild(sl);
+        else{
+            applyLight();
+            html=`<div class="h-full p-16 flex flex-col justify-center items-center text-center">
+                <h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2>
+                <p contenteditable="true" class="text-xl opacity-60">${s.subtitle||s.contentHtml||''}</p>
+            </div>${tools}${num}`;
+        }
+
+        slide.innerHTML=html;
+        scaler.appendChild(slide);
     });
 
+    document.getElementById('present-btn').classList.remove('hidden');
+    document.getElementById('present-btn').classList.add('flex');
     document.getElementById('script-toggle-btn').classList.remove('hidden');
     document.getElementById('script-toggle-btn').classList.add('flex');
     renderScriptPanel();
-    setTimeout(scaleSlides,200);
+    setTimeout(scaleSlideToFit,200);
 }
 
-// ============================================================
-//  7. SLIDE TOOLS (Add Elements + Background)
-// ============================================================
+// ── Slide tools ──
 function buildSlideTools(){
-    const iconGrid=medIcons.map(ic=>`<button class="icon-pick-btn" onclick="insertIcon(this,'${ic}')"><i class="fas ${ic}"></i></button>`).join('');
-    const imgGrid=stockImages.map(im=>`<img src="${im.url}" class="stock-thumb" onclick="insertStockImage(this,'${im.url.replace('w=400','w=800')}')" alt="${im.cat}">`).join('');
-    return `<div class="slide-tools absolute top-3 right-3 z-30 no-print flex gap-1.5">
+    return `<div class="slide-tools absolute top-3 right-3 z-30 no-print flex gap-2">
         <div class="relative">
-            <button onclick="toggleAddPanel(this)" class="w-8 h-8 bg-indigo-600/80 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-indigo-500 text-[11px]"><i class="fas fa-plus"></i></button>
-            <div class="add-panel">
-                <div class="flex gap-1 p-1.5 border-b border-white/[.06]">
-                    <button class="add-panel-tab apt-active" onclick="switchAddTab(this,'apt-elem')">Elemente</button>
-                    <button class="add-panel-tab" onclick="switchAddTab(this,'apt-icons')">Icons</button>
-                    <button class="add-panel-tab" onclick="switchAddTab(this,'apt-imgs')">Bilder</button>
-                </div>
-                <div class="add-panel-section aps-active" data-tab="apt-elem">
-                    <button class="add-item" onclick="addText(this)"><i class="fas fa-font w-4 text-indigo-400"></i>Textfeld</button>
-                    <button class="add-item" onclick="addShape(this,'rect')"><i class="far fa-square w-4 text-blue-400"></i>Rechteck</button>
-                    <button class="add-item" onclick="addShape(this,'circle')"><i class="far fa-circle w-4 text-emerald-400"></i>Kreis</button>
-                    <button class="add-item" onclick="addLine(this)"><i class="fas fa-minus w-4 text-amber-400"></i>Trennlinie</button>
-                    <button class="add-item" onclick="addArrow(this)"><i class="fas fa-arrow-right w-4 text-rose-400"></i>Pfeil</button>
-                    <button class="add-item" onclick="addImgEl(this)"><i class="fas fa-image w-4 text-violet-400"></i>Bild einfügen</button>
-                </div>
-                <div class="add-panel-section" data-tab="apt-icons"><div class="icon-grid-pick">${iconGrid}</div></div>
-                <div class="add-panel-section" data-tab="apt-imgs"><div class="stock-grid">${imgGrid}</div></div>
+            <button onclick="toggleAddMenu(this)" class="w-9 h-9 bg-indigo-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-indigo-500 text-xs"><i class="fas fa-plus"></i></button>
+            <div class="add-menu-dropdown absolute right-0 top-11 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-1.5 min-w-[170px] z-50">
+                <button onclick="addTextBox(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-font w-4 text-indigo-400"></i>Text</button>
+                <button onclick="addShape(this,'rect')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="far fa-square w-4 text-blue-400"></i>Rechteck</button>
+                <button onclick="addShape(this,'circle')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="far fa-circle w-4 text-emerald-400"></i>Kreis</button>
+                <button onclick="addLine(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-minus w-4 text-amber-400"></i>Linie</button>
+                <div class="border-t border-slate-700 my-1"></div>
+                <button onclick="addImageElement(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-image w-4 text-rose-400"></i>Bild einfügen</button>
             </div>
         </div>
-        <button onclick="changeSlideBg(this)" class="w-8 h-8 bg-white/[.08] backdrop-blur rounded-lg text-slate-300 shadow-lg flex items-center justify-center hover:bg-white/[.15] text-[11px]" title="Hintergrund"><i class="fas fa-palette"></i></button>
+        <button onclick="changeSlideBackground(this)" class="w-9 h-9 bg-slate-700/90 backdrop-blur rounded-lg text-slate-300 shadow-lg flex items-center justify-center hover:bg-slate-600 text-xs" title="Hintergrund"><i class="fas fa-palette"></i></button>
     </div>`;
 }
-function buildSlideMgmt(){
-    return `<div class="slide-mgmt absolute top-3 left-3 z-30 no-print flex gap-1">
-        <button onclick="moveSlide(this,-1)" class="w-7 h-7 bg-white/[.08] backdrop-blur rounded-lg text-slate-300 flex items-center justify-center hover:bg-white/[.15] text-[9px]" title="Nach oben"><i class="fas fa-chevron-up"></i></button>
-        <button onclick="moveSlide(this,1)" class="w-7 h-7 bg-white/[.08] backdrop-blur rounded-lg text-slate-300 flex items-center justify-center hover:bg-white/[.15] text-[9px]" title="Nach unten"><i class="fas fa-chevron-down"></i></button>
-        <button onclick="dupSlide(this)" class="w-7 h-7 bg-white/[.08] backdrop-blur rounded-lg text-slate-300 flex items-center justify-center hover:bg-white/[.15] text-[9px]" title="Duplizieren"><i class="fas fa-copy"></i></button>
-        <button onclick="delSlide(this)" class="w-7 h-7 bg-red-600/60 backdrop-blur rounded-lg text-white flex items-center justify-center hover:bg-red-500 text-[9px]" title="Löschen"><i class="fas fa-trash"></i></button>
-    </div>`;
-}
-function toggleAddPanel(btn){const p=btn.nextElementSibling;document.querySelectorAll('.add-panel.open').forEach(m=>{if(m!==p)m.classList.remove('open');});p.classList.toggle('open');}
-function switchAddTab(btn,tab){const panel=btn.closest('.add-panel');panel.querySelectorAll('.add-panel-tab').forEach(t=>t.classList.remove('apt-active'));btn.classList.add('apt-active');panel.querySelectorAll('.add-panel-section').forEach(s=>{s.classList.toggle('aps-active',s.dataset.tab===tab);});}
-document.addEventListener('click',e=>{if(!e.target.closest('.slide-tools'))document.querySelectorAll('.add-panel.open').forEach(m=>m.classList.remove('open'));});
+function toggleAddMenu(btn){const m=btn.nextElementSibling;document.querySelectorAll('.add-menu-dropdown.open').forEach(x=>{if(x!==m)x.classList.remove('open');});m.classList.toggle('open');}
+document.addEventListener('click',e=>{if(!e.target.closest('.slide-tools'))document.querySelectorAll('.add-menu-dropdown.open').forEach(m=>m.classList.remove('open'));});
 
-// Slide management
-function moveSlide(btn,dir){const sl=btn.closest('.presentation-slide'),sib=dir<0?sl.previousElementSibling:sl.nextElementSibling;if(!sib)return;if(dir<0)sl.parentElement.insertBefore(sl,sib);else sl.parentElement.insertBefore(sib,sl);updateNums();}
-function dupSlide(btn){const sl=btn.closest('.presentation-slide'),cl=sl.cloneNode(true);sl.parentElement.insertBefore(cl,sl.nextSibling);updateNums();}
-function delSlide(btn){const slides=document.querySelectorAll('#slide-scaler .presentation-slide');if(slides.length<=1)return alert('Mindestens eine Folie erforderlich.');if(confirm('Folie löschen?')){btn.closest('.presentation-slide').remove();updateNums();}}
-function updateNums(){const all=document.querySelectorAll('#slide-scaler .presentation-slide');all.forEach((s,i)=>{const n=s.querySelector('.slide-number');if(n)n.textContent=`${i+1}/${all.length}`;});}
-
-// Background
-function changeSlideBg(btn){
-    const sl=btn.closest('.presentation-slide');sl.querySelectorAll('.bg-pick').forEach(p=>p.remove());
-    const pk=document.createElement('div');pk.className='bg-pick absolute top-14 right-3 bg-[#141825] border border-white/[.1] rounded-xl shadow-2xl p-3 z-50 no-print';pk.style.width='210px';
-    pk.innerHTML=`<div class="text-[9px] font-bold uppercase tracking-widest text-slate-500 mb-2">Farben</div>
-        <div class="grid grid-cols-5 gap-1.5 mb-2">${['#ffffff','#f8fafc','#fef3c7','#ecfdf5','#eef2ff','#0f172a','#1e1b4b','#0c4a6e','#064e3b','#881337'].map(c=>`<button onclick="applyBg(this,'${c}')" class="w-7 h-7 rounded-lg border border-white/10 hover:scale-110 transition-transform" style="background:${c}"></button>`).join('')}</div>
-        <div class="flex gap-2 items-center mb-2"><label class="flex items-center gap-1.5 text-[9px] text-slate-400 font-bold"><input type="color" value="#ffffff" onchange="applyBg(this,this.value)" class="w-5 h-5 rounded cursor-pointer bg-transparent border-none">Custom</label><button onclick="this.closest('.bg-pick').remove()" class="ml-auto text-slate-500 hover:text-white text-[10px]"><i class="fas fa-times"></i></button></div>
-        <div class="text-[9px] font-bold uppercase tracking-widest text-slate-500 mb-2">Gradients</div>
-        <div class="grid grid-cols-4 gap-1.5">${['linear-gradient(135deg,#667eea,#764ba2)','linear-gradient(135deg,#f093fb,#f5576c)','linear-gradient(135deg,#4facfe,#00f2fe)','linear-gradient(135deg,#43e97b,#38f9d7)','linear-gradient(135deg,#0c0a1d,#1e1b4b)','linear-gradient(135deg,#041525,#075985)','linear-gradient(135deg,#021a13,#047857)','linear-gradient(135deg,#1a0610,#881337)'].map(g=>`<button onclick="applyGrad(this,'${g}')" class="w-full h-7 rounded-lg border border-white/10 hover:scale-110 transition-transform" style="background:${g}"></button>`).join('')}</div>`;
-    sl.appendChild(pk);
-}
-function applyBg(b,c){const sl=b.closest('.presentation-slide');sl.style.background=c;const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),bl=parseInt(c.slice(5,7),16);sl.style.color=(r*299+g*587+bl*114)/1000>128?'#0f172a':'#fff';b.closest('.bg-pick').remove();}
-function applyGrad(b,g){const sl=b.closest('.presentation-slide');sl.style.background=g;sl.style.color='#fff';b.closest('.bg-pick').remove();}
-
-// ============================================================
-//  8. ELEMENT SYSTEM (Click-to-Select, Reliable Drag)
-// ============================================================
-function selectEl(el){
-    if(selectedEl===el)return;
-    deselectAll();
-    selectedEl=el;
-    el.classList.add('el-selected');
-}
-function deselectAll(){
-    if(selectedEl){selectedEl.classList.remove('el-selected');selectedEl=null;}
-    hideSnaps();
-}
-function getSl(el){return el.closest('.presentation-slide');}
-
-// ── Global Mouse Handling ──
-document.addEventListener('mousedown',e=>{
-    // Ignore UI areas
-    if(e.target.closest('#editor-toolbar')||e.target.closest('#script-panel')||e.target.closest('#sidebar')||e.target.closest('nav')||e.target.closest('.zoom-bar')||e.target.closest('.add-panel')||e.target.closest('.bg-pick')||e.target.closest('.slide-tools')||e.target.closest('.slide-mgmt'))return;
-
-    const handle=e.target.closest('.el-handle');
-    const toolbar=e.target.closest('.el-toolbar');
-    const element=e.target.closest('.added-element');
-    const slide=e.target.closest('.presentation-slide');
-
-    // 1) Resize handle
-    if(handle&&element){e.preventDefault();e.stopPropagation();selectEl(element);startResize(e,element,handle.dataset.dir);return;}
-    // 2) Toolbar button
-    if(toolbar)return;
-    // 3) Contenteditable inside element
-    if(e.target.hasAttribute('contenteditable')&&element){selectEl(element);return;}
-    // 4) Element body → select + drag
-    if(element&&!e.target.hasAttribute('contenteditable')){e.preventDefault();selectEl(element);startDrag(e,element);return;}
-    // 5) Click on slide background
-    if(slide){deselectAll();}
-});
-
-document.addEventListener('mousemove',e=>{
-    if(!dragState||!selectedEl)return;
-    const scale=getScale();
-    if(dragState==='drag'){
-        const dx=(e.clientX-dragData.sx)/scale, dy=(e.clientY-dragData.sy)/scale;
-        let newL=dragData.ox+dx, newT=dragData.oy+dy;
-        // Snap guides
-        const sl=getSl(selectedEl);
-        const elW=selectedEl.offsetWidth, elH=selectedEl.offsetHeight;
-        const cx=newL+elW/2, cy=newT+elH/2;
-        const snapTol=8;
-        if(Math.abs(cx-640)<snapTol){newL=640-elW/2;showSnap(sl,'v');}else hideSnap(sl,'v');
-        if(Math.abs(cy-360)<snapTol){newT=360-elH/2;showSnap(sl,'h');}else hideSnap(sl,'h');
-        selectedEl.style.left=Math.round(newL)+'px';selectedEl.style.top=Math.round(newT)+'px';
-    }else if(dragState==='resize'){
-        const dx=(e.clientX-dragData.sx)/scale, dy=(e.clientY-dragData.sy)/scale;
-        const d=dragData.dir;
-        let w=dragData.ow, h=dragData.oh, l=dragData.ox, t=dragData.oy;
-        if(d.includes('e'))w=Math.max(30,dragData.ow+dx);
-        if(d.includes('s'))h=Math.max(10,dragData.oh+dy);
-        if(d.includes('w')){w=Math.max(30,dragData.ow-dx);l=dragData.ox+dx;}
-        if(d.includes('n')){h=Math.max(10,dragData.oh-dy);t=dragData.oy+dy;}
-        selectedEl.style.width=Math.round(w)+'px';selectedEl.style.height=Math.round(h)+'px';
-        selectedEl.style.left=Math.round(l)+'px';selectedEl.style.top=Math.round(t)+'px';
-    }
-});
-
-document.addEventListener('mouseup',()=>{
-    if(dragState){dragState=null;dragData={};document.body.style.cursor='';hideSnaps();}
-});
-
-function startDrag(e,el){
-    dragState='drag';document.body.style.cursor='grabbing';
-    dragData={sx:e.clientX,sy:e.clientY,ox:parseInt(el.style.left)||0,oy:parseInt(el.style.top)||0};
-}
-function startResize(e,el,dir){
-    dragState='resize';document.body.style.cursor=dir.includes('e')&&dir.includes('s')?'nwse-resize':'nesw-resize';
-    dragData={sx:e.clientX,sy:e.clientY,ow:el.offsetWidth,oh:el.offsetHeight,ox:parseInt(el.style.left)||0,oy:parseInt(el.style.top)||0,dir};
-}
-
-// Snap guide helpers
-function showSnap(sl,axis){const g=sl.querySelector(`.snap-guide-${axis}`);if(g)g.style.display='block';}
-function hideSnap(sl,axis){const g=sl.querySelector(`.snap-guide-${axis}`);if(g)g.style.display='none';}
-function hideSnaps(){document.querySelectorAll('.snap-guide').forEach(g=>g.style.display='none');}
-
-// ============================================================
-//  9. ELEMENT CREATION
-// ============================================================
-function makeElWrap(slide,type,x,y,w,h,extra=''){
-    const el=document.createElement('div');
-    el.className='added-element';el.dataset.type=type;
-    el.style.cssText=`left:${x}px;top:${y}px;width:${w}px;${h?'height:'+h+'px;':''}`;
-    el.innerHTML=`<div class="el-toolbar no-print">
-        <button class="elt-btn" onclick="layerUp(this.closest('.added-element'))" title="Vorne"><i class="fas fa-arrow-up"></i></button>
-        <button class="elt-btn" onclick="layerDown(this.closest('.added-element'))" title="Hinten"><i class="fas fa-arrow-down"></i></button>
-        <div class="elt-sep"></div>
-        <label class="elt-btn relative" title="Deckkraft"><i class="fas fa-eye"></i><input type="range" min="10" max="100" value="100" class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-16 h-1 accent-indigo-500" onchange="this.closest('.added-element').style.opacity=this.value/100" onclick="event.stopPropagation()"></label>
-        <div class="elt-sep"></div>
-        <button class="elt-btn" onclick="dupEl(this.closest('.added-element'))" title="Duplizieren"><i class="fas fa-copy"></i></button>
-        <button class="elt-btn elt-del" onclick="delEl(this.closest('.added-element'))" title="Löschen"><i class="fas fa-trash"></i></button>
-    </div>
-    ${extra}
-    <div class="el-handle el-handle-nw" data-dir="nw"></div>
-    <div class="el-handle el-handle-ne" data-dir="ne"></div>
-    <div class="el-handle el-handle-sw" data-dir="sw"></div>
-    <div class="el-handle el-handle-se" data-dir="se"></div>`;
-    slide.appendChild(el);
-    closeAddPanels();
-    setTimeout(()=>selectEl(el),10);
-    return el;
-}
-
-function addText(btn){
-    const sl=getSl(btn);
-    makeElWrap(sl,'text',340,260,300,null,`<div contenteditable="true" style="padding:10px;font-size:18px;min-height:40px;outline:none;cursor:text;border-radius:6px;line-height:1.5">Text eingeben…</div>`);
-}
-function addShape(btn,shape){
-    const sl=getSl(btn);const rad=shape==='circle'?'50%':'12px';
-    makeElWrap(sl,'shape',440,220,180,180,`<div class="w-full h-full" style="border-radius:${rad};background:rgba(99,102,241,.15);border:2px solid rgba(99,102,241,.5)"></div>`);
-}
-function addLine(btn){
-    const sl=getSl(btn);
-    makeElWrap(sl,'line',340,350,400,4,`<div class="w-full h-full rounded-full" style="background:#6366f1"></div>`);
-}
-function addArrow(btn){
-    const sl=getSl(btn);
-    makeElWrap(sl,'arrow',340,340,200,40,`<svg viewBox="0 0 200 40" class="w-full h-full"><defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#6366f1"/></marker></defs><line x1="0" y1="20" x2="180" y2="20" stroke="#6366f1" stroke-width="3" marker-end="url(#ah)"/></svg>`);
-}
-function addImgEl(btn){
-    const sl=getSl(btn);closeAddPanels();
-    const inp=document.createElement('input');inp.type='file';inp.accept='image/*';
-    inp.onchange=()=>{const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{makeElWrap(sl,'image',340,200,300,240,`<img src="${e.target.result}" class="w-full h-full object-cover rounded-xl" alt="">`);};r.readAsDataURL(f);};
-    inp.click();
-}
-function insertIcon(btn,iconCls){
-    const sl=getSl(btn);
-    makeElWrap(sl,'icon',540,300,80,80,`<div class="w-full h-full flex items-center justify-center text-4xl" style="color:#6366f1"><i class="fas ${iconCls}"></i></div>`);
-}
-function insertStockImage(thumb,url){
-    const sl=getSl(thumb);
-    makeElWrap(sl,'image',340,200,320,240,`<img src="${url}" class="w-full h-full object-cover rounded-xl" alt="" crossorigin>`);
-}
-
-function closeAddPanels(){document.querySelectorAll('.add-panel.open').forEach(m=>m.classList.remove('open'));}
-function dupEl(el){const cl=el.cloneNode(true);cl.style.left=(parseInt(el.style.left)+25)+'px';cl.style.top=(parseInt(el.style.top)+25)+'px';cl.classList.remove('el-selected');el.parentElement.appendChild(cl);}
-function delEl(el){el.remove();selectedEl=null;}
-function layerUp(el){const z=parseInt(el.style.zIndex||20);el.style.zIndex=z+1;}
-function layerDown(el){const z=parseInt(el.style.zIndex||20);el.style.zIndex=Math.max(1,z-1);}
-
-// ============================================================
-//  10. KEYBOARD SHORTCUTS
-// ============================================================
-document.addEventListener('keydown',e=>{
-    if(e.target.hasAttribute('contenteditable')||e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT')return;
-    if(e.key==='Delete'||e.key==='Backspace'){if(selectedEl){selectedEl.remove();selectedEl=null;e.preventDefault();}}
-    if(e.ctrlKey&&e.key==='d'){if(selectedEl){e.preventDefault();dupEl(selectedEl);}}
-});
-
-// ============================================================
-//  11. SCRIPT PANEL
-// ============================================================
-function toggleScriptPanel(){const p=document.getElementById('script-panel');scriptPanelOpen=!scriptPanelOpen;p.classList.toggle('panel-open',scriptPanelOpen);document.getElementById('workspace-container').style.paddingBottom=scriptPanelOpen?'400px':'4rem';}
-function setScriptView(m){scriptViewMode=m;document.querySelectorAll('.script-tab').forEach(t=>{t.classList.toggle('tab-active',t.dataset.mode===m);t.style.color=t.dataset.mode===m?'':'#64748b';});renderScriptPanel();}
+// ════════════════════════════════════════
+//  7. SCRIPT PANEL
+// ════════════════════════════════════════
+function toggleScriptPanel(){const p=document.getElementById('script-panel');scriptPanelOpen=!scriptPanelOpen;p.classList.toggle('panel-open',scriptPanelOpen);document.getElementById('workspace-container').style.paddingBottom=scriptPanelOpen?'440px':'4rem';}
+function setScriptView(mode){scriptViewMode=mode;document.querySelectorAll('.script-tab').forEach(t=>{t.classList.toggle('tab-active',t.dataset.mode===mode);if(t.dataset.mode!==mode)t.classList.add('text-slate-400');else t.classList.remove('text-slate-400');});renderScriptPanel();}
 function renderScriptPanel(){
     const c=document.getElementById('script-content');
     if(!slideScripts.length){c.innerHTML='<p class="text-slate-500 text-sm">Noch keine Präsentation generiert.</p>';return;}
-    const icons={title:'fa-star',split:'fa-columns',grid:'fa-th-large',stats:'fa-chart-bar',timeline:'fa-stream',quote:'fa-quote-left',sources:'fa-book',outro:'fa-flag-checkered'};
     c.innerHTML=slideScripts.map(s=>{
-        const ico=icons[s.type]||'fa-file';
+        const icon=({title:'fa-star',split:'fa-columns',grid:'fa-th-large',stats:'fa-chart-bar',timeline:'fa-stream',quote:'fa-quote-left',sources:'fa-book',outro:'fa-flag-checkered'})[s.type]||'fa-file';
         const content=scriptViewMode==='notes'?`<div class="whitespace-pre-line text-slate-300 text-sm leading-relaxed">${s.notes}</div>`:`<div class="text-slate-300 text-sm leading-relaxed italic">${s.script}</div>`;
-        return `<div class="bg-white/[.03] rounded-xl border border-white/[.05] p-4 hover:border-white/[.1] transition-colors">
-            <div class="flex items-center gap-2.5 mb-2">
-                <div class="w-7 h-7 bg-indigo-600/20 rounded-lg flex items-center justify-center text-indigo-400 text-[10px]"><i class="fas ${ico}"></i></div>
-                <div><span class="text-[9px] text-indigo-400 font-bold uppercase tracking-wider">Folie ${s.n}</span><h4 class="text-xs font-bold text-white leading-tight">${s.h}</h4></div>
-                <span class="ml-auto text-[9px] bg-white/[.05] text-slate-400 px-2 py-0.5 rounded font-bold">🎤 ${s.sp}</span>
+        return `<div class="bg-slate-800/50 rounded-xl border border-slate-700/50 p-5 hover:border-slate-600 transition-colors">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center text-indigo-400 text-xs"><i class="fas ${icon}"></i></div>
+                <div><span class="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Folie ${s.slideNumber}</span><h4 class="text-sm font-bold text-white leading-tight">${s.headline}</h4></div>
+                <span class="ml-auto text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded font-bold">🎤 ${s.speaker}</span>
             </div>${content}</div>`;
     }).join('');
 }
-
 function exportScript(){
-    if(!slideScripts.length)return alert('Noch keine Präsentation.');
-    let txt=`SPRECHER-SKRIPT (${scriptViewMode==='notes'?'Stichpunkte':'Volltext'})\n${'═'.repeat(50)}\n\n`;
-    slideScripts.forEach(s=>{txt+=`▸ FOLIE ${s.n}: ${s.h}\n  Sprecher: ${s.sp}\n  ${'-'.repeat(40)}\n  ${scriptViewMode==='notes'?s.notes:s.script}\n\n`;});
-    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));a.download=`Skript_${new Date().toLocaleDateString('de-DE')}.txt`;a.click();
+    if(!slideScripts.length)return;
+    const mode=scriptViewMode==='notes'?'Stichpunkte':'Volltext';
+    let text=`SPRECHER-SKRIPT (${mode})\n${'═'.repeat(50)}\n\n`;
+    slideScripts.forEach(s=>{text+=`▸ FOLIE ${s.slideNumber}: ${s.headline}\n  Sprecher: ${s.speaker}\n  ${'-'.repeat(40)}\n  ${scriptViewMode==='notes'?s.notes:s.script}\n\n`;});
+    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download=`Skript_${new Date().toLocaleDateString('de-DE')}.txt`;a.click();
 }
 function printScriptOnly(){
     if(!slideScripts.length)return;
+    const mode=scriptViewMode==='notes'?'Stichpunkte':'Volltext';
     const w=window.open('','_blank');
-    w.document.write(`<!DOCTYPE html><html><head><title>Skript</title><style>body{font-family:system-ui,sans-serif;max-width:780px;margin:2rem auto;color:#1e293b;line-height:1.7}h1{font-size:1.4rem;border-bottom:3px solid #6366f1;padding-bottom:.5rem;margin-bottom:2rem}.s{border:1px solid #e2e8f0;border-radius:12px;padding:1.2rem;margin-bottom:1.2rem;page-break-inside:avoid}.sn{font-size:.65rem;color:#6366f1;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.st{font-size:1rem;font-weight:700;margin:.2rem 0 .6rem}.sp{font-size:.7rem;color:#64748b}.c{white-space:pre-line;font-size:.9rem}</style></head><body><h1>📋 Sprecher-Skript</h1>`);
-    slideScripts.forEach(s=>w.document.write(`<div class="s"><div class="sn">Folie ${s.n}</div><div class="st">${s.h}</div><div class="sp">🎤 ${s.sp}</div><div class="c">${scriptViewMode==='notes'?s.notes:s.script}</div></div>`));
-    w.document.write('</body></html>');w.document.close();setTimeout(()=>w.print(),500);
+    w.document.write(`<!DOCTYPE html><html><head><title>Skript</title><style>body{font-family:system-ui,sans-serif;max-width:800px;margin:2rem auto;color:#1e293b;line-height:1.7}h1{font-size:1.5rem;border-bottom:3px solid #6366f1;padding-bottom:.5rem}
+    .slide{border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;page-break-inside:avoid}.slide-num{font-size:.7rem;color:#6366f1;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.slide-title{font-size:1.1rem;font-weight:700;margin:.25rem 0 .75rem}.speaker{font-size:.75rem;color:#64748b;margin-bottom:.5rem}.content{white-space:pre-line;font-size:.95rem}</style></head><body><h1>📋 Sprecher-Skript (${mode})</h1>`);
+    slideScripts.forEach(s=>{w.document.write(`<div class="slide"><div class="slide-num">Folie ${s.slideNumber}</div><div class="slide-title">${s.headline}</div><div class="speaker">🎤 ${s.speaker}</div><div class="content">${scriptViewMode==='notes'?s.notes:s.script}</div></div>`);});
+    w.document.write(`</body></html>`);w.document.close();setTimeout(()=>w.print(),500);
 }
 
-// ============================================================
+// ════════════════════════════════════════
+//  8. ELEMENT EDITING – click-to-select
+// ════════════════════════════════════════
+function getSlide(btn){return btn.closest('.presentation-slide');}
+
+function addTextBox(btn){
+    const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='text';
+    el.style.cssText='left:340px;top:260px;width:300px;min-height:60px;';
+    el.innerHTML=`<div class="el-controls no-print">
+        <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+        <button class="el-btn el-dup" onclick="duplicateElement(this.closest('.added-element'))"><i class="fas fa-copy"></i></button>
+        <label class="el-btn" style="background:#334155"><i class="fas fa-palette"></i><input type="color" value="#000000" onchange="this.closest('.added-element').querySelector('.el-text-content').style.color=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+        <button class="el-btn el-del" onclick="this.closest('.added-element').remove()"><i class="fas fa-trash"></i></button>
+    </div>
+    <div contenteditable="true" class="el-text-content" style="font-size:18px;padding:10px;min-height:40px;outline:none;cursor:text;border-radius:6px;">Text eingeben...</div>
+    <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);selectElement(el);
+}
+
+function addShape(btn,shape){
+    const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='shape';
+    const radius=shape==='circle'?'50%':'12px';
+    el.style.cssText=`left:440px;top:260px;width:200px;height:200px;border-radius:${radius};`;
+    el.innerHTML=`<div class="el-controls no-print">
+        <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+        <label class="el-btn" style="background:#334155"><i class="fas fa-fill-drip"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.shape-fill').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+        <button class="el-btn el-del" onclick="this.closest('.added-element').remove()"><i class="fas fa-trash"></i></button>
+    </div>
+    <div class="shape-fill w-full h-full" style="border-radius:${radius};background:rgba(99,102,241,.15);border:2px solid rgba(99,102,241,.5);"></div>
+    <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);selectElement(el);
+}
+
+function addLine(btn){
+    const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='line';
+    el.style.cssText='left:340px;top:360px;width:400px;height:6px;';
+    el.innerHTML=`<div class="el-controls no-print">
+        <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+        <label class="el-btn" style="background:#334155"><i class="fas fa-palette"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.line-inner').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+        <button class="el-btn el-del" onclick="this.closest('.added-element').remove()"><i class="fas fa-trash"></i></button>
+    </div>
+    <div class="line-inner w-full h-full rounded-full" style="background:#6366f1"></div>
+    <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);selectElement(el);
+}
+
+function addImageElement(btn){
+    const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');
+    const input=document.createElement('input');input.type='file';input.accept='image/*';
+    input.onchange=()=>{
+        const file=input.files[0];if(!file)return;
+        const reader=new FileReader();reader.onload=e=>{
+            const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='image';
+            el.style.cssText='left:390px;top:210px;width:300px;height:250px;';
+            el.innerHTML=`<div class="el-controls no-print">
+                <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+                <button class="el-btn el-dup" onclick="duplicateElement(this.closest('.added-element'))"><i class="fas fa-copy"></i></button>
+                <button class="el-btn el-del" onclick="this.closest('.added-element').remove()"><i class="fas fa-trash"></i></button>
+            </div>
+            <img src="${e.target.result}" class="w-full h-full object-cover rounded-xl shadow-lg" alt="Image">
+            <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+            slide.appendChild(el);selectElement(el);
+        };reader.readAsDataURL(file);
+    };input.click();
+}
+
+function duplicateElement(el){const c=el.cloneNode(true);c.style.left=(parseInt(el.style.left)+30)+'px';c.style.top=(parseInt(el.style.top)+30)+'px';el.parentElement.appendChild(c);selectElement(c);}
+
+function selectElement(el){document.querySelectorAll('.added-element.el-selected').forEach(x=>x.classList.remove('el-selected'));if(el)el.classList.add('el-selected');}
+
+// Click to select, click outside to deselect
+document.addEventListener('mousedown',e=>{
+    const el=e.target.closest('.added-element');
+    if(el){
+        selectElement(el);
+        // If it's a shape/line/image and not clicking on controls or contenteditable, start drag
+        if(!e.target.closest('.el-controls')&&!e.target.closest('.el-resize')&&!e.target.hasAttribute('contenteditable')&&el.dataset.type!=='text'){
+            startDrag(e,el);
+        }
+    }else if(!e.target.closest('#editor-toolbar')){
+        selectElement(null);
+    }
+});
+
+// Drag logic
+function startDrag(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isDragging=true;const scale=getCurrentScale();dragStartX=e.clientX;dragStartY=e.clientY;dragElStartLeft=parseInt(el.style.left)||0;dragElStartTop=parseInt(el.style.top)||0;document.body.style.cursor='grabbing';}
+function startResize(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isResizing=true;dragStartX=e.clientX;dragStartY=e.clientY;resizeStartW=el.offsetWidth;resizeStartH=el.offsetHeight;document.body.style.cursor='nwse-resize';}
+document.addEventListener('mousemove',e=>{
+    if(!activeElement)return;const scale=getCurrentScale();
+    if(isDragging){const dx=(e.clientX-dragStartX)/scale,dy=(e.clientY-dragStartY)/scale;activeElement.style.left=Math.max(0,dragElStartLeft+dx)+'px';activeElement.style.top=Math.max(0,dragElStartTop+dy)+'px';}
+    if(isResizing){const dx=(e.clientX-dragStartX)/scale,dy=(e.clientY-dragStartY)/scale;activeElement.style.width=Math.max(40,resizeStartW+dx)+'px';activeElement.style.height=Math.max(10,resizeStartH+dy)+'px';}
+});
+document.addEventListener('mouseup',()=>{if(activeElement){isDragging=false;isResizing=false;activeElement=null;document.body.style.cursor='';}});
+
+document.addEventListener('keydown',e=>{
+    if(e.key==='Delete'&&!e.target.hasAttribute('contenteditable')){const sel=document.querySelector('.added-element.el-selected');if(sel)sel.remove();}
+});
+
+// ════════════════════════════════════════
+//  9. BACKGROUND EDITOR
+// ════════════════════════════════════════
+function changeSlideBackground(btn){
+    const slide=btn.closest('.presentation-slide');
+    slide.querySelectorAll('.bg-picker-popup').forEach(p=>p.remove());
+    const picker=document.createElement('div');picker.className='bg-picker-popup absolute top-14 right-3 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-4 z-50 no-print';picker.style.width='220px';
+    picker.innerHTML=`<div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Hintergrund</div>
+        <div class="grid grid-cols-5 gap-2 mb-3">${['#ffffff','#f8fafc','#fef3c7','#ecfdf5','#eef2ff','#0f172a','#1e1b4b','#0c4a6e','#064e3b','#881337'].map(c=>`<button onclick="applyBgColor(this,'${c}')" class="w-8 h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${c}"></button>`).join('')}</div>
+        <div class="flex gap-2 items-center"><label class="flex-1 flex items-center gap-2 text-[10px] text-slate-300 font-bold"><input type="color" value="#ffffff" onchange="applyBgColor(this,this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none">Custom</label><button onclick="this.closest('.bg-picker-popup').remove()" class="text-slate-400 hover:text-white text-xs"><i class="fas fa-times"></i></button></div>
+        <div class="mt-3 border-t border-slate-700 pt-3"><div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Gradient</div>
+        <div class="grid grid-cols-4 gap-2">${['linear-gradient(135deg,#667eea,#764ba2)','linear-gradient(135deg,#f093fb,#f5576c)','linear-gradient(135deg,#4facfe,#00f2fe)','linear-gradient(135deg,#43e97b,#38f9d7)','linear-gradient(135deg,#0c0a1d,#1e1b4b)','linear-gradient(135deg,#041525,#075985)','linear-gradient(135deg,#021a13,#047857)','linear-gradient(135deg,#1a0610,#881337)'].map(g=>`<button onclick="applyBgGradient(this,'${g}')" class="w-full h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${g}"></button>`).join('')}</div></div>`;
+    slide.appendChild(picker);
+}
+function applyBgColor(btn,c){const s=btn.closest('.presentation-slide');s.style.background=c;const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);s.style.color=(r*299+g*587+b*114)/1000>128?'#0f172a':'#fff';btn.closest('.bg-picker-popup').remove();}
+function applyBgGradient(btn,g){const s=btn.closest('.presentation-slide');s.style.background=g;s.style.color='#fff';btn.closest('.bg-picker-popup').remove();}
+
+// ════════════════════════════════════════
+//  10. PRESENT MODE
+// ════════════════════════════════════════
+function startPresentation(startIdx=0){
+    const slides=document.querySelectorAll('#slide-scaler .presentation-slide');
+    if(!slides.length)return;
+    const overlay=document.getElementById('present-overlay');
+    const container=document.getElementById('present-container');
+    container.innerHTML='';
+    presentTotal=slides.length;presentIdx=startIdx;
+
+    slides.forEach((s,i)=>{
+        const clone=s.cloneNode(true);
+        // Remove editing controls from clone
+        clone.querySelectorAll('.no-print,.slide-tools,.el-controls,.el-resize').forEach(x=>x.remove());
+        clone.querySelectorAll('[contenteditable]').forEach(x=>x.removeAttribute('contenteditable'));
+        clone.className='presentation-slide present-slide'+(i===startIdx?' active':'');
+        // Keep visual classes
+        s.classList.forEach(c=>{if(c.startsWith('theme-')||c==='dark-slide')clone.classList.add(c);});
+        // Copy inline styles
+        clone.style.cssText=s.style.cssText+';position:absolute;top:50%;left:50%;border-radius:0;';
+        container.appendChild(clone);
+    });
+
+    overlay.classList.remove('hidden');
+    document.body.style.overflow='hidden';
+    scalePresentSlides();
+    updatePresentCounter();
+    showPresentControls();
+
+    try{overlay.requestFullscreen?.();}catch(e){}
+}
+
+function scalePresentSlides(){
+    const vw=window.innerWidth,vh=window.innerHeight;
+    const scale=Math.min(vw/1280,vh/720);
+    document.querySelectorAll('.present-slide').forEach(s=>{s.style.transform=`translate(-50%,-50%) scale(${scale})`;});
+}
+
+function showPresentSlide(idx){
+    document.querySelectorAll('.present-slide').forEach((s,i)=>{s.classList.toggle('active',i===idx);});
+    updatePresentCounter();
+}
+
+function presentNext(){if(presentIdx<presentTotal-1){presentIdx++;showPresentSlide(presentIdx);}}
+function presentPrev(){if(presentIdx>0){presentIdx--;showPresentSlide(presentIdx);}}
+
+function exitPresentation(){
+    const overlay=document.getElementById('present-overlay');
+    overlay.classList.add('hidden');
+    document.body.style.overflow='';
+    if(document.fullscreenElement)document.exitFullscreen?.();
+}
+
+function updatePresentCounter(){document.getElementById('present-counter').textContent=`${presentIdx+1} / ${presentTotal}`;}
+
+function showPresentControls(){
+    const c=document.getElementById('present-controls');c.classList.add('show');
+    clearTimeout(controlsTimer);
+    controlsTimer=setTimeout(()=>c.classList.remove('show'),3000);
+}
+
+// Present mode keyboard & mouse
+document.addEventListener('keydown',e=>{
+    if(!document.getElementById('present-overlay').classList.contains('hidden')){
+        if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();presentNext();}
+        if(e.key==='ArrowLeft'){e.preventDefault();presentPrev();}
+        if(e.key==='Escape'){exitPresentation();}
+        showPresentControls();
+    }
+});
+document.getElementById('present-overlay').addEventListener('mousemove',()=>showPresentControls());
+document.getElementById('present-overlay').addEventListener('click',e=>{
+    if(!e.target.closest('button')&&!e.target.closest('.present-controls')){
+        // Click right half = next, left half = prev
+        if(e.clientX>window.innerWidth/2)presentNext();
+        else presentPrev();
+        showPresentControls();
+    }
+});
+window.addEventListener('resize',()=>{if(!document.getElementById('present-overlay').classList.contains('hidden'))scalePresentSlides();});
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&!document.getElementById('present-overlay').classList.contains('hidden'))exitPresentation();});
+
+// ════════════════════════════════════════
+//  11. HISTORY
+// ════════════════════════════════════════
+function saveHistory(topic,context,slides){
+    const entry={topic,context,speakers:[...speakers],slides,paletteId:activePalette.id,timestamp:Date.now()};
+    localStorage.setItem('slm_creator_history',JSON.stringify(entry));
+    // Also save to recent list for dashboard
+    const recent=JSON.parse(localStorage.getItem('slm_recent')||'[]');
+    recent.unshift({topic,date:new Date().toLocaleDateString('de-DE'),slides:slides.length,speakers:[...speakers]});
+    if(recent.length>10)recent.length=10;
+    localStorage.setItem('slm_recent',JSON.stringify(recent));
+    // Increment generation count
+    const cnt=parseInt(localStorage.getItem('slm_gen_count')||'0');
+    localStorage.setItem('slm_gen_count',String(cnt+1));
+    document.getElementById('restore-btn').classList.add('hidden');
+}
+
+function restoreHistory(){
+    const raw=localStorage.getItem('slm_creator_history');
+    if(!raw)return;
+    try{
+        const entry=JSON.parse(raw);
+        document.getElementById('topic').value=entry.topic||'';
+        document.getElementById('context').value=entry.context||'';
+        speakers.length=0;
+        (entry.speakers||[]).forEach(s=>speakers.push(s));
+        renderSpeakers();
+        // Restore palette
+        const p=palettes.find(x=>x.id===entry.paletteId);
+        if(p)activePalette=p;else pickPalette();
+        currentSlidesData=entry.slides;
+        renderPresentation(entry.slides);
+        if(isSidebarOpen)toggleSidebar();
+    }catch(e){console.error(e);}
+}
+
+function checkHistory(){
+    const raw=localStorage.getItem('slm_creator_history');
+    if(raw){document.getElementById('restore-btn').classList.remove('hidden');document.getElementById('restore-btn').classList.add('flex');}
+}
+
+// ════════════════════════════════════════
 //  INIT
-// ============================================================
-setTimeout(scaleSlides,100);
+// ════════════════════════════════════════
+setTimeout(scaleSlideToFit,100);
+checkHistory();
+
+// Auto-fill from dashboard
+window.addEventListener('DOMContentLoaded',()=>{
+    const params=new URLSearchParams(window.location.search);
+    if(params.get('from')==='pdf'){
+        const text=sessionStorage.getItem('pdf_text')||'';
+        document.getElementById('context').value=text.substring(0,5000);
+        sessionStorage.removeItem('pdf_text');
+    }
+    if(params.get('from')==='pdf-analysis'){
+        const a=JSON.parse(sessionStorage.getItem('pdf_analysis')||'{}');
+        document.getElementById('topic').value=a.titel||'';
+        let ctx='';
+        if(a.aufgabe&&a.aufgabe!=='Nicht gefunden')ctx+='AUFGABE:\n'+a.aufgabe+'\n\n';
+        if(a.fallbeispiel&&a.fallbeispiel!=='Nicht gefunden')ctx+='FALLBEISPIEL:\n'+a.fallbeispiel+'\n\n';
+        if(a.themen)ctx+='THEMEN:\n'+a.themen.join(', ');
+        document.getElementById('context').value=ctx;
+        sessionStorage.removeItem('pdf_analysis');sessionStorage.removeItem('pdf_text');
+    }
+    if(params.get('from')==='template'){
+        const t=JSON.parse(sessionStorage.getItem('template')||'{}');
+        if(t.topic)document.getElementById('topic').value=t.topic;
+        if(t.context)document.getElementById('context').value=t.context;
+        sessionStorage.removeItem('template');
+    }
+});
 </script>
 </body>
 </html>
