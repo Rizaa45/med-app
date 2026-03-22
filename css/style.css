@@ -1,0 +1,166 @@
+/* css/style.css */
+
+/* --- Document Basics --- */
+.page-presentation { 
+    aspect-ratio: 16/9; 
+    width: 100%; 
+    max-width: 1200px; 
+    background: white; 
+    color: #1e293b; 
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); 
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* --- THE EDITOR ENGINE (Resizing & Moving) --- */
+
+.editable-block {
+    position: absolute; /* Für freies Dragging notwendig */
+    border: 1px solid transparent;
+    transition: border 0.2s;
+    z-index: 10;
+}
+
+.editable-block:hover, .editable-block.is-active { 
+    border: 1px dashed #94a3b8; 
+    z-index: 20; 
+}
+
+/* Der Drag-Handle (Oben) */
+.drag-handle {
+    position: absolute; 
+    top: -24px; 
+    left: 0; 
+    background: #4f46e5; 
+    color: white; 
+    font-size: 10px; 
+    padding: 2px 8px;
+    border-radius: 4px 4px 0 0;
+    cursor: grab; 
+    opacity: 0; 
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+.editable-block:hover .drag-handle, .editable-block.is-active .drag-handle { opacity: 1; }
+.drag-handle:active { cursor: grabbing; }
+
+/* NEU: Der Resize-Handle (Unten Rechts) */
+.resize-handle {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background: #4f46e5;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: nwse-resize;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.editable-block:hover .resize-handle, .editable-block.is-active .resize-handle { opacity: 1; }
+
+/* --- CONTENT EDITING --- */
+[contenteditable="true"] { 
+    outline: none; 
+    width: 100%;
+    height: 100%;
+    min-height: 20px;
+    cursor: text;
+}
+
+/* --- SPECIAL LAYOUTS (Werden von der KI getriggert) --- */
+
+/* Sprecher-Label auf der Folie */
+.speaker-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #f1f5f9;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid #e2e8f0;
+    z-index: 5;
+}
+
+/* 1. Timeline Layout */
+.timeline-container {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    top: 0.25rem;
+    width: 16px;
+    height: 16px;
+    background: #4f46e5;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #4f46e5;
+}
+
+/* 2. Beautiful Tables */
+.pro-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.pro-table th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #cbd5e1;
+}
+.pro-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+.pro-table tr:hover td {
+    background: #f1f5f9;
+}
+
+/* Custom Scrollbar für die Sidebar */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Print Styles */
+@media print {
+    nav, aside, .no-print, .drag-handle, .resize-handle { display: none !important; }
+    body, main { background: white !important; padding: 0 !important; }
+    .page-presentation { box-shadow: none !important; margin: 0 !important; page-break-after: always; }
+    .editable-block { border: none !important; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
