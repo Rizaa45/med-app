@@ -2,106 +2,89 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Synthesis | Pro Studio v5.0</title>
+    <title>AI Presentation Studio Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <link rel="stylesheet" href="css/style.css">
-    <style id="print-orientation"></style>
 </head>
-<body class="h-screen flex flex-col bg-slate-900 text-slate-100 overflow-hidden">
+<body class="bg-[#0f172a] text-white h-screen flex flex-col overflow-hidden">
 
-    <div id="smart-toolbar" class="fixed top-24 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 shadow-2xl rounded-xl p-2 z-[100] flex items-center gap-1 opacity-0 pointer-events-none no-print transition-all duration-300">
-        <select id="font-family" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer">
-            <option value="Inter">Inter</option>
-            <option value="Playfair Display">Playfair</option>
-        </select>
-        <div class="w-px h-6 bg-slate-700 mx-2"></div>
-        <button data-command="bold" class="toolbar-btn font-bold"><i class="fas fa-bold"></i></button>
-        <button data-command="italic" class="toolbar-btn italic"><i class="fas fa-italic"></i></button>
-        <div class="w-px h-6 bg-slate-700 mx-2"></div>
-        <input type="color" id="color-picker" class="w-8 h-8 rounded cursor-pointer bg-transparent border-none">
-        <div class="w-px h-6 bg-slate-700 mx-2"></div>
-        <button id="add-text-btn" class="toolbar-btn text-indigo-400 hover:text-indigo-300" title="Textfeld hinzufügen"><i class="fas fa-font"></i></button>
-        <button id="add-img-btn" class="toolbar-btn text-indigo-400 hover:text-indigo-300" title="Bild hinzufügen"><i class="fas fa-image"></i></button>
-    </div>
-
-    <nav class="h-16 border-b border-slate-800 bg-slate-950 flex items-center justify-between px-8 z-50 no-print shrink-0">
-        <div class="font-black uppercase tracking-widest text-lg">
-            SLM <span class="text-indigo-500">Studio</span>
+    <header class="h-14 border-b border-slate-800 bg-slate-950 flex items-center justify-between px-6 z-50">
+        <div class="flex items-center gap-4">
+            <span class="font-black text-indigo-500 tracking-tighter text-xl">SLM.studio</span>
+            <div class="h-6 w-px bg-slate-800"></div>
+            <h1 id="presentation-title" class="text-xs uppercase font-bold text-slate-400">Unbenanntes Projekt</h1>
         </div>
-        <div class="flex gap-4">
-            <button id="export-pdf" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all">
-                <i class="fas fa-file-pdf mr-2"></i> PDF Export
+        <div class="flex gap-3">
+            <button id="export-pdf" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-1.5 rounded text-xs font-bold transition-all">
+                <i class="fas fa-file-pdf mr-2"></i> PDF EXPORT
             </button>
         </div>
-    </nav>
+    </header>
 
     <div class="flex flex-1 overflow-hidden">
-        <aside class="w-[400px] bg-slate-900 border-r border-slate-800 flex flex-col no-print shrink-0 z-10 overflow-y-auto custom-scrollbar">
-            <div class="p-6 space-y-8">
-                
-                <section>
-                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2"><i class="fas fa-database mr-2"></i> 1. Kontext & Daten</h3>
-                    <input type="text" id="topic" placeholder="Hauptthema (z.B. Myokardinfarkt)" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white mb-3 outline-none focus:border-indigo-500">
-                    
-                    <textarea id="case-study" rows="3" placeholder="Fallbeispiel oder spezifische Anweisungen eingeben..." class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white outline-none focus:border-indigo-500 mb-3"></textarea>
-                    
-                    <div class="relative border-2 border-dashed border-slate-700 rounded-lg p-4 text-center hover:border-indigo-500 transition-colors cursor-pointer" onclick="document.getElementById('pdf-upload').click()">
-                        <i class="fas fa-file-pdf text-2xl text-slate-500 mb-2"></i>
-                        <p class="text-xs text-slate-400 font-bold">PDF Material hochladen (Optional)</p>
-                        <input type="file" id="pdf-upload" accept=".pdf" class="hidden">
-                        <p id="pdf-status" class="text-[10px] text-indigo-400 mt-1 hidden">Datei geladen!</p>
-                    </div>
-                </section>
-
-                <section>
-                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2 flex justify-between items-center">
-                        <span><i class="fas fa-users mr-2"></i> 2. Sprecher-Team</span>
-                        <button id="add-speaker-btn" class="text-indigo-400 hover:text-white"><i class="fas fa-plus"></i></button>
-                    </h3>
-                    <div id="speaker-list" class="space-y-2 mb-4">
-                        </div>
-
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Skript-Generierung</label>
-                    <select id="script-type" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white outline-none focus:border-indigo-500">
-                        <option value="none">Keine Skripte (Nur Folien)</option>
-                        <option value="bullets">Kurze Stichpunkte (Fakten)</option>
-                        <option value="detailed">Detaillierter Fließtext</option>
-                    </select>
-                </section>
-
-                <section>
-                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2"><i class="fas fa-layer-group mr-2"></i> 3. Folien & Layout</h3>
-                    <div class="flex justify-between items-center mb-2">
-                        <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Anzahl inhaltlicher Folien:</label>
-                        <span id="slide-count-label" class="text-indigo-400 font-bold">5</span>
-                    </div>
-                    <input type="range" id="slide-count" min="3" max="15" value="5" class="w-full accent-indigo-500">
-                </section>
-
-            </div>
+        <aside class="w-80 border-r border-slate-800 bg-slate-900/50 p-5 flex flex-col gap-6 overflow-y-auto custom-scrollbar">
             
-            <div class="p-6 bg-slate-950 border-t border-slate-800 mt-auto sticky bottom-0 z-20">
-                <button id="generate-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-lg uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
-                    <i class="fas fa-wand-magic-sparkles"></i> Synthese Starten
-                </button>
-            </div>
+            <section>
+                <label class="section-label">1. Kontext & Daten</label>
+                <input type="text" id="topic" placeholder="Hauptthema..." class="input-field">
+                <textarea id="case-study" rows="4" placeholder="Fallbeispiel oder Frage hier einfügen..." class="input-field mt-2"></textarea>
+                <div class="mt-2 border-2 border-dashed border-slate-700 rounded-lg p-4 text-center hover:border-indigo-500 cursor-pointer transition-all" onclick="document.getElementById('pdf-upload').click()">
+                    <i class="fas fa-cloud-upload-alt text-slate-500 mb-2"></i>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase">PDF Analyse (Beta)</p>
+                    <input type="file" id="pdf-upload" class="hidden" accept=".pdf">
+                </div>
+            </section>
+
+            <section>
+                <label class="section-label">2. Team & Sprecher</label>
+                <div id="speaker-chips" class="flex flex-wrap gap-2 mb-2"></div>
+                <div class="flex gap-2">
+                    <input type="text" id="speaker-input" placeholder="Name..." class="input-field py-1 text-xs">
+                    <button id="add-speaker" class="bg-slate-700 px-3 rounded hover:bg-indigo-600"><i class="fas fa-plus"></i></button>
+                </div>
+            </section>
+
+            <section>
+                <label class="section-label">3. Konfiguration</label>
+                <div class="flex justify-between text-[10px] text-slate-400 font-bold mb-1">
+                    <span>FOLIENANZAHL</span>
+                    <span id="count-val">AUTO</span>
+                </div>
+                <input type="range" id="slide-count" min="0" max="20" value="0" class="w-full accent-indigo-500">
+                
+                <div class="mt-4">
+                    <label class="text-[10px] font-bold text-slate-500 block mb-2">SKRIPT-TYP</label>
+                    <select id="script-mode" class="input-field">
+                        <option value="bullets">Fakten-Bulletpoints</option>
+                        <option value="detailed">Ausführliches Skript</option>
+                        <option value="none">Kein Skript</option>
+                    </select>
+                </div>
+            </section>
+
+            <button id="generate-btn" class="w-full bg-indigo-600 py-3 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-indigo-500 shadow-lg shadow-indigo-500/20 transition-all mt-auto">
+                Synthese Starten
+            </button>
         </aside>
 
-        <main class="flex-1 overflow-y-auto bg-slate-800 p-8 scroll-smooth" id="main-canvas">
-            <div id="document-container" class="flex flex-col items-center gap-8 pb-20">
-                <div class="flex flex-col items-center justify-center h-[50vh] text-slate-500 w-full">
-                    <i class="fas fa-project-diagram text-6xl mb-6 opacity-20"></i>
-                    <p class="font-bold uppercase tracking-widest text-sm opacity-50">Warte auf Kontext-Daten...</p>
-                </div>
+        <main class="flex-1 bg-slate-950 p-10 overflow-y-auto flex flex-col items-center gap-12" id="canvas">
+            <div id="empty-state" class="mt-20 text-center opacity-20">
+                <i class="fas fa-layer-group text-8xl mb-4"></i>
+                <p class="text-xl font-light">Bereit für die Generierung</p>
             </div>
         </main>
     </div>
 
-    <script src="js/editor.js" defer></script>
-    <script src="js/synthesis.js" defer></script>
+    <div id="editor-toolbar" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-2 hidden z-[100] flex gap-2 items-center">
+        <button class="tool-btn" onclick="formatDoc('bold')"><i class="fas fa-bold"></i></button>
+        <button class="tool-btn" onclick="formatDoc('italic')"><i class="fas fa-italic"></i></button>
+        <div class="w-px h-6 bg-slate-700 mx-1"></div>
+        <button class="tool-btn text-indigo-400" id="add-img-tool"><i class="fas fa-image"></i></button>
+        <button class="tool-btn text-red-400" id="delete-element"><i class="fas fa-trash"></i></button>
+    </div>
+
+    <script src="js/editor.js"></script>
+    <script src="js/synthesis.js"></script>
 </body>
 </html>
