@@ -1,65 +1,46 @@
 // js/editor.js
-
-let activeElement = null;
+let selectedBlock = null;
 let isDragging = false;
 let isResizing = false;
-let startX, startY, startWidth, startHeight, startLeft, startTop;
 
-// --- 1. ELEMENTE AUSWÄHLEN & TOOLBAR ---
 document.addEventListener('mousedown', (e) => {
-    const block = e.target.closest('.editable-block');
-    
-    // Deaktiviere altes Element
-    if (activeElement && activeElement !== block) {
-        activeElement.classList.remove('is-active');
+    const block = e.target.closest('.block');
+    const resizeHandle = e.target.closest('.resize-handle');
+
+    if (resizeHandle) {
+        isResizing = true;
+        selectedBlock = resizeHandle.parentElement;
+        e.preventDefault();
+        return;
     }
 
     if (block) {
-        activeElement = block;
-        activeElement.classList.add('is-active');
-        showToolbar(true);
-
-        // Dragging starten
-        if (e.target.closest('.drag-handle')) {
-            isDragging = true;
-            startX = e.clientX;
-            startY = e.clientY;
-            startLeft = activeElement.offsetLeft;
-            startTop = activeElement.offsetTop;
-            e.preventDefault();
-        }
-
-        // Resizing starten
-        if (e.target.closest('.resize-handle')) {
-            isResizing = true;
-            startX = e.clientX;
-            startY = e.clientY;
-            startWidth = activeElement.offsetWidth;
-            startHeight = activeElement.offsetHeight;
-            e.preventDefault();
-        }
-    } else if (!e.target.closest('#smart-toolbar')) {
-        showToolbar(false);
-        activeElement = null;
+        if (selectedBlock) selectedBlock.classList.remove('block-active');
+        selectedBlock = block;
+        selectedBlock.classList.add('block-active');
+        isDragging = true;
+        document.getElementById('editor-toolbar').style.display = 'flex';
+    } else if (!e.target.closest('#editor-toolbar')) {
+        if (selectedBlock) selectedBlock.classList.remove('block-active');
+        selectedBlock = null;
+        document.getElementById('editor-toolbar').style.display = 'none';
     }
 });
 
-// --- 2. BEWEGEN & GRÖSSE ÄNDERN ---
 document.addEventListener('mousemove', (e) => {
-    if (!activeElement) return;
+    if (!selectedBlock) return;
 
     if (isDragging) {
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        activeElement.style.left = `${startLeft + dx}px`;
-        activeElement.style.top = `${startTop + dy}px`;
+        const slide = selectedBlock.closest('.slide');
+        const rect = slide.getBoundingClientRect();
+        selectedBlock.style.left = (e.clientX - rect.left - 20) + 'px';
+        selectedBlock.style.top = (e.clientY - rect.top - 20) + 'px';
     }
 
     if (isResizing) {
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        activeElement.style.width = `${startWidth + dx}px`;
-        activeElement.style.height = `${startHeight + dy}px`;
+        const rect = selectedBlock.getBoundingClientRect();
+        selectedBlock.style.width = (e.clientX - rect.left) + 'px';
+        selectedBlock.style.height = (e.clientY - rect.top) + 'px';
     }
 });
 
@@ -68,45 +49,25 @@ document.addEventListener('mouseup', () => {
     isResizing = false;
 });
 
-// --- 3. TEXT FORMATIERUNG ---
-function showToolbar(visible) {
-    const toolbar = document.getElementById('smart-toolbar');
-    if (visible) {
-        toolbar.classList.remove('opacity-0', 'pointer-events-none');
-    } else {
-        toolbar.classList.add('opacity-0', 'pointer-events-none');
-    }
+function formatDoc(cmd) {
+    document.execCommand(cmd, false, null);
 }
 
-document.querySelectorAll('.toolbar-btn[data-command]').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const command = btn.getAttribute('data-command');
-        document.execCommand(command, false, null);
-    });
+// Bild einfügen Option
+document.getElementById('add-img-tool').addEventListener('click', () => {
+    const url = prompt("Bild URL eingeben:");
+    if (url && selectedBlock) {
+        const img = document.createElement('img');
+        img.src = url;
+        img.style.width = '100%';
+        selectedBlock.innerHTML = '';
+        selectedBlock.appendChild(img);
+        selectedBlock.appendChild(createHandle());
+    }
 });
 
-document.getElementById('font-family').addEventListener('change', (e) => {
-    document.execCommand('fontName', false, e.target.value);
-});
-
-document.getElementById('color-picker').addEventListener('change', (e) => {
-    document.execCommand('foreColor', false, e.target.value);
-});
-
-// --- 4. MANUELLES HINZUFÜGEN ---
-document.getElementById('add-text-btn').addEventListener('click', () => {
-    const container = activeElement?.closest('.page-presentation') || document.querySelector('.page-presentation');
-    if (!container) return;
-    
-    const newBlock = document.createElement('div');
-    newBlock.className = 'editable-block';
-    newBlock.style.left = '50px';
-    newBlock.style.top = '50px';
-    newBlock.style.width = '250px';
-    newBlock.innerHTML = `
-        <div class="drag-handle"><i class="fas fa-grip-horizontal"></i></div>
-        <div contenteditable="true" class="p-2 text-slate-800">Neuer Text...</div>
-        <div class="resize-handle"></div>
-    `;
-    container.appendChild(newBlock);
-});
+function createHandle() {
+    const h = document.createElement('div');
+    h.className = 'resize-handle';
+    return h;
+}
