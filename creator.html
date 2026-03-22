@@ -2,89 +2,113 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>AI Presentation Studio Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM Studio Pro | AI Presentation Engine</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 </head>
-<body class="bg-[#0f172a] text-white h-screen flex flex-col overflow-hidden">
+<body class="bg-[#0b0f1a] text-slate-200 overflow-hidden font-['Plus_Jakarta_Sans']">
 
-    <header class="h-14 border-b border-slate-800 bg-slate-950 flex items-center justify-between px-6 z-50">
+    <nav class="h-16 border-b border-white/5 bg-[#0b0f1a]/80 backdrop-blur-md flex items-center justify-between px-6 z-[100] relative">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                <i class="fas fa-brain text-white"></i>
+            </div>
+            <span class="text-xl font-extrabold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">SLM STUDIO <span class="text-indigo-500">PRO</span></span>
+        </div>
+        
         <div class="flex items-center gap-4">
-            <span class="font-black text-indigo-500 tracking-tighter text-xl">SLM.studio</span>
-            <div class="h-6 w-px bg-slate-800"></div>
-            <h1 id="presentation-title" class="text-xs uppercase font-bold text-slate-400">Unbenanntes Projekt</h1>
-        </div>
-        <div class="flex gap-3">
-            <button id="export-pdf" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-1.5 rounded text-xs font-bold transition-all">
-                <i class="fas fa-file-pdf mr-2"></i> PDF EXPORT
+            <div id="status-indicator" class="text-[10px] font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> System Bereit
+            </div>
+            <button id="export-btn" class="bg-white text-black hover:bg-indigo-500 hover:text-white px-5 py-2 rounded-full font-bold text-xs transition-all uppercase tracking-widest shadow-xl">
+                Export PDF
             </button>
         </div>
-    </header>
+    </nav>
 
-    <div class="flex flex-1 overflow-hidden">
-        <aside class="w-80 border-r border-slate-800 bg-slate-900/50 p-5 flex flex-col gap-6 overflow-y-auto custom-scrollbar">
-            
-            <section>
-                <label class="section-label">1. Kontext & Daten</label>
-                <input type="text" id="topic" placeholder="Hauptthema..." class="input-field">
-                <textarea id="case-study" rows="4" placeholder="Fallbeispiel oder Frage hier einfügen..." class="input-field mt-2"></textarea>
-                <div class="mt-2 border-2 border-dashed border-slate-700 rounded-lg p-4 text-center hover:border-indigo-500 cursor-pointer transition-all" onclick="document.getElementById('pdf-upload').click()">
-                    <i class="fas fa-cloud-upload-alt text-slate-500 mb-2"></i>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase">PDF Analyse (Beta)</p>
-                    <input type="file" id="pdf-upload" class="hidden" accept=".pdf">
-                </div>
-            </section>
-
-            <section>
-                <label class="section-label">2. Team & Sprecher</label>
-                <div id="speaker-chips" class="flex flex-wrap gap-2 mb-2"></div>
-                <div class="flex gap-2">
-                    <input type="text" id="speaker-input" placeholder="Name..." class="input-field py-1 text-xs">
-                    <button id="add-speaker" class="bg-slate-700 px-3 rounded hover:bg-indigo-600"><i class="fas fa-plus"></i></button>
-                </div>
-            </section>
-
-            <section>
-                <label class="section-label">3. Konfiguration</label>
-                <div class="flex justify-between text-[10px] text-slate-400 font-bold mb-1">
-                    <span>FOLIENANZAHL</span>
-                    <span id="count-val">AUTO</span>
-                </div>
-                <input type="range" id="slide-count" min="0" max="20" value="0" class="w-full accent-indigo-500">
+    <div class="flex h-[calc(100vh-64px)] overflow-hidden">
+        
+        <aside class="w-[400px] border-r border-white/5 bg-[#0f1422] flex flex-col z-50">
+            <div class="p-6 overflow-y-auto flex-1 custom-scrollbar space-y-8">
                 
-                <div class="mt-4">
-                    <label class="text-[10px] font-bold text-slate-500 block mb-2">SKRIPT-TYP</label>
-                    <select id="script-mode" class="input-field">
-                        <option value="bullets">Fakten-Bulletpoints</option>
-                        <option value="detailed">Ausführliches Skript</option>
-                        <option value="none">Kein Skript</option>
-                    </select>
-                </div>
-            </section>
+                <section>
+                    <label class="sidebar-label">Projekt-Kontext</label>
+                    <input type="text" id="main-topic" placeholder="Thema (z.B. Fallstudie Herr Z.)" class="modern-input mb-3">
+                    <textarea id="ai-context" rows="5" placeholder="Einfügen von Fallbeispielen, Fragen oder Texten..." class="modern-input"></textarea>
+                    
+                    <div class="mt-3 relative">
+                        <input type="file" id="pdf-upload" class="hidden" accept=".pdf">
+                        <button onclick="document.getElementById('pdf-upload').click()" class="w-full py-3 border border-dashed border-slate-700 rounded-xl text-xs font-bold text-slate-400 hover:border-indigo-500 hover:text-indigo-400 transition-all">
+                            <i class="fas fa-file-pdf mr-2"></i> PDF-ANALYSE STARTEN
+                        </button>
+                    </div>
+                </section>
 
-            <button id="generate-btn" class="w-full bg-indigo-600 py-3 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-indigo-500 shadow-lg shadow-indigo-500/20 transition-all mt-auto">
-                Synthese Starten
-            </button>
+                <section>
+                    <div class="flex justify-between items-center mb-4">
+                        <label class="sidebar-label">Präsentations-Team</label>
+                        <button id="add-speaker" class="text-indigo-400 hover:text-white transition-colors"><i class="fas fa-plus-circle"></i></button>
+                    </div>
+                    <div id="speaker-list" class="space-y-2">
+                        </div>
+                    <select id="script-config" class="modern-input mt-4 text-xs font-bold">
+                        <option value="bullets">SKRIPT: FAKTISCHE BULLETPOINTS</option>
+                        <option value="detailed">SKRIPT: DETAILLIERTER TEXT</option>
+                        <option value="none">KEIN SKRIPT GENERIEREN</option>
+                    </select>
+                </section>
+
+                <section>
+                    <label class="sidebar-label">Umfang & Intelligenz</label>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[10px] font-bold text-slate-500">FOLIENANZAHL</span>
+                        <span id="slide-count-val" class="text-indigo-400 font-bold">AUTO</span>
+                    </div>
+                    <input type="range" id="slide-count" min="0" max="15" value="0" class="modern-range">
+                    <p class="text-[9px] text-slate-500 mt-2 font-medium italic">"0" lässt die KI die optimale Struktur basierend auf dem Inhalt bestimmen.</p>
+                </section>
+            </div>
+
+            <div class="p-6 bg-[#0b0f1a] border-t border-white/5">
+                <button id="generate-master" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-4 rounded-2xl shadow-2xl shadow-indigo-500/20 uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1">
+                    <i class="fas fa-sparkles"></i> Synthese Starten
+                </button>
+            </div>
         </aside>
 
-        <main class="flex-1 bg-slate-950 p-10 overflow-y-auto flex flex-col items-center gap-12" id="canvas">
-            <div id="empty-state" class="mt-20 text-center opacity-20">
-                <i class="fas fa-layer-group text-8xl mb-4"></i>
-                <p class="text-xl font-light">Bereit für die Generierung</p>
+        <main class="flex-1 bg-[#070910] p-12 overflow-y-auto flex flex-col items-center gap-16 relative" id="workspace">
+            <div id="empty-state" class="absolute inset-0 flex flex-col items-center justify-center opacity-20 select-none">
+                <i class="fas fa-project-diagram text-9xl mb-8"></i>
+                <h2 class="text-3xl font-black uppercase tracking-widest">Warte auf Input</h2>
             </div>
         </main>
+
+        <aside class="w-16 border-l border-white/5 bg-[#0f1422] flex flex-col items-center py-6 gap-6 z-50">
+            <button title="Text hinzufügen" class="tool-icon" id="tool-text"><i class="fas fa-font"></i></button>
+            <button title="Bild hinzufügen" class="tool-icon" id="tool-img"><i class="fas fa-image"></i></button>
+            <button title="Formen" class="tool-icon"><i class="fas fa-shapes"></i></button>
+            <div class="w-8 h-px bg-slate-800"></div>
+            <button title="Farbschema" class="tool-icon text-indigo-400"><i class="fas fa-palette"></i></button>
+        </aside>
     </div>
 
-    <div id="editor-toolbar" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-2 hidden z-[100] flex gap-2 items-center">
-        <button class="tool-btn" onclick="formatDoc('bold')"><i class="fas fa-bold"></i></button>
-        <button class="tool-btn" onclick="formatDoc('italic')"><i class="fas fa-italic"></i></button>
-        <div class="w-px h-6 bg-slate-700 mx-1"></div>
-        <button class="tool-btn text-indigo-400" id="add-img-tool"><i class="fas fa-image"></i></button>
-        <button class="tool-btn text-red-400" id="delete-element"><i class="fas fa-trash"></i></button>
+    <div id="floating-tools" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-[#1a1f2e]/90 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-2xl shadow-2xl flex items-center gap-6 opacity-0 translate-y-20 transition-all duration-500 z-[1000]">
+        <div class="flex items-center gap-2 border-r border-white/10 pr-6">
+            <button class="edit-btn" onclick="execCmd('bold')"><i class="fas fa-bold"></i></button>
+            <button class="edit-btn" onclick="execCmd('italic')"><i class="fas fa-italic"></i></button>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-[10px] font-black text-slate-500 uppercase">Größe</span>
+            <input type="number" id="font-size" value="24" class="bg-transparent text-white font-bold w-12 outline-none">
+        </div>
+        <button id="delete-element" class="text-red-400 hover:text-red-300 ml-4"><i class="fas fa-trash"></i></button>
     </div>
 
     <script src="js/editor.js"></script>
-    <script src="js/synthesis.js"></script>
+    <script src="js/engine.js"></script>
 </body>
 </html>
