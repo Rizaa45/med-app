@@ -5,89 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLM Studio Pro | V7 Ultimate</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0b0f19; color: #f8fafc; overflow: hidden; }
-        
-        /* Sidebar Animations */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #0b0f19;
+            color: #f8fafc;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
         #sidebar { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s; }
         .sidebar-closed { transform: translateX(-100%); position: absolute; }
 
-        /* Workspace & Scrollbar */
+        /* Workspace */
         #workspace-container {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: radial-gradient(circle at center, #131826 0%, #0b0f19 100%);
+            background: radial-gradient(ellipse at center, #131826 0%, #0b0f19 70%);
             overflow-y: auto;
             overflow-x: hidden;
-            padding-top: 2rem;
+            padding: 2.5rem 0 4rem;
         }
-
-        /* The scaling wrapper */
         #slide-scaler {
             transform-origin: top center;
             display: flex;
             flex-direction: column;
-            gap: 4rem; /* Abstand zwischen den Folien */
+            gap: 3rem;
             transition: transform 0.3s ease-out;
         }
 
-        /* The Slide */
+        /* Slide Base */
         .presentation-slide {
             width: 1280px;
             height: 720px;
             background: white;
-            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+            box-shadow: 0 25px 60px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
             position: relative;
             overflow: hidden;
-            border-radius: 1rem;
+            border-radius: 0.75rem;
             flex-shrink: 0;
             color: #0f172a;
         }
 
-        /* Premium Templates */
-        .slide-dark {
-            background: linear-gradient(135deg, #09090b 0%, #1e1b4b 100%);
+        /* ========= THEME CLASSES ========= */
+        .theme-midnight {
+            background: linear-gradient(145deg, #0c0a1d 0%, #1e1b4b 50%, #252270 100%);
             color: white;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        .theme-ocean {
+            background: linear-gradient(145deg, #041525 0%, #0c4a6e 50%, #075985 100%);
+            color: white;
+        }
+        .theme-forest {
+            background: linear-gradient(145deg, #021a13 0%, #064e3b 50%, #047857 100%);
+            color: white;
+        }
+        .theme-crimson {
+            background: linear-gradient(145deg, #1a0610 0%, #6b1032 50%, #881337 100%);
+            color: white;
+        }
+        .theme-sunset {
+            background: linear-gradient(145deg, #1a0800 0%, #7c2d12 50%, #9a3412 100%);
+            color: white;
+        }
+        .theme-slate {
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+        }
+        .theme-clean {
+            background: #ffffff;
+            color: #0f172a;
+        }
+        .theme-warm {
+            background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%);
+            color: #0f172a;
+        }
+        .theme-soft {
+            background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
+            color: #0f172a;
         }
 
-        /* Edit Controls */
-        [contenteditable="true"] { outline: none; transition: all 0.2s; border: 1px dashed transparent; }
-        [contenteditable="true"]:hover { border-color: rgba(99, 102, 241, 0.5); background: rgba(99, 102, 241, 0.05); }
-        [contenteditable="true"]:focus { border-color: #6366f1; background: rgba(99, 102, 241, 0.1); cursor: text; }
+        /* Glass */
+        .glass-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 1.25rem;
+        }
 
-        /* Custom Scrollbar */
+        /* Edit */
+        [contenteditable="true"] {
+            outline: none;
+            transition: all 0.2s;
+            border: 1px dashed transparent;
+            border-radius: 4px;
+        }
+        [contenteditable="true"]:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(99, 102, 241, 0.04);
+        }
+        [contenteditable="true"]:focus {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.08);
+        }
+
+        /* Scrollbar */
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; border: 2px solid #0b0f19; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
-        /* Print Logic */
+        /* Loading shimmer */
+        .img-loading {
+            background: linear-gradient(90deg, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        .theme-midnight .img-loading, .theme-ocean .img-loading,
+        .theme-forest .img-loading, .theme-crimson .img-loading,
+        .theme-sunset .img-loading, .theme-slate .img-loading {
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+            background-size: 200% 100%;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Slide entrance animation */
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-animate {
+            animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Print */
         @media print {
-            nav, #sidebar, .no-print, #sidebar-toggle { display: none !important; }
+            nav, #sidebar, .no-print, #sidebar-toggle, .slide-number { display: none !important; }
             body, #workspace-container { background: white !important; padding: 0 !important; overflow: visible !important; display: block !important; }
             #slide-scaler { transform: none !important; margin: 0 !important; gap: 0 !important; display: block !important; }
-            .presentation-slide { box-shadow: none !important; border-radius: 0 !important; page-break-after: always; margin: 0 !important; border: none !important; }
+            .presentation-slide { box-shadow: none !important; border-radius: 0 !important; page-break-after: always; margin: 0 !important; animation: none !important; opacity: 1 !important; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
     </style>
 </head>
 <body class="flex flex-col h-screen">
 
-    <nav class="h-16 border-b border-slate-800 bg-[#0b0f19] flex items-center justify-between px-6 z-50 shrink-0">
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="h-16 border-b border-slate-800 bg-[#0b0f19]/95 backdrop-blur-xl flex items-center justify-between px-6 z-50 shrink-0">
         <div class="flex items-center gap-6">
-            <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-sm bg-slate-800/40 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700">
+            <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-sm bg-slate-800/50 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700/50">
                 <i class="fas fa-arrow-left"></i> Dashboard
             </a>
             <div class="h-6 w-px bg-slate-800"></div>
@@ -99,11 +173,13 @@
             </div>
         </div>
 
-        <div id="editor-toolbar" class="hidden items-center gap-1 bg-slate-800 p-1.5 rounded-xl border border-slate-700 shadow-xl no-print absolute left-1/2 -translate-x-1/2">
+        <div id="editor-toolbar" class="hidden items-center gap-1 bg-slate-800/95 backdrop-blur-xl p-1.5 rounded-xl border border-slate-700 shadow-2xl no-print absolute left-1/2 -translate-x-1/2">
             <button onclick="document.execCommand('bold')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-bold"></i></button>
             <button onclick="document.execCommand('italic')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-italic"></i></button>
             <button onclick="document.execCommand('underline')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-underline"></i></button>
-            <div class="w-px h-5 bg-slate-600 mx-2"></div>
+            <div class="w-px h-5 bg-slate-600 mx-1"></div>
+            <button onclick="document.execCommand('insertUnorderedList')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-list-ul"></i></button>
+            <div class="w-px h-5 bg-slate-600 mx-1"></div>
             <input type="color" onchange="document.execCommand('foreColor', false, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none p-0" title="Textfarbe">
         </div>
 
@@ -114,11 +190,13 @@
         </div>
     </nav>
 
+    <!-- ============ MAIN LAYOUT ============ -->
     <div class="flex flex-1 overflow-hidden relative">
-        
+
+        <!-- SIDEBAR -->
         <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
-            <div class="p-6 overflow-y-auto flex-1 space-y-8 custom-scrollbar">
-                
+            <div class="p-6 overflow-y-auto flex-1 space-y-8">
+
                 <section class="space-y-4">
                     <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
                     <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
@@ -150,31 +228,37 @@
             </div>
         </aside>
 
-        <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl" id="sidebar-toggle">
+        <!-- SIDEBAR TOGGLE -->
+        <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl no-print" id="sidebar-toggle">
             <i class="fas fa-chevron-left text-xs"></i>
         </button>
 
-        <main id="workspace-container" class="custom-scrollbar">
+        <!-- WORKSPACE -->
+        <main id="workspace-container">
             <div id="slide-scaler">
-                
-                <div class="presentation-slide slide-dark flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-                    <div class="z-10 bg-slate-900/50 backdrop-blur-xl border border-slate-700 p-12 rounded-3xl shadow-2xl max-w-3xl">
+
+                <!-- Default Welcome Slide -->
+                <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
+                    <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
+                    <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
+                    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 28px 28px;"></div>
+
+                    <div class="z-10 glass-card p-12 max-w-3xl">
                         <div class="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/30">
                             <i class="fas fa-layer-group text-3xl text-white"></i>
                         </div>
                         <h2 class="text-4xl font-black mb-4 tracking-tight">Willkommen im Studio</h2>
-                        <p class="text-slate-400 text-lg mb-10">Füttere die KI auf der linken Seite mit deinem Thema und Patienten-Kontext. Das System generiert automatisch Layouts, medizinische Bilder und das Quellenverzeichnis.</p>
+                        <p class="text-slate-400 text-lg mb-10">Füttere die KI mit deinem Thema und Kontext. Das System generiert automatisch vielfältige Layouts, KI-Bilder und ein Quellenverzeichnis.</p>
                         <div class="flex gap-4 justify-center">
-                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
                                 <i class="fas fa-1 text-2xl text-slate-600"></i>
                                 <span class="text-xs font-bold text-slate-300 uppercase">Kontext<br>eingeben</span>
                             </div>
-                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
                                 <i class="fas fa-2 text-2xl text-slate-600"></i>
                                 <span class="text-xs font-bold text-slate-300 uppercase">Team<br>festlegen</span>
                             </div>
-                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
                                 <i class="fas fa-3 text-2xl text-indigo-500"></i>
                                 <span class="text-xs font-bold text-indigo-400 uppercase">KI<br>starten</span>
                             </div>
@@ -186,18 +270,62 @@
         </main>
     </div>
 
+    <!-- ============ JAVASCRIPT ============ -->
     <script>
+        // ==========================================
+        //  STATE & CONFIG
+        // ==========================================
         let isSidebarOpen = true;
         const speakers = [];
 
-        // --- 1. UI & SIDEBAR ---
+        const darkThemes = [
+            { cls: 'theme-midnight', accent: '#818cf8', name: 'indigo' },
+            { cls: 'theme-ocean',    accent: '#38bdf8', name: 'sky' },
+            { cls: 'theme-forest',   accent: '#34d399', name: 'emerald' },
+            { cls: 'theme-crimson',  accent: '#fb7185', name: 'rose' },
+            { cls: 'theme-sunset',   accent: '#fb923c', name: 'orange' },
+        ];
+        const lightThemes = [
+            { cls: 'theme-clean', accent: '#6366f1', name: 'indigo' },
+            { cls: 'theme-warm',  accent: '#d97706', name: 'amber' },
+            { cls: 'theme-soft',  accent: '#6366f1', name: 'indigo' },
+        ];
+
+        // 5 decoration patterns for dark slides
+        const darkDecorations = [
+            (a) => `
+                <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:0.08"></div>
+                <div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:0.06"></div>
+                <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
+            (a) => `
+                <div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div>
+                <div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
+            (a) => `
+                <div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px)"></div>
+                <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:0.06"></div>`,
+            (a) => `
+                <div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,0.02) 80px,rgba(255,255,255,0.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,0.02) 80px,rgba(255,255,255,0.02) 81px)"></div>
+                <div class="absolute top-10 right-10 w-48 h-48 rounded-full blur-3xl" style="background:${a};opacity:0.1"></div>`,
+            (a) => `
+                <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 20% 50%,${a}10,transparent 50%),radial-gradient(ellipse at 80% 80%,${a}08,transparent 50%)"></div>
+                <div class="absolute bottom-0 right-0 w-[500px] h-[300px]" style="background:linear-gradient(135deg,transparent 40%,${a}08 100%)"></div>`,
+        ];
+
+        let darkThemeIdx = 0, lightThemeIdx = 0, decoIdx = 0;
+
+        function nextDark()  { const t = darkThemes[darkThemeIdx % darkThemes.length]; darkThemeIdx++; return t; }
+        function nextLight() { const t = lightThemes[lightThemeIdx % lightThemes.length]; lightThemeIdx++; return t; }
+        function getDeco(accent) { const fn = darkDecorations[decoIdx % darkDecorations.length]; decoIdx++; return fn(accent); }
+
+        // ==========================================
+        //  1. UI FUNCTIONS
+        // ==========================================
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const toggleBtn = document.getElementById('sidebar-toggle');
             const icon = toggleBtn.querySelector('i');
-            
             isSidebarOpen = !isSidebarOpen;
-            if(isSidebarOpen) {
+            if (isSidebarOpen) {
                 sidebar.classList.remove('sidebar-closed');
                 toggleBtn.style.left = '400px';
                 icon.classList.replace('fa-chevron-right', 'fa-chevron-left');
@@ -206,7 +334,7 @@
                 toggleBtn.style.left = '0';
                 icon.classList.replace('fa-chevron-left', 'fa-chevron-right');
             }
-            setTimeout(scaleSlideToFit, 300); // Recalculate size after animation
+            setTimeout(scaleSlideToFit, 350);
         }
 
         function updateSlideLabel(val) {
@@ -215,241 +343,412 @@
 
         function addSpeaker() {
             const name = prompt("Name des Sprechers:");
-            if (name && name.trim() !== '') {
-                speakers.push(name.trim());
-                renderSpeakers();
-            }
+            if (name && name.trim()) { speakers.push(name.trim()); renderSpeakers(); }
         }
 
         function renderSpeakers() {
-            const list = document.getElementById('speaker-list');
-            list.innerHTML = speakers.map((s, i) => `
+            document.getElementById('speaker-list').innerHTML = speakers.map((s, i) => `
                 <div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">
                     ${s} <button onclick="speakers.splice(${i},1); renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button>
                 </div>
             `).join('');
         }
 
-        // --- 2. PERFECT SCROLLING & SCALING ---
+        // ==========================================
+        //  2. SCALING
+        // ==========================================
         function scaleSlideToFit() {
             const container = document.getElementById('workspace-container');
             const scaler = document.getElementById('slide-scaler');
-            
-            // Berechne den Skalierungsfaktor basierend auf der verfügbaren Breite
-            const availableWidth = container.clientWidth - 100; // 50px Padding pro Seite
-            const scale = Math.min(availableWidth / 1280, 1); // Max Scale = 1
-            
-            // Wende Skalierung an
+            const availableWidth = container.clientWidth - 80;
+            const scale = Math.min(availableWidth / 1280, 1);
             scaler.style.transform = `scale(${scale})`;
-            
-            // DAS GEHEIMNIS FÜRS SCROLLING:
-            // transform:scale ändert nicht die DOM-Höhe. Wir müssen den margin-bottom anpassen, 
-            // um den durch die Verkleinerung "verlorenen" Platz auszugleichen.
-            const offsetHeight = scaler.offsetHeight;
-            const scaledHeight = offsetHeight * scale;
-            scaler.style.marginBottom = `${scaledHeight - offsetHeight}px`;
+            const h = scaler.offsetHeight;
+            scaler.style.marginBottom = `${h * scale - h}px`;
         }
-
         window.addEventListener('resize', scaleSlideToFit);
 
-        // --- 3. TEXT EDITOR ---
+        // ==========================================
+        //  3. TEXT EDITOR TOOLBAR
+        // ==========================================
         document.addEventListener('focusin', (e) => {
-            if(e.target.hasAttribute('contenteditable')) {
+            if (e.target.hasAttribute('contenteditable')) {
                 document.getElementById('editor-toolbar').classList.remove('hidden');
                 document.getElementById('editor-toolbar').classList.add('flex');
             }
         });
         document.addEventListener('mousedown', (e) => {
-            if(!e.target.hasAttribute('contenteditable') && !e.target.closest('#editor-toolbar')) {
+            if (!e.target.hasAttribute('contenteditable') && !e.target.closest('#editor-toolbar')) {
                 document.getElementById('editor-toolbar').classList.add('hidden');
                 document.getElementById('editor-toolbar').classList.remove('flex');
             }
         });
 
-        // --- 4. AI SYNTHESIS (Bild-Logik + Quellen + Outro) ---
-        async function generatePresentation() {
-            const topic = document.getElementById('topic').value;
-            const context = document.getElementById('context').value;
-            const btn = document.getElementById('generate-btn');
+        // ==========================================
+        //  4. IMAGE HELPERS
+        // ==========================================
+        function getImageUrl(prompt, index) {
+            if (!prompt) return 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80';
+            const seed = Date.now() + index * 9973 + Math.floor(Math.random() * 100000);
+            const enhanced = prompt.trim() + ', photorealistic, professional medical photography, high detail, soft lighting';
+            return `https://image.pollinations.ai/prompt/${encodeURIComponent(enhanced)}?width=800&height=720&nologo=true&seed=${seed}`;
+        }
 
-            if(!topic && !context) return alert("Bitte Thema oder Kontext eingeben!");
+        function buildImageBlock(imgUrl) {
+            return `
+                <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group bg-slate-200 dark:bg-slate-800">
+                    <div class="img-loading absolute inset-0 z-0"></div>
+                    <img src="${imgUrl}"
+                         class="w-full h-full object-cover relative z-10"
+                         alt="Slide Image"
+                         loading="lazy"
+                         onload="this.previousElementSibling.style.display='none'"
+                         onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80';this.previousElementSibling.style.display='none'">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300 z-20 no-print rounded-2xl">
+                        <button onclick="this.closest('.group').querySelector('.img-upload').click()" class="bg-white text-slate-900 px-5 py-2.5 rounded-xl font-bold text-sm shadow-xl hover:bg-indigo-500 hover:text-white transition-colors">
+                            <i class="fas fa-image mr-2"></i>Bild tauschen
+                        </button>
+                    </div>
+                    <input type="file" class="img-upload hidden" accept="image/*"
+                           onchange="const r=new FileReader();r.onload=e=>this.closest('.group').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0]);">
+                </div>`;
+        }
+
+        // ==========================================
+        //  5. AI GENERATION
+        // ==========================================
+        async function generatePresentation() {
+            const topic   = document.getElementById('topic').value;
+            const context = document.getElementById('context').value;
+            const count   = document.getElementById('slide-count').value;
+            const btn     = document.getElementById('generate-btn');
+
+            if (!topic && !context) return alert("Bitte Thema oder Kontext eingeben!");
 
             btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;
             btn.disabled = true;
 
+            const countRule = count > 0
+                ? `Erstelle genau ${count} Folien (inklusive Titel, Quellen und Outro).`
+                : 'Erstelle so viele Folien wie nötig (ca. 8-12).';
+
             const finalPrompt = `
-                Erstelle eine professionelle Präsentation über: "${topic}".
-                Fallbeispiel/Daten: "${context}".
-                Sprecher-Team: ${speakers.length > 0 ? speakers.join(', ') : 'Projekt-Team'}.
+Erstelle eine professionelle medizinische Präsentation.
+Thema: "${topic}"
+Kontext/Fallbeispiel: "${context}"
+Sprecher-Team: ${speakers.length > 0 ? speakers.join(', ') : 'Projekt-Team'}
+${countRule}
 
-                Verwende diese Layout-Typen:
-                - "title": Titelfolie
-                - "grid": 4 kurze Fakten-Karten.
-                - "split": Text links, Bild rechts.
-                
-                WICHTIGE REGELN FÜR BILDER ("split"):
-                Erfinde für JEDES Bild einen komplett einzigartigen, englischen "imagePrompt" (z.B. "modern hospital room bright", "doctor looking at xray", "wheelchair empty bright window"). Keine Wiederholungen!
+VERFÜGBARE LAYOUT-TYPEN – NUTZE ABWECHSLUNG:
+- "title":    Titelfolie. Felder: headline, subtitle, speaker
+- "split":    Text links 55%, Bild rechts 45%. Felder: headline, contentHtml (HTML mit <ul><li>), imagePrompt (englisch!), speaker
+- "grid":     2×2 Karten-Raster. Felder: headline, items (Array mit {title, value}), speaker
+- "stats":    Große Statistik-Zahlen (2-4). Felder: headline, stats (Array mit {value, label}), speaker
+- "timeline": Prozess/Zeitablauf (3-4 Schritte). Felder: headline, steps (Array mit {title, description}), speaker
+- "quote":    Wichtiges Zitat. Felder: quote, author, speaker
+- "sources":  Quellenverzeichnis. Felder: textSources (Array), imageSources (Array)
+- "outro":    Abschlussfolie. Felder: headline, subtitle
 
-                FÜGE IMMER DIESE ZWEI FOLIEN AM ENDE HINZU:
-                1. type: "sources" (Quellenangaben für Text/Bilder)
-                2. type: "outro" (Verabschiedung auf Deutsch "Vielen Dank für Ihre Aufmerksamkeit")
+REGELN:
+1. Beginne IMMER mit "title", ende IMMER mit "sources" dann "outro"
+2. Nutze VERSCHIEDENE Layout-Typen – nicht immer dasselbe!
+3. Jeder imagePrompt muss EINZIGARTIG und auf ENGLISCH sein
+4. contentHtml: gut formatiertes HTML mit <ul><li>, <strong>, <em>
+5. Texte Deutsch, imagePrompts Englisch
+6. stats.value kurz: "85%", "3×", "24h", "12/Tag"
+7. timeline: 3-4 Schritte pro Folie
 
-                ANTWORTE NUR MIT DIESEM JSON FORMAT:
-                {
-                  "slides": [
-                    { "type": "title", "headline": "...", "subtitle": "...", "speaker": "..." },
-                    { "type": "split", "headline": "...", "contentHtml": "<ul><li>Punkt 1</li></ul>", "imagePrompt": "unique english keyword", "speaker": "..." },
-                    { "type": "grid", "headline": "...", "items": [{"title": "...", "value": "..."}], "speaker": "..." },
-                    { "type": "sources", "textSources": ["Fallbeispiel Herr Z.", "Pflegestandards"], "imageSources": ["Generiert durch AI"], "speaker": "Alle" },
-                    { "type": "outro", "headline": "Vielen Dank für Ihre Aufmerksamkeit", "subtitle": "Gibt es noch Fragen?", "speaker": "Alle" }
-                  ]
-                }
-            `;
+ANTWORTE NUR MIT JSON:
+{
+  "slides": [
+    { "type": "title", "headline": "...", "subtitle": "...", "speaker": "..." },
+    { "type": "split", "headline": "...", "contentHtml": "<ul><li>...</li></ul>", "imagePrompt": "...", "speaker": "..." },
+    { "type": "grid", "headline": "...", "items": [{"title":"...","value":"..."}], "speaker": "..." },
+    { "type": "stats", "headline": "...", "stats": [{"value":"85%","label":"..."}], "speaker": "..." },
+    { "type": "timeline", "headline": "...", "steps": [{"title":"...","description":"..."}], "speaker": "..." },
+    { "type": "quote", "quote": "...", "author": "...", "speaker": "..." },
+    { "type": "sources", "textSources": ["..."], "imageSources": ["KI-generiert (Pollinations AI)"] },
+    { "type": "outro", "headline": "Vielen Dank für Ihre Aufmerksamkeit", "subtitle": "Haben Sie Fragen?" }
+  ]
+}`;
 
             try {
-                const response = await fetch('/api/grade', {
+                const res  = await fetch('/api/grade', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ prompt: finalPrompt })
                 });
-                
-                const data = await response.json();
+                const data    = await res.json();
                 const jsonStr = data.text.replace(/```json|```/g, '').trim();
-                const parsed = JSON.parse(jsonStr);
-                
+                const parsed  = JSON.parse(jsonStr);
                 renderPresentation(parsed.slides);
-                if(isSidebarOpen) toggleSidebar();
-
+                if (isSidebarOpen) toggleSidebar();
             } catch (err) {
                 console.error(err);
-                alert("Fehler bei der KI-Generierung. Bitte prüfe deine Eingaben.");
+                alert("Fehler bei der KI-Generierung. Bitte prüfe deine Eingaben und versuche es erneut.");
             } finally {
                 btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren`;
                 btn.disabled = false;
             }
         }
 
-        // --- 5. RENDER ENGINE ---
+        // ==========================================
+        //  6. RENDER ENGINE
+        // ==========================================
         function renderPresentation(slides) {
             const scaler = document.getElementById('slide-scaler');
-            scaler.innerHTML = ''; // Clear
+            scaler.innerHTML = '';
+
+            // Reset theme cycling
+            darkThemeIdx = 0;
+            lightThemeIdx = 0;
+            decoIdx = 0;
+
+            const total = slides.length;
+            let titleTheme = null; // remember for outro
 
             slides.forEach((s, i) => {
                 const slide = document.createElement('div');
-                slide.className = 'presentation-slide';
+                slide.className = 'presentation-slide slide-animate';
+                slide.style.animationDelay = `${i * 0.08}s`;
+                slide.style.opacity = '0';
+
                 let html = '';
-                
-                // 1. TITELFOLIE
+                const num = `<div class="slide-number absolute bottom-5 left-6 text-[10px] font-bold uppercase tracking-[0.2em] opacity-30 z-30 no-print">${i + 1} / ${total}</div>`;
+
+                // ─────────── TITLE ───────────
                 if (s.type === 'title') {
-                    slide.classList.add('slide-dark');
+                    const t = nextDark();
+                    titleTheme = t;
+                    slide.classList.add(t.cls);
                     html = `
-                        <div class="h-full flex flex-col justify-center items-center text-center p-20 relative">
-                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
-                            <div class="absolute top-12 left-12 text-indigo-400 font-bold uppercase tracking-[0.3em] text-sm z-10">Klinische Fallstudie</div>
-                            
-                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-8 drop-shadow-2xl z-10">${s.headline}</h1>
-                            <div class="w-24 h-1.5 bg-indigo-500 mb-8 rounded-full z-10"></div>
-                            <p contenteditable="true" class="text-2xl text-slate-300 font-light tracking-wide z-10">${s.subtitle}</p>
-                            
-                            <div class="absolute bottom-12 right-12 glass-card px-6 py-3 rounded-full z-10">
-                                <span class="text-xs uppercase tracking-widest font-bold text-slate-300">Präsentiert von: <span class="text-white">${s.speaker}</span></span>
+                        ${getDeco(t.accent)}
+                        <div class="h-full flex flex-col justify-center items-center text-center px-20 py-16 relative z-10">
+                            <div class="absolute top-10 left-12 uppercase tracking-[0.3em] text-[11px] font-bold opacity-40">Klinische Fallstudie</div>
+                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-[1.08] mb-6 max-w-4xl drop-shadow-lg">${s.headline}</h1>
+                            <div class="w-24 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
+                            <p contenteditable="true" class="text-2xl font-light opacity-60 max-w-2xl leading-relaxed">${s.subtitle}</p>
+                            <div class="absolute bottom-10 right-12 glass-card px-5 py-2.5">
+                                <span class="text-[11px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span>
                             </div>
                         </div>
-                    `;
-                } 
-                // 2. GRID (Karten)
-                else if (s.type === 'grid') {
+                        ${num}`;
+                }
+
+                // ─────────── SPLIT ───────────
+                else if (s.type === 'split') {
+                    const t = nextLight();
+                    slide.classList.add(t.cls);
+                    const imgUrl = getImageUrl(s.imagePrompt, i);
                     html = `
-                        <div class="h-full p-16 flex flex-col bg-slate-50 relative">
-                            <h2 contenteditable="true" class="text-5xl font-black text-slate-900 mb-12 border-l-8 border-indigo-600 pl-6">${s.headline}</h2>
-                            <div class="grid grid-cols-2 gap-8 flex-1">
-                                ${(s.items || []).map(item => `
-                                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-slate-100 flex flex-col justify-center">
-                                        <h3 contenteditable="true" class="text-sm font-black text-indigo-500 uppercase tracking-widest mb-3">${item.title}</h3>
-                                        <p contenteditable="true" class="text-2xl font-bold text-slate-700 leading-tight">${item.value}</p>
+                        <div class="h-full flex">
+                            <div class="w-[55%] p-14 flex flex-col justify-center">
+                                <div class="w-14 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
+                                <h2 contenteditable="true" class="text-[2.6rem] font-black leading-[1.15] mb-8">${s.headline}</h2>
+                                <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-65 space-y-1">
+                                    ${s.contentHtml}
+                                </div>
+                                <div class="mt-auto pt-6 border-t border-current/10 text-[11px] font-bold uppercase tracking-widest opacity-35">
+                                    🎤 ${s.speaker}
+                                </div>
+                            </div>
+                            <div class="w-[45%] p-6 flex items-center">
+                                ${buildImageBlock(imgUrl)}
+                            </div>
+                        </div>
+                        ${num}`;
+                }
+
+                // ─────────── GRID ───────────
+                else if (s.type === 'grid') {
+                    const useDark = (i % 2 === 0);
+                    const t = useDark ? nextDark() : nextLight();
+                    slide.classList.add(t.cls);
+
+                    const items = (s.items || []).slice(0, 4);
+
+                    if (useDark) {
+                        html = `
+                            ${getDeco(t.accent)}
+                            <div class="h-full p-14 flex flex-col relative z-10">
+                                <h2 contenteditable="true" class="text-[2.4rem] font-black mb-10 flex items-center gap-4">
+                                    <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
+                                    ${s.headline}
+                                </h2>
+                                <div class="grid grid-cols-2 gap-5 flex-1">
+                                    ${items.map((item, idx) => `
+                                        <div class="glass-card p-7 flex flex-col justify-center hover:border-white/20 transition-colors">
+                                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx + 1).padStart(2, '0')}</div>
+                                            <h3 contenteditable="true" class="text-[11px] font-bold uppercase tracking-widest opacity-50 mb-2">${item.title}</h3>
+                                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${item.value}</p>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
+                            </div>
+                            ${num}`;
+                    } else {
+                        html = `
+                            <div class="h-full p-14 flex flex-col">
+                                <h2 contenteditable="true" class="text-[2.4rem] font-black mb-10 flex items-center gap-4">
+                                    <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
+                                    ${s.headline}
+                                </h2>
+                                <div class="grid grid-cols-2 gap-5 flex-1">
+                                    ${items.map((item, idx) => `
+                                        <div class="bg-white rounded-2xl p-7 shadow-lg border border-slate-100 flex flex-col justify-center hover:shadow-xl transition-shadow">
+                                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx + 1).padStart(2, '0')}</div>
+                                            <h3 contenteditable="true" class="text-[11px] font-bold uppercase tracking-widest opacity-40 mb-2">${item.title}</h3>
+                                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${item.value}</p>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
+                            </div>
+                            ${num}`;
+                    }
+                }
+
+                // ─────────── STATS ───────────
+                else if (s.type === 'stats') {
+                    const t = nextDark();
+                    slide.classList.add(t.cls);
+                    const stats = (s.stats || []).slice(0, 4);
+                    const cols = Math.min(stats.length, 4);
+                    html = `
+                        ${getDeco(t.accent)}
+                        <div class="h-full p-14 flex flex-col relative z-10">
+                            <h2 contenteditable="true" class="text-[2.4rem] font-black mb-6 flex items-center gap-4">
+                                <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
+                                ${s.headline}
+                            </h2>
+                            <div class="flex-1 grid gap-6 items-center" style="grid-template-columns:repeat(${cols},1fr)">
+                                ${stats.map(st => `
+                                    <div class="text-center glass-card p-8 py-10">
+                                        <div contenteditable="true" class="text-6xl font-black mb-3 tracking-tight" style="color:${t.accent}">${st.value}</div>
+                                        <div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div>
                                     </div>
                                 `).join('')}
                             </div>
-                            <div class="absolute bottom-10 right-16 text-xs font-bold uppercase text-slate-400">🎤 ${s.speaker}</div>
+                            <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
                         </div>
-                    `;
+                        ${num}`;
                 }
-                // 3. SPLIT (Text & Einzigartiges Bild)
-                else if (s.type === 'split') {
-                    // Generiert eine einmalige URL basierend auf dem KI-Prompt
-                    const imgUrl = s.imagePrompt 
-                        ? `https://image.pollinations.ai/prompt/${encodeURIComponent(s.imagePrompt + ' photorealistic highly detailed')}?width=800&height=800&nologo=true&n=${i}` 
-                        : `https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80`;
-                    
+
+                // ─────────── TIMELINE ───────────
+                else if (s.type === 'timeline') {
+                    const t = nextLight();
+                    slide.classList.add(t.cls);
+                    const steps = (s.steps || []).slice(0, 5);
                     html = `
-                        <div class="h-full flex bg-white">
-                            <div class="w-[55%] p-16 flex flex-col justify-center">
-                                <h2 contenteditable="true" class="text-4xl font-black text-slate-900 mb-8 leading-tight">${s.headline}</h2>
-                                <div contenteditable="true" class="prose prose-lg text-slate-600 leading-relaxed font-medium">
-                                    ${s.contentHtml}
-                                </div>
-                                <div class="mt-auto pt-8 border-t border-slate-200 text-xs font-bold uppercase text-slate-400">
-                                    🎤 Sprecher: <span class="text-indigo-600">${s.speaker}</span>
+                        <div class="h-full p-14 flex flex-col">
+                            <h2 contenteditable="true" class="text-[2.4rem] font-black mb-14 flex items-center gap-4">
+                                <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
+                                ${s.headline}
+                            </h2>
+                            <div class="flex-1 flex items-center">
+                                <div class="flex items-start w-full relative">
+                                    <div class="absolute top-7 left-8 right-8 h-[3px] rounded-full opacity-15" style="background:${t.accent}"></div>
+                                    ${steps.map((step, idx) => `
+                                        <div class="flex-1 flex flex-col items-center text-center px-3 relative z-10">
+                                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${t.accent}">
+                                                ${idx + 1}
+                                            </div>
+                                            <h3 contenteditable="true" class="text-base font-black mb-2 leading-tight">${step.title}</h3>
+                                            <p contenteditable="true" class="text-sm opacity-55 leading-relaxed">${step.description}</p>
+                                        </div>
+                                    `).join('')}
                                 </div>
                             </div>
-                            <div class="w-[45%] relative p-8">
-                                <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative group bg-slate-100">
-                                    <img src="${imgUrl}" class="w-full h-full object-cover" alt="Medical Image">
-                                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all no-print">
-                                        <button onclick="document.getElementById('img-upload-${i}').click()" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm shadow-xl"><i class="fas fa-image mr-2"></i>Bild tauschen</button>
-                                        <input type="file" id="img-upload-${i}" class="hidden" accept="image/*" onchange="const reader = new FileReader(); reader.onload = e => this.previousElementSibling.previousElementSibling.src = e.target.result; reader.readAsDataURL(this.files[0]);">
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
                         </div>
-                    `;
+                        ${num}`;
                 }
-                // 4. QUELLENVERZEICHNIS
+
+                // ─────────── QUOTE ───────────
+                else if (s.type === 'quote') {
+                    const t = nextDark();
+                    slide.classList.add(t.cls);
+                    html = `
+                        ${getDeco(t.accent)}
+                        <div class="h-full flex flex-col justify-center items-center text-center px-24 relative z-10">
+                            <div class="text-[7rem] leading-none opacity-15 mb-4" style="color:${t.accent}"><i class="fas fa-quote-left"></i></div>
+                            <blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.6rem] font-bold leading-snug mb-8 max-w-3xl italic">${s.quote}</blockquote>
+                            <div class="w-16 h-[3px] rounded-full mb-4" style="background:${t.accent}"></div>
+                            <cite contenteditable="true" class="text-lg font-bold not-italic opacity-50">— ${s.author}</cite>
+                            <div class="absolute bottom-10 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
+                        </div>
+                        ${num}`;
+                }
+
+                // ─────────── SOURCES ───────────
                 else if (s.type === 'sources') {
+                    slide.classList.add('theme-slate');
                     html = `
-                        <div class="h-full p-20 flex flex-col bg-slate-900 text-white">
-                            <h2 contenteditable="true" class="text-5xl font-black mb-16 border-l-8 border-indigo-500 pl-6">Quellenverzeichnis</h2>
-                            <div class="flex gap-16 flex-1">
-                                <div class="w-1/2 bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                                    <h3 class="text-xl font-bold text-indigo-400 mb-6 flex items-center"><i class="fas fa-book-medical mr-3"></i> Textinformationen</h3>
-                                    <ul contenteditable="true" class="list-disc list-inside text-lg text-slate-300 space-y-3">
-                                        ${(s.textSources || ["Eigene Daten"]).map(src => `<li>${src}</li>`).join('')}
+                        <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:24px 24px"></div>
+                        <div class="h-full p-16 flex flex-col relative z-10">
+                            <h2 contenteditable="true" class="text-5xl font-black mb-14 flex items-center gap-4">
+                                <span class="w-2 h-12 rounded-full bg-indigo-500 inline-block"></span>
+                                Quellenverzeichnis
+                            </h2>
+                            <div class="flex gap-8 flex-1">
+                                <div class="w-1/2 glass-card p-8">
+                                    <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-book-medical"></i> Textquellen</h3>
+                                    <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3 leading-relaxed">
+                                        ${(s.textSources || ['Eigene Daten']).map(src => `<li>${src}</li>`).join('')}
                                     </ul>
                                 </div>
-                                <div class="w-1/2 bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                                    <h3 class="text-xl font-bold text-indigo-400 mb-6 flex items-center"><i class="fas fa-camera mr-3"></i> Bildmaterial</h3>
-                                    <ul contenteditable="true" class="list-disc list-inside text-lg text-slate-300 space-y-3">
-                                        ${(s.imageSources || ["KI Generiert (Pollinations AI)", "Unsplash"]).map(src => `<li>${src}</li>`).join('')}
+                                <div class="w-1/2 glass-card p-8">
+                                    <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-camera"></i> Bildmaterial</h3>
+                                    <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3 leading-relaxed">
+                                        ${(s.imageSources || ['KI-generiert (Pollinations AI)']).map(src => `<li>${src}</li>`).join('')}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    `;
+                        ${num}`;
                 }
-                // 5. OUTRO (Danke)
+
+                // ─────────── OUTRO ───────────
                 else if (s.type === 'outro') {
+                    const t = titleTheme || darkThemes[0];
+                    slide.classList.add(t.cls);
                     html = `
-                        <div class="h-full flex flex-col justify-center items-center text-center p-20 bg-indigo-950 text-white relative overflow-hidden">
-                            <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-600 rounded-full blur-3xl opacity-30"></div>
-                            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-30"></div>
-                            
-                            <i class="fas fa-hands-clapping text-6xl text-indigo-400 mb-8 z-10"></i>
-                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6 z-10">${s.headline || 'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
-                            <p contenteditable="true" class="text-3xl text-indigo-200 font-light z-10">${s.subtitle || 'Gibt es noch Fragen?'}</p>
+                        <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${t.accent};opacity:0.12"></div>
+                        <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${t.accent};opacity:0.08"></div>
+                        <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:24px 24px"></div>
+                        <div class="h-full flex flex-col justify-center items-center text-center px-20 relative z-10">
+                            <i class="fas fa-hands-clapping text-6xl mb-8" style="color:${t.accent}"></i>
+                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6">${s.headline || 'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
+                            <p contenteditable="true" class="text-3xl font-light opacity-50">${s.subtitle || 'Haben Sie Fragen?'}</p>
                         </div>
-                    `;
+                        ${num}`;
+                }
+
+                // Fallback for unknown types
+                else {
+                    const t = nextLight();
+                    slide.classList.add(t.cls);
+                    html = `
+                        <div class="h-full p-16 flex flex-col justify-center items-center text-center">
+                            <h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline || s.type}</h2>
+                            <p contenteditable="true" class="text-xl opacity-60">${s.subtitle || s.contentHtml || JSON.stringify(s)}</p>
+                        </div>
+                        ${num}`;
                 }
 
                 slide.innerHTML = html;
                 scaler.appendChild(slide);
             });
 
-            // WICHTIG: Nach dem Rendern Skalierung neu berechnen
-            setTimeout(scaleSlideToFit, 100);
+            setTimeout(scaleSlideToFit, 200);
         }
 
-        // Initiale Skalierung
+        // ==========================================
+        //  INIT
+        // ==========================================
         setTimeout(scaleSlideToFit, 100);
     </script>
+
 </body>
 </html>
