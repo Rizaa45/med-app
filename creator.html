@@ -3,53 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Studio Pro | Ultra Edition</title>
+    <title>SLM Studio Pro | V7 Ultimate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0f111a; color: #f8fafc; overflow: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0b0f19; color: #f8fafc; overflow: hidden; }
         
         /* Sidebar Animations */
         #sidebar { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s; }
         .sidebar-closed { transform: translateX(-100%); position: absolute; }
 
-        /* The Slide Workspace */
+        /* Workspace & Scrollbar */
         #workspace-container {
             flex: 1;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            background: radial-gradient(circle at center, #1a1f35 0%, #0f111a 100%);
-            position: relative;
-            overflow: auto;
+            background: radial-gradient(circle at center, #131826 0%, #0b0f19 100%);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-top: 2rem;
         }
 
-        /* The actual Slide (Always 16:9) */
+        /* The scaling wrapper */
+        #slide-scaler {
+            transform-origin: top center;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem; /* Abstand zwischen den Folien */
+            transition: transform 0.3s ease-out;
+        }
+
+        /* The Slide */
         .presentation-slide {
             width: 1280px;
             height: 720px;
             background: white;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
             position: relative;
             overflow: hidden;
-            transform-origin: center;
-            transition: transform 0.2s ease-out;
+            border-radius: 1rem;
+            flex-shrink: 0;
             color: #0f172a;
         }
 
-        /* --- Premium Slide Templates --- */
-        .slide-dark-hero {
+        /* Premium Templates */
+        .slide-dark {
             background: linear-gradient(135deg, #09090b 0%, #1e1b4b 100%);
             color: white;
         }
-        .slide-glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
-            padding: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         /* Edit Controls */
@@ -58,117 +68,118 @@
         [contenteditable="true"]:focus { border-color: #6366f1; background: rgba(99, 102, 241, 0.1); cursor: text; }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; border: 2px solid #0b0f19; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
-        /* Print Settings */
+        /* Print Logic */
         @media print {
-            nav, #sidebar, .no-print { display: none !important; }
+            nav, #sidebar, .no-print, #sidebar-toggle { display: none !important; }
             body, #workspace-container { background: white !important; padding: 0 !important; overflow: visible !important; display: block !important; }
-            .presentation-slide { transform: none !important; box-shadow: none !important; page-break-after: always; margin: 0 !important; border: none !important; }
+            #slide-scaler { transform: none !important; margin: 0 !important; gap: 0 !important; display: block !important; }
+            .presentation-slide { box-shadow: none !important; border-radius: 0 !important; page-break-after: always; margin: 0 !important; border: none !important; }
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
     </style>
 </head>
 <body class="flex flex-col h-screen">
 
-    <nav class="h-14 border-b border-slate-800 bg-[#0f111a] flex items-center justify-between px-6 z-50 shrink-0">
+    <nav class="h-16 border-b border-slate-800 bg-[#0b0f19] flex items-center justify-between px-6 z-50 shrink-0">
         <div class="flex items-center gap-6">
-            <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-sm bg-slate-800/50 hover:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">
-                <i class="fas fa-chevron-left"></i> Zurück zum Dashboard
+            <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-sm bg-slate-800/40 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700">
+                <i class="fas fa-arrow-left"></i> Dashboard
             </a>
-            
             <div class="h-6 w-px bg-slate-800"></div>
-            
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
                 <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                    <i class="fas fa-layer-group text-white text-xs"></i>
+                    <i class="fas fa-microscope text-white text-xs"></i>
                 </div>
-                <span class="font-black text-lg tracking-tighter">SLM<span class="text-indigo-500">.studio</span></span>
+                <span class="font-black text-xl tracking-tighter">SLM<span class="text-indigo-500">.studio</span></span>
             </div>
         </div>
 
-        <div id="editor-toolbar" class="hidden items-center gap-1 bg-slate-800 p-1 rounded-lg border border-slate-700 no-print">
-            <button onclick="document.execCommand('bold')" class="w-8 h-8 rounded hover:bg-slate-700 text-slate-300"><i class="fas fa-bold"></i></button>
-            <button onclick="document.execCommand('italic')" class="w-8 h-8 rounded hover:bg-slate-700 text-slate-300"><i class="fas fa-italic"></i></button>
-            <div class="w-px h-5 bg-slate-700 mx-1"></div>
-            <input type="color" onchange="document.execCommand('foreColor', false, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none p-0">
+        <div id="editor-toolbar" class="hidden items-center gap-1 bg-slate-800 p-1.5 rounded-xl border border-slate-700 shadow-xl no-print absolute left-1/2 -translate-x-1/2">
+            <button onclick="document.execCommand('bold')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-bold"></i></button>
+            <button onclick="document.execCommand('italic')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-italic"></i></button>
+            <button onclick="document.execCommand('underline')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-underline"></i></button>
+            <div class="w-px h-5 bg-slate-600 mx-2"></div>
+            <input type="color" onchange="document.execCommand('foreColor', false, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none p-0" title="Textfarbe">
         </div>
 
-        <div class="flex gap-3 items-center">
-            <span class="text-[10px] text-green-400 font-bold uppercase tracking-widest flex items-center gap-2 mr-2">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Auto-Save
-            </span>
-            <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all shadow-xl">
-                <i class="fas fa-file-pdf mr-2"></i> PDF Export
+        <div class="flex gap-4 items-center">
+            <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-6 py-2 rounded-xl font-bold text-sm uppercase tracking-widest transition-all shadow-xl flex items-center gap-2">
+                <i class="fas fa-file-pdf"></i> Export
             </button>
         </div>
     </nav>
 
     <div class="flex flex-1 overflow-hidden relative">
         
-        <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#151822] flex flex-col z-40 shrink-0 relative">
-            <div class="p-6 overflow-y-auto flex-1 space-y-6">
+        <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
+            <div class="p-6 overflow-y-auto flex-1 space-y-8 custom-scrollbar">
                 
-                <section class="space-y-3">
-                    <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Projekt-Setup</h3>
-                    <input type="text" id="topic" placeholder="Thema der Präsentation..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
-                    
-                    <textarea id="context" rows="4" placeholder="Füge hier Fallbeispiele (z.B. Herr Z.), Fragen oder spezifische Anforderungen ein..." class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors"></textarea>
-
-                    <div class="relative border border-dashed border-slate-600 rounded-xl p-4 text-center hover:border-indigo-500 hover:bg-indigo-500/5 cursor-pointer transition-all group" onclick="document.getElementById('pdf-upload').click()">
-                        <i class="fas fa-file-upload text-2xl text-slate-500 group-hover:text-indigo-400 mb-2 transition-colors"></i>
-                        <p class="text-[10px] text-slate-400 font-bold uppercase">Quell-PDF hochladen (Optional)</p>
-                        <input type="file" id="pdf-upload" class="hidden" accept=".pdf">
-                    </div>
+                <section class="space-y-4">
+                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
+                    <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
+                    <textarea id="context" rows="5" placeholder="Fallbeispiel, Symptome oder Stichpunkte hier einfügen..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors"></textarea>
                 </section>
 
-                <section class="space-y-3">
+                <section class="space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                        <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest">2. Sprecher-Team</h3>
-                        <button onclick="addSpeaker()" class="text-indigo-400 hover:text-indigo-300"><i class="fas fa-plus"></i></button>
+                        <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">2. Sprecher-Team</h3>
+                        <button onclick="addSpeaker()" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fas fa-plus-circle text-lg"></i></button>
                     </div>
-                    <div id="speaker-list" class="flex flex-wrap gap-2">
-                        </div>
+                    <div id="speaker-list" class="flex flex-wrap gap-2"></div>
                 </section>
 
-                <section class="space-y-3">
-                    <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. KI-Steuerung</h3>
+                <section class="space-y-4">
+                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Einstellungen</h3>
                     <div class="flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-300">Folienanzahl</span>
-                        <span id="slide-val" class="text-xs font-black text-indigo-400">KI entscheidet</span>
+                        <span class="text-xs font-bold text-slate-400">Folienanzahl</span>
+                        <span id="slide-val" class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">KI entscheidet</span>
                     </div>
                     <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
-                    
-                    <select id="script-type" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 mt-2">
-                        <option value="bullets">Sprecherskript: Kurz & Knackig</option>
-                        <option value="detailed">Sprecherskript: Detailliert</option>
-                        <option value="none">Keine Skripte generieren</option>
-                    </select>
                 </section>
             </div>
 
-            <div class="p-6 bg-[#0f111a] border-t border-slate-800">
-                <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
-                    <i class="fas fa-bolt"></i> Präsentation Erstellen
+            <div class="p-6 bg-[#0b0f19] border-t border-slate-800">
+                <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-4 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
+                    <i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren
                 </button>
             </div>
         </aside>
 
-        <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-8 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl" id="sidebar-toggle">
-            <i class="fas fa-chevron-left"></i>
+        <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl" id="sidebar-toggle">
+            <i class="fas fa-chevron-left text-xs"></i>
         </button>
 
         <main id="workspace-container" class="custom-scrollbar">
-            <div id="slide-scaler" class="transition-transform duration-300 origin-center">
+            <div id="slide-scaler">
                 
-                <div class="presentation-slide flex flex-col items-center justify-center text-slate-300 bg-slate-50">
-                    <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-6 shadow-inner">
-                        <i class="fas fa-pen-nib text-4xl text-slate-300"></i>
+                <div class="presentation-slide slide-dark flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+                    <div class="z-10 bg-slate-900/50 backdrop-blur-xl border border-slate-700 p-12 rounded-3xl shadow-2xl max-w-3xl">
+                        <div class="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/30">
+                            <i class="fas fa-layer-group text-3xl text-white"></i>
+                        </div>
+                        <h2 class="text-4xl font-black mb-4 tracking-tight">Willkommen im Studio</h2>
+                        <p class="text-slate-400 text-lg mb-10">Füttere die KI auf der linken Seite mit deinem Thema und Patienten-Kontext. Das System generiert automatisch Layouts, medizinische Bilder und das Quellenverzeichnis.</p>
+                        <div class="flex gap-4 justify-center">
+                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                                <i class="fas fa-1 text-2xl text-slate-600"></i>
+                                <span class="text-xs font-bold text-slate-300 uppercase">Kontext<br>eingeben</span>
+                            </div>
+                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                                <i class="fas fa-2 text-2xl text-slate-600"></i>
+                                <span class="text-xs font-bold text-slate-300 uppercase">Team<br>festlegen</span>
+                            </div>
+                            <div class="bg-slate-800/80 border border-slate-700 px-6 py-4 rounded-xl text-left flex items-center gap-4">
+                                <i class="fas fa-3 text-2xl text-indigo-500"></i>
+                                <span class="text-xs font-bold text-indigo-400 uppercase">KI<br>starten</span>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="text-2xl font-black uppercase tracking-widest text-slate-400">Leeres Canvas</h2>
-                    <p class="text-slate-500 mt-2 font-medium">Nutze die Seitenleiste, um die KI zu füttern.</p>
                 </div>
 
             </div>
@@ -176,17 +187,16 @@
     </div>
 
     <script>
-        // --- 1. UI & WORKSPACE LOGIC ---
         let isSidebarOpen = true;
         const speakers = [];
 
+        // --- 1. UI & SIDEBAR ---
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const toggleBtn = document.getElementById('sidebar-toggle');
             const icon = toggleBtn.querySelector('i');
             
             isSidebarOpen = !isSidebarOpen;
-            
             if(isSidebarOpen) {
                 sidebar.classList.remove('sidebar-closed');
                 toggleBtn.style.left = '400px';
@@ -196,12 +206,11 @@
                 toggleBtn.style.left = '0';
                 icon.classList.replace('fa-chevron-left', 'fa-chevron-right');
             }
-            // Recalculate zoom after animation
-            setTimeout(scaleSlideToFit, 400);
+            setTimeout(scaleSlideToFit, 300); // Recalculate size after animation
         }
 
         function updateSlideLabel(val) {
-            document.getElementById('slide-val').innerText = val == 0 ? 'KI entscheidet' : val + ' Folien';
+            document.getElementById('slide-val').innerText = val == 0 ? 'KI entscheidet' : val;
         }
 
         function addSpeaker() {
@@ -215,44 +224,41 @@
         function renderSpeakers() {
             const list = document.getElementById('speaker-list');
             list.innerHTML = speakers.map((s, i) => `
-                <div class="bg-indigo-900/30 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">
+                <div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">
                     ${s} <button onclick="speakers.splice(${i},1); renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button>
                 </div>
             `).join('');
         }
 
-        // --- 2. CANVAS SCALING (The Canva Effect) ---
+        // --- 2. PERFECT SCROLLING & SCALING ---
         function scaleSlideToFit() {
             const container = document.getElementById('workspace-container');
             const scaler = document.getElementById('slide-scaler');
             
-            // Available space minus some padding (40px)
-            const availableWidth = container.clientWidth - 80;
-            const availableHeight = container.clientHeight - 80;
+            // Berechne den Skalierungsfaktor basierend auf der verfügbaren Breite
+            const availableWidth = container.clientWidth - 100; // 50px Padding pro Seite
+            const scale = Math.min(availableWidth / 1280, 1); // Max Scale = 1
             
-            // Base slide dimensions (16:9)
-            const baseWidth = 1280;
-            const baseHeight = 720;
-            
-            // Calculate the required scale factor
-            const scale = Math.min(availableWidth / baseWidth, availableHeight / baseHeight);
-            
-            // Apply scale
+            // Wende Skalierung an
             scaler.style.transform = `scale(${scale})`;
+            
+            // DAS GEHEIMNIS FÜRS SCROLLING:
+            // transform:scale ändert nicht die DOM-Höhe. Wir müssen den margin-bottom anpassen, 
+            // um den durch die Verkleinerung "verlorenen" Platz auszugleichen.
+            const offsetHeight = scaler.offsetHeight;
+            const scaledHeight = offsetHeight * scale;
+            scaler.style.marginBottom = `${scaledHeight - offsetHeight}px`;
         }
 
         window.addEventListener('resize', scaleSlideToFit);
-        // Initial scale
-        setTimeout(scaleSlideToFit, 100);
 
-        // --- 3. TEXT EDITOR LOGIC ---
+        // --- 3. TEXT EDITOR ---
         document.addEventListener('focusin', (e) => {
             if(e.target.hasAttribute('contenteditable')) {
                 document.getElementById('editor-toolbar').classList.remove('hidden');
                 document.getElementById('editor-toolbar').classList.add('flex');
             }
         });
-
         document.addEventListener('mousedown', (e) => {
             if(!e.target.hasAttribute('contenteditable') && !e.target.closest('#editor-toolbar')) {
                 document.getElementById('editor-toolbar').classList.add('hidden');
@@ -260,7 +266,7 @@
             }
         });
 
-        // --- 4. AI SYNTHESIS LOGIC ---
+        // --- 4. AI SYNTHESIS (Bild-Logik + Quellen + Outro) ---
         async function generatePresentation() {
             const topic = document.getElementById('topic').value;
             const context = document.getElementById('context').value;
@@ -268,47 +274,39 @@
 
             if(!topic && !context) return alert("Bitte Thema oder Kontext eingeben!");
 
-            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Erstelle Meisterwerk...`;
+            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;
             btn.disabled = true;
 
             const finalPrompt = `
-                Erstelle eine High-End Präsentation über: "${topic}".
-                Kontext/Fallbeispiel: "${context}".
-                Sprecher: ${speakers.length > 0 ? speakers.join(', ') : 'Projekt-Team'}.
+                Erstelle eine professionelle Präsentation über: "${topic}".
+                Fallbeispiel/Daten: "${context}".
+                Sprecher-Team: ${speakers.length > 0 ? speakers.join(', ') : 'Projekt-Team'}.
 
-                Verwende diese professionellen Layout-Typen:
+                Verwende diese Layout-Typen:
                 - "title": Titelfolie
-                - "grid": Für 4 wichtige Kennzahlen/Fakten (Muss 4 kurze Boxen enthalten)
-                - "split": Text auf der linken Seite, passendes Internet-Bild auf der rechten Seite.
+                - "grid": 4 kurze Fakten-Karten.
+                - "split": Text links, Bild rechts.
                 
-                Gib AUSSCHLIESSLICH dieses JSON zurück (Kein Markdown):
+                WICHTIGE REGELN FÜR BILDER ("split"):
+                Erfinde für JEDES Bild einen komplett einzigartigen, englischen "imagePrompt" (z.B. "modern hospital room bright", "doctor looking at xray", "wheelchair empty bright window"). Keine Wiederholungen!
+
+                FÜGE IMMER DIESE ZWEI FOLIEN AM ENDE HINZU:
+                1. type: "sources" (Quellenangaben für Text/Bilder)
+                2. type: "outro" (Verabschiedung auf Deutsch "Vielen Dank für Ihre Aufmerksamkeit")
+
+                ANTWORTE NUR MIT DIESEM JSON FORMAT:
                 {
                   "slides": [
-                    {
-                      "type": "title",
-                      "headline": "...",
-                      "subtitle": "...",
-                      "speaker": "..."
-                    },
-                    {
-                      "type": "grid",
-                      "headline": "Patientenprofil",
-                      "items": [{"title": "Alter", "value": "56"}, ...],
-                      "speaker": "..."
-                    },
-                    {
-                      "type": "split",
-                      "headline": "...",
-                      "contentHtml": "<p>Fakten mit <strong>fett</strong> oder <ul><li>...</p>",
-                      "imageKeyword": "medical doctor hospital",
-                      "speaker": "..."
-                    }
+                    { "type": "title", "headline": "...", "subtitle": "...", "speaker": "..." },
+                    { "type": "split", "headline": "...", "contentHtml": "<ul><li>Punkt 1</li></ul>", "imagePrompt": "unique english keyword", "speaker": "..." },
+                    { "type": "grid", "headline": "...", "items": [{"title": "...", "value": "..."}], "speaker": "..." },
+                    { "type": "sources", "textSources": ["Fallbeispiel Herr Z.", "Pflegestandards"], "imageSources": ["Generiert durch AI"], "speaker": "Alle" },
+                    { "type": "outro", "headline": "Vielen Dank für Ihre Aufmerksamkeit", "subtitle": "Gibt es noch Fragen?", "speaker": "Alle" }
                   ]
                 }
             `;
 
             try {
-                // Aufruf deines bestehenden Backends
                 const response = await fetch('/api/grade', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -320,85 +318,85 @@
                 const parsed = JSON.parse(jsonStr);
                 
                 renderPresentation(parsed.slides);
-                
-                // Close sidebar automatically to show the result in full glory
                 if(isSidebarOpen) toggleSidebar();
 
             } catch (err) {
                 console.error(err);
-                alert("Fehler bei der KI-Generierung. Bitte erneut versuchen.");
+                alert("Fehler bei der KI-Generierung. Bitte prüfe deine Eingaben.");
             } finally {
-                btn.innerHTML = `<i class="fas fa-bolt"></i> Präsentation Erstellen`;
+                btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren`;
                 btn.disabled = false;
             }
         }
 
+        // --- 5. RENDER ENGINE ---
         function renderPresentation(slides) {
             const scaler = document.getElementById('slide-scaler');
-            scaler.innerHTML = ''; // Clear previous
-
-            // Wir rendern die Folien untereinander mit etwas Abstand (Scroll-View wie im PDF)
-            scaler.className = "flex flex-col gap-12 origin-top py-10 transition-transform duration-300";
+            scaler.innerHTML = ''; // Clear
 
             slides.forEach((s, i) => {
                 const slide = document.createElement('div');
-                slide.className = 'presentation-slide rounded-xl'; // Leichte Rundung für den Web-View
-
+                slide.className = 'presentation-slide';
                 let html = '';
                 
-                // LAYOUT 1: HERO TITLE
+                // 1. TITELFOLIE
                 if (s.type === 'title') {
-                    slide.classList.add('slide-dark-hero');
+                    slide.classList.add('slide-dark');
                     html = `
                         <div class="h-full flex flex-col justify-center items-center text-center p-20 relative">
-                            <div class="absolute top-12 left-12 text-indigo-400 font-bold uppercase tracking-[0.3em] text-sm">SLM Clinical Review</div>
-                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-8 drop-shadow-2xl">${s.headline}</h1>
-                            <div class="w-32 h-1 bg-indigo-500 mb-8 rounded-full"></div>
-                            <p contenteditable="true" class="text-2xl text-slate-300 font-light tracking-wide">${s.subtitle}</p>
+                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+                            <div class="absolute top-12 left-12 text-indigo-400 font-bold uppercase tracking-[0.3em] text-sm z-10">Klinische Fallstudie</div>
                             
-                            <div class="absolute bottom-12 right-12 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
-                                <span class="text-xs uppercase tracking-widest font-bold text-slate-300">Sprecher: <span class="text-white">${s.speaker}</span></span>
+                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-8 drop-shadow-2xl z-10">${s.headline}</h1>
+                            <div class="w-24 h-1.5 bg-indigo-500 mb-8 rounded-full z-10"></div>
+                            <p contenteditable="true" class="text-2xl text-slate-300 font-light tracking-wide z-10">${s.subtitle}</p>
+                            
+                            <div class="absolute bottom-12 right-12 glass-card px-6 py-3 rounded-full z-10">
+                                <span class="text-xs uppercase tracking-widest font-bold text-slate-300">Präsentiert von: <span class="text-white">${s.speaker}</span></span>
                             </div>
                         </div>
                     `;
                 } 
-                // LAYOUT 2: DATA GRID
+                // 2. GRID (Karten)
                 else if (s.type === 'grid') {
                     html = `
-                        <div class="h-full p-16 flex flex-col bg-slate-50">
+                        <div class="h-full p-16 flex flex-col bg-slate-50 relative">
                             <h2 contenteditable="true" class="text-5xl font-black text-slate-900 mb-12 border-l-8 border-indigo-600 pl-6">${s.headline}</h2>
                             <div class="grid grid-cols-2 gap-8 flex-1">
                                 ${(s.items || []).map(item => `
-                                    <div class="slide-glass-card bg-white shadow-xl border-none flex flex-col justify-center">
-                                        <h3 contenteditable="true" class="text-sm font-black text-indigo-500 uppercase tracking-widest mb-2">${item.title}</h3>
-                                        <p contenteditable="true" class="text-3xl font-bold text-slate-800 leading-tight">${item.value}</p>
+                                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-slate-100 flex flex-col justify-center">
+                                        <h3 contenteditable="true" class="text-sm font-black text-indigo-500 uppercase tracking-widest mb-3">${item.title}</h3>
+                                        <p contenteditable="true" class="text-2xl font-bold text-slate-700 leading-tight">${item.value}</p>
                                     </div>
                                 `).join('')}
                             </div>
-                            <div class="absolute bottom-12 right-16 text-xs font-bold uppercase text-slate-400">🎤 ${s.speaker}</div>
+                            <div class="absolute bottom-10 right-16 text-xs font-bold uppercase text-slate-400">🎤 ${s.speaker}</div>
                         </div>
                     `;
                 }
-                // LAYOUT 3: SPLIT (Text + Bild)
-                else {
-                    const imgUrl = s.imageKeyword ? `https://image.pollinations.ai/prompt/${encodeURIComponent(s.imageKeyword + ' professional medical high resolution')}?width=800&height=800&nologo=true` : 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80';
+                // 3. SPLIT (Text & Einzigartiges Bild)
+                else if (s.type === 'split') {
+                    // Generiert eine einmalige URL basierend auf dem KI-Prompt
+                    const imgUrl = s.imagePrompt 
+                        ? `https://image.pollinations.ai/prompt/${encodeURIComponent(s.imagePrompt + ' photorealistic highly detailed')}?width=800&height=800&nologo=true&n=${i}` 
+                        : `https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80`;
                     
                     html = `
                         <div class="h-full flex bg-white">
-                            <div class="w-1/2 p-16 flex flex-col justify-center">
+                            <div class="w-[55%] p-16 flex flex-col justify-center">
                                 <h2 contenteditable="true" class="text-4xl font-black text-slate-900 mb-8 leading-tight">${s.headline}</h2>
-                                <div contenteditable="true" class="prose prose-lg text-slate-700 leading-relaxed font-medium">
+                                <div contenteditable="true" class="prose prose-lg text-slate-600 leading-relaxed font-medium">
                                     ${s.contentHtml}
                                 </div>
                                 <div class="mt-auto pt-8 border-t border-slate-200 text-xs font-bold uppercase text-slate-400">
-                                    Speaker: <span class="text-indigo-600">${s.speaker}</span>
+                                    🎤 Sprecher: <span class="text-indigo-600">${s.speaker}</span>
                                 </div>
                             </div>
-                            <div class="w-1/2 relative p-6">
-                                <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative group">
-                                    <img src="${imgUrl}" class="w-full h-full object-cover">
+                            <div class="w-[45%] relative p-8">
+                                <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl relative group bg-slate-100">
+                                    <img src="${imgUrl}" class="w-full h-full object-cover" alt="Medical Image">
                                     <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all no-print">
-                                        <button onclick="document.getElementById('img-upload-${i}').click()" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm shadow-xl hover:scale-105 transition-transform"><i class="fas fa-image mr-2"></i>Bild tauschen</button>
+                                        <button onclick="document.getElementById('img-upload-${i}').click()" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-bold text-sm shadow-xl"><i class="fas fa-image mr-2"></i>Bild tauschen</button>
                                         <input type="file" id="img-upload-${i}" class="hidden" accept="image/*" onchange="const reader = new FileReader(); reader.onload = e => this.previousElementSibling.previousElementSibling.src = e.target.result; reader.readAsDataURL(this.files[0]);">
                                     </div>
                                 </div>
@@ -406,28 +404,52 @@
                         </div>
                     `;
                 }
+                // 4. QUELLENVERZEICHNIS
+                else if (s.type === 'sources') {
+                    html = `
+                        <div class="h-full p-20 flex flex-col bg-slate-900 text-white">
+                            <h2 contenteditable="true" class="text-5xl font-black mb-16 border-l-8 border-indigo-500 pl-6">Quellenverzeichnis</h2>
+                            <div class="flex gap-16 flex-1">
+                                <div class="w-1/2 bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+                                    <h3 class="text-xl font-bold text-indigo-400 mb-6 flex items-center"><i class="fas fa-book-medical mr-3"></i> Textinformationen</h3>
+                                    <ul contenteditable="true" class="list-disc list-inside text-lg text-slate-300 space-y-3">
+                                        ${(s.textSources || ["Eigene Daten"]).map(src => `<li>${src}</li>`).join('')}
+                                    </ul>
+                                </div>
+                                <div class="w-1/2 bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+                                    <h3 class="text-xl font-bold text-indigo-400 mb-6 flex items-center"><i class="fas fa-camera mr-3"></i> Bildmaterial</h3>
+                                    <ul contenteditable="true" class="list-disc list-inside text-lg text-slate-300 space-y-3">
+                                        ${(s.imageSources || ["KI Generiert (Pollinations AI)", "Unsplash"]).map(src => `<li>${src}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                // 5. OUTRO (Danke)
+                else if (s.type === 'outro') {
+                    html = `
+                        <div class="h-full flex flex-col justify-center items-center text-center p-20 bg-indigo-950 text-white relative overflow-hidden">
+                            <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-600 rounded-full blur-3xl opacity-30"></div>
+                            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-30"></div>
+                            
+                            <i class="fas fa-hands-clapping text-6xl text-indigo-400 mb-8 z-10"></i>
+                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6 z-10">${s.headline || 'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
+                            <p contenteditable="true" class="text-3xl text-indigo-200 font-light z-10">${s.subtitle || 'Gibt es noch Fragen?'}</p>
+                        </div>
+                    `;
+                }
 
                 slide.innerHTML = html;
                 scaler.appendChild(slide);
-
-                // Optionale Skript-Anzeige unter der Folie
-                const scriptMode = document.getElementById('script-type').value;
-                if(scriptMode !== 'none') {
-                    const scriptBox = document.createElement('div');
-                    scriptBox.className = "w-[1280px] bg-slate-800 p-6 rounded-xl border border-slate-700 mb-8 no-print";
-                    scriptBox.innerHTML = `
-                        <p class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-microphone mr-2"></i> Skript für ${s.speaker}</p>
-                        <div contenteditable="true" class="text-slate-300 text-sm leading-relaxed outline-none focus:bg-slate-700 p-2 rounded">
-                            Die KI generiert hier passende Stichpunkte oder den Fließtext basierend auf deiner Einstellung...
-                        </div>
-                    `;
-                    scaler.appendChild(scriptBox);
-                }
             });
 
-            // Re-calculate scale because height changed
-            scaleSlideToFit();
+            // WICHTIG: Nach dem Rendern Skalierung neu berechnen
+            setTimeout(scaleSlideToFit, 100);
         }
+
+        // Initiale Skalierung
+        setTimeout(scaleSlideToFit, 100);
     </script>
 </body>
 </html>
