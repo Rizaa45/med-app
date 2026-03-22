@@ -3,363 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Synthesis | Pro Editor Engine v4.0</title>
+    <title>SLM Synthesis | Pro Studio v5.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Roboto:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <style>
-        body { background: #0f172a; font-family: 'Inter', sans-serif; color: #f8fafc; overflow-x: hidden; }
-        
-        /* Document Styles */
-        .page-presentation { aspect-ratio: 16/9; width: 100%; max-width: 1100px; background: white; color: #1e293b; margin: 0 auto 3rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); overflow: hidden; display: flex; flex-direction: column; position: relative; }
-        .page-flyer { width: 210mm; min-height: 297mm; background: white; color: #1e293b; margin: 0 auto 3rem; padding: 20mm; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); position: relative; }
-
-        /* --- THE CUTTING EDGE EDITOR STYLES --- */
-        
-        /* Draggable Wrapper */
-        .editable-block {
-            position: relative;
-            transition: outline 0.2s;
-            border-radius: 8px;
-            z-index: 10;
-        }
-        
-        /* Hover Effects for blocks */
-        .editable-block:hover { outline: 2px dashed #cbd5e1; background: rgba(0,0,0,0.01); z-index: 20; }
-        .editable-block:focus-within { outline: 2px solid #4f46e5; background: transparent; z-index: 30; }
-
-        /* The Drag Handle (Six Dots) */
-        .drag-handle {
-            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
-            background: #4f46e5; color: white; border-radius: 4px; padding: 2px 8px;
-            font-size: 10px; cursor: grab; opacity: 0; transition: opacity 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .editable-block:hover .drag-handle { opacity: 1; }
-        .drag-handle:active { cursor: grabbing; background: #3730a3; }
-
-        /* Text Editor Toolbar */
-        #smart-toolbar { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: translateY(-20px); }
-        #smart-toolbar.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
-        
-        .toolbar-btn { padding: 6px 12px; border-radius: 6px; transition: background 0.2s; color: #e2e8f0; }
-        .toolbar-btn:hover { background: #334155; color: white; }
-        
-        /* Content Editable Reset */
-        [contenteditable="true"] { outline: none; min-height: 20px; width: 100%; }
-
-        @media print {
-            nav, .sidebar, .no-print, .drag-handle, #smart-toolbar { display: none !important; }
-            body { background: white; padding: 0; color: black; }
-            .canvas-container { padding: 0 !important; background: transparent !important; }
-            .document-page { box-shadow: none !important; margin: 0 !important; border: none !important; page-break-after: always; transform: none !important; } /* Reset transforms for perfect printing */
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <style id="print-orientation"></style>
 </head>
-<body class="h-screen flex flex-col">
+<body class="h-screen flex flex-col bg-slate-900 text-slate-100 overflow-hidden">
 
-    <div id="smart-toolbar" class="fixed top-24 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 shadow-2xl rounded-xl p-2 z-[100] flex items-center gap-1 opacity-0 pointer-events-none no-print">
-        
-        <select onchange="formatText('fontName', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer">
+    <div id="smart-toolbar" class="fixed top-24 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 shadow-2xl rounded-xl p-2 z-[100] flex items-center gap-1 opacity-0 pointer-events-none no-print transition-all duration-300">
+        <select id="font-family" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer">
             <option value="Inter">Inter</option>
             <option value="Playfair Display">Playfair</option>
-            <option value="Roboto">Roboto</option>
-            <option value="Courier Prime">Courier</option>
         </select>
-        
-        <select onchange="formatText('fontSize', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer ml-1">
-            <option value="3">Normal</option>
-            <option value="1">Winzig</option>
-            <option value="4">Mittel</option>
-            <option value="5">Groß</option>
-            <option value="6">Riesig</option>
-        </select>
-
         <div class="w-px h-6 bg-slate-700 mx-2"></div>
-
-        <button onclick="formatText('bold')" class="toolbar-btn font-bold" title="Fett"><i class="fas fa-bold"></i></button>
-        <button onclick="formatText('italic')" class="toolbar-btn italic" title="Kursiv"><i class="fas fa-italic"></i></button>
-        <button onclick="formatText('underline')" class="toolbar-btn underline" title="Unterstrichen"><i class="fas fa-underline"></i></button>
-        
+        <button data-command="bold" class="toolbar-btn font-bold"><i class="fas fa-bold"></i></button>
+        <button data-command="italic" class="toolbar-btn italic"><i class="fas fa-italic"></i></button>
         <div class="w-px h-6 bg-slate-700 mx-2"></div>
-        
-        <button onclick="formatText('justifyLeft')" class="toolbar-btn" title="Links"><i class="fas fa-align-left"></i></button>
-        <button onclick="formatText('justifyCenter')" class="toolbar-btn" title="Zentriert"><i class="fas fa-align-center"></i></button>
-        
+        <input type="color" id="color-picker" class="w-8 h-8 rounded cursor-pointer bg-transparent border-none">
         <div class="w-px h-6 bg-slate-700 mx-2"></div>
-
-        <div class="relative flex items-center">
-            <i class="fas fa-palette text-slate-400 absolute left-2 pointer-events-none text-sm"></i>
-            <input type="color" onchange="formatText('foreColor', this.value)" class="w-8 h-8 rounded cursor-pointer bg-transparent border-none pl-6" title="Textfarbe">
-        </div>
+        <button id="add-text-btn" class="toolbar-btn text-indigo-400 hover:text-indigo-300" title="Textfeld hinzufügen"><i class="fas fa-font"></i></button>
+        <button id="add-img-btn" class="toolbar-btn text-indigo-400 hover:text-indigo-300" title="Bild hinzufügen"><i class="fas fa-image"></i></button>
     </div>
 
-    <nav class="h-20 border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 no-print shrink-0 flex items-center justify-between px-8">
-        <button onclick="location.href='index.html'" class="text-slate-400 hover:text-white transition-all font-bold">
-            <i class="fas fa-arrow-left mr-2"></i> Dashboard
-        </button>
-        <div class="text-center">
-            <span class="font-black uppercase text-xl italic">SLM <span class="text-indigo-500">Synthesis</span></span>
-            <p class="text-[8px] text-slate-500 font-bold tracking-[0.4em] uppercase">Canvas Editor v4.0</p>
+    <nav class="h-16 border-b border-slate-800 bg-slate-950 flex items-center justify-between px-8 z-50 no-print shrink-0">
+        <div class="font-black uppercase tracking-widest text-lg">
+            SLM <span class="text-indigo-500">Studio</span>
         </div>
-        <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all shadow-lg">
-            <i class="fas fa-file-pdf mr-2"></i> PDF Export
-        </button>
+        <div class="flex gap-4">
+            <button id="export-pdf" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-all">
+                <i class="fas fa-file-pdf mr-2"></i> PDF Export
+            </button>
+        </div>
     </nav>
 
     <div class="flex flex-1 overflow-hidden">
-        <aside class="sidebar w-[350px] bg-slate-900 border-r border-slate-800 flex flex-col no-print shrink-0 z-10">
-            <div class="p-6 overflow-y-auto flex-1 space-y-6">
-                <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block">Format</label>
-                    <div class="flex gap-2 bg-slate-800 p-1 rounded-xl">
-                        <button onclick="setType('presentation')" id="btn-presentation" class="flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow">Präsentation</button>
-                        <button onclick="setType('flyer')" id="btn-flyer" class="flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white">Flyer</button>
+        <aside class="w-[400px] bg-slate-900 border-r border-slate-800 flex flex-col no-print shrink-0 z-10 overflow-y-auto custom-scrollbar">
+            <div class="p-6 space-y-8">
+                
+                <section>
+                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2"><i class="fas fa-database mr-2"></i> 1. Kontext & Daten</h3>
+                    <input type="text" id="topic" placeholder="Hauptthema (z.B. Myokardinfarkt)" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white mb-3 outline-none focus:border-indigo-500">
+                    
+                    <textarea id="case-study" rows="3" placeholder="Fallbeispiel oder spezifische Anweisungen eingeben..." class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white outline-none focus:border-indigo-500 mb-3"></textarea>
+                    
+                    <div class="relative border-2 border-dashed border-slate-700 rounded-lg p-4 text-center hover:border-indigo-500 transition-colors cursor-pointer" onclick="document.getElementById('pdf-upload').click()">
+                        <i class="fas fa-file-pdf text-2xl text-slate-500 mb-2"></i>
+                        <p class="text-xs text-slate-400 font-bold">PDF Material hochladen (Optional)</p>
+                        <input type="file" id="pdf-upload" accept=".pdf" class="hidden">
+                        <p id="pdf-status" class="text-[10px] text-indigo-400 mt-1 hidden">Datei geladen!</p>
                     </div>
-                </div>
+                </section>
 
-                <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block">Thema & Fokus</label>
-                    <input type="text" id="topic" placeholder="Z.B. Anatomie des Herzens" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white mb-2 outline-none focus:border-indigo-500">
-                    <textarea id="instructions" rows="2" placeholder="Spezielle Wünsche..." class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500"></textarea>
-                </div>
+                <section>
+                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2 flex justify-between items-center">
+                        <span><i class="fas fa-users mr-2"></i> 2. Sprecher-Team</span>
+                        <button id="add-speaker-btn" class="text-indigo-400 hover:text-white"><i class="fas fa-plus"></i></button>
+                    </h3>
+                    <div id="speaker-list" class="space-y-2 mb-4">
+                        </div>
 
-                <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 flex justify-between">Slides: <span id="slide-label" class="text-indigo-400">4</span></label>
-                    <input type="range" id="slideCount" min="3" max="10" value="4" oninput="document.getElementById('slide-label').innerText = this.value" class="w-full accent-indigo-500">
-                </div>
+                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Skript-Generierung</label>
+                    <select id="script-type" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-sm text-white outline-none focus:border-indigo-500">
+                        <option value="none">Keine Skripte (Nur Folien)</option>
+                        <option value="bullets">Kurze Stichpunkte (Fakten)</option>
+                        <option value="detailed">Detaillierter Fließtext</option>
+                    </select>
+                </section>
+
+                <section>
+                    <h3 class="text-xs font-black text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2"><i class="fas fa-layer-group mr-2"></i> 3. Folien & Layout</h3>
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Anzahl inhaltlicher Folien:</label>
+                        <span id="slide-count-label" class="text-indigo-400 font-bold">5</span>
+                    </div>
+                    <input type="range" id="slide-count" min="3" max="15" value="5" class="w-full accent-indigo-500">
+                </section>
+
             </div>
             
-            <div class="p-6 bg-slate-900 border-t border-slate-800">
-                <button onclick="generateDocument()" id="genBtn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-lg uppercase tracking-widest text-xs transition-all">
-                    <i class="fas fa-magic mr-2"></i> Generieren
+            <div class="p-6 bg-slate-950 border-t border-slate-800 mt-auto sticky bottom-0 z-20">
+                <button id="generate-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-lg uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-wand-magic-sparkles"></i> Synthese Starten
                 </button>
             </div>
         </aside>
 
-        <main class="flex-1 overflow-y-auto bg-slate-950 p-8 scroll-smooth canvas-container" id="main-canvas">
-            <div id="output-area">
-                <div class="flex flex-col items-center justify-center h-[50vh] text-slate-500">
-                    <i class="fas fa-layer-group text-5xl mb-4 opacity-30"></i>
-                    <p class="font-bold uppercase tracking-widest text-xs">Leeres Canvas</p>
+        <main class="flex-1 overflow-y-auto bg-slate-800 p-8 scroll-smooth" id="main-canvas">
+            <div id="document-container" class="flex flex-col items-center gap-8 pb-20">
+                <div class="flex flex-col items-center justify-center h-[50vh] text-slate-500 w-full">
+                    <i class="fas fa-project-diagram text-6xl mb-6 opacity-20"></i>
+                    <p class="font-bold uppercase tracking-widest text-sm opacity-50">Warte auf Kontext-Daten...</p>
                 </div>
             </div>
         </main>
     </div>
 
-    <script>
-        // --- TEXT FORMATTING ---
-        function formatText(command, value = null) {
-            document.execCommand(command, false, value);
-            // Ensure focus stays on the text area
-            const activeEl = document.activeElement;
-            if (activeEl && activeEl.hasAttribute('contenteditable')) {
-                activeEl.focus();
-            }
-        }
-
-        // Toolbar Visibility Logic
-        const toolbar = document.getElementById('smart-toolbar');
-        
-        document.addEventListener('focusin', (e) => {
-            if(e.target.hasAttribute('contenteditable')) {
-                toolbar.classList.add('active');
-            }
-        });
-
-        document.getElementById('main-canvas').addEventListener('mousedown', (e) => {
-            // Hide toolbar if clicking completely outside an editable area and not on the toolbar itself
-            if(!e.target.hasAttribute('contenteditable') && !e.target.closest('#smart-toolbar') && !e.target.closest('.editable-block')) {
-                toolbar.classList.remove('active');
-            }
-        });
-
-        // --- DRAG AND DROP LOGIC (Cutting Edge CSS Transform) ---
-        let isDragging = false;
-        let currentDragElement = null;
-        let startX, startY;
-        let initialTranslateX = 0, initialTranslateY = 0;
-
-        document.addEventListener('mousedown', (e) => {
-            // Check if we clicked the drag handle
-            if (e.target.classList.contains('drag-handle') || e.target.closest('.drag-handle')) {
-                isDragging = true;
-                currentDragElement = e.target.closest('.editable-block');
-                
-                startX = e.clientX;
-                startY = e.clientY;
-
-                // Parse existing transform or set to 0
-                const transform = window.getComputedStyle(currentDragElement).transform;
-                if (transform !== 'none') {
-                    const matrix = new DOMMatrix(transform);
-                    initialTranslateX = matrix.m41;
-                    initialTranslateY = matrix.m42;
-                } else {
-                    initialTranslateX = 0;
-                    initialTranslateY = 0;
-                }
-                
-                // Prevent text selection while dragging
-                e.preventDefault(); 
-            }
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging || !currentDragElement) return;
-
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-
-            const newX = initialTranslateX + dx;
-            const newY = initialTranslateY + dy;
-
-            // Apply visual move
-            currentDragElement.style.transform = `translate(${newX}px, ${newY}px)`;
-        });
-
-        document.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                currentDragElement = null;
-            }
-        });
-
-        // --- IMAGE UPLOAD LOGIC ---
-        function handleImageUpload(input, targetId) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById(targetId).setAttribute('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
-
-    <script>
-        let currentType = "presentation";
-
-        function setType(type) {
-            currentType = type;
-            document.getElementById('btn-presentation').className = type === 'presentation' ? "flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow" : "flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white";
-            document.getElementById('btn-flyer').className = type === 'flyer' ? "flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow" : "flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white";
-            document.getElementById('print-orientation').innerHTML = type === 'presentation' ? `@media print { @page { size: landscape; margin: 0; } }` : `@media print { @page { size: portrait; margin: 0; } }`;
-        }
-
-        // Creates a block that can be moved and edited
-        function createEditableBlock(contentHtml, customClasses = "") {
-            return `
-                <div class="editable-block ${customClasses}">
-                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i> Bewegen</div>
-                    <div contenteditable="true" class="w-full">${contentHtml}</div>
-                </div>
-            `;
-        }
-
-        // Creates an image block that can be moved and has an upload button
-        function createEditableImage(imgUrl, imgId, caption, customClasses = "") {
-            return `
-                <div class="editable-block ${customClasses}">
-                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i> Bewegen</div>
-                    <div class="relative w-full h-full group rounded-2xl overflow-hidden border border-slate-200">
-                        <img src="${imgUrl}" id="${imgId}" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center no-print">
-                            <button onclick="document.getElementById('${imgId}-input').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-upload mr-2"></i>Bild ändern</button>
-                            <input type="file" id="${imgId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${imgId}')">
-                        </div>
-                    </div>
-                    <div contenteditable="true" class="text-[10px] text-center mt-2 text-slate-500 font-bold uppercase tracking-widest">${caption}</div>
-                </div>
-            `;
-        }
-
-        async function generateDocument() {
-            const topic = document.getElementById('topic').value;
-            if(!topic) return alert("Thema fehlt!");
-            
-            const btn = document.getElementById('genBtn');
-            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Erstelle...`;
-            btn.disabled = true;
-
-            const finalPrompt = `
-                Erstelle ein Dokument (${currentType}) über: "${topic}".
-                Fokus: "${document.getElementById('instructions').value || 'Keine'}".
-                Anzahl Sektionen: ${document.getElementById('slideCount').value}.
-                Antworte ALS REINES JSON:
-                {
-                  "title": "Titel", "subtitle": "Untertitel",
-                  "pages": [{"title": "Überschrift", "contentHtml": "<p>Text</p><ul><li>Punkt</li></ul>", "imageKeyword": "2 englische wörter für bild", "imageCaption": "Bildbeschreibung"}],
-                  "sources": ["Quelle 1"]
-                }
-            `;
-
-            try {
-                const response = await fetch('/api/grade', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: finalPrompt })
-                });
-                
-                const data = await response.json();
-                const jsonText = data.text.replace(/```json|```/g, '').trim();
-                renderResult(JSON.parse(jsonText));
-            } catch (error) {
-                alert("Fehler bei der Generierung.");
-            } finally {
-                btn.innerHTML = `<i class="fas fa-magic mr-2"></i> Generieren`;
-                btn.disabled = false;
-            }
-        }
-
-        function renderResult(data) {
-            let html = '';
-
-            // Title Page
-            html += `<div class="document-page ${currentType === 'presentation' ? 'page-presentation' : 'page-flyer'} p-12 flex flex-col items-center justify-center text-center bg-slate-50">`;
-            html += createEditableBlock(`<h1 style="font-family: 'Playfair Display'; font-size: 4rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 1rem;">${data.title}</h1>`, "w-full max-w-4xl");
-            html += createEditableBlock(`<p style="font-size: 1.5rem; color: #64748b; font-style: italic;">${data.subtitle}</p>`, "w-full max-w-2xl mt-4");
-            html += `</div>`;
-
-            // Content Pages
-            data.pages.forEach((page, index) => {
-                const imgId = `img-${index}`;
-                const imgUrl = page.imageKeyword ? `https://image.pollinations.ai/prompt/${encodeURIComponent(page.imageKeyword)}?width=800&height=600&nologo=true` : '';
-
-                if(currentType === 'presentation') {
-                    html += `<div class="document-page page-presentation p-12 flex flex-col bg-white">`;
-                    html += createEditableBlock(`<h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; border-bottom: 4px solid #4f46e5; padding-bottom: 0.5rem; display: inline-block; margin-bottom: 2rem;">${page.title}</h2>`, "w-full");
-                    
-                    html += `<div class="flex-1 flex gap-12 mt-4">`;
-                    // Left Text
-                    html += createEditableBlock(`<div style="font-size: 1.25rem; color: #334155; line-height: 1.6;">${page.contentHtml}</div>`, "flex-1");
-                    // Right Image
-                    if(imgUrl) html += createEditableImage(imgUrl, imgId, page.imageCaption, "w-5/12 h-[60%]");
-                    html += `</div></div>`;
-                } else {
-                    html += `<div class="document-page page-flyer bg-white">`;
-                    html += createEditableBlock(`<h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; border-left: 8px solid #4f46e5; padding-left: 1rem; margin-bottom: 1.5rem;">${page.title}</h2>`, "w-full");
-                    if(imgUrl) html += createEditableImage(imgUrl, imgId, page.imageCaption, "w-full h-64 mb-6");
-                    html += createEditableBlock(`<div style="font-size: 1rem; color: #334155; line-height: 1.8;">${page.contentHtml}</div>`, "w-full");
-                    html += `</div>`;
-                }
-            });
-
-            // Sources
-            html += `<div class="document-page ${currentType === 'presentation' ? 'page-presentation' : 'page-flyer'} p-12 bg-slate-50">`;
-            html += createEditableBlock(`<h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 2rem;">Quellen</h2>`, "w-full");
-            let sourceList = data.sources.map(s => `<li>${s}</li>`).join('');
-            html += createEditableBlock(`<ul style="list-style-type: decimal; padding-left: 2rem; color: #64748b; line-height: 2;">${sourceList}</ul>`, "w-full");
-            html += `</div>`;
-
-            document.getElementById('output-area').innerHTML = html;
-        }
-
-        // Init
-        setType('presentation');
-    </script>
+    <script src="js/editor.js" defer></script>
+    <script src="js/synthesis.js" defer></script>
 </body>
 </html>
