@@ -1,73 +1,77 @@
 // js/editor.js
-let selectedBlock = null;
-let isDragging = false;
-let isResizing = false;
 
+function initEditorForSlide(slideEl) {
+    // Macht alle .block Elemente innerhalb der Folie verschiebbar und skalierbar
+    interact('.block', { context: slideEl })
+        .draggable({
+            inertia: true,
+            modifiers: [
+                interact.modifiers.restrictRect({
+                    restriction: 'parent',
+                    endOnly: true
+                })
+            ],
+            listeners: {
+                move (event) {
+                    const target = event.target;
+                    const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+                    const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+                    target.style.transform = `translate(${x}px, ${y}px)`;
+                    target.setAttribute('data-x', x);
+                    target.setAttribute('data-y', y);
+                }
+            }
+        })
+        .resizable({
+            edges: { left: true, right: true, bottom: true, top: true },
+            listeners: {
+                move (event) {
+                    let { x, y } = event.target.dataset;
+                    x = (parseFloat(x) || 0) + event.deltaRect.left;
+                    y = (parseFloat(y) || 0) + event.deltaRect.top;
+
+                    Object.assign(event.target.style, {
+                        width: `${event.rect.width}px`,
+                        height: `${event.rect.height}px`,
+                        transform: `translate(${x}px, ${y}px)`
+                    });
+
+                    Object.assign(event.target.dataset, { x, y });
+                }
+            }
+        });
+}
+
+// Global Click Handler für Toolbar
 document.addEventListener('mousedown', (e) => {
     const block = e.target.closest('.block');
-    const resizeHandle = e.target.closest('.resize-handle');
-
-    if (resizeHandle) {
-        isResizing = true;
-        selectedBlock = resizeHandle.parentElement;
-        e.preventDefault();
-        return;
-    }
-
+    const toolbar = document.getElementById('floating-tools');
+    
     if (block) {
-        if (selectedBlock) selectedBlock.classList.remove('block-active');
-        selectedBlock = block;
-        selectedBlock.classList.add('block-active');
-        isDragging = true;
-        document.getElementById('editor-toolbar').style.display = 'flex';
-    } else if (!e.target.closest('#editor-toolbar')) {
-        if (selectedBlock) selectedBlock.classList.remove('block-active');
-        selectedBlock = null;
-        document.getElementById('editor-toolbar').style.display = 'none';
+        document.querySelectorAll('.block').forEach(b => b.classList.remove('block-active'));
+        block.classList.add('block-active');
+        toolbar.classList.remove('opacity-0', 'translate-y-20');
+        state.activeElement = block;
+    } else if (!e.target.closest('#floating-tools')) {
+        toolbar.classList.add('opacity-0', 'translate-y-20');
     }
 });
 
-document.addEventListener('mousemove', (e) => {
-    if (!selectedBlock) return;
-
-    if (isDragging) {
-        const slide = selectedBlock.closest('.slide');
-        const rect = slide.getBoundingClientRect();
-        selectedBlock.style.left = (e.clientX - rect.left - 20) + 'px';
-        selectedBlock.style.top = (e.clientY - rect.top - 20) + 'px';
-    }
-
-    if (isResizing) {
-        const rect = selectedBlock.getBoundingClientRect();
-        selectedBlock.style.width = (e.clientX - rect.left) + 'px';
-        selectedBlock.style.height = (e.clientY - rect.top) + 'px';
-    }
-});
-
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-    isResizing = false;
-});
-
-function formatDoc(cmd) {
+function execCmd(cmd) {
     document.execCommand(cmd, false, null);
 }
 
-// Bild einfügen Option
-document.getElementById('add-img-tool').addEventListener('click', () => {
-    const url = prompt("Bild URL eingeben:");
-    if (url && selectedBlock) {
-        const img = document.createElement('img');
-        img.src = url;
-        img.style.width = '100%';
-        selectedBlock.innerHTML = '';
-        selectedBlock.appendChild(img);
-        selectedBlock.appendChild(createHandle());
+// Bild einfügen
+document.getElementById('tool-img').onclick = () => {
+    const url = prompt("Bild URL oder Pfad eingeben:");
+    if (url) {
+        const slide = document.querySelector('.slide'); // Nimmt die erste sichtbare
+        const imgBlock = document.createElement('div');
+        imgBlock.className = 'block';
+        imgBlock.style.width = "400px";
+        imgBlock.innerHTML = `<img src="${url}" class="w-full h-auto rounded-lg shadow-lg">`;
+        slide.appendChild(imgBlock);
+        initEditorForSlide(slide);
     }
-});
-
-function createHandle() {
-    const h = document.createElement('div');
-    h.className = 'resize-handle';
-    return h;
-}
+};
