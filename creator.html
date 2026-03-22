@@ -3,752 +3,1035 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Studio Pro | V7 Ultimate</title>
+    <title>SLM Studio Pro | V8 Ultimate</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #0b0f19;
-            color: #f8fafc;
-            overflow: hidden;
-        }
+        body { font-family:'Plus Jakarta Sans',sans-serif; background:#0b0f19; color:#f8fafc; overflow:hidden; }
 
-        /* Sidebar */
-        #sidebar { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s; }
-        .sidebar-closed { transform: translateX(-100%); position: absolute; }
+        /* === SIDEBAR === */
+        #sidebar { transition:transform .4s cubic-bezier(.4,0,.2,1),width .4s; }
+        .sidebar-closed { transform:translateX(-100%); position:absolute; }
 
-        /* Workspace */
-        #workspace-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: radial-gradient(ellipse at center, #131826 0%, #0b0f19 70%);
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding: 2.5rem 0 4rem;
-        }
-        #slide-scaler {
-            transform-origin: top center;
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            transition: transform 0.3s ease-out;
-        }
+        /* === WORKSPACE === */
+        #workspace-container { flex:1; display:flex; flex-direction:column; align-items:center; background:radial-gradient(ellipse at center,#131826 0%,#0b0f19 70%); overflow-y:auto; overflow-x:hidden; padding:2.5rem 0 4rem; transition:padding-bottom .3s; }
+        #slide-scaler { transform-origin:top center; display:flex; flex-direction:column; gap:3rem; transition:transform .3s ease-out; }
 
-        /* Slide Base */
-        .presentation-slide {
-            width: 1280px;
-            height: 720px;
-            background: white;
-            box-shadow: 0 25px 60px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.75rem;
-            flex-shrink: 0;
-            color: #0f172a;
-        }
+        /* === SLIDE BASE === */
+        .presentation-slide { width:1280px; height:720px; background:#fff; box-shadow:0 25px 60px -12px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05); position:relative; overflow:hidden; border-radius:.75rem; flex-shrink:0; color:#0f172a; }
 
-        /* ========= THEME CLASSES ========= */
-        .theme-midnight {
-            background: linear-gradient(145deg, #0c0a1d 0%, #1e1b4b 50%, #252270 100%);
-            color: white;
-        }
-        .theme-ocean {
-            background: linear-gradient(145deg, #041525 0%, #0c4a6e 50%, #075985 100%);
-            color: white;
-        }
-        .theme-forest {
-            background: linear-gradient(145deg, #021a13 0%, #064e3b 50%, #047857 100%);
-            color: white;
-        }
-        .theme-crimson {
-            background: linear-gradient(145deg, #1a0610 0%, #6b1032 50%, #881337 100%);
-            color: white;
-        }
-        .theme-sunset {
-            background: linear-gradient(145deg, #1a0800 0%, #7c2d12 50%, #9a3412 100%);
-            color: white;
-        }
-        .theme-slate {
-            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-        }
-        .theme-clean {
-            background: #ffffff;
-            color: #0f172a;
-        }
-        .theme-warm {
-            background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%);
-            color: #0f172a;
-        }
-        .theme-soft {
-            background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
-            color: #0f172a;
-        }
+        /* === THEMES === */
+        .theme-midnight { background:linear-gradient(145deg,#0c0a1d 0%,#1e1b4b 50%,#252270 100%); color:#fff; }
+        .theme-ocean    { background:linear-gradient(145deg,#041525 0%,#0c4a6e 50%,#075985 100%); color:#fff; }
+        .theme-forest   { background:linear-gradient(145deg,#021a13 0%,#064e3b 50%,#047857 100%); color:#fff; }
+        .theme-crimson   { background:linear-gradient(145deg,#1a0610 0%,#6b1032 50%,#881337 100%); color:#fff; }
+        .theme-sunset   { background:linear-gradient(145deg,#1a0800 0%,#7c2d12 50%,#9a3412 100%); color:#fff; }
+        .theme-slate    { background:linear-gradient(145deg,#0f172a 0%,#1e293b 100%); color:#fff; }
+        .theme-clean    { background:#ffffff; color:#0f172a; }
+        .theme-warm     { background:linear-gradient(145deg,#fffbeb 0%,#fef3c7 100%); color:#0f172a; }
+        .theme-soft     { background:linear-gradient(145deg,#f8fafc 0%,#eef2ff 100%); color:#0f172a; }
 
-        /* Glass */
-        .glass-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 1.25rem;
-        }
+        /* === GLASS === */
+        .glass-card { background:rgba(255,255,255,.05); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,.1); border-radius:1.25rem; }
 
-        /* Edit */
-        [contenteditable="true"] {
-            outline: none;
-            transition: all 0.2s;
-            border: 1px dashed transparent;
-            border-radius: 4px;
-        }
-        [contenteditable="true"]:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            background: rgba(99, 102, 241, 0.04);
-        }
-        [contenteditable="true"]:focus {
-            border-color: #6366f1;
-            background: rgba(99, 102, 241, 0.08);
-        }
+        /* === EDIT === */
+        [contenteditable="true"] { outline:none; transition:all .2s; border:1px dashed transparent; border-radius:4px; }
+        [contenteditable="true"]:hover { border-color:rgba(99,102,241,.4); background:rgba(99,102,241,.04); }
+        [contenteditable="true"]:focus { border-color:#6366f1; background:rgba(99,102,241,.08); }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; height: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; border: 2px solid #0b0f19; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        /* === SCROLLBAR === */
+        ::-webkit-scrollbar { width:8px; height:8px; }
+        ::-webkit-scrollbar-track { background:transparent; }
+        ::-webkit-scrollbar-thumb { background:#1e293b; border-radius:10px; border:2px solid #0b0f19; }
+        ::-webkit-scrollbar-thumb:hover { background:#334155; }
 
-        /* Loading shimmer */
-        .img-loading {
-            background: linear-gradient(90deg, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-        .theme-midnight .img-loading, .theme-ocean .img-loading,
-        .theme-forest .img-loading, .theme-crimson .img-loading,
-        .theme-sunset .img-loading, .theme-slate .img-loading {
-            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
-            background-size: 200% 100%;
-        }
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
+        /* === IMAGE SHIMMER === */
+        .img-loading { background:linear-gradient(90deg,#e2e8f0 25%,#cbd5e1 50%,#e2e8f0 75%); background-size:200% 100%; animation:shimmer 1.5s infinite; }
+        .theme-midnight .img-loading,.theme-ocean .img-loading,.theme-forest .img-loading,.theme-crimson .img-loading,.theme-sunset .img-loading,.theme-slate .img-loading { background:linear-gradient(90deg,#1e293b 25%,#334155 50%,#1e293b 75%); background-size:200% 100%; }
+        @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
 
-        /* Slide entrance animation */
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .slide-animate {
-            animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
+        /* === SLIDE ENTRANCE === */
+        @keyframes slideIn { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+        .slide-animate { animation:slideIn .6s cubic-bezier(.22,1,.36,1) forwards; }
 
-        /* Print */
+        /* === ADDED ELEMENTS (Canva-style) === */
+        .added-element { position:absolute; z-index:20; border:2px solid transparent; border-radius:8px; transition:border-color .15s,box-shadow .15s; cursor:default; }
+        .added-element:hover,.added-element.el-selected { border-color:#6366f1; box-shadow:0 0 0 1px #6366f1; }
+        .el-controls { position:absolute; top:-36px; left:0; display:none; gap:3px; align-items:center; }
+        .added-element:hover .el-controls,.added-element.el-selected .el-controls { display:flex; }
+        .el-drag { cursor:grab; padding:3px 7px; background:#6366f1; color:#fff; border-radius:6px; font-size:9px; display:flex; align-items:center; gap:3px; user-select:none; }
+        .el-drag:active { cursor:grabbing; }
+        .el-btn { padding:3px 7px; color:#fff; border-radius:6px; font-size:9px; border:none; cursor:pointer; display:flex; align-items:center; }
+        .el-del { background:#ef4444; }
+        .el-dup { background:#6366f1; }
+        .el-color { background:#334155; }
+        .el-resize { position:absolute; bottom:-5px; right:-5px; width:12px; height:12px; background:#6366f1; border-radius:3px; cursor:nwse-resize; display:none; }
+        .added-element:hover .el-resize,.added-element.el-selected .el-resize { display:block; }
+        .el-shape { border:2px solid rgba(99,102,241,.6); }
+
+        /* === SLIDE TOOLS (add elem + bg) === */
+        .slide-tools { opacity:0; transition:opacity .2s; }
+        .presentation-slide:hover .slide-tools { opacity:1; }
+        .add-menu-dropdown { display:none; }
+        .add-menu-dropdown.open { display:block; }
+
+        /* === SCRIPT PANEL === */
+        #script-panel { transform:translateY(100%); transition:transform .35s cubic-bezier(.4,0,.2,1); }
+        #script-panel.panel-open { transform:translateY(0); }
+        .script-tab { transition:all .15s; }
+        .script-tab.tab-active { background:#6366f1; color:#fff; }
+
+        /* === TOOLBAR SELECT STYLES === */
+        .tb-select { background:#1e293b; border:1px solid #334155; color:#cbd5e1; border-radius:8px; padding:2px 6px; font-size:11px; outline:none; cursor:pointer; height:32px; }
+        .tb-select:focus { border-color:#6366f1; }
+        .tb-btn { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; border:none; cursor:pointer; transition:all .15s; background:transparent; color:#94a3b8; font-size:13px; }
+        .tb-btn:hover { background:#334155; color:#fff; }
+        .tb-btn.tb-active { background:#6366f1; color:#fff; }
+        .tb-divider { width:1px; height:20px; background:#334155; margin:0 4px; }
+
+        /* === PRINT === */
         @media print {
-            nav, #sidebar, .no-print, #sidebar-toggle, .slide-number { display: none !important; }
-            body, #workspace-container { background: white !important; padding: 0 !important; overflow: visible !important; display: block !important; }
-            #slide-scaler { transform: none !important; margin: 0 !important; gap: 0 !important; display: block !important; }
-            .presentation-slide { box-shadow: none !important; border-radius: 0 !important; page-break-after: always; margin: 0 !important; animation: none !important; opacity: 1 !important; }
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            nav,#sidebar,.no-print,#sidebar-toggle,.slide-number,.slide-tools,#script-panel,#script-toggle-btn,.el-controls,.el-resize,.added-element[data-type="shape"] { display:none !important; }
+            body,#workspace-container { background:#fff !important; padding:0 !important; overflow:visible !important; display:block !important; }
+            #slide-scaler { transform:none !important; margin:0 !important; gap:0 !important; display:block !important; }
+            .presentation-slide { box-shadow:none !important; border-radius:0 !important; page-break-after:always; margin:0 !important; animation:none !important; opacity:1 !important; }
+            .added-element { border-color:transparent !important; box-shadow:none !important; }
+            * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
         }
     </style>
 </head>
 <body class="flex flex-col h-screen">
 
-    <!-- ============ NAVIGATION ============ -->
-    <nav class="h-16 border-b border-slate-800 bg-[#0b0f19]/95 backdrop-blur-xl flex items-center justify-between px-6 z-50 shrink-0">
-        <div class="flex items-center gap-6">
-            <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-sm bg-slate-800/50 hover:bg-slate-700 px-4 py-2 rounded-xl border border-slate-700/50">
-                <i class="fas fa-arrow-left"></i> Dashboard
-            </a>
-            <div class="h-6 w-px bg-slate-800"></div>
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                    <i class="fas fa-microscope text-white text-xs"></i>
-                </div>
-                <span class="font-black text-xl tracking-tighter">SLM<span class="text-indigo-500">.studio</span></span>
-            </div>
+<!-- =============== NAVIGATION =============== -->
+<nav class="h-14 border-b border-slate-800 bg-[#0b0f19]/95 backdrop-blur-xl flex items-center justify-between px-5 z-50 shrink-0">
+    <div class="flex items-center gap-5">
+        <a href="index.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold text-xs bg-slate-800/50 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700/50">
+            <i class="fas fa-arrow-left"></i> Dashboard
+        </a>
+        <div class="h-5 w-px bg-slate-800"></div>
+        <div class="flex items-center gap-2">
+            <div class="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-microscope text-white text-[10px]"></i></div>
+            <span class="font-black text-lg tracking-tighter">SLM<span class="text-indigo-500">.studio</span></span>
         </div>
-
-        <div id="editor-toolbar" class="hidden items-center gap-1 bg-slate-800/95 backdrop-blur-xl p-1.5 rounded-xl border border-slate-700 shadow-2xl no-print absolute left-1/2 -translate-x-1/2">
-            <button onclick="document.execCommand('bold')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-bold"></i></button>
-            <button onclick="document.execCommand('italic')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-italic"></i></button>
-            <button onclick="document.execCommand('underline')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-underline"></i></button>
-            <div class="w-px h-5 bg-slate-600 mx-1"></div>
-            <button onclick="document.execCommand('insertUnorderedList')" class="w-8 h-8 rounded-lg hover:bg-slate-700 text-slate-300"><i class="fas fa-list-ul"></i></button>
-            <div class="w-px h-5 bg-slate-600 mx-1"></div>
-            <input type="color" onchange="document.execCommand('foreColor', false, this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none p-0" title="Textfarbe">
-        </div>
-
-        <div class="flex gap-4 items-center">
-            <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-6 py-2 rounded-xl font-bold text-sm uppercase tracking-widest transition-all shadow-xl flex items-center gap-2">
-                <i class="fas fa-file-pdf"></i> Export
-            </button>
-        </div>
-    </nav>
-
-    <!-- ============ MAIN LAYOUT ============ -->
-    <div class="flex flex-1 overflow-hidden relative">
-
-        <!-- SIDEBAR -->
-        <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
-            <div class="p-6 overflow-y-auto flex-1 space-y-8">
-
-                <section class="space-y-4">
-                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
-                    <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
-                    <textarea id="context" rows="5" placeholder="Fallbeispiel, Symptome oder Stichpunkte hier einfügen..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors"></textarea>
-                </section>
-
-                <section class="space-y-4">
-                    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                        <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">2. Sprecher-Team</h3>
-                        <button onclick="addSpeaker()" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fas fa-plus-circle text-lg"></i></button>
-                    </div>
-                    <div id="speaker-list" class="flex flex-wrap gap-2"></div>
-                </section>
-
-                <section class="space-y-4">
-                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Einstellungen</h3>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xs font-bold text-slate-400">Folienanzahl</span>
-                        <span id="slide-val" class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">KI entscheidet</span>
-                    </div>
-                    <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
-                </section>
-            </div>
-
-            <div class="p-6 bg-[#0b0f19] border-t border-slate-800">
-                <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-4 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
-                    <i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren
-                </button>
-            </div>
-        </aside>
-
-        <!-- SIDEBAR TOGGLE -->
-        <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl no-print" id="sidebar-toggle">
-            <i class="fas fa-chevron-left text-xs"></i>
-        </button>
-
-        <!-- WORKSPACE -->
-        <main id="workspace-container">
-            <div id="slide-scaler">
-
-                <!-- Default Welcome Slide -->
-                <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
-                    <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
-                    <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
-                    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 28px 28px;"></div>
-
-                    <div class="z-10 glass-card p-12 max-w-3xl">
-                        <div class="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/30">
-                            <i class="fas fa-layer-group text-3xl text-white"></i>
-                        </div>
-                        <h2 class="text-4xl font-black mb-4 tracking-tight">Willkommen im Studio</h2>
-                        <p class="text-slate-400 text-lg mb-10">Füttere die KI mit deinem Thema und Kontext. Das System generiert automatisch vielfältige Layouts, KI-Bilder und ein Quellenverzeichnis.</p>
-                        <div class="flex gap-4 justify-center">
-                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
-                                <i class="fas fa-1 text-2xl text-slate-600"></i>
-                                <span class="text-xs font-bold text-slate-300 uppercase">Kontext<br>eingeben</span>
-                            </div>
-                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
-                                <i class="fas fa-2 text-2xl text-slate-600"></i>
-                                <span class="text-xs font-bold text-slate-300 uppercase">Team<br>festlegen</span>
-                            </div>
-                            <div class="bg-white/5 border border-white/10 px-6 py-4 rounded-xl text-left flex items-center gap-4">
-                                <i class="fas fa-3 text-2xl text-indigo-500"></i>
-                                <span class="text-xs font-bold text-indigo-400 uppercase">KI<br>starten</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
     </div>
 
-    <!-- ============ JAVASCRIPT ============ -->
-    <script>
-        // ==========================================
-        //  STATE & CONFIG
-        // ==========================================
-        let isSidebarOpen = true;
-        const speakers = [];
+    <!-- === ENHANCED EDITOR TOOLBAR === -->
+    <div id="editor-toolbar" class="hidden items-center gap-1 bg-[#111827]/95 backdrop-blur-xl p-1.5 rounded-xl border border-slate-700 shadow-2xl no-print absolute left-1/2 -translate-x-1/2 max-w-[95vw] overflow-x-auto">
+        <select onchange="document.execCommand('fontName',false,this.value);this.blur()" class="tb-select w-[110px]">
+            <option value="Plus Jakarta Sans">Jakarta</option>
+            <option value="Playfair Display">Playfair</option>
+            <option value="Inter">Inter</option>
+            <option value="DM Sans">DM Sans</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier</option>
+        </select>
+        <select onchange="setFontSize(this.value);this.blur()" class="tb-select w-[68px]">
+            <option value="12">12px</option>
+            <option value="14">14px</option>
+            <option value="16" selected>16px</option>
+            <option value="18">18px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="28">28px</option>
+            <option value="32">32px</option>
+            <option value="40">40px</option>
+            <option value="48">48px</option>
+            <option value="64">64px</option>
+        </select>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('bold')" class="tb-btn" title="Fett"><i class="fas fa-bold"></i></button>
+        <button onclick="document.execCommand('italic')" class="tb-btn" title="Kursiv"><i class="fas fa-italic"></i></button>
+        <button onclick="document.execCommand('underline')" class="tb-btn" title="Unterstrichen"><i class="fas fa-underline"></i></button>
+        <button onclick="document.execCommand('strikeThrough')" class="tb-btn" title="Durchgestrichen"><i class="fas fa-strikethrough"></i></button>
+        <div class="tb-divider"></div>
+        <label class="tb-btn relative" title="Textfarbe">
+            <i class="fas fa-font"></i>
+            <input type="color" value="#000000" onchange="document.execCommand('foreColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+        </label>
+        <label class="tb-btn relative" title="Hervorhebung">
+            <i class="fas fa-highlighter"></i>
+            <input type="color" value="#fef08a" onchange="document.execCommand('hiliteColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+        </label>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('justifyLeft')" class="tb-btn" title="Links"><i class="fas fa-align-left"></i></button>
+        <button onclick="document.execCommand('justifyCenter')" class="tb-btn" title="Mitte"><i class="fas fa-align-center"></i></button>
+        <button onclick="document.execCommand('justifyRight')" class="tb-btn" title="Rechts"><i class="fas fa-align-right"></i></button>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('insertUnorderedList')" class="tb-btn" title="Liste"><i class="fas fa-list-ul"></i></button>
+        <button onclick="document.execCommand('insertOrderedList')" class="tb-btn" title="Num. Liste"><i class="fas fa-list-ol"></i></button>
+        <div class="tb-divider"></div>
+        <button onclick="document.execCommand('removeFormat')" class="tb-btn" title="Format entfernen"><i class="fas fa-eraser"></i></button>
+    </div>
 
-        const darkThemes = [
-            { cls: 'theme-midnight', accent: '#818cf8', name: 'indigo' },
-            { cls: 'theme-ocean',    accent: '#38bdf8', name: 'sky' },
-            { cls: 'theme-forest',   accent: '#34d399', name: 'emerald' },
-            { cls: 'theme-crimson',  accent: '#fb7185', name: 'rose' },
-            { cls: 'theme-sunset',   accent: '#fb923c', name: 'orange' },
-        ];
-        const lightThemes = [
-            { cls: 'theme-clean', accent: '#6366f1', name: 'indigo' },
-            { cls: 'theme-warm',  accent: '#d97706', name: 'amber' },
-            { cls: 'theme-soft',  accent: '#6366f1', name: 'indigo' },
-        ];
+    <div class="flex gap-3 items-center">
+        <button id="script-toggle-btn" onclick="toggleScriptPanel()" class="hidden bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-all border border-slate-700 items-center gap-2 no-print">
+            <i class="fas fa-scroll"></i> Skript
+        </button>
+        <button onclick="window.print()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all shadow-xl flex items-center gap-2">
+            <i class="fas fa-file-pdf"></i> Export
+        </button>
+    </div>
+</nav>
 
-        // 5 decoration patterns for dark slides
-        const darkDecorations = [
-            (a) => `
-                <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:0.08"></div>
-                <div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:0.06"></div>
-                <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
-            (a) => `
-                <div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div>
-                <div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
-            (a) => `
-                <div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px)"></div>
-                <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:0.06"></div>`,
-            (a) => `
-                <div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,0.02) 80px,rgba(255,255,255,0.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,0.02) 80px,rgba(255,255,255,0.02) 81px)"></div>
-                <div class="absolute top-10 right-10 w-48 h-48 rounded-full blur-3xl" style="background:${a};opacity:0.1"></div>`,
-            (a) => `
-                <div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 20% 50%,${a}10,transparent 50%),radial-gradient(ellipse at 80% 80%,${a}08,transparent 50%)"></div>
-                <div class="absolute bottom-0 right-0 w-[500px] h-[300px]" style="background:linear-gradient(135deg,transparent 40%,${a}08 100%)"></div>`,
-        ];
+<!-- =============== MAIN LAYOUT =============== -->
+<div class="flex flex-1 overflow-hidden relative">
 
-        let darkThemeIdx = 0, lightThemeIdx = 0, decoIdx = 0;
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
+        <div class="p-5 overflow-y-auto flex-1 space-y-7">
 
-        function nextDark()  { const t = darkThemes[darkThemeIdx % darkThemes.length]; darkThemeIdx++; return t; }
-        function nextLight() { const t = lightThemes[lightThemeIdx % lightThemes.length]; lightThemeIdx++; return t; }
-        function getDeco(accent) { const fn = darkDecorations[decoIdx % darkDecorations.length]; decoIdx++; return fn(accent); }
+            <section class="space-y-3">
+                <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
+                <input type="text" id="topic" placeholder="Hauptthema (z.B. Fall Herr Z.)" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors">
+                <textarea id="context" rows="5" placeholder="Fallbeispiel, Symptome oder Stichpunkte hier einfügen..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500 transition-colors"></textarea>
+            </section>
 
-        // ==========================================
-        //  1. UI FUNCTIONS
-        // ==========================================
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const toggleBtn = document.getElementById('sidebar-toggle');
-            const icon = toggleBtn.querySelector('i');
-            isSidebarOpen = !isSidebarOpen;
-            if (isSidebarOpen) {
-                sidebar.classList.remove('sidebar-closed');
-                toggleBtn.style.left = '400px';
-                icon.classList.replace('fa-chevron-right', 'fa-chevron-left');
-            } else {
-                sidebar.classList.add('sidebar-closed');
-                toggleBtn.style.left = '0';
-                icon.classList.replace('fa-chevron-left', 'fa-chevron-right');
-            }
-            setTimeout(scaleSlideToFit, 350);
-        }
-
-        function updateSlideLabel(val) {
-            document.getElementById('slide-val').innerText = val == 0 ? 'KI entscheidet' : val;
-        }
-
-        function addSpeaker() {
-            const name = prompt("Name des Sprechers:");
-            if (name && name.trim()) { speakers.push(name.trim()); renderSpeakers(); }
-        }
-
-        function renderSpeakers() {
-            document.getElementById('speaker-list').innerHTML = speakers.map((s, i) => `
-                <div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">
-                    ${s} <button onclick="speakers.splice(${i},1); renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button>
+            <section class="space-y-3">
+                <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                    <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">2. Sprecher-Team</h3>
+                    <button onclick="addSpeaker()" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fas fa-plus-circle text-lg"></i></button>
                 </div>
-            `).join('');
-        }
+                <div id="speaker-list" class="flex flex-wrap gap-2"></div>
+            </section>
 
-        // ==========================================
-        //  2. SCALING
-        // ==========================================
-        function scaleSlideToFit() {
-            const container = document.getElementById('workspace-container');
-            const scaler = document.getElementById('slide-scaler');
-            const availableWidth = container.clientWidth - 80;
-            const scale = Math.min(availableWidth / 1280, 1);
-            scaler.style.transform = `scale(${scale})`;
-            const h = scaler.offsetHeight;
-            scaler.style.marginBottom = `${h * scale - h}px`;
-        }
-        window.addEventListener('resize', scaleSlideToFit);
+            <section class="space-y-3">
+                <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Einstellungen</h3>
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-400">Folienanzahl</span>
+                    <span id="slide-val" class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">KI entscheidet</span>
+                </div>
+                <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
 
-        // ==========================================
-        //  3. TEXT EDITOR TOOLBAR
-        // ==========================================
-        document.addEventListener('focusin', (e) => {
-            if (e.target.hasAttribute('contenteditable')) {
-                document.getElementById('editor-toolbar').classList.remove('hidden');
-                document.getElementById('editor-toolbar').classList.add('flex');
-            }
-        });
-        document.addEventListener('mousedown', (e) => {
-            if (!e.target.hasAttribute('contenteditable') && !e.target.closest('#editor-toolbar')) {
-                document.getElementById('editor-toolbar').classList.add('hidden');
-                document.getElementById('editor-toolbar').classList.remove('flex');
-            }
-        });
-
-        // ==========================================
-        //  4. IMAGE HELPERS
-        // ==========================================
-        function getImageUrl(prompt, index) {
-            if (!prompt) return 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80';
-            const seed = Date.now() + index * 9973 + Math.floor(Math.random() * 100000);
-            const enhanced = prompt.trim() + ', photorealistic, professional medical photography, high detail, soft lighting';
-            return `https://image.pollinations.ai/prompt/${encodeURIComponent(enhanced)}?width=800&height=720&nologo=true&seed=${seed}`;
-        }
-
-        function buildImageBlock(imgUrl) {
-            return `
-                <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group bg-slate-200 dark:bg-slate-800">
-                    <div class="img-loading absolute inset-0 z-0"></div>
-                    <img src="${imgUrl}"
-                         class="w-full h-full object-cover relative z-10"
-                         alt="Slide Image"
-                         loading="lazy"
-                         onload="this.previousElementSibling.style.display='none'"
-                         onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80';this.previousElementSibling.style.display='none'">
-                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300 z-20 no-print rounded-2xl">
-                        <button onclick="this.closest('.group').querySelector('.img-upload').click()" class="bg-white text-slate-900 px-5 py-2.5 rounded-xl font-bold text-sm shadow-xl hover:bg-indigo-500 hover:text-white transition-colors">
-                            <i class="fas fa-image mr-2"></i>Bild tauschen
-                        </button>
+                <div class="pt-4 border-t border-slate-800 space-y-3">
+                    <span class="text-xs font-bold text-slate-400">Skript-Modus</span>
+                    <div class="flex gap-2">
+                        <label class="flex-1 cursor-pointer">
+                            <input type="radio" name="scriptMode" value="notes" checked class="hidden peer">
+                            <div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-slate-800 border border-slate-700 text-slate-400 text-center py-2 rounded-lg text-xs font-bold transition-all">Stichpunkte</div>
+                        </label>
+                        <label class="flex-1 cursor-pointer">
+                            <input type="radio" name="scriptMode" value="full" class="hidden peer">
+                            <div class="peer-checked:bg-indigo-600 peer-checked:border-indigo-500 peer-checked:text-white bg-slate-800 border border-slate-700 text-slate-400 text-center py-2 rounded-lg text-xs font-bold transition-all">Volltext-Skript</div>
+                        </label>
                     </div>
-                    <input type="file" class="img-upload hidden" accept="image/*"
-                           onchange="const r=new FileReader();r.onload=e=>this.closest('.group').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0]);">
-                </div>`;
-        }
+                </div>
+            </section>
+        </div>
 
-        // ==========================================
-        //  5. AI GENERATION
-        // ==========================================
-        async function generatePresentation() {
-            const topic   = document.getElementById('topic').value;
-            const context = document.getElementById('context').value;
-            const count   = document.getElementById('slide-count').value;
-            const btn     = document.getElementById('generate-btn');
+        <div class="p-5 bg-[#0b0f19] border-t border-slate-800">
+            <button id="generate-btn" onclick="generatePresentation()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-black py-3.5 rounded-xl shadow-lg shadow-indigo-500/20 uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
+                <i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren
+            </button>
+        </div>
+    </aside>
 
-            if (!topic && !context) return alert("Bitte Thema oder Kontext eingeben!");
+    <!-- SIDEBAR TOGGLE -->
+    <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl no-print" id="sidebar-toggle">
+        <i class="fas fa-chevron-left text-xs"></i>
+    </button>
 
-            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;
-            btn.disabled = true;
+    <!-- WORKSPACE -->
+    <main id="workspace-container">
+        <div id="slide-scaler">
 
-            const countRule = count > 0
-                ? `Erstelle genau ${count} Folien (inklusive Titel, Quellen und Outro).`
-                : 'Erstelle so viele Folien wie nötig (ca. 8-12).';
+            <!-- Default Welcome Slide -->
+            <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
+                <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
+                <div class="absolute -bottom-32 -left-32 w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
+                <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>
+                <div class="z-10 glass-card p-12 max-w-3xl">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/30"><i class="fas fa-layer-group text-3xl text-white"></i></div>
+                    <h2 class="text-4xl font-black mb-4 tracking-tight">Willkommen im Studio</h2>
+                    <p class="text-slate-400 text-lg mb-10">Füttere die KI mit deinem Thema und Kontext. Das System generiert automatisch vielfältige Layouts, KI-Bilder, Sprecher-Skripte und ein Quellenverzeichnis.</p>
+                    <div class="flex gap-4 justify-center flex-wrap">
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-1 text-xl text-slate-600"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">Kontext<br>eingeben</span></div>
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-2 text-xl text-slate-600"></i><span class="text-[10px] font-bold text-slate-300 uppercase leading-tight">Team<br>festlegen</span></div>
+                        <div class="bg-white/5 border border-white/10 px-5 py-3 rounded-xl text-left flex items-center gap-3"><i class="fas fa-3 text-xl text-indigo-500"></i><span class="text-[10px] font-bold text-indigo-400 uppercase leading-tight">KI<br>starten</span></div>
+                    </div>
+                </div>
+            </div>
 
-            const finalPrompt = `
+        </div>
+    </main>
+</div>
+
+<!-- =============== SCRIPT PANEL (Bottom Drawer) =============== -->
+<div id="script-panel" class="fixed bottom-0 left-0 right-0 bg-[#0d1117] border-t border-slate-700 z-[60] shadow-2xl no-print" style="height:420px;">
+    <div class="h-full flex flex-col">
+        <div class="flex items-center justify-between px-6 py-3 border-b border-slate-800 shrink-0">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-scroll text-indigo-500"></i>
+                <h3 class="font-black text-sm uppercase tracking-wider">Sprecher-Skript</h3>
+            </div>
+            <div class="flex items-center gap-2">
+                <div class="flex bg-slate-800 rounded-lg p-0.5">
+                    <button onclick="setScriptView('notes')" class="script-tab tab-active px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md transition-all" data-mode="notes">Stichpunkte</button>
+                    <button onclick="setScriptView('full')" class="script-tab px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md text-slate-400 transition-all" data-mode="full">Volltext</button>
+                </div>
+                <div class="w-px h-5 bg-slate-700"></div>
+                <button onclick="exportScript()" class="text-slate-400 hover:text-white text-xs px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-all flex items-center gap-1.5" title="Als .txt herunterladen"><i class="fas fa-download"></i> Export</button>
+                <button onclick="printScriptOnly()" class="text-slate-400 hover:text-white text-xs px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-all" title="Skript drucken"><i class="fas fa-print"></i></button>
+                <button onclick="toggleScriptPanel()" class="text-slate-400 hover:text-white text-xs w-8 h-8 rounded-lg hover:bg-slate-800 transition-all flex items-center justify-center"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div id="script-content" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
+    </div>
+</div>
+
+<!-- =============== JAVASCRIPT =============== -->
+<script>
+// ══════════════════════════════════════════
+//  STATE & CONFIG
+// ══════════════════════════════════════════
+let isSidebarOpen = true;
+let scriptPanelOpen = false;
+let scriptViewMode = 'notes';
+const speakers = [];
+let slideScripts = [];
+let activeElement = null;
+let isDragging = false, isResizing = false;
+let dragStartX, dragStartY, dragElStartLeft, dragElStartTop, resizeStartW, resizeStartH;
+
+// --- Themes ---
+const darkThemes = [
+    {cls:'theme-midnight',accent:'#818cf8'},
+    {cls:'theme-ocean',accent:'#38bdf8'},
+    {cls:'theme-forest',accent:'#34d399'},
+    {cls:'theme-crimson',accent:'#fb7185'},
+    {cls:'theme-sunset',accent:'#fb923c'},
+];
+const lightThemes = [
+    {cls:'theme-clean',accent:'#6366f1'},
+    {cls:'theme-warm',accent:'#d97706'},
+    {cls:'theme-soft',accent:'#6366f1'},
+];
+let dkIdx=0,ltIdx=0,decIdx=0;
+function nextDark(){const t=darkThemes[dkIdx%darkThemes.length];dkIdx++;return t;}
+function nextLight(){const t=lightThemes[ltIdx%lightThemes.length];ltIdx++;return t;}
+
+// --- Decorations for dark slides ---
+const darkDecos=[
+    a=>`<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:.08"></div><div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:.06"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
+    a=>`<div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
+    a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)"></div><div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:.06"></div>`,
+    a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)"></div><div class="absolute top-10 right-10 w-48 h-48 rounded-full blur-3xl" style="background:${a};opacity:.1"></div>`,
+    a=>`<div class="absolute inset-0" style="background-image:radial-gradient(ellipse at 20% 50%,${a}10,transparent 50%),radial-gradient(ellipse at 80% 80%,${a}08,transparent 50%)"></div><div class="absolute bottom-0 right-0 w-[500px] h-[300px]" style="background:linear-gradient(135deg,transparent 40%,${a}08)"></div>`,
+];
+function getDeco(accent){const fn=darkDecos[decIdx%darkDecos.length];decIdx++;return fn(accent);}
+
+// --- Image Styles (for unique images) ---
+const imgStyles=[
+    'professional DSLR photograph, f2.8, natural soft lighting, clinical setting',
+    'documentary photography, ambient window light, candid, warm tones',
+    'medical textbook illustration, clean detailed, anatomical precision',
+    'editorial magazine photography, compassionate, human element, shallow DOF',
+    'cinematic still frame, dramatic side lighting, moody atmosphere',
+    'modern minimalist photography, negative space, clean composition',
+    'photojournalism style, authentic, natural colors, available light',
+    'fine art medical photography, conceptual, creative composition',
+    'macro close-up, extreme detail, studio controlled lighting',
+    'wide angle environmental, context rich, establishing shot'
+];
+const imgModifiers=[
+    'shot from slight above angle','eye level centered','wide establishing view',
+    'over the shoulder perspective','close-up detail','side profile view',
+    'looking towards camera','hands in frame','equipment visible',
+    'soft bokeh background','symmetrical framing','leading lines composition'
+];
+const fallbackImgs=[
+    'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80'
+];
+
+// ══════════════════════════════════════════
+//  1. UI FUNCTIONS
+// ══════════════════════════════════════════
+function toggleSidebar(){
+    const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');
+    isSidebarOpen=!isSidebarOpen;
+    if(isSidebarOpen){sb.classList.remove('sidebar-closed');btn.style.left='400px';ico.classList.replace('fa-chevron-right','fa-chevron-left');}
+    else{sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right');}
+    setTimeout(scaleSlideToFit,350);
+}
+function updateSlideLabel(v){document.getElementById('slide-val').innerText=v==0?'KI entscheidet':v;}
+function addSpeaker(){const n=prompt("Name des Sprechers:");if(n&&n.trim()){speakers.push(n.trim());renderSpeakers();}}
+function renderSpeakers(){document.getElementById('speaker-list').innerHTML=speakers.map((s,i)=>`<div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">${s} <button onclick="speakers.splice(${i},1);renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button></div>`).join('');}
+
+// ══════════════════════════════════════════
+//  2. SCALING
+// ══════════════════════════════════════════
+function scaleSlideToFit(){
+    const c=document.getElementById('workspace-container'),sc=document.getElementById('slide-scaler');
+    const aw=c.clientWidth-80, scale=Math.min(aw/1280,1);
+    sc.style.transform=`scale(${scale})`;
+    const h=sc.offsetHeight;
+    sc.style.marginBottom=`${h*scale-h}px`;
+}
+function getCurrentScale(){const sc=document.getElementById('slide-scaler'),r=sc.getBoundingClientRect();return r.width/sc.offsetWidth;}
+window.addEventListener('resize',scaleSlideToFit);
+
+// ══════════════════════════════════════════
+//  3. EDITOR TOOLBAR
+// ══════════════════════════════════════════
+document.addEventListener('focusin',e=>{
+    if(e.target.hasAttribute('contenteditable')){
+        document.getElementById('editor-toolbar').classList.remove('hidden');
+        document.getElementById('editor-toolbar').classList.add('flex');
+    }
+});
+document.addEventListener('mousedown',e=>{
+    if(!e.target.hasAttribute('contenteditable')&&!e.target.closest('#editor-toolbar')&&!e.target.closest('.tb-select')){
+        document.getElementById('editor-toolbar').classList.add('hidden');
+        document.getElementById('editor-toolbar').classList.remove('flex');
+    }
+});
+function setFontSize(px){
+    document.execCommand('fontSize',false,'1');
+    const container=window.getSelection()?.anchorNode?.parentElement?.closest?.('[contenteditable]');
+    if(!container)return;
+    container.querySelectorAll('font[size="1"]').forEach(el=>{
+        const span=document.createElement('span');
+        span.style.fontSize=px+'px';
+        span.innerHTML=el.innerHTML;
+        el.parentNode.replaceChild(span,el);
+    });
+}
+
+// ══════════════════════════════════════════
+//  4. IMAGE HELPERS (truly unique)
+// ══════════════════════════════════════════
+function getImageUrl(prompt,index){
+    if(!prompt)return fallbackImgs[index%fallbackImgs.length];
+    const style=imgStyles[index%imgStyles.length];
+    const modifier=imgModifiers[(index*3+7)%imgModifiers.length];
+    const seed=Math.floor(Math.random()*999999)+Date.now()%999999+index*17389;
+    const enhanced=`${prompt.trim()}, ${style}, ${modifier}`;
+    return `https://image.pollinations.ai/prompt/${encodeURIComponent(enhanced)}?width=800&height=720&nologo=true&seed=${seed}&timestamp=${Date.now()}`;
+}
+
+function buildImageBlock(imgUrl,idx){
+    const fb=fallbackImgs[idx%fallbackImgs.length];
+    return `
+    <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group/img bg-slate-200">
+        <div class="img-loading absolute inset-0 z-0"></div>
+        <img src="${imgUrl}" class="w-full h-full object-cover relative z-10" alt="Slide Image" loading="lazy"
+             onload="this.previousElementSibling.style.display='none'"
+             onerror="this.src='${fb}';this.previousElementSibling.style.display='none'">
+        <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover/img:opacity-100 flex flex-col items-center justify-center gap-3 transition-all duration-300 z-20 no-print rounded-2xl">
+            <button onclick="this.closest('.group\\/img').querySelector('.img-upload-file').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs shadow-xl hover:bg-indigo-500 hover:text-white transition-colors">
+                <i class="fas fa-upload mr-1.5"></i>Datei hochladen
+            </button>
+            <button onclick="promptImageUrl(this)" class="bg-slate-700 text-white px-4 py-2 rounded-lg font-bold text-xs shadow-xl hover:bg-slate-600 transition-colors">
+                <i class="fas fa-link mr-1.5"></i>URL eingeben
+            </button>
+        </div>
+        <input type="file" class="img-upload-file hidden" accept="image/*"
+               onchange="const r=new FileReader();r.onload=e=>this.closest('.group\\/img').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0]);">
+    </div>`;
+}
+
+function promptImageUrl(btn){
+    const url=prompt('Bild-URL eingeben:');
+    if(url&&url.trim()){btn.closest('.group\\/img').querySelector('img').src=url.trim();}
+}
+
+// ══════════════════════════════════════════
+//  5. AI GENERATION (with scripts)
+// ══════════════════════════════════════════
+async function generatePresentation(){
+    const topic=document.getElementById('topic').value;
+    const context=document.getElementById('context').value;
+    const count=document.getElementById('slide-count').value;
+    const scriptMode=document.querySelector('input[name="scriptMode"]:checked').value;
+    const btn=document.getElementById('generate-btn');
+
+    if(!topic&&!context)return alert("Bitte Thema oder Kontext eingeben!");
+
+    btn.innerHTML=`<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;
+    btn.disabled=true;
+
+    const countRule=count>0?`Erstelle genau ${count} Folien (inklusive Titel, Quellen und Outro).`:'Erstelle so viele Folien wie nötig (ca. 8-12).';
+
+    const finalPrompt=`
 Erstelle eine professionelle medizinische Präsentation.
 Thema: "${topic}"
 Kontext/Fallbeispiel: "${context}"
-Sprecher-Team: ${speakers.length > 0 ? speakers.join(', ') : 'Projekt-Team'}
+Sprecher-Team: ${speakers.length>0?speakers.join(', '):'Projekt-Team'}
 ${countRule}
 
-VERFÜGBARE LAYOUT-TYPEN – NUTZE ABWECHSLUNG:
-- "title":    Titelfolie. Felder: headline, subtitle, speaker
-- "split":    Text links 55%, Bild rechts 45%. Felder: headline, contentHtml (HTML mit <ul><li>), imagePrompt (englisch!), speaker
-- "grid":     2×2 Karten-Raster. Felder: headline, items (Array mit {title, value}), speaker
-- "stats":    Große Statistik-Zahlen (2-4). Felder: headline, stats (Array mit {value, label}), speaker
-- "timeline": Prozess/Zeitablauf (3-4 Schritte). Felder: headline, steps (Array mit {title, description}), speaker
-- "quote":    Wichtiges Zitat. Felder: quote, author, speaker
-- "sources":  Quellenverzeichnis. Felder: textSources (Array), imageSources (Array)
-- "outro":    Abschlussfolie. Felder: headline, subtitle
+LAYOUT-TYPEN (nutze Abwechslung!):
+- "title": Titelfolie. Felder: headline, subtitle, speaker
+- "split": Text links 55%, Bild rechts 45%. Felder: headline, contentHtml (HTML mit <ul><li>), imagePrompt (englisch, EINZIGARTIG!), speaker
+- "grid": 2×2 Karten. Felder: headline, items [{title,value}], speaker
+- "stats": 2-4 große Statistik-Zahlen. Felder: headline, stats [{value,label}], speaker
+- "timeline": 3-5 Prozessschritte. Felder: headline, steps [{title,description}], speaker
+- "quote": Wichtiges Zitat. Felder: quote, author, speaker
+- "sources": Quellenverzeichnis. Felder: textSources [], imageSources []
+- "outro": Abschluss. Felder: headline, subtitle
 
 REGELN:
-1. Beginne IMMER mit "title", ende IMMER mit "sources" dann "outro"
-2. Nutze VERSCHIEDENE Layout-Typen – nicht immer dasselbe!
-3. Jeder imagePrompt muss EINZIGARTIG und auf ENGLISCH sein
-4. contentHtml: gut formatiertes HTML mit <ul><li>, <strong>, <em>
-5. Texte Deutsch, imagePrompts Englisch
-6. stats.value kurz: "85%", "3×", "24h", "12/Tag"
-7. timeline: 3-4 Schritte pro Folie
+1. Beginne IMMER mit "title", ende mit "sources" dann "outro"
+2. VERSCHIEDENE Layout-Typen nutzen!
+3. Jeder imagePrompt KOMPLETT EINZIGARTIG und ENGLISCH – beschreibe exakt unterschiedliche Szenen, Blickwinkel und Stimmungen
+4. contentHtml: formatiertes HTML (<ul><li>, <strong>, <em>)
+5. stats.value kurz: "85%", "3×", "24h"
+6. Texte Deutsch, imagePrompts Englisch
+
+SPRECHER-SKRIPT:
+Generiere für JEDE Folie:
+- "notes": 3-5 Stichpunkte auf Deutsch (mit • als Aufzählungszeichen)
+- "script": Vollständiger Redetext auf Deutsch (3-6 Sätze, natürlich und professionell)
 
 ANTWORTE NUR MIT JSON:
 {
   "slides": [
-    { "type": "title", "headline": "...", "subtitle": "...", "speaker": "..." },
-    { "type": "split", "headline": "...", "contentHtml": "<ul><li>...</li></ul>", "imagePrompt": "...", "speaker": "..." },
-    { "type": "grid", "headline": "...", "items": [{"title":"...","value":"..."}], "speaker": "..." },
-    { "type": "stats", "headline": "...", "stats": [{"value":"85%","label":"..."}], "speaker": "..." },
-    { "type": "timeline", "headline": "...", "steps": [{"title":"...","description":"..."}], "speaker": "..." },
-    { "type": "quote", "quote": "...", "author": "...", "speaker": "..." },
-    { "type": "sources", "textSources": ["..."], "imageSources": ["KI-generiert (Pollinations AI)"] },
-    { "type": "outro", "headline": "Vielen Dank für Ihre Aufmerksamkeit", "subtitle": "Haben Sie Fragen?" }
+    { "type":"title","headline":"...","subtitle":"...","speaker":"...","notes":"• Punkt 1\\n• Punkt 2","script":"Vollständiger Redetext..." },
+    { "type":"split","headline":"...","contentHtml":"<ul><li>...</li></ul>","imagePrompt":"unique english description of specific medical scene","speaker":"...","notes":"...","script":"..." },
+    { "type":"grid","headline":"...","items":[{"title":"...","value":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"stats","headline":"...","stats":[{"value":"85%","label":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"timeline","headline":"...","steps":[{"title":"...","description":"..."}],"speaker":"...","notes":"...","script":"..." },
+    { "type":"quote","quote":"...","author":"...","speaker":"...","notes":"...","script":"..." },
+    { "type":"sources","textSources":["..."],"imageSources":["KI-generiert (Pollinations AI)"],"notes":"...","script":"..." },
+    { "type":"outro","headline":"Vielen Dank für Ihre Aufmerksamkeit","subtitle":"Haben Sie Fragen?","notes":"...","script":"..." }
   ]
 }`;
 
-            try {
-                const res  = await fetch('/api/grade', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: finalPrompt })
-                });
-                const data    = await res.json();
-                const jsonStr = data.text.replace(/```json|```/g, '').trim();
-                const parsed  = JSON.parse(jsonStr);
-                renderPresentation(parsed.slides);
-                if (isSidebarOpen) toggleSidebar();
-            } catch (err) {
-                console.error(err);
-                alert("Fehler bei der KI-Generierung. Bitte prüfe deine Eingaben und versuche es erneut.");
-            } finally {
-                btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren`;
-                btn.disabled = false;
+    try{
+        const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:finalPrompt})});
+        const data=await res.json();
+        const jsonStr=data.text.replace(/```json|```/g,'').trim();
+        const parsed=JSON.parse(jsonStr);
+        renderPresentation(parsed.slides);
+        if(isSidebarOpen)toggleSidebar();
+    }catch(err){
+        console.error(err);
+        alert("Fehler bei der KI-Generierung. Bitte prüfe deine Eingaben und versuche es erneut.");
+    }finally{
+        btn.innerHTML=`<i class="fas fa-wand-magic-sparkles"></i> Präsentation generieren`;
+        btn.disabled=false;
+    }
+}
+
+// ══════════════════════════════════════════
+//  6. RENDER ENGINE
+// ══════════════════════════════════════════
+function renderPresentation(slides){
+    const scaler=document.getElementById('slide-scaler');
+    scaler.innerHTML='';
+    dkIdx=0;ltIdx=0;decIdx=0;
+    slideScripts=[];
+    let titleTheme=null;
+    const total=slides.length;
+
+    slides.forEach((s,i)=>{
+        // Store scripts
+        slideScripts.push({
+            slideNumber:i+1,
+            headline:s.headline||s.quote||s.type,
+            speaker:s.speaker||'Alle',
+            notes:s.notes||'• Keine Notizen verfügbar',
+            script:s.script||'Kein Skript verfügbar.',
+            type:s.type
+        });
+
+        const slide=document.createElement('div');
+        slide.className='presentation-slide slide-animate';
+        slide.style.animationDelay=`${i*0.08}s`;
+        slide.style.opacity='0';
+        slide.dataset.slideIndex=i;
+
+        let html='';
+        const num=`<div class="slide-number absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.2em] opacity-25 z-30 no-print">${i+1} / ${total}</div>`;
+        const tools=buildSlideTools();
+
+        // ─── TITLE ───
+        if(s.type==='title'){
+            const t=nextDark();titleTheme=t;slide.classList.add(t.cls);
+            html=`${getDeco(t.accent)}
+            <div class="h-full flex flex-col justify-center items-center text-center px-20 py-16 relative z-10">
+                <div class="absolute top-10 left-12 uppercase tracking-[.3em] text-[10px] font-bold opacity-40">Klinische Fallstudie</div>
+                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-[1.08] mb-6 max-w-4xl drop-shadow-lg">${s.headline}</h1>
+                <div class="w-24 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
+                <p contenteditable="true" class="text-2xl font-light opacity-60 max-w-2xl">${s.subtitle}</p>
+                <div class="absolute bottom-10 right-12 glass-card px-5 py-2.5">
+                    <span class="text-[10px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span>
+                </div>
+            </div>${tools}${num}`;
+        }
+        // ─── SPLIT ───
+        else if(s.type==='split'){
+            const t=nextLight();slide.classList.add(t.cls);
+            const imgUrl=getImageUrl(s.imagePrompt,i);
+            html=`<div class="h-full flex">
+                <div class="w-[55%] p-14 flex flex-col justify-center">
+                    <div class="w-14 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
+                    <h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8">${s.headline}</h2>
+                    <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60 space-y-1">${s.contentHtml}</div>
+                    <div class="mt-auto pt-6 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+                </div>
+                <div class="w-[45%] p-6 flex items-center">${buildImageBlock(imgUrl,i)}</div>
+            </div>${tools}${num}`;
+        }
+        // ─── GRID ───
+        else if(s.type==='grid'){
+            const useDk=i%2===0;const t=useDk?nextDark():nextLight();slide.classList.add(t.cls);
+            const items=(s.items||[]).slice(0,4);
+            if(useDk){
+                html=`${getDeco(t.accent)}<div class="h-full p-14 flex flex-col relative z-10">
+                    <h2 contenteditable="true" class="text-[2.3rem] font-black mb-10 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
+                    <div class="grid grid-cols-2 gap-5 flex-1">${items.map((it,idx)=>`
+                        <div class="glass-card p-7 flex flex-col justify-center hover:border-white/20 transition-colors">
+                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx+1).padStart(2,'0')}</div>
+                            <h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">${it.title}</h3>
+                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p>
+                        </div>`).join('')}</div>
+                    <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+                </div>${tools}${num}`;
+            }else{
+                html=`<div class="h-full p-14 flex flex-col">
+                    <h2 contenteditable="true" class="text-[2.3rem] font-black mb-10 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
+                    <div class="grid grid-cols-2 gap-5 flex-1">${items.map((it,idx)=>`
+                        <div class="bg-white rounded-2xl p-7 shadow-lg border border-slate-100 flex flex-col justify-center hover:shadow-xl transition-shadow">
+                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx+1).padStart(2,'0')}</div>
+                            <h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-2">${it.title}</h3>
+                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p>
+                        </div>`).join('')}</div>
+                    <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+                </div>${tools}${num}`;
             }
         }
-
-        // ==========================================
-        //  6. RENDER ENGINE
-        // ==========================================
-        function renderPresentation(slides) {
-            const scaler = document.getElementById('slide-scaler');
-            scaler.innerHTML = '';
-
-            // Reset theme cycling
-            darkThemeIdx = 0;
-            lightThemeIdx = 0;
-            decoIdx = 0;
-
-            const total = slides.length;
-            let titleTheme = null; // remember for outro
-
-            slides.forEach((s, i) => {
-                const slide = document.createElement('div');
-                slide.className = 'presentation-slide slide-animate';
-                slide.style.animationDelay = `${i * 0.08}s`;
-                slide.style.opacity = '0';
-
-                let html = '';
-                const num = `<div class="slide-number absolute bottom-5 left-6 text-[10px] font-bold uppercase tracking-[0.2em] opacity-30 z-30 no-print">${i + 1} / ${total}</div>`;
-
-                // ─────────── TITLE ───────────
-                if (s.type === 'title') {
-                    const t = nextDark();
-                    titleTheme = t;
-                    slide.classList.add(t.cls);
-                    html = `
-                        ${getDeco(t.accent)}
-                        <div class="h-full flex flex-col justify-center items-center text-center px-20 py-16 relative z-10">
-                            <div class="absolute top-10 left-12 uppercase tracking-[0.3em] text-[11px] font-bold opacity-40">Klinische Fallstudie</div>
-                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-[1.08] mb-6 max-w-4xl drop-shadow-lg">${s.headline}</h1>
-                            <div class="w-24 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
-                            <p contenteditable="true" class="text-2xl font-light opacity-60 max-w-2xl leading-relaxed">${s.subtitle}</p>
-                            <div class="absolute bottom-10 right-12 glass-card px-5 py-2.5">
-                                <span class="text-[11px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span>
-                            </div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── SPLIT ───────────
-                else if (s.type === 'split') {
-                    const t = nextLight();
-                    slide.classList.add(t.cls);
-                    const imgUrl = getImageUrl(s.imagePrompt, i);
-                    html = `
-                        <div class="h-full flex">
-                            <div class="w-[55%] p-14 flex flex-col justify-center">
-                                <div class="w-14 h-1.5 rounded-full mb-6" style="background:${t.accent}"></div>
-                                <h2 contenteditable="true" class="text-[2.6rem] font-black leading-[1.15] mb-8">${s.headline}</h2>
-                                <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-65 space-y-1">
-                                    ${s.contentHtml}
-                                </div>
-                                <div class="mt-auto pt-6 border-t border-current/10 text-[11px] font-bold uppercase tracking-widest opacity-35">
-                                    🎤 ${s.speaker}
-                                </div>
-                            </div>
-                            <div class="w-[45%] p-6 flex items-center">
-                                ${buildImageBlock(imgUrl)}
-                            </div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── GRID ───────────
-                else if (s.type === 'grid') {
-                    const useDark = (i % 2 === 0);
-                    const t = useDark ? nextDark() : nextLight();
-                    slide.classList.add(t.cls);
-
-                    const items = (s.items || []).slice(0, 4);
-
-                    if (useDark) {
-                        html = `
-                            ${getDeco(t.accent)}
-                            <div class="h-full p-14 flex flex-col relative z-10">
-                                <h2 contenteditable="true" class="text-[2.4rem] font-black mb-10 flex items-center gap-4">
-                                    <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
-                                    ${s.headline}
-                                </h2>
-                                <div class="grid grid-cols-2 gap-5 flex-1">
-                                    ${items.map((item, idx) => `
-                                        <div class="glass-card p-7 flex flex-col justify-center hover:border-white/20 transition-colors">
-                                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx + 1).padStart(2, '0')}</div>
-                                            <h3 contenteditable="true" class="text-[11px] font-bold uppercase tracking-widest opacity-50 mb-2">${item.title}</h3>
-                                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${item.value}</p>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
-                            </div>
-                            ${num}`;
-                    } else {
-                        html = `
-                            <div class="h-full p-14 flex flex-col">
-                                <h2 contenteditable="true" class="text-[2.4rem] font-black mb-10 flex items-center gap-4">
-                                    <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
-                                    ${s.headline}
-                                </h2>
-                                <div class="grid grid-cols-2 gap-5 flex-1">
-                                    ${items.map((item, idx) => `
-                                        <div class="bg-white rounded-2xl p-7 shadow-lg border border-slate-100 flex flex-col justify-center hover:shadow-xl transition-shadow">
-                                            <div class="text-3xl font-black mb-2" style="color:${t.accent}">${String(idx + 1).padStart(2, '0')}</div>
-                                            <h3 contenteditable="true" class="text-[11px] font-bold uppercase tracking-widest opacity-40 mb-2">${item.title}</h3>
-                                            <p contenteditable="true" class="text-lg font-semibold leading-snug">${item.value}</p>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
-                            </div>
-                            ${num}`;
-                    }
-                }
-
-                // ─────────── STATS ───────────
-                else if (s.type === 'stats') {
-                    const t = nextDark();
-                    slide.classList.add(t.cls);
-                    const stats = (s.stats || []).slice(0, 4);
-                    const cols = Math.min(stats.length, 4);
-                    html = `
-                        ${getDeco(t.accent)}
-                        <div class="h-full p-14 flex flex-col relative z-10">
-                            <h2 contenteditable="true" class="text-[2.4rem] font-black mb-6 flex items-center gap-4">
-                                <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
-                                ${s.headline}
-                            </h2>
-                            <div class="flex-1 grid gap-6 items-center" style="grid-template-columns:repeat(${cols},1fr)">
-                                ${stats.map(st => `
-                                    <div class="text-center glass-card p-8 py-10">
-                                        <div contenteditable="true" class="text-6xl font-black mb-3 tracking-tight" style="color:${t.accent}">${st.value}</div>
-                                        <div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                            <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── TIMELINE ───────────
-                else if (s.type === 'timeline') {
-                    const t = nextLight();
-                    slide.classList.add(t.cls);
-                    const steps = (s.steps || []).slice(0, 5);
-                    html = `
-                        <div class="h-full p-14 flex flex-col">
-                            <h2 contenteditable="true" class="text-[2.4rem] font-black mb-14 flex items-center gap-4">
-                                <span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>
-                                ${s.headline}
-                            </h2>
-                            <div class="flex-1 flex items-center">
-                                <div class="flex items-start w-full relative">
-                                    <div class="absolute top-7 left-8 right-8 h-[3px] rounded-full opacity-15" style="background:${t.accent}"></div>
-                                    ${steps.map((step, idx) => `
-                                        <div class="flex-1 flex flex-col items-center text-center px-3 relative z-10">
-                                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${t.accent}">
-                                                ${idx + 1}
-                                            </div>
-                                            <h3 contenteditable="true" class="text-base font-black mb-2 leading-tight">${step.title}</h3>
-                                            <p contenteditable="true" class="text-sm opacity-55 leading-relaxed">${step.description}</p>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                            <div class="mt-4 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── QUOTE ───────────
-                else if (s.type === 'quote') {
-                    const t = nextDark();
-                    slide.classList.add(t.cls);
-                    html = `
-                        ${getDeco(t.accent)}
-                        <div class="h-full flex flex-col justify-center items-center text-center px-24 relative z-10">
-                            <div class="text-[7rem] leading-none opacity-15 mb-4" style="color:${t.accent}"><i class="fas fa-quote-left"></i></div>
-                            <blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.6rem] font-bold leading-snug mb-8 max-w-3xl italic">${s.quote}</blockquote>
-                            <div class="w-16 h-[3px] rounded-full mb-4" style="background:${t.accent}"></div>
-                            <cite contenteditable="true" class="text-lg font-bold not-italic opacity-50">— ${s.author}</cite>
-                            <div class="absolute bottom-10 text-[11px] font-bold uppercase tracking-widest opacity-35">🎤 ${s.speaker}</div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── SOURCES ───────────
-                else if (s.type === 'sources') {
-                    slide.classList.add('theme-slate');
-                    html = `
-                        <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:24px 24px"></div>
-                        <div class="h-full p-16 flex flex-col relative z-10">
-                            <h2 contenteditable="true" class="text-5xl font-black mb-14 flex items-center gap-4">
-                                <span class="w-2 h-12 rounded-full bg-indigo-500 inline-block"></span>
-                                Quellenverzeichnis
-                            </h2>
-                            <div class="flex gap-8 flex-1">
-                                <div class="w-1/2 glass-card p-8">
-                                    <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-book-medical"></i> Textquellen</h3>
-                                    <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3 leading-relaxed">
-                                        ${(s.textSources || ['Eigene Daten']).map(src => `<li>${src}</li>`).join('')}
-                                    </ul>
-                                </div>
-                                <div class="w-1/2 glass-card p-8">
-                                    <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-camera"></i> Bildmaterial</h3>
-                                    <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3 leading-relaxed">
-                                        ${(s.imageSources || ['KI-generiert (Pollinations AI)']).map(src => `<li>${src}</li>`).join('')}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        ${num}`;
-                }
-
-                // ─────────── OUTRO ───────────
-                else if (s.type === 'outro') {
-                    const t = titleTheme || darkThemes[0];
-                    slide.classList.add(t.cls);
-                    html = `
-                        <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${t.accent};opacity:0.12"></div>
-                        <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${t.accent};opacity:0.08"></div>
-                        <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:24px 24px"></div>
-                        <div class="h-full flex flex-col justify-center items-center text-center px-20 relative z-10">
-                            <i class="fas fa-hands-clapping text-6xl mb-8" style="color:${t.accent}"></i>
-                            <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6">${s.headline || 'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
-                            <p contenteditable="true" class="text-3xl font-light opacity-50">${s.subtitle || 'Haben Sie Fragen?'}</p>
-                        </div>
-                        ${num}`;
-                }
-
-                // Fallback for unknown types
-                else {
-                    const t = nextLight();
-                    slide.classList.add(t.cls);
-                    html = `
-                        <div class="h-full p-16 flex flex-col justify-center items-center text-center">
-                            <h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline || s.type}</h2>
-                            <p contenteditable="true" class="text-xl opacity-60">${s.subtitle || s.contentHtml || JSON.stringify(s)}</p>
-                        </div>
-                        ${num}`;
-                }
-
-                slide.innerHTML = html;
-                scaler.appendChild(slide);
-            });
-
-            setTimeout(scaleSlideToFit, 200);
+        // ─── STATS ───
+        else if(s.type==='stats'){
+            const t=nextDark();slide.classList.add(t.cls);
+            const stats=(s.stats||[]).slice(0,4);const cols=Math.min(stats.length,4);
+            html=`${getDeco(t.accent)}<div class="h-full p-14 flex flex-col relative z-10">
+                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-6 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
+                <div class="flex-1 grid gap-6 items-center" style="grid-template-columns:repeat(${cols},1fr)">${stats.map(st=>`
+                    <div class="text-center glass-card p-8 py-10">
+                        <div contenteditable="true" class="text-6xl font-black mb-3 tracking-tight" style="color:${t.accent}">${st.value}</div>
+                        <div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div>
+                    </div>`).join('')}</div>
+                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ─── TIMELINE ───
+        else if(s.type==='timeline'){
+            const t=nextLight();slide.classList.add(t.cls);
+            const steps=(s.steps||[]).slice(0,5);
+            html=`<div class="h-full p-14 flex flex-col">
+                <h2 contenteditable="true" class="text-[2.3rem] font-black mb-14 flex items-center gap-4"><span class="w-2 h-10 rounded-full inline-block" style="background:${t.accent}"></span>${s.headline}</h2>
+                <div class="flex-1 flex items-center">
+                    <div class="flex items-start w-full relative">
+                        <div class="absolute top-7 left-8 right-8 h-[3px] rounded-full opacity-15" style="background:${t.accent}"></div>
+                        ${steps.map((st,idx)=>`
+                        <div class="flex-1 flex flex-col items-center text-center px-3 relative z-10">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${t.accent}">${idx+1}</div>
+                            <h3 contenteditable="true" class="text-base font-black mb-2 leading-tight">${st.title}</h3>
+                            <p contenteditable="true" class="text-sm opacity-55 leading-relaxed">${st.description}</p>
+                        </div>`).join('')}
+                    </div>
+                </div>
+                <div class="mt-4 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ─── QUOTE ───
+        else if(s.type==='quote'){
+            const t=nextDark();slide.classList.add(t.cls);
+            html=`${getDeco(t.accent)}<div class="h-full flex flex-col justify-center items-center text-center px-24 relative z-10">
+                <div class="text-[7rem] leading-none opacity-15 mb-2" style="color:${t.accent}"><i class="fas fa-quote-left"></i></div>
+                <blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.5rem] font-bold leading-snug mb-8 max-w-3xl italic">${s.quote}</blockquote>
+                <div class="w-16 h-[3px] rounded-full mb-4" style="background:${t.accent}"></div>
+                <cite contenteditable="true" class="text-lg font-bold not-italic opacity-50">— ${s.author}</cite>
+                <div class="absolute bottom-10 text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${s.speaker}</div>
+            </div>${tools}${num}`;
+        }
+        // ─── SOURCES ───
+        else if(s.type==='sources'){
+            slide.classList.add('theme-slate');
+            html=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>
+            <div class="h-full p-16 flex flex-col relative z-10">
+                <h2 contenteditable="true" class="text-5xl font-black mb-14 flex items-center gap-4"><span class="w-2 h-12 rounded-full bg-indigo-500 inline-block"></span>Quellenverzeichnis</h2>
+                <div class="flex gap-8 flex-1">
+                    <div class="w-1/2 glass-card p-8">
+                        <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-book-medical"></i> Textquellen</h3>
+                        <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.textSources||['Eigene Daten']).map(src=>`<li>${src}</li>`).join('')}</ul>
+                    </div>
+                    <div class="w-1/2 glass-card p-8">
+                        <h3 class="text-lg font-bold text-indigo-400 mb-6 flex items-center gap-3"><i class="fas fa-camera"></i> Bildmaterial</h3>
+                        <ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.imageSources||['KI-generiert (Pollinations AI)']).map(src=>`<li>${src}</li>`).join('')}</ul>
+                    </div>
+                </div>
+            </div>${tools}${num}`;
+        }
+        // ─── OUTRO ───
+        else if(s.type==='outro'){
+            const t=titleTheme||darkThemes[0];slide.classList.add(t.cls);
+            html=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${t.accent};opacity:.12"></div>
+            <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${t.accent};opacity:.08"></div>
+            <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px"></div>
+            <div class="h-full flex flex-col justify-center items-center text-center px-20 relative z-10">
+                <i class="fas fa-hands-clapping text-6xl mb-8" style="color:${t.accent}"></i>
+                <h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6">${s.headline||'Vielen Dank für Ihre Aufmerksamkeit'}</h1>
+                <p contenteditable="true" class="text-3xl font-light opacity-50">${s.subtitle||'Haben Sie Fragen?'}</p>
+            </div>${tools}${num}`;
+        }
+        // ─── FALLBACK ───
+        else{
+            const t=nextLight();slide.classList.add(t.cls);
+            html=`<div class="h-full p-16 flex flex-col justify-center items-center text-center">
+                <h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2>
+                <p contenteditable="true" class="text-xl opacity-60">${s.subtitle||s.contentHtml||''}</p>
+            </div>${tools}${num}`;
         }
 
-        // ==========================================
-        //  INIT
-        // ==========================================
-        setTimeout(scaleSlideToFit, 100);
-    </script>
+        slide.innerHTML=html;
+        scaler.appendChild(slide);
+    });
 
+    // Show script button
+    document.getElementById('script-toggle-btn').classList.remove('hidden');
+    document.getElementById('script-toggle-btn').classList.add('flex');
+
+    renderScriptPanel();
+    setTimeout(scaleSlideToFit,200);
+}
+
+// ── Slide tools (add elements, background) ──
+function buildSlideTools(){
+    return `<div class="slide-tools absolute top-3 right-3 z-30 no-print flex gap-2">
+        <div class="relative">
+            <button onclick="toggleAddMenu(this)" class="w-9 h-9 bg-indigo-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-indigo-500 text-xs"><i class="fas fa-plus"></i></button>
+            <div class="add-menu-dropdown absolute right-0 top-11 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-1.5 min-w-[170px] z-50">
+                <button onclick="addTextBox(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-font w-4 text-indigo-400"></i>Text hinzufügen</button>
+                <button onclick="addShape(this,'rect')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="far fa-square w-4 text-blue-400"></i>Rechteck</button>
+                <button onclick="addShape(this,'circle')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="far fa-circle w-4 text-emerald-400"></i>Kreis</button>
+                <button onclick="addLine(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-minus w-4 text-amber-400"></i>Trennlinie</button>
+                <div class="border-t border-slate-700 my-1"></div>
+                <button onclick="addImageElement(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2.5 font-medium"><i class="fas fa-image w-4 text-rose-400"></i>Bild einfügen</button>
+            </div>
+        </div>
+        <button onclick="changeSlideBackground(this)" class="w-9 h-9 bg-slate-700/90 backdrop-blur rounded-lg text-slate-300 shadow-lg flex items-center justify-center hover:bg-slate-600 text-xs" title="Hintergrund ändern"><i class="fas fa-palette"></i></button>
+    </div>`;
+}
+
+function toggleAddMenu(btn){
+    const menu=btn.nextElementSibling;
+    document.querySelectorAll('.add-menu-dropdown.open').forEach(m=>{if(m!==menu)m.classList.remove('open');});
+    menu.classList.toggle('open');
+}
+document.addEventListener('click',e=>{
+    if(!e.target.closest('.slide-tools')){document.querySelectorAll('.add-menu-dropdown.open').forEach(m=>m.classList.remove('open'));}
+});
+
+// ══════════════════════════════════════════
+//  7. SCRIPT PANEL
+// ══════════════════════════════════════════
+function toggleScriptPanel(){
+    const p=document.getElementById('script-panel');
+    scriptPanelOpen=!scriptPanelOpen;
+    p.classList.toggle('panel-open',scriptPanelOpen);
+    document.getElementById('workspace-container').style.paddingBottom=scriptPanelOpen?'440px':'4rem';
+}
+
+function setScriptView(mode){
+    scriptViewMode=mode;
+    document.querySelectorAll('.script-tab').forEach(t=>{
+        t.classList.toggle('tab-active',t.dataset.mode===mode);
+        if(t.dataset.mode!==mode)t.classList.add('text-slate-400');
+        else t.classList.remove('text-slate-400');
+    });
+    renderScriptPanel();
+}
+
+function renderScriptPanel(){
+    const container=document.getElementById('script-content');
+    if(!slideScripts.length){container.innerHTML='<p class="text-slate-500 text-sm">Noch keine Präsentation generiert.</p>';return;}
+    container.innerHTML=slideScripts.map(s=>{
+        const icon=({title:'fa-star',split:'fa-columns',grid:'fa-th-large',stats:'fa-chart-bar',timeline:'fa-stream',quote:'fa-quote-left',sources:'fa-book',outro:'fa-flag-checkered'})[s.type]||'fa-file';
+        const content=scriptViewMode==='notes'
+            ?`<div class="whitespace-pre-line text-slate-300 text-sm leading-relaxed">${s.notes}</div>`
+            :`<div class="text-slate-300 text-sm leading-relaxed italic">${s.script}</div>`;
+        return `
+        <div class="bg-slate-800/50 rounded-xl border border-slate-700/50 p-5 hover:border-slate-600 transition-colors">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center text-indigo-400 text-xs"><i class="fas ${icon}"></i></div>
+                <div>
+                    <span class="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Folie ${s.slideNumber}</span>
+                    <h4 class="text-sm font-bold text-white leading-tight">${s.headline}</h4>
+                </div>
+                <span class="ml-auto text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded font-bold">🎤 ${s.speaker}</span>
+            </div>
+            ${content}
+        </div>`;
+    }).join('');
+}
+
+function exportScript(){
+    if(!slideScripts.length)return alert('Noch keine Präsentation generiert.');
+    const mode=scriptViewMode==='notes'?'Stichpunkte':'Volltext-Skript';
+    let text=`SPRECHER-SKRIPT (${mode})\n${'═'.repeat(50)}\n\n`;
+    slideScripts.forEach(s=>{
+        text+=`▸ FOLIE ${s.slideNumber}: ${s.headline}\n`;
+        text+=`  Sprecher: ${s.speaker}\n`;
+        text+=`  ${'-'.repeat(40)}\n`;
+        text+=`  ${scriptViewMode==='notes'?s.notes:s.script}\n\n`;
+    });
+    const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=`Sprecher-Skript_${new Date().toLocaleDateString('de-DE')}.txt`;
+    a.click();
+}
+
+function printScriptOnly(){
+    if(!slideScripts.length)return;
+    const mode=scriptViewMode==='notes'?'Stichpunkte':'Volltext-Skript';
+    const w=window.open('','_blank');
+    w.document.write(`<!DOCTYPE html><html><head><title>Sprecher-Skript</title><style>
+        body{font-family:'Segoe UI',system-ui,sans-serif;max-width:800px;margin:2rem auto;color:#1e293b;line-height:1.7;}
+        h1{font-size:1.5rem;border-bottom:3px solid #6366f1;padding-bottom:.5rem;margin-bottom:2rem;}
+        .slide{border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;page-break-inside:avoid;}
+        .slide-num{font-size:.7rem;color:#6366f1;font-weight:800;text-transform:uppercase;letter-spacing:.1em;}
+        .slide-title{font-size:1.1rem;font-weight:700;margin:.25rem 0 .75rem;}
+        .speaker{font-size:.75rem;color:#64748b;margin-bottom:.5rem;}
+        .content{white-space:pre-line;font-size:.95rem;}
+    </style></head><body><h1>📋 Sprecher-Skript (${mode})</h1>`);
+    slideScripts.forEach(s=>{
+        w.document.write(`<div class="slide"><div class="slide-num">Folie ${s.slideNumber}</div><div class="slide-title">${s.headline}</div><div class="speaker">🎤 ${s.speaker}</div><div class="content">${scriptViewMode==='notes'?s.notes:s.script}</div></div>`);
+    });
+    w.document.write(`</body></html>`);
+    w.document.close();
+    setTimeout(()=>{w.print();},500);
+}
+
+// ══════════════════════════════════════════
+//  8. DRAGGABLE ELEMENTS (Canva-style)
+// ══════════════════════════════════════════
+function getSlide(btn){
+    return btn.closest('.presentation-slide');
+}
+
+function addTextBox(btn){
+    const slide=getSlide(btn);
+    btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');
+    el.className='added-element';
+    el.dataset.type='text';
+    el.style.cssText='left:340px;top:260px;width:300px;min-height:60px;';
+    el.innerHTML=`
+        <div class="el-controls no-print">
+            <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+            <button class="el-btn el-dup" onclick="duplicateElement(this.closest('.added-element'))" title="Duplizieren"><i class="fas fa-copy"></i></button>
+            <label class="el-btn el-color relative" title="Farbe"><i class="fas fa-palette"></i><input type="color" value="#000000" onchange="this.closest('.added-element').querySelector('.el-text-content').style.color=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+            <button class="el-btn el-del" onclick="this.closest('.added-element').remove()" title="Löschen"><i class="fas fa-trash"></i></button>
+        </div>
+        <div contenteditable="true" class="el-text-content" style="font-size:18px;padding:10px;min-height:40px;outline:none;cursor:text;border-radius:6px;">Text eingeben...</div>
+        <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);
+}
+
+function addShape(btn,shape){
+    const slide=getSlide(btn);
+    btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');
+    el.className='added-element';
+    el.dataset.type='shape';
+    const radius=shape==='circle'?'50%':'12px';
+    el.style.cssText=`left:440px;top:260px;width:200px;height:200px;border-radius:${radius};`;
+    el.innerHTML=`
+        <div class="el-controls no-print">
+            <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+            <label class="el-btn el-color relative" title="Füllfarbe"><i class="fas fa-fill-drip"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.shape-fill').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+            <label class="el-btn" style="background:#475569" title="Randfarbe"><i class="fas fa-border-all"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.shape-fill').style.borderColor=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+            <button class="el-btn el-del" onclick="this.closest('.added-element').remove()" title="Löschen"><i class="fas fa-trash"></i></button>
+        </div>
+        <div class="shape-fill w-full h-full el-shape" style="border-radius:${radius};background:rgba(99,102,241,.15);border:2px solid rgba(99,102,241,.5);"></div>
+        <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);
+}
+
+function addLine(btn){
+    const slide=getSlide(btn);
+    btn.closest('.add-menu-dropdown').classList.remove('open');
+    const el=document.createElement('div');
+    el.className='added-element';
+    el.dataset.type='line';
+    el.style.cssText='left:340px;top:360px;width:400px;height:6px;';
+    el.innerHTML=`
+        <div class="el-controls no-print">
+            <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+            <label class="el-btn el-color relative" title="Farbe"><i class="fas fa-palette"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.line-inner').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
+            <button class="el-btn el-del" onclick="this.closest('.added-element').remove()" title="Löschen"><i class="fas fa-trash"></i></button>
+        </div>
+        <div class="line-inner w-full h-full rounded-full" style="background:#6366f1;"></div>
+        <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+    slide.appendChild(el);
+}
+
+function addImageElement(btn){
+    const slide=getSlide(btn);
+    btn.closest('.add-menu-dropdown').classList.remove('open');
+    const input=document.createElement('input');
+    input.type='file';input.accept='image/*';
+    input.onchange=()=>{
+        const file=input.files[0];if(!file)return;
+        const reader=new FileReader();
+        reader.onload=e=>{
+            const el=document.createElement('div');
+            el.className='added-element';
+            el.dataset.type='image';
+            el.style.cssText='left:390px;top:210px;width:300px;height:250px;';
+            el.innerHTML=`
+                <div class="el-controls no-print">
+                    <div class="el-drag" onmousedown="startDrag(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Bewegen</div>
+                    <button class="el-btn el-dup" onclick="duplicateElement(this.closest('.added-element'))" title="Duplizieren"><i class="fas fa-copy"></i></button>
+                    <button class="el-btn el-del" onclick="this.closest('.added-element').remove()" title="Löschen"><i class="fas fa-trash"></i></button>
+                </div>
+                <img src="${e.target.result}" class="w-full h-full object-cover rounded-xl shadow-lg" alt="Inserted Image">
+                <div class="el-resize no-print" onmousedown="startResize(event,this.closest('.added-element'))"></div>`;
+            slide.appendChild(el);
+        };
+        reader.readAsDataURL(file);
+    };
+    input.click();
+}
+
+function duplicateElement(el){
+    const clone=el.cloneNode(true);
+    clone.style.left=(parseInt(el.style.left)+30)+'px';
+    clone.style.top=(parseInt(el.style.top)+30)+'px';
+    el.parentElement.appendChild(clone);
+}
+
+// ── Drag Logic (scale-aware) ──
+function startDrag(e,el){
+    e.preventDefault();e.stopPropagation();
+    activeElement=el;isDragging=true;
+    const scale=getCurrentScale();
+    dragStartX=e.clientX;dragStartY=e.clientY;
+    dragElStartLeft=parseInt(el.style.left)||0;
+    dragElStartTop=parseInt(el.style.top)||0;
+    el.classList.add('el-selected');
+    document.body.style.cursor='grabbing';
+}
+function startResize(e,el){
+    e.preventDefault();e.stopPropagation();
+    activeElement=el;isResizing=true;
+    const scale=getCurrentScale();
+    dragStartX=e.clientX;dragStartY=e.clientY;
+    resizeStartW=el.offsetWidth;
+    resizeStartH=el.offsetHeight;
+    el.classList.add('el-selected');
+    document.body.style.cursor='nwse-resize';
+}
+document.addEventListener('mousemove',e=>{
+    if(!activeElement)return;
+    const scale=getCurrentScale();
+    if(isDragging){
+        const dx=(e.clientX-dragStartX)/scale;
+        const dy=(e.clientY-dragStartY)/scale;
+        activeElement.style.left=Math.max(0,dragElStartLeft+dx)+'px';
+        activeElement.style.top=Math.max(0,dragElStartTop+dy)+'px';
+    }
+    if(isResizing){
+        const dx=(e.clientX-dragStartX)/scale;
+        const dy=(e.clientY-dragStartY)/scale;
+        activeElement.style.width=Math.max(40,resizeStartW+dx)+'px';
+        activeElement.style.height=Math.max(10,resizeStartH+dy)+'px';
+    }
+});
+document.addEventListener('mouseup',()=>{
+    if(activeElement){isDragging=false;isResizing=false;activeElement=null;document.body.style.cursor='';}
+});
+// Deselect on click outside
+document.addEventListener('mousedown',e=>{
+    if(!e.target.closest('.added-element')){document.querySelectorAll('.added-element.el-selected').forEach(el=>el.classList.remove('el-selected'));}
+});
+// Delete with keyboard
+document.addEventListener('keydown',e=>{
+    if(e.key==='Delete'&&!e.target.hasAttribute('contenteditable')){
+        const sel=document.querySelector('.added-element.el-selected');
+        if(sel)sel.remove();
+    }
+});
+
+// ══════════════════════════════════════════
+//  9. SLIDE BACKGROUND EDITOR
+// ══════════════════════════════════════════
+function changeSlideBackground(btn){
+    const slide=btn.closest('.presentation-slide');
+    const picker=document.createElement('div');
+    picker.className='absolute top-14 right-3 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-4 z-50 no-print';
+    picker.style.width='220px';
+    picker.innerHTML=`
+        <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Hintergrund ändern</div>
+        <div class="grid grid-cols-5 gap-2 mb-3">
+            ${['#ffffff','#f8fafc','#fef3c7','#ecfdf5','#eef2ff',
+               '#0f172a','#1e1b4b','#0c4a6e','#064e3b','#881337'].map(c=>`
+                <button onclick="applyBgColor(this,'${c}')" class="w-8 h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${c}"></button>
+            `).join('')}
+        </div>
+        <div class="flex gap-2 items-center">
+            <label class="flex-1 flex items-center gap-2 text-[10px] text-slate-300 font-bold">
+                <input type="color" value="#ffffff" onchange="applyBgColor(this,this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none">
+                Custom
+            </label>
+            <button onclick="this.closest('.absolute').remove()" class="text-slate-400 hover:text-white text-xs"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mt-3 border-t border-slate-700 pt-3">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Gradient</div>
+            <div class="grid grid-cols-4 gap-2">
+                ${[
+                    'linear-gradient(135deg,#667eea,#764ba2)',
+                    'linear-gradient(135deg,#f093fb,#f5576c)',
+                    'linear-gradient(135deg,#4facfe,#00f2fe)',
+                    'linear-gradient(135deg,#43e97b,#38f9d7)',
+                    'linear-gradient(135deg,#0c0a1d,#1e1b4b)',
+                    'linear-gradient(135deg,#041525,#075985)',
+                    'linear-gradient(135deg,#021a13,#047857)',
+                    'linear-gradient(135deg,#1a0610,#881337)',
+                ].map(g=>`
+                    <button onclick="applyBgGradient(this,'${g}')" class="w-full h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${g}"></button>
+                `).join('')}
+            </div>
+        </div>`;
+    // Remove existing pickers
+    slide.querySelectorAll('.bg-picker-popup').forEach(p=>p.remove());
+    picker.classList.add('bg-picker-popup');
+    slide.appendChild(picker);
+}
+
+function applyBgColor(btn,color){
+    const slide=btn.closest('.presentation-slide');
+    slide.style.background=color;
+    // Adjust text color based on brightness
+    const r=parseInt(color.slice(1,3),16),g=parseInt(color.slice(3,5),16),b=parseInt(color.slice(5,7),16);
+    const brightness=(r*299+g*587+b*114)/1000;
+    slide.style.color=brightness>128?'#0f172a':'#ffffff';
+    btn.closest('.bg-picker-popup').remove();
+}
+
+function applyBgGradient(btn,gradient){
+    const slide=btn.closest('.presentation-slide');
+    slide.style.background=gradient;
+    slide.style.color='#ffffff';
+    btn.closest('.bg-picker-popup').remove();
+}
+
+// ══════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════
+setTimeout(scaleSlideToFit,100);
+</script>
 </body>
 </html>
