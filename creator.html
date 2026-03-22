@@ -3,194 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM Synthesis | Pro Document Engine v3.0</title>
+    <title>SLM Synthesis | Pro Editor Engine v4.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Roboto:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        body { background: #0f172a; font-family: 'Inter', sans-serif; color: #f8fafc; overflow-x: hidden; position: relative; }
+        body { background: #0f172a; font-family: 'Inter', sans-serif; color: #f8fafc; overflow-x: hidden; }
         
-        /* Hintergrund-Effekt */
-        body::before {
-            content: ""; position: fixed; inset: 0;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM0ZjQ2ZTUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwaDIwdjIwSDIWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=');
-            opacity: 0.3; z-index: -2;
-        }
+        /* Document Styles */
+        .page-presentation { aspect-ratio: 16/9; width: 100%; max-width: 1100px; background: white; color: #1e293b; margin: 0 auto 3rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+        .page-flyer { width: 210mm; min-height: 297mm; background: white; color: #1e293b; margin: 0 auto 3rem; padding: 20mm; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); position: relative; }
 
-        .bg-glow-1 { position: fixed; top: -10%; left: -10%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, rgba(15,23,42,0) 70%); filter: blur(100px); z-index: -1; }
+        /* --- THE CUTTING EDGE EDITOR STYLES --- */
+        
+        /* Draggable Wrapper */
+        .editable-block {
+            position: relative;
+            transition: outline 0.2s;
+            border-radius: 8px;
+            z-index: 10;
+        }
+        
+        /* Hover Effects for blocks */
+        .editable-block:hover { outline: 2px dashed #cbd5e1; background: rgba(0,0,0,0.01); z-index: 20; }
+        .editable-block:focus-within { outline: 2px solid #4f46e5; background: transparent; z-index: 30; }
+
+        /* The Drag Handle (Six Dots) */
+        .drag-handle {
+            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+            background: #4f46e5; color: white; border-radius: 4px; padding: 2px 8px;
+            font-size: 10px; cursor: grab; opacity: 0; transition: opacity 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .editable-block:hover .drag-handle { opacity: 1; }
+        .drag-handle:active { cursor: grabbing; background: #3730a3; }
+
+        /* Text Editor Toolbar */
+        #smart-toolbar { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: translateY(-20px); }
+        #smart-toolbar.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        
+        .toolbar-btn { padding: 6px 12px; border-radius: 6px; transition: background 0.2s; color: #e2e8f0; }
+        .toolbar-btn:hover { background: #334155; color: white; }
+        
+        /* Content Editable Reset */
+        [contenteditable="true"] { outline: none; min-height: 20px; width: 100%; }
 
         @media print {
-            nav, .sidebar, .no-print, .edit-controls, #editor-toolbar { display: none !important; }
+            nav, .sidebar, .no-print, .drag-handle, #smart-toolbar { display: none !important; }
             body { background: white; padding: 0; color: black; }
-            body::before, .bg-glow-1 { display: none !important; }
             .canvas-container { padding: 0 !important; background: transparent !important; }
-            .document-page { box-shadow: none !important; margin: 0 !important; border: none !important; page-break-after: always; }
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; contenteditable: false !important; }
+            .document-page { box-shadow: none !important; margin: 0 !important; border: none !important; page-break-after: always; transform: none !important; } /* Reset transforms for perfect printing */
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
-
-        /* Presentation Style (16:9) */
-        .page-presentation { aspect-ratio: 16/9; width: 100%; max-width: 1100px; background: white; color: #1e293b; margin: 0 auto 3rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; display: flex; flex-direction: column; position: relative; }
-        /* Flyer Style (A4 Portrait) */
-        .page-flyer { width: 210mm; min-height: 297mm; background: white; color: #1e293b; margin: 0 auto 3rem; padding: 20mm; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative; }
-
-        /* contenteditable Styling */
-        [contenteditable="true"] { border: 1px dashed transparent; transition: all 0.2s; cursor: text; outline: none; }
-        [contenteditable="true"]:hover { border-color: #94a3b8; background: rgba(0,0,0,0.02); }
-        [contenteditable="true"]:focus { border-color: #4f46e5; background: rgba(79,70,229,0.05); }
-
-        .medical-border { border-left: 8px solid #4f46e5; padding-left: 1.5rem; }
-        
-        /* Editor Toolbar */
-        #editor-toolbar { transition: opacity 0.2s; }
-        .toolbar-btn { padding: 4px 10px; border-radius: 6px; transition: background 0.2s; }
-        .toolbar-btn:hover { background: #334155; }
     </style>
     <style id="print-orientation"></style>
 </head>
 <body class="h-screen flex flex-col">
-    <div class="bg-glow-1"></div>
 
-    <div id="editor-toolbar" class="fixed top-24 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-slate-700 shadow-2xl rounded-xl p-2 z-[100] flex items-center gap-2 opacity-0 pointer-events-none no-print">
-        <select onchange="execCmd('fontName', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none">
+    <div id="smart-toolbar" class="fixed top-24 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 shadow-2xl rounded-xl p-2 z-[100] flex items-center gap-1 opacity-0 pointer-events-none no-print">
+        
+        <select onchange="formatText('fontName', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer">
             <option value="Inter">Inter</option>
             <option value="Playfair Display">Playfair</option>
             <option value="Roboto">Roboto</option>
-            <option value="Arial">Arial</option>
+            <option value="Courier Prime">Courier</option>
         </select>
-        <select onchange="execCmd('fontSize', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none">
-            <option value="3">Größe Normal</option>
+        
+        <select onchange="formatText('fontSize', this.value)" class="bg-slate-900 text-white text-sm rounded-lg p-2 border border-slate-700 outline-none cursor-pointer ml-1">
+            <option value="3">Normal</option>
             <option value="1">Winzig</option>
             <option value="4">Mittel</option>
             <option value="5">Groß</option>
-            <option value="6">Sehr Groß</option>
-            <option value="7">Riesig</option>
+            <option value="6">Riesig</option>
         </select>
-        <div class="w-px h-6 bg-slate-700 mx-1"></div>
-        <button onclick="execCmd('bold')" class="toolbar-btn text-white font-bold"><i class="fas fa-bold"></i></button>
-        <button onclick="execCmd('italic')" class="toolbar-btn text-white italic"><i class="fas fa-italic"></i></button>
-        <button onclick="execCmd('underline')" class="toolbar-btn text-white underline"><i class="fas fa-underline"></i></button>
-        <div class="w-px h-6 bg-slate-700 mx-1"></div>
-        <input type="color" onchange="execCmd('foreColor', this.value)" class="w-8 h-8 rounded cursor-pointer bg-transparent border-none p-0">
+
+        <div class="w-px h-6 bg-slate-700 mx-2"></div>
+
+        <button onclick="formatText('bold')" class="toolbar-btn font-bold" title="Fett"><i class="fas fa-bold"></i></button>
+        <button onclick="formatText('italic')" class="toolbar-btn italic" title="Kursiv"><i class="fas fa-italic"></i></button>
+        <button onclick="formatText('underline')" class="toolbar-btn underline" title="Unterstrichen"><i class="fas fa-underline"></i></button>
+        
+        <div class="w-px h-6 bg-slate-700 mx-2"></div>
+        
+        <button onclick="formatText('justifyLeft')" class="toolbar-btn" title="Links"><i class="fas fa-align-left"></i></button>
+        <button onclick="formatText('justifyCenter')" class="toolbar-btn" title="Zentriert"><i class="fas fa-align-center"></i></button>
+        
+        <div class="w-px h-6 bg-slate-700 mx-2"></div>
+
+        <div class="relative flex items-center">
+            <i class="fas fa-palette text-slate-400 absolute left-2 pointer-events-none text-sm"></i>
+            <input type="color" onchange="formatText('foreColor', this.value)" class="w-8 h-8 rounded cursor-pointer bg-transparent border-none pl-6" title="Textfarbe">
+        </div>
     </div>
 
-    <nav class="h-20 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 no-print shrink-0">
-        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
-            <button onclick="location.href='index.html'" class="text-slate-400 hover:text-white transition-all group font-bold">
-                <i class="fas fa-arrow-left group-hover:-translate-x-1 mr-2"></i> Dashboard
-            </button>
-            <div class="leading-none text-center">
-                <span class="font-black tracking-tighter uppercase text-xl italic">SLM <span class="text-indigo-500">Synthesis</span></span>
-                <p class="text-[8px] text-slate-500 font-bold tracking-[0.4em] uppercase">Engine v3.0 | Edit Mode</p>
-            </div>
-            <button onclick="window.print()" class="bg-indigo-600 text-white px-8 py-2.5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-indigo-500 transition-all shadow-xl">
-                <i class="fas fa-file-pdf mr-2"></i> PDF Download
-            </button>
+    <nav class="h-20 border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 no-print shrink-0 flex items-center justify-between px-8">
+        <button onclick="location.href='index.html'" class="text-slate-400 hover:text-white transition-all font-bold">
+            <i class="fas fa-arrow-left mr-2"></i> Dashboard
+        </button>
+        <div class="text-center">
+            <span class="font-black uppercase text-xl italic">SLM <span class="text-indigo-500">Synthesis</span></span>
+            <p class="text-[8px] text-slate-500 font-bold tracking-[0.4em] uppercase">Canvas Editor v4.0</p>
         </div>
+        <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all shadow-lg">
+            <i class="fas fa-file-pdf mr-2"></i> PDF Export
+        </button>
     </nav>
 
     <div class="flex flex-1 overflow-hidden">
-        <aside class="sidebar w-[380px] bg-slate-900/90 border-r border-slate-800 flex flex-col no-print shrink-0 z-10">
-            <div class="p-8 overflow-y-auto flex-1 space-y-8">
+        <aside class="sidebar w-[350px] bg-slate-900 border-r border-slate-800 flex flex-col no-print shrink-0 z-10">
+            <div class="p-6 overflow-y-auto flex-1 space-y-6">
                 <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block">1. Format</label>
-                    <div class="grid grid-cols-2 gap-3 bg-slate-800 p-1 rounded-2xl">
-                        <button onclick="setType('presentation')" id="btn-presentation" class="py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-indigo-600 text-white shadow-lg">Präsentation</button>
-                        <button onclick="setType('flyer')" id="btn-flyer" class="py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white">Flyer</button>
+                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block">Format</label>
+                    <div class="flex gap-2 bg-slate-800 p-1 rounded-xl">
+                        <button onclick="setType('presentation')" id="btn-presentation" class="flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow">Präsentation</button>
+                        <button onclick="setType('flyer')" id="btn-flyer" class="flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white">Flyer</button>
                     </div>
                 </div>
 
                 <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block">2. Inhalt & Fokus</label>
-                    <div class="space-y-3">
-                        <input type="text" id="topic" placeholder="Thema (z.B. Schmerztherapie)" class="w-full bg-slate-800 border border-slate-700 rounded-2xl p-4 text-sm outline-none focus:border-indigo-500 text-white transition-all">
-                        <textarea id="instructions" rows="3" placeholder="Fokus-Punkte oder Modifikationen..." class="w-full bg-slate-800 border border-slate-700 rounded-2xl p-4 text-sm outline-none focus:border-indigo-500 text-white transition-all"></textarea>
-                    </div>
-                </div>
-
-                <div id="slide-count-container">
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 flex justify-between">3. Slides: <span id="slide-label" class="text-indigo-400">5</span></label>
-                    <input type="range" id="slideCount" min="3" max="15" value="5" oninput="document.getElementById('slide-label').innerText = this.value" class="w-full accent-indigo-500">
+                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block">Thema & Fokus</label>
+                    <input type="text" id="topic" placeholder="Z.B. Anatomie des Herzens" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white mb-2 outline-none focus:border-indigo-500">
+                    <textarea id="instructions" rows="2" placeholder="Spezielle Wünsche..." class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500"></textarea>
                 </div>
 
                 <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">4. Team</label>
-                        <button onclick="addTeamMember()" class="text-[10px] bg-slate-800 hover:bg-slate-700 text-indigo-400 px-3 py-1 rounded-lg font-bold"><i class="fas fa-plus"></i></button>
-                    </div>
-                    <div id="team-list" class="space-y-2">
-                        <input type="text" placeholder="Name 1" class="team-name w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white">
-                    </div>
+                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 flex justify-between">Slides: <span id="slide-label" class="text-indigo-400">4</span></label>
+                    <input type="range" id="slideCount" min="3" max="10" value="4" oninput="document.getElementById('slide-label').innerText = this.value" class="w-full accent-indigo-500">
                 </div>
             </div>
             
-            <div class="p-8 border-t border-slate-800 bg-slate-900">
-                <button onclick="generateDocument()" id="genBtn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-5 rounded-[2rem] shadow-[0_0_20px_rgba(79,70,229,0.4)] uppercase tracking-[0.2em] text-xs flex items-center justify-center gap-3 transition-all">
-                    <i class="fas fa-wand-magic-sparkles"></i> Erstellen
+            <div class="p-6 bg-slate-900 border-t border-slate-800">
+                <button onclick="generateDocument()" id="genBtn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-black py-4 rounded-xl shadow-lg uppercase tracking-widest text-xs transition-all">
+                    <i class="fas fa-magic mr-2"></i> Generieren
                 </button>
             </div>
         </aside>
 
-        <main class="flex-1 overflow-y-auto bg-slate-950 p-8 md:p-12 scroll-smooth canvas-container relative" id="main-canvas">
+        <main class="flex-1 overflow-y-auto bg-slate-950 p-8 scroll-smooth canvas-container" id="main-canvas">
             <div id="output-area">
-                <div class="flex flex-col items-center justify-center h-[60vh] text-slate-400">
-                    <i class="fas fa-pen-nib text-6xl mb-6 opacity-20"></i>
-                    <p class="font-black uppercase tracking-widest text-xs opacity-50">Bereit für die Synthese</p>
+                <div class="flex flex-col items-center justify-center h-[50vh] text-slate-500">
+                    <i class="fas fa-layer-group text-5xl mb-4 opacity-30"></i>
+                    <p class="font-bold uppercase tracking-widest text-xs">Leeres Canvas</p>
                 </div>
             </div>
         </main>
     </div>
 
     <script>
-        // --- Editor & UI Logic ---
-        let currentType = "presentation";
-
-        function setType(type) {
-            currentType = type;
-            const btnPres = document.getElementById('btn-presentation');
-            const btnFlyer = document.getElementById('btn-flyer');
-            const slideContainer = document.getElementById('slide-count-container');
-            
-            document.getElementById('print-orientation').innerHTML = type === 'presentation' ? `@media print { @page { size: landscape; margin: 0; } }` : `@media print { @page { size: portrait; margin: 0; } }`;
-            
-            if(type === 'presentation') {
-                btnPres.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-indigo-600 text-white shadow-lg";
-                btnFlyer.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white";
-                slideContainer.style.display = "block";
-            } else {
-                btnFlyer.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-indigo-600 text-white shadow-lg";
-                btnPres.className = "py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400 hover:text-white";
-                slideContainer.style.display = "none";
+        // --- TEXT FORMATTING ---
+        function formatText(command, value = null) {
+            document.execCommand(command, false, value);
+            // Ensure focus stays on the text area
+            const activeEl = document.activeElement;
+            if (activeEl && activeEl.hasAttribute('contenteditable')) {
+                activeEl.focus();
             }
         }
 
-        function addTeamMember() {
-            const list = document.getElementById('team-list');
-            const row = document.createElement('div');
-            row.className = 'flex gap-2 team-member-row';
-            row.innerHTML = `<input type="text" placeholder="Name" class="team-name flex-1 bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white">
-                <button onclick="this.parentElement.remove()" class="bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white w-12 rounded-xl flex transiton-all items-center justify-center"><i class="fas fa-times"></i></button>`;
-            list.appendChild(row);
-        }
-
-        // Toolbar Logic
-        function execCmd(command, value = null) {
-            document.execCommand(command, false, value);
-        }
-
+        // Toolbar Visibility Logic
+        const toolbar = document.getElementById('smart-toolbar');
+        
         document.addEventListener('focusin', (e) => {
             if(e.target.hasAttribute('contenteditable')) {
-                document.getElementById('editor-toolbar').classList.remove('opacity-0', 'pointer-events-none');
+                toolbar.classList.add('active');
             }
         });
 
-        // Hide toolbar when clicking outside editable areas
         document.getElementById('main-canvas').addEventListener('mousedown', (e) => {
-            if(!e.target.hasAttribute('contenteditable') && !e.target.closest('#editor-toolbar')) {
-                document.getElementById('editor-toolbar').classList.add('opacity-0', 'pointer-events-none');
+            // Hide toolbar if clicking completely outside an editable area and not on the toolbar itself
+            if(!e.target.hasAttribute('contenteditable') && !e.target.closest('#smart-toolbar') && !e.target.closest('.editable-block')) {
+                toolbar.classList.remove('active');
             }
         });
 
-        // --- Bild Upload Logik ---
+        // --- DRAG AND DROP LOGIC (Cutting Edge CSS Transform) ---
+        let isDragging = false;
+        let currentDragElement = null;
+        let startX, startY;
+        let initialTranslateX = 0, initialTranslateY = 0;
+
+        document.addEventListener('mousedown', (e) => {
+            // Check if we clicked the drag handle
+            if (e.target.classList.contains('drag-handle') || e.target.closest('.drag-handle')) {
+                isDragging = true;
+                currentDragElement = e.target.closest('.editable-block');
+                
+                startX = e.clientX;
+                startY = e.clientY;
+
+                // Parse existing transform or set to 0
+                const transform = window.getComputedStyle(currentDragElement).transform;
+                if (transform !== 'none') {
+                    const matrix = new DOMMatrix(transform);
+                    initialTranslateX = matrix.m41;
+                    initialTranslateY = matrix.m42;
+                } else {
+                    initialTranslateX = 0;
+                    initialTranslateY = 0;
+                }
+                
+                // Prevent text selection while dragging
+                e.preventDefault(); 
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging || !currentDragElement) return;
+
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+
+            const newX = initialTranslateX + dx;
+            const newY = initialTranslateY + dy;
+
+            // Apply visual move
+            currentDragElement.style.transform = `translate(${newX}px, ${newY}px)`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                currentDragElement = null;
+            }
+        });
+
+        // --- IMAGE UPLOAD LOGIC ---
         function handleImageUpload(input, targetId) {
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
@@ -200,181 +238,126 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+    </script>
 
-        // --- AI Generation Logic ---
+    <script>
+        let currentType = "presentation";
+
+        function setType(type) {
+            currentType = type;
+            document.getElementById('btn-presentation').className = type === 'presentation' ? "flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow" : "flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white";
+            document.getElementById('btn-flyer').className = type === 'flyer' ? "flex-1 py-2 text-[10px] font-black uppercase rounded-lg bg-indigo-600 text-white shadow" : "flex-1 py-2 text-[10px] font-black uppercase rounded-lg text-slate-400 hover:text-white";
+            document.getElementById('print-orientation').innerHTML = type === 'presentation' ? `@media print { @page { size: landscape; margin: 0; } }` : `@media print { @page { size: portrait; margin: 0; } }`;
+        }
+
+        // Creates a block that can be moved and edited
+        function createEditableBlock(contentHtml, customClasses = "") {
+            return `
+                <div class="editable-block ${customClasses}">
+                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i> Bewegen</div>
+                    <div contenteditable="true" class="w-full">${contentHtml}</div>
+                </div>
+            `;
+        }
+
+        // Creates an image block that can be moved and has an upload button
+        function createEditableImage(imgUrl, imgId, caption, customClasses = "") {
+            return `
+                <div class="editable-block ${customClasses}">
+                    <div class="drag-handle"><i class="fas fa-grip-horizontal"></i> Bewegen</div>
+                    <div class="relative w-full h-full group rounded-2xl overflow-hidden border border-slate-200">
+                        <img src="${imgUrl}" id="${imgId}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center no-print">
+                            <button onclick="document.getElementById('${imgId}-input').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-upload mr-2"></i>Bild ändern</button>
+                            <input type="file" id="${imgId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${imgId}')">
+                        </div>
+                    </div>
+                    <div contenteditable="true" class="text-[10px] text-center mt-2 text-slate-500 font-bold uppercase tracking-widest">${caption}</div>
+                </div>
+            `;
+        }
+
         async function generateDocument() {
             const topic = document.getElementById('topic').value;
-            if(!topic) return alert("Bitte Thema eingeben!");
-            const instructions = document.getElementById('instructions').value;
-            const slideCount = document.getElementById('slideCount').value;
-            const teamNames = Array.from(document.querySelectorAll('.team-name')).map(i => i.value.trim()).filter(i => i !== "");
-            if(teamNames.length === 0) teamNames.push("Projekt-Team");
+            if(!topic) return alert("Thema fehlt!");
             
             const btn = document.getElementById('genBtn');
+            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Erstelle...`;
             btn.disabled = true;
-            btn.innerHTML = `<i class="fas fa-circle-notch animate-spin"></i> Generiere...`;
 
             const finalPrompt = `
-                Handle als medizinischer Redakteur. Erstelle ein professionelles ${currentType} zum Thema: "${topic}".
-                Fokus: "${instructions || 'Keine'}".
-                Team: ${teamNames.join(', ')}.
-                ${currentType === 'presentation' ? `Erstelle ${slideCount} inhaltliche Sektionen.` : 'Erstelle 3 inhaltliche Sektionen.'}
-
-                Antworte AUSSCHLIESSLICH als JSON-Objekt (ohne Markdown):
+                Erstelle ein Dokument (${currentType}) über: "${topic}".
+                Fokus: "${document.getElementById('instructions').value || 'Keine'}".
+                Anzahl Sektionen: ${document.getElementById('slideCount').value}.
+                Antworte ALS REINES JSON:
                 {
-                  "title": "Kurzer, knackiger Titel",
-                  "subtitle": "Untertitel",
-                  "pages": [
-                    {
-                      "title": "Überschrift",
-                      "contentHtml": "Text mit <br>, <ul>, <li>, <strong>...",
-                      "imageKeyword": "3 englische suchbegriffe (z.B. medical hospital nurse)",
-                      "imageCaption": "Kurze Bildbeschreibung"
-                    }
-                  ],
-                  "sources": ["Quelle 1", "Quelle 2"],
-                  "scripts": [{"name": "Name", "text": "Fakten"}]
+                  "title": "Titel", "subtitle": "Untertitel",
+                  "pages": [{"title": "Überschrift", "contentHtml": "<p>Text</p><ul><li>Punkt</li></ul>", "imageKeyword": "2 englische wörter für bild", "imageCaption": "Bildbeschreibung"}],
+                  "sources": ["Quelle 1"]
                 }
             `;
 
             try {
-                // Wir nutzen wieder deinen Standard-API Endpunkt für Text
                 const response = await fetch('/api/grade', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ prompt: finalPrompt })
                 });
                 
-                const rawData = await response.json();
-                const jsonText = rawData.text.replace(/```json|```/g, '').trim();
-                const cleanJson = JSON.parse(jsonText);
-                renderResult(cleanJson, teamNames);
-
+                const data = await response.json();
+                const jsonText = data.text.replace(/```json|```/g, '').trim();
+                renderResult(JSON.parse(jsonText));
             } catch (error) {
-                console.error(error);
-                alert("Fehler bei der AI-Generierung. Bitte versuche es erneut.");
+                alert("Fehler bei der Generierung.");
             } finally {
+                btn.innerHTML = `<i class="fas fa-magic mr-2"></i> Generieren`;
                 btn.disabled = false;
-                btn.innerHTML = `<i class="fas fa-wand-magic-sparkles"></i> Erstellen`;
             }
         }
 
-        function renderResult(data, teamNames) {
-            const output = document.getElementById('output-area');
+        function renderResult(data) {
             let html = '';
-            
-            // --- 1. TITLE PAGE (Schriftgröße gefixed) ---
-            html += generatePage(currentType, `
-                <div class="h-full flex flex-col justify-center items-center text-center p-12 relative overflow-hidden bg-white">
-                    <div class="relative z-10 w-full max-w-4xl">
-                        <span contenteditable="true" class="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 font-black uppercase tracking-widest text-[10px] mb-6">Medizinisches Dokument</span>
-                        
-                        <h1 contenteditable="true" class="font-['Playfair_Display'] text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-4 break-words">${data.title}</h1>
-                        
-                        <p contenteditable="true" class="text-xl text-slate-500 font-medium mb-12">${data.subtitle}</p>
-                        
-                        <div class="pt-8 border-t border-slate-200 flex flex-wrap justify-center gap-4">
-                            ${teamNames.map(name => `<div contenteditable="true" class="bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-sm font-bold shadow-sm">${name}</div>`).join('')}
-                        </div>
-                    </div>
-                </div>
-            `);
 
-            // --- 2. CONTENT PAGES ---
+            // Title Page
+            html += `<div class="document-page ${currentType === 'presentation' ? 'page-presentation' : 'page-flyer'} p-12 flex flex-col items-center justify-center text-center bg-slate-50">`;
+            html += createEditableBlock(`<h1 style="font-family: 'Playfair Display'; font-size: 4rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin-bottom: 1rem;">${data.title}</h1>`, "w-full max-w-4xl");
+            html += createEditableBlock(`<p style="font-size: 1.5rem; color: #64748b; font-style: italic;">${data.subtitle}</p>`, "w-full max-w-2xl mt-4");
+            html += `</div>`;
+
+            // Content Pages
             data.pages.forEach((page, index) => {
-                let imageBlock = '';
-                
-                if(page.imageKeyword) {
-                    const uniqueId = `img-page-${index}`;
-                    // Direkter HTML-Aufruf der Bild-API (Umgeht CORS Probleme vom Server)
-                    const imgUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(page.imageKeyword + ' professional medical')}?width=800&height=600&nologo=true`;
+                const imgId = `img-${index}`;
+                const imgUrl = page.imageKeyword ? `https://image.pollinations.ai/prompt/${encodeURIComponent(page.imageKeyword)}?width=800&height=600&nologo=true` : '';
 
-                    if(currentType === 'presentation') {
-                        imageBlock = `
-                            <div class="w-full md:w-5/12 h-64 md:h-full relative shrink-0 bg-slate-100 rounded-3xl border border-slate-200 overflow-hidden flex flex-col">
-                                <img src="${imgUrl}" id="${uniqueId}" class="w-full h-full object-cover flex-1" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80'">
-                                
-                                <div class="absolute top-4 right-4 edit-controls">
-                                    <button onclick="document.getElementById('${uniqueId}-input').click()" class="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg px-3 py-2 rounded-lg font-bold text-xs flex items-center gap-2">
-                                        <i class="fas fa-upload"></i> Eigenes Bild
-                                    </button>
-                                    <input type="file" id="${uniqueId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${uniqueId}')">
-                                </div>
-                                
-                                <div class="p-3 bg-slate-800 text-white">
-                                    <p contenteditable="true" class="text-[10px] tracking-widest uppercase font-bold text-center">${page.imageCaption || 'Illustration'}</p>
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        imageBlock = `
-                            <div class="w-full h-64 my-6 relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
-                                <img src="${imgUrl}" id="${uniqueId}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80'">
-                                
-                                <div class="absolute top-2 right-2 edit-controls">
-                                    <button onclick="document.getElementById('${uniqueId}-input').click()" class="bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg px-3 py-2 rounded-lg font-bold text-xs flex items-center gap-2">
-                                        <i class="fas fa-upload"></i> Ändern
-                                    </button>
-                                    <input type="file" id="${uniqueId}-input" class="hidden" accept="image/*" onchange="handleImageUpload(this, '${uniqueId}')">
-                                </div>
-                            </div>
-                            <p contenteditable="true" class="text-[10px] text-slate-500 font-bold uppercase tracking-widest text-center mt-[-1rem] mb-6">${page.imageCaption || 'Illustration'}</p>
-                        `;
-                    }
-                }
-
-                let pageContent = '';
                 if(currentType === 'presentation') {
-                    pageContent = `
-                        <div class="h-full flex flex-col p-10 md:p-14">
-                            <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-slate-100">
-                                <span class="text-3xl font-black text-indigo-200">${String(index+1).padStart(2, '0')}</span>
-                                <h2 contenteditable="true" class="text-3xl font-black text-slate-900">${page.title}</h2>
-                            </div>
-                            <div class="flex-1 flex flex-col md:flex-row gap-10 overflow-hidden">
-                                <div contenteditable="true" class="flex-1 text-lg text-slate-700 leading-relaxed font-medium">
-                                    ${page.contentHtml}
-                                </div>
-                                ${imageBlock}
-                            </div>
-                        </div>
-                    `;
+                    html += `<div class="document-page page-presentation p-12 flex flex-col bg-white">`;
+                    html += createEditableBlock(`<h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; border-bottom: 4px solid #4f46e5; padding-bottom: 0.5rem; display: inline-block; margin-bottom: 2rem;">${page.title}</h2>`, "w-full");
+                    
+                    html += `<div class="flex-1 flex gap-12 mt-4">`;
+                    // Left Text
+                    html += createEditableBlock(`<div style="font-size: 1.25rem; color: #334155; line-height: 1.6;">${page.contentHtml}</div>`, "flex-1");
+                    // Right Image
+                    if(imgUrl) html += createEditableImage(imgUrl, imgId, page.imageCaption, "w-5/12 h-[60%]");
+                    html += `</div></div>`;
                 } else {
-                    pageContent = `
-                        <div class="medical-border mb-6 mt-4">
-                            <h2 contenteditable="true" class="text-2xl font-black text-slate-900">${page.title}</h2>
-                        </div>
-                        ${imageBlock}
-                        <div contenteditable="true" class="text-base text-slate-700 leading-relaxed">
-                            ${page.contentHtml}
-                        </div>
-                    `;
+                    html += `<div class="document-page page-flyer bg-white">`;
+                    html += createEditableBlock(`<h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; border-left: 8px solid #4f46e5; padding-left: 1rem; margin-bottom: 1.5rem;">${page.title}</h2>`, "w-full");
+                    if(imgUrl) html += createEditableImage(imgUrl, imgId, page.imageCaption, "w-full h-64 mb-6");
+                    html += createEditableBlock(`<div style="font-size: 1rem; color: #334155; line-height: 1.8;">${page.contentHtml}</div>`, "w-full");
+                    html += `</div>`;
                 }
-                html += generatePage(currentType, pageContent);
             });
 
-            // --- 3. SOURCES & END ---
-            html += generatePage(currentType, `
-                <div class="h-full p-10 md:p-16 bg-slate-50">
-                    <h2 contenteditable="true" class="text-3xl font-black text-slate-900 mb-8 border-b-4 border-indigo-600 pb-2 inline-block">Quellen & Abschluss</h2>
-                    <ul class="list-decimal pl-5 text-sm text-slate-600 font-medium space-y-2 mb-12">
-                        ${data.sources.map(s => `<li contenteditable="true">${s}</li>`).join('')}
-                        <li contenteditable="true">Bildquellen: KI-Generiert via Pollinations AI & Eigene Uploads</li>
-                    </ul>
-                    <div class="mt-auto pt-12 text-center">
-                        <h3 contenteditable="true" class="text-4xl font-black text-slate-900 mb-4">Vielen Dank!</h3>
-                        <p contenteditable="true" class="text-slate-500 italic">Gibt es noch Fragen?</p>
-                    </div>
-                </div>
-            `);
+            // Sources
+            html += `<div class="document-page ${currentType === 'presentation' ? 'page-presentation' : 'page-flyer'} p-12 bg-slate-50">`;
+            html += createEditableBlock(`<h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 2rem;">Quellen</h2>`, "w-full");
+            let sourceList = data.sources.map(s => `<li>${s}</li>`).join('');
+            html += createEditableBlock(`<ul style="list-style-type: decimal; padding-left: 2rem; color: #64748b; line-height: 2;">${sourceList}</ul>`, "w-full");
+            html += `</div>`;
 
-            output.innerHTML = html;
+            document.getElementById('output-area').innerHTML = html;
         }
 
-        function generatePage(type, content) {
-            return `<div class="document-page ${type === 'presentation' ? 'page-presentation' : 'page-flyer'}">${content}</div>`;
-        }
-        
         // Init
         setType('presentation');
     </script>
