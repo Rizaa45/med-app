@@ -5,10 +5,16 @@ export default async function handler(req, res) {
     }
 
     const { prompt, type } = req.body;
-    const GEMINI_KEY = process.env.AI_API_KEY; 
-    const GROQ_KEY = process.env.GROQ_API_KEY; 
+    
+    // HIER IST DIE KORREKTUR: Die Namen müssen exakt mit Vercel übereinstimmen
+    const GEMINI_KEY = process.env.GEMINI_KEY; 
+    const GROQ_KEY = process.env.GROQ_KEY; 
 
-    // --- 1. Bild-Logik (unverändert) ---
+    if (!GEMINI_KEY) {
+        return res.status(500).json({ error: 'Gemini API Key nicht gefunden. Prüfe die Vercel Env Vars.' });
+    }
+
+    // --- 1. Bild-Logik ---
     if (type === 'image') {
         try {
             const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt + " professional medical illustration")}`;
@@ -23,16 +29,13 @@ export default async function handler(req, res) {
     }
 
     // --- 2. Text-Logik mit Failover (Gemini -> Groq) ---
-    
-    // Versuch A: Google Gemini
     try {
-        const geminiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`, {
+        const geminiResponse = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
         });
 
-        // Wenn Gemini Limit erreicht (429) oder Fehler hat, wirf Fehler für den Catch-Block
         if (!geminiResponse.ok) {
             console.warn(`Gemini fehlgeschlagen (Status ${geminiResponse.status}). Versuche Groq...`);
             throw new Error('Gemini_Limit');
@@ -43,7 +46,7 @@ export default async function handler(req, res) {
         return res.status(200).json({ text: aiText, source: 'gemini' });
 
     } catch (error) {
-        // VERSUCH B: Groq AI (als Backup)
+        // VERSUCH B: Groq AI
         if (GROQ_KEY) {
             try {
                 const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -53,7 +56,7 @@ export default async function handler(req, res) {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        model: "llama-3.3-70b-versatile", // Extrem schnelles Backup-Modell
+                        model: "llama-3.3-70b-versatile",
                         messages: [{ role: "user", content: prompt }]
                     })
                 });
@@ -69,6 +72,6 @@ export default async function handler(req, res) {
             }
         }
         
-        return res.status(500).json({ error: 'Gemini-Limit erreicht und kein Backup konfiguriert.' });
+        return res.status(500).json({ error: 'Gemini-Limit erreicht und kein Groq-Backup konfiguriert.' });
     }
 }
