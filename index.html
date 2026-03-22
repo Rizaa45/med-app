@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Professional Dashboard v5.5</title>
+    <title>SLM System | Professional Dashboard v5.6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -44,28 +44,28 @@
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-md"></div>
         <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl relative z-10 overflow-hidden animate-modal border border-white/20">
-            <div class="bg-red-600 p-8 text-white relative">
-                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.5 Live</div>
-                <i class="fas fa-ambulance text-4xl mb-4"></i>
-                <h2 class="text-3xl font-black tracking-tight uppercase italic">Akut-Update!</h2>
-                <p class="text-red-100 font-medium">Modul 5 (Chirurgie) & Modul 6 (Notfall) integriert.</p>
+            <div class="bg-indigo-600 p-8 text-white relative">
+                <div class="absolute right-6 top-6 bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v5.6 Live</div>
+                <i class="fas fa-sparkles text-4xl mb-4"></i>
+                <h2 class="text-3xl font-black tracking-tight uppercase italic">System-Update!</h2>
+                <p class="text-indigo-100 font-medium">Modul 7 (Palliative Care) wurde erfolgreich integriert.</p>
             </div>
             <div class="p-8 space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-scalpel"></i></div>
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-dove"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Modul 5: Chirurgie Online</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Prä/Post-OP, Wundmanagement und pädiatrische Chirurgie sind bereit.</p>
+                        <h4 class="font-bold text-slate-900">Modul 7: Palliative Care</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Symptomkontrolle, Ethik und Sterbebegleitung sind jetzt verfügbar.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-heart-pulse"></i></div>
                     <div>
-                        <h4 class="font-bold text-slate-900">Modul 6: Notfall-System</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed">Basisreanimation, HLW und Herz-Kreislauf-Physiologie hinzugefügt.</p>
+                        <h4 class="font-bold text-slate-900">Modul 6: Notfall-Optimierung</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Verbesserte Ladezeiten für Reanimations-Protokolle.</p>
                     </div>
                 </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-red-600 transition-all shadow-lg shadow-red-100">System starten</button>
+                <button onclick="closeUpdateModal()" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-indigo-600 transition-all shadow-lg shadow-indigo-100">System starten</button>
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
             <div>
                 <div class="flex items-center gap-3 mb-1">
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xl font-black tracking-tighter shadow-lg shadow-indigo-200">SLM</span>
-                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.5</span>
+                    <span class="text-slate-400 text-[10px] tracking-[0.4em] uppercase font-black">Core Engine v.5.6</span>
                 </div>
                 <div class="mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -104,12 +104,12 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
                     <div>
                         <h2 class="text-slate-800 font-black text-2xl uppercase tracking-tight italic">Gesamtfortschritt</h2>
-                        <p class="text-slate-400 text-sm font-medium italic">Vorbereitungsphase: Chirurgie & Notfall</p>
+                        <p class="text-slate-400 text-sm font-medium italic">Vorbereitungsphase: Palliative & Notfall</p>
                     </div>
-                    <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">15%</span>
+                    <span id="total-percent" class="text-6xl font-black text-indigo-600 tracking-tighter">18%</span>
                 </div>
                 <div class="w-full bg-slate-100 rounded-full h-5 overflow-hidden shadow-inner p-1">
-                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 15%"></div>
+                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-800 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 18%"></div>
                 </div>
             </div>
 
@@ -177,7 +177,7 @@
             <div onclick="location.href='module5.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-green-100 hover:border-green-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-green-600 text-white p-4 rounded-2xl shadow-lg shadow-green-100">
-                        <i class="fas fa-stethoscope text-2xl"></i>
+                        <i class="fas fa-scalpel text-2xl"></i>
                     </div>
                     <span class="font-black text-green-600 text-xl">NEW</span>
                 </div>
@@ -189,12 +189,6 @@
             </div>
 
             <div onclick="location.href='module6.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-red-100 hover:border-red-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
-                <div class="absolute right-4 top-4">
-                    <span class="flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                    </span>
-                </div>
                 <div class="flex justify-between items-start mb-8">
                     <div class="bg-red-600 text-white p-4 rounded-2xl shadow-lg shadow-red-100">
                         <i class="fas fa-heart-pulse text-2xl"></i>
@@ -205,6 +199,26 @@
                 <p class="text-sm text-slate-500 mb-8 font-medium">Notfall & Reanimation</p>
                 <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
                     <div class="bg-red-500 h-full transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div onclick="location.href='module7.html'" class="module-card group bg-white p-8 rounded-[2rem] shadow-sm border-2 border-purple-100 hover:border-purple-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                <div class="absolute right-4 top-4">
+                    <span class="flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+                    </span>
+                </div>
+                <div class="flex justify-between items-start mb-8">
+                    <div class="bg-purple-600 text-white p-4 rounded-2xl shadow-lg shadow-purple-100">
+                        <i class="fas fa-dove text-2xl"></i>
+                    </div>
+                    <span class="font-black text-purple-600 text-xl">NEU</span>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-1 uppercase tracking-tight">Modul 7</h3>
+                <p class="text-sm text-slate-500 mb-8 font-medium">Palliative Versorgung</p>
+                <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                    <div class="bg-purple-500 h-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
@@ -232,8 +246,8 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            // Check for v5.5 update
-            const hasSeenUpdate = localStorage.getItem('v5.5_update_seen');
+            // Check for v5.6 update
+            const hasSeenUpdate = localStorage.getItem('v5.6_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
@@ -245,7 +259,7 @@
             modal.style.opacity = '0';
             setTimeout(() => {
                 modal.classList.add('hidden');
-                localStorage.setItem('v5.5_update_seen', 'true');
+                localStorage.setItem('v5.6_update_seen', 'true');
             }, 400);
         }
     </script>
