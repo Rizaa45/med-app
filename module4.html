@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Modul 4: Chronische Erkrankungen</title>
+    <title>SLM System | Modul 4: Gynäkologie & Geburtshilfe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,23 +16,23 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; } /* Pink-farbener Hover-Effekt */
     </style>
 </head>
 <body class="min-h-screen">
 
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
-            <button onclick="location.href='index.html'" class="group flex items-center text-slate-500 hover:text-indigo-600 font-semibold transition-all">
+            <button onclick="location.href='index.html'" class="group flex items-center text-slate-500 hover:text-pink-600 font-semibold transition-all">
                 <i class="fas fa-chevron-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
                 <span class="text-sm uppercase tracking-wider">Dashboard</span>
             </button>
             <div class="text-center">
-                <span class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 4: Pflege chronisch Kranker</span>
-                <p class="text-[9px] text-indigo-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.5 • Clinical Edition</p>
+                <span class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Modul 4: Frauenheilkunde & Geburtshilfe</span>
+                <p class="text-[9px] text-pink-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.5 • Maternity Edition</p>
             </div>
             <div class="flex gap-4">
-                <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-indigo-600 transition-all">
+                <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-pink-600 transition-all">
                     <i class="fas fa-thumbtack text-lg"></i>
                 </button>
             </div>
@@ -42,76 +42,76 @@
     <div class="max-w-4xl mx-auto px-6 py-8">
         
         <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-8 border border-slate-200">
-            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-indigo-700 shadow-sm border border-slate-200/50">
-                <i class="fas fa-book-medical mr-2"></i>Lerninhalte
+            <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-pink-700 shadow-sm border border-slate-200/50">
+                <i class="fas fa-venus mr-2"></i>Lerninhalte
             </button>
-            <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-indigo-600">
-                <i class="fas fa-clipboard-check mr-2"></i>Wissenstest
+            <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-pink-600">
+                <i class="fas fa- baby-carriage mr-2"></i>Prüfungsfragen
             </button>
         </div>
 
         <div id="section-inhalt" class="space-y-6 fade-in">
             
             <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-200 mb-8">
-                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-1">Fokusbereich wählen</label>
+                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-1">Lerneinheit auswählen</label>
                 <div id="summary-dropdown-container"></div>
             </div>
             
-            <div id="summary-display-area" class="hidden min-h-[300px]">
-                </div>
+            <div id="summary-display-area" class="hidden min-h-[300px]"></div>
 
             <div id="welcome-state" class="text-center py-20 bg-slate-50 rounded-[3rem] border-2 border-dashed border-slate-200 mb-12">
                 <div class="w-20 h-20 bg-white rounded-3xl shadow-sm flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-notes-medical text-3xl text-indigo-500"></i>
+                    <i class="fas fa-person-breastfeeding text-3xl text-pink-500"></i>
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-2">Pflegeprozess & Chronizität</h3>
-                <p class="text-slate-500 text-sm max-w-xs mx-auto italic">Wähle ein Thema aus, um die fallbasierten Inhalte zu Herrn Z. und chronischen Krankheitsbildern zu laden.</p>
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Gynäkologie & Pädiatrie Grundlagen</h3>
+                <p class="text-slate-500 text-sm max-w-xs mx-auto italic">Wähle eine der acht Lerneinheiten aus, um die kuratierte Zusammenfassung zu laden.</p>
             </div>
 
             <div class="mt-16 mb-8">
                 <div class="flex items-center gap-4 py-4 mb-4">
                     <div class="h-px flex-1 bg-slate-200"></div>
-                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Fallstudie & Dokumente</span>
+                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Begleitmaterialien</span>
                     <div class="h-px flex-1 bg-slate-200"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pdf-grid">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pdf-grid"></div>
             </div>
         </div>
 
         <div id="section-quiz" class="hidden space-y-8 fade-in">
              <div class="text-center py-24 bg-white rounded-[3rem] border border-slate-100 shadow-sm">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-indigo-50 text-indigo-600 rounded-full mb-6">
-                    <i class="fas fa-microscope text-3xl"></i>
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-pink-50 text-pink-600 rounded-full mb-6">
+                    <i class="fas fa-stethoscope text-3xl"></i>
                 </div>
                 <h3 class="text-2xl font-black text-slate-900 uppercase tracking-tight">Quiz-Modul 4</h3>
-                <p class="text-slate-500 font-medium mb-8">Fragen zu Diabetes Mellitus, Onkologie und Mobilitätseinschränkungen.</p>
+                <p class="text-slate-500 font-medium mb-8">Fragen zu Gynäkologie, Geburt und Wochenbettpflege.</p>
                 <div class="flex justify-center gap-3">
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pathophysiologie</span>
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Biografiearbeit</span>
-                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pharmakologie</span>
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Physiologie</span>
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Adaptation</span>
+                    <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Puerperium</span>
                 </div>
              </div>
         </div>
     </div>
 
     <script>
-        // Themen für Modul 4 (angepasst an die Präsentation von Herrn Z.)
+        // Themen für Modul 4 basierend auf deiner Liste
         const topics = [
-            { id: "1", title: "Biografiearbeit & Sozialanamnese (Fall Herr Z.)" },
-            { id: "2", title: "Diabetes Mellitus Typ 2 & Medikation" },
-            { id: "3", title: "Onkologische Erkrankungen (Hirntumor/Bronchialkarzinom)" },
-            { id: "4", title: "Mobilität, Hilfsmittel & Sturzprophylaxe" },
-            { id: "5", title: "Wundmanagement & postoperative Pflege (Nekrose/Transplantation)" },
-            { id: "6", title: "Multimorbidität & Medikamentenmanagement" }
+            { id: "1", title: "Gynäkologische und physiologische Grundlagen" },
+            { id: "2", title: "Die physiologische Schwangerschaft" },
+            { id: "3", title: "Die pathologische Schwangerschaft" },
+            { id: "4", title: "Der Geburtsverlauf" },
+            { id: "5", title: "Das Neugeborene: Anpassung und Erstversorgung" },
+            { id: "6", title: "Pathologien und Traumata beim Neugeborenen" },
+            { id: "7", title: "Das Wochenbett (Puerperium)" },
+            { id: "8", title: "Elternschaft und familiäre Unterstützung" }
         ];
 
-        // Platzhalter für Modul 4 Dokumente
+        // PDF Dokumente für Modul 4
         const pdfFiles = [
-            { name: "Fallstudie_Herr_Z_Anamnese.pdf", file: "M4_Fall_Z.pdf" },
-            { name: "M 4.2 Diabetes Management.pdf", file: "M4_2_Diabetes.pdf" },
-            { name: "Medikamentenplan_Analyse.pdf", file: "M4_Medikation.pdf" }
+            { name: "M 4.1 Grundlagen Gynäkologie.pdf", file: "M4_1_Grundlagen.pdf" },
+            { name: "M 4.5 Neugeborenen-Erstversorgung.pdf", file: "M4_5_Neugeborenes.pdf" },
+            { name: "Checkliste Wochenbettpflege.pdf", file: "M4_7_Wochenbett.pdf" }
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -123,11 +123,11 @@
             const container = document.getElementById('summary-dropdown-container');
             container.innerHTML = `
                 <div class="relative">
-                    <select onchange="handleTopicSelection(this.value)" class="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl shadow-sm text-slate-800 font-bold focus:border-indigo-500 focus:bg-white outline-none appearance-none cursor-pointer transition-all">
-                        <option value="">Themenbereich wählen...</option>
+                    <select onchange="handleTopicSelection(this.value)" class="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl shadow-sm text-slate-800 font-bold focus:border-pink-500 focus:bg-white outline-none appearance-none cursor-pointer transition-all">
+                        <option value="">Bitte Einheit wählen...</option>
                         ${topics.map(t => `<option value="${t.id}">${t.id}. ${t.title}</option>`).join('')}
                     </select>
-                    <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-indigo-500">
+                    <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-pink-500">
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
@@ -137,13 +137,13 @@
         function renderPDFs() {
             const grid = document.getElementById('pdf-grid');
             grid.innerHTML = pdfFiles.map(pdf => `
-                <a href="docs/m4/${pdf.file}" target="_blank" class="group flex items-center p-4 bg-white border border-slate-200 rounded-2xl hover:border-indigo-400 hover:shadow-lg transition-all">
-                    <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shrink-0 mr-4 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                <a href="docs/m4/${pdf.file}" target="_blank" class="group flex items-center p-4 bg-white border border-slate-200 rounded-2xl hover:border-pink-400 hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center shrink-0 mr-4 group-hover:bg-pink-500 group-hover:text-white transition-colors">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="overflow-hidden">
-                        <p class="text-sm font-bold text-slate-700 truncate group-hover:text-indigo-600 transition-colors">${pdf.name}</p>
-                        <p class="text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Lehrmaterial</p>
+                        <p class="text-sm font-bold text-slate-700 truncate group-hover:text-pink-600 transition-colors">${pdf.name}</p>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Skript / Handout</p>
                     </div>
                 </a>
             `).join('');
@@ -162,14 +162,14 @@
             welcomeState.classList.add('hidden');
             displayArea.classList.remove('hidden');
             displayArea.innerHTML = `
-                <div class="flex flex-col items-center justify-center py-20 text-indigo-600">
+                <div class="flex flex-col items-center justify-center py-20 text-pink-600">
                     <i class="fas fa-circle-notch animate-spin text-4xl mb-4"></i>
-                    <p class="font-black uppercase tracking-widest text-xs">Lade Modul-Inhalte...</p>
+                    <p class="font-black uppercase tracking-widest text-xs">Analysiere Fachinhalte...</p>
                 </div>
             `;
 
             try {
-                // Versucht die entsprechende JSON für Modul 4 zu laden
+                // Erwartet Dateien wie: data/module4summariesunit1.json
                 const response = await fetch(`data/module4summariesunit${id}.json`);
                 if (!response.ok) throw new Error("File not found");
                 const data = await response.json();
@@ -177,11 +177,11 @@
 
                 displayArea.innerHTML = `
                     <div class="fade-in bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden mb-12">
-                        <div class="bg-gradient-to-r from-slate-900 to-indigo-900 p-10 text-white relative">
+                        <div class="bg-gradient-to-r from-pink-900 to-rose-700 p-10 text-white relative">
                             <div class="absolute right-8 top-8 opacity-10 text-6xl rotate-12">
-                                <i class="fas fa-briefcase-medical"></i>
+                                <i class="fas fa-baby"></i>
                             </div>
-                            <span class="bg-indigo-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4 inline-block">Lerneinheit ${id}</span>
+                            <span class="bg-pink-400 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4 inline-block">Unit ${id}</span>
                             <h2 class="text-3xl font-black tracking-tight leading-tight">${content.topic}</h2>
                             <div class="flex flex-wrap gap-2 mt-6">
                                 ${content.tags.map(tag => `<span class="bg-white/10 backdrop-blur-md text-white/90 text-[10px] px-3 py-1 rounded-lg font-bold border border-white/10">#${tag}</span>`).join('')}
@@ -191,19 +191,19 @@
                             ${content.content}
                         </div>
                         <div class="bg-slate-50 p-6 border-t border-slate-100 flex justify-center">
-                            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-slate-400 hover:text-indigo-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 transition-all">
-                                <i class="fas fa-arrow-up"></i> Nach oben
+                            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-slate-400 hover:text-pink-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 transition-all">
+                                <i class="fas fa-arrow-up"></i> Zum Seitenanfang
                             </button>
                         </div>
                     </div>
                 `;
             } catch (error) {
                 displayArea.innerHTML = `
-                    <div class="p-12 text-center bg-indigo-50 rounded-[2.5rem] border-2 border-indigo-100">
-                        <i class="fas fa-tools text-indigo-500 text-4xl mb-4"></i>
-                        <h4 class="font-black text-indigo-900 uppercase">In Bearbeitung</h4>
-                        <p class="text-indigo-700 text-sm mt-2">Die Zusammenfassung für Modul 4 (Unit ${id}) wird basierend auf der Fallstudie "Herr Z." erstellt.</p>
-                        <button onclick="location.reload()" class="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-xl font-bold text-xs uppercase">Aktualisieren</button>
+                    <div class="p-12 text-center bg-pink-50 rounded-[2.5rem] border-2 border-pink-100">
+                        <i class="fas fa-info-circle text-pink-500 text-4xl mb-4"></i>
+                        <h4 class="font-black text-pink-900 uppercase">In Vorbereitung</h4>
+                        <p class="text-pink-700 text-sm mt-2">Der Experten-Inhalt für <b>Unit ${id}</b> wird derzeit für das System aufbereitet.</p>
+                        <button onclick="location.reload()" class="mt-6 px-6 py-2 bg-pink-600 text-white rounded-xl font-bold text-xs uppercase">Aktualisieren</button>
                     </div>
                 `;
             }
@@ -218,11 +218,11 @@
             const btnQuiz = document.getElementById('tab-quiz');
 
             if (isContent) {
-                btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-indigo-700 shadow-sm border border-slate-200/50";
-                btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-indigo-600";
+                btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-pink-700 shadow-sm border border-slate-200/50";
+                btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-pink-600";
             } else {
-                btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-indigo-700 shadow-sm border border-slate-200/50";
-                btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-indigo-600";
+                btnQuiz.className = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-pink-700 shadow-sm border border-slate-200/50";
+                btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-pink-600";
             }
         }
     </script>
