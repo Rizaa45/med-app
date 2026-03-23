@@ -82,10 +82,8 @@
 </head>
 <body class="min-h-screen text-slate-100 relative">
 
-    <!-- Background -->
     <div class="page-bg"></div>
 
-    <!-- ═══════ UPDATE MODAL ═══════ -->
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
         <div class="glass w-full max-w-lg rounded-3xl shadow-2xl relative z-10 overflow-hidden animate-modal">
@@ -102,17 +100,17 @@
             </div>
             <div class="p-8 space-y-5 bg-[#0d1117]">
                 <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-heart"></i></div>
+                    <div>
+                        <h4 class="font-bold text-sm text-white">Modul 4: Prävention</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">Chronische Pflege und Rehabilitation integriert.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
                     <div class="w-10 h-10 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-dove"></i></div>
                     <div>
                         <h4 class="font-bold text-sm text-white">Modul 7: Palliative Care</h4>
                         <p class="text-[11px] text-slate-400 leading-relaxed">Symptomkontrolle, Ethik und Sterbebegleitung sind jetzt verfügbar.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-heart-pulse"></i></div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">Modul 6: Notfall-Optimierung</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">Verbesserte Ladezeiten für Reanimations-Protokolle.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -122,17 +120,15 @@
                         <p class="text-[11px] text-slate-400 leading-relaxed">KI-Präsentations-Creator mit 8 Layouts, Skripten und Bildgenerierung.</p>
                     </div>
                 </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20">
+                <button onclick="closeUpdateModal()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20 mt-4">
                     <i class="fas fa-check mr-2"></i> System starten
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- ═══════ MAIN CONTENT ═══════ -->
     <div class="relative z-10 max-w-6xl mx-auto px-6 py-10 pb-24">
 
-        <!-- ── Header ── -->
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
             <div>
                 <div class="flex items-center gap-3 mb-2">
@@ -162,25 +158,22 @@
             </div>
         </header>
 
-        <!-- ── Progress + SLM Studio Card ── -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 
-            <!-- Progress Card -->
             <div class="lg:col-span-2 glass rounded-3xl p-10 relative overflow-hidden anim" style="animation-delay:.1s">
                 <div class="absolute -top-20 -right-20 w-60 h-60 bg-indigo-500 rounded-full blur-[80px] opacity-[.04]"></div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 relative z-10">
                     <div>
                         <h2 class="text-white font-black text-2xl uppercase tracking-tight">Gesamtfortschritt</h2>
-                        <p class="text-slate-500 text-sm font-medium">Vorbereitungsphase: Palliative & Notfall</p>
+                        <p class="text-slate-500 text-sm font-medium">Vorbereitungsphase: Palliative, Prävention & Notfall</p>
                     </div>
-                    <span id="total-percent" class="text-6xl font-black bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent tracking-tighter">18%</span>
+                    <span id="total-percent" class="text-6xl font-black bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent tracking-tighter">22%</span>
                 </div>
                 <div class="w-full bg-white/5 rounded-full h-4 overflow-hidden p-0.5 relative z-10">
-                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 18%"></div>
+                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 22%"></div>
                 </div>
             </div>
 
-            <!-- SLM Studio Card -->
             <a href="creator.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-indigo-500 via-indigo-600 to-blue-600 shadow-xl cursor-pointer hover:scale-[1.02] transition-all ai-glow anim" style="animation-delay:.15s">
                 <div class="bg-[#0a0e1a] h-full w-full rounded-[calc(1.5rem-2px)] p-8 flex flex-col justify-between overflow-hidden relative">
                     <div class="absolute -right-4 -top-4 bg-indigo-500/10 w-32 h-32 rounded-full blur-3xl group-hover:bg-indigo-500/25 transition-all duration-500"></div>
@@ -202,10 +195,8 @@
             </a>
         </div>
 
-        <!-- ── Module Grid ── -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 anim" style="animation-delay:.2s" id="module-grid">
 
-            <!-- Modul 1 -->
             <div onclick="location.href='module.html?id=1'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -221,7 +212,6 @@
                 </div>
             </div>
 
-            <!-- Modul 2 -->
             <div onclick="location.href='module2.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -237,7 +227,6 @@
                 </div>
             </div>
 
-            <!-- Modul 3 -->
             <div onclick="location.href='module3.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -253,14 +242,28 @@
                 </div>
             </div>
 
-            <!-- Modul 5 -->
+            <div onclick="location.href='module4.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-teal-500/10" style="--accent:#14b8a6">
+                <div class="mod-glow" style="background:#14b8a6"></div>
+                <div class="flex justify-between items-start mb-8 relative z-10">
+                    <div class="w-14 h-14 bg-teal-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/20">
+                        <i class="fas fa-shield-heart text-2xl"></i>
+                    </div>
+                    <span class="font-black text-teal-400 text-sm bg-teal-500/10 px-3 py-1 rounded-lg">NEU</span>
+                </div>
+                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 4</h3>
+                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Prävention & Chronische Pflege</p>
+                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
+                    <div class="bg-teal-500 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
+                </div>
+            </div>
+
             <div onclick="location.href='module5.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-emerald-500/10" style="--accent:#22c55e">
                 <div class="mod-glow" style="background:#22c55e"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
                     <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
                         <i class="fas fa-hand-holding-medical text-2xl"></i>
                     </div>
-                    <span class="font-black text-emerald-400 text-sm bg-emerald-500/10 px-3 py-1 rounded-lg">NEW</span>
+                    <span class="font-black text-emerald-400 text-sm bg-emerald-500/10 px-3 py-1 rounded-lg">NEU</span>
                 </div>
                 <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 5</h3>
                 <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Chirurgie & Akutpflege</p>
@@ -269,7 +272,6 @@
                 </div>
             </div>
 
-            <!-- Modul 6 -->
             <div onclick="location.href='module6.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-red-500/10" style="--accent:#ef4444">
                 <div class="mod-glow" style="background:#ef4444"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -285,7 +287,6 @@
                 </div>
             </div>
 
-            <!-- Modul 7 -->
             <div onclick="location.href='module7.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-purple-500/10 relative" style="--accent:#a855f7">
                 <div class="mod-glow" style="background:#a855f7"></div>
                 <div class="absolute right-5 top-5 z-20">
@@ -307,7 +308,6 @@
                 </div>
             </div>
 
-            <!-- Modul 9 – Simulator -->
             <div onclick="location.href='module.html?id=9'" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-orange-500/20" style="--accent:#f97316;background:linear-gradient(145deg,rgba(15,10,0,.6),rgba(20,14,5,.6));backdrop-filter:blur(20px)">
                 <div class="mod-glow" style="background:#f97316"></div>
                 <div class="absolute -right-8 -top-1 bg-orange-500 text-white text-[8px] font-black px-10 py-1 rotate-45 uppercase tracking-widest z-20">Simulator</div>
@@ -326,7 +326,6 @@
 
         </div>
 
-        <!-- ── Footer ── -->
         <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
                 <span>SLM System v6.0 • A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -335,7 +334,6 @@
         </footer>
     </div>
 
-    <!-- ═══════ FAB: SLM Studio ═══════ -->
     <a href="creator.html" class="fixed bottom-8 right-8 w-14 h-14 bg-indigo-600 text-white rounded-2xl shadow-2xl shadow-indigo-500/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 ai-glow" title="SLM Studio öffnen">
         <i class="fas fa-wand-magic-sparkles text-lg"></i>
     </a>
