@@ -1,0 +1,3072 @@
+[
+  {
+    "q_id": "m1_rf_001",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "statement": "Der wesentliche Unterschied zwischen einem Lebenslauf und einer Biografie besteht darin, dass der Lebenslauf die individuelle Interpretation des Erlebten darstellt.",
+    "answer": "falsch",
+    "explanation": "Laut Material ist die Biografie die individuelle Interpretation der erlebten Lebensgeschichte, während der Lebenslauf eine sachliche Darstellung bzw. Aufzählung biografischer Daten ist.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 1"
+  },
+  {
+    "q_id": "m1_rf_002",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "statement": "Eine Biografie umfasst laut Definition auch das bewusste oder unbewusste Vergessen von Erlebtem.",
+    "answer": "richtig",
+    "explanation": "In der Definition von Biografie wird explizit erwähnt: 'individuelle Interpretation des Erlebten (auch Vergessen!)'.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 1"
+  },
+  {
+    "q_id": "m1_rf_003",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "statement": "Die Biografieforschung befasst sich primär mit den statistischen Bedingungen und Verläufen von Lebensgeschichten in verschiedenen Bevölkerungsgruppen.",
+    "answer": "falsch",
+    "explanation": "Dies beschreibt die Lebenslaufforschung. Die Biografieforschung befasst sich mit der Rekonstruktion von Lebensverläufen und Sinnkonstruktionen auf Basis von Erzählungen.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 2"
+  },
+  {
+    "q_id": "m1_rf_004",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "statement": "Als 'Normalbiografie' wird eine standardisierte Form eines Lebenslaufs bezeichnet, die relevante Informationen eines durchschnittlichen Lebenslaufs einer Personengruppe enthält.",
+    "answer": "richtig",
+    "explanation": "Dies entspricht exakt der im Handout zitierten Definition der Normalbiografie.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 3"
+  },
+  {
+    "q_id": "m1_rf_005",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "statement": "Statuspassagen sind markante Übergänge im Lebenslauf, wobei der Wechsel in die Elternrolle ein typisches Beispiel darstellt.",
+    "answer": "richtig",
+    "explanation": "Das Handout nennt den Übergang in die Elternrolle explizit als Beispiel für eine Statuspassage.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 3"
+  },
+  {
+    "q_id": "m1_rf_006",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "statement": "Für das Übungs-Interview in Modul 1A.2 soll eine Person ausgewählt werden, die etwa im gleichen Alter wie der Auszubildende ist.",
+    "answer": "falsch",
+    "explanation": "Der Arbeitsauftrag sieht vor, eine Person auszuwählen, die 'deutlich älter' ist (ca. 60+).",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 4"
+  },
+  {
+    "q_id": "m1_rf_007",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "statement": "Ein 'Leitfaden' für ein Interview besteht aus vorab formulierten Schwerpunkten und Fragen.",
+    "answer": "richtig",
+    "explanation": "Das Handout definiert den Leitfaden als Vorbereitung durch Setzen von Schwerpunkten und Formulieren von Fragen.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 4"
+  },
+  {
+    "q_id": "m1_rf_008",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 1,
+    "statement": "Kommunikation wird im Modul 1A.3 als die Verständigung untereinander sowie der Austausch und die Übertragung von Informationen definiert.",
+    "answer": "richtig",
+    "explanation": "Dies ist die zentrale Definition von Kommunikation im Handout.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 17"
+  },
+  {
+    "q_id": "m1_rf_009",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "statement": "Laut Paul Watzlawick findet Kommunikation nur dann statt, wenn Informationen absichtsvoll und verbal übertragen werden.",
+    "answer": "falsch",
+    "explanation": "Watzlawicks Axiom lautet: 'Man kann nicht nicht kommunizieren', was bedeutet, dass auch Schweigen oder nonverbales Verhalten Kommunikation ist.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 22"
+  },
+  {
+    "q_id": "m1_rf_010",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "statement": "In der face-to-face Kommunikation macht das gesprochene Wort lediglich einen Anteil von etwa 7 % am Gesamteindruck aus.",
+    "answer": "richtig",
+    "explanation": "Die Grafik zur Kommunikation zeigt: Gesprochenes Wort 7 %, Stimmlicher Ausdruck 38 %, Körpersprache 55 %.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 25"
+  },
+  {
+    "q_id": "m1_rf_011",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "statement": "Der Aspekt der 'Selbstoffenbarung' im Vier-Seiten-Modell nach Schulz von Thun gibt Aufschluss darüber, wie der Sender zum Empfänger steht.",
+    "answer": "falsch",
+    "explanation": "Der Beziehungsaspekt klärt, wie der Sender zum Empfänger steht. Die Selbstoffenbarung sagt etwas über die Person des Senders aus ('Was ist das für einer?').",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 31"
+  },
+  {
+    "q_id": "m1_rf_012",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "statement": "Paraphrasieren und Rückfragen zählen zu den Kommunikationsförderern in der pflegerischen Interaktion.",
+    "answer": "richtig",
+    "explanation": "Diese Techniken werden im Handout explizit als Kommunikationsförderer aufgeführt.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 19"
+  },
+  {
+    "q_id": "m1_rf_013",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "statement": "Das Senden von Du-Botschaften wird als förderlich für eine professionelle Sozialbeziehung in der Pflege angesehen.",
+    "answer": "falsch",
+    "explanation": "Du-Botschaften werden als Kommunikationsstörer gelistet.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 19"
+  },
+  {
+    "q_id": "m1_rf_014",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "statement": "Bei den Mongolen ist es üblich, sich zur Begrüßung gegenseitig die Wangen zu beriechen und sich mit den Nasen zu berühren.",
+    "answer": "richtig",
+    "explanation": "Dies ist in der Übersicht der weltweiten Begrüßungsrituale so aufgeführt.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 21"
+  },
+  {
+    "q_id": "m1_rf_015",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "statement": "Die Angehörigen des Stammes der Dani auf Neuguinea begrüßen sich durch kurzes Händeschütteln.",
+    "answer": "falsch",
+    "explanation": "Die Dani begrüßen sich durch 'Minutenlanges Umarmen und Tränen der Rührung und Erschütterung'.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 21"
+  },
+  {
+    "q_id": "m1_rf_016",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "statement": "Als 'Eisbrecher' können in der Akutpflege persönliche Gegenstände auf dem Nachtschränkchen des Patienten dienen.",
+    "answer": "richtig",
+    "explanation": "Das Handout schlägt das Nachtschränkchen im Krankenhaus explizit als Beispiel für einen Gesprächseinstieg (Eisbrecher) vor.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 23"
+  },
+  {
+    "q_id": "m1_rf_017",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "statement": "Die Verwendung des Begriffs 'Popo' bei der Intimpflege eines erwachsenen Patienten wie Herrn Schmidt ist ein Zeichen von professioneller Empathie.",
+    "answer": "falsch",
+    "explanation": "Die Fallsituation problematisiert diese Wortwahl. Sie wirkt infantilisierend und kann Scham auslösen.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 25"
+  },
+  {
+    "q_id": "m1_rf_018",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "statement": "Der Pflegeprozess nach Fiechter und Meier besteht aus 5 aufeinanderfolgenden Schritten.",
+    "answer": "falsch",
+    "explanation": "Die Grafik zeigt 6 Schritte: 1. Informationssammlung, 2. Erkennen von Problemen, 3. Pflegeziele, 4. Planung, 5. Durchführung, 6. Beurteilung.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 30"
+  },
+  {
+    "q_id": "m1_rf_019",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 1,
+    "statement": "Das pflegerische Aufnahmegespräch bildet den Ausgangspunkt für den Pflegeprozess und die fortlaufende Pflegeanamnese.",
+    "answer": "richtig",
+    "explanation": "Dies ist die zentrale Aussage zum Stellenwert des Aufnahmegesprächs.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 30"
+  },
+  {
+    "q_id": "m1_rf_020",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "statement": "Das Wort Anamnese stammt aus dem Griechischen und bedeutet übersetzt 'Untersuchung'.",
+    "answer": "falsch",
+    "explanation": "Das Wort Anamnese bedeutet übersetzt 'Erinnerung'.",
+    "source_hint": "M 1A.4_Handout.pdf, AB 2"
+  },
+  {
+    "q_id": "m1_rf_021",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "statement": "Zu den Zielen des Aufnahmegesprächs gehört unter anderem die Erleichterung der 'Ankommenssituation'.",
+    "answer": "richtig",
+    "explanation": "In der Grafik 'Ziele des Aufnahmegesprächs' ist dies als ein zentrales Ziel aufgeführt.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 30"
+  },
+  {
+    "q_id": "m1_rf_022",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 1,
+    "statement": "Die Erläuterung der Ziele des Gesprächs ist Bestandteil des Hauptteils eines Aufnahmegesprächs.",
+    "answer": "falsch",
+    "explanation": "Die Erläuterung der Ziele gehört zur Phase 'Einleitung'.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 31"
+  },
+  {
+    "q_id": "m1_rf_023",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "statement": "Bei einem Heimeinzug muss laut SLP-Checkliste eine ärztliche Erklärung vorliegen, dass der Bewohner nicht an TBC leidet.",
+    "answer": "richtig",
+    "explanation": "Dies ist unter 'notwendige Dokumente' in der Checkliste aufgeführt.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 35"
+  },
+  {
+    "q_id": "m1_rf_024",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "statement": "Eine Vollmacht zur Postöffnung durch die Heimverwaltung ist bei jedem Einzug obligatorisch und muss nicht gesondert geprüft werden.",
+    "answer": "falsch",
+    "explanation": "Die Checkliste führt die 'Vollmacht für Öffnung wichtiger Post' als ein mögliches Dokument auf, das vorhanden sein muss, was eine Einzelfallprüfung impliziert.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 35"
+  },
+  {
+    "q_id": "m1_rf_025",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 1,
+    "statement": "Paul Ekman identifizierte sieben Basisemotionen, die angeboren und kulturübergreifend sind.",
+    "answer": "richtig",
+    "explanation": "Laut Handout sind die Basisemotionen universell und angeboren.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 41"
+  },
+  {
+    "q_id": "m1_rf_026",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "statement": "Das Nachahmen der Mimik des Gegenübers erschwert laut Studien das Nachempfinden von Emotionen.",
+    "answer": "falsch",
+    "explanation": "Studien zeigen laut Handout, dass das Nachahmen entscheidend dazu beiträgt, Emotionen nachzuempfinden.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 44"
+  },
+  {
+    "q_id": "m1_rf_027",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "statement": "Echte Freude lässt sich an den sogenannten Lachfältchen um die Augen erkennen.",
+    "answer": "richtig",
+    "explanation": "Das Handout nennt Lachfältchen als verräterisches Zeichen für ein echtes Lächeln.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 44"
+  },
+  {
+    "q_id": "m1_rf_028",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "statement": "Im Emotionsprozess führt der Auslöser direkt zur sekundären Emotion, noch bevor eine kognitive Bewertung stattfindet.",
+    "answer": "falsch",
+    "explanation": "Der Auslöser führt erst zur primären Emotion. Die sekundäre Emotion entsteht erst NACH der kognitiven Bewertung.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 48"
+  },
+  {
+    "q_id": "m1_rf_029",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "statement": "Erfahrungen, erlernte Regeln und kulturelle Normen beeinflussen die kognitive Bewertung eines Ereignisses.",
+    "answer": "richtig",
+    "explanation": "Das Modell der Emotionsentstehung ordnet diese Faktoren der kognitiven Bewertung zu.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 48"
+  },
+  {
+    "q_id": "m1_rf_030",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "statement": "Laut Schwerdt (2002) kann die berufsbedingte 'Ganzheitlichkeit' der Pflegekräfte zu emotionalen Belastungssituationen führen.",
+    "answer": "richtig",
+    "explanation": "Schwerdt betont, dass gerade die Einbeziehung des Kontextes die Pflegenden in Konfliktlagen bringen kann.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 50"
+  },
+  {
+    "q_id": "m1_rf_031",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "statement": "Emotionsregulation bedeutet, Gefühle dauerhaft zu unterdrücken, um professionell zu wirken.",
+    "answer": "falsch",
+    "explanation": "Wer Gefühle nur kontrolliert, aber nicht reflektiert, riskiert laut Handout ein Burnout. Emotionsregulation beinhaltet die bewusste Auseinandersetzung.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 52"
+  },
+  {
+    "q_id": "m1_rf_032",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "statement": "Das Konzept der kognitiven Persönlichkeitsentwicklung besagt, dass Lernen wesentlich auch durch Beobachtung und Reflexion erfolgt.",
+    "answer": "richtig",
+    "explanation": "Dies wird als Kern des Konzepts im Handout beschrieben.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 51"
+  },
+  {
+    "q_id": "m1_rf_033",
+    "type": "richtig_falsch",
+    "topic": "supervision_beratung",
+    "difficulty": 1,
+    "statement": "Supervision ist eine Form der Beratung, die primär der Kontrolle der Arbeitsleistung durch Vorgesetzte dient.",
+    "answer": "falsch",
+    "explanation": "Supervision dient der kontinuierlichen Berufsrollenreflexion und Gestaltung komplexer Arbeitsbeziehungen, nicht der reinen Leistungskontrolle.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 52"
+  },
+  {
+    "q_id": "m1_rf_034",
+    "type": "richtig_falsch",
+    "topic": "supervision_beratung",
+    "difficulty": 1,
+    "statement": "Supervision richtet sich ausschließlich an Einzelpersonen.",
+    "answer": "falsch",
+    "explanation": "Supervision richtet sich an Einzelpersonen, Gruppen oder Teams.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 52"
+  },
+  {
+    "q_id": "m1_rf_035",
+    "type": "richtig_falsch",
+    "topic": "supervision_beratung",
+    "difficulty": 2,
+    "statement": "Die Kollegiale Beratung findet in einer selbstgesteuerten Gruppe von Gleichberechtigten mit festgelegten Rollen statt.",
+    "answer": "richtig",
+    "explanation": "Dies ist ein Definitionsmerkmal der Kollegialen Beratung laut Handout.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 53"
+  },
+  {
+    "q_id": "m1_rf_036",
+    "type": "richtig_falsch",
+    "topic": "supervision_beratung",
+    "difficulty": 2,
+    "statement": "In der Pflegeausbildung soll die Kollegiale Beratung bereits ab dem ersten Unterrichtstag (Modul 1A) regelmäßig bis zum Examen implementiert werden.",
+    "answer": "falsch",
+    "explanation": "Die Implementierung ist laut Handout erst ab Modul 8 vorgesehen.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 54"
+  },
+  {
+    "q_id": "m1_rf_037",
+    "type": "richtig_falsch",
+    "topic": "supervision_beratung",
+    "difficulty": 2,
+    "statement": "Ein typisches Schlüsselthema für die Kollegiale Beratung in der Pflege ist der Umgang mit Nähe und Distanz.",
+    "answer": "richtig",
+    "explanation": "Dies wird explizit als eines der Schlüsselthemen in der Pflege aufgeführt.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 54"
+  },
+  {
+    "q_id": "m1_rf_038",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 3,
+    "statement": "Nach der Lebenslaufforschung werden Lebensabschnitte als Aufgaben definiert, wobei die Phase 'Erwachsener' vor der Phase 'Junger Erwachsener' liegt.",
+    "answer": "falsch",
+    "explanation": "Die Reihenfolge ist: Kindheit, Jugend, Junger Erwachsener, Erwachsener, Rentner, Hochaltriger Mensch.",
+    "source_hint": "M 1 A.2_Handout_03.09.24.pdf, Folie 4"
+  },
+  {
+    "q_id": "m1_rf_039",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 3,
+    "statement": "Bei der Beantragung von Pflegewohngeld müssen laut Checkliste Kopien von Rentenbescheiden und Bescheinigungen über Zinseinkünfte eingereicht werden.",
+    "answer": "richtig",
+    "explanation": "Diese Dokumente sind in der Checkliste unter 'bei Beantragung von Pflegewohngeld' explizit gelistet.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 35"
+  },
+  {
+    "q_id": "m1_rf_040",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "statement": "Paraphrasieren bedeutet in der Kommunikation, das Gesagte des Gegenübers mit eigenen Worten zu deuten und zu interpretieren.",
+    "answer": "falsch",
+    "explanation": "Paraphrasieren bedeutet, das Gesagte in eigenen Worten zu wiederholen, um Verständnis zu sichern, nicht es zu deuten oder zu interpretieren (Interpretieren kann ein Störer sein).",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 19 & 20"
+  },
+  {
+    "q_id": "m1_nl_001",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 6 Lebensabschnitte, die im Modul 1A.2 als 'Aufgabe' definiert werden.",
+    "list_label": "Lebensabschnitte als Aufgabe",
+    "count": 6,
+    "correct_answers": ["Kindheit", "Jugend", "Junger Erwachsener", "Erwachsener", "Rentner / Großeltern", "Hochaltriger Mensch"],
+    "all_valid_answers": ["Kindheit", "Jugend", "Junger Erwachsener", "Erwachsener", "Rentner", "Großeltern", "Hochaltriger Mensch", "Alter Mensch"],
+    "points": 6,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_002",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 5 'Kommunikationsstörer', die ein Gespräch in der Pflege negativ beeinflussen können.",
+    "list_label": "Kommunikationsstörer",
+    "count": 5,
+    "correct_answers": ["Mangelnde Hörbereitschaft", "Unterbrechen", "Aneinander vorbeireden", "Du-Botschaften", "Emotionale Beeinflussung"],
+    "all_valid_answers": ["Mangelnde Hörbereitschaft", "Zuhören verweigern", "Unterbrechen", "Dazwischenreden", "Aneinander vorbeireden", "Du-Botschaften", "Vorwürfe", "Mangelnde Sachkenntnis", "Negative Sozialbeziehungen", "Emotionale Beeinflussung", "Unkonzentriertheit", "Mimik (unpassend)"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_003",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 5 'Kommunikationsförderer', die zu einer gelingenden Interaktion beitragen.",
+    "list_label": "Kommunikationsförderer",
+    "count": 5,
+    "correct_answers": ["Aktives Zuhören", "Ich-Botschaften senden", "Respekt zeigen / akzeptieren", "Paraphrasieren und Rückfragen", "Ruhe und Zeit"],
+    "all_valid_answers": ["Aktives Zuhören", "Zuhören", "Ich-Botschaften", "Respekt", "Akzeptanz", "Wertschätzung", "Paraphrasieren", "Wiederholen", "Rückfragen", "Fragen stellen", "Ruhe", "Zeit", "Angepasste Rahmenbedingungen"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_004",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 3 Ebenen (Kanäle) der face-to-face Kommunikation.",
+    "list_label": "Ebenen der Kommunikation",
+    "count": 3,
+    "correct_answers": ["Gesprochenes Wort", "Stimmlicher Ausdruck", "Körpersprache"],
+    "all_valid_answers": ["Gesprochenes Wort", "Inhalt", "Verbale Ebene", "Stimmlicher Ausdruck", "Paraverbale Ebene", "Stimme", "Tonfall", "Körpersprache", "Nonverbale Ebene", "Mimik", "Gestik"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_005",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 1,
+    "instruction": "**Zählen** Sie die 6 Schritte des Pflegeprozesses nach Fiechter und Meier in der korrekten Reihenfolge auf.",
+    "list_label": "Schritte des Pflegeprozesses",
+    "count": 6,
+    "correct_answers": ["Informationssammlung", "Erkennen von Problemen", "Festlegen der Pflegeziele", "Planung der Pflegemaßnahmen", "Durchführung der Pflege", "Beurteilung der Wirkung"],
+    "all_valid_answers": ["Informationssammlung", "Pflegeanamnese", "Erkennen von Problemen", "Ressourcen", "Pflegediagnosen", "Festlegen der Pflegeziele", "Pflegeziele", "Planung der Pflegemaßnahmen", "Pflegeplanung", "Durchführung der Pflege", "Beurteilung der Wirkung", "Evaluation"],
+    "points": 6,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_006",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 6 Ziele des pflegerischen Aufnahmegespräches.",
+    "list_label": "Ziele des Aufnahmegespräches",
+    "count": 6,
+    "correct_answers": ["Aufbau einer Beziehung", "Erleichterung der Ankommenssituation", "Erfassen des Erlebens/Bedürfnisse", "Orientierung des Klienten", "Klärung von Erwartungen", "Erhebung pflegerelevanter Informationen"],
+    "all_valid_answers": ["Aufbau einer Beziehung", "Beziehungsaufbau", "Ankommenssituation erleichtern", "Bedürfnisse erfassen", "Erleben erfassen", "Orientierung bieten", "Orientierung zu Einrichtung/Team/Organisatorischem", "Klärung von Erwartungen", "Erwartungsmanagement", "Pflegerelevante Informationen erheben", "Situationseinschätzung"],
+    "points": 6,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_007",
+    "type": "nennen_liste",
+    "topic": "kommunikation_theorie",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die vier Seiten einer Nachricht nach dem Kommunikationsquadrat von Schulz von Thun.",
+    "list_label": "Das Vier-Seiten-Modell",
+    "count": 4,
+    "correct_answers": ["Sachinhalt", "Selbstoffenbarung", "Beziehung", "Appell"],
+    "all_valid_answers": ["Sachinhalt", "Sachebene", "Selbstoffenbarung", "Ich-Offenbarung", "Beziehung", "Beziehungsebene", "Appell", "Appellseite"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_008",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_anamnese",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 4 Komponenten, aus denen sich die pflegerische Anamnese zusammensetzt.",
+    "list_label": "Elemente der Pflegeanamnese",
+    "count": 4,
+    "correct_answers": ["Pflegerisches Aufnahmegespräch", "Beobachtungen und Assessments", "Körperliche Untersuchungen", "Dokumentation / Pflegeüberleitung"],
+    "all_valid_answers": ["Pflegerisches Aufnahmegespräch", "Anamnesegespräch", "Gespräche mit Angehörigen", "Beobachtungen", "Assessments", "Skalen", "Körperliche Untersuchungen", "Untersuchung", "Dokumentation", "Pflegeüberleitung", "Arztbriefe"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_009",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 1,
+    "instruction": "**Listen** Sie die 3 Phasen des Gesprächsaufbaus eines Aufnahmegesprächs auf.",
+    "list_label": "Phasen des Aufnahmegesprächs",
+    "count": 3,
+    "correct_answers": ["Einleitung", "Hauptteil", "Schluss"],
+    "all_valid_answers": ["Einleitung", "Beginn", "Hauptteil", "Durchführung", "Schluss", "Beendigung"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_010",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_administration",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 4 interne Abteilungen oder Personengruppen, die laut SLP-Checkliste über einen neuen Bewohner informiert werden müssen.",
+    "list_label": "Information über den neuen Bewohner an:",
+    "count": 4,
+    "correct_answers": ["Pflegebereich", "Hauswirtschaft", "Verwaltung", "Hausmeister"],
+    "all_valid_answers": ["Pflegebereich", "Wohnbereich", "Hauswirtschaft", "Küche", "Reinigung", "Verwaltung", "Büro", "Therapeutischer Dienst", "Physiotherapie", "Hausmeister", "Technik", "Mitbewohner", "Heimbeirat"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_011",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_vorbereitung",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 5 Tätigkeiten, die zur Vorbereitung des Zimmers beim Heimeinzug gehören.",
+    "list_label": "Zimmer vorbereiten",
+    "count": 5,
+    "correct_answers": ["Einrichtung auf Vollständigkeit prüfen", "Bett beziehen", "Nachtkästchen säubern", "Badezimmer reinigen", "Namensschild anbringen lassen"],
+    "all_valid_answers": ["Einrichtung auf Vollständigkeit prüfen", "Bett beziehen", "Nachtkästchen säubern", "Zimmer reinigen", "Badezimmer reinigen", "Namensschild anbringen", "Heimzeitung bereitlegen", "Telefonverzeichnis hinterlegen", "Technische Einrichtung prüfen"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_012",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_dokumente",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 4 'notwendige Dokumente', die beim Heimeinzug vorliegen müssen.",
+    "list_label": "Notwendige Dokumente bei Aufnahme",
+    "count": 4,
+    "correct_answers": ["Ärztliche Erklärung (TBC-Freiheit)", "Kostenübernahmeerklärung", "Bankeinzugsermächtigung", "Personalausweis / Stammbuch"],
+    "all_valid_answers": ["Ärztliche Erklärung", "TBC-Erklärung", "Kostenübernahmeerklärung", "Bankeinzugsermächtigung", "Einstufungsbescheid", "Heimpflegebedürftigkeit-Bescheinigung", "Vollmachten", "Bestellungsurkunde", "Geburtsurkunde", "Personalausweis", "Stammbuch", "Schwerbehindertenausweis", "Krankenkassenkarte"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_013",
+    "type": "nennen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 6 universellen Basisemotionen nach Paul Ekman.",
+    "list_label": "Basisemotionen nach Ekman",
+    "count": 6,
+    "correct_answers": ["Freude (Happiness)", "Ärger (Anger)", "Ekel (Disgust)", "Angst (Fear)", "Trauer (Sadness)", "Überraschung (Surprise)"],
+    "all_valid_answers": ["Freude", "Happiness", "Ärger", "Wut", "Anger", "Ekel", "Disgust", "Angst", "Fear", "Trauer", "Sadness", "Überraschung", "Surprise"],
+    "points": 6,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_014",
+    "type": "nennen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Zählen** Sie die 5 Stationen des Emotionsprozesses laut Ablaufmodell auf.",
+    "list_label": "Ablaufmodell der Emotionsentstehung",
+    "count": 5,
+    "correct_answers": ["Auslöser", "Primäre Emotion", "Kognitive Bewertung", "Sekundäre Emotion", "Handlungsimpuls"],
+    "all_valid_answers": ["Auslöser", "Reiz", "Primäre Emotion", "Gefühl 1", "Kognitive Bewertung", "Bewertung", "Einordnung", "Sekundäre Emotion", "Gefühl 2", "Handlungsimpuls", "Reaktion"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_015",
+    "type": "nennen_liste",
+    "topic": "beratung_supervision",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 5 typische 'Schlüsselthemen' in der Pflege für eine kollegiale Beratung.",
+    "list_label": "Schlüsselthemen der Pflege",
+    "count": 5,
+    "correct_answers": ["Probleme mit Bewohnern/Angehörigen", "Überlastungssituationen", "Konflikte mit Kollegen/Vorgesetzten", "Umgang mit Nähe und Distanz", "Rollenkonflikte"],
+    "all_valid_answers": ["Probleme mit Bewohnern", "Probleme mit Patienten", "Probleme mit Angehörigen", "Überlastungssituationen", "Stress", "Konflikte mit Kollegen", "Konflikte mit Vorgesetzten", "Gestörte Arbeitsabläufe", "Umgang mit Nähe und Distanz", "Rollenkonflikte", "Bewältigung neuer Aufgaben", "Selbstreflexion", "Stärken und Schwächen"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_016",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_durchfuehrung",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie 4 Tätigkeiten, die beim Eintreffen des Bewohners laut Checkliste durchgeführt werden sollen.",
+    "list_label": "Eintreffen des Bewohners",
+    "count": 4,
+    "correct_answers": ["Begrüßen (ggf. Blumenstrauß)", "Fragen nach vorhandenen Unterlagen", "Mahlzeit oder Getränk anbieten", "Nach Wünschen und Bedürfnissen fragen"],
+    "all_valid_answers": ["Begrüßen", "Blumenstrauß übergeben", "PDL/Bezugspflegekraft vorstellen", "Unterlagen erfragen", "Mahlzeit anbieten", "Getränk anbieten", "Nach Wünschen fragen", "Nach Bedürfnissen fragen"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_017",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_information",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 4 Punkte, über die ein Bewohner bei Heimeinzug informiert werden muss.",
+    "list_label": "Bewohner informieren über:",
+    "count": 4,
+    "correct_answers": ["Freizeitmöglichkeiten", "Dienstzeiten des Personals", "Tagesablauf / Essenszeiten", "Hausordnung"],
+    "all_valid_answers": ["Freizeitmöglichkeiten", "Veranstaltungen", "Dienstzeiten", "Personalpräsenz", "Tagesablauf", "Essenszeiten", "Zimmerreinigung", "Wäschereinigung", "Serviceleistungen", "Heimbeirat", "Hausordnung"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_018",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 2 Kernaspekte, die in der Phase 'Einleitung' des Aufnahmegesprächs geklärt werden müssen.",
+    "list_label": "Einleitungsphase",
+    "count": 2,
+    "correct_answers": ["Begrüßung / Vorstellung / Beginn", "Erläuterung der Ziele des Gesprächs"],
+    "all_valid_answers": ["Begrüßung", "Vorstellung", "Erläuterung der Ziele", "Ziele klären", "Gesprächszweck"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_019",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 Aufgaben, die im 'Hauptteil' des Aufnahmegesprächs im Vordergrund stehen.",
+    "list_label": "Hauptteil des Aufnahmegesprächs",
+    "count": 3,
+    "correct_answers": ["Informationsgabe", "Informationserfassung", "Nachfragen / Wiederholungen"],
+    "all_valid_answers": ["Informationsgabe", "Austausch", "Informationserfassung", "Datensammlung", "Nachfragen", "Wiederholungen", "Klärung"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_020",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 3 zentralen Anlässe von Kommunikation im Pflegealltag laut Modul 1A.3.",
+    "list_label": "Anlässe von Kommunikation",
+    "count": 3,
+    "correct_answers": ["Begrüßen", "Gespräche führen", "Sich verabschieden"],
+    "all_valid_answers": ["Begrüßen", "Gespräche führen", "Verabschieden", "Interaktion"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_021",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 Beispiele für 'kritische Ereignisse' im Leben eines Menschen laut Biografiedefinition.",
+    "list_label": "Kritische Lebensereignisse",
+    "count": 3,
+    "correct_answers": ["Krankheiten", "Verluste", "Kriege"],
+    "all_valid_answers": ["Krankheiten", "Verluste", "Todesfälle", "Kriege", "Flucht", "Krisen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_022",
+    "type": "nennen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 Faktoren, die die 'kognitive Bewertung' im Emotionsmodell beeinflussen.",
+    "list_label": "Einflussfaktoren der Bewertung",
+    "count": 3,
+    "correct_answers": ["Erfahrungen", "Erlernte Regeln", "Kulturelle Normen"],
+    "all_valid_answers": ["Erfahrungen", "Vergangenheit", "Erlernte Regeln", "Erziehung", "Kulturelle Normen", "Werte", "Gesellschaft"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_023",
+    "type": "nennen_liste",
+    "topic": "beratung_supervision",
+    "difficulty": 1,
+    "instruction": "**Nennen** Sie die 3 Zielgruppen, an die sich Supervision richten kann.",
+    "list_label": "Adressaten der Supervision",
+    "count": 3,
+    "correct_answers": ["Einzelpersonen", "Gruppen", "Teams"],
+    "all_valid_answers": ["Einzelpersonen", "Gruppen", "Teams", "Organisationen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_024",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 4 'notwendige Kopien', die speziell bei der Beantragung von Pflegewohngeld vorliegen müssen.",
+    "list_label": "Dokumente für Pflegewohngeld",
+    "count": 4,
+    "correct_answers": ["Rentenbescheide", "Bescheid über Grundsicherung", "Bescheinigung über Zinseinkünfte", "Nachweis über Miet- und Pachteinnahmen"],
+    "all_valid_answers": ["Rentenbescheide", "Grundsicherungsbescheid", "Zinseinkünfte", "Zinserträge", "Mieteinnahmen", "Pachteinnahmen", "Leistungsbescheide"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_025",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit_forschung",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 2 Quellen / Grundlagen, auf deren Basis die Biografieforschung Lebensverläufe rekonstruiert.",
+    "list_label": "Grundlagen der Biografieforschung",
+    "count": 2,
+    "correct_answers": ["Biografische Erzählungen", "Persönliche Dokumente"],
+    "all_valid_answers": ["Biografische Erzählungen", "Interviews", "Narrative", "Persönliche Dokumente", "Tagebücher", "Briefe", "Fotos"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_026",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 2 Beispiele für 'Statuspassagen' laut Modul 1A.2.",
+    "list_label": "Beispiele für Statuspassagen",
+    "count": 2,
+    "correct_answers": ["Übergang Schüler zu Auszubildender", "Übergang in die Elternrolle"],
+    "all_valid_answers": ["Schüler zu Azubi", "Berufseinstieg", "Elternrolle", "Hochzeit", "Renteneintritt"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_027",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie die 3 Akteure, die beim 'Eintreffen des Bewohners' laut Checkliste im Aufnahmegespräch zusammenkommen.",
+    "list_label": "Beteiligte bei Begrüßung",
+    "count": 3,
+    "correct_answers": ["Bewohner", "PDL", "Bezugspflegekraft"],
+    "all_valid_answers": ["Bewohner", "Neuer Bewohner", "PDL", "Pflegedienstleitung", "Bezugspflegekraft", "Pflegekraft"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_028",
+    "type": "nennen_liste",
+    "topic": "interkulturelle_kommunikation",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 verschiedene Begrüßungsrituale aus anderen Kulturen laut dem Spiel 'Begrüßung all over the world'.",
+    "list_label": "Interkulturelle Begrüßungen",
+    "count": 3,
+    "correct_answers": ["Handflächen aneinanderlegen (Inder)", "Küsschen rechts/links (Franzosen)", "Wangen beriechen / Nase berühren (Mongolen)"],
+    "all_valid_answers": ["Handflächen aneinanderlegen", "Namaste", "Küsschen", "Wangenkuss", "Beriechen", "Nase berühren", "Faustschlag Kopf/Schulter", "Umarmen und Tränen", "Rückenschläge", "Händeklatschen", "Kleider hergeben", "Schweigen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_029",
+    "type": "nennen_liste",
+    "topic": "beratung_kollegial",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 Merkmale der 'Kollegialen Beratung'.",
+    "list_label": "Merkmale kollegiale Beratung",
+    "count": 3,
+    "correct_answers": ["Selbstgesteuerte Gruppe", "Gleichberechtigte Mitglieder", "Festgelegte Rollen"],
+    "all_valid_answers": ["Selbstgesteuerte Gruppe", "Kein externer Leiter", "Gleichberechtigte Mitglieder", "Kollegen", "Festgelegte Rollen", "Definiertes Vorgehen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_nl_030",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "instruction": "**Nennen** Sie 3 'Gefahren' oder negative Folgen, die laut Schwerdt (2002) durch die Ganzheitlichkeit in der Pflege entstehen können.",
+    "list_label": "Risiken pflegerischer Ganzheitlichkeit",
+    "count": 3,
+    "correct_answers": ["Überfordernde Situationen", "Emotionale Belastung", "Moralische Konfliktlagen"],
+    "all_valid_answers": ["Überforderung", "Belastungssituationen", "Emotionale Belastung", "Moralische Belastung", "Konfliktlagen", "Burnout-Gefahr"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung"
+  },
+  {
+    "q_id": "m1_tab_001",
+    "type": "tabelle_vergleich",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "**Vergleichen** Sie die Konzepte 'Lebenslauf' und 'Biografie' anhand der im Handout genannten Merkmale.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt ausgefüllter Zelle.",
+    "data": {
+      "table": {
+        "headers": ["Merkmal", "Lebenslauf", "Biografie"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Kerncharakter" },
+              { "type": "input", "correct_answer": "Sachliche Darstellung / Aufzählung von Daten", "keywords": ["sachlich", "Daten", "Aufzählung"] },
+              { "type": "input", "correct_answer": "Erzählung der erlebten Geschichte", "keywords": ["erlebt", "Erzählung", "Geschichte"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Perspektive" },
+              { "type": "input", "correct_answer": "Objektiv / Funktional (z.B. Bewerbung)", "keywords": ["objektiv", "funktional", "Bewerbung"] },
+              { "type": "input", "correct_answer": "Subjektiv / Individuelle Interpretation", "keywords": ["subjektiv", "Interpretation", "individuell"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "kommunikation_theorie",
+    "difficulty": 1,
+    "instruction": "Vervollständigen Sie die Tabelle zur prozentualen **Verteilung der Kommunikation** bei einer Face-to-Face-Begegnung.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Zeile.",
+    "data": {
+      "table": {
+        "headers": ["Ebene / Kanal", "Prozentualer Anteil", "Beschreibung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Gesprochenes Wort", "keywords": ["Wort", "Inhalt", "verbal"] },
+              { "type": "input", "correct_answer": "7 %", "keywords": ["7"] },
+              { "type": "text", "content": "Die rein inhaltliche Information" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Stimmlicher Ausdruck", "keywords": ["Stimme", "Tonfall", "paraverbal"] },
+              { "type": "input", "correct_answer": "38 %", "keywords": ["38"] },
+              { "type": "text", "content": "Tonfall, Lautstärke, Betonung" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Körpersprache", "keywords": ["Körper", "nonverbal", "Mimik"] },
+              { "type": "input", "correct_answer": "55 %", "keywords": ["55"] },
+              { "type": "text", "content": "Mimik, Gestik, Haltung" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_003",
+    "type": "tabelle_2spalten",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie die vier Seiten einer Nachricht nach Schulz von Thun und **erläutern** Sie kurz die jeweilige Kernfrage des Empfängers.",
+    "points": 8,
+    "scoring_info": "1 Punkt für den Namen, 1 Punkt für die Erläuterung.",
+    "data": {
+      "table": {
+        "headers": ["Seite der Nachricht", "Kernfrage des Empfängers"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Sachinhalt", "keywords": ["Sache", "Sachinhalt"] },
+              { "type": "textarea", "correct_answer": "Wie ist der Sachverhalt zu verstehen?", "keywords": ["Sachverhalt", "verstehen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Selbstoffenbarung", "keywords": ["Selbstoffenbarung", "Ich-Offenbarung"] },
+              { "type": "textarea", "correct_answer": "Was ist mit ihm? Was ist das für einer?", "keywords": ["mit ihm", "wer ist"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Beziehung", "keywords": ["Beziehung"] },
+              { "type": "textarea", "correct_answer": "Wie redet der eigentlich mit mir? Wen glaubt er vor sich zu haben?", "keywords": ["mit mir", "Haltung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Appell", "keywords": ["Appell"] },
+              { "type": "textarea", "correct_answer": "Was soll ich tun, denken, fühlen aufgrund seiner Mitteilung?", "keywords": ["tun", "fühlen", "denken", "Aufforderung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "instruction": "Vervollständigen Sie die Schritte des **Pflegeprozesses** nach Fiechter und Meier.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt ergänztem Feld (Name oder Inhalt).",
+    "data": {
+      "table": {
+        "headers": ["Schritt", "Bezeichnung", "Kernaufgabe"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "1." },
+              { "type": "input", "correct_answer": "Informationssammlung", "keywords": ["Anamnese", "Informationssammlung"] },
+              { "type": "text", "content": "Pflegeanamnese und Gespräch" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "3." },
+              { "type": "input", "correct_answer": "Festlegen der Pflegeziele", "keywords": ["Pflegeziele", "Ziele"] },
+              { "type": "text", "content": "Was soll erreicht werden?" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "6." },
+              { "type": "input", "correct_answer": "Beurteilung der Wirkung", "keywords": ["Evaluation", "Wirkung", "Beurteilung"] },
+              { "type": "textarea", "correct_answer": "Beurteilung der Wirkung der Pflege auf den Patienten", "keywords": ["Wirkung", "Erfolg"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_005",
+    "type": "tabelle_2spalten",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie drei Begrüßungsrituale aus anderen Kulturen und **beschreiben** Sie das dazugehörige Verhalten.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Name, 1 Punkt pro Beschreibung.",
+    "data": {
+      "table": {
+        "headers": ["Kultur / Stamm", "Verhalten bei der Begrüßung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Mongolen", "keywords": ["Mongolen"] },
+              { "type": "textarea", "correct_answer": "Wangen beriechen und sich mit den Nasen berühren und reiben.", "keywords": ["Wangen", "beriechen", "Nasen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Dani (Neuguinea)", "keywords": ["Dani"] },
+              { "type": "textarea", "correct_answer": "Minutenlanges Umarmen und Tränen der Rührung.", "keywords": ["Umarmen", "Tränen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Kupfer-Eskimos", "keywords": ["Eskimos", "Kupfer"] },
+              { "type": "textarea", "correct_answer": "Faustschlag gegen Kopf und Schulter.", "keywords": ["Faustschlag", "Kopf", "Schulter"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Analysieren** Sie den Prozess der Emotionsentstehung anhand des Phasenmodells.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Begriff.",
+    "data": {
+      "table": {
+        "headers": ["Abfolge", "Begriff", "Einflussfaktor / Ergebnis"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Start" },
+              { "type": "input", "correct_answer": "Auslöser", "keywords": ["Reiz", "Auslöser"] },
+              { "type": "text", "content": "Situation oder Ereignis" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Reaktion 1" },
+              { "type": "input", "correct_answer": "Primäre Emotion", "keywords": ["primär", "Gefühl 1"] },
+              { "type": "text", "content": "Unmittelbares Bedürfnis 1" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Verarbeitung" },
+              { "type": "input", "correct_answer": "Kognitive Bewertung", "keywords": ["Bewertung", "kognitiv"] },
+              { "type": "input", "correct_answer": "Erfahrungen, Regeln, Normen", "keywords": ["Regeln", "Normen", "Erfahrung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Reaktion 2" },
+              { "type": "input", "correct_answer": "Sekundäre Emotion", "keywords": ["sekundär", "Gefühl 2"] },
+              { "type": "text", "content": "Gesteuertes Gefühl" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_007",
+    "type": "tabelle_vergleich",
+    "topic": "beratungsformate",
+    "difficulty": 2,
+    "instruction": "**Vergleichen** Sie die Konzepte 'Supervision' und 'Kollegiale Beratung'.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Merkmal", "Supervision", "Kollegiale Beratung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Leitung" },
+              { "type": "input", "correct_answer": "Externer Supervisor / Berater", "keywords": ["extern", "Supervisor"] },
+              { "type": "input", "correct_answer": "Selbstgesteuerte Gruppe (intern)", "keywords": ["selbstgesteuert", "intern", "Kollegen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Ziel" },
+              { "type": "input", "correct_answer": "Berufsrollenreflexion / Organisationsentwicklung", "keywords": ["Rollenreflexion", "Organisation"] },
+              { "type": "input", "correct_answer": "Lösung für Fragen aus dem beruflichen Alltag", "keywords": ["Lösung", "Alltagsproblem"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_008",
+    "type": "tabelle_2spalten",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie die drei Phasen des Aufnahmegesprächs und **listen** Sie jeweils ein Element dazu auf.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Phase, 1 Punkt pro Element.",
+    "data": {
+      "table": {
+        "headers": ["Phase", "Element / Aufgabe"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Einleitung", "keywords": ["Einleitung", "Beginn"] },
+              { "type": "input", "correct_answer": "Begrüßung / Erläuterung der Ziele", "keywords": ["Begrüßung", "Ziele"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Hauptteil", "keywords": ["Hauptteil"] },
+              { "type": "input", "correct_answer": "Informationserfassung / Informationsgabe", "keywords": ["Information", "Austausch", "Erfassung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Schluss", "keywords": ["Schluss", "Beendigung"] },
+              { "type": "input", "correct_answer": "Abschließende Fragen / Verabschiedung", "keywords": ["Fragen", "Verabschiedung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_009",
+    "type": "tabelle_vergleich",
+    "topic": "biografieforschung",
+    "difficulty": 3,
+    "instruction": "**Gegenüberstellung** von Lebenslaufforschung und Biografieforschung laut Handout.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Forschungszweig", "Fokus / Gegenstand"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Lebenslaufforschung", "keywords": ["Lebenslaufforschung"] },
+              { "type": "textarea", "correct_answer": "Bedingungen und Verläufe in Bevölkerungsgruppen / Geschichte", "keywords": ["Bevölkerung", "Verläufe", "Bedingungen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Biografieforschung", "keywords": ["Biografieforschung"] },
+              { "type": "textarea", "correct_answer": "Rekonstruktion von Sinnkonstruktionen auf Basis von Erzählungen", "keywords": ["Sinnkonstruktion", "Rekonstruktion", "Erzählung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_010",
+    "type": "tabelle_2spalten",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie vier Kommunikationsstörer und **erläutern** Sie deren Wirkung.",
+    "points": 8,
+    "scoring_info": "1 Punkt für Störer, 1 Punkt für Erläuterung.",
+    "data": {
+      "table": {
+        "headers": ["Kommunikationsstörer", "Erläuterung / Auswirkung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Du-Botschaften", "keywords": ["Du-Botschaft"] },
+              { "type": "textarea", "correct_answer": "Wirken oft als Vorwurf oder Angriff; lösen Verteidigung aus.", "keywords": ["Vorwurf", "Angriff", "Verteidigung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Unterbrechen", "keywords": ["Unterbrechen", "Dazwischenreden"] },
+              { "type": "textarea", "correct_answer": "Signalisiert Desinteresse und stört den Redefluss des Gegenübers.", "keywords": ["Desinteresse", "Redefluss"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Mangelnde Hörbereitschaft", "keywords": ["Hörbereitschaft", "Zuhören"] },
+              { "type": "textarea", "correct_answer": "Wichtige Informationen werden überhört; Patient fühlt sich nicht wertgeschätzt.", "keywords": ["überhört", "Wertschätzung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Emotionale Beeinflussung", "keywords": ["Beeinflussung", "emotional"] },
+              { "type": "textarea", "correct_answer": "Eigene Meinung wird dem Patienten aufgezwungen.", "keywords": ["Meinung", "aufgezwungen"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_011",
+    "type": "tabelle_3spalten",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "Listen Sie die ersten drei **Lebensabschnitte als Aufgabe** (Modul 1A.2) chronologisch auf.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro Zeile.",
+    "data": {
+      "table": {
+        "headers": ["Reihenfolge", "Abschnitt", "Einordnung (impliziert)"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "1." },
+              { "type": "input", "correct_answer": "Kindheit", "keywords": ["Kindheit"] },
+              { "type": "text", "content": "Früheste Phase" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "2." },
+              { "type": "input", "correct_answer": "Jugend", "keywords": ["Jugend"] },
+              { "type": "text", "content": "Übergangsphase" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "3." },
+              { "type": "input", "correct_answer": "Junger Erwachsener", "keywords": ["Junger Erwachsener"] },
+              { "type": "text", "content": "Einstieg in Autonomie" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_012",
+    "type": "tabelle_2spalten",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie drei Kommunikationsförderer und **erläutern** Sie deren Nutzen.",
+    "points": 6,
+    "scoring_info": "1 Punkt für Förderer, 1 Punkt für Nutzen.",
+    "data": {
+      "table": {
+        "headers": ["Kommunikationsförderer", "Nutzen / Erläuterung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Aktives Zuhören", "keywords": ["Zuhören", "aktiv"] },
+              { "type": "textarea", "correct_answer": "Schafft Vertrauen und signalisiert echtes Interesse.", "keywords": ["Vertrauen", "Interesse"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Paraphrasieren", "keywords": ["Paraphrasieren", "Wiederholen"] },
+              { "type": "textarea", "correct_answer": "Sichert das gegenseitige Verständnis ab.", "keywords": ["Verständnis", "absichern"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Ich-Botschaften", "keywords": ["Ich-Botschaft"] },
+              { "type": "textarea", "correct_answer": "Vermeidet Angriffe und macht eigene Gefühle transparent.", "keywords": ["Angriff", "transparent", "Gefühle"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_013",
+    "type": "tabelle_3spalten",
+    "topic": "heimaufnahme",
+    "difficulty": 2,
+    "instruction": "Vervollständigen Sie die Tabelle zu den **notwendigen Dokumenten** bei Heimaufnahme laut SLP-Checkliste.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Ergänzung.",
+    "data": {
+      "table": {
+        "headers": ["Kategorie", "Dokument", "Zweck / Detail"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Medizinisch" },
+              { "type": "input", "correct_answer": "Ärztliche Erklärung (TBC)", "keywords": ["TBC", "ärztlich", "Erklärung"] },
+              { "type": "text", "content": "Ausschluss ansteckender Krankheiten" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Finanziell" },
+              { "type": "input", "correct_answer": "Kostenübernahmeerklärung", "keywords": ["Kostenübernahme"] },
+              { "type": "text", "content": "Sicherung der Finanzierung" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_014",
+    "type": "tabelle_2spalten",
+    "topic": "biografiearbeit",
+    "difficulty": 1,
+    "instruction": "**Benennen** Sie Begriffe aus der Forschung und **erläutern** Sie diese kurz.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Begriff, 1 Punkt pro Erläuterung.",
+    "data": {
+      "table": {
+        "headers": ["Fachbegriff", "Kurze Erläuterung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Normalbiografie", "keywords": ["Normalbiografie"] },
+              { "type": "textarea", "correct_answer": "Standardisierte Form eines durchschnittlichen Lebenslaufs.", "keywords": ["standardisiert", "durchschnittlich"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Statuspassagen", "keywords": ["Statuspassage"] },
+              { "type": "textarea", "correct_answer": "Markante Übergänge (z.B. von Schüler zu Azubi).", "keywords": ["Übergang", "markant"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_015",
+    "type": "tabelle_3spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "Vervollständigen Sie die Tabelle zu den **Basisemotionen** nach Paul Ekman.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Nennung.",
+    "data": {
+      "table": {
+        "headers": ["Emotion (dt.)", "Emotion (engl.)", "Merkmal (impliziert aus Text/Diagramm)"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Freude", "keywords": ["Freude"] },
+              { "type": "text", "content": "Happiness" },
+              { "type": "text", "content": "Lachfältchen" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Ekel", "keywords": ["Ekel"] },
+              { "type": "text", "content": "Disgust" },
+              { "type": "text", "content": "Nase rümpfen" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_016",
+    "type": "tabelle_vergleich",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "instruction": "**Vergleichen** Sie die Kommunikation in der Intimpflege bei Kindern und Erwachsenen (Fall Schmidt).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Kriterium", "Pflege bei Kindern", "Pflege bei Erwachsenen"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Wortwahl (z.B. Körperteile)" },
+              { "type": "input", "correct_answer": "Kindgerecht (z.B. Popo)", "keywords": ["kindgerecht", "Popo"] },
+              { "type": "input", "correct_answer": "Professionell / Anatomisch", "keywords": ["anatomisch", "Gesäß", "professionell"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Gefahr bei Fehlkommunikation" },
+              { "type": "text", "content": "Angst / Unverständnis" },
+              { "type": "input", "correct_answer": "Scham / Infantilisierung", "keywords": ["Scham", "Infantilisierung", "Entwürdigung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_017",
+    "type": "tabelle_2spalten",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie Ziele des Aufnahmegesprächs und **erläutern** Sie deren Bedeutung.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Ziel, 1 Punkt pro Bedeutung.",
+    "data": {
+      "table": {
+        "headers": ["Ziel des Gesprächs", "Bedeutung für den Klienten / Pflege"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Beziehungsaufbau", "keywords": ["Beziehung", "Vertrauen"] },
+              { "type": "textarea", "correct_answer": "Schafft Basis für die weitere Zusammenarbeit.", "keywords": ["Basis", "Zusammenarbeit"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Orientierung bieten", "keywords": ["Orientierung"] },
+              { "type": "textarea", "correct_answer": "Reduziert Ängste in der neuen Umgebung.", "keywords": ["Angst", "Umgebung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_018",
+    "type": "tabelle_3spalten",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "Füllen Sie die Lücken zu den **letzten drei Lebensphasen** aus.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Begriff.",
+    "data": {
+      "table": {
+        "headers": ["Phasennummer", "Bezeichnung", "Fokus"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "4." },
+              { "type": "input", "correct_answer": "Erwachsener", "keywords": ["Erwachsener"] },
+              { "type": "text", "content": "Berufsleben / Familie" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "5." },
+              { "type": "input", "correct_answer": "Rentner / Großeltern", "keywords": ["Rentner", "Großeltern"] },
+              { "type": "text", "content": "Ausscheiden aus Erwerbsleben" }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "6." },
+              { "type": "input", "correct_answer": "Hochaltriger Mensch", "keywords": ["hochaltrig"] },
+              { "type": "text", "content": "Letzte Lebensphase" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_019",
+    "type": "tabelle_2spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie die Reflexionsmethoden aus Modul 1B.1 und **erklären** Sie diese.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Methode, 1 Punkt pro Erklärung.",
+    "data": {
+      "table": {
+        "headers": ["Methode", "Erklärung / Vorgehen"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Narrativ", "keywords": ["Narrativ"] },
+              { "type": "textarea", "correct_answer": "Detaillierte Erlebnisschilderung einer Praxissituation.", "keywords": ["Erlebnisschilderung", "Praxis"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Gefühlscluster", "keywords": ["Gefühlscluster", "Cluster"] },
+              { "type": "textarea", "correct_answer": "Grafische Gruppierung von Emotionen (Resonanz) zu einem Fall.", "keywords": ["Gruppierung", "Resonanz"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_020",
+    "type": "tabelle_vergleich",
+    "topic": "kommunikation_theorie",
+    "difficulty": 3,
+    "instruction": "**Gegenüberstellung** der Sende- und Empfangsebene 'Selbstoffenbarung' vs 'Beziehung'.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Aspekt", "Fokus: Selbstoffenbarung", "Fokus: Beziehung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Inhalt / Frage" },
+              { "type": "input", "correct_answer": "Was ich von mir kundgebe", "keywords": ["ich von mir"] },
+              { "type": "input", "correct_answer": "Was ich von dir halte", "keywords": ["ich von dir"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Empfängerohr" },
+              { "type": "input", "correct_answer": "Was ist das für einer?", "keywords": ["was für einer"] },
+              { "type": "input", "correct_answer": "Wie redet der mit mir?", "keywords": ["mit mir"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_021",
+    "type": "tabelle_2spalten",
+    "topic": "heimaufnahme",
+    "difficulty": 2,
+    "instruction": "**Benennen** Sie interne Abteilungen, die informiert werden müssen, und **erläutern** Sie den Grund.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Abteilung, 1 Punkt pro Grund.",
+    "data": {
+      "table": {
+        "headers": ["Abteilung", "Grund der Information"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Hauswirtschaft", "keywords": ["Hauswirtschaft", "Küche"] },
+              { "type": "textarea", "correct_answer": "Anpassung der Verpflegung / Reinigung.", "keywords": ["Verpflegung", "Reinigung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Hausmeister", "keywords": ["Hausmeister", "Technik"] },
+              { "type": "textarea", "correct_answer": "Einzugshilfe / Namensschilder / technische Prüfung.", "keywords": ["Namensschild", "Einzugshilfe"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_022",
+    "type": "tabelle_3spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "Erläutern Sie die **Resonanz** in der Fallarbeit laut Arbeitsauftrag 3 (Modul 1B.1).",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Antwort.",
+    "data": {
+      "table": {
+        "headers": ["Rolle", "Ergebnis", "Bezeichnung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Zuhörer / Erzähler" },
+              { "type": "input", "correct_answer": "Ausgelöste Gefühle", "keywords": ["Gefühle", "Emotionen"] },
+              { "type": "input", "correct_answer": "Resonanz", "keywords": ["Resonanz"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_023",
+    "type": "tabelle_vergleich",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Vergleichen** Sie die Begrüßungsformen von 'Indern' und 'Franzosen'.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Kultur", "Geste / Handlung", "Besonderheit"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Inder" },
+              { "type": "input", "correct_answer": "Handflächen aneinanderlegen", "keywords": ["Handflächen"] },
+              { "type": "input", "correct_answer": "Leichte Verbeugung", "keywords": ["Verbeugung"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Franzosen" },
+              { "type": "input", "correct_answer": "Küsschen rechts und links", "keywords": ["Küsschen", "Wange"] },
+              { "type": "input", "correct_answer": "Schmatzgeräusch", "keywords": ["Schmatzgeräusch"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_024",
+    "type": "tabelle_2spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Benennen** Sie die Risiken bei mangelnder Emotionsregulation und **erläutern** Sie diese.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Risiko, 1 Punkt pro Erläuterung.",
+    "data": {
+      "table": {
+        "headers": ["Risiko", "Erläuterung laut Handout"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Burnout", "keywords": ["Burnout"] },
+              { "type": "textarea", "correct_answer": "Folge von dauerhafter Gefühlsunterdrückung ohne Reflexion.", "keywords": ["Unterdrückung", "Reflexion"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Wahrnehmungsverlust", "keywords": ["Wahrnehmung"] },
+              { "type": "textarea", "correct_answer": "Eigene Gefühle werden irgendwann nicht mehr wahrgenommen.", "keywords": ["nicht mehr wahrgenommen"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_tab_025",
+    "type": "tabelle_3spalten",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "Ordnen Sie die Begriffe zum **Anamnesegespräch** zu.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Zelle.",
+    "data": {
+      "table": {
+        "headers": ["Begriff", "Sprachursprung", "Bedeutung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Anamnese" },
+              { "type": "input", "correct_answer": "Griechisch", "keywords": ["Griechisch"] },
+              { "type": "input", "correct_answer": "Erinnerung", "keywords": ["Erinnerung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_ft_001",
+    "type": "freitext_box",
+    "topic": "biografiearbeit",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie den funktionalen Unterschied zwischen einem Lebenslauf und einer Biografie für die pflegerische Versorgung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Differenzierung der Begriffe und Herleitung des Nutzens für die Pflege.",
+    "data": {
+      "box_label": "Unterscheidung Lebenslauf und Biografie",
+      "correct_answer": "Ein Lebenslauf ist eine sachliche Darstellung der Lebensgeschichte und dient primär der Aufzählung biografischer Daten, etwa für formale Zwecke wie Bewerbungen. Die Biografie hingegen ist die Erzählung der erlebten Lebensgeschichte durch die Person selbst und beinhaltet eine individuelle Interpretation des Erlebten sowie bewusstes oder unbewusstes Vergessen. Für die Pflege ist dieser Unterschied entscheidend, da erst die Biografie das Verstehen von Verhaltensweisen, Ängsten oder Vorlieben ermöglicht, die aus der individuellen Bewertung der Vergangenheit resultieren.",
+      "keywords": ["individuelle Interpretation", "erlebte Geschichte", "Datenaufzählung", "Vergessen", "subjektiv"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_002",
+    "type": "freitext_box",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "instruction": "**Beschreiben** Sie die Bedeutung des ersten Axioms von Paul Watzlawick für den pflegerischen Alltag.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte je nach korrekter Wiedergabe des Axioms und Bezug zur Pflegepraxis.",
+    "data": {
+      "box_label": "Analyse des ersten Axioms nach Watzlawick",
+      "correct_answer": "Das erste Axiom besagt: 'Man kann nicht nicht kommunizieren'. Im Pflegealltag bedeutet dies, dass jede Verhaltensweise, auch Schweigen oder Abwenden, eine Mitteilung an den Patienten darstellt. Pflegekräfte müssen sich bewusst sein, dass sie durch ihre Mimik, Gestik und bloße Anwesenheit ständig Signale senden, die vom Patienten interpretiert werden, selbst wenn kein Wort gesprochen wird.",
+      "keywords": ["Nicht-kommunizieren", "Verhalten", "nonverbal", "Signale", "Wirkung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_003",
+    "type": "freitext_box",
+    "topic": "kommunikation_theorie",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie anhand des Vier-Seiten-Modells von Schulz von Thun, warum eine sachlich korrekte Anweisung einer Pflegekraft beim Patienten dennoch auf Ablehnung stoßen kann.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte je nach Anwendung der Kommunikationsebenen auf eine Konfliktsituation.",
+    "data": {
+      "box_label": "Anwendung des Vier-Seiten-Modells",
+      "correct_answer": "Eine Nachricht enthält neben dem Sachinhalt immer auch eine Selbstoffenbarung, einen Appell und einen Beziehungsaspekt. Wenn der Sachinhalt (z.B. 'Sie müssen jetzt aufstehen') medizinisch korrekt ist, der Patient aber auf dem 'Beziehungsohr' eine Bevormundung oder mangelnden Respekt wahrnimmt ('Wie redet der eigentlich mit mir?'), kann dies zur Ablehnung führen. Die Störung auf der Beziehungsebene überschattet in diesem Fall die sachliche Notwendigkeit der Information.",
+      "keywords": ["Beziehungsohr", "Sachinhalt", "Appell", "Selbstoffenbarung", "Interpretation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_004",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "instruction": "**Begründen** Sie, warum die Verwendung von Begriffen wie 'Popo' in der Kommunikation mit erwachsenen Patienten (Fall Herr Schmidt) als professioneller Fehler zu werten ist.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Herleitung der psychologischen Folgen und die Benennung des Fachbegriffs.",
+    "data": {
+      "box_label": "Analyse infantilisierender Sprache",
+      "correct_answer": "Die Verwendung kindgerechter Sprache wie 'Popo' bei Erwachsenen führt zu einer 'Infantilisierung' des Patienten. Dies verletzt die Würde des Betroffenen und kann Schamgefühle sowie das Gefühl der Entwürdigung auslösen. Professionelle Pflege erfordert eine altersangemessene, anatomisch korrekte oder respektvolle Wortwahl, um die Autonomie und den Respekt gegenüber dem erwachsenen Gegenüber zu wahren.",
+      "keywords": ["Infantilisierung", "Würde", "Scham", "respektlos", "altersangemessen"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_005",
+    "type": "freitext_box",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "instruction": "**Erklären** Sie den Zusammenhang zwischen dem Aufnahmegespräch und der nachfolgenden Pflegeplanung im Pflegeprozess-Kreislauf.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Darstellung der logischen Kette innerhalb des 6-Schritte-Modells.",
+    "data": {
+      "box_label": "Aufnahmegespräch im Pflegeprozess",
+      "correct_answer": "Das Aufnahmegespräch ist der zentrale Bestandteil des ersten Schrittes, der Informationssammlung. Die hier erhobenen Daten bilden die unverzichtbare Grundlage für den zweiten Schritt, das Erkennen von Problemen und Ressourcen. Ohne ein qualitativ hochwertiges Aufnahmegespräch fehlen die Informationen, um präzise Pflegeziele festzulegen und effektive Maßnahmen in Schritt 4 zu planen.",
+      "keywords": ["Informationssammlung", "Problemerkennung", "Ressourcen", "Grundlage", "Pflegeplanung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_006",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 3,
+    "instruction": "**Begründen** Sie, warum die 'Erläuterung der Ziele des Gesprächs' ein zwingender Bestandteil der Einleitungsphase eines Aufnahmegesprächs sein muss.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Begründung hinsichtlich Transparenz und Kooperation.",
+    "data": {
+      "box_label": "Zieleklärung in der Gesprächseinleitung",
+      "correct_answer": "Die Aufklärung über die Ziele erhöht die Gesprächsbereitschaft des Patienten, da dieser erfährt, warum bestimmte Informationen für die Pflege von Bedeutung sind. Es schafft Transparenz und Vertrauen, wenn der Klient weiß, was auf ihn zukommt und welchen Nutzen er aus dem Austausch zieht. Dies beugt Missverständnissen vor und erleichtert die Bewältigung der oft belastenden Ankommenssituation.",
+      "keywords": ["Transparenz", "Gesprächsbereitschaft", "Vertrauen", "Nutzen", "Ankommenssituation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_007",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie die Funktion der 'kognitiven Bewertung' im Modell der Emotionsentstehung nach dem Handout 1B.1.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die korrekte Einordnung der kognitiven Bewertung zwischen primärer und sekundärer Emotion.",
+    "data": {
+      "box_label": "Prozess der kognitiven Bewertung",
+      "correct_answer": "Die kognitive Bewertung folgt auf die primäre, instinktive Emotion. In diesem Schritt wird das Ereignis durch den Filter von persönlichen Erfahrungen, erlernten Regeln und kulturellen Normen interpretiert. Diese Bewertung entscheidet darüber, welche 'sekundäre Emotion' entsteht und welcher Handlungsimpuls daraus resultiert, wodurch Gefühle erst eine individuelle und soziale Bedeutung erhalten.",
+      "keywords": ["Erfahrungen", "Regeln", "Normen", "sekundäre Emotion", "Interpretation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_008",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "**Beschreiben** Sie, welchen Nutzen das Nachahmen der Mimik des Gegenübers für Pflegekräfte laut psychologischen Studien hat.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für den Bezug zur Empathieentwicklung und zum Deuten von Gefühlen.",
+    "data": {
+      "box_label": "Bedeutung der Mimik-Nachahmung",
+      "correct_answer": "Studien zeigen, dass das unbewusste oder bewusste Nachahmen der Mimik entscheidend dazu beiträgt, Gesichtsausdrücke anderer korrekt zu deuten. Durch diesen Prozess können die dahinterstehenden Emotionen im eigenen System simuliert und somit besser nachempfunden werden. Dies fördert die pflegerische Empathie und ermöglicht eine angemessenere Reaktion auf die Gefühlszustände des Patienten.",
+      "keywords": ["Empathie", "Deuten", "Nachempfinden", "Simulation", "Mimik"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_009",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie das Risiko der 'Ganzheitlichkeit' in der Pflege im Kontext von emotionaler Belastung nach Schwerdt (2002).",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Darstellung des Konflikts zwischen biografischem Kontext und institutionellen Zwängen.",
+    "data": {
+      "box_label": "Risiken pflegerischer Ganzheitlichkeit",
+      "correct_answer": "Gute Pflege erfordert die Einbeziehung des sozialen und biografischen Kontexts des Patienten. Gerade diese berufsbedingte 'Ganzheitlichkeit' kann Pflegende jedoch in überfordernde emotionale Belastungssituationen bringen, da sie sich oft in moralischen Konfliktlagen zwischen den individuellen Bedürfnissen des Patienten und den institutionellen Rahmenbedingungen befinden. Dies erfordert eine hohe Kompetenz in der Emotionsregulation.",
+      "keywords": ["Kontext", "Belastungssituationen", "moralische Konfliktlagen", "Überforderung", "biografisch"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_010",
+    "type": "freitext_box",
+    "topic": "burnout_praevention",
+    "difficulty": 3,
+    "instruction": "**Begründen** Sie, warum das reine Kontrollieren von Gefühlen ohne anschließende Reflexion langfristig die psychische Gesundheit von Pflegenden gefährdet.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Herleitung der Burnout-Gefahr aus dem Verlust der Eigenwahrnehmung.",
+    "data": {
+      "box_label": "Gefahr mangelnder Gefühlsreflexion",
+      "correct_answer": "Wer Gefühle über einen langen Zeitraum nur kontrolliert (unterdrückt), aber nicht reflektiert, läuft Gefahr, diese irgendwann gar nicht mehr wahrzunehmen. Dieser Verlust der emotionalen Selbstwahrnehmung gilt als ein wesentlicher Faktor für die Entstehung von Burnout. Regelmäßige Reflexion in Supervision oder kollegialer Beratung ist daher notwendig, um die eigene professionelle Handlungsfähigkeit und psychische Gesundheit zu erhalten.",
+      "keywords": ["Wahrnehmungsverlust", "Burnout", "Unterdrückung", "Reflexion", "psychische Gesundheit"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_011",
+    "type": "freitext_box",
+    "topic": "beratung_supervision",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie die Kernaufgabe der Supervision im Hinblick auf die Gestaltung professioneller Arbeitsbeziehungen.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erläuterung des Spannungsfeldes Nähe/Distanz und der Berufsrollenreflexion.",
+    "data": {
+      "box_label": "Funktion der Supervision",
+      "correct_answer": "Supervision dient als Beratung für Berufe, die am Menschen arbeiten und ihre professionelle Position ständig im Spannungsfeld zwischen Nähe und Distanz neu definieren müssen. Sie ermöglicht eine kontinuierliche Berufsrollenreflexion und hilft dabei, komplexe Arbeitsbeziehungen gesund zu gestalten. Zudem leistet sie einen Beitrag zur Organisationsentwicklung, indem sie individuelle und teambezogene Konflikte aufarbeitet.",
+      "keywords": ["Nähe und Distanz", "Berufsrollenreflexion", "Arbeitsbeziehungen", "Spannungsfeld", "Organisation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_012",
+    "type": "freitext_box",
+    "topic": "beratung_kollegial",
+    "difficulty": 2,
+    "instruction": "**Beschreiben** Sie das Ziel und die Struktur der 'Kollegialen Beratung' in der Pflege.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Nennung der Merkmale (Gleichberechtigung, Rollen, Alltagsbezug).",
+    "data": {
+      "box_label": "Merkmale kollegialer Beratung",
+      "correct_answer": "Die kollegiale Beratung ist ein Beratungsgespräch in einer selbstgesteuerten Gruppe von gleichberechtigten Mitgliedern, die in festgelegten Rollen agieren. Ziel ist es, gemeinsam Lösungen für konkrete Fragen oder Probleme aus dem beruflichen Alltag zu entwickeln. Sie unterstützt den Einzelnen bei der Bewältigung schwieriger Situationen durch die Expertise und die Resonanz der Kollegen.",
+      "keywords": ["Gleichberechtigung", "festgelegte Rollen", "selbstgesteuert", "Alltagsprobleme", "Lösungsentwicklung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_013",
+    "type": "freitext_box",
+    "topic": "biografiearbeit",
+    "difficulty": 3,
+    "instruction": "**Erklären** Sie das Konzept der 'Statuspassagen' und deren Relevanz für das Verständnis der Identität eines Patienten.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Definition und die Verknüpfung mit dem Identitätswandel.",
+    "data": {
+      "box_label": "Relevanz von Statuspassagen",
+      "correct_answer": "Statuspassagen sind markante Übergänge im Lebenslauf, die oft mit einem Wechsel der sozialen Rolle und Identität verbunden sind, wie der Übergang vom Schüler zum Azubi oder in die Elternrolle. In der Pflege ist das Verständnis dieser Passagen wichtig, da auch der Heimeinzug eine Statuspassage (vom autonomen Bürger zum Heimbewohner) darstellt. Die Bewältigung dieser Übergänge prägt die Biografie und das aktuelle Erleben des Patienten maßgeblich.",
+      "keywords": ["Übergang", "Rollenwechsel", "Identität", "Heimeinzug", "Bewältigung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_014",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Erläutern** Sie, wie das 'Paraphrasieren' zur Deeskalation oder zur Klärung in der Patientenkommunikation beiträgt.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Beschreibung der Technik und des Ziels der Verständnissicherung.",
+    "data": {
+      "box_label": "Nutzen des Paraphrasierens",
+      "correct_answer": "Paraphrasieren bedeutet, das vom Patienten Gesagte in eigenen Worten zu wiederholen. Dies signalisiert dem Patienten zum einen, dass ihm aufmerksam zugehört wird (Wertschätzung), und dient zum anderen der Absicherung, ob die Information korrekt verstanden wurde. Es beugt Missverständnissen vor und kann emotional aufgebrachte Patienten beruhigen, da sie sich in ihrem Erleben wahrgenommen fühlen.",
+      "keywords": ["Wiederholen", "eigene Worte", "Verständnissicherung", "Wertschätzung", "Missverständnisse"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_015",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Begründen** Sie, warum das pflegerische Aufnahmegespräch als 'Beziehungsarbeit' bezeichnet wird.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Abgrenzung zur reinen Datenabfrage und den Fokus auf Vertrauen.",
+    "data": {
+      "box_label": "Aufnahmegespräch als Beziehungsarbeit",
+      "correct_answer": "Das Aufnahmegespräch dient nicht nur der Erhebung pflegerelevanter Daten, sondern primär dem Aufbau einer Vertrauensbasis zwischen dem Klienten und der Pflegekraft. Es ist der erste intensive Kontakt, bei dem durch Empathie und aktives Zuhören die Ängste der Ankommenssituation reduziert werden können. Eine gelungene Beziehung in dieser Phase ist die Voraussetzung für eine erfolgreiche langfristige Zusammenarbeit im Pflegeprozess.",
+      "keywords": ["Vertrauen", "Beziehungsaufbau", "Empathie", "Ankommenssituation", "Zusammenarbeit"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_016",
+    "type": "freitext_box",
+    "topic": "interkulturelle_kommunikation",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie die pflegerische Herausforderung, die aus der Unkenntnis interkultureller Begrüßungsrituale entstehen kann.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Darstellung möglicher Missverständnisse und deren Folgen für die Pflegebeziehung.",
+    "data": {
+      "box_label": "Interkulturelle Kompetenz bei der Begrüßung",
+      "correct_answer": "Begrüßungsrituale sind kulturell stark geprägt, wie das Beispiel der Mongolen (Wangen beriechen) oder der Dani (langes Umarmen) zeigt. Unkenntnis darüber kann dazu führen, dass Pflegekräfte das Verhalten von Patienten falsch interpretieren oder durch eigene, ungewohnte Gesten Distanzlosigkeit oder Ablehnung signalisieren. Eine kultursensible Begrüßung ist daher der erste Schritt, um eine professionelle und respektvolle Beziehung aufzubauen und Kommunikationsstörungen zu vermeiden.",
+      "keywords": ["kultursensibel", "Begrüßungsrituale", "Missinterpretation", "Respekt", "Beziehungsaufbau"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_017",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "instruction": "**Erklären** Sie den Begriff der 'Emotionsregulation' und seine Notwendigkeit für das professionelle Handeln in der Pflege.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die Verknüpfung von Selbstkontrolle, Reflexion und professioneller Handlungsfähigkeit.",
+    "data": {
+      "box_label": "Konzept der Emotionsregulation",
+      "correct_answer": "Emotionsregulation umfasst die bewusste Auseinandersetzung mit eigenen Gefühlen und deren Steuerung in belastenden Situationen. Sie ist notwendig, damit Pflegekräfte trotz emotional schwieriger Situationen (z.B. Aggression oder Trauer des Patienten) professionell handlungsfähig bleiben. Sie beinhaltet nicht das bloße Unterdrücken, sondern das Reflektieren von Gefühlen, um psychische Belastungen abzubauen und eine angemessene pflegerische Antwort zu finden.",
+      "keywords": ["Steuerung", "Selbstkontrolle", "Reflexion", "Handlungsfähigkeit", "Psychohygiene"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_018",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_anamnese",
+    "difficulty": 2,
+    "instruction": "**Erläutern** Sie den Unterschied zwischen der medizinischen und der pflegerischen Anamnese.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Herausarbeitung der unterschiedlichen Zielsetzungen (Diagnose vs. soziale Situation/Pflegerelevanz).",
+    "data": {
+      "box_label": "Vergleich medizinische und pflegerische Anamnese",
+      "correct_answer": "Die medizinische Anamnese fokussiert auf die Erhebung der Krankheitsvorgeschichte und des aktuellen Gesundheitszustands zur Diagnosestellung. Die pflegerische Anamnese hingegen zielt darauf ab, pflegerelevante Informationen über den Klienten, seine soziale Situation und sein individuelles Erleben zu erfahren. Es geht darum, die Auswirkung der Krankheit auf den Alltag zu verstehen, um eine ganzheitliche Versorgung planen zu können.",
+      "keywords": ["Krankheitsvorgeschichte", "Diagnose", "soziale Situation", "individuelles Erleben", "Pflegerelevanz"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_019",
+    "type": "freitext_box",
+    "topic": "kommunikation_störer",
+    "difficulty": 3,
+    "instruction": "**Beschreiben** Sie, wie 'emotionale Beeinflussung' als Kommunikationsstörer die Erfassung von Patientenbedürfnissen verfälschen kann.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erläuterung der subjektiven Verzerrung durch die Pflegekraft.",
+    "data": {
+      "box_label": "Kommunikationsstörer: Emotionale Beeinflussung",
+      "correct_answer": "Emotionale Beeinflussung liegt vor, wenn die Pflegekraft dem Patienten ihre eigenen Gefühle oder Sichtweisen aufdrängt. Dies kann dazu führen, dass der Patient seine tatsächlichen Bedürfnisse verschweigt oder sich der Meinung der Pflegekraft anpasst, um den sozialen Frieden nicht zu gefährden. Dadurch wird die Informationssammlung subjektiv verfälscht und die geplante Pflege entspricht nicht mehr dem tatsächlichen Bedarf des Patienten.",
+      "keywords": ["Sichtweise aufdrängen", "Verfälschung", "Anpassung", "Bedürfnisunterdrückung", "Informationssammlung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_ft_020",
+    "type": "freitext_box",
+    "topic": "reflexion_methodik",
+    "difficulty": 3,
+    "instruction": "**Erläutern** Sie das Konzept der 'Resonanz' in der Kleingruppenarbeit zur Reflexion von Praxiserfahrungen.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Definition von Resonanz als Spiegelung von Gefühlen durch die Zuhörer.",
+    "data": {
+      "box_label": "Resonanz in der Fallarbeit",
+      "correct_answer": "Resonanz bezeichnet die Emotionen und Gefühle, die eine Erzählung beim Zuhörer auslösen. In der Reflexionsarbeit nutzen die Gruppenmitglieder diese Resonanzen, um dem Erzählenden eine Rückmeldung darüber zu geben, wie sein Bericht wirkt. Durch das Sammeln dieser Resonanzen (z.B. in Gefühlsclustern) können verborgene emotionale Aspekte einer Pflegesituation sichtbar gemacht und gemeinsam reflektiert werden.",
+      "keywords": ["Gefühlsspiegelung", "Rückmeldung", "Gefühlscluster", "Fallarbeit", "Ausstrahlung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_zu_001",
+    "type": "zuordnung",
+    "topic": "biografieforschung",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Definitionen den korrekten Fachbegriffen der Forschung zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Biografie",
+        "B": "Lebenslauf",
+        "C": "Normalbiografie",
+        "D": "Statuspassage"
+      },
+      "statements": [
+        { "text": "Individuelle Interpretation des Erlebten inklusive des Vergessens.", "answer": "A" },
+        { "text": "Sachliche Darstellung der Lebensgeschichte, oft für Bewerbungen genutzt.", "answer": "B" },
+        { "text": "Bedeutsame Übergänge wie der Wechsel von der Schule in die Ausbildung.", "answer": "D" },
+        { "text": "Standardisierte Form eines durchschnittlichen Lebenslaufs einer Personengruppe.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_002",
+    "type": "zuordnung",
+    "topic": "kommunikation_ebenen",
+    "difficulty": 1,
+    "instruction": "**Ordnen** Sie die prozentualen Anteile der face-to-face Kommunikation den richtigen Ebenen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "7 %",
+        "B": "38 %",
+        "C": "55 %"
+      },
+      "statements": [
+        { "text": "Körpersprache (Mimik, Gestik, Haltung)", "answer": "C" },
+        { "text": "Gesprochenes Wort (Inhalt)", "answer": "A" },
+        { "text": "Stimmlicher Ausdruck (Tonfall, Lautstärke)", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_003",
+    "type": "zuordnung",
+    "topic": "vier_seiten_modell",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Kernfragen des Empfängers den Seiten einer Nachricht nach Schulz von Thun zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Sachinhalt",
+        "B": "Selbstoffenbarung",
+        "C": "Beziehung",
+        "D": "Appell"
+      },
+      "statements": [
+        { "text": "Was soll ich tun, denken oder fühlen aufgrund der Mitteilung?", "answer": "D" },
+        { "text": "Wie ist der Sachverhalt zu verstehen?", "answer": "A" },
+        { "text": "Was ist das für einer? Was ist mit ihm?", "answer": "B" },
+        { "text": "Wie redet der eigentlich mit mir? Wen glaubt er vor sich zu haben?", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_004",
+    "type": "zuordnung",
+    "topic": "interkulturelle_begruessung",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Begrüßungsrituale den jeweiligen Kulturen oder Stämmen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Mongolen",
+        "B": "Kupfer-Eskimos",
+        "C": "Lateinamerikaner",
+        "D": "Eipo (Neuguinea)"
+      },
+      "statements": [
+        { "text": "Drei Schläge auf den Rücken während einer Umarmung.", "answer": "C" },
+        { "text": "Gegenseitiges Beriechen der Wangen und Berühren der Nasen.", "answer": "A" },
+        { "text": "Einhalten von Schweigen zur Begrüßung.", "answer": "D" },
+        { "text": "Ein Faustschlag gegen Kopf und Schulter.", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_005",
+    "type": "zuordnung",
+    "topic": "emotionsentstehung",
+    "difficulty": 3,
+    "instruction": "**Ordnen** Sie die Begriffe aus dem Modell der Emotionsentstehung den passenden Beschreibungen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Primäre Emotion",
+        "B": "Kognitive Bewertung",
+        "C": "Sekundäre Emotion"
+      },
+      "statements": [
+        { "text": "Einordnung des Ereignisses basierend auf Erfahrungen, Regeln und Normen.", "answer": "B" },
+        { "text": "Die unmittelbare, instinktive Reaktion auf einen Auslöser.", "answer": "A" },
+        { "text": "Das gesteuerte Gefühl, das erst nach der gedanklichen Verarbeitung entsteht.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_006",
+    "type": "zuordnung",
+    "topic": "beratungsformen",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Merkmale den Beratungsformen 'Supervision' und 'Kollegiale Beratung' zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Supervision",
+        "B": "Kollegiale Beratung"
+      },
+      "statements": [
+        { "text": "Beratung durch einen externen Experten zur Berufsrollenreflexion.", "answer": "A" },
+        { "text": "Selbstgesteuerte Gruppe von Gleichberechtigten mit festgelegten Rollen.", "answer": "B" },
+        { "text": "Dient primär der Lösung von Fragen aus dem konkreten Berufsalltag unter Kollegen.", "answer": "B" },
+        { "text": "Unterstützt bei der Gestaltung komplexer Arbeitsbeziehungen (Nähe/Distanz).", "answer": "A" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_007",
+    "type": "zuordnung",
+    "topic": "kommunikations_typen",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Verhaltensweisen den Kategorien 'Kommunikationsförderer' oder 'Kommunikationsstörer' zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Kommunikationsförderer",
+        "B": "Kommunikationsstörer"
+      },
+      "statements": [
+        { "text": "Senden von Du-Botschaften und Vorwürfen.", "answer": "B" },
+        { "text": "Paraphrasieren und gezieltes Rückfragen.", "answer": "A" },
+        { "text": "Emotionale Beeinflussung des Gegenübers.", "answer": "B" },
+        { "text": "Schaffen von Ruhe und angepassten Rahmenbedingungen.", "answer": "A" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_008",
+    "type": "zuordnung",
+    "topic": "gespraechsaufbau",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Aufgaben den Phasen des Aufnahmegesprächs zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Einleitung",
+        "B": "Hauptteil",
+        "C": "Schluss"
+      },
+      "statements": [
+        { "text": "Gezielte Informationsgabe und Informationserfassung.", "answer": "B" },
+        { "text": "Begrüßung und Erläuterung der Ziele des Gesprächs.", "answer": "A" },
+        { "text": "Abschließende Fragen und förmliche Beendigung.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_009",
+    "type": "zuordnung",
+    "topic": "pflegeanamnese_elemente",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Bestandteile der pflegerischen Anamnese den korrekten Beispielen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Pflegerisches Aufnahmegespräch",
+        "B": "Beobachtungen / Assessments",
+        "C": "Körperliche Untersuchungen",
+        "D": "Dokumentation"
+      },
+      "statements": [
+        { "text": "Durchführung einer Sturzrisiko-Skala.", "answer": "B" },
+        { "text": "Erhöhen der Gesprächsbereitschaft durch Erläuterung des Nutzens.", "answer": "A" },
+        { "text": "Sichten von Arztbriefen oder Pflegeüberleitungsbögen.", "answer": "D" },
+        { "text": "Inspektion der Haut auf Dekubituszeichen.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_zu_010",
+    "type": "zuordnung",
+    "topic": "ekman_mimik",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die mimischen Verräter den entsprechenden Zuständen zu.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "Echtes Lächeln",
+        "B": "Gespieltes Lächeln"
+      },
+      "statements": [
+        { "text": "Lachfältchen um die Augen treten deutlich hervor.", "answer": "A" },
+        { "text": "Nur die Mundwinkel sind hochgezogen, die Augenpartie bleibt starr.", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "lebensabschnitte",
+    "difficulty": 1,
+    "instruction": "**Ergänzen** Sie die fehlenden drei Lebensabschnitte, die im Handout 1A.2 als 'Aufgabe' definiert werden.",
+    "points": 3,
+    "data": {
+      "list_label": "Lebensabschnitte als Aufgabe",
+      "given_items": ["Kindheit", "Junger Erwachsener", "Hochaltriger Mensch"],
+      "missing_items": ["Jugend", "Erwachsener", "Rentner / Großeltern"],
+      "all_valid_missing": ["Jugend", "Erwachsener", "Rentner", "Großeltern"]
+    }
+  },
+  {
+    "q_id": "m1_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "instruction": "**Ergänzen** Sie die Schritte 2, 4 und 6 im Pflegeprozess-Kreislauf nach Fiechter und Meier.",
+    "points": 3,
+    "data": {
+      "list_label": "Die 6 Schritte des Pflegeprozesses",
+      "given_items": ["1. Informationssammlung", "3. Festlegen der Pflegeziele", "5. Durchführung der Pflege"],
+      "missing_items": ["2. Erkennen von Problemen / Ressourcen", "4. Planung der Pflegemaßnahmen", "6. Beurteilung der Wirkung / Evaluation"],
+      "all_valid_missing": ["Erkennen von Problemen", "Problemerkennung", "Ressourcen", "Planung", "Planung der Maßnahmen", "Beurteilung der Wirkung", "Evaluation", "Beurteilung"]
+    }
+  },
+  {
+    "q_id": "m1_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "aufnahmeziele",
+    "difficulty": 2,
+    "instruction": "Im Handout 1A.4 werden Ziele des Aufnahmegesprächs genannt. **Ergänzen** Sie die fehlenden drei Ziele.",
+    "points": 3,
+    "data": {
+      "list_label": "Ziele des Aufnahmegespräches",
+      "given_items": ["Aufbau einer Beziehung", "Klärung von Erwartungen", "Erleichterung der Ankommenssituation"],
+      "missing_items": ["Orientierung des Klienten", "Erfassen des Erlebens / Bedürfnisse", "Erhebung pflegerelevanter Informationen"],
+      "all_valid_missing": ["Orientierung", "Bedürfnisse erfassen", "Erleben erfassen", "Informationserhebung", "Datensammlung", "Situationseinschätzung"]
+    }
+  },
+  {
+    "q_id": "m1_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "ekman_basisemotionen",
+    "difficulty": 1,
+    "instruction": "Paul Ekman definiert universelle Basisemotionen. **Ergänzen** Sie die im Handout visualisierten drei fehlenden Emotionen.",
+    "points": 3,
+    "data": {
+      "list_label": "Basisemotionen nach Ekman",
+      "given_items": ["HAPPINESS (Freude)", "ANGER (Ärger)", "SADNESS (Trauer)"],
+      "missing_items": ["FEAR (Angst)", "DISGUST (Ekel)", "SURPRISE (Überraschung)"],
+      "all_valid_missing": ["Angst", "Fear", "Ekel", "Disgust", "Überraschung", "Surprise"]
+    }
+  },
+  {
+    "q_id": "m1_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "heimaufnahme_checkliste",
+    "difficulty": 2,
+    "instruction": "Die SLP-Checkliste zum Heimeinzug nennt 'notwendige Dokumente'. **Ergänzen** Sie drei weitere wichtige Dokumente aus dieser Liste.",
+    "points": 3,
+    "data": {
+      "list_label": "Notwendige Dokumente bei Aufnahme",
+      "given_items": ["Ärztliche Erklärung (TBC)", "Kostenübernahmeerklärung", "Bankeinzugsermächtigung"],
+      "missing_items": ["Vollmachten", "Einstufungsbescheid", "Krankenkassenkarte"],
+      "all_valid_missing": ["Vollmachten", "Patientenverfügung", "Einstufung", "MDK-Bescheid", "Krankenkassenkarte", "Versicherungskarte", "Geburtsurkunde", "Personalausweis"]
+    }
+  },
+  {
+    "q_id": "m1_erg_006",
+    "type": "ergaenzen_liste",
+    "topic": "emotionsprozess",
+    "difficulty": 3,
+    "instruction": "**Ergänzen** Sie die fehlenden Schritte im Ablaufmodell der Emotionsentstehung (1B.1).",
+    "points": 3,
+    "data": {
+      "list_label": "Modell der Emotionsentstehung",
+      "given_items": ["Auslöser", "Kognitive Bewertung"],
+      "missing_items": ["Primäre Emotion", "Sekundäre Emotion", "Handlungsimpuls"],
+      "all_valid_missing": ["primäre Emotion", "Gefühl 1", "sekundäre Emotion", "Gefühl 2", "Handlungsimpuls", "Reaktion"]
+    }
+  },
+  {
+    "q_id": "m1_erg_007",
+    "type": "ergaenzen_liste",
+    "topic": "schluesselthemen_pflege",
+    "difficulty": 2,
+    "instruction": "**Ergänzen** Sie drei typische 'Schlüsselthemen' in der Pflege für die kollegiale Beratung.",
+    "points": 3,
+    "data": {
+      "list_label": "Schlüsselthemen in der Pflege",
+      "given_items": ["Umgang mit Nähe und Distanz", "Überlastungssituationen", "Probleme mit Bewohnern/Angehörigen"],
+      "missing_items": ["Konflikte mit Kollegen / Vorgesetzten", "Rollenkonflikte", "gestörte Arbeitsabläufe"],
+      "all_valid_missing": ["Konflikte", "Teamschwierigkeiten", "Rollenkonflikte", "Arbeitsabläufe", "Bewältigung neuer Aufgaben", "Selbstreflexion"]
+    }
+  },
+  {
+    "q_id": "m1_erg_008",
+    "type": "ergaenzen_liste",
+    "topic": "kommunikationsfoerderer",
+    "difficulty": 2,
+    "instruction": "**Ergänzen** Sie drei weitere 'Kommunikationsförderer' laut Handout 1A.3.",
+    "points": 3,
+    "data": {
+      "list_label": "Kommunikationsförderer",
+      "given_items": ["Zuhören", "Ich-Botschaften"],
+      "missing_items": ["Paraphrasieren / Rückfragen", "Respekt / Akzeptanz", "Angepasste Rahmenbedingungen (Ruhe/Zeit)"],
+      "all_valid_missing": ["Paraphrasieren", "Rückfragen", "Respekt", "Akzeptanz", "Wertschätzung", "Ruhe", "Zeit", "Rahmenbedingungen"]
+    }
+  },
+  {
+    "q_id": "m1_erg_009",
+    "type": "ergaenzen_liste",
+    "topic": "bewohner_information",
+    "difficulty": 2,
+    "instruction": "Laut Checkliste muss ein neuer Bewohner über verschiedene Dinge informiert werden. **Ergänzen** Sie drei fehlende Punkte.",
+    "points": 3,
+    "data": {
+      "list_label": "Bewohner informieren über:",
+      "given_items": ["Freizeitmöglichkeiten", "Tagesablauf / Essenszeiten", "Hausordnung"],
+      "missing_items": ["Dienstzeiten des Personals", "Zimmerreinigung / Wäsche", "Serviceleistungen"],
+      "all_valid_missing": ["Dienstzeiten", "Personalpräsenz", "Reinigung", "Wäsche", "Service", "Wahlleistungen", "Heimbeirat"]
+    }
+  },
+  {
+    "q_id": "m1_erg_010",
+    "type": "ergaenzen_liste",
+    "topic": "anamnese_komponenten",
+    "difficulty": 2,
+    "instruction": "Die pflegerische Anamnese besteht aus mehreren Komponenten (AB 2). **Ergänzen** Sie die fehlenden zwei.",
+    "points": 2,
+    "data": {
+      "list_label": "Elemente der Pflegeanamnese",
+      "given_items": ["Pflegerisches Aufnahmegespräch", "Beobachtungen / Assessments"],
+      "missing_items": ["Körperliche Untersuchungen", "Dokumentation (z.B. Arztbriefe)"],
+      "all_valid_missing": ["Körperliche Untersuchung", "Dokumentation", "Pflegeüberleitung", "Arztbriefe"]
+    }
+  },
+  {
+    "q_id": "m1_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie den Begriff 'Biografie' und **nennen** Sie 3 Beispiele für kritische Lebensereignisse, die darin thematisiert werden.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Biografie",
+      "definition_correct": "Die Biografie ist die Erzählung der erlebten Lebensgeschichte durch die Person selbst sowie die individuelle Interpretation des Erlebten, wobei auch das Vergessen eine Rolle spielt.",
+      "definition_keywords": ["Erzählung", "erlebt", "individuelle Interpretation", "Vergessen"],
+      "definition_points": 3,
+      "examples_label": "Kritische Lebensereignisse",
+      "examples_count": 3,
+      "correct_examples": ["Krankheiten", "Verluste", "Kriege"],
+      "all_valid_examples": ["Krankheiten", "Verluste", "Kriege", "Flucht", "Krisen"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie den Begriff 'Kommunikationsförderer' und **nennen** Sie 4 konkrete Beispiele aus dem Material.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition Kommunikationsförderer",
+      "definition_correct": "Kommunikationsförderer sind Verhaltensweisen oder Rahmenbedingungen, die dazu beitragen, dass eine Verständigung untereinander und ein Austausch von Informationen erfolgreich gelingen.",
+      "definition_keywords": ["Verhaltensweisen", "Rahmenbedingungen", "Gelingen", "Verständigung"],
+      "definition_points": 3,
+      "examples_label": "Beispiele für Förderer",
+      "examples_count": 4,
+      "correct_examples": ["Aktives Zuhören", "Ich-Botschaften senden", "Paraphrasieren und Rückfragen", "Angepasste Rahmenbedingungen (Ruhe/Zeit)"],
+      "all_valid_examples": ["Zuhören", "Ich-Botschaften", "Respekt zeigen", "Akzeptieren", "Paraphrasieren", "Rückfragen", "Ruhe", "Zeit"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "biografieforschung",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie den Begriff 'Statuspassagen' und **nennen** Sie 2 Beispiele.",
+    "points": 5,
+    "data": {
+      "definition_label": "Definition Statuspassagen",
+      "definition_correct": "Statuspassagen sind bedeutsame beziehungsweise markante Übergänge im Lebenslauf einer Person.",
+      "definition_keywords": ["markante Übergänge", "Lebenslauf", "Bedeutsam"],
+      "definition_points": 3,
+      "examples_label": "Beispiele für Statuspassagen",
+      "examples_count": 2,
+      "correct_examples": ["Übergang von der Rolle des Schülers in die des Auszubildenden", "Übergang in die Elternrolle"],
+      "all_valid_examples": ["Schüler zu Azubi", "Elternrolle", "Heimeinzug", "Berufseinstieg"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie Paul Ekmans 'Basisemotionen' und **nennen** Sie 6 dieser Emotionen.",
+    "points": 9,
+    "data": {
+      "definition_label": "Definition Basisemotionen",
+      "definition_correct": "Basisemotionen sind angeborene, universelle und kulturübergreifende Reaktionen auf bestimmte Ereignisse und Situationen, die sich in der Mimik quer durch alle Kulturen gleich äußern.",
+      "definition_keywords": ["angeboren", "universell", "kulturübergreifend", "Mimik"],
+      "definition_points": 3,
+      "examples_label": "Die 6 im Handout bebilderten Emotionen",
+      "examples_count": 6,
+      "correct_examples": ["Freude (Happiness)", "Ärger (Anger)", "Ekel (Disgust)", "Angst (Fear)", "Trauer (Sadness)", "Überraschung (Surprise)"],
+      "all_valid_examples": ["Freude", "Happiness", "Ärger", "Anger", "Ekel", "Disgust", "Angst", "Fear", "Trauer", "Sadness", "Überraschung", "Surprise"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "supervision",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie den Begriff 'Supervision' und **nennen** Sie 3 Zielgruppen, an die sie sich richten kann.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Supervision",
+      "definition_correct": "Supervision ist eine Beratung für Personen und Organisationen, die am Menschen arbeiten, zur kontinuierlichen Berufsrollenreflexion und Gestaltung komplexer Arbeitsbeziehungen.",
+      "definition_keywords": ["Beratung", "Berufsrollenreflexion", "Arbeitsbeziehungen", "Spannung Nähe Distanz"],
+      "definition_points": 3,
+      "examples_label": "Zielgruppen",
+      "examples_count": 3,
+      "correct_examples": ["Einzelpersonen", "Gruppen", "Teams"],
+      "all_valid_examples": ["Einzelpersonen", "Gruppen", "Teams", "Organisationen"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_006",
+    "type": "definition_plus_beispiele",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie das 'Pflegerische Aufnahmegespräch' und **nennen** Sie 3 administrative Dokumente, die laut Checkliste vorliegen müssen.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Aufnahmegespräch",
+      "definition_correct": "Das pflegerische Aufnahmegespräch stellt den ersten intensiven Kontakt zwischen Patient und (Bezugs-)Pflegeperson dar und ist der Einstieg in den Pflegeprozess sowie ein Element der Pflegeanamnese.",
+      "definition_keywords": ["intensiver Kontakt", "Einstieg Pflegeprozess", "Pflegeanamnese"],
+      "definition_points": 3,
+      "examples_label": "Notwendige Dokumente (SLP)",
+      "examples_count": 3,
+      "correct_examples": ["Ärztliche Erklärung (TBC-Freiheit)", "Kostenübernahmeerklärung", "Krankenkassenkarte"],
+      "all_valid_examples": ["Ärztliche Erklärung", "TBC-Bescheinigung", "Kostenübernahme", "Bankeinzug", "Krankenkassenkarte", "Einstufungsbescheid"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_007",
+    "type": "definition_plus_beispiele",
+    "topic": "kommunikation_störer",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie 'Kommunikationsstörer' und **nennen** Sie 4 Beispiele aus dem Pflegealltag.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition Kommunikationsstörer",
+      "definition_correct": "Kommunikationsstörer sind Faktoren oder Verhaltensweisen, die den Informationsfluss behindern, Missverständnisse provozieren oder die Beziehung zwischen den Akteuren belasten.",
+      "definition_keywords": ["behindern", "Informationsfluss", "Missverständnisse", "belasten"],
+      "definition_points": 3,
+      "examples_label": "Beispiele für Störer",
+      "examples_count": 4,
+      "correct_examples": ["Unterbrechen", "Du-Botschaften", "Emotionale Beeinflussung", "Mangelnde Hörbereitschaft"],
+      "all_valid_examples": ["Unterbrechen", "Du-Botschaften", "Vorwürfe", "Emotionale Beeinflussung", "Hörbereitschaft fehlt", "Aneinander vorbeireden", "Unkonzentriertheit"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_def_008",
+    "type": "definition_plus_beispiele",
+    "topic": "kollegiale_beratung",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie 'Kollegiale Beratung' und **nennen** Sie 3 typische Schlüsselthemen der Pflege.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Kollegiale Beratung",
+      "definition_correct": "Kollegiale Beratung ist ein Beratungsgespräch in einer selbstgesteuerten Gruppe gleichberechtigter Mitglieder in festgelegten Rollen zur Lösung von Problemen aus dem Berufsalltag.",
+      "definition_keywords": ["selbstgesteuerte Gruppe", "gleichberechtigt", "festgelegte Rollen", "Berufsalltag"],
+      "definition_points": 3,
+      "examples_label": "Schlüsselthemen",
+      "examples_count": 3,
+      "correct_examples": ["Überlastungssituationen", "Umgang mit Nähe und Distanz", "Konflikte mit Kollegen"],
+      "all_valid_examples": ["Überlastung", "Nähe und Distanz", "Kollegenkonflikte", "Probleme mit Bewohnern", "Rollenkonflikte", "Arbeitsabläufe"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "pflegeprozess_schritte",
+    "difficulty": 3,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zum Pflegeprozess-Kreislauf nach Fiechter und Meier zutreffen.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen auf Basis der Prozesslogik.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Der Prozess besteht aus insgesamt 5 Schritten.", "correct": false },
+        { "label": "Die Informationssammlung ist der Ausgangspunkt für das Erkennen von Problemen.", "correct": true },
+        { "label": "Die Beurteilung der Wirkung (Evaluation) findet vor der Durchführung statt.", "correct": false },
+        { "label": "Pflegeziele werden basierend auf den erkannten Problemen und Ressourcen festgelegt.", "correct": true }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Informationssammlung als Ausgangspunkt", "text": "Nur wenn in Schritt 1 (z.B. im Aufnahmegespräch) alle relevanten Daten erhoben wurden, können in Schritt 2 Probleme und Ressourcen valide identifiziert werden." },
+        { "option": "Festlegung der Pflegeziele", "text": "Ziele (Schritt 3) müssen sich direkt auf die in Schritt 2 analysierten pflegerischen Diagnosen/Probleme beziehen, um eine zielgerichtete Maßnahmenplanung zu ermöglichen." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "interkulturelle_begruessung",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche Begrüßungsrituale laut Handout korrekt zugeordnet sind.",
+    "instruction_justify": "**Begründen** Sie die Bedeutung dieser Kenntnis für den Beziehungsaufbau im Aufnahmegespräch.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Mongolen beriechen sich gegenseitig die Wangen.", "correct": true },
+        { "label": "Dani auf Neuguinea begrüßen sich durch kurzes Händeschütteln.", "correct": false },
+        { "label": "Assyrer geben Kleider her.", "correct": true },
+        { "label": "Inder schlagen sich drei Mal auf den Rücken.", "correct": false }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Mongolen / Assyrer", "text": "Die korrekte Wahrnehmung kultureller Rituale verhindert Missverständnisse und signalisiert dem Klienten Respekt vor seinem biografischen Hintergrund." },
+        { "option": "Beziehungsaufbau", "text": "Ein Ziel des Aufnahmegesprächs ist der Aufbau einer Beziehung; eine kultursensible Begrüßung erleichtert die belastende Ankommenssituation." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "vier_seiten_modell",
+    "difficulty": 3,
+    "instruction_select": "**Entscheiden** Sie, welche Interpretationen den 'Ohren' des Vier-Seiten-Modells richtig zugeordnet sind.",
+    "instruction_justify": "**Begründen** Sie zwei Entscheidungen anhand der Kernfragen des Empfängers.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Beziehungsohr: 'Was soll ich tun aufgrund seiner Mitteilung?'", "correct": false },
+        { "label": "Selbstoffenbarungsohr: 'Was ist das denn für einer? Was ist mit ihm?'", "correct": true },
+        { "label": "Sachohr: 'Wie ist der Sachverhalt zu verstehen?'", "correct": true },
+        { "label": "Appellohr: 'Wie redet der eigentlich mit mir?'", "correct": false }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Selbstoffenbarungsohr", "text": "Dieses Ohr fokussiert auf die Informationen, die der Sender über seine eigene Person, seine Gefühle oder seine Verfassung preisgibt." },
+        { "option": "Sachohr", "text": "Hier geht es rein um die Daten, Fakten und den objektiven Gehalt der Nachricht, ohne die Beziehungsebene einzubeziehen." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "emotionsentstehung",
+    "difficulty": 3,
+    "instruction_select": "**Entscheiden** Sie, welche Faktoren die 'kognitive Bewertung' im Emotionsprozess beeinflussen.",
+    "instruction_justify": "**Begründen** Sie, warum dieser Schritt für die Entstehung 'sekundärer Emotionen' zentral ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Erlernte Regeln", "correct": true },
+        { "label": "Kulturelle Normen", "correct": true },
+        { "label": "Das unmittelbare Bedürfnis 1", "correct": false },
+        { "label": "Persönliche Erfahrungen", "correct": true }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Kognitive Bewertung", "text": "In diesem Schritt wird der primäre Impuls gefiltert; erst durch den Abgleich mit Normen und Erfahrungen entsteht die bewertete, sekundäre Emotion." },
+        { "option": "Kulturelle Normen", "text": "Diese bestimmen maßgeblich, ob ein Verhalten als angemessen bewertet wird und welche Folgemotion (z.B. Scham oder Stolz) daraus resultiert." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "burnout_praevention",
+    "difficulty": 3,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zum professionellen Umgang mit Gefühlen zutreffen.",
+    "instruction_justify": "**Begründen** Sie das Risiko mangelnder Reflexion.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Reine Gefühlskontrolle führt langfristig zu erhöhter Belastbarkeit.", "correct": false },
+        { "label": "Dauerhafte Gefühlsunterdrückung ohne Reflexion kann zu Burnout führen.", "correct": true },
+        { "label": "Emotionsregulation beinhaltet das bewusste Nicht-Wahrnehmen von Gefühlen.", "correct": false },
+        { "label": "Supervision ermöglicht eine kontinuierliche Berufsrollenreflexion.", "correct": true }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Burnout-Gefahr", "text": "Wer Gefühle nur kontrolliert, nimmt sie irgendwann nicht mehr wahr, was ein wesentlicher Faktor für psychische Erschöpfung (Burnout) ist." },
+        { "option": "Supervision", "text": "Sie bietet den notwendigen Raum, um die Spannung zwischen Nähe und Distanz professionell aufzuarbeiten und die eigene Handlungsfähigkeit zu erhalten." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_006",
+    "type": "ankreuzen_begruenden",
+    "topic": "aufnahme_organisation",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche Personengruppen laut SLP-Checkliste über einen neuen Bewohner informiert werden müssen.",
+    "instruction_justify": "**Begründen** Sie zwei dieser Informationswege.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Hauswirtschaft (Küche/Reinigung)", "correct": true },
+        { "label": "Hausmeister / Technik", "correct": true },
+        { "label": "Lokale Presse", "correct": false },
+        { "label": "Heimbeirat", "correct": true }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Hauswirtschaft", "text": "Die Küche muss über Essenswünsche informiert werden, und die Reinigung muss den Einzug für den Reinigungsplan erfassen." },
+        { "option": "Hausmeister", "text": "Dieser wird benötigt für das Anbringen von Namensschildern und die Prüfung technischer Einrichtungen im Zimmer." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_007",
+    "type": "ankreuzen_begruenden",
+    "topic": "lebensphasen",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche Lebensabschnitte in der Liste 'Lebensabschnitte als Aufgabe' enthalten sind.",
+    "instruction_justify": "**Begründen** Sie den chronologischen Übergang zwischen zwei Phasen.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Junger Erwachsener", "correct": true },
+        { "label": "Frühpensionär", "correct": false },
+        { "label": "Hochaltriger Mensch", "correct": true },
+        { "label": "Schulkind", "correct": false }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Junger Erwachsener", "text": "Diese Phase folgt auf die Jugend und markiert den Einstieg in die volle Eigenverantwortung und Berufswelt." },
+        { "option": "Hochaltriger Mensch", "text": "Dies ist die letzte definierte Phase, die besondere pflegerische Anforderungen an die Begleitung am Lebensende stellt." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ab_008",
+    "type": "ankreuzen_begruenden",
+    "topic": "kommunikation_anteile",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche prozentualen Anteile laut Grafik der face-to-face Kommunikation entsprechen.",
+    "instruction_justify": "**Begründen** Sie die Konsequenz dieser Verteilung für die Pflegepraxis.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Körpersprache: 55 %", "correct": true },
+        { "label": "Gesprochenes Wort: 38 %", "correct": false },
+        { "label": "Stimmlicher Ausdruck: 38 %", "correct": true },
+        { "label": "Inhaltsebene: 7 %", "correct": true }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        { "option": "Körpersprache (55%)", "text": "Da mehr als die Hälfte der Wirkung nonverbal ist, müssen Pflegekräfte extrem auf ihre Mimik und Haltung achten, da diese oft mehr aussagen als Worte." },
+        { "option": "Inhalt (7%)", "text": "Die reine Information ist dem Beziehungsaspekt (Stimme/Körper) untergeordnet; ein Patient reagiert primär darauf, 'wie' etwas gesagt wird." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ft_021",
+    "type": "freitext_box",
+    "topic": "biografiearbeit_symbolik",
+    "difficulty": 3,
+    "instruction": "**Interpretieren** Sie die Bedeutung der Adi Holzer Grafik „Lebenslauf“ (M 1A.2) im Kontext der biografischen Entwicklung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Tiefe der Symbolinterpretation (Seiltanz, Balance, Lebensweg).",
+    "data": {
+      "box_label": "Interpretation der Grafik",
+      "correct_answer": "Die Grafik stellt den Lebenslauf als einen riskanten Seiltanz dar, bei dem das Individuum ständig die Balance halten muss. Die verschiedenen Symbole (Sonne, Mond, Wolken, Leitern) verdeutlichen, dass ein Leben kein geradliniger Weg ist, sondern aus Aufstiegen, Abstürzen und dem Überwinden von Hindernissen in unterschiedlichen Lebenssphären besteht [1].",
+      "keywords": ["Seiltanz", "Balance", "Hindernisse", "Lebensweg", "nicht geradlinig"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_rf_041",
+    "type": "richtig_falsch",
+    "topic": "biografie_definition",
+    "difficulty": 2,
+    "statement": "Zur Definition einer Biografie gehört laut Handout explizit auch der Aspekt des Vergessens von Erlebtem [2].",
+    "answer": "richtig",
+    "explanation": "Das Handout definiert Biografie als individuelle Interpretation des Erlebten und fügt in Klammern hinzu: '(auch Vergessen!)' [2].",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 1"
+  },
+  {
+    "q_id": "m1_nl_031",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_vorbereitung",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 spezifische Gegenstände oder Informationen, die laut SLP-Checkliste im Zimmer für den neuen Bewohner bereitgestellt werden sollten.",
+    "list_label": "Bereitstellung im Bewohnerzimmer",
+    "count": 3,
+    "correct_answers": ["Heimzeitung", "Internes Telefonverzeichnis", "Namensschild"],
+    "all_valid_answers": ["Heimzeitung", "Telefonverzeichnis", "Namensschild", "Blumenstrauß", "Mahlzeit/Getränk"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Nennung [3, 4]."
+  },
+  {
+    "q_id": "m1_zu_011",
+    "type": "zuordnung",
+    "topic": "aufnahme_organisation",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie zu, welche internen Akteure laut Checkliste über welche Details des neuen Bewohners informiert werden müssen.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Hausmeister / Technik",
+        "B": "Hauswirtschaft / Küche",
+        "C": "Heimbeirat"
+      },
+      "statements": [
+        { "text": "Information über soziale Integration und neue Mitbewohner.", "answer": "C" },
+        { "text": "Anpassung der Verpflegung und Reinigungszyklen.", "answer": "B" },
+        { "text": "Anbringen des Namensschildes und Funktionsprüfung der Klingel.", "answer": "A" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_def_009",
+    "type": "definition_plus_beispiele",
+    "topic": "persoenlichkeitsentwicklung",
+    "difficulty": 3,
+    "instruction": "**Definieren** Sie das 'Konzept der kognitiven Persönlichkeitsentwicklung' und **nennen** Sie die zwei wesentlichen Lernwege.",
+    "points": 5,
+    "data": {
+      "definition_label": "Kognitive Persönlichkeitsentwicklung",
+      "definition_correct": "Dieses Konzept geht davon aus, dass Menschen ihre Persönlichkeit und Kompetenzen nicht nur durch eigene unmittelbare Erfahrung entwickeln [5].",
+      "definition_keywords": ["Lernen", "Entwicklung", "Reflexion"],
+      "definition_points": 3,
+      "examples_label": "Lernwege laut Konzept",
+      "examples_count": 2,
+      "correct_examples": ["Beobachtung", "Reflexion"],
+      "all_valid_examples": ["Beobachtung", "Nachahmung", "Reflexion", "Nachdenken"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_ab_009",
+    "type": "ankreuzen_begruenden",
+    "topic": "professionelle_identitaet",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche Reaktion von Johanna auf die Frage 'Wie alt sind Sie eigentlich?' laut Modul 1A.3 professionell wäre.",
+    "instruction_justify": "**Begründen** Sie, warum diese Frage für Auszubildende eine Herausforderung darstellt.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Die Frage ignorieren und die Pflege fortsetzen.", "correct": false },
+        { "label": "Das Alter nennen und die Frage als Einstieg zur Klärung der Kompetenz nutzen.", "correct": true },
+        { "label": "Sich empört über die Privatfrage zeigen.", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Kompetenzklärung", "text": "Patienten stellen diese Frage oft aus Unsicherheit über die Erfahrung der Pflegekraft; eine souveräne Antwort fördert das Vertrauen [6]." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ft_022",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "instruction": "**Erläutern** Sie die kommunikative Herausforderung bei Patienten, die 'einfach nicht aufhören wollen zu reden' (Fall Maria) und leiten Sie eine pflegerische Konsequenz ab.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Analyse der Situation und den Vorschlag einer professionellen Verabschiedung.",
+    "data": {
+      "box_label": "Umgang mit Rededrang",
+      "correct_answer": "Pflegekräfte geraten hier in einen Zeitkonflikt zwischen Empathie und Dienstplan. Die professionelle Konsequenz ist die Gestaltung einer bewussten Verabschiedung, bei der man dem Patienten signalisiert, dass man das Gespräch jetzt beenden muss, aber zu einem späteren Zeitpunkt (z.B. nächste Runde) wieder ansprechbar ist [7].",
+      "keywords": ["Zeitkonflikt", "Verabschiedung", "Struktur", "Grenzziehung", "Empathie"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_nl_032",
+    "type": "nennen_liste",
+    "topic": "pflegeanamnese_bestandteile",
+    "difficulty": 2,
+    "instruction": "Neben dem Aufnahmegespräch gibt es weitere Quellen der Anamnese. **Nennen** Sie 3 weitere Bestandteile laut Arbeitsblatt 2 (M 1A.4).",
+    "list_label": "Bestandteile der Pflegeanamnese",
+    "count": 3,
+    "correct_answers": ["Beobachtungen / Assessments", "Körperliche Untersuchungen", "Dokumentation (z.B. Arztbriefe)"],
+    "all_valid_answers": ["Beobachtungen", "Assessments", "Skalen", "Körperliche Untersuchung", "Pflegeüberleitung", "Arztbriefe", "Gespräche mit Angehörigen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung [8]."
+  },
+  {
+    "q_id": "m1_rf_042",
+    "type": "richtig_falsch",
+    "topic": "ethik_pflegebelastung",
+    "difficulty": 3,
+    "statement": "Laut Schwerdt (2002) schützt die 'Ganzheitlichkeit' in der Betreuung Pflegende vor moralischen Konfliktlagen [9].",
+    "answer": "falsch",
+    "explanation": "Schwerdt betont im Gegenteil, dass gerade die 'Ganzheitlichkeit' Pflegende in überfordernde, emotionale und moralische Belastungssituationen bringen kann [9].",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 50"
+  },
+  {
+    "q_id": "m1_zu_012",
+    "type": "zuordnung",
+    "topic": "interkulturelle_kommunikation",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Kulturen ihren spezifischen Begrüßungsformen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Dani (Neuguinea)",
+        "B": "Assyrer",
+        "C": "Eipo (Neuguinea)"
+      },
+      "statements": [
+        { "text": "Schweigen zur Begrüßung.", "answer": "C" },
+        { "text": "Langes Umarmen und Tränen.", "answer": "A" },
+        { "text": "Hergeben von Kleidern.", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_def_010",
+    "type": "definition_plus_beispiele",
+    "topic": "reflexionsmethodik",
+    "difficulty": 3,
+    "instruction": "**Definieren** Sie den Begriff 'Resonanz' im Kontext der Fallarbeit (AA 3) und **nennen** Sie ein Werkzeug zu deren Visualisierung.",
+    "points": 4,
+    "data": {
+      "definition_label": "Definition Resonanz",
+      "definition_correct": "Resonanz bezeichnet alle Emotionen und Gefühle, die eine Erzählung beim Zuhörer und auch beim Erzählenden selbst während des Berichts auslösen [10].",
+      "definition_keywords": ["Emotionen", "auslösen", "Zuhörer"],
+      "definition_points": 3,
+      "examples_label": "Visualisierungswerkzeug",
+      "examples_count": 1,
+      "correct_examples": ["Gefühlscluster (auf Plakaten)"],
+      "all_valid_examples": ["Gefühlscluster", "Cluster", "Plakat", "Mindmap"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_ab_010",
+    "type": "ankreuzen_begruenden",
+    "topic": "burnout_praevention",
+    "difficulty": 3,
+    "instruction_select": "**Entscheiden** Sie, welche Handlung laut Handout 1B.1 langfristig zum Burnout führen kann.",
+    "instruction_justify": "**Begründen** Sie die neurobiologische/psychologische Folge laut Material.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Regelmäßige Supervision in Anspruch nehmen.", "correct": false },
+        { "label": "Gefühle über lange Zeit nur kontrollieren, aber nicht reflektieren.", "correct": true },
+        { "label": "Emotionale Bedürfnisse offen im Team ansprechen.", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Fehlende Reflexion", "text": "Wer Gefühle nur kontrolliert, nimmt sie irgendwann nicht mehr wahr (Wahrnehmungsverlust), was ein Kernfaktor für Burnout ist [11]." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ft_023",
+    "type": "freitext_box",
+    "topic": "emotionsentstehung",
+    "difficulty": 3,
+    "instruction": "**Erklären** Sie den Zusammenhang zwischen 'Bedürfnissen' und 'Emotionen' im Ablaufmodell der Emotionsentstehung [12].",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die Verknüpfung von Bedürfnis 1 mit der primären und Bedürfnis 2 mit der sekundären Emotion.",
+    "data": {
+      "box_label": "Zusammenhang Bedürfnisse und Emotionen",
+      "correct_answer": "Emotionen sind eng an Bedürfnisse gekoppelt. Das Modell zeigt, dass die primäre Emotion direkt aus einem unmittelbaren Bedürfnis (Bedürfnis 1) entspringt. Nach der kognitiven Bewertung entsteht die sekundäre Emotion, die wiederum ein modifiziertes Bedürfnis (Bedürfnis 2) und einen neuen Handlungsimpuls auslöst [12, 13].",
+      "keywords": ["Bedürfnis 1", "primäre Emotion", "kognitive Bewertung", "Bedürfnis 2", "Handlungsimpuls"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_nl_033",
+    "type": "nennen_liste",
+    "topic": "heimaufnahme_dokumente",
+    "difficulty": 3,
+    "instruction": "Die Checkliste nennt Dokumente für rechtliche Betreuungen und finanzielle Befreiungen. **Nennen** Sie 2 dieser spezifischen Unterlagen.",
+    "list_label": "Rechtliche / Administrative Dokumente",
+    "count": 2,
+    "correct_answers": ["Bestellungsurkunde (bei gerichtlichen Betreuungen)", "Befreiung von Rundfunk- und Fernsehgebühren"],
+    "all_valid_answers": ["Bestellungsurkunde", "Betreuerausweis", "GEZ-Befreiung", "Rundfunkgebühren-Befreiung", "Vollmacht für Postöffnung"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrektem Dokument [4]."
+  },
+  {
+    "q_id": "m1_rf_043",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie_mimik",
+    "difficulty": 2,
+    "statement": "Das Nachahmen der Mimik des Gegenübers ist laut Studien hinderlich, um Gefühle korrekt zu deuten [14].",
+    "answer": "falsch",
+    "explanation": "Studien zeigen im Gegenteil, dass das Nachahmen entscheidend dazu beiträgt, Gesichtsausdrücke zu deuten und Emotionen nachzuempfinden [14].",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 44"
+  },
+  {
+    "q_id": "m1_zu_013",
+    "type": "zuordnung",
+    "topic": "pflegeprozess_zyklus",
+    "difficulty": 2,
+    "instruction": "**Ordnen** Sie die Beschreibungen den Schritten 1, 3 und 5 des Pflegeprozesses zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Schritt 1",
+        "B": "Schritt 3",
+        "C": "Schritt 5"
+      },
+      "statements": [
+        { "text": "Festlegen, was durch die Pflege erreicht werden soll.", "answer": "B" },
+        { "text": "Systematische Erhebung pflegerelevanter Daten (Anamnese).", "answer": "A" },
+        { "text": "Praktische Anwendung der geplanten Maßnahmen am Patienten.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_def_011",
+    "type": "definition_plus_beispiele",
+    "topic": "kommunikation_strategie",
+    "difficulty": 2,
+    "instruction": "**Definieren** Sie den Begriff 'Eisbrecher' in der pflegerischen Kommunikation und **nennen** Sie ein Beispiel aus der Akutpflege.",
+    "points": 4,
+    "data": {
+      "definition_label": "Definition Eisbrecher",
+      "definition_correct": "Eisbrecher sind Strategien oder Themen, um mit fremden oder schweigsamen Personen ein Gespräch zu beginnen und eine erste Kontaktbasis zu schaffen [15].",
+      "definition_keywords": ["Gesprächsbeginn", "schweigsam", "Kontaktbasis"],
+      "definition_points": 3,
+      "examples_label": "Beispiel aus dem Handout",
+      "examples_count": 1,
+      "correct_examples": ["Gegenstände auf dem Nachtschränkchen (z.B. Blumen, Buch)"],
+      "all_valid_examples": ["Nachtschränkchen", "Blumen", "persönliche Gegenstände", "Wetter"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m1_ab_011",
+    "type": "ankreuzen_begruenden",
+    "topic": "interview_methodik",
+    "difficulty": 2,
+    "instruction_select": "**Entscheiden** Sie, welche Regel für das 'narrative Interview' (AB 3) laut Hinweis in M 1A.2 gilt.",
+    "instruction_justify": "**Begründen** Sie, warum ein 'Leitfaden' dennoch vorbereitet werden sollte.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Der Interviewer sollte die Person ständig unterbrechen, um Fakten zu prüfen.", "correct": false },
+        { "label": "Es geht um eine freie Erlebnisschilderung ohne starre Vorgaben.", "correct": true },
+        { "label": "Das Interview muss zwingend weniger als 5 Minuten dauern.", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Leitfaden-Nutzen", "text": "Ein Leitfaden hilft, trotz der Offenheit des Narrativs bestimmte Schwerpunkte (z.B. markante Ereignisse) nicht zu vergessen [16]." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_ft_024",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie_medien",
+    "difficulty": 2,
+    "instruction": "**Beschreiben** Sie den Zweck des Kurzfilms 'Alfred & Shadow' innerhalb des Moduls 1B.1.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Erläuterung des Films als Medium zur Erklärung der Emotionsentstehung.",
+    "data": {
+      "box_label": "Zweck des Films",
+      "correct_answer": "Der Film dient dazu, komplexe psychologische und neurobiologische Erklärungsansätze zur Entstehung von Emotionen anschaulich und niedrigschwellig zu vermitteln. Er zeigt auf, wie Gefühle unser Denken und Verhalten beeinflussen [17, 18].",
+      "keywords": ["Emotionsentstehung", "Verhalten", "Anschaulichkeit", "Einfluss"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_nl_034",
+    "type": "nennen_liste",
+    "topic": "modulziele_1b1",
+    "difficulty": 2,
+    "instruction": "**Nennen** Sie 3 Unterrichtsziele des Moduls 1B.1 (Reflexion der Praxiserfahrung).",
+    "list_label": "Ziele von 1B.1",
+    "count": 3,
+    "correct_answers": ["Wahrnehmung von Gefühlen in der Reflexion", "Vergleich individueller Unterschiede im Umgang mit Emotionen", "Erläuterung des Emotionsprozesses"],
+    "all_valid_answers": ["Wahrnehmung von Gefühlen", "Individuelle Unterschiede vergleichen", "Emotionsreaktionen einordnen", "Emotionsprozess erläutern", "Emotionsregulation verstehen"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Ziel [19]."
+  },
+  {
+    "fall_id": "m1_fall_01",
+    "title": "Der Seiltanz des Schweigens",
+    "topics_covered": ["biografiearbeit", "kommunikationstheorie"],
+    "patient": {
+      "name": "Karl-Heinz Weber",
+      "alter": 78,
+      "geschlecht": "m",
+      "wohnsituation": "Seit kurzem im Pflegeheim 'Sonnenhof', Witwer",
+      "beruf": "Ehemaliger Bergarbeiter"
+    },
+    "setting": "Pflegeheim",
+    "pflegekraft": "Lisa (Auszubildende im 1. Lehrjahr)",
+    "paragraphs": [
+      "Herr Weber ist vor zwei Wochen in das Pflegeheim eingezogen. Er wirkt oft abwesend und nimmt kaum an den Gemeinschaftsaktivitäten teil. Lisa hat die Aufgabe erhalten, im Rahmen des Moduls 1A.2 ein biografisches Interview mit ihm zu führen, um seine individuellen Bedürfnisse besser zu verstehen.",
+      "In seiner Krankenakte ist ein Zustand nach Schlaganfall mit leichter Hemiparese rechts vermerkt. Er leidet zudem unter einer beginnenden depressiven Episode nach dem Tod seiner Ehefrau vor sechs Monaten. Seine Biografie ist geprägt durch die harte Arbeit unter Tage und den Verlust zweier Brüder im Krieg.",
+      "Als Lisa das Zimmer betritt, sitzt Herr Weber schweigend am Fenster. Auf Lisas freundliche Begrüßung reagiert er nicht verbal. Lisa erinnert sich an das Axiom von Watzlawick: 'Man kann nicht nicht kommunizieren'. Sie bemerkt auf seinem Nachtschränkchen eine alte Grubenlampe und ein abgegriffenes Buch von Michael Ende ('Momo').",
+      "Lisa möchte das Gespräch professionell einleiten. Sie überlegt, wie sie die 'Eisbrecher' auf dem Nachtschränkchen nutzen kann, um Herrn Webers Rededrang zu wecken, ohne ihn durch 'Du-Botschaften' oder infantilisierende Sprache zu verschrecken."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Diagnosen", "value": "Z.n. Mediainfarkt links, rezidivierende Depression, V.a. soziale Isolation." },
+        { "label": "Therapieempfehlung", "value": "Biografische Aktivierung, Förderung der verbalen Kommunikation." }
+      ]
+    },
+    "image_suggestion": "Ein älterer Mann sitzt am Fenster, im Vordergrund ein Nachtschränkchen mit einer alten Lampe und einem Buch.",
+    "variables": {
+      "PATIENT": "Herr Weber",
+      "ERKRANKUNG": "Depression und Schlaganfallfolgen",
+      "PFLEGEKRAFT": "Lisa"
+    }
+  },
+  {
+    "fall_id": "m1_fall_02",
+    "title": "Angst hinter der Maske",
+    "topics_covered": ["pflegeprozess_aufnahme", "emotionspsychologie"],
+    "patient": {
+      "name": "Helga Müller",
+      "alter": 82,
+      "geschlecht": "w",
+      "wohnsituation": "Alleinstehend in einer Stadtwohnung",
+      "beruf": "Ehemalige Bibliothekarin"
+    },
+    "setting": "Krankenhaus (Akutstation)",
+    "pflegekraft": "Thomas (Bezugspflegekraft)",
+    "paragraphs": [
+      "Frau Müller wird zur elektiven Knie-Operation aufgenommen. Thomas führt das pflegerische Aufnahmegespräch (Schritt 1 des Pflegeprozesses). Er nutzt die SLP-Checkliste, um sicherzustellen, dass alle Dokumente wie die ärztliche Erklärung zur TBC-Freiheit und die Versicherungskarte vorliegen.",
+      "Frau Müller wirkt nach außen hin gefasst und lächelt Thomas ständig an. Thomas fällt jedoch auf, dass die Lachfältchen um ihre Augen fehlen – er vermutet ein 'gespieltes Lächeln' nach Paul Ekman. Während er die Ziele des Gesprächs erläutert, zittern ihre Hände leicht.",
+      "Im Modell der Emotionsentstehung vermutet Thomas, dass der 'Auslöser' (Krankenhausaufnahme) bei Frau Müller die primäre Emotion 'Angst' (FEAR) ausgelöst hat. Durch ihre kognitive Bewertung ('Ich darf keine Last sein') zeigt sie nach außen hin jedoch eine kontrollierte sekundäre Emotion.",
+      "Thomas muss nun die Informationen für die Pflegeanamnese sammeln, während er gleichzeitig auf die nonverbalen Signale (55%-Regel) achten muss, um eine Vertrauensbasis für die weitere Pflegeplanung aufzubauen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Aufnahmegrund", "value": "Gonalgie rechts bei fortgeschrittener Gonarthrose." },
+        { "label": "Besonderheiten", "value": "Patientin äußert große Sorge vor Autonomie-Verlust." }
+      ]
+    },
+    "image_suggestion": "Pflegekraft mit Klemmbrett im Gespräch mit einer älteren Dame, die steif lächelt.",
+    "variables": {
+      "PATIENT": "Frau Müller",
+      "ERKRANKUNG": "Gonarthrose",
+      "PFLEGEKRAFT": "Thomas"
+    }
+  },
+  {
+    "fall_id": "m1_fall_03",
+    "title": "Statuspassage in den Ruhestand",
+    "topics_covered": ["biografiearbeit", "emotionspsychologie"],
+    "patient": {
+      "name": "Manfred Schmidt",
+      "alter": 66,
+      "geschlecht": "m",
+      "wohnsituation": "Lebt mit Ehefrau im eigenen Haus",
+      "beruf": "Frisch pensionierter Werkstattmeister"
+    },
+    "setting": "Ambulanter Pflegedienst",
+    "pflegekraft": "Sarah (Auszubildende)",
+    "paragraphs": [
+      "Herr Schmidt hat vor kurzem die Statuspassage vom 'Erwachsenen im Berufsleben' zum 'Rentner' vollzogen. Sarah besucht ihn zur postoperativen Wundversorgung nach einer Leisten-OP. Sie bemerkt, dass Herr Schmidt sehr gereizt reagiert und seine Ehefrau vor Sarahs Augen schroff zurechtweist.",
+      "Laut biografischer Forschung entspricht Herr Schmidt dem Typus der 'Normalbiografie' mit Fokus auf Leistung. Der plötzliche Rollenverlust durch die Pensionierung scheint ihn emotional schwer zu belasten. Sarah erkennt in seinem Gesicht die Basisemotion 'Ärger' (ANGER).",
+      "Sarah reflektiert die Situation später in der Schule. Sie spürt eine starke 'Resonanz' (Gefühle von Hilflosigkeit und Wut), die sie in einem Gefühlscluster visualisiert. Sie überlegt, wie Herr Schmidts Biografie seine aktuelle kognitive Bewertung der Hilfsbedürftigkeit beeinflusst.",
+      "In der Übergabe berichtet Sarah dem Team von ihren Beobachtungen. Sie diskutieren, ob eine kollegiale Beratung zum Thema 'Umgang mit Nähe und Distanz' bei diesem Patienten sinnvoll wäre, da Sarah sich persönlich angegriffen fühlt."
+    ],
+    "arztbrief": {
+      "show": false
+    },
+    "image_suggestion": "Ein Mann im Sessel, der verärgert wegsieht, während eine Pflegekraft eine Tasche abstellt.",
+    "variables": {
+      "PATIENT": "Herr Schmidt",
+      "ERKRANKUNG": "Z.n. Leistenhernie-OP",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m1_fall_04",
+    "title": "Das Kommunikationsquadrat im Aufnahmezimmer",
+    "topics_covered": ["kommunikationstheorie", "pflegeprozess_aufnahme"],
+    "patient": {
+      "name": "Maria Gomez",
+      "alter": 52,
+      "geschlecht": "w",
+      "wohnsituation": "Wohnt mit zwei erwachsenen Kindern zusammen",
+      "beruf": "Verkäuferin"
+    },
+    "setting": "Krankenhaus",
+    "pflegekraft": "Kevin (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Gomez wird zur Abklärung chronischer Rückenschmerzen aufgenommen. Kevin führt das Aufnahmegespräch. Er ist im Stress und möchte schnell die Fakten für die Informationssammlung (Schritt 1) abhaken. Er sagt: 'Frau Gomez, wir müssen jetzt zügig die Daten aufnehmen, ich habe noch drei weitere Aufnahmen.'",
+      "Frau Gomez reagiert versteinert und gibt nur noch einsilbige Antworten. Kevin versteht nicht, warum die Kommunikation stockt. Er analysiert die Situation nach dem Vier-Seiten-Modell: Sein Sachinhalt war die zeitliche Notwendigkeit, aber Frau Gomez hat auf dem 'Beziehungsohr' vermutlich Desinteresse wahrgenommen.",
+      "Kevin unterbricht Frau Gomez mehrfach, als sie von ihrer familiären Belastung erzählen will. Damit nutzt er einen klassischen 'Kommunikationsstörer'. Frau Gomez hört schließlich ganz auf zu reden ('Man kann nicht nicht kommunizieren').",
+      "Um das Gespräch zu retten, muss Kevin nun Kommunikationsförderer wie 'Paraphrasieren' und 'Aktives Zuhören' einsetzen. Er muss verstehen, dass die Erläuterung der Gesprächsziele für Frau Gomez Transparenz schaffen würde."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Einweisungsdiagnose", "value": "Chronisches LWS-Syndrom, V.a. psychosomatische Überlagerung." }
+      ]
+    },
+    "image_suggestion": "Zwei Personen an einem Tisch, die Kommunikation wirkt angespannt, eine Person schreibt hektisch.",
+    "variables": {
+      "PATIENT": "Frau Gomez",
+      "ERKRANKUNG": "Chronische Rückenschmerzen",
+      "PFLEGEKRAFT": "Kevin"
+    }
+  },
+  {
+    "fall_id": "m1_fall_05",
+    "title": "Ganzheitlichkeit am Limit",
+    "topics_covered": ["alle Themen gemischt"],
+    "patient": {
+      "name": "Waltraud Schulze",
+      "alter": 89,
+      "geschlecht": "w",
+      "wohnsituation": "Pflegeheim, hochaltrig, bettlägerig",
+      "beruf": "Ehemalige Schneiderin"
+    },
+    "setting": "Pflegeheim",
+    "pflegekraft": "Julia (Auszubildende)",
+    "paragraphs": [
+      "Julia versorgt Frau Schulze, eine hochaltrige Bewohnerin. Bei der Intimpflege sagt Julia unbewusst: 'So Frau Schulze, jetzt waschen wir noch den Popo.' Julia bemerkt sofort, dass Frau Schulze den Blick abwendet – ein Zeichen von Scham und Infantilisierung.",
+      "Julia reflektiert Schwerdts Zitat zur 'Ganzheitlichkeit': Die intensive Beschäftigung mit Frau Schulzes Biografie (Fluchterfahrung) führt dazu, dass Julia sich in einer moralischen Konfliktlage fühlt, da sie für die Pflege eigentlich mehr Zeit bräuchte, als der Dienstplan erlaubt.",
+      "Frau Schulze erinnert Julia stark an ihre verstorbene Großmutter. Diese emotionale Verknüpfung beeinflusst Julias kognitive Bewertung der Situation. Sie spürt die Gefahr eines Burnouts durch dauerhafte Gefühlskontrolle ohne Reflexion.",
+      "In der nächsten Supervision möchte Julia dieses Schlüsselthema (Umgang mit Nähe und Distanz) ansprechen. Sie nutzt ihre 'Lebenslinie', um zu verstehen, warum sie gerade bei hochaltrigen Menschen so starke Resonanzen spürt."
+    ],
+    "arztbrief": {
+      "show": false
+    },
+    "image_suggestion": "Eine junge Pflegekraft hält die Hand einer sehr alten Frau im Bett, beide wirken nachdenklich.",
+    "variables": {
+      "PATIENT": "Frau Schulze",
+      "ERKRANKUNG": "Multimorbidität und Immobilität",
+      "PFLEGEKRAFT": "Julia"
+    }
+  },
+  {
+    "fall_id": "m1_fall_06",
+    "title": "Atemnot und Angstschweiß",
+    "topics_covered": ["emotionspsychologie", "kommunikationstheorie"],
+    "patient": {
+      "name": "Dieter Klein",
+      "alter": 72,
+      "geschlecht": "m",
+      "wohnsituation": "Wohngemeinschaft für Senioren",
+      "beruf": "Früherer Feuerwehrmann"
+    },
+    "setting": "Krankenhaus (Notaufnahme)",
+    "pflegekraft": "Marco (Pflegefachkraft)",
+    "paragraphs": [
+      "Herr Klein wird mit akuter Atemnot eingeliefert. Er ringt nach Luft, seine Mimik zeigt die Basisemotion 'Angst' (FEAR) in ihrer reinsten Form. Marco weiß, dass er jetzt durch seine Körpersprache (55%) Ruhe ausstrahlen muss, da Worte (7%) kaum zu Herrn Klein durchdringen.",
+      "Der Auslöser 'Erstickungsgefühl' führt bei Herrn Klein zu einem massiven Handlungsimpuls (Panik). Marco muss den Pflegeprozess im Zeitraffer starten: Kurze Informationssammlung während der ersten Notfallmaßnahmen.",
+      "Marco nutzt kurze Sätze und vermeidet jeden Kommunikationsstörer. Er spiegelt Herrn Kleins Emotionen ('Ich sehe, dass Sie große Angst haben, wir helfen Ihnen jetzt'), um eine erste Resonanz zur Beruhigung zu nutzen.",
+      "Nachdem Herr Klein stabilisiert ist, zeigt er eine sekundäre Emotion: Scham darüber, so panisch reagiert zu haben. Marco nutzt ein klärendes Gespräch, um Herrn Kleins kognitive Bewertung der Situation zu verändern und seine professionelle Rolle als Unterstützer zu festigen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Diagnose", "value": "Akute Exazerbation einer COPD." },
+        { "label": "Befund", "value": "Zyanose, Tachypnoe, ausgeprägte Angstpsychose." }
+      ]
+    },
+    "image_suggestion": "Ein Patient im Krankenhausbett mit Sauerstoffmaske, eine Pflegekraft hält beruhigend seine Schulter.",
+    "variables": {
+      "PATIENT": "Herr Klein",
+      "ERKRANKUNG": "COPD-Exazerbation",
+      "PFLEGEKRAFT": "Marco"
+    }
+  }
+]
