@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM System | Klausur-Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/exam-paper.css">
+</head>
+<body class="min-h-screen bg-slate-100">
+
+    <!-- START SCREEN -->
+    <div id="start-screen" class="min-h-screen flex items-center justify-center p-6">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden">
+            <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 p-10 text-white text-center">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-file-alt text-3xl"></i>
+                </div>
+                <h1 class="text-3xl font-black tracking-tight">Klausur-Simulator</h1>
+                <p class="text-indigo-200 mt-2 text-sm font-medium">Leistungsnachweis • 1:1 Papier-Format</p>
+            </div>
+            <div class="p-8 space-y-6">
+                <div>
+                    <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Modul</label>
+                    <select id="module-select" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                        <option value="1">Modul 1: Kommunikation & Biografie</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Dein Name</label>
+                    <input id="student-name" type="text" placeholder="Vor- und Nachname" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Kurs</label>
+                    <input id="student-kurs" type="text" placeholder="z.B. OK 24" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                </div>
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-info-circle text-amber-500 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-amber-900">Prüfungshinweise</p>
+                            <ul class="text-xs text-amber-700 mt-1 space-y-1">
+                                <li>• Bearbeitungszeit: 90 Minuten</li>
+                                <li>• Alle Aufgaben bearbeiten</li>
+                                <li>• Fallbeispiel genau lesen</li>
+                                <li>• Fachbegriffe verwenden</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="startExam()" class="w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20">
+                    <i class="fas fa-play mr-2"></i> Klausur starten
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXAM SCREEN -->
+    <div id="exam-screen" class="hidden">
+        <!-- Timer Bar -->
+        <div id="timer-bar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+            <div class="max-w-[850px] mx-auto px-4 h-14 flex items-center justify-between">
+                <button onclick="scrollToTop()" class="text-slate-500 hover:text-indigo-600 font-bold text-xs flex items-center gap-2">
+                    <i class="fas fa-arrow-up"></i> Nach oben
+                </button>
+                <div class="flex items-center gap-4">
+                    <span id="progress-label" class="text-xs font-bold text-slate-400">Aufgabe 1/16</span>
+                    <div id="timer-display" class="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg">
+                        <i class="fas fa-clock text-indigo-500"></i>
+                        <span id="timer-text" class="font-mono font-black text-slate-800 text-sm">90:00</span>
+                    </div>
+                </div>
+                <button onclick="submitExam()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg font-bold text-xs transition-all">
+                    <i class="fas fa-paper-plane mr-1"></i> Abgeben
+                </button>
+            </div>
+            <div class="h-1 bg-slate-100">
+                <div id="timer-progress" class="h-full bg-indigo-500 transition-all duration-1000" style="width:100%"></div>
+            </div>
+        </div>
+
+        <!-- Paper -->
+        <div class="pt-20 pb-32 px-4">
+            <div id="exam-paper" class="exam-paper max-w-[850px] mx-auto">
+                <!-- Content rendered by JS -->
+            </div>
+        </div>
+
+        <!-- Submit Footer -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-slate-200 p-4 z-50">
+            <div class="max-w-[850px] mx-auto flex items-center justify-between">
+                <span id="answered-count" class="text-sm font-bold text-slate-400">0 von 16 beantwortet</span>
+                <button onclick="submitExam()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white px-8 py-3 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-green-500/20">
+                    <i class="fas fa-check-circle mr-2"></i> Klausur abgeben
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="result-screen" class="hidden min-h-screen bg-slate-50 p-6">
+        <div id="result-content" class="max-w-[850px] mx-auto">
+            <!-- Rendered by JS -->
+        </div>
+    </div>
+
+    <script src="js/exam-generator.js"></script>
+    <script src="js/exam-renderer.js"></script>
+    <script src="js/exam-grader.js"></script>
+    <script>
+        let currentExam = null;
+        let timerInterval = null;
+        let timeRemaining = 90 * 60; // 90 min in seconds
+
+        async function startExam() {
+            const name = document.getElementById('student-name').value.trim();
+            const kurs = document.getElementById('student-kurs').value.trim();
+            if (!name) { alert('Bitte Name eingeben!'); return; }
+
+            // Load question bank
+            try {
+                const resp = await fetch('data/question-banks/module1_questions.json');
+                const bank = await resp.json();
+                
+                // Generate exam
+                currentExam = ExamGenerator.generate(bank, 1);
+                currentExam.studentName = name;
+                currentExam.studentKurs = kurs;
+
+                // Switch screens
+                document.getElementById('start-screen').classList.add('hidden');
+                document.getElementById('exam-screen').classList.remove('hidden');
+
+                // Render
+                ExamRenderer.render(currentExam, document.getElementById('exam-paper'));
+                
+                // Start timer
+                startTimer();
+                
+                // Track progress
+                trackProgress();
+                
+            } catch(e) {
+                console.error(e);
+                alert('Fehler beim Laden der Fragen. Stelle sicher dass module1_questions.json existiert.');
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                    return;
+                }
+                const min = Math.floor(timeRemaining / 60);
+                const sec = timeRemaining % 60;
+                document.getElementById('timer-text').textContent = 
+                    `${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
+                
+                const pct = (timeRemaining / (90*60)) * 100;
+                document.getElementById('timer-progress').style.width = pct + '%';
+                
+                if (timeRemaining < 300) {
+                    document.getElementById('timer-display').classList.add('bg-red-100');
+                    document.getElementById('timer-text').classList.add('text-red-600');
+                }
+            }, 1000);
+        }
+
+        function trackProgress() {
+            setInterval(() => {
+                const answers = ExamRenderer.collectAnswers();
+                let answered = 0;
+                const total = currentExam.aufgaben.length;
+                answers.forEach(a => { if (a.hasAnswer) answered++; });
+                document.getElementById('answered-count').textContent = `${answered} von ${total} beantwortet`;
+                document.getElementById('progress-label').textContent = `${answered}/${total} bearbeitet`;
+            }, 2000);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function submitExam() {
+            if (!confirm('Klausur wirklich abgeben? Diese Aktion kann nicht rückgängig gemacht werden.')) return;
+            
+            clearInterval(timerInterval);
+            
+            const answers = ExamRenderer.collectAnswers();
+            const result = ExamGrader.grade(currentExam, answers);
+            result.timeUsed = 90*60 - timeRemaining;
+            
+            // Show results
+            document.getElementById('exam-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+            
+            ExamGrader.renderResults(result, currentExam, answers, document.getElementById('result-content'));
+            
+            // Save to localStorage
+            const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+            history.push({
+                date: new Date().toISOString(),
+                module: 1,
+                score: result.totalEarned,
+                maxScore: result.totalPossible,
+                percentage: result.percentage,
+                note: result.note,
+                timeUsed: result.timeUsed,
+                topicScores: result.topicScores
+            });
+            localStorage.setItem('slm_exam_history', JSON.stringify(history));
+        }
+    </script>
+</body>
+</html>
