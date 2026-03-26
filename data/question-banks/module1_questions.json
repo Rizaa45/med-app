@@ -3068,5 +3068,1465 @@
       "ERKRANKUNG": "COPD-Exazerbation",
       "PFLEGEKRAFT": "Marco"
     }
+  },
+  {
+    "q_id": "m1_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "statement": "Das Schweigen von [PATIENT] am Fenster stellt laut dem ersten Axiom von Watzlawick keine Form der Kommunikation dar, da kein Informationsaustausch stattfindet.",
+    "answer": "falsch",
+    "explanation": "Nach Paul Watzlawick kann man nicht nicht kommunizieren. Jedes Verhalten, also auch Schweigen, hat Mitteilungscharakter und ist somit Kommunikation."
+  },
+  {
+    "q_id": "m1_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Nennen** Sie die 2 Gegenstände auf dem Nachtschränkchen, die [PFLEGEKRAFT] als 'Eisbrecher' nutzen kann, um mit [PATIENT] ins Gespräch zu kommen.",
+    "list_label": "Eisbrecher auf dem Nachtschränkchen",
+    "count": 2,
+    "correct_answers": [
+      "Grubenlampe",
+      "Buch 'Momo' (von Michael Ende)"
+    ],
+    "all_valid_answers": [
+      "Grubenlampe",
+      "Lampe",
+      "Bergbau-Utensil",
+      "Buch",
+      "Momo"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Nennung."
+  },
+  {
+    "q_id": "m1_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "biografiearbeit",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Analysieren** Sie, welche 'Statuspassage' [PATIENT] vor zwei Wochen durchlaufen hat und **erläutern** Sie die damit verbundenen Herausforderungen für den Bewohner.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Tiefe der Analyse (Fachbegriff und psychosoziale Auswirkung).",
+    "data": {
+      "box_label": "Analyse der Statuspassage",
+      "correct_answer": "[PATIENT] hat die Statuspassage des Heimeinzugs (Wechsel vom autonomen häuslichen Umfeld in die stationäre Langzeitpflege) vollzogen. Solche markanten Übergänge im Lebenslauf sind oft mit einem Rollenverlust, dem Verlust von Autonomie und einer Identitätskrise verbunden, was seine aktuelle soziale Isolation und Depression verstärken kann.",
+      "keywords": [
+        "Heimeinzug",
+        "Rollenwechsel",
+        "Autonomiecharakter",
+        "Identität",
+        "Übergang"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Ordnen** Sie die biografischen Details von [PATIENT] den korrekten Fachbegriffen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Biografische Daten (sachlich)",
+        "B": "Kritisches Lebensereignis",
+        "C": "Biografie (individuelle Interpretation)"
+      },
+      "statements": [
+        {
+          "text": "Der Tod der Ehefrau vor sechs Monaten.",
+          "answer": "B"
+        },
+        {
+          "text": "78 Jahre alt, Witwer, ehemaliger Bergarbeiter.",
+          "answer": "A"
+        },
+        {
+          "text": "Wie [PATIENT] den Verlust seiner Brüder im Krieg heute persönlich bewertet.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Nennen** Sie 3 biografische Schwerpunkte, die [PFLEGEKRAFT] laut Fallbeschreibung in einem Interview mit [PATIENT] thematisieren könnte.",
+    "list_label": "Biografische Schwerpunkte",
+    "count": 3,
+    "correct_answers": [
+      "Arbeitsleben unter Tage (Bergarbeiter)",
+      "Verlust der Brüder im Krieg",
+      "Tod der Ehefrau und Trauerbewältigung"
+    ],
+    "all_valid_answers": [
+      "Bergbau",
+      "Kriegserlebnisse",
+      "Verlust der Brüder",
+      "Ehefrau",
+      "Witwerstatus",
+      "Leseinteressen (Momo)"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Schwerpunkt."
+  },
+  {
+    "q_id": "m1_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction_select": "**Entscheiden** Sie, welche Kommunikationsförderer [PFLEGEKRAFT] einsetzen sollte, um die soziale Isolation von [PATIENT] zu durchbrechen.",
+    "instruction_justify": "**Begründen** Sie Ihre Auswahl mit Bezug auf die pflegerische Beziehungsarbeit.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Paraphrasieren und Rückfragen",
+          "correct": true
+        },
+        {
+          "label": "Senden von Du-Botschaften",
+          "correct": false
+        },
+        {
+          "label": "Aktives Zuhören",
+          "correct": true
+        },
+        {
+          "label": "Emotionale Beeinflussung",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Aktives Zuhören",
+          "text": "Dies signalisiert [PATIENT] trotz seines Schweigens Wertschätzung und Präsenz, was die Basis für Vertrauen schafft."
+        },
+        {
+          "option": "Paraphrasieren",
+          "text": "Es hilft Lisa, die wenigen Signale von [PATIENT] korrekt zu deuten und Missverständnisse in der Anamnese zu vermeiden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Erläutern** Sie anhand des Modells der Emotionsentstehung, wie der 'Tod der Ehefrau' bei [PATIENT] zur aktuellen 'sekundären Emotion' der sozialen Isolation führen konnte.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die korrekte Herleitung (Auslöser -> primäre Emotion -> Bewertung -> sekundäre Emotion).",
+    "data": {
+      "box_label": "Erläuterung der Emotionsentstehung",
+      "correct_answer": "Der Tod der Frau ist der Auslöser, der Trauer (primäre Emotion) auslöst. Durch die kognitive Bewertung (z.B. 'Ich bin allein wertlos', 'Niemand versteht mich') entsteht die sekundäre Emotion der Hoffnungslosigkeit oder Resignation. Der daraus resultierende Handlungsimpuls führt zum Rückzug und zur im Arztbrief diagnostizierten sozialen Isolation.",
+      "keywords": [
+        "Auslöser",
+        "Trauer",
+        "kognitive Bewertung",
+        "sekundäre Emotion",
+        "Handlungsimpuls"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "statement": "Sollte [PATIENT] während des Gesprächs lächeln, erkennt Lisa ein echtes Lächeln laut Paul Ekman primär an den Lachfältchen um die Augen.",
+    "answer": "richtig",
+    "explanation": "Ein echtes Lächeln lässt sich an verräterischen Zeichen wie den Lachfältchen um die Augen erkennen, da diese Muskelpartie unwillkürlich reagiert."
+  },
+  {
+    "q_id": "m1_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Nennen** Sie 3 Ziele, die [PFLEGEKRAFT] mit der Durchführung des biografischen Interviews bei [PATIENT] verfolgt.",
+    "list_label": "Ziele des biografischen Interviews",
+    "count": 3,
+    "correct_answers": [
+      "Aufbau einer Beziehung zum Bewohner",
+      "Erfassen des Erlebens und der Bedürfnisse",
+      "Erhebung pflegerelevanter Informationen für die Anamnese"
+    ],
+    "all_valid_answers": [
+      "Beziehungsaufbau",
+      "Bedürfnisse erfassen",
+      "Informationserhebung",
+      "Ankommenssituation erleichtern",
+      "Ressourcen finden"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Ziel."
+  },
+  {
+    "q_id": "m1_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "statement": "Lisa muss respektieren, wenn [PATIENT] Details über den Krieg nicht erzählen möchte, da zur Biografie laut Definition auch das bewusste oder unbewusste Vergessen gehört.",
+    "answer": "richtig",
+    "explanation": "Die Definition von Biografie umfasst explizit die individuelle Interpretation des Erlebten inklusive des Vergessens."
+  },
+  {
+    "q_id": "m1_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] im Umgang mit [PATIENT] auf infantilisierende Sprache (z.B. 'Popo') verzichten muss, gerade im Hinblick auf seine Depression und den Mediainfarkt.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Begründung (Menschenwürde, Scham, professionelle Haltung).",
+    "data": {
+      "box_label": "Vermeidung von Infantilisierung",
+      "correct_answer": "Solche Sprache wirkt entwürdigend und schambesetzt. Bei einem depressiven Patienten, der bereits unter einem Autonomiecharakter leidet, würde Infantilisierung das Gefühl der Wertlosigkeit verstärken und den Beziehungsaufbau massiv stören. Professionelle Pflege erfordert eine respektvolle, altersangemessene Kommunikation.",
+      "keywords": [
+        "Würde",
+        "Scham",
+        "Entwürdigung",
+        "Respekt",
+        "professionell"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_01"],
+    "instruction": "**Ordnen** Sie die Beobachtungen von [PFLEGEKRAFT] den entsprechenden Ebenen der face-to-face Kommunikation zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Körpersprache (55 %)",
+        "B": "Stimmlicher Ausdruck (38 %)",
+        "C": "Gesprochenes Wort (7 %)"
+      },
+      "statements": [
+        {
+          "text": "Das anhaltende Schweigen von [PATIENT] trotz Ansprache.",
+          "answer": "C"
+        },
+        {
+          "text": "Das starre Sitzen und der abgewandte Blick zum Fenster.",
+          "answer": "A"
+        },
+        {
+          "text": "Ein tiefes, schweres Seufzen von [PATIENT] während Lisa die Lampe betrachtet.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_013",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "statement": "[PFLEGEKRAFT] führt mit der Informationserfassung im Aufnahmegespräch den zweiten Schritt des Pflegeprozesses nach Fiechter und Meier durch.",
+    "answer": "falsch",
+    "explanation": "Das Aufnahmegespräch gehört zum ersten Schritt des Pflegeprozesses, der Informationssammlung. Der zweite Schritt ist das Erkennen von Problemen und Ressourcen.",
+    "source_hint": "M 1A.4_Handout.pdf, Seite 30-31"
+  },
+  {
+    "q_id": "m1_fall_ft_013",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Analysieren** Sie das Lächeln von [PATIENT] unter Einbezug der Erkenntnisse von Paul Ekman zur Mimik.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die korrekte Benennung der mimischen Merkmale.",
+    "data": {
+      "box_label": "Analyse des Gesichtsausdrucks",
+      "correct_answer": "Bei [PATIENT] handelt es sich um ein 'gespieltes Lächeln', um die wahre Emotion (Angst) zu verbergen. Laut Ekman erkennt man ein echtes Lächeln an den Lachfältchen um die Augen, die hier fehlen. Lediglich die Mundwinkel sind hochgezogen, was auf eine bewusste Steuerung statt eines unwillkürlichen Gefühls hindeutet.",
+      "keywords": ["gespieltes Lächeln", "Lachfältchen", "Augenpartie", "Paul Ekman", "Mimik"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_013",
+    "type": "zuordnung",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Ordnen** Sie die Situationselemente aus dem Fall von [PATIENT] den korrekten Phasen des Modells der Emotionsentstehung zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Auslöser",
+        "B": "Primäre Emotion",
+        "C": "Kognitive Bewertung",
+        "D": "Sekundäre Emotion"
+      },
+      "statements": [
+        { "text": "Die Einweisung ins Krankenhaus zur Knie-OP.", "answer": "A" },
+        { "text": "Das Gefühl von Angst (FEAR).", "answer": "B" },
+        { "text": "Die Überzeugung: 'Ich darf dem Personal keine Last sein'.", "answer": "C" },
+        { "text": "Das kontrollierte, ständige Lächeln gegenüber [PFLEGEKRAFT].", "answer": "D" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_013",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Nennen** Sie 4 administrative Dokumente, die [PFLEGEKRAFT] laut SLP-Checkliste bei der Aufnahme von [PATIENT] prüfen bzw. erfassen muss.",
+    "list_label": "Notwendige Dokumente / Daten",
+    "count": 4,
+    "correct_answers": [
+      "Ärztliche Erklärung (TBC-Ausschluss)",
+      "Krankenkassenkarte",
+      "Kostenübernahmeerklärung",
+      "Personalausweis / Stammdaten"
+    ],
+    "all_valid_answers": ["TBC-Erklärung", "Versicherungskarte", "Kostenübernahme", "Personalausweis", "Stammblatt", "Einverständniserklärungen"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Dokument."
+  },
+  {
+    "q_id": "m1_fall_ft_014",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Erläutern** Sie, welche Gefahr für die Qualität der Informationssammlung (Schritt 1) besteht, wenn [PFLEGEKRAFT] die kognitive Bewertung von [PATIENT] ('keine Last sein') nicht erkennt.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Verknüpfung von Patienteneinstellung und Datenvalidität.",
+    "data": {
+      "box_label": "Risiko für die Pflegeanamnese",
+      "correct_answer": "Durch die Bewertung 'keine Last sein' wird [PATIENT] ihre tatsächlichen Bedürfnisse, Schmerzen oder Ängste im Gespräch vermutlich bagatellisieren oder verschweigen. Wenn [PFLEGEKRAFT] dies nicht erkennt, basiert die weitere Pflegeplanung auf unvollständigen oder falschen Daten, wodurch Probleme (wie das Sturzrisiko oder die Sorge vor Autonomieverlust) nicht adäquat bearbeitet werden können.",
+      "keywords": ["Bagatellisierung", "Verschweigen von Bedürfnissen", "falsche Pflegeplanung", "Datenvalidität", "Autonomieverlust"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_014",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "statement": "Das Zittern der Hände von [PATIENT] ist ein nonverbales Signal, das in der face-to-face Kommunikation einen Anteil von etwa 55 % an der Gesamtwirkung hat.",
+    "answer": "richtig",
+    "explanation": "Laut der Grafik zur Kommunikation entfallen 55 % auf die Körpersprache (Mimik, Gestik, Haltung), zu der auch das Zittern der Hände gehört.",
+    "source_hint": "M 1A.3_Handout.pdf, Seite 25"
+  },
+  {
+    "q_id": "m1_fall_ab_013",
+    "type": "ankreuzen_begruenden",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction_select": "**Entscheiden** Sie, welche Kommunikationsförderer [PFLEGEKRAFT] einsetzen sollte, um hinter die Fassade des gespielten Lächelns zu blicken.",
+    "instruction_justify": "**Begründen** Sie eine Ihrer Entscheidungen mit Bezug auf die Situation von [PATIENT].",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Paraphrasieren und Rückfragen", "correct": true },
+        { "label": "Senden von Du-Botschaften", "correct": false },
+        { "label": "Aktives Zuhören", "correct": true },
+        { "label": "Unterbrechen bei Abschweifungen", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Paraphrasieren", "text": "Durch das Wiederholen ihrer Aussagen in eigenen Worten kann Thomas prüfen, ob ihr Lächeln mit ihrem inneren Erleben übereinstimmt, und ihr signalisieren, dass er ihre Verunsicherung (zitternde Hände) wahrnimmt." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_erg_013",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Ergänzen** Sie die fehlenden Phasen des Aufnahmegesprächs, die [PFLEGEKRAFT] strukturieren muss.",
+    "points": 2,
+    "data": {
+      "list_label": "Phasen des Aufnahmegesprächs",
+      "given_items": ["Einleitung (Begrüßung, Vorstellung, Ziele)"],
+      "missing_items": ["Hauptteil (Informationsaustausch)", "Schluss (Beendigung)"],
+      "all_valid_missing": ["Hauptteil", "Informationsgabe", "Informationserfassung", "Schluss", "Abschlussfragen", "Verabschiedung"]
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_015",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] in der Einleitungsphase die Ziele des Gesprächs explizit erläutern sollte, obwohl [PATIENT] bereits kooperativ wirkt.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Begründung (Transparenz, Vertrauen).",
+    "data": {
+      "box_label": "Bedeutung der Zielklärung",
+      "correct_answer": "Die Erläuterung der Ziele schafft Transparenz und erhöht die Gesprächsbereitschaft. Da [PATIENT] insgeheim Angst hat und 'keine Last' sein will, kann die Klärung des Nutzens (z.B. optimale Vorbereitung auf die OP) ihr helfen, Vertrauen aufzubauen und ihre Fassade des gespielten Lächelns aufzugeben.",
+      "keywords": ["Transparenz", "Vertrauen", "Gesprächsbereitschaft", "Angstreduktion"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_014",
+    "type": "zuordnung",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "Nehmen wir an, [PATIENT] sagt: 'Hoffentlich kann ich nach der OP schnell wieder alleine laufen.' **Ordnen** Sie die Aussagen den 4 Ohren nach Schulz von Thun zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Sachebene",
+        "B": "Selbstoffenbarung",
+        "C": "Beziehungsebene",
+        "D": "Appell"
+      },
+      "statements": [
+        { "text": "Sie möchte nach dem Eingriff ihre Mobilität zurückgewinnen.", "answer": "A" },
+        { "text": "Helfen Sie mir dabei, meine Selbstständigkeit zu erhalten!", "answer": "D" },
+        { "text": "Sie hat große Sorge vor dem Verlust ihrer Autonomie.", "answer": "B" },
+        { "text": "Sie vertraut Thomas als kompetente Pflegekraft an ihrer Seite.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_015",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "statement": "Laut dem Handout zum Aufnahmegespräch ist dieses eine eigenständige pflegerische Aufgabe, die möglichst zeitnah zur Aufnahme und nicht 'nebenbei' erledigt werden sollte.",
+    "answer": "richtig",
+    "explanation": "Das Material betont die Besonderheit, dass das Gespräch die eigentliche Pflegeaufgabe ist und nicht nebenher erledigt werden darf.",
+    "source_hint": "M 1A.4_Handout.pdf, Arbeitsblatt 2"
+  },
+  {
+    "q_id": "m1_fall_nl_014",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_02"],
+    "instruction": "**Nennen** Sie 3 Ziele des Aufnahmegesprächs laut Grafik, die im Fall von [PATIENT] besonders relevant sind.",
+    "list_label": "Ziele des Aufnahmegesprächs",
+    "count": 3,
+    "correct_answers": [
+      "Erleichterung der Ankommenssituation",
+      "Klärung von Erwartungen",
+      "Erfassen des Erlebens/Bedürfnisse in der aktuellen Situation"
+    ],
+    "all_valid_answers": ["Ankommenssituation", "Erwartungen klären", "Erleben erfassen", "Beziehungsaufbau", "Orientierung bieten"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Ziel."
+  },
+  {
+    "q_id": "m1_fall_ft_025",
+    "type": "freitext_box",
+    "topic": "biografiearbeit",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Erläutern** Sie den Zusammenhang zwischen der 'Statuspassage' von [PATIENT] und seinem aktuellen Verhalten gegenüber seiner Ehefrau.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Verknüpfung von Rollenwechsel und emotionaler Reaktion.",
+    "data": {
+      "box_label": "Analyse der Statuspassage",
+      "correct_answer": "[PATIENT] durchlebt gerade den Übergang vom Erwerbsleben in den Ruhestand. Diese Statuspassage bedeutet einen massiven Rollenwechsel von der leistungsfokussierten 'Normalbiografie' hin zur Abhängigkeit durch die Operation. Seine Gereiztheit ist ein Ausdruck der Überforderung mit diesem Identitätsverlust, den er an seiner Ehefrau abreagiert.",
+      "keywords": ["Statuspassage", "Rollenwechsel", "Identität", "Normalbiografie", "Leistungsfokus"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_025",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "statement": "Laut Paul Ekman ist die Basisemotion Ärger (ANGER), die [PATIENT] zeigt, eine angeborene und kulturübergreifende Reaktion.",
+    "answer": "richtig",
+    "explanation": "Basisemotionen wie Ärger äußern sich laut Material quer durch alle Kulturen auf die im Wesentlichen gleiche Weise und sind dem Menschen 'in die Wiege gelegt'.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folien 42-44"
+  },
+  {
+    "q_id": "m1_fall_zu_025",
+    "type": "zuordnung",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Ordnen** Sie die Konzepte der Emotionspsychologie den Beobachtungen von [PFLEGEKRAFT] zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Primäre Emotion",
+        "B": "Resonanz",
+        "C": "Handlungsimpuls"
+      },
+      "statements": [
+        { "text": "[PFLEGEKRAFT] fühlt sich hilflos, während sie den Bericht für das Team schreibt.", "answer": "B" },
+        { "text": "[PATIENT] weist seine Ehefrau schroff zurecht.", "answer": "C" },
+        { "text": "[PATIENT] empfindet unmittelbar Wut über seine körperliche Einschränkung.", "answer": "A" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_025",
+    "type": "nennen_liste",
+    "topic": "beratung_supervision",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Nennen** Sie 4 'Schlüsselthemen' der Pflege aus dem Material, die für die geplante kollegiale Beratung von [PFLEGEKRAFT] relevant sein könnten.",
+    "list_label": "Schlüsselthemen für kollegiale Beratung",
+    "count": 4,
+    "correct_answers": [
+      "Umgang mit Nähe und Distanz",
+      "Probleme mit Bewohnern, Patienten oder Angehörigen",
+      "Selbstreflexion (eigene Stärken/Schwächen)",
+      "Rollenkonflikte"
+    ],
+    "all_valid_answers": ["Nähe und Distanz", "Probleme mit Patienten", "Angehörige", "Selbstreflexion", "Rollenkonflikte", "Überlastung"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Schlüsselthema."
+  },
+  {
+    "q_id": "m1_fall_ft_026",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Analysieren** Sie die 'kognitive Bewertung' von [PATIENT] im Prozess der Emotionsentstehung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Anwendung des Modells auf die Biografie (Leistungsfokus).",
+    "data": {
+      "box_label": "Kognitive Bewertung im Fall Schmidt",
+      "correct_answer": "Der Auslöser ist die Hilfsbedürftigkeit nach der OP. Da [PATIENT] eine 'Normalbiografie' mit Leistungsfokus hat, bewertet er das Angewiesensein auf Hilfe (kognitive Bewertung) als persönliches Versagen oder Schwäche. Diese Bewertung transformiert das Bedürfnis nach Autonomie in die sekundäre Emotion Ärger.",
+      "keywords": ["Auslöser", "Leistungsfokus", "Bewertung", "Versagen", "sekundäre Emotion"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_ab_025",
+    "type": "ankreuzen_begruenden",
+    "topic": "beratung_supervision",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction_select": "**Entscheiden** Sie, welche Merkmale auf die geplante 'Kollegiale Beratung' im Team von [PFLEGEKRAFT] zutreffen.",
+    "instruction_justify": "**Begründen** Sie, warum dieses Format für [PFLEGEKRAFT] hilfreicher sein könnte als eine rein fachliche Anweisung.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Die Gruppe ist selbstgesteuert.", "correct": true },
+        { "label": "Ein externer Supervisor leitet das Gespräch.", "correct": false },
+        { "label": "Es gibt festgelegte Rollen innerhalb der Gruppe.", "correct": true },
+        { "label": "Ziel ist die Kontrolle der Pflegeleistung.", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Lösungsentwicklung", "text": "Die kollegiale Beratung hilft [PFLEGEKRAFT], durch die Resonanz der Gleichberechtigten eigene Anteile (Hilflosigkeit) zu verstehen und Lösungen für den Alltag mit schwierigen Patienten zu entwickeln." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_026",
+    "type": "richtig_falsch",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "statement": "Wenn [PATIENT] Details über seine Zeit als Werkstattmeister im Interview auslässt, gehört dieses 'Vergessen' laut Definition dennoch zu seiner Biografie.",
+    "answer": "richtig",
+    "explanation": "Biografie wird definiert als individuelle Interpretation des Erlebten, wobei ausdrücklich vermerkt ist: '(auch Vergessen!)'.",
+    "source_hint": "M 1 A.2_Handout_04.09.24.pdf, Folie 1"
+  },
+  {
+    "q_id": "m1_fall_erg_025",
+    "type": "ergaenzen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Ergänzen** Sie die fehlenden Begriffe zur Erläuterung von Schwerdts Zitat (2002) im Kontext von [PATIENT].",
+    "points": 2,
+    "data": {
+      "list_label": "Herausforderung der Ganzheitlichkeit",
+      "given_items": ["Informationen über sozialen und biographischen Kontext"],
+      "missing_items": ["emotionale Belastungssituationen", "moralische Konfliktlagen"],
+      "all_valid_missing": ["Belastungssituationen", "Konfliktlagen", "moralische Konflikte"]
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_027",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_03"],
+    "instruction": "**Erläutern** Sie den Begriff 'Resonanz' anhand der Gefühle von [PFLEGEKRAFT].",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Definition von Resonanz als Echo beim Zuhörer.",
+    "data": {
+      "box_label": "Resonanz in der Pflegebeziehung",
+      "correct_answer": "Resonanz bezeichnet die Emotionen, die eine Erzählung oder Situation beim Zuhörer auslösen. Im Fall spürt [PFLEGEKRAFT] Hilflosigkeit als Reaktion auf den Ärger von [PATIENT]. Dieses Gefühl ist das emotionale Echo auf die Interaktion und dient in der Reflexion als wichtiges Datenmaterial zur Analyse der Patientenbeziehung.",
+      "keywords": ["Echo", "auslösen", "Zuhörer", "Gefühle", "Reflexion"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_028",
+    "type": "freitext_box",
+    "topic": "beratung_supervision",
+    "difficulty": 3,
+    "instruction": "**Begründen** Sie die Notwendigkeit einer 'Berufsrollenreflexion' für [PFLEGEKRAFT] in diesem Fall.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für den Bezug zur professionellen Distanz und Burnout-Prävention.",
+    "data": {
+      "box_label": "Notwendigkeit der Reflexion",
+      "correct_answer": "Ohne Reflexion ihrer Hilflosigkeit läuft [PFLEGEKRAFT] Gefahr, die Gefühle von [PATIENT] persönlich zu nehmen oder sie nur zu kontrollieren (unterdrücken). Dauerhafte Kontrolle ohne Reflexion kann zu Wahrnehmungsverlust und Burnout führen. Eine Berufsrollenreflexion hilft ihr, die professionelle Position zwischen Nähe und Distanz neu zu finden.",
+      "keywords": ["Burnout-Prävention", "Wahrnehmungsverlust", "Nähe und Distanz", "Kontrolle", "Berufsrolle"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_041",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "statement": "Obwohl [PATIENT] schließlich aufhört zu reden, findet laut Paul Watzlawick weiterhin eine Kommunikation zwischen ihr und [PFLEGEKRAFT] statt.",
+    "answer": "richtig",
+    "explanation": "Nach Watzlawicks erstem Axiom kann man nicht nicht kommunizieren. Auch Schweigen oder eine 'versteinerte' Mimik sind Verhaltensweisen mit Mitteilungscharakter.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 22 & 23"
+  },
+  {
+    "q_id": "m1_fall_nl_041",
+    "type": "nennen_liste",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Nennen** Sie 3 konkrete 'Kommunikationsstörer', die [PFLEGEKRAFT] laut Fallbeschreibung während des Aufnahmegesprächs einsetzt.",
+    "list_label": "Identifizierte Kommunikationsstörer",
+    "count": 3,
+    "correct_answers": [
+      "Unterbrechen",
+      "Mangelnde Hörbereitschaft",
+      "Unkonzentriertheit / Zeitdruck"
+    ],
+    "all_valid_answers": [
+      "Unterbrechen",
+      "Mangelnde Hörbereitschaft",
+      "Zeitdruck",
+      "Unkonzentriertheit",
+      "Emotionale Beeinflussung (Druck)"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Störer."
+  },
+  {
+    "q_id": "m1_fall_ft_041",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Erläutern** Sie, inwiefern das Verhalten von [PFLEGEKRAFT] das Ziel des 'Beziehungsaufbaus' im Aufnahmegespräch gefährdet.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Bezug zum Material (Ziele des Aufnahmegesprächs vs. Realität im Fall).",
+    "data": {
+      "box_label": "Analyse des Beziehungsaufbaus",
+      "correct_answer": "Ein zentrales Ziel des Aufnahmegesprächs ist der Aufbau einer Beziehung zum Klienten. Durch den Zeitdruck und das mehrfache Unterbrechen signalisiert [PFLEGEKRAFT] jedoch Desinteresse an der Person von [PATIENT]. Dies verhindert die Erleichterung der Ankommenssituation und führt dazu, dass [PATIENT] verstummt, wodurch die Basis für Vertrauen und eine valide Informationssammlung zerstört wird.",
+      "keywords": [
+        "Beziehungsaufbau",
+        "Desinteresse",
+        "Ankommenssituation",
+        "Vertrauensbasis",
+        "Informationssammlung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_tab_041",
+    "type": "tabelle_4spalten",
+    "topic": "kommunikation_theorie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Analysieren** Sie die Aussage von [PFLEGEKRAFT] ('Wir müssen zügig die Daten aufnehmen, ich habe noch drei Aufnahmen.') anhand des Vier-Seiten-Modells.",
+    "points": 8,
+    "scoring_info": "1 Punkt pro korrekt gefüllter Zelle (Ebene + Interpretation).",
+    "data": {
+      "table": {
+        "headers": [
+          "Ebene der Nachricht",
+          "Kernfrage des Empfängers",
+          "Interpretation im Fall",
+          "Wahrnehmung von [PATIENT]"
+        ],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Sachinhalt" },
+              { "type": "text", "content": "Wie ist der Sachverhalt zu verstehen?" },
+              {
+                "type": "input",
+                "correct_answer": "Es liegen noch drei weitere Aufnahmen vor.",
+                "keywords": ["drei", "Aufnahmen", "Fakten"]
+              },
+              { "type": "text", "content": "Information über Zeitplan." }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Selbstoffenbarung" },
+              { "type": "text", "content": "Was ist mit ihm? Was ist das für einer?" },
+              {
+                "type": "input",
+                "correct_answer": "[PFLEGEKRAFT] ist gestresst / hat wenig Zeit.",
+                "keywords": ["Stress", "Zeitdruck", "Eile"]
+              },
+              { "type": "text", "content": "Pflegekraft wirkt gehetzt." }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Beziehung" },
+              { "type": "text", "content": "Wie redet der eigentlich mit mir?" },
+              {
+                "type": "input",
+                "correct_answer": "Die Aufgabe ist wichtiger als die Person.",
+                "keywords": ["unwichtig", "Aufgabe vor Person", "Desinteresse"]
+              },
+              { "type": "text", "content": "Gefühl der Wertlosigkeit / Desinteresse." }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Appell" },
+              { "type": "text", "content": "Was soll ich tun aufgrund der Mitteilung?" },
+              {
+                "type": "input",
+                "correct_answer": "Beeilen Sie sich beim Antworten!",
+                "keywords": ["beeilen", "schnell", "kurz fassen"]
+              },
+              { "type": "text", "content": "Einsilbiges Antworten / Verstummen." }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_041",
+    "type": "zuordnung",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Ordnen** Sie die Phasen des Aufnahmegesprächs den konkreten Handlungen von [PFLEGEKRAFT] zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Einleitung",
+        "B": "Hauptteil",
+        "C": "Schluss"
+      },
+      "statements": [
+        {
+          "text": "Erfassung der Daten zum LWS-Syndrom.",
+          "answer": "B"
+        },
+        {
+          "text": "Die Aussage über die noch anstehenden drei Aufnahmen zu Beginn.",
+          "answer": "A"
+        },
+        {
+          "text": "Förmliche Beendigung des Gesprächs, nachdem [PATIENT] verstummt ist.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_ab_041",
+    "type": "ankreuzen_begruenden",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction_select": "**Entscheiden** Sie, welche Kommunikationsförderer [PFLEGEKRAFT] einsetzen muss, um das Gespräch mit [PATIENT] doch noch positiv zu gestalten.",
+    "instruction_justify": "**Begründen** Sie eine Ihrer Entscheidungen mit Bezug auf die 'versteinerte' Reaktion von [PATIENT].",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Paraphrasieren und Rückfragen", "correct": true },
+        { "label": "Senden von Ich-Botschaften zum Zeitstress", "correct": true },
+        { "label": "Erneutes Unterbrechen bei langen Pausen", "correct": false },
+        { "label": "Schenken von Ruhe und Zeit", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Paraphrasieren",
+          "text": "Durch das Wiederholen ihrer wenigen Worte signalisiert er ihr Aufmerksamkeit und Interesse, was das 'Versteinern' auflösen und sie zur Öffnung motivieren kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_erg_041",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "Das Aufnahmegespräch gehört zum 1. Schritt des Pflegeprozesses. **Ergänzen** Sie die folgenden Schritte im Kreislauf.",
+    "points": 3,
+    "data": {
+      "list_label": "Pflegeprozess nach Fiechter/Meier",
+      "given_items": [
+        "1. Informationssammlung (Anamnese)",
+        "2. Erkennen von Problemen / Ressourcen"
+      ],
+      "missing_items": [
+        "3. Festlegen der Pflegeziele",
+        "4. Planung der Pflegemaßnahmen",
+        "5. Durchführung der Pflege"
+      ],
+      "all_valid_missing": [
+        "Pflegeziele",
+        "Planung",
+        "Pflegemaßnahmen",
+        "Durchführung"
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_042",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "statement": "Nach dem Kommunikationsquadrat von Schulz von Thun hat [PFLEGEKRAFT] im Fall die Sachebene korrekt bedient, die Störung liegt jedoch primär auf der Beziehungsebene.",
+    "answer": "richtig",
+    "explanation": "Die Information über die drei Aufnahmen ist sachlich wahr, wird aber durch den gewählten Zeitpunkt und Tonfall von [PATIENT] als Geringschätzung wahrgenommen.",
+    "source_hint": "M 1A.4_Handout.pdf, Folie 31"
+  },
+  {
+    "q_id": "m1_fall_ft_042",
+    "type": "freitext_box",
+    "topic": "kommunikation_theorie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Analysieren** Sie das 'Beziehungsohr' von [PATIENT] in dieser Situation. Was hört sie vermutlich, wenn [PFLEGEKRAFT] von seinen weiteren Aufnahmen spricht?",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Beschreibung der Empfänger-Perspektive.",
+    "data": {
+      "box_label": "Interpretation auf der Beziehungsebene",
+      "correct_answer": "Auf dem Beziehungsohr hört [PATIENT] vermutlich: 'Ich bin für dich nur eine Nummer im Arbeitsablauf' oder 'Deine Schmerzen (LWS-Syndrom) sind mir weniger wichtig als mein Feierabend'. Sie fühlt sich nicht als Individuum wahrgenommen, was zu ihrem Rückzug ('versteinert') führt.",
+      "keywords": [
+        "Beziehungsohr",
+        "Wahrnehmung",
+        "Nummer",
+        "Unwichtigkeit",
+        "Gefühl"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_042",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Nennen** Sie 4 administrative Daten/Dokumente, die [PFLEGEKRAFT] laut SLP-Checkliste im Rahmen des Einzugs erfassen oder prüfen muss.",
+    "list_label": "Dokumente laut Checkliste",
+    "count": 4,
+    "correct_answers": [
+      "Stammdaten (Name, Geburtsdatum)",
+      "Ärztliche Erklärung (TBC-Freiheit)",
+      "Kostenübernahmeerklärung",
+      "Krankenkassenkarte"
+    ],
+    "all_valid_answers": [
+      "Stammdaten",
+      "TBC-Erklärung",
+      "Kostenübernahme",
+      "Versicherungskarte",
+      "Heimvertrag",
+      "Vollmachten"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Dokument."
+  },
+  {
+    "q_id": "m1_fall_zu_042",
+    "type": "zuordnung",
+    "topic": "pflegeprozess_aufnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "instruction": "**Ordnen** Sie die Begriffe zur Anamnese ihren korrekten Bedeutungen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Griechisch: 'Erinnerung'",
+        "B": "Ausgangspunkt Pflegeprozess",
+        "C": "Pflegerische Anamnese"
+      },
+      "statements": [
+        { "text": "Etymologischer Ursprung des Wortes Anamnese.", "answer": "A" },
+        { "text": "Stellenwert des Aufnahmegesprächs.", "answer": "B" },
+        { "text": "Fokus auf Erleben, soziale Situation und Bedürfnisse.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_043",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_04"],
+    "statement": "Da nur 7 % der face-to-face Kommunikation über das gesprochene Wort stattfinden, wiegen die nonverbalen Signale von [PFLEGEKRAFT] (z.B. Hektik) schwerer als seine korrekten Sachinformationen.",
+    "answer": "richtig",
+    "explanation": "Laut der Grafik zur Kommunikation entfallen 55 % auf die Körpersprache und 38 % auf den stimmlichen Ausdruck. Die nonverbale Botschaft 'Ich bin im Stress' dominiert also die verbale Botschaft.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 25"
+  },
+  {
+    "q_id": "m1_fall_rf_051",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_praxis",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "statement": "Die Verwendung des Begriffs 'Popo' durch [PFLEGEKRAFT] bei der Intimpflege von [PATIENT] stellt einen 'Kommunikationsförderer' dar, da er eine vertrauensvolle, familiäre Atmosphäre schafft.",
+    "answer": "falsch",
+    "explanation": "Laut Material führt diese Wortwahl zur Infantilisierung und kann bei erwachsenen Patienten Scham und das Gefühl der Entwürdigung auslösen, was den Beziehungsaufbau stört.",
+    "source_hint": ","
+  },
+  {
+    "q_id": "m1_fall_nl_051",
+    "type": "nennen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Nennen** Sie die 2 negativen Folgen, die laut dem Zitat von Schwerdt (2002) durch die berufsbedingte 'Ganzheitlichkeit' bei [PFLEGEKRAFT] entstehen können.",
+    "list_label": "Risiken der Ganzheitlichkeit",
+    "count": 2,
+    "correct_answers": [
+      "emotionale Belastungssituationen",
+      "moralische Konfliktlagen"
+    ],
+    "all_valid_answers": [
+      "emotionale Belastung",
+      "moralische Konfliktlage",
+      "Konfliktlagen",
+      "Überforderung"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Nennung."
+  },
+  {
+    "q_id": "m1_fall_ft_051",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Erläutern** Sie den Begriff der 'Infantilisierung' im Kontext der Fallbeschreibung und beschreiben Sie die mögliche Wirkung auf [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Tiefe der Erläuterung (Fachbegriff und Patientenwirkung).",
+    "data": {
+      "box_label": "Analyse der Infantilisierung",
+      "correct_answer": "Infantilisierung bedeutet, einen erwachsenen Menschen wie ein Kind zu behandeln, was hier durch die Wortwahl 'Popo' geschieht. Auf [PATIENT], die zudem eine belastende Biografie (Fluchterfahrung) hat, wirkt dies entwürdigend. Es missachtet ihre Autonomie als hochaltrige Frau und löst Scham aus, da ihre Intimsphäre sprachlich herabgestuft wird.",
+      "keywords": ["Kindbehandlung", "Würde", "Scham", "Autonomie", "Entwürdigung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_051",
+    "type": "zuordnung",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Ordnen** Sie die Elemente aus dem Erleben von [PFLEGEKRAFT] den korrekten Fachbegriffen der Emotionspsychologie zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Auslöser",
+        "B": "Resonanz",
+        "C": "Kognitive Bewertung"
+      },
+      "statements": [
+        { "text": "Die Ähnlichkeit von [PATIENT] mit der verstorbenen Großmutter.", "answer": "C" },
+        { "text": "Das Durchführen der Intimpflege im stressigen Dienstplan.", "answer": "A" },
+        { "text": "Das Gefühl von Traurigkeit und Druck, das in [PFLEGEKRAFT] durch die Erzählungen von [PATIENT] entsteht.", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_052",
+    "type": "freitext_box",
+    "topic": "burnout_praevention",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Begründen** Sie unter Verwendung des Fachbegriffs 'Wahrnehmungsverlust', warum es für [PFLEGEKRAFT] gefährlich ist, ihre Gefühle gegenüber [PATIENT] dauerhaft nur zu kontrollieren.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Herleitung der Burnout-Gefahr aus mangelnder Reflexion.",
+    "data": {
+      "box_label": "Gefahr der reinen Gefühlskontrolle",
+      "correct_answer": "Wenn [PFLEGEKRAFT] ihre Emotionen (wie die Trauer um ihre Großmutter oder den Stress) über lange Zeit nur kontrolliert (unterdrückt) und nicht reflektiert, droht ein 'Wahrnehmungsverlust'. Sie nimmt ihre eigenen Bedürfnisse und Gefühle dann nicht mehr wahr, was ein zentraler Faktor für die Entstehung von Burnout ist. Regelmäßige Reflexion ist daher zur Gesunderhaltung zwingend erforderlich.",
+      "keywords": ["Wahrnehmungsverlust", "Unterdrückung", "Burnout", "Reflexion", "Selbstwahrnehmung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_ab_051",
+    "type": "ankreuzen_begruenden",
+    "topic": "beratung_reflexion",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction_select": "**Entscheiden** Sie, welches Beratungsformat für das von [PFLEGEKRAFT] gewählte Thema 'Umgang mit Nähe und Distanz' laut Material besonders geeignet ist.",
+    "instruction_justify": "**Begründen** Sie Ihre Wahl anhand der Definition des Formats.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Supervision", "correct": true },
+        { "label": "Administrative Dienstbesprechung", "correct": false },
+        { "label": "Kollegiale Beratung", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        { "option": "Supervision", "text": "Supervision ist laut Handout speziell für Berufe am Menschen geeignet, die ihre Position in der Spannung zwischen Nähe und Distanz immer wieder neu finden müssen und ermöglicht eine kontinuierliche Berufsrollenreflexion." }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_052",
+    "type": "nennen_liste",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Nennen** Sie 3 konkrete 'Kommunikationsförderer', die [PFLEGEKRAFT] einsetzen kann, um die Situation mit [PATIENT] professioneller zu gestalten.",
+    "list_label": "Kommunikationsförderer für die Praxis",
+    "count": 3,
+    "correct_answers": [
+      "Aktives Zuhören",
+      "Ich-Botschaften senden",
+      "Paraphrasieren und Rückfragen"
+    ],
+    "all_valid_answers": [
+      "Aktives Zuhören",
+      "Zuhören",
+      "Ich-Botschaften",
+      "Paraphrasieren",
+      "Rückfragen",
+      "Respekt zeigen",
+      "Akzeptieren"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro richtiger Nennung."
+  },
+  {
+    "q_id": "m1_fall_rf_052",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "statement": "Nach dem 'Konzept der kognitiven Persönlichkeitsentwicklung' lernt [PFLEGEKRAFT] in diesem Fall primär durch die bloße Erfahrung der stressigen Situation, nicht durch die anschließende Beobachtung oder Reflexion.",
+    "answer": "falsch",
+    "explanation": "Das Konzept geht davon aus, dass Menschen eben NICHT nur durch Erfahrung lernen, sondern maßgeblich durch Beobachtung und Reflexion.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m1_fall_erg_051",
+    "type": "ergaenzen_liste",
+    "topic": "biografiearbeit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "Die 'Fluchterfahrung' von [PATIENT] ist ein wichtiges Element ihrer Lebensgeschichte. **Ergänzen** Sie die fehlenden Begriffe aus der Definition von Biografie.",
+    "points": 2,
+    "data": {
+      "list_label": "Elemente der Biografie",
+      "given_items": [
+        "Individuelle Interpretation des Erlebten",
+        "Erzählung der Lebensgeschichte durch die Person selbst"
+      ],
+      "missing_items": [
+        "Vergessen (bewusst/unbewusst)",
+        "Bewältigung kritischer Ereignisse"
+      ],
+      "all_valid_missing": [
+        "Vergessen",
+        "Bewältigung",
+        "Kritische Ereignisse",
+        "Kriege",
+        "Verluste"
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_ft_053",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_05"],
+    "instruction": "**Analysieren** Sie, wie die 'kognitive Bewertung' bei [PFLEGEKRAFT] abläuft, als sie [PATIENT] mit ihrer Großmutter vergleicht.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Anwendung des Modells der Emotionsentstehung auf den Fall.",
+    "data": {
+      "box_label": "Analyse der kognitiven Bewertung",
+      "correct_answer": "Die kognitive Bewertung filtert den Auslöser durch persönliche Erfahrungen. Bei [PFLEGEKRAFT] führt die Ähnlichkeit mit der Großmutter dazu, dass sie [PATIENT] nicht mehr rein professionell als Bewohnerin sieht, sondern durch den Filter ihrer eigenen Trauer bewertet. Dies verändert ihre sekundäre Emotion (z.B. Mitleid statt Mitgefühl) und bringt sie in die moralische Konfliktlage, mehr Zeit investieren zu wollen, als der Dienstplan erlaubt.",
+      "keywords": ["Modell der Emotionsentstehung", "Erfahrungen", "sekundäre Emotion", "Mitleid", "Konfliktlage"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_061",
+    "type": "richtig_falsch",
+    "topic": "kommunikation_theorie",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "statement": "Obwohl [PATIENT] aufgrund der akuten Atemnot kaum sprechen kann, findet laut dem ersten Axiom von Watzlawick dennoch eine Kommunikation zwischen ihm und [PFLEGEKRAFT] statt.",
+    "answer": "richtig",
+    "explanation": "Nach Paul Watzlawick kann man nicht nicht kommunizieren. Auch nonverbale Signale wie Atemnot, Mimik (FEAR) und Körpersprache sind Verhaltensweisen mit Mitteilungscharakter.",
+    "source_hint": "M 1A.3_Handout.pdf, Folie 22"
+  },
+  {
+    "q_id": "m1_fall_nl_061",
+    "type": "nennen_liste",
+    "topic": "pflegeanamnese",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Nennen**  Sie die 3 medizinischen Befunde/Diagnosen, die im Kurz-Arztbrief von [PATIENT] aufgeführt sind.",
+    "list_label": "Befunde laut Arztbrief",
+    "count": 3,
+    "correct_answers": [
+      "COPD",
+      "Zyanose",
+      "Tachypnoe"
+    ],
+    "all_valid_answers": [
+      "COPD",
+      "chronisch obstruktive Lungenerkrankung",
+      "Zyanose",
+      "Blausucht",
+      "Tachypnoe",
+      "erhöhte Atemfrequenz",
+      "Atemnot"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Befund."
+  },
+  {
+    "q_id": "m1_fall_ft_061",
+    "type": "freitext_box",
+    "topic": "kommunikation_praxis",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Erläutern**  Sie die Bedeutung der 55%-Regel für das Handeln von [PFLEGEKRAFT] in dieser Akutsituation.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Bezug zur nonverbalen Ebene und der Wirkung auf den Patienten.",
+    "data": {
+      "box_label": "Analyse der nonverbalen Kommunikation",
+      "correct_answer": "In der face-to-face Kommunikation macht die Körpersprache etwa 55 % der Gesamtwirkung aus. Da [PATIENT] unter massiver Atemnot leidet, dringen verbale Botschaften (7 %) kaum zu ihm durch. [PFLEGEKRAFT] nutzt dies professionell aus, indem er durch eine ruhige Körperhaltung und Mimik Sicherheit ausstrahlt, was die beruhigende Wirkung auf den Patienten maßgeblich bestimmt.",
+      "keywords": [
+        "Körpersprache",
+        "55 %",
+        "nonverbal",
+        "Wirkung",
+        "Sicherheit ausstrahlen"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_zu_061",
+    "type": "zuordnung",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Ordnen**  Sie die Ereignisse aus dem Fall den Phasen des Modells der Emotionsentstehung zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Auslöser",
+        "B": "Primäre Emotion",
+        "C": "Handlungsimpuls",
+        "D": "Sekundäre Emotion"
+      },
+      "statements": [
+        {
+          "text": "Das Erstickungsgefühl durch die COPD-Exazerbation.",
+          "answer": "A"
+        },
+        {
+          "text": "Das Gefühl von Scham nach der Stabilisierung.",
+          "answer": "D"
+        },
+        {
+          "text": "Die unmittelbare, angeborene Angst (FEAR).",
+          "answer": "B"
+        },
+        {
+          "text": "Die eintretende Panikreaktion von [PATIENT].",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_ab_061",
+    "type": "ankreuzen_begruenden",
+    "topic": "kommunikation_praxis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction_select": " **Entscheiden**  Sie, welche Kommunikationstechnik [PFLEGEKRAFT] anwendet, als er sagt: „Ich sehe, dass Sie Angst haben.“",
+    "instruction_justify": " **Begründen**  Sie, warum diese Technik laut Studien zur Emotionspsychologie hilfreich ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Paraphrasieren",
+          "correct": false
+        },
+        {
+          "label": "Spiegeln / Nachahmen der Mimik (Empathie)",
+          "correct": true
+        },
+        {
+          "label": "Senden einer Du-Botschaft",
+          "correct": false
+        },
+        {
+          "label": "Aktives Wahrnehmen von Gefühlen",
+          "correct": true
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Spiegeln / Mimik",
+          "text": "Studien zeigen, dass das Deuten und Benennen der Mimik (Spiegeln) dazu beiträgt, Emotionen des anderen besser nachempfinden zu können und dem Patienten zu signalisieren, dass er in seinem Erleben wahrgenommen wird (Resonanz)."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_rf_062",
+    "type": "richtig_falsch",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": [
+      "m1_fall_02",
+      "m1_fall_06"
+    ],
+    "statement": "Die Emotion 'Angst' (FEAR), die beide Patienten zeigen, ist laut Paul Ekman eine universelle Basisemotion, die kulturübergreifend auf die gleiche Weise ausgedrückt wird.",
+    "answer": "richtig",
+    "explanation": "Laut Ekman sind die Basisemotionen (u.a. Angst, Trauer, Freude) angeboren und äußern sich quer durch alle Kulturen auf die im Wesentlichen gleiche Weise im Gesichtsausdruck.",
+    "source_hint": "M1B.1_PPT_Handout.pdf, Folie 42"
+  },
+  {
+    "q_id": "m1_fall_ft_062",
+    "type": "freitext_box",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Erläutern**  Sie unter Einbezug des Modells der Emotionsentstehung, wie es bei [PATIENT] nach der Stabilisierung zur 'sekundären Emotion' Scham kommen konnte.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die Darstellung der Kette: Stabilisierung -> Kognitive Bewertung -> Scham.",
+    "data": {
+      "box_label": "Analyse der sekundären Emotion",
+      "correct_answer": "Nach der körperlichen Stabilisierung erfolgt bei [PATIENT] eine kognitive Bewertung der vorangegangenen Panik. Er gleicht sein Verhalten mit seinen erlernten Regeln oder kulturellen Normen ab (z.B. 'Ein Mann darf keine Panik zeigen'). Diese Bewertung führt dazu, dass aus der primären Angst die sekundäre Emotion Scham entsteht, die wiederum einen neuen Handlungsimpuls (z.B. Blick abwenden) auslöst.",
+      "keywords": [
+        "kognitive Bewertung",
+        "Normen",
+        "Regeln",
+        "sekundäre Emotion",
+        "Scham"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m1_fall_nl_062",
+    "type": "nennen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": [
+      "m1_fall_02",
+      "m1_fall_06"
+    ],
+    "instruction": " **Nennen**  Sie 4 weitere Basisemotionen nach Paul Ekman neben der im Fall genannten 'Angst'.",
+    "list_label": "Basisemotionen nach Ekman",
+    "count": 4,
+    "correct_answers": [
+      "Freude (Happiness)",
+      "Ärger (Anger)",
+      "Ekel (Disgust)",
+      "Trauer (Sadness)"
+    ],
+    "all_valid_answers": [
+      "Freude",
+      "Happiness",
+      "Ärger",
+      "Anger",
+      "Ekel",
+      "Disgust",
+      "Trauer",
+      "Sadness",
+      "Überraschung",
+      "Surprise"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Nennung."
+  },
+  {
+    "q_id": "m1_fall_erg_061",
+    "type": "ergaenzen_liste",
+    "topic": "emotionspsychologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Ergänzen**  Sie die fehlenden Stationen im Emotionsprozess von [PATIENT].",
+    "points": 3,
+    "data": {
+      "list_label": "Ablauf der Emotion bei [PATIENT]",
+      "given_items": [
+        "Auslöser: Erstickungsgefühl",
+        "Handlungsimpuls 1: Panik"
+      ],
+      "missing_items": [
+        "Primäre Emotion: Angst / Fear",
+        "Kognitive Bewertung (durch Regeln/Normen)",
+        "Sekundäre Emotion: Scham"
+      ],
+      "all_valid_missing": [
+        "Angst",
+        "Fear",
+        "Bewertung",
+        "Einordnung",
+        "Scham"
+      ]
+    }
+  },
+  {
+    "q_id": "m1_fall_tab_061",
+    "type": "tabelle_2spalten",
+    "topic": "emotionspsychologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m1_fall_06"],
+    "instruction": " **Benennen**  Sie die beiden Arten von Emotionen und weisen Sie diese den konkreten Gefühlen von [PATIENT] zu.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt gefüllter Zelle.",
+    "data": {
+      "table": {
+        "headers": [
+          "Art der Emotion",
+          "Konkretes Gefühl im Fall"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Primäre Emotion",
+                "keywords": ["primär"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Angst (Fear)",
+                "keywords": ["Angst", "Fear"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Sekundäre Emotion",
+                "keywords": ["sekundär"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Scham",
+                "keywords": ["Scham"]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 ]
