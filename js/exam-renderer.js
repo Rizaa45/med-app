@@ -129,16 +129,53 @@ const ExamRenderer = {
     },
 
     // ═══ FREITEXT ═══
-    renderFreitext(q, idx) {
-        const data = q.data || {};
-        let html = `<div class="ep-instruction">${this.formatInstruction(q.instruction)}</div>`;
-        if (data.box_label) {
-            html += `<div style="background:#e8e8e8;padding:8px 12px;border:1px solid #999;font-family:Inter,sans-serif;font-size:12px;font-weight:700;">${data.box_label}</div>`;
-        }
-        html += `<textarea class="ep-textarea" id="ft-${idx}" rows="${data.min_rows || 5}" data-q="${idx}" data-type="freitext" placeholder="Ihre Antwort..."></textarea>`;
-        return html;
-    },
+renderFreitext(q, idx) {
+    const data = q.data || {};
+    let html = `<div class="ep-instruction">${this.formatInstruction(q.instruction)}</div>`;
+    if (data.box_label) {
+        html += `<div style="background:#e8e8e8;padding:8px 12px;border:1px solid #999;font-family:Inter,sans-serif;font-size:12px;font-weight:700;">${data.box_label}</div>`;
+    }
+    
+    // Mode toggle
+    html += `
+    <div style="display:flex;gap:4px;margin:8px 0;font-family:Inter,sans-serif;">
+        <button onclick="ExamRenderer.switchInputMode(${idx},'type')" id="mode-type-${idx}" style="padding:4px 12px;font-size:11px;font-weight:700;background:#4f46e5;color:white;border:none;border-radius:6px;cursor:pointer;">⌨️ Tippen</button>
+        <button onclick="ExamRenderer.switchInputMode(${idx},'pen')" id="mode-pen-${idx}" style="padding:4px 12px;font-size:11px;font-weight:700;background:#e2e8f0;color:#64748b;border:none;border-radius:6px;cursor:pointer;">✏️ Stift</button>
+    </div>`;
+    
+    // Typing mode
+    html += `<div id="input-type-${idx}"><textarea class="ep-textarea" id="ft-${idx}" rows="${data.min_rows || 5}" data-q="${idx}" data-type="freitext" placeholder="Ihre Antwort..."></textarea></div>`;
+    
+    // Pen mode (hidden)
+    html += `<div id="input-pen-${idx}" style="display:none;"><div id="canvas-container-${idx}"></div></div>`;
+    
+    return html;
+},
 
+switchInputMode(idx, mode) {
+    const typeDiv = document.getElementById(`input-type-${idx}`);
+    const penDiv = document.getElementById(`input-pen-${idx}`);
+    const typeBtn = document.getElementById(`mode-type-${idx}`);
+    const penBtn = document.getElementById(`mode-pen-${idx}`);
+    
+    if (mode === 'pen') {
+        typeDiv.style.display = 'none';
+        penDiv.style.display = 'block';
+        typeBtn.style.background = '#e2e8f0'; typeBtn.style.color = '#64748b';
+        penBtn.style.background = '#4f46e5'; penBtn.style.color = 'white';
+        
+        // Create canvas if not exists
+        const container = document.getElementById(`canvas-container-${idx}`);
+        if (!container.hasChildNodes()) {
+            container.appendChild(CanvasInput.create(`ft-pen-${idx}`, 700, 200));
+        }
+    } else {
+        typeDiv.style.display = 'block';
+        penDiv.style.display = 'none';
+        typeBtn.style.background = '#4f46e5'; typeBtn.style.color = 'white';
+        penBtn.style.background = '#e2e8f0'; penBtn.style.color = '#64748b';
+    }
+},
     // ═══ TABELLE ═══
     renderTabelle(q, idx) {
         const data = q.data || {};
