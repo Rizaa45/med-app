@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Professional Dashboard v6.0</title>
+    <title>SLM System | Professional Dashboard v7.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-        /* Animated Background */
         .page-bg {
             background: #060910;
             position: fixed; inset: 0; z-index: 0;
@@ -22,10 +21,8 @@
                 radial-gradient(ellipse at 80% 100%, rgba(59,130,246,.05) 0%, transparent 50%);
         }
 
-        /* Glass */
         .glass { background: rgba(15,23,42,.45); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.06); }
 
-        /* Card Hover */
         .module-card {
             transition: all .4s cubic-bezier(.22,1,.36,1);
             position: relative; overflow: hidden;
@@ -42,20 +39,17 @@
         }
         .module-card:hover .mod-glow { opacity: .15; }
 
-        /* Modal */
         @keyframes modalFadeIn {
             from { opacity: 0; transform: scale(.95) translateY(16px); }
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
         .animate-modal { animation: modalFadeIn .5s cubic-bezier(.16,1,.3,1) forwards; }
 
-        /* Gradient Label */
         .prasanth-label {
             background: linear-gradient(135deg, #818cf8, #f97316);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        /* Pulse Glow */
         @keyframes pulseGlow {
             0% { box-shadow: 0 0 15px rgba(99,102,241,.15); }
             50% { box-shadow: 0 0 30px rgba(99,102,241,.35); }
@@ -63,27 +57,62 @@
         }
         .ai-glow { animation: pulseGlow 3s infinite; }
 
-        /* Fade Up */
+        @keyframes arenaGlow {
+            0% { box-shadow: 0 0 15px rgba(139,92,246,.15); }
+            50% { box-shadow: 0 0 35px rgba(139,92,246,.4); }
+            100% { box-shadow: 0 0 15px rgba(139,92,246,.15); }
+        }
+        .arena-glow { animation: arenaGlow 3s infinite; }
+
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         .anim { animation: fadeUp .6s cubic-bezier(.22,1,.36,1) forwards; opacity: 0; }
 
-        /* Progress Glow */
         .progress-glow { box-shadow: 0 0 20px rgba(99,102,241,.15); }
 
-        /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-badge {
+            background: linear-gradient(90deg, #8b5cf6 0%, #c084fc 30%, #8b5cf6 60%, #a78bfa 100%);
+            background-size: 200% auto;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+
+        /* Arena card special effect */
+        .arena-card-bg {
+            background: linear-gradient(145deg, rgba(139,92,246,.08), rgba(99,102,241,.04), rgba(15,23,42,.6));
+            backdrop-filter: blur(20px);
+        }
+        .arena-card-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(139,92,246,.06) 0%, transparent 60%),
+                        radial-gradient(circle at 70% 80%, rgba(99,102,241,.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="min-h-screen text-slate-100 relative">
 
     <div class="page-bg"></div>
 
+    <!-- ═══ UPDATE MODAL ═══ -->
     <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
         <div class="glass w-full max-w-lg rounded-3xl shadow-2xl relative z-10 overflow-hidden animate-modal">
@@ -92,32 +121,32 @@
                 <div class="relative z-10">
                     <div class="flex items-center justify-between mb-4">
                         <i class="fas fa-rocket text-3xl"></i>
-                        <span class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v6.0 Live</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v7.0 Live</span>
                     </div>
-                    <h2 class="text-3xl font-black tracking-tight">System-Update!</h2>
-                    <p class="text-indigo-200 font-medium text-sm mt-1">Neue Module und Verbesserungen wurden integriert.</p>
+                    <h2 class="text-3xl font-black tracking-tight">Mega-Update!</h2>
+                    <p class="text-indigo-200 font-medium text-sm mt-1">Klausur-Simulator & Arena sind da.</p>
                 </div>
             </div>
             <div class="p-8 space-y-5 bg-[#0d1117]">
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-teal-500/10 text-teal-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-shield-heart"></i></div>
+                    <div class="w-10 h-10 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-file-alt"></i></div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">Modul 4: Prävention</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">Chronische Pflege und Rehabilitation integriert.</p>
+                        <h4 class="font-bold text-sm text-white">Klausur-Simulator</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">1:1 Papier-Klausur mit Fallbeispiel, Timer, 10 Fragetypen & automatischer Bewertung.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-dove"></i></div>
+                    <div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-brain"></i></div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">Modul 7: Palliative Care</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">Symptomkontrolle, Ethik und Sterbebegleitung sind jetzt verfügbar.</p>
+                        <h4 class="font-bold text-sm text-white">SLM Arena</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">5 kognitive Trainingsmodi: Absorb, Recall, Connect, Brain Map & Weakness Destroyer.</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <div class="w-10 h-10 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-pen-fancy"></i></div>
                     <div>
-                        <h4 class="font-bold text-sm text-white">SLM Studio Pro</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">KI-Präsentations-Creator mit 8 Layouts, Skripten und Bildgenerierung.</p>
+                        <h4 class="font-bold text-sm text-white">S-Pen Support</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">Direkt mit Stylus in die Klausur schreiben — wie auf echtem Papier.</p>
                     </div>
                 </div>
                 <button onclick="closeUpdateModal()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20 mt-4">
@@ -129,6 +158,7 @@
 
     <div class="relative z-10 max-w-6xl mx-auto px-6 py-10 pb-24">
 
+        <!-- ═══ HEADER ═══ -->
         <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
             <div>
                 <div class="flex items-center gap-3 mb-2">
@@ -136,7 +166,7 @@
                         <i class="fas fa-microscope text-white text-sm"></i>
                     </div>
                     <span class="font-black text-2xl tracking-tighter text-white">SLM</span>
-                    <span class="text-slate-500 text-[9px] tracking-[0.4em] uppercase font-black bg-white/5 px-2.5 py-1 rounded-lg border border-white/5">v6.0</span>
+                    <span class="text-slate-500 text-[9px] tracking-[0.4em] uppercase font-black bg-white/5 px-2.5 py-1 rounded-lg border border-white/5">v7.0</span>
                 </div>
                 <div class="mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">A Project by <span class="prasanth-label font-black">Prasanth</span></span>
@@ -147,7 +177,6 @@
                     Examenstraining für das Staatsexamen 2026
                 </p>
             </div>
-
             <div class="glass rounded-2xl flex items-center p-1">
                 <div class="px-5 py-3 text-right">
                     <span class="text-[9px] text-slate-500 block uppercase tracking-widest font-black mb-1">Ziel-Datum</span>
@@ -158,14 +187,16 @@
             </div>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        <!-- ═══ TOP ROW: Progress + Studio + Arena ═══ -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
 
+            <!-- Gesamtfortschritt -->
             <div class="lg:col-span-2 glass rounded-3xl p-10 relative overflow-hidden anim" style="animation-delay:.1s">
                 <div class="absolute -top-20 -right-20 w-60 h-60 bg-indigo-500 rounded-full blur-[80px] opacity-[.04]"></div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 relative z-10">
                     <div>
                         <h2 class="text-white font-black text-2xl uppercase tracking-tight">Gesamtfortschritt</h2>
-                        <p class="text-slate-500 text-sm font-medium">Vorbereitungsphase: Palliative, Prävention & Notfall</p>
+                        <p class="text-slate-500 text-sm font-medium">Alle Module • Klausuren • Arena-Training</p>
                     </div>
                     <span id="total-percent" class="text-6xl font-black bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent tracking-tighter">22%</span>
                 </div>
@@ -174,6 +205,7 @@
                 </div>
             </div>
 
+            <!-- SLM Studio -->
             <a href="creator.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-indigo-500 via-indigo-600 to-blue-600 shadow-xl cursor-pointer hover:scale-[1.02] transition-all ai-glow anim" style="animation-delay:.15s">
                 <div class="bg-[#0a0e1a] h-full w-full rounded-[calc(1.5rem-2px)] p-8 flex flex-col justify-between overflow-hidden relative">
                     <div class="absolute -right-4 -top-4 bg-indigo-500/10 w-32 h-32 rounded-full blur-3xl group-hover:bg-indigo-500/25 transition-all duration-500"></div>
@@ -195,23 +227,103 @@
             </a>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 anim" style="animation-delay:.2s" id="module-grid">
+        <!-- ═══ ARENA HERO CARD ═══ -->
+        <div class="mb-8 anim" style="animation-delay:.18s">
+            <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.01] transition-all arena-glow relative overflow-hidden">
+                <div class="arena-card-bg h-full w-full rounded-[calc(1.5rem-2px)] p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8 overflow-hidden relative">
+                    
+                    <!-- Decorative elements -->
+                    <div class="absolute -right-20 -top-20 w-60 h-60 bg-violet-500/5 rounded-full blur-[60px]"></div>
+                    <div class="absolute left-1/2 -bottom-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-[40px]"></div>
+                    
+                    <!-- Left: Icon + Text -->
+                    <div class="flex-1 relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/30 float-anim">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-white font-black text-2xl uppercase tracking-tight">SLM Arena</h3>
+                                    <span class="shimmer-badge text-white text-[8px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-widest">NEU</span>
+                                </div>
+                                <p class="text-violet-300/60 text-[10px] font-bold uppercase tracking-[0.3em]">Deep Learning Engine</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed max-w-lg mb-4">
+                            5 kognitive Trainingsmodi die auf Neurowissenschaft basieren. Absorb → Recall → Connect → Brain Map → Weakness Destroyer. Deine Klausur-Schwächen werden gezielt zerstört.
+                        </p>
+                        
+                        <!-- Mode pills -->
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-indigo-500/10 text-indigo-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-indigo-500/20">
+                                <i class="fas fa-eye mr-1"></i>Absorb
+                            </span>
+                            <span class="bg-orange-500/10 text-orange-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-orange-500/20">
+                                <i class="fas fa-brain mr-1"></i>Recall
+                            </span>
+                            <span class="bg-emerald-500/10 text-emerald-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-emerald-500/20">
+                                <i class="fas fa-project-diagram mr-1"></i>Connect
+                            </span>
+                            <span class="bg-violet-500/10 text-violet-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-violet-500/20">
+                                <i class="fas fa-map-marked-alt mr-1"></i>Brain Map
+                            </span>
+                            <span class="bg-red-500/10 text-red-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-red-500/20">
+                                <i class="fas fa-crosshairs mr-1"></i>Weakness Destroyer
+                            </span>
+                        </div>
 
+                        <div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                            <span>Arena öffnen</span>
+                            <i class="fas fa-arrow-right text-[8px]"></i>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="relative z-10 flex flex-row md:flex-col gap-4">
+                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
+                            <div id="arena-xp" class="text-2xl font-black text-violet-400">0</div>
+                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP</div>
+                        </div>
+                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
+                            <div id="arena-level" class="text-2xl font-black text-indigo-400">1</div>
+                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Level</div>
+                        </div>
+                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
+                            <div class="flex items-center justify-center gap-1">
+                                <span class="text-lg">🔥</span>
+                                <span id="arena-streak" class="text-2xl font-black text-orange-400">0</span>
+                            </div>
+                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Streak</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- ═══ MODULE GRID ═══ -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 anim" style="animation-delay:.22s" id="module-grid">
+
+            <!-- Modul 1 -->
             <div onclick="location.href='module.html?id=1'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
                     <div class="w-14 h-14 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center">
                         <i class="fas fa-book-open text-2xl"></i>
                     </div>
-                    <span class="font-black text-slate-600 text-xl">0%</span>
+                    <span class="font-black text-slate-600 text-xl" id="m1-pct">0%</span>
                 </div>
                 <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 1</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Kommunikation & Biografie</p>
+                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">Kommunikation & Biografie</p>
+                <!-- Klausur mini-badge -->
+                <div class="flex items-center gap-2 mb-4 relative z-10" id="m1-exam-badge">
+                </div>
                 <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
                     <div class="bg-indigo-600 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
                 </div>
             </div>
 
+            <!-- Modul 2 -->
             <div onclick="location.href='module2.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -227,6 +339,7 @@
                 </div>
             </div>
 
+            <!-- Modul 3 -->
             <div onclick="location.href='module3.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
                 <div class="mod-glow" style="background:#6366f1"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -242,6 +355,7 @@
                 </div>
             </div>
 
+            <!-- Modul 4 -->
             <div onclick="location.href='module4.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-teal-500/10" style="--accent:#14b8a6">
                 <div class="mod-glow" style="background:#14b8a6"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -257,6 +371,7 @@
                 </div>
             </div>
 
+            <!-- Modul 5 -->
             <div onclick="location.href='module5.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-emerald-500/10" style="--accent:#22c55e">
                 <div class="mod-glow" style="background:#22c55e"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -272,6 +387,7 @@
                 </div>
             </div>
 
+            <!-- Modul 6 -->
             <div onclick="location.href='module6.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-red-500/10" style="--accent:#ef4444">
                 <div class="mod-glow" style="background:#ef4444"></div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
@@ -287,6 +403,7 @@
                 </div>
             </div>
 
+            <!-- Modul 7 -->
             <div onclick="location.href='module7.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-purple-500/10 relative" style="--accent:#a855f7">
                 <div class="mod-glow" style="background:#a855f7"></div>
                 <div class="absolute right-5 top-5 z-20">
@@ -308,42 +425,77 @@
                 </div>
             </div>
 
-            <div onclick="location.href='module.html?id=9'" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-orange-500/20" style="--accent:#f97316;background:linear-gradient(145deg,rgba(15,10,0,.6),rgba(20,14,5,.6));backdrop-filter:blur(20px)">
+            <!-- Klausur-Simulator -->
+            <a href="exam-simulator.html" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-orange-500/20" style="--accent:#f97316;background:linear-gradient(145deg,rgba(15,10,0,.6),rgba(20,14,5,.6));backdrop-filter:blur(20px)">
                 <div class="mod-glow" style="background:#f97316"></div>
                 <div class="absolute -right-8 -top-1 bg-orange-500 text-white text-[8px] font-black px-10 py-1 rotate-45 uppercase tracking-widest z-20">Simulator</div>
                 <div class="flex justify-between items-start mb-8 relative z-10">
                     <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,.3)]">
-                        <i class="fas fa-bolt text-2xl"></i>
+                        <i class="fas fa-file-alt text-2xl"></i>
                     </div>
-                    <span class="font-black text-slate-600 text-xl">0%</span>
+                    <div class="text-right" id="sim-last-note">
+                        <span class="font-black text-slate-600 text-xl">—</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Module 9</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Prüfungssimulation v.1</p>
+                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Klausur</h3>
+                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">1:1 Papier-Simulation + S-Pen</p>
+                <div class="flex flex-wrap gap-1.5 relative z-10 mb-4">
+                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">90 Min</span>
+                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">Fallbeispiel</span>
+                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">Bewertung</span>
+                </div>
                 <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-orange-500 h-full rounded-full transition-all duration-1000 shadow-[0_0_8px_#f97316]" style="width: 0%"></div>
+                    <div id="sim-progress" class="bg-orange-500 h-full rounded-full transition-all duration-1000 shadow-[0_0_8px_#f97316]" style="width: 0%"></div>
                 </div>
-            </div>
+            </a>
 
+            <!-- SLM Arena Card (in grid) -->
+            <a href="arena.html" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-violet-500/20" style="--accent:#8b5cf6;background:linear-gradient(145deg,rgba(10,5,20,.6),rgba(15,10,30,.6));backdrop-filter:blur(20px)">
+                <div class="mod-glow" style="background:#8b5cf6"></div>
+                <div class="absolute -right-8 -top-1 shimmer-badge text-white text-[8px] font-black px-10 py-1 rotate-45 uppercase tracking-widest z-20">Arena</div>
+                <div class="flex justify-between items-start mb-8 relative z-10">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 text-white rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(139,92,246,.3)]">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-violet-400 font-black text-sm" id="arena-grid-xp">0 XP</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">SLM Arena</h3>
+                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">Deep Learning Engine</p>
+                <div class="flex flex-wrap gap-1.5 relative z-10 mb-4">
+                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">5 Modi</span>
+                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">XP System</span>
+                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">Streaks</span>
+                </div>
+                <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden relative z-10">
+                    <div class="bg-violet-500 h-full rounded-full transition-all duration-1000 shadow-[0_0_8px_#8b5cf6]" style="width: 0%"></div>
+                </div>
+            </a>
         </div>
 
+        <!-- ═══ FOOTER ═══ -->
         <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
-                <span>SLM System v6.0 • A Project by <span class="prasanth-label">Prasanth</span></span>
+                <span>SLM System v7.0 • A Project by <span class="prasanth-label">Prasanth</span></span>
                 <span>Staatsexamen 2026 • &copy; 2025</span>
             </div>
         </footer>
     </div>
 
+    <!-- FAB: Studio -->
     <a href="creator.html" class="fixed bottom-8 right-8 w-14 h-14 bg-indigo-600 text-white rounded-2xl shadow-2xl shadow-indigo-500/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 ai-glow" title="SLM Studio öffnen">
         <i class="fas fa-wand-magic-sparkles text-lg"></i>
     </a>
 
     <script>
+        // ═══ UPDATE MODAL ═══
         window.addEventListener('DOMContentLoaded', () => {
-            const hasSeenUpdate = localStorage.getItem('v6.0_update_seen');
+            const hasSeenUpdate = localStorage.getItem('v7.0_update_seen');
             if (!hasSeenUpdate) {
                 document.getElementById('update-modal').classList.remove('hidden');
             }
+            loadDashboardStats();
         });
 
         function closeUpdateModal() {
@@ -352,8 +504,44 @@
             modal.style.opacity = '0';
             setTimeout(() => {
                 modal.classList.add('hidden');
-                localStorage.setItem('v6.0_update_seen', 'true');
+                localStorage.setItem('v7.0_update_seen', 'true');
             }, 400);
+        }
+
+        // ═══ DASHBOARD STATS ═══
+        function loadDashboardStats() {
+            // Arena stats
+            const arenaXP = parseInt(localStorage.getItem('arena_xp') || '0');
+            const arenaLevel = Math.floor(arenaXP / 500) + 1;
+            const arenaStreak = parseInt(localStorage.getItem('arena_streak') || '0');
+            
+            document.getElementById('arena-xp').textContent = arenaXP;
+            document.getElementById('arena-level').textContent = arenaLevel;
+            document.getElementById('arena-streak').textContent = arenaStreak;
+            document.getElementById('arena-grid-xp').textContent = arenaXP + ' XP';
+
+            // Last exam result
+            const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+            if (history.length > 0) {
+                const last = history[history.length - 1];
+                const noteColor = parseFloat(last.note) <= 2.0 ? 'text-green-400' : parseFloat(last.note) <= 3.3 ? 'text-yellow-400' : 'text-red-400';
+                document.getElementById('sim-last-note').innerHTML = `
+                    <span class="font-black ${noteColor} text-xl">${last.note}</span>
+                    <span class="block text-[9px] text-slate-500 font-bold">Letzte Note</span>`;
+                document.getElementById('sim-progress').style.width = last.percentage + '%';
+            }
+
+            // Modul 1 exam badge
+            const m1History = history.filter(h => h.module === 1);
+            if (m1History.length > 0) {
+                const best = m1History.reduce((a, b) => a.percentage > b.percentage ? a : b);
+                const badgeColor = parseFloat(best.note) <= 2.0 ? 'bg-green-500/10 text-green-400 border-green-500/20' : parseFloat(best.note) <= 3.3 ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' : 'bg-red-500/10 text-red-400 border-red-500/20';
+                document.getElementById('m1-exam-badge').innerHTML = `
+                    <span class="${badgeColor} text-[10px] font-bold px-2.5 py-1 rounded-lg border">
+                        <i class="fas fa-file-alt mr-1"></i>Klausur: ${best.note} (${best.percentage}%)
+                    </span>`;
+                document.getElementById('m1-pct').textContent = best.percentage + '%';
+            }
         }
     </script>
     <script src="app.js"></script>
