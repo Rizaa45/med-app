@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM Arena | Deep Learning Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #060910; color: #e2e8f0; overflow-x: hidden; }
+        
+        /* Animated BG */
+        .arena-bg {
+            position: fixed; inset: 0; z-index: 0;
+            background: 
+                radial-gradient(ellipse at 15% 20%, rgba(99,102,241,.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 80%, rgba(249,115,22,.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(16,185,129,.03) 0%, transparent 60%);
+        }
+        
+        /* Cards */
+        .arena-card {
+            background: rgba(15,23,42,.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,.06);
+            transition: all .4s cubic-bezier(.22,1,.36,1);
+        }
+        .arena-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,.3);
+        }
+        
+        /* Mode Icons */
+        .mode-icon {
+            transition: all .4s cubic-bezier(.22,1,.36,1);
+        }
+        .arena-card:hover .mode-icon {
+            transform: scale(1.15) rotate(-3deg);
+        }
+        
+        /* Glow Effects */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .glow-pulse { animation: pulseGlow 3s ease-in-out infinite; }
+        
+        /* Progress Ring */
+        .progress-ring-bg { stroke: rgba(255,255,255,.06); }
+        .progress-ring-fill { 
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        
+        /* Concept Card Flip */
+        .concept-card {
+            perspective: 1000px;
+        }
+        .concept-inner {
+            transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+            transform-style: preserve-3d;
+        }
+        .concept-card.flipped .concept-inner {
+            transform: rotateY(180deg);
+        }
+        .concept-front, .concept-back {
+            backface-visibility: hidden;
+        }
+        .concept-back {
+            transform: rotateY(180deg);
+        }
+        
+        /* Typing effect */
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #6366f1;
+            font-weight: 100;
+        }
+        
+        /* Fill blank */
+        .blank-slot {
+            display: inline-block;
+            min-width: 120px;
+            border-bottom: 2px dashed rgba(99,102,241,.5);
+            padding: 2px 8px;
+            margin: 0 4px;
+            transition: all .2s;
+        }
+        .blank-slot:focus-within {
+            border-bottom-color: #6366f1;
+            background: rgba(99,102,241,.05);
+        }
+        .blank-slot input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #a5b4fc;
+            font-weight: 700;
+            font-size: inherit;
+            width: 100%;
+        }
+        
+        /* Streak counter */
+        @keyframes streakPop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        .streak-pop { animation: streakPop 0.3s ease-out; }
+        
+        /* Weakness meter */
+        .weakness-bar {
+            background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #22c55e 100%);
+        }
+        
+        /* Level badges */
+        .level-badge {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            box-shadow: 0 4px 15px rgba(99,102,241,.3);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+
+        /* Canvas for S-Pen */
+        .pen-canvas {
+            touch-action: none;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="arena-bg"></div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- MAIN MENU                          -->
+    <!-- ═══════════════════════════════════ -->
+    <div id="main-menu" class="relative z-10 max-w-5xl mx-auto px-6 py-10">
+        
+        <!-- Header -->
+        <header class="mb-10 flex items-center justify-between">
+            <div>
+                <div class="flex items-center gap-3 mb-1">
+                    <a href="index.html" class="text-slate-500 hover:text-white transition-colors">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </a>
+                    <span class="font-black text-xl tracking-tighter text-white">SLM Arena</span>
+                    <span class="text-[9px] font-black text-slate-500 bg-white/5 px-2 py-0.5 rounded border border-white/5 uppercase tracking-[0.3em]">Beta</span>
+                </div>
+                <p class="text-slate-500 text-sm font-medium ml-7">Deep Learning Engine für die Pflegeausbildung</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- XP / Level -->
+                <div class="arena-card rounded-xl px-4 py-2 flex items-center gap-3">
+                    <div class="level-badge w-8 h-8 rounded-lg flex items-center justify-center text-white text-xs font-black" id="user-level">1</div>
+                    <div>
+                        <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Level</div>
+                        <div class="text-xs font-bold text-white"><span id="user-xp">0</span> XP</div>
+                    </div>
+                </div>
+                <!-- Streak -->
+                <div class="arena-card rounded-xl px-4 py-2 flex items-center gap-2">
+                    <span class="text-orange-400 text-lg">🔥</span>
+                    <div>
+                        <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Streak</div>
+                        <div class="text-xs font-bold text-white" id="user-streak">0 Tage</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Module Selector -->
+        <div class="arena-card rounded-2xl p-6 mb-8">
+            <label class="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Modul wählen</label>
+            <select id="module-select" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white font-bold outline-none focus:border-indigo-500 transition-all appearance-none cursor-pointer">
+                <option value="1">Modul 1: Kommunikation & Biografie</option>
+                <option value="2">Modul 2: Medizinisches Kernwissen</option>
+                <option value="3">Modul 3: Krankheitslehre</option>
+            </select>
+        </div>
+
+        <!-- Weakness Alert (if exists) -->
+        <div id="weakness-alert" class="hidden mb-8 arena-card rounded-2xl p-6 border-l-4 border-red-500 relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-32 h-32 bg-red-500/5 rounded-full blur-2xl"></div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-white text-sm uppercase tracking-tight">Schwächen erkannt</h3>
+                        <p class="text-[10px] text-slate-400">Aus deiner letzten Klausur</p>
+                    </div>
+                </div>
+                <div id="weakness-topics" class="flex flex-wrap gap-2 mb-4"></div>
+                <button onclick="startMode('weakness')" class="bg-red-500 hover:bg-red-400 text-white px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest transition-all">
+                    <i class="fas fa-crosshairs mr-2"></i> Schwächen zerstören
+                </button>
+            </div>
+        </div>
+
+        <!-- 5 Mode Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+
+            <!-- MODE 1: ABSORB -->
+            <div onclick="startMode('absorb')" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-indigo-500/5 rounded-full blur-2xl glow-pulse"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-eye text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Absorb</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Konzepte visuell verstehen. Nicht lesen — <em>begreifen</em>.</p>
+                    <div class="flex items-center gap-2 text-indigo-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Starten</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODE 2: RECALL -->
+            <div onclick="startMode('recall')" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-orange-500/5 rounded-full blur-2xl glow-pulse"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Recall</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Progressive Lücken. Von leicht bis "ohne Hilfe schreiben".</p>
+                    <div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Starten</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODE 3: CONNECT -->
+            <div onclick="startMode('connect')" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl glow-pulse"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-project-diagram text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Connect</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Ketten bauen. Zusammenhänge sehen die andere übersehen.</p>
+                    <div class="flex items-center gap-2 text-emerald-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Starten</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODE 4: BRAIN MAP -->
+            <div onclick="startMode('brainmap')" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-violet-500/5 rounded-full blur-2xl glow-pulse"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-violet-500/10 text-violet-400 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-map-marked-alt text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Brain Map</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Räumliches Gedächtnis. Platziere Konzepte in deiner mentalen Landkarte.</p>
+                    <div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Starten</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODE 5: WEAKNESS DESTROYER -->
+            <div onclick="startMode('weakness')" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden border-red-500/20">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-red-500/5 rounded-full blur-2xl glow-pulse"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-red-500/10 text-red-400 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-crosshairs text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Weakness Destroyer</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Bohrt gezielt in deine Schwächen. Bis nichts mehr übrig ist.</p>
+                    <div id="weakness-count-badge" class="hidden mb-3">
+                        <span class="bg-red-500/20 text-red-400 text-[10px] font-black px-3 py-1 rounded-full"><span id="weakness-count">0</span> offene Schwächen</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-red-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Starten</span>
+                        <i class="fas fa-arrow-right text-[8px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK LINK: Klausur Simulator -->
+            <a href="exam-simulator.html" class="arena-card rounded-2xl p-7 cursor-pointer group relative overflow-hidden border-orange-500/20 flex flex-col justify-between">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-orange-500/5 rounded-full blur-2xl"></div>
+                <div class="relative z-10">
+                    <div class="mode-icon w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-orange-500/20">
+                        <i class="fas fa-file-alt text-2xl"></i>
+                    </div>
+                    <h3 class="font-black text-white text-lg uppercase tracking-tight mb-1">Klausur-Simulator</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">1:1 Papier-Klausur. Fallbeispiel + 15 Aufgaben + Bewertung.</p>
+                    <div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
+                        <span>Zur Klausur</span>
+                        <i class="fas fa-external-link-alt text-[8px]"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Topic Mastery Overview -->
+        <div class="arena-card rounded-2xl p-6">
+            <h3 class="font-black text-white text-sm uppercase tracking-tight mb-5">Themen-Meisterung</h3>
+            <div id="mastery-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- GAME SCREEN (Hidden by default)    -->
+    <!-- ═══════════════════════════════════ -->
+    <div id="game-screen" class="hidden relative z-10 min-h-screen">
+        
+        <!-- Top Bar -->
+        <div class="fixed top-0 left-0 right-0 z-50 bg-[#0a0e1a]/90 backdrop-blur-xl border-b border-white/5">
+            <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+                <button onclick="exitGame()" class="text-slate-500 hover:text-white text-sm font-bold flex items-center gap-2 transition-colors">
+                    <i class="fas fa-times"></i> Beenden
+                </button>
+                <div class="flex items-center gap-3">
+                    <div id="game-mode-label" class="text-[9px] font-black text-indigo-400 uppercase tracking-[0.3em]">ABSORB</div>
+                    <span class="text-slate-700">|</span>
+                    <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
+                        <span id="game-progress-current">1</span>/<span id="game-progress-total">10</span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Streak -->
+                    <div class="flex items-center gap-1">
+                        <span class="text-orange-400">🔥</span>
+                        <span id="game-streak" class="text-white font-black text-sm">0</span>
+                    </div>
+                    <!-- XP earned this session -->
+                    <div class="flex items-center gap-1">
+                        <span class="text-indigo-400 text-xs">+</span>
+                        <span id="game-xp-session" class="text-indigo-400 font-black text-sm">0</span>
+                        <span class="text-indigo-400 text-[10px] font-bold">XP</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Progress bar -->
+            <div class="h-1 bg-white/5">
+                <div id="game-progress-bar" class="h-full bg-indigo-500 transition-all duration-500" style="width:0%"></div>
+            </div>
+        </div>
+
+        <!-- Game Content Area -->
+        <div class="pt-20 pb-20 px-6 max-w-3xl mx-auto">
+            <div id="game-content">
+                <!-- Dynamically rendered -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ═══════════════════════════════════════════
+    // SLM ARENA ENGINE
+    // ═══════════════════════════════════════════
+
+    const Arena = {
+        state: {
+            moduleId: 1,
+            mode: null,
+            questionBank: [],
+            concepts: [],
+            currentIdx: 0,
+            streak: 0,
+            xpSession: 0,
+            xpTotal: parseInt(localStorage.getItem('arena_xp') || '0'),
+            level: 1,
+            topicMastery: JSON.parse(localStorage.getItem('arena_mastery') || '{}'),
+            weaknesses: []
+        },
+
+        // ═══ INIT ═══
+        async init() {
+            this.loadWeaknesses();
+            this.updateHeader();
+            this.renderMastery();
+            this.state.level = Math.floor(this.state.xpTotal / 500) + 1;
+            document.getElementById('user-level').textContent = this.state.level;
+            document.getElementById('user-xp').textContent = this.state.xpTotal;
+
+            // Load streak
+            const lastDate = localStorage.getItem('arena_last_date');
+            const today = new Date().toDateString();
+            const streak = parseInt(localStorage.getItem('arena_streak') || '0');
+            if (lastDate === today) {
+                document.getElementById('user-streak').textContent = streak + ' Tage';
+            } else {
+                const yesterday = new Date(Date.now() - 86400000).toDateString();
+                if (lastDate === yesterday) {
+                    document.getElementById('user-streak').textContent = streak + ' Tage';
+                } else {
+                    localStorage.setItem('arena_streak', '0');
+                    document.getElementById('user-streak').textContent = '0 Tage';
+                }
+            }
+        },
+
+        loadWeaknesses() {
+            const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+            const latest = history.filter(h => h.module === this.state.moduleId).pop();
+            if (latest && latest.topicScores) {
+                this.state.weaknesses = Object.entries(latest.topicScores)
+                    .filter(([t, s]) => s.possible > 0 && (s.earned / s.possible) < 0.6)
+                    .map(([t]) => t);
+                
+                if (this.state.weaknesses.length > 0) {
+                    document.getElementById('weakness-alert').classList.remove('hidden');
+                    document.getElementById('weakness-topics').innerHTML = this.state.weaknesses
+                        .map(t => `<span class="bg-red-500/10 text-red-400 text-[11px] font-bold px-3 py-1 rounded-lg">${t.replace(/_/g,' ')}</span>`)
+                        .join('');
+                    document.getElementById('weakness-count').textContent = this.state.weaknesses.length;
+                    document.getElementById('weakness-count-badge').classList.remove('hidden');
+                }
+            }
+        },
+
+        updateHeader() {
+            document.getElementById('user-xp').textContent = this.state.xpTotal;
+            document.getElementById('user-level').textContent = this.state.level;
+        },
+
+        renderMastery() {
+            const grid = document.getElementById('mastery-grid');
+            const allTopics = ['biografiearbeit','kommunikation_theorie','kommunikation_praxis',
+                'pflegeprozess_aufnahme','emotionspsychologie','supervision_beratung',
+                'heimaufnahme','interkulturelle_kommunikation'];
+            
+            grid.innerHTML = allTopics.map(topic => {
+                const mastery = this.state.topicMastery[topic] || 0;
+                const pct = Math.min(mastery, 100);
+                const color = pct >= 80 ? 'text-green-400' : pct >= 50 ? 'text-yellow-400' : pct >= 20 ? 'text-orange-400' : 'text-slate-600';
+                const ring = pct >= 80 ? 'stroke-green-500' : pct >= 50 ? 'stroke-yellow-500' : pct >= 20 ? 'stroke-orange-500' : 'stroke-slate-700';
+                const circumference = 2 * Math.PI * 20;
+                const offset = circumference - (pct / 100) * circumference;
+                
+                return `
+                <div class="arena-card rounded-xl p-4 flex items-center gap-3">
+                    <div class="relative w-12 h-12 shrink-0">
+                        <svg class="w-12 h-12" viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="20" fill="none" class="progress-ring-bg" stroke-width="3"/>
+                            <circle cx="24" cy="24" r="20" fill="none" class="${ring} progress-ring-fill" stroke-width="3"
+                                stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"/>
+                        </svg>
+                        <span class="absolute inset-0 flex items-center justify-center text-[10px] font-black ${color}">${pct}%</span>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-white truncate">${topic.replace(/_/g,' ')}</div>
+                        <div class="text-[10px] text-slate-500">${pct >= 80 ? '✅ Gemeistert' : pct >= 50 ? '📖 Fortgeschritten' : '🔄 Üben'}</div>
+                    </div>
+                </div>`;
+            }).join('');
+        },
+
+        // ═══ START MODE ═══
+        async startMode(mode) {
+            this.state.mode = mode;
+            this.state.currentIdx = 0;
+            this.state.streak = 0;
+            this.state.xpSession = 0;
+            
+            // Load question bank
+            try {
+                const resp = await fetch(`data/question-banks/module${this.state.moduleId}_questions.json`);
+                this.state.questionBank = await resp.json();
+            } catch(e) {
+                alert('Question bank nicht gefunden!');
+                return;
+            }
+
+            // Build concept list based on mode
+            this.state.concepts = this.buildConcepts(mode);
+            
+            if (this.state.concepts.length === 0) {
+                alert('Keine passenden Fragen gefunden!');
+                return;
+            }
+
+            // Switch to game screen
+            document.getElementById('main-menu').classList.add('hidden');
+            document.getElementById('game-screen').classList.remove('hidden');
+            document.getElementById('game-mode-label').textContent = mode.toUpperCase();
+            document.getElementById('game-progress-total').textContent = Math.min(this.state.concepts.length, 15);
+            
+            this.showCurrent();
+        },
+
+        buildConcepts(mode) {
+            const questions = this.state.questionBank.filter(q => q.q_id);
+            const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+
+            switch(mode) {
+                case 'absorb':
+                    // Pick freitext + definition questions (they have rich content)
+                    return shuffle(questions.filter(q => 
+                        q.type === 'freitext_box' || q.type === 'definition_plus_beispiele'
+                    )).slice(0, 12);
+                    
+                case 'recall':
+                    // All types, progressive difficulty
+                    return shuffle(questions).slice(0, 15);
+                    
+                case 'connect':
+                    // Need questions with keywords to build chains
+                    return shuffle(questions.filter(q => 
+                        q.data?.keywords || q.keywords || q.correct_answers
+                    )).slice(0, 12);
+                    
+                case 'brainmap':
+                    // Use definition + nennen_liste for spatial placement
+                    return shuffle(questions.filter(q => 
+                        q.type === 'nennen_liste' || q.type === 'definition_plus_beispiele'
+                    )).slice(0, 10);
+                    
+                case 'weakness':
+                    // Only weak topics
+                    return shuffle(questions.filter(q => 
+                        this.state.weaknesses.includes(q.topic)
+                    )).slice(0, 15);
+                    
+                default:
+                    return shuffle(questions).slice(0, 15);
+            }
+        },
+
+        // ═══ SHOW CURRENT CONCEPT ═══
+        showCurrent() {
+            const concept = this.state.concepts[this.state.currentIdx];
+            if (!concept) { this.endGame(); return; }
+
+            const total = Math.min(this.state.concepts.length, 15);
+            document.getElementById('game-progress-current').textContent = this.state.currentIdx + 1;
+            document.getElementById('game-progress-bar').style.width = ((this.state.currentIdx / total) * 100) + '%';
+            document.getElementById('game-streak').textContent = this.state.streak;
+            document.getElementById('game-xp-session').textContent = this.state.xpSession;
+
+            const container = document.getElementById('game-content');
+
+            switch(this.state.mode) {
+                case 'absorb': this.renderAbsorb(concept, container); break;
+                case 'recall': this.renderRecall(concept, container); break;
+                case 'connect': this.renderConnect(concept, container); break;
+                case 'brainmap': this.renderBrainMap(concept, container); break;
+                case 'weakness': this.renderRecall(concept, container); break;
+            }
+        },
+
+        // ═══ MODE: ABSORB ═══
+        renderAbsorb(q, container) {
+            const data = q.data || {};
+            const answer = data.correct_answer || data.definition_correct || '';
+            const keywords = data.keywords || data.definition_keywords || [];
+            const topic = (q.topic || '').replace(/_/g, ' ');
+            
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-indigo-400 uppercase tracking-[0.3em] bg-indigo-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+
+            <!-- Phase 1: Show concept -->
+            <div id="absorb-phase1">
+                <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                    <h2 class="text-xl font-black text-white mb-4 leading-tight">${this.formatInstruction(q.instruction)}</h2>
+                    
+                    <div class="bg-indigo-500/5 border border-indigo-500/20 rounded-2xl p-6 mb-6">
+                        <div class="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-3">💡 Musterantwort</div>
+                        <p class="text-slate-300 text-sm leading-relaxed">${answer}</p>
+                    </div>
+
+                    ${keywords.length > 0 ? `
+                    <div class="mb-4">
+                        <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-2">Schlüsselbegriffe</div>
+                        <div class="flex flex-wrap gap-2">
+                            ${keywords.map(k => `<span class="bg-white/5 text-indigo-300 text-xs font-bold px-3 py-1 rounded-lg border border-white/5">${k}</span>`).join('')}
+                        </div>
+                    </div>` : ''}
+                </div>
+
+                <button onclick="Arena.startAbsorbRecall()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                    <i class="fas fa-brain mr-2"></i> Verstanden — Jetzt abfragen!
+                </button>
+            </div>
+
+            <!-- Phase 2: Recall (hidden initially) -->
+            <div id="absorb-phase2" class="hidden">
+                <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                    <div class="text-[9px] font-black text-orange-400 uppercase tracking-[0.3em] mb-4">🧠 Jetzt DU — aus dem Gedächtnis</div>
+                    <h2 class="text-lg font-black text-white mb-6 leading-tight">${this.formatInstruction(q.instruction)}</h2>
+                    <textarea id="absorb-answer" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white text-sm outline-none focus:border-indigo-500 transition-all resize-none" rows="5" placeholder="Schreibe deine Antwort aus dem Gedächtnis..."></textarea>
+                </div>
+                <button onclick="Arena.checkAbsorb()" class="w-full bg-orange-500 hover:bg-orange-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                    <i class="fas fa-check mr-2"></i> Prüfen
+                </button>
+            </div>
+
+            <!-- Phase 3: Feedback (hidden) -->
+            <div id="absorb-phase3" class="hidden"></div>`;
+        },
+
+        startAbsorbRecall() {
+            document.getElementById('absorb-phase1').classList.add('hidden');
+            document.getElementById('absorb-phase2').classList.remove('hidden');
+            document.getElementById('absorb-answer').focus();
+        },
+
+        checkAbsorb() {
+            const q = this.state.concepts[this.state.currentIdx];
+            const data = q.data || {};
+            const keywords = data.keywords || data.definition_keywords || [];
+            const userText = document.getElementById('absorb-answer').value.trim();
+            
+            let matched = 0;
+            keywords.forEach(k => {
+                if (userText.toLowerCase().includes(k.toLowerCase())) matched++;
+            });
+            const score = keywords.length > 0 ? Math.round((matched / keywords.length) * 100) : 0;
+            const xp = Math.round(score / 10) * 5;
+            
+            if (score >= 60) this.state.streak++;
+            else this.state.streak = 0;
+            
+            this.addXP(xp);
+            this.updateTopicMastery(q.topic, score);
+
+            document.getElementById('absorb-phase2').classList.add('hidden');
+            const phase3 = document.getElementById('absorb-phase3');
+            phase3.classList.remove('hidden');
+
+            const color = score >= 70 ? 'emerald' : score >= 40 ? 'yellow' : 'red';
+            const emoji = score >= 70 ? '🔥' : score >= 40 ? '💪' : '📖';
+            
+            phase3.innerHTML = `
+            <div class="arena-card rounded-3xl p-8 md:p-10 border-${color}-500/30 mb-6">
+                <div class="text-center mb-6">
+                    <div class="text-5xl mb-2">${emoji}</div>
+                    <div class="text-3xl font-black text-${color}-400">${score}%</div>
+                    <div class="text-xs text-slate-400 font-bold mt-1">${matched}/${keywords.length} Schlüsselbegriffe getroffen</div>
+                    <div class="text-indigo-400 font-black text-sm mt-2">+${xp} XP</div>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-2">Deine Keywords</div>
+                    <div class="flex flex-wrap gap-1">
+                        ${keywords.map(k => {
+                            const hit = userText.toLowerCase().includes(k.toLowerCase());
+                            return `<span class="${hit ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-red-500/10 text-red-400 border-red-500/20'} text-[11px] font-bold px-2 py-0.5 rounded border">${hit ? '✓' : '✗'} ${k}</span>`;
+                        }).join('')}
+                    </div>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-4 mt-4">
+                    <div class="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-2">Musterantwort</div>
+                    <p class="text-slate-400 text-xs leading-relaxed">${data.correct_answer || data.definition_correct || ''}</p>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+        },
+
+        // ═══ MODE: RECALL ═══
+        renderRecall(q, container) {
+            const topic = (q.topic || '').replace(/_/g, ' ');
+            
+            // Adapt rendering based on question type
+            if (q.type === 'richtig_falsch') {
+                this.renderRecallRF(q, container, topic);
+            } else if (q.type === 'nennen_liste') {
+                this.renderRecallNennen(q, container, topic);
+            } else if (q.type === 'zuordnung') {
+                this.renderRecallZuordnung(q, container, topic);
+            } else {
+                // Default: freitext recall with blanks
+                this.renderRecallFreitext(q, container, topic);
+            }
+        },
+
+        renderRecallRF(q, container, topic) {
+            const statements = q.statements || (q.data?.statements) || [{ text: q.statement, answer: q.answer }];
+            const stmt = statements[Math.floor(Math.random() * statements.length)];
+            
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-orange-400 uppercase tracking-[0.3em] bg-orange-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">Richtig oder Falsch?</div>
+                <h2 class="text-lg font-bold text-white leading-relaxed mb-8">"${stmt.text}"</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button onclick="Arena.checkRF('richtig','${stmt.answer}')" class="arena-card p-5 rounded-2xl text-center hover:border-emerald-500/50 transition-all cursor-pointer group">
+                        <i class="fas fa-check text-2xl text-emerald-400 mb-2 group-hover:scale-125 transition-transform"></i>
+                        <div class="font-black text-white text-sm uppercase">Richtig</div>
+                    </button>
+                    <button onclick="Arena.checkRF('falsch','${stmt.answer}')" class="arena-card p-5 rounded-2xl text-center hover:border-red-500/50 transition-all cursor-pointer group">
+                        <i class="fas fa-times text-2xl text-red-400 mb-2 group-hover:scale-125 transition-transform"></i>
+                        <div class="font-black text-white text-sm uppercase">Falsch</div>
+                    </button>
+                </div>
+            </div>
+            <div id="recall-feedback" class="hidden"></div>`;
+        },
+
+        checkRF(userAnswer, correctAnswer) {
+            const correct = userAnswer === correctAnswer;
+            const xp = correct ? 15 : 0;
+            if (correct) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            
+            const q = this.state.concepts[this.state.currentIdx];
+            this.updateTopicMastery(q.topic, correct ? 100 : 0);
+
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 ${correct ? 'border-emerald-500/30' : 'border-red-500/30'} mb-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl">${correct ? '✅' : '❌'}</span>
+                    <span class="font-black text-white">${correct ? 'Richtig!' : 'Falsch!'}</span>
+                    <span class="text-indigo-400 font-bold text-sm ml-auto">+${xp} XP</span>
+                </div>
+                <p class="text-slate-400 text-xs">${q.explanation || `Die Antwort ist: ${correctAnswer}`}</p>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        renderRecallNennen(q, container, topic) {
+            const count = q.count || q.data?.count || 3;
+            const listLabel = q.list_label || q.data?.list_label || '';
+            
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-orange-400 uppercase tracking-[0.3em] bg-orange-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">Aus dem Gedächtnis</div>
+                <h2 class="text-lg font-black text-white leading-tight mb-6">${this.formatInstruction(q.instruction)}</h2>
+                ${listLabel ? `<div class="text-xs font-bold text-slate-400 mb-3">${listLabel}</div>` : ''}
+                <div class="space-y-3">
+                    ${Array.from({length: count}, (_, i) => `
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-slate-500 text-xs font-black shrink-0">${i+1}</span>
+                        <input type="text" id="recall-item-${i}" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm font-medium outline-none focus:border-indigo-500 transition-all" placeholder="...">
+                    </div>`).join('')}
+                </div>
+            </div>
+            <button onclick="Arena.checkNennen(${count})" class="w-full bg-orange-500 hover:bg-orange-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                <i class="fas fa-check mr-2"></i> Prüfen
+            </button>
+            <div id="recall-feedback" class="hidden mt-6"></div>`;
+        },
+
+        checkNennen(count) {
+            const q = this.state.concepts[this.state.currentIdx];
+            const validAnswers = q.all_valid_answers || q.data?.all_valid_answers || q.correct_answers || [];
+            let matched = 0;
+            const used = new Set();
+            const results = [];
+            
+            for (let i = 0; i < count; i++) {
+                const val = document.getElementById(`recall-item-${i}`).value.trim();
+                let hit = false;
+                if (val) {
+                    const match = validAnswers.find((v, vi) => !used.has(vi) && val.toLowerCase().includes(v.toLowerCase().substring(0, 4)));
+                    if (match) { hit = true; matched++; used.add(validAnswers.indexOf(match)); }
+                }
+                results.push({ val, hit });
+            }
+
+            const score = count > 0 ? Math.round((matched / count) * 100) : 0;
+            const xp = matched * 10;
+            if (score >= 60) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            this.updateTopicMastery(q.topic, score);
+
+            const correctAnswers = q.correct_answers || q.data?.correct_answers || [];
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 mb-4">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-2xl">${score >= 70 ? '🔥' : score >= 40 ? '💪' : '📖'}</span>
+                    <span class="font-black text-white">${matched}/${count} richtig</span>
+                    <span class="text-indigo-400 font-bold text-sm ml-auto">+${xp} XP</span>
+                </div>
+                <div class="space-y-2 mb-4">
+                    ${results.map((r, i) => `
+                    <div class="flex items-center gap-2 text-xs">
+                        <span class="${r.hit ? 'text-emerald-400' : 'text-red-400'}">${r.hit ? '✅' : '❌'}</span>
+                        <span class="text-slate-400">${r.val || '(leer)'}</span>
+                    </div>`).join('')}
+                </div>
+                <div class="bg-white/5 rounded-xl p-3">
+                    <div class="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-2">Korrekte Antworten</div>
+                    <div class="flex flex-wrap gap-1">
+                        ${correctAnswers.map(a => `<span class="bg-emerald-500/10 text-emerald-400 text-[11px] font-bold px-2 py-0.5 rounded">${a}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        renderRecallZuordnung(q, container, topic) {
+            const data = q.data || {};
+            const stmts = data.statements || [];
+            const legend = data.legend || {};
+            const options = Object.keys(legend);
+            const shuffledStmts = [...stmts].sort(() => Math.random() - 0.5);
+
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-orange-400 uppercase tracking-[0.3em] bg-orange-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <h2 class="text-lg font-black text-white leading-tight mb-4">${this.formatInstruction(q.instruction)}</h2>
+                <div class="bg-white/5 rounded-xl p-3 mb-6 flex flex-wrap gap-3">
+                    ${Object.entries(legend).map(([k,v]) => `<span class="text-xs font-bold text-indigo-300"><strong class="text-white">${k}</strong> = ${v}</span>`).join('')}
+                </div>
+                <div class="space-y-3">
+                    ${shuffledStmts.map((s, i) => `
+                    <div class="flex items-center gap-3 bg-white/3 rounded-xl p-3 border border-white/5">
+                        <select id="zu-game-${i}" class="w-14 bg-white/10 border border-white/10 rounded-lg px-2 py-2 text-white font-black text-center outline-none focus:border-indigo-500">
+                            <option value="">–</option>
+                            ${options.map(o => `<option value="${o}">${o}</option>`).join('')}
+                        </select>
+                        <span class="text-slate-300 text-sm flex-1">${s.text}</span>
+                    </div>`).join('')}
+                </div>
+            </div>
+            <button onclick="Arena.checkZuordnung(${JSON.stringify(shuffledStmts).replace(/"/g, '&quot;')})" class="w-full bg-orange-500 hover:bg-orange-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                <i class="fas fa-check mr-2"></i> Prüfen
+            </button>
+            <div id="recall-feedback" class="hidden mt-6"></div>`;
+        },
+
+        checkZuordnung(stmts) {
+            let matched = 0;
+            stmts.forEach((s, i) => {
+                const val = document.getElementById(`zu-game-${i}`).value;
+                if (val === s.answer) matched++;
+            });
+            const score = stmts.length > 0 ? Math.round((matched / stmts.length) * 100) : 0;
+            const xp = matched * 12;
+            if (score >= 60) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            const q = this.state.concepts[this.state.currentIdx];
+            this.updateTopicMastery(q.topic, score);
+
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 mb-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl">${score >= 70 ? '🔥' : '📖'}</span>
+                    <span class="font-black text-white">${matched}/${stmts.length} richtig</span>
+                    <span class="text-indigo-400 font-bold text-sm ml-auto">+${xp} XP</span>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        renderRecallFreitext(q, container, topic) {
+            const data = q.data || {};
+            const answer = data.correct_answer || data.definition_correct || '';
+            const keywords = data.keywords || data.definition_keywords || [];
+
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-orange-400 uppercase tracking-[0.3em] bg-orange-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">Freitext</div>
+                <h2 class="text-lg font-black text-white leading-tight mb-6">${this.formatInstruction(q.instruction)}</h2>
+                <textarea id="recall-text" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white text-sm outline-none focus:border-indigo-500 transition-all resize-none" rows="5" placeholder="Deine Antwort..."></textarea>
+            </div>
+            <button onclick="Arena.checkFreitext()" class="w-full bg-orange-500 hover:bg-orange-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                <i class="fas fa-check mr-2"></i> Prüfen
+            </button>
+            <div id="recall-feedback" class="hidden mt-6"></div>`;
+        },
+
+        checkFreitext() {
+            const q = this.state.concepts[this.state.currentIdx];
+            const data = q.data || {};
+            const keywords = data.keywords || data.definition_keywords || [];
+            const answer = data.correct_answer || data.definition_correct || '';
+            const userText = document.getElementById('recall-text').value.trim();
+
+            let matched = 0;
+            keywords.forEach(k => {
+                if (userText.toLowerCase().includes(k.toLowerCase())) matched++;
+            });
+            const score = keywords.length > 0 ? Math.round((matched / keywords.length) * 100) : 0;
+            const xp = Math.round(score / 10) * 5;
+            if (score >= 60) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            this.updateTopicMastery(q.topic, score);
+
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 mb-4">
+                <div class="text-center mb-4">
+                    <div class="text-3xl font-black ${score >= 70 ? 'text-emerald-400' : score >= 40 ? 'text-yellow-400' : 'text-red-400'}">${score}%</div>
+                    <div class="text-indigo-400 font-bold text-sm">+${xp} XP</div>
+                </div>
+                <div class="flex flex-wrap gap-1 mb-4">
+                    ${keywords.map(k => {
+                        const hit = userText.toLowerCase().includes(k.toLowerCase());
+                        return `<span class="${hit ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/10 text-red-400'} text-[11px] font-bold px-2 py-0.5 rounded">${hit ? '✓' : '✗'} ${k}</span>`;
+                    }).join('')}
+                </div>
+                <div class="bg-white/5 rounded-xl p-3">
+                    <div class="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-2">Musterantwort</div>
+                    <p class="text-slate-400 text-xs">${answer}</p>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        // ═══ MODE: CONNECT ═══
+        renderConnect(q, container) {
+            const data = q.data || {};
+            const keywords = data.keywords || data.definition_keywords || q.correct_answers || q.data?.correct_answers || [];
+            const topic = (q.topic || '').replace(/_/g, ' ');
+            
+            // Create a chain-building puzzle
+            const shuffled = [...keywords].sort(() => Math.random() - 0.5);
+            const correctOrder = keywords.slice(0, Math.min(keywords.length, 5));
+            
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-emerald-400 uppercase tracking-[0.3em] bg-emerald-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">Begriffe verbinden</div>
+                <h2 class="text-lg font-black text-white leading-tight mb-2">${this.formatInstruction(q.instruction)}</h2>
+                <p class="text-slate-400 text-xs mb-6">Welche Schlüsselbegriffe gehören zu diesem Konzept? Wähle alle richtigen.</p>
+                
+                <div class="grid grid-cols-2 gap-3" id="connect-grid">
+                    ${this.generateConnectOptions(keywords).map((opt, i) => `
+                    <button id="connect-${i}" onclick="Arena.toggleConnect(${i})" data-correct="${opt.correct}" class="arena-card p-4 rounded-xl text-left transition-all cursor-pointer hover:border-emerald-500/30">
+                        <span class="text-sm font-bold text-white">${opt.text}</span>
+                    </button>`).join('')}
+                </div>
+            </div>
+            <button onclick="Arena.checkConnect()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                <i class="fas fa-check mr-2"></i> Prüfen
+            </button>
+            <div id="recall-feedback" class="hidden mt-6"></div>`;
+        },
+
+        generateConnectOptions(keywords) {
+            // Take 3-4 correct keywords and 2-3 wrong ones
+            const correct = keywords.slice(0, Math.min(4, keywords.length));
+            const wrongPool = ['Hautdesinfektion', 'Blutdruck', 'Dekubitus', 'Thrombose', 'Mobilisation', 'Sondennahrung', 'Aspirationsprophylaxe', 'Pneumonieprophylaxe'];
+            const wrong = wrongPool.filter(w => !keywords.some(k => k.toLowerCase() === w.toLowerCase())).slice(0, 3);
+            
+            const all = [
+                ...correct.map(c => ({ text: c, correct: true })),
+                ...wrong.map(w => ({ text: w, correct: false }))
+            ];
+            return all.sort(() => Math.random() - 0.5);
+        },
+
+        toggleConnect(idx) {
+            const el = document.getElementById(`connect-${idx}`);
+            el.classList.toggle('border-emerald-500');
+            el.classList.toggle('bg-emerald-500/10');
+            el.dataset.selected = el.classList.contains('border-emerald-500') ? 'true' : 'false';
+        },
+
+        checkConnect() {
+            const buttons = document.querySelectorAll('[id^="connect-"]');
+            let correct = 0;
+            let total = 0;
+            buttons.forEach(btn => {
+                const isCorrect = btn.dataset.correct === 'true';
+                const isSelected = btn.dataset.selected === 'true';
+                if (isCorrect) total++;
+                if (isCorrect && isSelected) { correct++; btn.classList.add('border-emerald-500', 'bg-emerald-500/10'); }
+                if (!isCorrect && isSelected) { btn.classList.add('border-red-500', 'bg-red-500/10'); btn.classList.remove('border-emerald-500', 'bg-emerald-500/10'); }
+                if (isCorrect && !isSelected) { btn.classList.add('border-yellow-500/50'); }
+                btn.style.pointerEvents = 'none';
+            });
+
+            const score = total > 0 ? Math.round((correct / total) * 100) : 0;
+            const xp = correct * 10;
+            if (score >= 60) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            const q = this.state.concepts[this.state.currentIdx];
+            this.updateTopicMastery(q.topic, score);
+
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 mb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">${score >= 70 ? '🔥' : '📖'}</span>
+                    <span class="font-black text-white">${correct}/${total} Begriffe erkannt</span>
+                    <span class="text-indigo-400 font-bold text-sm ml-auto">+${xp} XP</span>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        // ═══ MODE: BRAIN MAP ═══
+        renderBrainMap(q, container) {
+            // Simplified spatial memory: show terms, hide them, user types them back
+            const items = q.correct_answers || q.data?.correct_answers || [];
+            const topic = (q.topic || '').replace(/_/g, ' ');
+            
+            container.innerHTML = `
+            <div class="text-center mb-6">
+                <span class="text-[9px] font-black text-violet-400 uppercase tracking-[0.3em] bg-violet-500/10 px-3 py-1 rounded-full">${topic}</span>
+            </div>
+            <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                <div class="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-4">📍 Merke dir alles!</div>
+                <h2 class="text-lg font-black text-white leading-tight mb-4">${this.formatInstruction(q.instruction)}</h2>
+                
+                <div id="brainmap-show" class="grid grid-cols-2 gap-3 mb-6">
+                    ${items.map((item, i) => `
+                    <div class="bg-violet-500/10 border border-violet-500/20 rounded-xl p-4 text-center">
+                        <span class="text-violet-300 font-bold text-sm">${item}</span>
+                    </div>`).join('')}
+                </div>
+                
+                <div class="text-center">
+                    <div id="brainmap-timer" class="text-4xl font-black text-white mb-2">5</div>
+                    <p class="text-slate-500 text-xs">Sekunden zum Merken</p>
+                </div>
+            </div>
+            <div id="brainmap-recall" class="hidden">
+                <div class="arena-card rounded-3xl p-8 md:p-10 mb-6">
+                    <div class="text-[9px] font-black text-violet-400 uppercase tracking-widest mb-4">Jetzt aus dem Gedächtnis!</div>
+                    <div class="space-y-3">
+                        ${items.map((_, i) => `
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400 text-xs font-black">${i+1}</span>
+                            <input type="text" id="bm-${i}" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-violet-500" placeholder="...">
+                        </div>`).join('')}
+                    </div>
+                </div>
+                <button onclick="Arena.checkBrainMap(${items.length})" class="w-full bg-violet-500 hover:bg-violet-400 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                    <i class="fas fa-check mr-2"></i> Prüfen
+                </button>
+                <div id="recall-feedback" class="hidden mt-6"></div>
+            </div>`;
+
+            // Countdown then hide
+            let countdown = 5;
+            const timerEl = document.getElementById('brainmap-timer');
+            const interval = setInterval(() => {
+                countdown--;
+                timerEl.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    document.getElementById('brainmap-show').innerHTML = '<div class="text-center py-8 text-slate-600"><i class="fas fa-eye-slash text-3xl mb-2"></i><p class="text-xs">Begriffe versteckt!</p></div>';
+                    document.getElementById('brainmap-recall').classList.remove('hidden');
+                    document.getElementById('bm-0')?.focus();
+                }
+            }, 1000);
+        },
+
+        checkBrainMap(count) {
+            const q = this.state.concepts[this.state.currentIdx];
+            const correct = q.correct_answers || q.data?.correct_answers || [];
+            const valid = q.all_valid_answers || q.data?.all_valid_answers || correct;
+            let matched = 0;
+            
+            for (let i = 0; i < count; i++) {
+                const val = document.getElementById(`bm-${i}`).value.trim();
+                if (val && valid.some(v => val.toLowerCase().includes(v.toLowerCase().substring(0, 4)))) matched++;
+            }
+
+            const score = count > 0 ? Math.round((matched / count) * 100) : 0;
+            const xp = matched * 15;
+            if (score >= 60) this.state.streak++; else this.state.streak = 0;
+            this.addXP(xp);
+            this.updateTopicMastery(q.topic, score);
+
+            const fb = document.getElementById('recall-feedback');
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+            <div class="arena-card rounded-2xl p-6 mb-4">
+                <div class="text-center mb-4">
+                    <div class="text-3xl font-black ${score >= 70 ? 'text-emerald-400' : 'text-red-400'}">${matched}/${count}</div>
+                    <div class="text-indigo-400 font-bold text-sm">+${xp} XP</div>
+                </div>
+                <div class="bg-white/5 rounded-xl p-3">
+                    <div class="text-[9px] font-black text-violet-400 uppercase mb-2">Richtige Antworten</div>
+                    <div class="flex flex-wrap gap-1">${correct.map(c => `<span class="bg-violet-500/10 text-violet-300 text-[11px] font-bold px-2 py-0.5 rounded">${c}</span>`).join('')}</div>
+                </div>
+            </div>
+            <button onclick="Arena.next()" class="w-full bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                Weiter <i class="fas fa-arrow-right ml-2"></i>
+            </button>`;
+            document.getElementById('game-streak').textContent = this.state.streak;
+        },
+
+        // ═══ HELPERS ═══
+        formatInstruction(text) {
+            if (!text) return '';
+            return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-indigo-300">$1</strong>');
+        },
+
+        addXP(amount) {
+            this.state.xpSession += amount;
+            this.state.xpTotal += amount;
+            this.state.level = Math.floor(this.state.xpTotal / 500) + 1;
+            localStorage.setItem('arena_xp', this.state.xpTotal.toString());
+            document.getElementById('game-xp-session').textContent = this.state.xpSession;
+        },
+
+        updateTopicMastery(topic, score) {
+            if (!topic) return;
+            const current = this.state.topicMastery[topic] || 0;
+            // Exponential moving average
+            this.state.topicMastery[topic] = Math.round(current * 0.7 + score * 0.3);
+            localStorage.setItem('arena_mastery', JSON.stringify(this.state.topicMastery));
+        },
+
+        next() {
+            this.state.currentIdx++;
+            const total = Math.min(this.state.concepts.length, 15);
+            if (this.state.currentIdx >= total) {
+                this.endGame();
+            } else {
+                this.showCurrent();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        },
+
+        endGame() {
+            // Update streak
+            const today = new Date().toDateString();
+            const lastDate = localStorage.getItem('arena_last_date');
+            let streak = parseInt(localStorage.getItem('arena_streak') || '0');
+            if (lastDate !== today) {
+                streak++;
+                localStorage.setItem('arena_streak', streak.toString());
+                localStorage.setItem('arena_last_date', today);
+            }
+
+            const container = document.getElementById('game-content');
+            container.innerHTML = `
+            <div class="text-center py-12">
+                <div class="text-6xl mb-4">🏆</div>
+                <h2 class="text-3xl font-black text-white tracking-tight mb-2">Session beendet!</h2>
+                <p class="text-slate-400 text-sm mb-8">Du hast ${this.state.xpSession} XP verdient</p>
+                
+                <div class="grid grid-cols-3 gap-4 mb-8 max-w-sm mx-auto">
+                    <div class="arena-card rounded-xl p-4 text-center">
+                        <div class="text-2xl font-black text-indigo-400">${this.state.xpSession}</div>
+                        <div class="text-[9px] text-slate-500 font-bold uppercase">XP</div>
+                    </div>
+                    <div class="arena-card rounded-xl p-4 text-center">
+                        <div class="text-2xl font-black text-orange-400">${this.state.streak}</div>
+                        <div class="text-[9px] text-slate-500 font-bold uppercase">Max Streak</div>
+                    </div>
+                    <div class="arena-card rounded-xl p-4 text-center">
+                        <div class="text-2xl font-black text-emerald-400">Lv.${this.state.level}</div>
+                        <div class="text-[9px] text-slate-500 font-bold uppercase">Level</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-3 max-w-xs mx-auto">
+                    <button onclick="Arena.startMode('${this.state.mode}')" class="bg-indigo-600 hover:bg-indigo-500 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                        <i class="fas fa-redo mr-2"></i> Nochmal
+                    </button>
+                    <button onclick="exitGame()" class="bg-slate-800 hover:bg-slate-700 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+                        <i class="fas fa-home mr-2"></i> Zurück
+                    </button>
+                </div>
+            </div>`;
+        }
+    };
+
+    // ═══ GLOBAL FUNCTIONS ═══
+    function startMode(mode) { Arena.startMode(mode); }
+    
+    function exitGame() {
+        document.getElementById('game-screen').classList.add('hidden');
+        document.getElementById('main-menu').classList.remove('hidden');
+        Arena.renderMastery();
+        Arena.updateHeader();
+        window.scrollTo({ top: 0 });
+    }
+
+    // ═══ BOOT ═══
+    document.addEventListener('DOMContentLoaded', () => Arena.init());
+    </script>
+</body>
+</html>
