@@ -1,0 +1,5119 @@
+[
+  {
+    "q_id": "m3_rf_001",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Nach aktuellem Standard muss eine hygienische Händedesinfektion für eine effektive Keimreduktion mindestens 20 Sekunden dauern.",
+    "answer": "falsch",
+    "explanation": "Die Einreibemethode für die hygienische Händedesinfektion sieht eine Dauer von mindestens 30 Sekunden vor, um eine ausreichende Benetzung und Wirksamkeit zu garantieren.",
+    "source_hint": "M3.A1 Grundlagen hygienischen Handelns - Händehygiene"
+  },
+  {
+    "q_id": "m3_rf_002",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die intime Distanzzone nach Hall umfasst einen Bereich von 0 bis 45 cm um den eigenen Körper.",
+    "answer": "richtig",
+    "explanation": "Diese Zone wird bei der Körperpflege zwangsläufig überschritten und erfordert daher eine besondere Berücksichtigung der Schamgrenzen.",
+    "source_hint": "M3.A2 Berührung – Interaktion bei der körpernahen Versorgung"
+  },
+  {
+    "q_id": "m3_rf_003",
+    "type": "richtig_falsch",
+    "topic": "koerperpflege_basis",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Belebende Waschungen werden in der professionellen Pflege grundsätzlich mit der Haarwuchsrichtung durchgeführt.",
+    "answer": "falsch",
+    "explanation": "Belebende Waschungen erfolgen gegen die Haarwuchsrichtung, während beruhigende Waschungen mit der Haarwuchsrichtung durchgeführt werden.",
+    "source_hint": "M3.A3 Menschen mit Hilfebedarf bei der Körperpflege unterstützen"
+  },
+  {
+    "q_id": "m3_rf_004",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Kohlenhydrate dienen dem Körper als Hauptquelle für Energie und werden im Stoffwechsel zu Glucose umgewandelt.",
+    "answer": "richtig",
+    "explanation": "Glucose liefert den Zellen die notwendige Energie für lebenswichtige Prozesse.",
+    "source_hint": "M3.A4 Menschen mit Hilfebedarf bei der Ernährung unterstützen"
+  },
+  {
+    "q_id": "m3_rf_005",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Laut WHO-Definition liegt eine Adipositas (Fettleibigkeit) bereits ab einem Body-Mass-Index (BMI) von über 25,0 vor.",
+    "answer": "falsch",
+    "explanation": "Ein BMI von 25,0 bis 29,9 gilt als Übergewicht (Präadipositas); Adipositas beginnt erst ab einem BMI von 30,0.",
+    "source_hint": "M3.A4 BMI-Klassifizierung"
+  },
+  {
+    "q_id": "m3_rf_006",
+    "type": "richtig_falsch",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Eine mögliche schwerwiegende Folge einer chronischen Schluckstörung (Dysphagie) ist ein erhöhtes Risiko für eine Pneumonie.",
+    "answer": "richtig",
+    "explanation": "Durch Aspiration von Nahrung oder Flüssigkeit können Erreger in die Lunge gelangen und Entzündungen auslösen.",
+    "source_hint": "M3.B1 Folgen einer Dysphagie"
+  },
+  {
+    "q_id": "m3_rf_007",
+    "type": "richtig_falsch",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Von einer Obstipation spricht man klinisch erst dann, wenn die Stuhlentleerung seltener als alle drei Tage erfolgt.",
+    "answer": "richtig",
+    "explanation": "Zusätzlich zur geringen Frequenz sind oft harter Stuhl und erschwertes Absetzen kennzeichnend für eine Obstipation.",
+    "source_hint": "M3.A5 Skript – Anatomie Darm / Diarrhoe"
+  },
+  {
+    "q_id": "m3_rf_008",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Fieber wird klinisch als eine Erhöhung der Körperkerntemperatur auf über 38,0 °C definiert.",
+    "answer": "richtig",
+    "explanation": "Werte zwischen 37,5 °C und 38,0 °C werden als subfebril bezeichnet, ab 38,1 °C beginnt das leichte Fieber.",
+    "source_hint": "M3.A6 Definition Fieber / Fieberhöhen"
+  },
+  {
+    "q_id": "m3_rf_009",
+    "type": "richtig_falsch",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Milz (Lien) gehört anatomisch zum lymphatischen System und spielt eine zentrale Rolle bei der körpereigenen Abwehr.",
+    "answer": "richtig",
+    "explanation": "Sie dient unter anderem der Vermehrung von Lymphozyten und der Aussonderung alter Erythrozyten.",
+    "source_hint": "M3.A5 Physiologie des Verdauungssystems / Abwehr"
+  },
+  {
+    "q_id": "m3_rf_010",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im PESR-Schema zur Problemformulierung steht der Buchstabe 'R' für die spezifischen Risikofaktoren des Patienten.",
+    "answer": "falsch",
+    "explanation": "Das 'R' steht für Ressourcen, also die Fähigkeiten und Möglichkeiten, die der Patient zur Problembewältigung noch besitzt.",
+    "source_hint": "M3.B2 II. Probleme und Ressourcen"
+  },
+  {
+    "q_id": "m3_rf_011",
+    "type": "richtig_falsch",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Nach der SMART-Regel zur Zielformulierung muss ein Pflegeziel messbar (überprüfbar) sein.",
+    "answer": "richtig",
+    "explanation": "Nur messbare Ziele erlauben eine objektive Evaluation der Pflegemaßnahmen.",
+    "source_hint": "M3.B2 III. Ziele festlegen"
+  },
+  {
+    "q_id": "m3_rf_012",
+    "type": "richtig_falsch",
+    "topic": "identitaet_petzold",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Nach dem Konzept von H.G. Petzold ruht die menschliche Identität auf vier tragenden Säulen.",
+    "answer": "falsch",
+    "explanation": "Das Konzept beschreibt exakt fünf Säulen: Leiblichkeit, soziale Bezüge, Arbeit/Leistung, materielle Sicherheit und Werte.",
+    "source_hint": "M3.B2 Die fünf Säulen der Identität"
+  },
+  {
+    "q_id": "m3_rf_013",
+    "type": "richtig_falsch",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Autonomieprinzip in der Pflegeethik besagt, dass jede Person das Recht hat, sich frei für oder gegen eine medizinische Behandlung zu entscheiden.",
+    "answer": "richtig",
+    "explanation": "Dies schließt das Recht ein, Behandlungen abzulehnen, solange der Patient urteilsfähig ist.",
+    "source_hint": "M3.B1 Ethisches Dilemma / Autonomieprinzip"
+  },
+  {
+    "q_id": "m3_rf_014",
+    "type": "richtig_falsch",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der korrekte Umgang mit medizinischen Geräten wie Fieberthermometern unterliegt den Bestimmungen des Medizinproduktegesetzes.",
+    "answer": "richtig",
+    "explanation": "Pflegekräfte müssen die sachgerechte Handhabung und Wartung dieser Produkte gemäß Gesetz sicherstellen.",
+    "source_hint": "M3.A6 Lernziele Wissen"
+  },
+  {
+    "q_id": "m3_rf_015",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Einmalhandschuhe können bei sichtbarer Verschmutzung während der Patientenversorgung desinfiziert werden, um Material zu sparen.",
+    "answer": "falsch",
+    "explanation": "Einmalhandschuhe dürfen niemals desinfiziert werden, da das Material durch Alkohol durchlässig wird; sie müssen bei Verschmutzung sofort gewechselt werden.",
+    "source_hint": "M3.A1 Grundlagen hygienischen Handelns - PSA"
+  },
+  {
+    "q_id": "m3_rf_016",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Resorption der meisten Nährstoffbestandteile findet aufgrund der Oberflächenvergrößerung durch Zotten primär im Dickdarm statt.",
+    "answer": "falsch",
+    "explanation": "Die Resorption findet im Dünndarm statt. Der Dickdarm ist primär für die Eindickung des Stuhls durch Wasserentzug zuständig.",
+    "source_hint": "M3.A5 Skript – Anatomie Darm"
+  },
+  {
+    "q_id": "m3_rf_017",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Schüttelfrost ist ein typisches Symptom der dritten Fieberphase, des Fieberabfalls (Stadium decrementi).",
+    "answer": "falsch",
+    "explanation": "Schüttelfrost tritt in der Phase des Fieberanstiegs auf, um durch Muskelarbeit Wärme zu produzieren; beim Abfall kommt es eher zu Schwitzen.",
+    "source_hint": "M3.A6 Fieberphasen / Symptome"
+  },
+  {
+    "q_id": "m3_rf_018",
+    "type": "richtig_falsch",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Clostridium difficile gehört zu den bakteriellen Erregern, die eine schwere infektiöse Enteritis auslösen können.",
+    "answer": "richtig",
+    "explanation": "Dieser Erreger ist besonders nach Antibiotikatherapien relevant und erfordert strikte hygienische Isolationsmaßnahmen.",
+    "source_hint": "M3.A5 Akute infektiöse Enteritis"
+  },
+  {
+    "q_id": "m3_rf_019",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Indirekte Daten im Pflegeprozess sind Informationen, die aus Berichten anderer Berufsgruppen oder Dokumenten des Patienten gewonnen werden.",
+    "answer": "richtig",
+    "explanation": "Im Gegensatz dazu sind direkte Daten Aussagen, die der Patient selbst tätigt (Subjektiv) oder Beobachtungen am Patienten (Objektiv).",
+    "source_hint": "M3.B2 Methodik der Datenerhebung"
+  },
+  {
+    "q_id": "m3_rf_020",
+    "type": "richtig_falsch",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die vierte Säule der Identität ('Materielle Sicherheit') bezieht sich laut Petzold ausschließlich auf das Vorhandensein einer privaten Krankenversicherung.",
+    "answer": "falsch",
+    "explanation": "Materielle Sicherheit umfasst das gesamte Umfeld: Einkommen, Geld, Nahrung, Kleidung, Wohnung und den ökologischen Raum.",
+    "source_hint": "M3.B2 Materielle Sicherheit (Säule 4)"
+  },
+  {
+    "q_id": "m3_rf_021",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Beim korrekten Anlegen der persönlichen Schutzausrüstung (PSA) erfolgt die Händedesinfektion als erster Schritt, noch bevor der Schutzkittel angezogen wird.",
+    "answer": "richtig",
+    "explanation": "Um Keime nicht auf die PSA zu übertragen, müssen die Hände zuerst desinfiziert werden. Die Reihenfolge ist entscheidend für die Infektionsprävention.",
+    "source_hint": "M3.A1 Grundlagen hygienischen Handelns - PSA"
+  },
+  {
+    "q_id": "m3_rf_022",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die gesellschaftliche Distanzzone nach Hall beginnt ab einer Entfernung von etwa 1,20 Metern und reicht bis zu 3,50 Metern.",
+    "answer": "richtig",
+    "explanation": "In dieser Zone findet in der Regel die erste Kontaktaufnahme statt, z. B. beim Betreten des Patientenzimmers.",
+    "source_hint": "M3.A2 Berührung – Interaktion bei der körpernahen Versorgung"
+  },
+  {
+    "q_id": "m3_rf_023",
+    "type": "richtig_falsch",
+    "topic": "koerperpflege_basis",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine belebende Ganzkörperwaschung wird grundsätzlich in Haarwuchsrichtung durchgeführt, um den venösen Rückfluss zu fördern.",
+    "answer": "falsch",
+    "explanation": "Belebende Waschungen erfolgen gegen die Haarwuchsrichtung; Waschungen mit der Haarwuchsrichtung wirken beruhigend.",
+    "source_hint": "M3.A3 Menschen mit Hilfebedarf bei der Körperpflege unterstützen"
+  },
+  {
+    "q_id": "m3_rf_024",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das Enzym Amylase im Mundspeichel dient primär dazu, komplexe Eiweißstrukturen in kleinere Aminosäuren aufzuspalten.",
+    "answer": "falsch",
+    "explanation": "Amylase spaltet Kohlenhydrate (Stärke) in Malzzucker auf. Die Eiweißverdauung beginnt erst im Magen durch Pepsin.",
+    "source_hint": "M3.A4 Physiologie der Ernährung"
+  },
+  {
+    "q_id": "m3_rf_025",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Body-Mass-Index (BMI) von 27,5 kg/m² wird nach den Richtlinien der WHO bereits als Adipositas Grad I eingestuft.",
+    "answer": "falsch",
+    "explanation": "Ein BMI zwischen 25,0 und 29,9 gilt als Übergewicht (Präadipositas). Adipositas beginnt erst ab einem Wert von 30,0.",
+    "source_hint": "M3.A4 BMI-Klassifizierung"
+  },
+  {
+    "q_id": "m3_rf_026",
+    "type": "richtig_falsch",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Zur Aspirationsprophylaxe sollte ein Patient mit Dysphagie während der Mahlzeit und bis zu 30 Minuten danach mit erhöhtem Oberkörper gelagert werden.",
+    "answer": "richtig",
+    "explanation": "Die Hochlagerung nutzt die Schwerkraft, um das Zurückfließen von Nahrung in die Luftröhre zu verhindern.",
+    "source_hint": "M3.B1 Aspirationsprophylaxe"
+  },
+  {
+    "q_id": "m3_rf_027",
+    "type": "richtig_falsch",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die typischen Ausbuchtungen der Dickdarmwand werden als Haustren bezeichnet und entstehen durch die Kontraktion der Längsmuskelschichten (Taenien).",
+    "answer": "richtig",
+    "explanation": "Dies ist ein charakteristisches anatomisches Merkmal des Dickdarms zur Durchmischung des Stuhls.",
+    "source_hint": "M3.A5 Skript – Anatomie Darm"
+  },
+  {
+    "q_id": "m3_rf_028",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Unter einer 'Krisis' versteht man in der Fieberlehre den langsamen und schonenden Temperaturabfall über mehrere Tage hinweg.",
+    "answer": "falsch",
+    "explanation": "Eine Krisis ist ein schneller Temperaturabfall innerhalb weniger Stunden, der den Kreislauf stark belasten kann. Der langsame Abfall heißt Lysis.",
+    "source_hint": "M3.A6 Fieberphasen"
+  },
+  {
+    "q_id": "m3_rf_029",
+    "type": "richtig_falsch",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Leukozyten sind die weißen Blutkörperchen, die als Hauptträger der Immunabwehr fungieren und in verschiedene Typen wie Granulozyten und Lymphozyten unterteilt werden.",
+    "answer": "richtig",
+    "explanation": "Diese Zellen patrouillieren im Körper, um Krankheitserreger zu identifizieren und unschädlich zu machen.",
+    "source_hint": "M3.A5 Physiologie des Verdauungssystems / Abwehr"
+  },
+  {
+    "q_id": "m3_rf_030",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im PESR-Schema zur Formulierung von Pflegediagnosen steht der Buchstabe 'E' für die subjektiven Empfindungen des Patienten.",
+    "answer": "falsch",
+    "explanation": "Das 'E' steht für Einflussfaktor (Ätiologie/Ursache), also warum das Problem besteht. Empfindungen gehören zu den Symptomen (S).",
+    "source_hint": "M3.B2 II. Probleme und Ressourcen"
+  },
+  {
+    "q_id": "m3_rf_031",
+    "type": "richtig_falsch",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach der SMART-Regel bedeutet das 'T', dass jedes Pflegeziel mit einem klaren Kontrolldatum (Terminierbarkeit) versehen sein muss.",
+    "answer": "richtig",
+    "explanation": "Ohne Termin ist eine Überprüfung der Wirksamkeit der Pflege (Evaluation) nicht objektiv möglich.",
+    "source_hint": "M3.B2 III. Ziele festlegen"
+  },
+  {
+    "q_id": "m3_rf_032",
+    "type": "richtig_falsch",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Säule 'Arbeit und Leistung' im Identitätsmodell nach Petzold schließt neben der Erwerbsarbeit auch Hobbys und ehrenamtliche Tätigkeiten mit ein.",
+    "answer": "richtig",
+    "explanation": "Identität speist sich aus allen Tätigkeiten, mit denen sich ein Mensch identifiziert und über die er Bestätigung erfährt.",
+    "source_hint": "M3.B2 Arbeit und Leistung (Säule 3)"
+  },
+  {
+    "q_id": "m3_rf_033",
+    "type": "richtig_falsch",
+    "topic": "ethik_pflege",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das ethische Prinzip des Nichtschadens (Non-maleficence) fordert von der Pflegekraft, aktiv Maßnahmen zur Förderung des Wohlbefindens einzuleiten.",
+    "answer": "falsch",
+    "explanation": "Das aktive Fördern des Wohls entspricht dem Fürsorgeprinzip (Beneficence). Nichtschaden bedeutet primär, dem Patienten keine Verletzungen oder Leiden zuzufügen.",
+    "source_hint": "M3.B1 Prinzipien der Pflegeethik"
+  },
+  {
+    "q_id": "m3_rf_034",
+    "type": "richtig_falsch",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Durchführungsnachweis gilt rechtlich erst dann als erbracht, wenn die Pflegemaßnahme mit einem Handzeichen der ausführenden Kraft quittiert wurde.",
+    "answer": "richtig",
+    "explanation": "Das Handzeichen ist der Leistungsnachweis und dient der rechtlichen Absicherung sowie der Qualitätssicherung.",
+    "source_hint": "M3.B2 V. Maßnahmen durchführen"
+  },
+  {
+    "q_id": "m3_rf_035",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine nosokomiale Infektion ist eine Infektionskrankheit, die ein Patient bereits als Grunderkrankung in das Krankenhaus mitbringt.",
+    "answer": "falsch",
+    "explanation": "Eine nosokomiale Infektion ist eine im Krankenhaus (oder einer Pflegeeinrichtung) zusätzlich erworbene Infektion.",
+    "source_hint": "M3.A1 Grundlagen hygienischen Handelns"
+  },
+  {
+    "q_id": "m3_rf_036",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die intime Distanzzone nach Hall beschreibt den Bereich zwischen zwei Personen ab einer Entfernung von 1,50 Metern.",
+    "answer": "falsch",
+    "explanation": "Die intime Zone reicht von 0 bis 45 cm. 1,50 Meter fiele bereits in die persönliche oder gesellschaftliche Distanz.",
+    "source_hint": "M3.A2 Berührung – Interaktion bei der körpernahen Versorgung"
+  },
+  {
+    "q_id": "m3_rf_037",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei der Resorption von Fetten im Dünndarm bilden sich sogenannte Mizellen, um die wasserunlöslichen Fettbestandteile zur Darmwand zu transportieren.",
+    "answer": "richtig",
+    "explanation": "Mizellen sind notwendig, da der Inhalt des Dünndarms wässrig ist und Fette ohne diese Transporthilfe nicht aufgenommen werden könnten.",
+    "source_hint": "M3.A4 Physiologie der Ernährung"
+  },
+  {
+    "q_id": "m3_rf_038",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Resorptionsfieber tritt häufig 2 bis 3 Tage nach einer Operation auf und ist eine Reaktion auf den Abbau von Blutergüssen oder Gewebetrümmern.",
+    "answer": "richtig",
+    "explanation": "Es handelt sich um ein aseptisches Fieber (ohne Infektion), das meist eine Höhe von 38,5 °C nicht überschreitet.",
+    "source_hint": "M3.A6 Fieberarten"
+  },
+  {
+    "q_id": "m3_rf_039",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Objektive Daten in der Informationssammlung sind Messwerte oder Beobachtungen, die unabhängig vom Empfinden des Patienten erhoben werden können.",
+    "answer": "richtig",
+    "explanation": "Beispiele sind Blutdruck, Puls oder die Körpertemperatur, im Gegensatz zu subjektiven Daten wie 'Angst' oder 'Schmerz'.",
+    "source_hint": "M3.B2 Methodik der Datenerhebung"
+  },
+  {
+    "q_id": "m3_rf_040",
+    "type": "richtig_falsch",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine Identitätskrise entsteht laut Petzold dann, wenn eine oder mehrere der fünf Säulen 'wegbrechen' und die verbleibenden Säulen dies nicht stabilisieren können.",
+    "answer": "richtig",
+    "explanation": "Wenn tragende Lebensbereiche wie Gesundheit oder Arbeit verloren gehen, gerät das gesamte seelische Gleichgewicht aus der Balance.",
+    "source_hint": "M3.B2 Die fünf Säulen der Identität"
+  },
+  {
+    "q_id": "m3_nl_001",
+    "type": "nennen_liste",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 5 Indikationen der Händedesinfektion nach dem WHO-Modell.",
+    "list_label": "Indikationen der Händedesinfektion",
+    "count": 5,
+    "correct_answers": [
+      "Vor Patientenkontakt",
+      "Vor aseptischen Tätigkeiten",
+      "Nach Kontakt mit potenziell infektiösem Material",
+      "Nach Patientenkontakt",
+      "Nach Kontakt mit der unmittelbaren Patientenumgebung"
+    ],
+    "all_valid_answers": [
+      "Vor Patientenkontakt",
+      "Vor direktem Patientenkontakt",
+      "Vor aseptischen Tätigkeiten",
+      "Vor reinigen oder aseptischen Prozeduren",
+      "Nach Kontakt mit potenziell infektiösem Material",
+      "Nach Kontakt mit Körperflüssigkeiten",
+      "Nach Patientenkontakt",
+      "Nach direktem Patientenkontakt",
+      "Nach Kontakt mit der unmittelbaren Patientenumgebung",
+      "Nach Kontakt mit Oberflächen in Patientennähe"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt genannter Indikation."
+  },
+  {
+    "q_id": "m3_nl_002",
+    "type": "nennen_liste",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die korrekte Reihenfolge beim Anlegen der persönlichen Schutzausrüstung (PSA).",
+    "list_label": "Reihenfolge PSA anlegen",
+    "count": 5,
+    "correct_answers": [
+      "Händedesinfektion",
+      "Schutzkittel",
+      "Mund-Nasen-Schutz",
+      "Schutzbrille",
+      "Einmalhandschuhe"
+    ],
+    "all_valid_answers": [
+      "Händedesinfektion",
+      "Desinfizieren der Hände",
+      "Schutzkittel",
+      "Kittel",
+      "Mund-Nasen-Schutz",
+      "Maske",
+      "FFP2-Maske",
+      "Schutzbrille",
+      "Brille",
+      "Einmalhandschuhe",
+      "Handschuhe"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Schritt in der richtigen Reihenfolge."
+  },
+  {
+    "q_id": "m3_nl_003",
+    "type": "nennen_liste",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 4 Distanzzonen nach Hall mit den entsprechenden Meterbereichen.",
+    "list_label": "Distanzzonen nach Hall",
+    "count": 4,
+    "correct_answers": [
+      "Intime Distanz (0 - 45 cm)",
+      "Persönliche Distanz (45 - 120 cm)",
+      "Gesellschaftliche Distanz (120 - 350 cm)",
+      "Öffentliche Distanz (über 350 cm)"
+    ],
+    "all_valid_answers": [
+      "Intime Distanz",
+      "Intimzone",
+      "0 bis 45 cm",
+      "Persönliche Distanz",
+      "Persönliche Zone",
+      "45 bis 120 cm",
+      "Gesellschaftliche Distanz",
+      "Soziale Distanz",
+      "1,20 bis 3,50 m",
+      "Öffentliche Distanz",
+      "Öffentliche Zone",
+      "über 3,50 m"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Zone inkl. korrektem Bereich."
+  },
+  {
+    "q_id": "m3_nl_004",
+    "type": "nennen_liste",
+    "topic": "koerperpflege_basis",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie 4 Kriterien zur Beobachtung und Beurteilung des Hautzustandes.",
+    "list_label": "Kriterien der Hautbeobachtung",
+    "count": 4,
+    "correct_answers": [
+      "Hautfarbe",
+      "Hautturgor",
+      "Hauttemperatur",
+      "Hautbeschaffenheit"
+    ],
+    "all_valid_answers": [
+      "Hautfarbe",
+      "Farbe",
+      "Hautturgor",
+      "Hautspannung",
+      "Spannungszustand",
+      "Hauttemperatur",
+      "Wärme",
+      "Hautbeschaffenheit",
+      "Hautzustand",
+      "Oberfläche"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m3_nl_005",
+    "type": "nennen_liste",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die wesentlichen Abschnitte des menschlichen Verdauungstraktes in der Reihenfolge der Nahrungspassage.",
+    "list_label": "Abschnitte des Verdauungstraktes",
+    "count": 6,
+    "correct_answers": [
+      "Mundhöhle",
+      "Speiseröhre",
+      "Magen",
+      "Dünndarm",
+      "Dickdarm",
+      "Mastdarm"
+    ],
+    "all_valid_answers": [
+      "Mundhöhle",
+      "Cavitas oris",
+      "Speiseröhre",
+      "Ösophagus",
+      "Magen",
+      "Gaster",
+      "Dünndarm",
+      "Intestinum tenue",
+      "Dickdarm",
+      "Intestinum crassum",
+      "Kolon",
+      "Mastdarm",
+      "Rektum"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro anatomisch korrektem Abschnitt."
+  },
+  {
+    "q_id": "m3_nl_006",
+    "type": "nennen_liste",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie 4 pflegerische Screening-Instrumente zur Identifikation einer Mangelernährung.",
+    "list_label": "Screening-Instrumente Mangelernährung",
+    "count": 4,
+    "correct_answers": [
+      "NRS (Nutritional Risk Screening)",
+      "MUST (Malnutrition Universal Screening Tool)",
+      "MNA (Mini Nutritional Assessment)",
+      "SGA (Subjective Global Assessment)"
+    ],
+    "all_valid_answers": [
+      "NRS",
+      "Nutritional Risk Screening",
+      "MUST",
+      "Malnutrition Universal Screening Tool",
+      "MNA",
+      "Mini Nutritional Assessment",
+      "SGA",
+      "Subjective Global Assessment",
+      "PEMU"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kürzel oder Namen."
+  },
+  {
+    "q_id": "m3_nl_007",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei physiologischen Hauptphasen des Schluckvorgangs.",
+    "list_label": "Phasen des Schluckvorgangs",
+    "count": 3,
+    "correct_answers": [
+      "Orale Phase",
+      "Pharyngeale Phase",
+      "Ösophageale Phase"
+    ],
+    "all_valid_answers": [
+      "Orale Phase",
+      "Mundphase",
+      "Pharyngeale Phase",
+      "Rachenphase",
+      "Ösophageale Phase",
+      "Speiseröhrenphase"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Phase."
+  },
+  {
+    "q_id": "m3_nl_008",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie 4 Leitsymptome, die auf eine Schluckstörung (Dysphagie) hinweisen können.",
+    "list_label": "Leitsymptome einer Dysphagie",
+    "count": 4,
+    "correct_answers": [
+      "Husten oder Räuspern während des Essens",
+      "Gurgelnde oder nasale Stimme nach dem Schlucken",
+      "Verbleibende Speisereste in der Mundhöhle",
+      "Steckenbleiben der Nahrung im Hals"
+    ],
+    "all_valid_answers": [
+      "Husten",
+      "Räuspern",
+      "Gurgelnde Stimme",
+      "Nasale Stimme",
+      "Speisereste in der Wangentasche",
+      "Hamstern",
+      "Steckenbleiben der Nahrung",
+      "Kloßgefühl",
+      "Ausspucken von Nahrung",
+      "Verschlucken"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m3_nl_009",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie 4 mögliche Ursachen für Diarrhoe oder eine infektiöse Enteritis.",
+    "list_label": "Ursachen für Diarrhoe",
+    "count": 4,
+    "correct_answers": [
+      "Bakterielle Infektionen (z.B. Salmonellen)",
+      "Virale Infektionen (z.B. Noroviren)",
+      "Nebenwirkungen von Medikamenten (z.B. Antibiotika)",
+      "Chronisch-entzündliche Darmerkrankungen"
+    ],
+    "all_valid_answers": [
+      "Bakterien",
+      "Salmonellen",
+      "Campylobacter",
+      "Clostridium difficile",
+      "Viren",
+      "Norovirus",
+      "Rotavirus",
+      "Medikamente",
+      "Antibiotika",
+      "Zytostatika",
+      "Morbus Crohn",
+      "Colitis ulcerosa",
+      "Lebensmittelvergiftung",
+      "Psychische Faktoren",
+      "Stress"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Ursache."
+  },
+  {
+    "q_id": "m3_nl_010",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei Phasen des Fieberverlaufs.",
+    "list_label": "Die Fieberphasen",
+    "count": 3,
+    "correct_answers": [
+      "Fieberanstieg",
+      "Fieberhöhe",
+      "Fieberabfall"
+    ],
+    "all_valid_answers": [
+      "Fieberanstieg",
+      "Stadium incrementi",
+      "Fieberhöhe",
+      "Fastigium",
+      "Fieberabfall",
+      "Stadium decrementi"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Phase."
+  },
+  {
+    "q_id": "m3_nl_011",
+    "type": "nennen_liste",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 4 zentralen ethischen Prinzipien nach Beauchamp und Childress, die in der Pflege Anwendung finden.",
+    "list_label": "Prinzipien der Pflegeethik",
+    "count": 4,
+    "correct_answers": [
+      "Respekt vor der Autonomie",
+      "Fürsorge",
+      "Nichtschaden",
+      "Gerechtigkeit"
+    ],
+    "all_valid_answers": [
+      "Respekt vor der Autonomie",
+      "Selbstbestimmung",
+      "Autonomieprinzip",
+      "Prinzip der Fürsorge",
+      "Wohltun",
+      "Beneficence",
+      "Prinzip des Nichtschadens",
+      "Schadensvermeidung",
+      "Non-maleficence",
+      "Prinzip der Gerechtigkeit",
+      "Gerechte Verteilung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m3_nl_012",
+    "type": "nennen_liste",
+    "topic": "identitaet_petzold",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 5 Säulen der Identität nach dem Konzept von H.G. Petzold.",
+    "list_label": "Die 5 Säulen der Identität",
+    "count": 5,
+    "correct_answers": [
+      "Leiblichkeit",
+      "Soziale Bezüge",
+      "Arbeit und Leistung",
+      "Materielle Sicherheit",
+      "Werte"
+    ],
+    "all_valid_answers": [
+      "Leiblichkeit",
+      "Körperlichkeit",
+      "Leib",
+      "Soziale Bezüge",
+      "Soziales Netzwerk",
+      "Soziales",
+      "Arbeit und Leistung",
+      "Tätigkeit",
+      "Materielle Sicherheit",
+      "Sicherheit",
+      "Finanzen/Wohnraum",
+      "Werte",
+      "Ideen",
+      "Glauben",
+      "Normen"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt genannter Säule."
+  },
+  {
+    "q_id": "m3_nl_013",
+    "type": "nennen_liste",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die Begriffe, für die die Buchstaben der SMART-Regel bei der Zielformulierung stehen.",
+    "list_label": "SMART-Regel",
+    "count": 5,
+    "correct_answers": [
+      "Spezifisch",
+      "Messbar",
+      "Akzeptiert",
+      "Realisierbar",
+      "Terminiert"
+    ],
+    "all_valid_answers": [
+      "Spezifisch",
+      "Konkret",
+      "Messbar",
+      "Überprüfbar",
+      "Akzeptiert",
+      "Angemessen",
+      "Realisierbar",
+      "Erreichbar",
+      "Umsetzbar",
+      "Terminiert",
+      "Terminierbar",
+      "Zeitlich festgelegt"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt zugeordnetem Begriff."
+  },
+  {
+    "q_id": "m3_nl_014",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie 4 Problemarten, die im Rahmen der Pflegeplanung unterschieden werden können.",
+    "list_label": "Problemarten im Pflegeprozess",
+    "count": 4,
+    "correct_answers": [
+      "Aktuelle Probleme",
+      "Potenzielle Probleme",
+      "Verdeckte Probleme",
+      "Individuelle Probleme"
+    ],
+    "all_valid_answers": [
+      "Aktuelle Probleme",
+      "Offensichtliche Probleme",
+      "Potenzielle Probleme",
+      "Mögliche Probleme",
+      "Risiken",
+      "Verdeckte Probleme",
+      "Verschleierte Probleme",
+      "Individuelle Probleme",
+      "Speziell patientenbezogene Probleme",
+      "Generelle Probleme"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Problemart."
+  },
+  {
+    "q_id": "m3_nl_015",
+    "type": "nennen_liste",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 3 Stufen der Keimreduktion in der medizinischen Hygiene.",
+    "list_label": "Stufen der Keimreduktion",
+    "count": 3,
+    "correct_answers": [
+      "Reinigung",
+      "Desinfektion",
+      "Sterilisation"
+    ],
+    "all_valid_answers": [
+      "Reinigung",
+      "Säuberung",
+      "Desinfektion",
+      "Keimarmut",
+      "Sterilisation",
+      "Keimfreiheit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Stufe."
+  },
+  {
+    "q_id": "m3_nl_016",
+    "type": "nennen_liste",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 5 Regeln der Deutschen Gesellschaft für Ernährung (DGE) für eine vollwertige Ernährung.",
+    "list_label": "DGE-Regeln",
+    "count": 5,
+    "correct_answers": [
+      "Lebensmittelvielfalt genießen",
+      "Gemüse und Obst - 5 am Tag",
+      "Vollkorn wählen",
+      "Mit tierischen Lebensmitteln die Auswahl ergänzen",
+      "Gesundheitsfördernde Fette nutzen",
+      "Zucker und Salz einsparen",
+      "Am besten Wasser trinken",
+      "Schonend zubereiten",
+      "Achtsam essen und genießen",
+      "Auf das Gewicht achten und in Bewegung bleiben"
+    ],
+    "all_valid_answers": [
+      "Lebensmittelvielfalt genießen",
+      "abwechslungsreich essen",
+      "5 Portionen Obst und Gemüse",
+      "Obst und Gemüse",
+      "Vollkornprodukte",
+      "tierische Lebensmittel",
+      "Milchprodukte",
+      "wenig Fleisch",
+      "Fisch essen",
+      "gesunde Fette",
+      "pflanzliche Öle",
+      "wenig Zucker",
+      "wenig Salz",
+      "Wasser trinken",
+      "1,5 Liter Wasser",
+      "schonende Zubereitung",
+      "Zeit lassen beim Essen",
+      "Bewegung"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt genannter Regel."
+  },
+  {
+    "q_id": "m3_nl_017",
+    "type": "nennen_liste",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 mögliche Ursachen für Ernährungsstörungen (wie Mangel- oder Unterernährung) im Alter.",
+    "list_label": "Ursachen für Ernährungsstörungen",
+    "count": 4,
+    "correct_answers": [
+      "Appetitlosigkeit",
+      "Kau- und Schluckstörungen",
+      "Probleme bei der Verdauung",
+      "Probleme bei der Aufnahme von Nährstoffen",
+      "Probleme bei der Verwertung von Nährstoffen",
+      "Medikamenteneinnahme",
+      "Demenz",
+      "Armut",
+      "Einsamkeit / soziale Isolation"
+    ],
+    "all_valid_answers": [
+      "Appetitlosigkeit",
+      "Anorexie",
+      "Dysphagie",
+      "Schluckstörungen",
+      "Zahnprobleme",
+      "schlechte Prothese",
+      "Verdauungsprobleme",
+      "Malabsorption",
+      "Maldigestion",
+      "Medikamente",
+      "Polypharmazie",
+      "Demenz",
+      "Vergesslichkeit",
+      "Armut",
+      "finanzielle Not",
+      "Isolation",
+      "Depression",
+      "Einsamkeit"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Ursache."
+  },
+  {
+    "q_id": "m3_nl_018",
+    "type": "nennen_liste",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die BMI-Klassifikationen der WHO mit den dazugehörigen Wertebereichen (kg/m²).",
+    "list_label": "BMI-Klassifikationen",
+    "count": 4,
+    "correct_answers": [
+      "Untergewicht: < 18,5",
+      "Normalgewicht: 18,5 – 24,9",
+      "Präadipositas (Übergewicht): 25,0 – 29,9",
+      "Adipositas: >= 30,0"
+    ],
+    "all_valid_answers": [
+      "Untergewicht",
+      "kleiner 18,5",
+      "Normalgewicht",
+      "18,5 bis 24,9",
+      "Präadipositas",
+      "Übergewicht",
+      "25 bis 29,9",
+      "Adipositas",
+      "Fettleibigkeit",
+      "über 30",
+      "ab 30"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Begriff mit korrektem Wertebereich."
+  },
+  {
+    "q_id": "m3_nl_019",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 pflegerische Maßnahmen zur Aspirationsprophylaxe während der Nahrungsaufnahme.",
+    "list_label": "Maßnahmen zur Aspirationsprophylaxe",
+    "count": 4,
+    "correct_answers": [
+      "Oberkörperhochlagerung (90 Grad)",
+      "Anpassung der Kostform (z.B. püriert)",
+      "Andicken von Flüssigkeiten",
+      "Vermeidung von Mischkonsistenzen (z.B. Eintöpfe)",
+      "Mundhöhle nach dem Essen inspizieren",
+      "Zeitdruck vermeiden / Pausen lassen"
+    ],
+    "all_valid_answers": [
+      "Aufrechte Sitzposition",
+      "Oberkörper hochstellen",
+      "Kostform anpassen",
+      "pürierte Kost",
+      "weiche Kost",
+      "Flüssigkeit andicken",
+      "keine Mischkonsistenzen",
+      "Mundpflege nach dem Essen",
+      "Speisereste entfernen",
+      "Zeit lassen",
+      "Ruhe beim Essen",
+      "Schlucktraining"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_nl_020",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die vier anatomischen Wandschichten des Verdauungstraktes in der Reihenfolge von außen nach innen.",
+    "list_label": "Wandschichten des Verdauungstrakts",
+    "count": 4,
+    "correct_answers": [
+      "Serosa",
+      "Muscularis",
+      "Submucosa",
+      "Mucosa"
+    ],
+    "all_valid_answers": [
+      "Serosa",
+      "Tunica serosa",
+      "Muscularis",
+      "Tunica muscularis",
+      "Muskelschicht",
+      "Submucosa",
+      "Tela submucosa",
+      "Bindegewebsschicht",
+      "Mucosa",
+      "Tunica mucosa",
+      "Schleimhaut"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro anatomisch korrekter Schicht in der richtigen Reihenfolge."
+  },
+  {
+    "q_id": "m3_nl_021",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 pflegerische Maßnahmen zur Prophylaxe oder Behandlung einer Obstipation.",
+    "list_label": "Maßnahmen bei Obstipation",
+    "count": 4,
+    "correct_answers": [
+      "Ausreichende Flüssigkeitszufuhr",
+      "Ballaststoffreiche Ernährung",
+      "Körperliche Bewegung fördern",
+      "Kolonmassage / Bauchmassage",
+      "Geregelte Stuhlzeiten / Toilettentraining"
+    ],
+    "all_valid_answers": [
+      "viel trinken",
+      "Flüssigkeit",
+      "Ballaststoffe",
+      "Vollkornprodukte",
+      "Obst",
+      "Bewegung",
+      "Mobilisation",
+      "Bauchmassage",
+      "Kolonmassage",
+      "Einläufe",
+      "Stuhlmanagement",
+      "feste Zeiten"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_nl_022",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 3 verschiedene Fieberarten und eine kurze Definition dazu.",
+    "list_label": "Fieberarten",
+    "count": 3,
+    "correct_answers": [
+      "Infektiöses Fieber (durch Mikroorganismen/Toxine)",
+      "Resorptionsfieber (nach OP/Trauma durch Gewebeabbau)",
+      "Zentrales Fieber (durch Störung des Hypothalamus)",
+      "Durstfieber (durch Flüssigkeitsmangel)"
+    ],
+    "all_valid_answers": [
+      "Infektiöses Fieber",
+      "Infektfieber",
+      "Resorptionsfieber",
+      "aseptisches Fieber",
+      "Zentrales Fieber",
+      "zerebrales Fieber",
+      "Durstfieber",
+      "Dehydrationsfieber",
+      "Toxisches Fieber",
+      "Tumorfieber"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benannter Art inkl. Merkmal/Definition."
+  },
+  {
+    "q_id": "m3_nl_023",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 3 schwerwiegende Komplikationen, die im Verlauf einer Fiebererkrankung auftreten können.",
+    "list_label": "Komplikationen bei Fieber",
+    "count": 3,
+    "correct_answers": [
+      "Fieberdelir",
+      "Fieberkrampf",
+      "Krisis (kritischer Temperaturabfall)",
+      "Lebensbedrohlicher Flüssigkeitsverlust (Dehydration)"
+    ],
+    "all_valid_answers": [
+      "Fieberdelir",
+      "Bewusstseinstrübung",
+      "Fieberkrampf",
+      "Krampfanfall",
+      "Krisis",
+      "Kreislaufkollaps",
+      "Dehydration",
+      "Exsikkose",
+      "Austrocknung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Komplikation."
+  },
+  {
+    "q_id": "m3_nl_024",
+    "type": "nennen_liste",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 Bestandteile oder Funktionseinheiten der körpereigenen Immunabwehr.",
+    "list_label": "Bestandteile der Immunabwehr",
+    "count": 4,
+    "correct_answers": [
+      "Leukozyten (weiße Blutkörperchen)",
+      "Lymphatisches System (z.B. Milz, Lymphknoten)",
+      "Zelluläre Abwehr",
+      "Humorale Abwehr (Antikörper)"
+    ],
+    "all_valid_answers": [
+      "Leukozyten",
+      "weiße Blutkörperchen",
+      "Lymphozyten",
+      "Granulozyten",
+      "Monozyten",
+      "Lymphatisches System",
+      "Lymphe",
+      "Milz",
+      "Lien",
+      "Thymus",
+      "Lymphknoten",
+      "Mandeln",
+      "Peyersche Plaques",
+      "Antikörper",
+      "Immunglobuline",
+      "zelluläre Immunantwort",
+      "humorale Immunantwort"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Bestandteil."
+  },
+  {
+    "q_id": "m3_nl_025",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die vier Elemente des PESR-Schemas zur korrekten Formulierung von Pflegediagnosen.",
+    "list_label": "PESR-Schema",
+    "count": 4,
+    "correct_answers": [
+      "Problem",
+      "Einflussfaktor (Ätiologie)",
+      "Symptom",
+      "Ressource"
+    ],
+    "all_valid_answers": [
+      "Problem",
+      "Pflegeproblem",
+      "Einflussfaktor",
+      "Ursache",
+      "Ätiologie",
+      "Symptom",
+      "Anzeichen",
+      "Merkmal",
+      "Ressource",
+      "Fähigkeit"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Begriff."
+  },
+  {
+    "q_id": "m3_nl_026",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 5 der 12 Aktivitäten des täglichen Lebens (ATL) nach Liliane Juchli.",
+    "list_label": "ATL nach Juchli",
+    "count": 5,
+    "correct_answers": [
+      "Wach sein und schlafen",
+      "Sich bewegen",
+      "Sich waschen und kleiden",
+      "Essen und trinken",
+      "Ausscheiden",
+      "Körpertemperatur regulieren",
+      "Atmen",
+      "Sich sicher fühlen und verhalten",
+      "Kommunizieren",
+      "Sich als Mann oder Frau fühlen und verhalten",
+      "Sinn finden im Werden, Sein, Vergehen",
+      "Arbeiten und spielen"
+    ],
+    "all_valid_answers": [
+      "Schlafen",
+      "Bewegen",
+      "Körperpflege",
+      "Kleiden",
+      "Ernährung",
+      "Ausscheidung",
+      "Regulierung der Temperatur",
+      "Atmung",
+      "Sicherheit",
+      "Kommunikation",
+      "Sexualität",
+      "Sinn finden",
+      "Beschäftigung",
+      "Spielen"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt genannter ATL (bis zu 5 Punkte)."
+  },
+  {
+    "q_id": "m3_nl_027",
+    "type": "nennen_liste",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die 5-W-Fragen, die bei der präzisen Planung einer Pflegemaßnahme beantwortet werden müssen.",
+    "list_label": "Die 5-W-Fragen der Maßnahmenplanung",
+    "count": 5,
+    "correct_answers": [
+      "Wer?",
+      "Was?",
+      "Wann?",
+      "Wie oft?",
+      "Wie?"
+    ],
+    "all_valid_answers": [
+      "Wer führt aus?",
+      "Was wird getan?",
+      "Wann wird es getan?",
+      "Zeitpunkt",
+      "Häufigkeit",
+      "Wie oft?",
+      "Art und Weise",
+      "Wie wird es gemacht?"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem W-Fragewort."
+  },
+  {
+    "q_id": "m3_nl_028",
+    "type": "nennen_liste",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 3 der 8 Artikel (Rechte) aus der Charta der Rechte hilfe- und pflegebedürftiger Menschen (Pflege-Charta).",
+    "list_label": "Rechte der Pflege-Charta",
+    "count": 3,
+    "correct_answers": [
+      "Selbstbestimmung und Hilfe zur Selbsthilfe",
+      "Körperliche und seelische Unversehrtheit, Freiheit und Sicherheit",
+      "Privatheit",
+      "Pflege, Betreuung und Behandlung",
+      "Information, Beratung und Aufklärung",
+      "Kommunikation, Wertschätzung und Teilhabe an der Gesellschaft",
+      "Religion, Kultur und Weltanschauung",
+      "Palliative Begleitung, Sterben und Tod"
+    ],
+    "all_valid_answers": [
+      "Selbstbestimmung",
+      "Autonomie",
+      "Unversehrtheit",
+      "Sicherheit",
+      "Privatheit",
+      "Intimsphäre",
+      "Qualifizierte Pflege",
+      "Information",
+      "Beratung",
+      "Kommunikation",
+      "Wertschätzung",
+      "Teilhabe",
+      "Religion",
+      "Kultur",
+      "Würdiges Sterben",
+      "Sterbebegleitung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genanntem Recht / Artikel."
+  },
+  {
+    "q_id": "m3_nl_029",
+    "type": "nennen_liste",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 formale oder inhaltliche Grundsätze für eine fachgerechte Pflegedokumentation.",
+    "list_label": "Grundsätze der Pflegedokumentation",
+    "count": 4,
+    "correct_answers": [
+      "Vollständigkeit",
+      "Zeitnahe Dokumentation",
+      "Objektive und wertfreie Formulierungen",
+      "Quittierung mit Handzeichen (Leistungsnachweis)",
+      "Lesbarkeit und Echtheit (nicht radierbar)"
+    ],
+    "all_valid_answers": [
+      "Vollständigkeit",
+      "Lückenlosigkeit",
+      "zeitnah",
+      "sofort dokumentieren",
+      "objektiv",
+      "keine subjektiven Wertungen",
+      "Handzeichen",
+      "Unterschrift",
+      "lesbar",
+      "dokumentenecht",
+      "Berichtigungen kennzeichnen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Grundsatz."
+  },
+  {
+    "q_id": "m3_nl_030",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 3 Sofortmaßnahmen, die bei einer akuten Aspiration (Verschlucken) eingeleitet werden müssen.",
+    "list_label": "Sofortmaßnahmen bei Aspiration",
+    "count": 3,
+    "correct_answers": [
+      "Nahrungszufuhr sofort stoppen",
+      "Zum kräftigen Husten auffordern",
+      "Überwachung (Atmung, Puls, Bewusstsein, Zyanose)",
+      "Ärztliche Information / Notruf"
+    ],
+    "all_valid_answers": [
+      "Essen stoppen",
+      "Husten provozieren",
+      "Oberkörper hochlagern",
+      "Überwachung",
+      "Vitalzeichenkontrolle",
+      "Arzt rufen",
+      "Notruf",
+      "Absaugen (wenn möglich)"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_tab_001",
+    "type": "tabelle_2spalten",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie die 5 Indikationen der Händedesinfektion nach WHO und  **erläutern**  Sie kurz den jeweiligen Grund.",
+    "points": 10,
+    "scoring_info": "1 Punkt für die korrekte Indikation, 1 Punkt für die Begründung.",
+    "data": {
+      "table": {
+        "headers": [
+          "Indikation (Wann?)",
+          "Warum?"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "VOR Patientenkontakt",
+                "keywords": ["vor", "patientenkontakt"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz des Patienten vor Keimen, die sich auf den Händen des Personals befinden.",
+                "keywords": ["Schutz", "Patient", "Kolonisation"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "VOR aseptischen Tätigkeiten",
+                "keywords": ["vor", "aseptisch"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz des Patienten vor dem Eintrag von Erregern in sterile oder nicht-kolonisierte Bereiche.",
+                "keywords": ["Schutz", "sterile", "Eintrag"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "NACH Kontakt mit potenziell infektiösen Materialien",
+                "keywords": ["nach", "infektiös", "Material"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz des Personals und der Patientenumgebung vor pathogenen Erregern.",
+                "keywords": ["Schutz", "Personal", "Umgebung"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "NACH Patientenkontakt",
+                "keywords": ["nach", "patientenkontakt"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz des Personals und der Umgebung vor Keimen des Patienten.",
+                "keywords": ["Schutz", "Personal", "Umgebung"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "NACH Kontakt mit der Patientenumgebung",
+                "keywords": ["nach", "umgebung"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz vor Keimen, die sich auf Oberflächen in der Nähe des Patienten befinden können.",
+                "keywords": ["Schutz", "Oberflächen", "Umgebung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Distanzzonen nach Hall den korrekten Abständen und pflegerischen Situationen zu.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Zone",
+          "Abstand",
+          "Pflegerisches Beispiel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Intime Distanz",
+                "keywords": ["intim"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "0 - 45 cm",
+                "keywords": ["45"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Körperpflege / Waschen",
+                "keywords": ["Waschen", "Pflege", "Anziehen"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Persönliche Distanz",
+                "keywords": ["persönlich"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "45 cm - 120 cm",
+                "keywords": ["120"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Beratungsgespräch / Essen anreichen",
+                "keywords": ["Gespräch", "Essen"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Gesellschaftliche Distanz",
+                "keywords": ["gesellschaftlich", "sozial"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "1,20 m - 3,50 m",
+                "keywords": ["3,50"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Zimmer betreten / Begrüßung",
+                "keywords": ["Zimmer", "Eintritt", "Begrüßung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_003",
+    "type": "tabelle_vergleich",
+    "topic": "koerperpflege_basis",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie die Durchführung und Indikation einer belebenden vs. beruhigenden Ganzkörperwaschung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Belebende Waschung",
+          "Beruhigende Waschung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Waschrichtung",
+                "keywords": ["Richtung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gegen die Haarwuchsrichtung",
+                "keywords": ["gegen", "Haarwuchs"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Mit der Haarwuchsrichtung",
+                "keywords": ["mit", "Haarwuchs"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Wassertemperatur",
+                "keywords": ["Temperatur", "Wasser"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Eher kühl (nicht kalt)",
+                "keywords": ["kühl", "kühler"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Eher warm (nicht heiß)",
+                "keywords": ["warm", "wärmer"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Indikation",
+                "keywords": ["Warum", "Ziel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Antriebslosigkeit, Depressivität",
+                "keywords": ["Antrieb", "Morgen", "depressiv"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Unruhe, Einschlafstörung",
+                "keywords": ["Unruhe", "Angst", "Nacht", "schlafen"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie die Enzyme, deren Substrat und das daraus entstehende Produkt im Verdauungsprozess.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Enzym",
+          "Substrat (Wird gespalten)",
+          "Produkt (Ergebnis)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Amylase",
+                "keywords": ["Amylase"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Kohlenhydrate / Stärke",
+                "keywords": ["Kohlenhydrat", "Stärke"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Malzzucker / Zweifachzucker",
+                "keywords": ["Malz", "Disaccharid", "Zucker"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Pepsin",
+                "keywords": ["Pepsin"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Eiweiße / Proteine",
+                "keywords": ["Eiweiß", "Protein"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Peptide",
+                "keywords": ["Peptid"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Lipasen",
+                "keywords": ["Lipase"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fette / Lipide",
+                "keywords": ["Fett", "Lipid"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fettsäuren und Glycerin",
+                "keywords": ["Fettsäuren", "Glycerin"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_005",
+    "type": "tabelle_vergleich",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie die Screening-Instrumente NRS und MNA zur Erkennung von Ernährungsrisiken.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kriterium",
+          "NRS (Nutritional Risk Screening)",
+          "MNA (Mini Nutritional Assessment)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Primäre Zielgruppe",
+                "keywords": ["wer", "Bereich", "Zielgruppe"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Patienten im Krankenhaus (Akutbereich)",
+                "keywords": ["Krankenhaus", "Klinik", "akut"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ältere Menschen (über 65 Jahre)",
+                "keywords": ["Alt", "Senioren", "Geriatrie"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Anwendungsziel",
+                "keywords": ["Ziel", "Nutzen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Erfassung des Ernährungsrisikos bei Aufnahme",
+                "keywords": ["Risiko", "Aufnahme", "Erfassung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Umfassende Beurteilung des Ernährungsstatus",
+                "keywords": ["Status", "umfassend", "Zustand"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die Tabelle zum physiologischen Schluckvorgang.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Schluckphase",
+          "Zentraler Vorgang",
+          "Pflegerische Relevanz"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Orale Phase",
+                "keywords": ["oral", "Mund"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Zerkleinerung & Transport zum Rachen",
+                "keywords": ["Zerkleinern", "Kauen", "Rachen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Beobachtung der Kauleistung",
+                "keywords": ["Kauen", "Gebiss", "Hamstern"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Pharyngeale Phase",
+                "keywords": ["pharyngeal", "Rachen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schluckreflex & Verschluss der Atemwege",
+                "keywords": ["Reflex", "Atemwege", "Kehlkopf"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Höchstes Aspirationsrisiko",
+                "keywords": ["Aspiration", "Verschlucken"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_007",
+    "type": "tabelle_3spalten",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie die Merkmale und Maßnahmen bei spezifischen infektiösen Enteritiden.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Erreger",
+          "Leitsymptome",
+          "Hygienische Besonderheit"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Norovirus",
+                "keywords": ["Noro"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schwallartiges Erbrechen, Diarrhoe",
+                "keywords": ["Erbrechen", "Durchfall"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hochinfektiös, viruzide Desinfektion",
+                "keywords": ["viruzid", "Isolation", "infektiös"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Clostridium difficile",
+                "keywords": ["Clostridien", "difficile"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Übelriechende Durchfälle, oft post-OP",
+                "keywords": ["Geruch", "Durchfall", "Antibiotika"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Händewaschen NACH Desinfektion (Sporen)",
+                "keywords": ["Händewaschen", "Sporen"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_008",
+    "type": "tabelle_3spalten",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Körpertemperaturen den korrekten Bezeichnungen und Merkmalen zu.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Bezeichnung",
+          "Temperaturwert",
+          "Klinische Bewertung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Subfebrile Temperatur",
+                "keywords": ["subfebril"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "37,5 - 38,0 °C",
+                "keywords": ["37,5", "38,0"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Erhöhte Temperatur, kein Fieber",
+                "keywords": ["kein Fieber", "erhöht"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Leichtes Fieber",
+                "keywords": ["leicht"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "38,1 - 38,5 °C",
+                "keywords": ["38,1", "38,5"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Krankheitszeichen, Therapie abwägen",
+                "keywords": ["Beginn", "Krankheit"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Hohes Fieber",
+                "keywords": ["hoch"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "39,1 - 39,9 °C",
+                "keywords": ["39,1", "39,9"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Starke Belastung des Kreislaufs",
+                "keywords": ["Belastung", "Kreislauf", "Gefahr"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_009",
+    "type": "tabelle_3spalten",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie die Fieberphasen und die dazugehörigen Symptome sowie Maßnahmen.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Fieberphase",
+          "Typische Zeichen",
+          "Pflegerische Maßnahme"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fieberanstieg",
+                "keywords": ["anstieg", "incrementi"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schüttelfrost, Frieren",
+                "keywords": ["Schüttelfrost", "Kälte", "frieren"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Wärmezufuhr (Decken, Tee)",
+                "keywords": ["Wärme", "Decke", "Tee"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fieberhöhe",
+                "keywords": ["höhe", "fastigium"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hitzegefühl, gerötete Haut",
+                "keywords": ["Hitze", "Rötung", "heiß"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Wärmeabfuhr (Wickel, Getränke)",
+                "keywords": ["Kühlen", "Wickel", "Trinken"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fieberabfall",
+                "keywords": ["abfall", "decrementi"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schwitzen, Wärmegefühl",
+                "keywords": ["Schwitzen", "Schweiß"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Wäschewechsel, Hautpflege",
+                "keywords": ["Wäsche", "Hautpflege", "abwaschen"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_010",
+    "type": "tabelle_vergleich",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie die zelluläre und die humorale Immunabwehr.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Zelluläre Abwehr",
+          "Humorale Abwehr"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Hauptakteure",
+                "keywords": ["Wer", "Zellen", "Boten"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "T-Zellen (z.B. Killerzellen)",
+                "keywords": ["T-Zelle", "Lymphozyten", "Killer"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "B-Zellen / Antikörper",
+                "keywords": ["B-Zelle", "Antikörper", "Immunglobuline"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Arbeitsweise",
+                "keywords": ["Wie", "Vorgang"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Direkte Zerstörung von Zielzellen",
+                "keywords": ["Angriff", "Zerstörung", "Phagozytose"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Markierung & Neutralisation (Flüssigkeiten)",
+                "keywords": ["Markieren", "Flüssigkeit", "Schlüssel"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_011",
+    "type": "tabelle_vergleich",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie die Pflegemodelle von Juchli und Krohwinkel.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "ATL (Juchli)",
+          "ABEDL (Krohwinkel)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Anzahl Bereiche",
+                "keywords": ["Anzahl", "Bereiche"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "12 Bereiche",
+                "keywords": ["12"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "13 Bereiche",
+                "keywords": ["13"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fokus",
+                "keywords": ["Fokus", "Ansatz"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Aktivitäten des täglichen Lebens",
+                "keywords": ["Aktivitäten", "Leben"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Existenzielle Erfahrungen / Beziehungen",
+                "keywords": ["Erfahrung", "Beziehung", "Existenziell"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_012",
+    "type": "tabelle_3spalten",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie die Säulen der Identität nach Petzold und geben Sie pflegerische Beispiele an.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Säule",
+          "Bedeutung",
+          "Beispiel für Belastung/Ressource"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Leiblichkeit",
+                "keywords": ["Leib", "Körper"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gesundheit, Psyche, Körpergefühl",
+                "keywords": ["Körper", "Gesundheit"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Diagnose einer chronischen Krankheit",
+                "keywords": ["Krankheit", "Schmerz", "Behinderung"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Soziale Bezüge",
+                "keywords": ["sozial", "Netzwerk"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Familie, Freunde, Verein",
+                "keywords": ["Familie", "Freunde"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fehlende Besuche / Einsamkeit",
+                "keywords": ["Isolation", "Einsam", "Besuch"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Materielle Sicherheit",
+                "keywords": ["materiell", "Sicherheit"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Finanzen, Wohnraum, Nahrung",
+                "keywords": ["Geld", "Haus", "Wohnung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Sorge um Kosten der Pflege",
+                "keywords": ["Armut", "Heimkosten", "Geldnot"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_013",
+    "type": "tabelle_3spalten",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die ethischen Prinzipien nach Beauchamp und Childress.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekter Definition/Bezug.",
+    "data": {
+      "table": {
+        "headers": [
+          "Prinzip",
+          "Definition",
+          "Pflegerische Situation"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Autonomie",
+                "keywords": ["Selbstbestimmung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Recht auf Selbstbestimmung",
+                "keywords": ["selbst"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ablehnung einer PEG-Sonde",
+                "keywords": ["Wille", "Ablehnung", "Entscheidung"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fürsorge",
+                "keywords": ["Beneficence", "Gutes"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Handeln zum Wohle des Patienten",
+                "keywords": ["Wohl", "helfen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Beratung zur Mangelernährung",
+                "keywords": ["Beratung", "Unterstützung", "Pflege"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_014",
+    "type": "tabelle_3spalten",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Differenzieren**  Sie die Stufen der Keimreduktion.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Stufe",
+          "Methode (Beispiel)",
+          "Ergebnis / Ziel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Reinigung",
+                "keywords": ["reinigen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Waschen mit Wasser & Seife",
+                "keywords": ["Waschen", "Seife"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schmutzentfernung, Keimzahlminderung",
+                "keywords": ["Schmutz", "Sauber"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Desinfektion",
+                "keywords": ["desinfizieren"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Einreiben / Wischen mit Wirkstoffen",
+                "keywords": ["Alkohol", "Mittel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Keimarmut (pathogene Keime weg)",
+                "keywords": ["Keimarmut", "infektiös", "Reduktion"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Sterilisation",
+                "keywords": ["sterilisieren"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dampf (Autoklav)",
+                "keywords": ["Dampf", "Hitze"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Keimfreiheit (völlige Asepsis)",
+                "keywords": ["Keimfreiheit", "Asepsis", "tot"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_tab_015",
+    "type": "tabelle_3spalten",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die SMART-Regel zur Formulierung von Pflegezielen.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung",
+          "Beispiel (Formulierung)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "S",
+                "keywords": ["S"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Spezifisch",
+                "keywords": ["exakt", "detailliert"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Patient trinkt selbstständig...",
+                "keywords": ["Patient", "trinkt"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "M",
+                "keywords": ["M"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Messbar",
+                "keywords": ["überprüfbar"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "...mindestens 1.500 ml Wasser...",
+                "keywords": ["1500", "ml"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "T",
+                "keywords": ["T"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Terminierbar",
+                "keywords": ["Zeitpunkt", "Datum"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "...innerhalb der nächsten 24 Std.",
+                "keywords": ["Std", "Stunden", "Datum"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_ft_001",
+    "type": "freitext_box",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die 5 Indikationen der Händedesinfektion nach dem WHO-Modell.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt erklärter Indikation.",
+    "data": {
+      "box_label": "5 Indikationen der Händehygiene",
+      "correct_answer": "Die Händedesinfektion muss vor Patientenkontakt und vor aseptischen Tätigkeiten erfolgen, um den Patienten vor Keimübertragung zu schützen. Nach dem Kontakt mit potenziell infektiösen Materialien, nach Patientenkontakt sowie nach Kontakt mit der unmittelbaren Patientenumgebung ist sie zum Schutz des Personals und der Umgebung zwingend. Diese fünf Momente bilden den Standard zur Unterbrechung von Infektionsketten im Klinikalltag.",
+      "keywords": [
+        "vor Patientenkontakt",
+        "aseptische Tätigkeiten",
+        "infektiöses Material",
+        "nach Patientenkontakt",
+        "Patientenumgebung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_002",
+    "type": "freitext_box",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie den Unterschied zwischen einfachem Anfassen und einer professionellen Berührung in der Pflege.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Differenzierung der Begriffe.",
+    "data": {
+      "box_label": "Anfassen vs. Berühren",
+      "correct_answer": "Einfaches Anfassen wird oft als bloße funktionale Handlung oder Routine ohne tiefergehende Intention wahrgenommen. Im Gegensatz dazu gilt die professionelle Berührung als eine bewusste 'Kunst', die auf die individuellen Bedürfnisse und Wünsche des Patienten eingeht. Sie dient als Kommunikationsmittel, vermittelt Sicherheit und respektiert dabei stets die Grenzen des Gegenübers.",
+      "keywords": [
+        "funktional",
+        "bewusst",
+        "Bedürfnisse",
+        "Kommunikation",
+        "Sicherheit"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_003",
+    "type": "freitext_box",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Begründen**  Sie, warum die Kenntnis der Distanzzonen nach Hall für die professionelle Pflege von zentraler Bedeutung ist.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Begründung des Bezugs zur Intimsphäre.",
+    "data": {
+      "box_label": "Relevanz der Distanzzonen",
+      "correct_answer": "In der Pflege müssen Fachkräfte bei Tätigkeiten wie der Körperpflege zwangsläufig die intime Distanzzone von 0 bis 45 cm überschreiten. Ohne das Bewusstsein für diese Zonen können Patienten die notwendige Nähe als bedrohlich oder als massive Verletzung ihrer Privatsphäre empfinden. Die Kenntnis ermöglicht es der Pflegekraft, Grenzüberschreitungen durch verbale Ankündigungen und behutsames Vorgehen abzumildern.",
+      "keywords": [
+        "intime Distanz",
+        "Privatsphäre",
+        "Grenzüberschreitung",
+        "Schamgefühl",
+        "Ankündigung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_004",
+    "type": "freitext_box",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erklären**  Sie den Weg der Nahrung durch den menschlichen Verdauungstrakt und nennen Sie die beteiligten Hauptstationen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt benannter und beschriebener Station.",
+    "data": {
+      "box_label": "Der Weg der Nahrung",
+      "correct_answer": "Die Verdauung beginnt in der Mundhöhle durch mechanische Zerkleinerung und enzymatische Spaltung, bevor der Speisebrei über die Speiseröhre in den Magen gelangt. Dort wird die Nahrung durchmischt und vorverdaut, woraufhin im Dünndarm die eigentliche Resorption der Nährstoffe stattfindet. Im Dickdarm wird dem Brei Wasser entzogen, bis die unverdaulichen Reste schließlich über das Rektum ausgeschieden werden.",
+      "keywords": [
+        "Mundhöhle",
+        "Magen",
+        "Dünndarm",
+        "Resorption",
+        "Dickdarm",
+        "Ausscheidung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_005",
+    "type": "freitext_box",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie den Prozess der enzymatischen Fettverdauung unter Einbeziehung der Mizellenbildung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die korrekte Beschreibung der Lipasen und Mizellen.",
+    "data": {
+      "box_label": "Fettverdauung und Mizellen",
+      "correct_answer": "Die Fettverdauung wird primär durch Lipasen aus der Bauchspeicheldrüse durchgeführt, welche die Fette in ihre Bestandteile spalten. Da Fett wasserunlöslich ist, lagern sich diese Spaltprodukte zu Gruppen zusammen, die als Mizellen bezeichnet werden. Diese Mizellen dienen als notwendige Vorstufe für die Resorption, indem sie den Transport des Fetts zu den Darmwandzellen ermöglichen.",
+      "keywords": [
+        "Lipasen",
+        "Bauchspeicheldrüse",
+        "Spaltprodukte",
+        "Mizellen",
+        "Resorption"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_006",
+    "type": "freitext_box",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie das NRS-Screening-Verfahren und geben Sie an, wann dieses Instrument eingesetzt wird.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für Zielgruppe, Parameter und Zeitpunkt.",
+    "data": {
+      "box_label": "NRS-Screening",
+      "correct_answer": "Das Nutritional Risk Screening (NRS) ist ein Instrument zur Identifikation von Ernährungsrisiken bei Patienten im Akutkrankenhaus. Es erfasst Parameter wie den BMI, unbeabsichtigten Gewichtsverlust und die aktuelle Nahrungsaufnahme innerhalb der letzten Woche. Das Screening wird idealerweise direkt bei der Aufnahme durchgeführt, um frühzeitig pflegerische Interventionen einleiten zu können.",
+      "keywords": [
+        "Nutritional Risk Screening",
+        "BMI",
+        "Gewichtsverlust",
+        "Akutkrankenhaus",
+        "Aufnahme"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_007",
+    "type": "freitext_box",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erklären**  Sie die Physiologie des Schluckvorgangs und begründen Sie, warum eine Aspiration lebensgefährlich sein kann.",
+    "points": 6,
+    "scoring_info": "0-3 Punkte für die Phasen, 0-3 Punkte für die Gefahrenbegründung.",
+    "data": {
+      "box_label": "Schluckvorgang und Aspiration",
+      "correct_answer": "Der Schluckvorgang unterteilt sich in die orale Vorbereitungsphase, die pharyngeale Phase mit dem Verschluss der Atemwege und die ösophageale Transportphase. Bei einer Aspiration gelangen Fremdkörper oder Flüssigkeiten in die Luftröhre statt in die Speiseröhre, was zum Ersticken führen kann. Langfristig besteht durch eingedrungene Keime zudem ein massiv erhöhtes Risiko für eine lebensbedrohliche Aspirationspneumonie.",
+      "keywords": [
+        "pharyngeale Phase",
+        "Atemwege",
+        "Luftröhre",
+        "Ersticken",
+        "Pneumonierisiko"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_008",
+    "type": "freitext_box",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Begründen**  Sie die wichtigsten pflegerischen Maßnahmen bei einem Patienten mit akuter Diarrhoe.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die fachliche Begründung von Hautschutz und Hydratation.",
+    "data": {
+      "box_label": "Pflege bei Diarrhoe",
+      "correct_answer": "Zentral ist der Schutz der Haut durch milde Reinigung und Barrierecremes, da die aggressiven Stuhlgänge rasch zu Hautdefekten führen können. Ebenso wichtig ist der Ausgleich des Flüssigkeits- und Elektrolytverlustes, um einer gefährlichen Dehydratation vorzubeugen. Pflegende müssen zudem durch schnelle Erreichbarkeit von Toilettenhilfen Sicherheit geben und die Schamgrenze des Patienten wahren.",
+      "keywords": [
+        "Hautschutz",
+        "Dehydratation",
+        "Flüssigkeitsersatz",
+        "Elektrolyte",
+        "Sicherheit"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_009",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die Steuerung der Körpertemperatur durch den Hypothalamus im Falle einer Fiebererkrankung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Beschreibung der Sollwertverstellung.",
+    "data": {
+      "box_label": "Hypothalamus und Fieber",
+      "correct_answer": "Der Hypothalamus fungiert als zentrales Thermoregulationszentrum im Gehirn, das einen physiologischen Sollwert von ca. 37 °C vorgibt. Bei Fieber wird dieser Sollwert durch Einwirkung von Pyrogenen (z. B. Bakteriengifte) nach oben verschoben. Der Körper reagiert darauf mit Wärmeproduktion, wie etwa Schüttelfrost, um die tatsächliche Körpertemperatur dem neuen, erhöhten Sollwert anzugleichen.",
+      "keywords": [
+        "Thermoregulationszentrum",
+        "Sollwert",
+        "Pyrogene",
+        "Wärmeproduktion",
+        "Schüttelfrost"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_010",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie den Unterschied zwischen Krisis und Lysis während der Phase des Fieberabfalls.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Gegenüberstellung der Symptome und Gefahren.",
+    "data": {
+      "box_label": "Krisis vs. Lysis",
+      "correct_answer": "Die Lysis beschreibt einen langsamen, schonenden Temperaturabfall über mehrere Tage, begleitet von warmem Schweiß. Die Krisis hingegen ist ein gefährlicher, schlagartiger Temperaturabfall innerhalb weniger Stunden, der mit kaltem, klebrigem Schweiß und Blässe einhergeht. Eine Krisis stellt eine massive Belastung für den Kreislauf dar und kann zum lebensbedrohlichen Kollaps führen.",
+      "keywords": [
+        "Lysis",
+        "Krisis",
+        "Temperaturabfall",
+        "Kreislaufbelastung",
+        "Kollapsgefahr"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_011",
+    "type": "freitext_box",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erklären**  Sie den Ablauf einer Immunreaktion des Körpers bei Erstkontakt mit einem unbekannten Krankheitserreger.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte für die Schritte Erkennung, Abwehr und Gedächtnis.",
+    "data": {
+      "box_label": "Ablauf der Immunreaktion",
+      "correct_answer": "Zuerst erkennt das Immunsystem den Erreger als körperfremd, woraufhin weiße Blutkörperchen (Leukozyten) aktiviert werden. Die zelluläre Abwehr greift den Erreger direkt an, während die humorale Abwehr spezifische Antikörper produziert, um den Eindringling zu markieren und unschädlich zu machen. Nach erfolgreicher Bekämpfung speichern Gedächtniszellen die Information ab, um bei einem Zweitkontakt schneller reagieren zu können.",
+      "keywords": [
+        "Leukozyten",
+        "zelluläre Abwehr",
+        "Antikörper",
+        "Gedächtniszellen",
+        "Erstkontakt"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_012",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie das PESR-Schema zur Formulierung von Pflegediagnosen anhand eines konkreten Beispiels.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benanntem und angewendetem Buchstaben.",
+    "data": {
+      "box_label": "Das PESR-Schema",
+      "correct_answer": "Das PESR-Schema steht für Problem, Einflussfaktor, Symptom und Ressource. Ein Beispiel wäre: Eingeschränkte Mobilität (P) aufgrund einer Fraktur (E), erkennbar durch Unfähigkeit selbstständig aufzustehen (S), wobei der Patient motiviert ist, mit Hilfe des Gehgestells zu trainieren (R). Diese Struktur ermöglicht eine präzise und wissenschaftlich fundierte Planung der weiteren Pflegeschritte.",
+      "keywords": [
+        "Problem",
+        "Einflussfaktor",
+        "Symptom",
+        "Ressource",
+        "Pflegediagnose"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_013",
+    "type": "freitext_box",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Begründen**  Sie, warum Pflegeziele nach der SMART-Regel formuliert werden sollten.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erläuterung von Überprüfbarkeit und Qualität.",
+    "data": {
+      "box_label": "Vorteile der SMART-Regel",
+      "correct_answer": "Die SMART-Regel stellt sicher, dass Pflegeziele spezifisch, messbar, akzeptiert, realistisch und terminiert sind. Nur durch eine solch präzise Formulierung wird die Wirksamkeit der Pflege objektiv überprüfbar (Evaluation). Dies verhindert vage Aussagen wie 'Zustand verbessert' und ermöglicht eine gezielte Anpassung der Maßnahmen bei Nichterreichen des erwünschten Ergebnisses.",
+      "keywords": [
+        "spezifisch",
+        "messbar",
+        "terminiert",
+        "Evaluation",
+        "Qualitätssicherung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_014",
+    "type": "freitext_box",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie die 5 Säulen der Identität nach Petzold und erläutern Sie deren Bedeutung für die Pflege.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt beschriebener Säule mit Pflegebezug.",
+    "data": {
+      "box_label": "5 Säulen der Identität",
+      "correct_answer": "Die Säulen umfassen Leiblichkeit, soziale Bezüge, Arbeit/Leistung, materielle Sicherheit sowie Werte und Normen. In der Pflege ist dieses Modell wichtig, um die Ressourcen eines Menschen ganzheitlich zu erfassen und Krisen beim Wegbrechen einzelner Säulen (z. B. Verlust der Gesundheit) aufzufangen. Das Ziel ist es, durch die Aktivierung verbliebener Säulen das seelische Gleichgewicht des Patienten zu stabilisieren.",
+      "keywords": [
+        "Leiblichkeit",
+        "soziale Bezüge",
+        "Arbeit und Leistung",
+        "materielle Sicherheit",
+        "Werte"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_ft_015",
+    "type": "freitext_box",
+    "topic": "ethik_pflege",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erklären**  Sie das ethische Dilemma, das bei der Entscheidung über die Einleitung einer künstlichen Ernährung (PEG) entstehen kann.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Abwägung zwischen Autonomie und Fürsorge.",
+    "data": {
+      "box_label": "Ethik und künstliche Ernährung",
+      "correct_answer": "Ein ethisches Dilemma entsteht oft aus dem Konflikt zwischen dem Autonomieprinzip (der Wille des Patienten, keine Sonde zu wollen) und der Fürsorgepflicht der Pflegekraft (Vermeidung von Hunger und Durst). Es muss abgewogen werden, ob die Maßnahme dem Wohle des Patienten dient oder lediglich das Leben ohne Lebensqualität verlängert. In solchen Zwangslagen hilft ein strukturierter Prozess der ethischen Entscheidungsfindung zur Lösungsfindung.",
+      "keywords": [
+        "Autonomieprinzip",
+        "Fürsorgepflicht",
+        "Patientenwille",
+        "Lebensqualität",
+        "Dilemma"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_zu_001",
+    "type": "zuordnung",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Verdauungsenzyme ihren primären Substraten zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Amylase",
+        "B": "Lipase",
+        "C": "Pepsin"
+      },
+      "statements": [
+        {
+          "text": "Spaltet den Stärkeanteil der Kohlenhydrate bereits in der Mundhöhle.",
+          "answer": "A"
+        },
+        {
+          "text": "Wird aus der Bauchspeicheldrüse freigesetzt und dient dem Fettabbau.",
+          "answer": "B"
+        },
+        {
+          "text": "Beeinflusst die Eiweißverdauung im Magen (als Bestandteil des Magensaftes).",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_zu_002",
+    "type": "zuordnung",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Distanzzonen nach Hall den korrekten Meter-Bereichen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Intime Distanz",
+        "B": "Persönliche Distanz",
+        "C": "Gesellschaftliche Distanz",
+        "D": "Öffentliche Distanz"
+      },
+      "statements": [
+        {
+          "text": "Bereich von 0 bis 45 cm (z.B. bei der Körperpflege).",
+          "answer": "A"
+        },
+        {
+          "text": "Bereich von 45 bis 120 cm.",
+          "answer": "B"
+        },
+        {
+          "text": "Bereich von 120 bis 350 cm.",
+          "answer": "C"
+        },
+        {
+          "text": "Bereich über 350 cm.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_zu_003",
+    "type": "zuordnung",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die klinischen Bezeichnungen den entsprechenden Temperaturbereichen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Subfebrile Temperatur",
+        "B": "Leichtes Fieber",
+        "C": "Mäßiges Fieber",
+        "D": "Hohes Fieber"
+      },
+      "statements": [
+        {
+          "text": "37,5 °C – 38,0 °C",
+          "answer": "A"
+        },
+        {
+          "text": "38,1 °C – 38,5 °C",
+          "answer": "B"
+        },
+        {
+          "text": "38,6 °C – 39,0 °C",
+          "answer": "C"
+        },
+        {
+          "text": "39,1 °C – 39,9 °C",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_zu_004",
+    "type": "zuordnung",
+    "topic": "ethik_pflege",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die ethischen Prinzipien nach Beauchamp und Childress ihren Definitionen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Respekt vor der Autonomie",
+        "B": "Prinzip der Fürsorge",
+        "C": "Prinzip des Nichtschadens",
+        "D": "Prinzip der Gerechtigkeit"
+      },
+      "statements": [
+        {
+          "text": "Das Recht jeder Person, sich frei für oder gegen eine Behandlung zu entscheiden.",
+          "answer": "A"
+        },
+        {
+          "text": "Die Verpflichtung, aktiv das Wohl des Patienten zu fördern und ihm zu nützen.",
+          "answer": "B"
+        },
+        {
+          "text": "Die Forderung, dem Patienten keine Verletzungen oder Leiden zuzufügen.",
+          "answer": "C"
+        },
+        {
+          "text": "Die Forderung nach einer fairen Verteilung von Gesundheitsleistungen.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_zu_005",
+    "type": "zuordnung",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Screening-Instrumente ihren typischen Anwendungsbereichen oder Beschreibungen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "NRS (Nutritional Risk Screening)",
+        "B": "MUST (Malnutrition Universal Screening Tool)",
+        "C": "MNA (Mini Nutritional Assessment)",
+        "D": "SGA (Subjective Global Assessment)"
+      },
+      "statements": [
+        {
+          "text": "Häufig eingesetztes Screening-Verfahren im Akutkrankenhaus.",
+          "answer": "A"
+        },
+        {
+          "text": "Universelles Instrument zur Identifikation von Mangelernährungsrisiken.",
+          "answer": "B"
+        },
+        {
+          "text": "Speziell für die Beurteilung des Ernährungsstatus bei älteren Menschen (Geriatrie).",
+          "answer": "C"
+        },
+        {
+          "text": "Subjektive Gesamtbeurteilung des Ernährungszustandes durch klinische Parameter.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden 3 Indikationen der Händedesinfektion nach dem WHO-Modell.",
+    "points": 3,
+    "data": {
+      "list_label": "5 Indikationen der Händedesinfektion",
+      "given_items": [
+        "Vor Patientenkontakt",
+        "Nach Patientenkontakt"
+      ],
+      "missing_items": [
+        "Vor aseptischen Tätigkeiten",
+        "Nach Kontakt mit potenziell infektiösen Materialien",
+        "Nach Kontakt mit der unmittelbaren Patientenumgebung"
+      ],
+      "all_valid_missing": [
+        "Vor aseptischen Tätigkeiten",
+        "Vor aseptischen Massnahmen",
+        "Nach Kontakt mit potenziell infektiösen Materialien",
+        "Nach Kontakt mit Körperflüssigkeiten",
+        "Nach Kontakt mit infektiösem Material",
+        "Nach Kontakt mit der unmittelbaren Patientenumgebung",
+        "Nach Kontakt mit der Patientenumgebung",
+        "Nach Kontakt mit Oberflächen in Patientennähe"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden Phasen im typischen Fieberverlauf.",
+    "points": 2,
+    "data": {
+      "list_label": "Phasen des Fiebers",
+      "given_items": [
+        "Fieberanstieg (Stadium incrementi)"
+      ],
+      "missing_items": [
+        "Fieberhöhe (Fastigium)",
+        "Fieberabfall (Stadium decrementi)"
+      ],
+      "all_valid_missing": [
+        "Fieberhöhe",
+        "Fastigium",
+        "Fieberabfall",
+        "Stadium decrementi",
+        "Entfieberung"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden drei Säulen der Identität nach dem Konzept von H.G. Petzold.",
+    "points": 3,
+    "data": {
+      "list_label": "Die 5 Säulen der Identität",
+      "given_items": [
+        "Leiblichkeit",
+        "Soziale Bezüge / Netzwerk"
+      ],
+      "missing_items": [
+        "Arbeit und Leistung",
+        "Materielle Sicherheit",
+        "Werte"
+      ],
+      "all_valid_missing": [
+        "Arbeit und Leistung",
+        "Tätigkeit",
+        "Beruf",
+        "Materielle Sicherheit",
+        "Finanzen",
+        "Werte",
+        "Normen",
+        "Glaube",
+        "Moral"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden Bestandteile des PESR-Schemas zur Formulierung von Pflegediagnosen.",
+    "points": 2,
+    "data": {
+      "list_label": "PESR-Schema",
+      "given_items": [
+        "Problem (P)",
+        "Einflussfaktor (E)"
+      ],
+      "missing_items": [
+        "Symptom (S)",
+        "Ressource (R)"
+      ],
+      "all_valid_missing": [
+        "Symptom",
+        "Symptome",
+        "Anzeichen",
+        "Ressource",
+        "Ressourcen",
+        "Fähigkeit"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die zwei weiteren physiologischen Phasen des Schluckvorgangs.",
+    "points": 2,
+    "data": {
+      "list_label": "Phasen des Schluckens",
+      "given_items": [
+        "Orale Phase"
+      ],
+      "missing_items": [
+        "Pharyngeale Phase",
+        "Ösophageale Phase"
+      ],
+      "all_valid_missing": [
+        "Pharyngeale Phase",
+        "Rachenphase",
+        "Ösophageale Phase",
+        "Speiseröhrenphase"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff „nosokomiale Infektion“ und  **nennen**  Sie 3 Beispiele für Erreger, die solche Infektionen häufig auslösen.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition: Nosokomiale Infektion",
+      "definition_correct": "Eine nosokomiale Infektion ist eine Infektion, die ein Patient zusätzlich zu seiner Grunderkrankung im Rahmen einer medizinischen Behandlung (z. B. im Krankenhaus oder einer Pflegeeinrichtung) erwirbt.",
+      "definition_keywords": [
+        "erworben",
+        "Krankenhaus",
+        "Einrichtung",
+        "zusätzlich",
+        "Behandlung"
+      ],
+      "definition_points": 3,
+      "examples_label": "Erregerbeispiele",
+      "examples_count": 3,
+      "correct_examples": [
+        "Noroviren",
+        "Clostridium difficile",
+        "Multiresistente Keime (z. B. MRSA)"
+      ],
+      "all_valid_examples": [
+        "Noroviren",
+        "Rotaviren",
+        "Clostridien",
+        "Clostridium difficile",
+        "MRSA",
+        "Staphylokokken",
+        "Escherichia coli",
+        "Salmonellen"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m3_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff „Dysphagie“ und  **nennen**  Sie 4 typische Leitsymptome.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition: Dysphagie",
+      "definition_correct": "Dysphagie bezeichnet eine schmerzfreie Störung beim Herunterschlucken von Nahrung und/oder Flüssigkeit, bei der der Transport vom Mund in den Magen beeinträchtigt ist.",
+      "definition_keywords": [
+        "Störung",
+        "Schluckvorgang",
+        "schmerzfrei",
+        "Nahrung",
+        "Flüssigkeit"
+      ],
+      "definition_points": 3,
+      "examples_label": "Leitsymptome",
+      "examples_count": 4,
+      "correct_examples": [
+        "Husten oder Räuspern während/nach dem Essen",
+        "Gurgelnde oder nasale Stimme",
+        "Speisereste in der Wangentasche (Hamstern)",
+        "Steckenbleiben der Nahrung im Hals"
+      ],
+      "all_valid_examples": [
+        "Husten",
+        "Räuspern",
+        "Verschlucken",
+        "nasale Stimme",
+        "gurgelnde Stimme",
+        "Hamstern",
+        "Speisereste",
+        "Kloßgefühl",
+        "Ausspucken"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m3_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff „Obstipation“ und  **nennen**  Sie 4 mögliche Ursachen im pflegerischen Kontext.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition: Obstipation",
+      "definition_correct": "Obstipation ist die akute oder chronische Stuhlverstopfung des Darms, gekennzeichnet durch eine zu lange Verweildauer des Stuhls (3–4 Tage), eine harte/trockene Konsistenz und erschwertes Absetzen.",
+      "definition_keywords": [
+        "Stuhlverstopfung",
+        "hart",
+        "trocken",
+        "Verweildauer",
+        "erschwert"
+      ],
+      "definition_points": 3,
+      "examples_label": "Ursachen",
+      "examples_count": 4,
+      "correct_examples": [
+        "Flüssigkeitsmangel",
+        "Ballaststoffarme Ernährung",
+        "Bewegungsmangel",
+        "Nebenwirkungen von Medikamenten (z. B. Opioide)"
+      ],
+      "all_valid_examples": [
+        "Flüssigkeitsmangel",
+        "Dehydration",
+        "Ballaststoffmangel",
+        "Bewegungsmangel",
+        "Immobilität",
+        "Medikamente",
+        "Opioide",
+        "Unterdrückung des Stuhldrangs"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m3_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "identitaet_petzold",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie „Identität“ nach dem Konzept von H. Petzold und  **nennen**  Sie die 5 tragenden Säulen.",
+    "points": 8,
+    "data": {
+      "definition_label": "Definition: Identität (Petzold)",
+      "definition_correct": "Identität nach Petzold ist ein dynamisches Konstrukt und die Summe der Einzigartigkeit eines Menschen, die sich aus dem Erleben von Ausgewogenheit in verschiedenen Lebensbereichen speist.",
+      "definition_keywords": [
+        "Konstrukt",
+        "Einzigartigkeit",
+        "Bereiche",
+        "Balance",
+        "Säulen"
+      ],
+      "definition_points": 3,
+      "examples_label": "Die 5 Säulen",
+      "examples_count": 5,
+      "correct_examples": [
+        "Leiblichkeit (Körper/Geist)",
+        "Soziale Bezüge (Netzwerk)",
+        "Arbeit und Leistung",
+        "Materielle Sicherheit",
+        "Werte und Normen"
+      ],
+      "all_valid_examples": [
+        "Leiblichkeit",
+        "Körperlichkeit",
+        "Soziale Bezüge",
+        "Soziales Netz",
+        "Arbeit und Leistung",
+        "Tätigkeit",
+        "Materielle Sicherheit",
+        "Sicherheit",
+        "Werte",
+        "Normen"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m3_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff „Pflegediagnose“ und  **nennen**  Sie die 4 Bestandteile des PESR-Schemas.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition: Pflegediagnose",
+      "definition_correct": "Eine Pflegediagnose ist eine klinische Beurteilung der Reaktionen eines Individuums auf aktuelle oder potenzielle Gesundheitsprobleme oder Lebensprozesse, die als Basis für die Auswahl von Pflegemaßnahmen dient.",
+      "definition_keywords": [
+        "klinische Beurteilung",
+        "Reaktion",
+        "Gesundheitsproblem",
+        "Pflegemaßnahmen"
+      ],
+      "definition_points": 3,
+      "examples_label": "PESR-Schema",
+      "examples_count": 4,
+      "correct_examples": [
+        "P = Problem",
+        "E = Einflussfaktor (Ätiologie)",
+        "S = Symptom",
+        "R = Ressource"
+      ],
+      "all_valid_examples": [
+        "Problem",
+        "Einflussfaktor",
+        "Ursache",
+        "Symptom",
+        "Anzeichen",
+        "Ressource",
+        "Fähigkeit"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m3_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Aussagen zur korrekten Durchführung der Händehygiene fachlich richtig sind.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen kurz.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Händedesinfektion erfolgt idealerweise auf den nassen Händen nach dem Waschen.",
+          "correct": false
+        },
+        {
+          "label": "Die Einwirkzeit für eine hygienische Händedesinfektion beträgt mindestens 30 Sekunden.",
+          "correct": true
+        },
+        {
+          "label": "Nach Kontakt mit der unmittelbaren Patientenumgebung ist eine Desinfektion zwingend.",
+          "correct": true
+        },
+        {
+          "label": "Einmalhandschuhe können bei Zeitmangel am Patientenbett desinfiziert werden.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Einwirkzeit für eine hygienische Händedesinfektion beträgt mindestens 30 Sekunden.",
+          "text": "Diese Zeit ist notwendig, um eine vollständige Benetzung aller Hautareale und die Abtötung der Keime sicherzustellen."
+        },
+        {
+          "option": "Einmalhandschuhe können bei Zeitmangel am Patientenbett desinfiziert werden.",
+          "text": "Falsch, da Desinfektionsmittel das Handschuhmaterial porös machen können und Handschuhe keinen Ersatz für die Händedesinfektion darstellen."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Maßnahmen zur effektiven Aspirationsprophylaxe gehören.",
+    "instruction_justify": " **Begründen**  Sie zwei Maßnahmen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Oberkörperhochlagerung (90°) während und bis 30 Min. nach der Mahlzeit.",
+          "correct": true
+        },
+        {
+          "label": "Anreichen von Nahrung in flacher Rückenlage bei bettlägerigen Patienten.",
+          "correct": false
+        },
+        {
+          "label": "Verwendung von Mischkonsistenzen (z. B. Suppe mit festen Einlagen).",
+          "correct": false
+        },
+        {
+          "label": "Inspektion der Mundhöhle auf Speisereste nach Beendigung des Essens.",
+          "correct": true
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Oberkörperhochlagerung (90°) während und bis 30 Min. nach der Mahlzeit.",
+          "text": "Die aufrechte Position nutzt die Schwerkraft und minimiert das Risiko, dass Speisebrei in die Trachea gelangt."
+        },
+        {
+          "option": "Inspektion der Mundhöhle auf Speisereste nach Beendigung des Essens.",
+          "text": "Dies verhindert eine 'stille Aspiration' von im Mund verbliebenen Resten im späteren Liegen."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, bei welchen Komplikationen im Rahmen einer Fiebererkrankung sofortiges ärztliches Handeln erforderlich ist.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Langsamer Temperaturabfall über mehrere Tage (Lysis).",
+          "correct": false
+        },
+        {
+          "label": "Kritischer Temperaturabfall innerhalb weniger Stunden mit kaltschweißiger Haut (Krisis).",
+          "correct": true
+        },
+        {
+          "label": "Auftreten eines Fieberdelirs mit Halluzinationen und Unruhe.",
+          "correct": true
+        },
+        {
+          "label": "Leichte Rötung der Haut in der Phase der Fieberhöhe.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Kritischer Temperaturabfall innerhalb weniger Stunden mit kaltschweißiger Haut (Krisis).",
+          "text": "Eine Krisis stellt eine akute lebensbedrohliche Kreislaufbelastung dar, die zum Kollaps führen kann."
+        },
+        {
+          "option": "Auftreten eines Fieberdelirs mit Halluzinationen und Unruhe.",
+          "text": "Zentralnervöse Störungen erfordern eine medizinische Abklärung der Ursache und Überwachung zur Sturzprävention."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Screening-Instrumente speziell oder bevorzugt für geriatrische Patienten empfohlen werden.",
+    "instruction_justify": " **Begründen**  Sie Ihre Auswahl für die geriatrische Pflege.",
+    "points": 4,
+    "data": {
+      "options": [
+        {
+          "label": "NRS (Nutritional Risk Screening)",
+          "correct": false
+        },
+        {
+          "label": "MNA (Mini Nutritional Assessment)",
+          "correct": true
+        },
+        {
+          "label": "MUST (Malnutrition Universal Screening Tool)",
+          "correct": false
+        },
+        {
+          "label": "BMI-Messung allein",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "MNA (Mini Nutritional Assessment)",
+          "text": "Das MNA wurde speziell für Menschen über 65 Jahre entwickelt und berücksichtigt neben physischen Parametern auch psychische und soziale Faktoren."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Kriterien der SMART-Regel bei der Zielformulierung zwingend erfüllt sein müssen.",
+    "instruction_justify": " **Begründen**  Sie die Bedeutung von zwei Kriterien für die Evaluation.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Das Ziel muss subjektiv angenehm klingen.",
+          "correct": false
+        },
+        {
+          "label": "Das Ziel muss messbar und damit überprüfbar sein.",
+          "correct": true
+        },
+        {
+          "label": "Das Ziel muss terminiert (mit Kontrolldatum versehen) sein.",
+          "correct": true
+        },
+        {
+          "label": "Das Ziel muss unabhängig vom Willen des Patienten sein.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Das Ziel muss messbar und damit überprüfbar sein.",
+          "text": "Nur messbare Ziele ermöglichen eine objektive Bewertung (Evaluation), ob eine Pflegemaßnahme wirksam war."
+        },
+        {
+          "option": "Das Ziel muss terminiert (mit Kontrolldatum versehen) sein.",
+          "text": "Ohne zeitliche Festlegung kann keine strukturierte Überprüfung des Pflegeerfolgs stattfinden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_001",
+    "type": "zuordnung",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Temperaturbereiche den korrekten klinischen Fachbegriffen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Subfebrile Temperatur",
+        "B": "Leichtes Fieber",
+        "C": "Mäßiges Fieber",
+        "D": "Hohes Fieber"
+      },
+      "statements": [
+        {
+          "text": "37,5 °C – 38,0 °C",
+          "answer": "A"
+        },
+        {
+          "text": "38,1 °C – 38,5 °C",
+          "answer": "B"
+        },
+        {
+          "text": "38,6 °C – 39,0 °C",
+          "answer": "C"
+        },
+        {
+          "text": "39,1 °C – 39,9 °C",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_002",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die vier Schichten der Darmwand in der korrekten Reihenfolge von innen (Lumen) nach außen.",
+    "list_label": "Darmwandschichten",
+    "count": 4,
+    "correct_answers": [
+      "Mukosa (Schleimhaut)",
+      "Submukosa (Bindegewebsschicht)",
+      "Muskularis (Muskelschicht)",
+      "Serosa (Außenschicht)"
+    ],
+    "all_valid_answers": [
+      "Mukosa",
+      "Tunica mucosa",
+      "Schleimhaut",
+      "Submukosa",
+      "Tela submucosa",
+      "Bindegewebsschicht",
+      "Muskularis",
+      "Tunica muscularis",
+      "Muskelschicht",
+      "Serosa",
+      "Tunica serosa",
+      "Außenschicht"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benannter Schicht in der richtigen Reihenfolge."
+  },
+  {
+    "q_id": "m3_extra_003",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Kerckring-Falten und die ca. 4 Millionen Zotten (Villi) im Dünndarm dienen primär der Oberflächenvergrößerung, um eine effiziente Resorption von Nährstoffen zu ermöglichen.",
+    "answer": "richtig",
+    "explanation": "Durch diese anatomischen Strukturen wird die innere Oberfläche des Dünndarms massiv vergrößert, was für die Nährstoffaufnahme essenziell ist.",
+    "source_hint": "M3A5 Skript Anatomie Darm / Resorption"
+  },
+  {
+    "q_id": "m3_extra_004",
+    "type": "nennen_liste",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie 4 Bestandteile des lymphatischen Systems, die eine wichtige Rolle bei der Immunabwehr spielen.",
+    "list_label": "Bestandteile des lymphatischen Systems",
+    "count": 4,
+    "correct_answers": [
+      "Milz (Lien)",
+      "Thymus",
+      "Lymphknoten",
+      "Mandeln (Tonsillen)"
+    ],
+    "all_valid_answers": [
+      "Milz",
+      "Lien",
+      "Thymus",
+      "Lymphknoten",
+      "Mandeln",
+      "Tonsillen",
+      "Peyersche Plaques",
+      "Lymphgefäße",
+      "Wurmfortsatz",
+      "Appendix"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Bestandteil."
+  },
+  {
+    "q_id": "m3_extra_005",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie den Unterschied zwischen direkten und indirekten Daten im Rahmen der pflegerischen Informationssammlung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Differenzierung und Beispielwahl.",
+    "data": {
+      "box_label": "Datenarten in der Pflege",
+      "correct_answer": "Direkte Daten werden unmittelbar am oder mit dem Patienten erhoben, etwa durch dessen eigene Aussagen (subjektiv) oder durch Beobachtungen der Pflegekraft wie Vitalwertmessungen (objektiv). Indirekte Daten hingegen stammen aus 'zweiter Hand', wie etwa aus Berichten von Angehörigen, Vorbefunden, ärztlichen Diagnosen oder Überleitungsbögen anderer Einrichtungen.",
+      "keywords": [
+        "Patient",
+        "Aussagen",
+        "Beobachtung",
+        "Dritte",
+        "Angehörige",
+        "Dokumente"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_extra_006",
+    "type": "zuordnung",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Beschreibungen den korrekten Typen von Pflegeproblemen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Aktuelles Pflegeproblem",
+        "B": "Potenzielles Pflegeproblem",
+        "C": "Verdecktes Pflegeproblem"
+      },
+      "statements": [
+        {
+          "text": "Das Problem besteht zum jetzigen Zeitpunkt offensichtlich (z.B. Atemnot).",
+          "answer": "A"
+        },
+        {
+          "text": "Ein Problem, das noch nicht besteht, aber aufgrund der Situation zu erwarten ist (z.B. Dekubitusrisiko).",
+          "answer": "B"
+        },
+        {
+          "text": "Ein Problem, das vom Patienten nicht geäußert wird, etwa aus Scham (z.B. Inkontinenz).",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_007",
+    "type": "freitext_box",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie Faktoren, die das medizinische Team bei der Entscheidung über eine künstliche Ernährung (PEG) berücksichtigen muss.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro fachlich korrektem Faktor.",
+    "data": {
+      "box_label": "Entscheidungsfaktoren PEG",
+      "correct_answer": "Bei der Entscheidung über eine PEG-Sonde müssen die Art der Grunderkrankung und die Funktionsfähigkeit des Magen-Darm-Trakts geprüft werden. Zudem spielen das Aspirationsrisiko und der individuelle Lebensrhythmus des Patienten eine Rolle. Zentral ist immer die ethische Abwägung unter Berücksichtigung des Patientenwillens und der Prognose.",
+      "keywords": [
+        "Grunderkrankung",
+        "Gastrointestinaltrakt",
+        "Aspirationsrisiko",
+        "Lebensrhythmus",
+        "Patientenwille"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_extra_008",
+    "type": "ankreuzen_begruenden",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Hygienemaßnahme bei einer Infektion mit Clostridium difficile zusätzlich zur Desinfektion zwingend erforderlich ist.",
+    "instruction_justify": " **Begründen**  Sie dies mit der Besonderheit des Erregers.",
+    "points": 4,
+    "data": {
+      "options": [
+        {
+          "label": "Tragen von zwei Paar Einmalhandschuhen.",
+          "correct": false
+        },
+        {
+          "label": "Händewaschen mit Wasser und Seife nach der Desinfektion.",
+          "correct": true
+        },
+        {
+          "label": "Einsatz von alkoholischen Desinfektionsmitteln ohne Einwirkzeit.",
+          "correct": false
+        },
+        {
+          "label": "Verzicht auf Schutzkittel bei kurzem Kontakt.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Händewaschen mit Wasser und Seife nach der Desinfektion.",
+          "text": "Clostridium difficile ist ein Sporenbildner. Da Sporen gegenüber Alkohol weitgehend resistent sind, müssen sie durch das zusätzliche Händewaschen mechanisch von der Haut entfernt werden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_009",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Gemäß dem BGW-Hautschutzplan sollte das Waschen der Hände mit Wasser und Seife auf ein notwendiges Minimum beschränkt werden, da es die Hautbarriere stärker schädigt als die alkoholische Desinfektion.",
+    "answer": "richtig",
+    "explanation": "Häufiges Waschen entzieht der Haut Fett und Feuchtigkeit. Die Desinfektion ist keimwirksamer und zugleich hautschonender.",
+    "source_hint": "BGW Hautschutz- und Händehygieneplan"
+  },
+  {
+    "q_id": "m3_extra_010",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie eine zentrale Voraussetzung bzw. Kontraindikation für die Durchführung von Wadenwickeln zur Fiebersenkung.",
+    "list_label": "Voraussetzung Wadenwickel",
+    "count": 1,
+    "correct_answers": [
+      "Wadenwickel dürfen nur angewendet werden, wenn die Extremitäten (Hände und Füße) des Patienten warm sind."
+    ],
+    "all_valid_answers": [
+      "nur bei warmen Extremitäten",
+      "nicht bei Schüttelfrost",
+      "nicht bei kalten Füßen",
+      "nicht in der Phase des Fieberanstiegs"
+    ],
+    "points": 2,
+    "scoring_info": "2 Punkte für die korrekte Nennung der Temperaturabhängigkeit (warme Beine/Füße)."
+  },
+  {
+    "q_id": "m3_extra_011",
+    "type": "zuordnung",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Artikel der Pflege-Charta den entsprechenden Inhalten zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Artikel 1: Selbstbestimmung",
+        "B": "Artikel 3: Privatheit",
+        "C": "Artikel 5: Information & Aufklärung",
+        "D": "Artikel 8: Würdiges Sterben"
+      },
+      "statements": [
+        {
+          "text": "Recht auf Hilfe zur Selbsthilfe, um ein eigenständiges Leben führen zu können.",
+          "answer": "A"
+        },
+        {
+          "text": "Recht auf Wahrung und Schutz der Privat- und Intimsphäre.",
+          "answer": "B"
+        },
+        {
+          "text": "Recht auf umfassende Beratung und Aufklärung über Behandlungsangebote.",
+          "answer": "C"
+        },
+        {
+          "text": "Recht auf palliative Begleitung und das Recht, in Würde zu sterben.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_012",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Energiebedarf im Alter sinkt, da der Grundumsatz aufgrund veränderter Körperzusammensetzung (weniger Muskelmasse) abnimmt.",
+    "answer": "richtig",
+    "explanation": "Trotz geringerem Energiebedarf bleibt der Bedarf an Mikronährstoffen oft gleich hoch, was eine hohe Nährstoffdichte der Nahrung erfordert.",
+    "source_hint": "M3B.1 Ernährungslehre / Expertenstandard"
+  },
+  {
+    "q_id": "m3_extra_013",
+    "type": "ergaenzen_liste",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die anatomischen Fachbegriffe für die Strukturen der Dünndarmschleimhaut.",
+    "points": 2,
+    "data": {
+      "list_label": "Dünndarm-Strukturen",
+      "given_items": [
+        "Kerckring-Falten"
+      ],
+      "missing_items": [
+        "Zotten (Villi)",
+        "Krypten"
+      ],
+      "all_valid_missing": [
+        "Zotten",
+        "Villi",
+        "Darmzotten",
+        "Krypten",
+        "Einsenkungen",
+        "Mikrovilli"
+      ]
+    }
+  },
+  {
+    "q_id": "m3_extra_014",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die Besonderheiten des sogenannten Resorptionsfiebers.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Merkmal (Zeitpunkt, Ursache, Symptomfreiheit, Höhe).",
+    "data": {
+      "box_label": "Das Resorptionsfieber",
+      "correct_answer": "Resorptionsfieber tritt typischerweise 2 bis 3 Tage nach größeren Operationen oder Verletzungen auf. Es entsteht durch den Abbau von Gewebetrümmern oder Blutergüssen (aseptisch). Kennzeichnend ist das Fehlen von Infektzeichen und eine Temperaturhöhe, die meist 38,5 °C nicht überschreitet.",
+      "keywords": [
+        "postoperativ",
+        "aseptisch",
+        "Gewebetrümmer",
+        "Bluterguss",
+        "38,5 Grad"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_extra_015",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Begründen**  Sie, warum bei einer ausgeprägten Hypothermie (< 35,0 °C) keine direkte periphere Erwärmung (z.B. mit einer Heizdecke) erfolgen darf.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung des Kreislaufversagens.",
+    "data": {
+      "box_label": "Gefahr bei Hypothermie",
+      "correct_answer": "Eine zu schnelle periphere Erwärmung führt zu einer plötzlichen Gefäßerweiterung in der Haut und den Extremitäten. Dadurch fließt kaltes Blut aus der Schale schlagartig zurück zum Herzen in den Körperkern (Afterdrop), was zu lebensbedrohlichen Herzrhythmusstörungen oder einem Kreislaufversagen führen kann.",
+      "keywords": [
+        "Gefäßerweiterung",
+        "Afterdrop",
+        "Kern",
+        "Rückfluss",
+        "Kreislaufversagen"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "fall_id": "m3_fall_01",
+    "title": "Alarmstufe Rot: Infektionswelle im Wohnbereich",
+    "topics_covered": [
+      "hygiene_grundlagen",
+      "ausscheidung_stuhlgang"
+    ],
+    "patient": {
+      "name": "Frau Meyer",
+      "alter": 82,
+      "geschlecht": "w",
+      "wohnsituation": "Bewohnerin im Seniorenheim, lebt seit 2 Jahren dort",
+      "beruf": "ehem. Schneiderin"
+    },
+    "setting": "Pflegeheim",
+    "pflegekraft": "Tobias (Pflegefachkraft)",
+    "paragraphs": [
+      "Am frühen Morgen klagt Frau Meyer über plötzliche Übelkeit und heftiges, schwallartiges Erbrechen. Kurz darauf setzt massiver, wässriger Durchfall ein. Tobias erkennt sofort die Gefahr einer infektiösen Enteritis und leitet die notwendigen Isolationsmaßnahmen im Einzelzimmer ein, um eine weitere Transmission im Wohnbereich zu verhindern.",
+      "Tobias achtet strikt auf die Einhaltung der Händehygiene gemäß den 5 Indikationen der WHO. Besonders vor dem Verlassen des Zimmers und nach Kontakt mit den Ausscheidungen ist eine viruzide Desinfektion zwingend erforderlich. Da bei Noroviren eine hohe Infektionskraft besteht, legt er vor dem Betreten des Zimmers die vollständige persönliche Schutzausrüstung (PSA) an.",
+      "Im Rahmen der Stuhlbeobachtung dokumentiert Tobias die Frequenz und die flüssige Konsistenz der Ausscheidungen. Er sorgt für eine schnelle Erreichbarkeit der Toilettenhilfen und appliziert eine Hautschutzcreme im Analbereich, um Hautdefekte durch die aggressiven Stuhlgänge zu vermeiden.",
+      "Aufgrund des hohen Flüssigkeitsverlustes überwacht Tobias die Vitalzeichen und achtet auf Anzeichen einer Dehydratation, wie stehende Hautfalten oder verminderte Vigilanz. Er bietet der Patientin regelmäßig kleine Schlucke Tee an, um den Elektrolythaushalt stabil zu halten."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Verdacht auf virale Gastroenteritis (Norovirus-Infektion)"
+        },
+        {
+          "label": "Medikation",
+          "value": "Elektrolytersatzlösung p.o., Antiemetika bei Bedarf"
+        },
+        {
+          "label": "Besonderheiten",
+          "value": "Strikte Kontaktisolation, Meldung an das Gesundheitsamt nach IfSG"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Meyer",
+      "ERKRANKUNG": "Norovirus-Infektion",
+      "PFLEGEKRAFT": "Tobias"
+    }
+  },
+  {
+    "fall_id": "m3_fall_02",
+    "title": "Wenn das Schlucken schwerfällt: Ernährung nach dem Insult",
+    "topics_covered": [
+      "ernaehrung_physiologie",
+      "ernaehrungsmanagement_komplex",
+      "ernaehrung_assessment"
+    ],
+    "patient": {
+      "name": "Herr Schmidt",
+      "alter": 78,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit Ehefrau in einer Wohnung",
+      "beruf": "ehem. Ingenieur"
+    },
+    "setting": "Krankenhaus",
+    "pflegekraft": "Sarah (Pflegefachkraft)",
+    "paragraphs": [
+      "Herr Schmidt wurde nach einem Schlaganfall auf die geriatrische Station verlegt. Sarah bemerkt beim ersten Anreichen von Flüssigkeit, dass der Patient heftig hustet und eine gurgelnde Stimme entwickelt. Sie vermutet eine Dysphagie, also eine Störung des Schluckvorgangs, bei der Nahrung in die Trachea gelangen könnte.",
+      "Um das Risiko einer Aspirationspneumonie zu minimieren, führt Sarah ein Nutritional Risk Screening (NRS) durch und stellt fest, dass der Patient bereits an Gewicht verloren hat. Sie dokumentiert die Leitsymptome wie das 'Hamstern' von Speiseresten in der Wangentasche und informiert den Arzt über die Schluckstörung.",
+      "Sarah setzt Maßnahmen zur Aspirationsprophylaxe um: Herr Schmidt wird während der Mahlzeit in eine 90-Grad-Oberkörperhochlagerung gebracht und erhält angedickte Flüssigkeiten sowie pürierte Kostform. Sie achtet darauf, dass keine Mischkonsistenzen gereicht werden, um den Schluckreflex nicht zu überfordern.",
+      "Im multidisziplinären Team wird nun die Einleitung einer künstlichen Ernährung via PEG-Sonde diskutiert, da die orale Aufnahme derzeit nicht bedarfsgerichtet möglich ist. Sarah berät die Ehefrau über die Vor- und Nachteile unter Berücksichtigung des Patientenwillens."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Zustand nach Apoplex, ausgeprägte oropharyngeale Dysphagie"
+        },
+        {
+          "label": "Empfehlung",
+          "value": "Logopädisches Schlucktraining, Kostform Stufe 1 (püriert)"
+        },
+        {
+          "label": "Planung",
+          "value": "Evaluation PEG-Anlage bei persistierender Mangelernährung"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Schmidt",
+      "ERKRANKUNG": "Dysphagie nach Schlaganfall",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m3_fall_03",
+    "title": "Glühende Hitze: Postoperative Überwachung",
+    "topics_covered": [
+      "fieber_thermoregulation",
+      "immunsystem_abwehr",
+      "koerperpflege_basis"
+    ],
+    "patient": {
+      "name": "Frau Koch",
+      "alter": 65,
+      "geschlecht": "w",
+      "wohnsituation": "Alleinstehend, sportlich aktiv",
+      "beruf": "Rentnerin"
+    },
+    "setting": "Krankenhaus",
+    "pflegekraft": "Marc (Auszubildender)",
+    "paragraphs": [
+      "Zwei Tage nach ihrer Knie-Operation stellt Marc bei der Vitalwertkontrolle eine Körperkerntemperatur von 38,4 °C bei Frau Koch fest. Die Patientin fröstelt und hat eine blasse, kühle Haut. Marc ordnet dies der Phase des Fieberanstiegs (Stadium incrementi) zu, in der der Hypothalamus den Sollwert erhöht hat.",
+      "Da die Extremitäten der Patientin noch kühl sind, deckt Marc sie warm zu und bietet warme Getränke an. Er weiß, dass physikalische Maßnahmen zur Fiebersenkung wie Wadenwickel in dieser Phase kontraindiziert sind. Er vermutet zunächst ein Resorptionsfieber, da keine weiteren Entzündungszeichen vorliegen.",
+      "Am Abend steigt die Temperatur auf 39,2 °C (hohes Fieber). Die Haut ist nun gerötet und heiß. Marc führt eine strukturierte Hautbeobachtung durch und achtet auf den Turgor, um eine Dehydration frühzeitig zu erkennen. Er führt nun eine beruhigende Waschung mit lauwarmem Wasser durch, um die Wärmeabfuhr zu unterstützen.",
+      "Marc dokumentiert den Verlauf akribisch. Er achtet besonders auf Warnzeichen wie eine Krisis, da ein zu schneller Temperaturabfall den Kreislauf der Patientin massiv belasten könnte. Er weiß, dass das Immunsystem nun auf Hochtouren arbeitet, um die postoperativen Gewebetrümmer abzubauen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Zustand nach Knie-TEP, V. a. Resorptionsfieber"
+        },
+        {
+          "label": "Therapie",
+          "value": "Flüssigkeitssubstitution, Paracetamol bei T > 39,0 °C"
+        },
+        {
+          "label": "Labor",
+          "value": "CRP leicht erhöht, Leukozyten im Normbereich"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Koch",
+      "ERKRANKUNG": "Resorptionsfieber",
+      "PFLEGEKRAFT": "Marc"
+    }
+  },
+  {
+    "fall_id": "m3_fall_04",
+    "title": "Zwischen Autonomie und Fürsorge: Die verweigerte Mahlzeit",
+    "topics_covered": [
+      "pflegeprozess_methodik",
+      "pflegeplanung_evaluation",
+      "ethik_pflege",
+      "identitaet_petzold"
+    ],
+    "patient": {
+      "name": "Frau Wagner",
+      "alter": 89,
+      "geschlecht": "w",
+      "wohnsituation": "Bewohnerin im beschützten Wohnbereich",
+      "beruf": "ehem. Lehrerin"
+    },
+    "setting": "Pflegeheim",
+    "pflegekraft": "Elena (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Wagner, die an einer fortgeschrittenen Demenz leidet, presst seit zwei Tagen die Lippen zusammen und verweigert die Nahrungsaufnahme. Elena nutzt das Identitätsmodell nach Petzold, um Ressourcen zu finden. Sie erkennt, dass die Säule der 'Werte' (frühere strenge Etikette) und 'soziale Bezüge' für die Bewohnerin noch immer von Bedeutung sind.",
+      "Elena formuliert eine Pflegediagnose nach dem PESR-Schema: 'Gefahr einer Mangelernährung (P) aufgrund von Nahrungsverweigerung bei Desorientierung (E), erkennbar durch Lippenpressen (S), wobei Frau Wagner auf klassische Musik positiv reagiert (R)'.",
+      "Die Pflegeplanung erfolgt nach der SMART-Regel: 'Frau Wagner nimmt innerhalb der nächsten 24 Stunden (T) mindestens 500 ml Flüssigkeit (M) in entspannter Atmosphäre bei Musik (S) zu sich'. Elena befindet sich jedoch in einem ethischen Dilemma zwischen dem Autonomieprinzip und ihrer Fürsorgepflicht.",
+      "In einer ethischen Fallbesprechung wird reflektiert, ob eine künstliche Ernährung dem Wohl der Bewohnerin dient oder eine unzulässige Lebensverlängerung darstellt. Elena beruft sich auf die Pflege-Charta, Artikel 1 (Selbstbestimmung), um die Würde der Bewohnerin zu schützen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Fortgeschrittene Demenz (Alzheimer-Typ), Anorexie"
+        },
+        {
+          "label": "Status",
+          "value": "Vigilanz gemindert, Risiko für Exsikkose"
+        },
+        {
+          "label": "Entscheidung",
+          "value": "Palliative Begleitung, Verzicht auf invasive Maßnahmen gem. Patientenverfügung"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Wagner",
+      "ERKRANKUNG": "Nahrungsverweigerung bei Demenz",
+      "PFLEGEKRAFT": "Elena"
+    }
+  },
+  {
+    "fall_id": "m3_fall_05",
+    "title": "Grenzen wahren: Professionelle Nähe in der Akutpflege",
+    "topics_covered": [
+      "interaktion_beruehrung",
+      "koerperpflege_basis",
+      "pflegedokumentation_recht"
+    ],
+    "patient": {
+      "name": "Herr Jonas",
+      "alter": 24,
+      "geschlecht": "m",
+      "wohnsituation": "Student, lebt in einer WG",
+      "beruf": "Student (Sportwissenschaften)"
+    },
+    "setting": "Krankenhaus",
+    "pflegekraft": "Julia (Auszubildende)",
+    "paragraphs": [
+      "Herr Jonas liegt nach einem schweren Motorradunfall mit multiplen Frakturen auf der Unfallchirurgie. Er ist vorübergehend immobil und benötigt Unterstützung bei der Ganzkörperpflege. Julia ist sich bewusst, dass sie hierbei die intime Distanzzone (0-45 cm) des jungen Mannes überschreiten muss.",
+      "Um Schamgefühle zu mindern, wendet Julia das Konzept der professionellen Berührung an. Sie kündigt jeden Schritt verbal an und achtet auf eine eindeutige, flächige Berührung, statt nur flüchtig 'anzufassen', um Sicherheit zu vermitteln. Sie deckt nicht benötigte Körperpartien stets ab.",
+      "Während der Körperpflege führt Julia eine Hautinspektion durch. Sie dokumentiert die Hautfarbe und den Turgor im Pflegebericht und achtet besonders auf Rötungen an den Druckpunkten (Dekubitusprophylaxe). Sie vermeidet subjektive Wertungen und formuliert ihre Beobachtungen objektiv.",
+      "Julia quittiert die durchgeführte Maßnahme mit ihrem Handzeichen im Durchführungsnachweis. Sie reflektiert ihr Handeln unter Berücksichtigung der Geschlechterrollen und stellt sicher, dass die Intimsphäre des Patienten durch einen Paravent und eine geschlossene Zimmertür gewahrt bleibt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Multiple Frakturen (Becken, Femur), Polytrauma"
+        },
+        {
+          "label": "Status",
+          "value": "Postoperativ stabil, strenge Bettruhe"
+        },
+        {
+          "label": "Pflegeauftrag",
+          "value": "Vollständige Übernahme der ADL, engmaschige Dekubitusprophylaxe"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Jonas",
+      "ERKRANKUNG": "Immobilität nach Unfall",
+      "PFLEGEKRAFT": "Julia"
+    }
+  },
+  {
+    "q_id": "m3_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "statement": "Da bei [PATIENT] der Verdacht auf Noroviren besteht, muss [PFLEGEKRAFT] ein Händedesinfektionsmittel mit dem Wirkbereich „begrenzt viruzid“ verwenden.",
+    "answer": "falsch",
+    "explanation": "Noroviren sind unbehüllte Viren. Hier ist ein viruzides Desinfektionsmittel (Wirkbereich „viruzid“) zwingend erforderlich, da „begrenzt viruzid“ nur gegen behüllte Viren wirkt.",
+    "source_hint": "M3A5 Skript Anatomie Darm / Diarrhoe"
+  },
+  {
+    "q_id": "m3_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Nennen** Sie die 4 Komponenten der persönlichen Schutzausrüstung (PSA), die [PFLEGEKRAFT] beim Betreten des Zimmers von [PATIENT] anlegen sollte.",
+    "list_label": "PSA bei Noroviren",
+    "count": 4,
+    "correct_answers": [
+      "Einmalschutzkittel",
+      "Einmalhandschuhe",
+      "Mund-Nasen-Schutz",
+      "Schutzbrille (bei Spritzgefahr)"
+    ],
+    "all_valid_answers": [
+      "Schutzkittel",
+      "Handschuhe",
+      "Maske",
+      "Mundschutz",
+      "Brille",
+      "Schutzbrille"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Komponente."
+  },
+  {
+    "q_id": "m3_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Begründen** Sie, warum [PFLEGEKRAFT] bei [PATIENT] nach der Grundpflege eine Hautschutzcreme im Analbereich appliziert.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die fachliche Begründung (Hautbarriere, Aggressivität des Stuhls).",
+    "data": {
+      "box_label": "Hautschutz bei Diarrhoe",
+      "correct_answer": "Durch die häufigen und flüssigen Stuhlgänge bei einer Enteritis wird die Haut im Analbereich durch Enzyme und Feuchtigkeit stark gereizt. Eine Hautschutzcreme bildet eine Barriere, die das Eindringen von Feuchtigkeit verhindert und so schmerzhafte Hautdefekte oder Infektionen (Intertrigo) bei [PATIENT] verhindert.",
+      "keywords": ["Hautbarriere", "Reizung", "Enzyme", "Feuchtigkeit", "Defektvermeidung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction_select": " **Entscheiden** Sie, auf welche Anzeichen einer Dehydratation [PFLEGEKRAFT] bei [PATIENT] besonders achten muss.",
+    "instruction_justify": " **Begründen** Sie, warum diese Beobachtung bei älteren Menschen wie [PATIENT] kritisch ist.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Stehende Hautfalten beim Loslassen", "correct": true },
+        { "label": "Gesteigerter Harndrang mit hellem Urin", "correct": false },
+        { "label": "Trockene Schleimhäute und belegte Zunge", "correct": true },
+        { "label": "Plötzliche Verwirrtheit oder Schläfrigkeit", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Plötzliche Verwirrtheit oder Schläfrigkeit",
+          "text": "Ältere Menschen haben ein vermindertes Durstgefühl. Ein massiver Flüssigkeitsverlust durch Diarrhoe führt schnell zu Elektrolytstörungen und verminderter Hirndurchblutung, was sich bei [PATIENT] als Vigilanzminderung zeigt."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Nennen** Sie 4 Kriterien, die [PFLEGEKRAFT] bei der Stuhlbeobachtung von [PATIENT] im Pflegebericht dokumentieren muss.",
+    "list_label": "Kriterien der Stuhlbeobachtung",
+    "count": 4,
+    "correct_answers": [
+      "Frequenz (Häufigkeit)",
+      "Konsistenz (flüssig, breiig)",
+      "Farbe",
+      "Geruch",
+      "Beimengungen (Blut, Schleim)"
+    ],
+    "all_valid_answers": [
+      "Frequenz",
+      "Konsistenz",
+      "Farbe",
+      "Geruch",
+      "Beimengungen",
+      "Menge"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m3_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "statement": "Nach dem Ablegen der Einmalhandschuhe muss [PFLEGEKRAFT] keine erneute Händedesinfektion durchführen, da die Handschuhe als Schutzbarriere dienten.",
+    "answer": "falsch",
+    "explanation": "Durch unerkannte Perforationen oder Kontamination beim Ausziehen können Erreger auf die Hände gelangen. Eine Desinfektion nach dem Ablegen von Handschuhen ist gemäß WHO-Indikationen zwingend.",
+    "source_hint": "M3A1 Grundlagen hygienischen Handelns"
+  },
+  {
+    "q_id": "m3_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Erläutern** Sie die Indikation „Nach Kontakt mit der unmittelbaren Patientenumgebung“ im Kontext des Zimmers von [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Übertragung auf Oberflächenkontamination.",
+    "data": {
+      "box_label": "Umgebungshygiene",
+      "correct_answer": "Auch ohne direkten Kontakt mit [PATIENT] muss [PFLEGEKRAFT] die Hände desinfizieren, wenn sie Oberflächen wie den Nachttisch oder das Bettgestell berührt hat. Noroviren sind sehr stabil und können auf diesen Flächen lange überleben und so über die Hände der Pflegekraft auf andere Bewohner übertragen werden.",
+      "keywords": ["Übertragung", "Oberflächen", "Kolonisation", "Indikation 5", "Unterbrechung Infektionskette"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "ausscheidung_stuhlgang",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Nennen** Sie 3 symptomatische Maßnahmen zur Behandlung der Diarrhoe, die für [PATIENT] im Fallbeispiel relevant sind.",
+    "list_label": "Maßnahmen bei Diarrhoe",
+    "count": 3,
+    "correct_answers": [
+      "Flüssigkeitsersatz (oral oder i.v.)",
+      "Elektrolytersatz",
+      "Nahrungskarenz (1-2 Tage) / Schonkost",
+      "Ggf. Medikamente zur Hemmung der Darmmotilität"
+    ],
+    "all_valid_answers": [
+      "Trinken anbieten",
+      "Elektrolyte",
+      "Tee geben",
+      "Infusion",
+      "Essen pausieren",
+      "ballaststoffarme Kost"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Ordnen** Sie die hygienischen Tätigkeiten von [PFLEGEKRAFT] den korrekten WHO-Indikationen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Vor Patientenkontakt",
+        "B": "Nach Kontakt mit potenziell infektiösem Material",
+        "C": "Nach Kontakt mit der Patientenumgebung"
+      },
+      "statements": [
+        { "text": "[PFLEGEKRAFT] leert das Erbrochene von [PATIENT] aus.", "answer": "B" },
+        { "text": "[PFLEGEKRAFT] betritt das Zimmer, um die Vitalwerte zu messen.", "answer": "A" },
+        { "text": "[PFLEGEKRAFT] rückt den Nachttisch zur Seite und verlässt den Raum.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "hygiene_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_01"],
+    "instruction": " **Erklären** Sie, warum [PFLEGEKRAFT] das Zimmer von [PATIENT] nur mit Schutzkittel betreten darf.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung des Schutzes der Dienstkleidung.",
+    "data": {
+      "box_label": "Zweck des Schutzkittels",
+      "correct_answer": "Der Schutzkittel dient dazu, die Berufskleidung von [PFLEGEKRAFT] vor einer massiven Keimbesiedlung durch Erbrochenes oder Stuhlpartikel von [PATIENT] zu schützen. Ohne Kittel würde [PFLEGEKRAFT] die Viren auf ihrer Kleidung in den gesamten Wohnbereich und zu anderen Bewohnern tragen.",
+      "keywords": ["Berufskleidung", "Schutz", "Verschmutzung", "Keimverschleppung", "Barriere"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Analysieren** Sie die von [PFLEGEKRAFT] beobachteten Symptome bei [PATIENT] und identifizieren Sie die vermutlich gestörte Schluckphase.",
+    "points": 5,
+    "scoring_info": "0-2 Punkte für Symptomanalyse, 0-3 Punkte für die Benennung der Phase.",
+    "data": {
+      "box_label": "Schluckphasen-Analyse",
+      "correct_answer": "Die Symptome wie heftiges Husten und eine gurgelnde Stimme unmittelbar nach der Flüssigkeitsaufnahme weisen auf eine Störung der pharyngealen Phase hin. Hier erfolgt der Schutz der Atemwege durch den Kehlkopfdeckel nicht korrekt, wodurch Flüssigkeit in die Trachea gelangt (Aspiration).",
+      "keywords": ["Pharyngeale Phase", "Schluckreflex", "Atemwegsschutz", "Kehlkopf", "Husten"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Nennen** Sie 4 pflegerische Maßnahmen zur Aspirationsprophylaxe, die [PFLEGEKRAFT] bei der Mahlzeit von [PATIENT] anwenden muss.",
+    "list_label": "Aspirationsprophylaxe bei [PATIENT]",
+    "count": 4,
+    "correct_answers": [
+      "Oberkörperhochlagerung (90 Grad)",
+      "Andicken von Flüssigkeiten",
+      "Gereichte Menge an Schluckkapazität anpassen",
+      "Vermeiden von Mischkonsistenzen (z.B. Suppe mit Einlage)",
+      "Mundhöhle nach dem Essen auf Speisereste inspizieren"
+    ],
+    "all_valid_answers": [
+      "aufrecht sitzen",
+      "andicken",
+      "pürierte Kost",
+      "keine Mischkonsistenz",
+      "Mundpflege",
+      "Zeit lassen",
+      "Absaugbereitschaft"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "statement": "Für [PATIENT], der sich im Akutkrankenhaus befindet, ist das NRS (Nutritional Risk Screening) das am besten geeignete Instrument zur Identifikation eines Mangelernährungsrisikos.",
+    "answer": "richtig",
+    "explanation": "Das NRS ist speziell für den Akutbereich im Krankenhaus validiert, während das MNA eher in der stationären Altenhilfe eingesetzt wird.",
+    "source_hint": "M3B.1 Ernährungsmanagement Expertenstandard"
+  },
+  {
+    "q_id": "m3_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction_select": " **Entscheiden** Sie, welche Kostformen für [PATIENT] aufgrund seiner Dysphagie aktuell sicher sind.",
+    "instruction_justify": " **Begründen** Sie, warum Mischkonsistenzen für [PATIENT] gefährlich sind.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Klare Fleischbrühe mit Nudeleinlage", "correct": false },
+        { "label": "Homogen pürierte Kost (Stufe 1)", "correct": true },
+        { "label": "Angedickter Fruchtsaft", "correct": true },
+        { "label": "Grob gewürfeltes Obst", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Klare Fleischbrühe mit Nudeleinlage",
+          "text": "Mischkonsistenzen erfordern unterschiedliche Schlucktechniken gleichzeitig. Da der Schluckreflex bei [PATIENT] verzögert ist, fließt die Flüssigkeit bereits in den Rachen, während die festen Bestandteile noch gekaut werden müssen, was das Aspirationsrisiko massiv erhöht."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Erläutern** Sie, welche Faktoren im Team bei der Entscheidung über eine PEG-Sonde für [PATIENT] berücksichtigt werden müssen.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Faktor (medizinsch, ethisch, pflegerisch).",
+    "data": {
+      "box_label": "PEG-Entscheidung",
+      "correct_answer": "Berücksichtigt werden müssen die Schwere des Schluckdefizits, die Prognose der Grunderkrankung (Apoplex) sowie das aktuelle Aspirationsrisiko. Zentral ist zudem der Patientenwille oder eine Patientenverfügung. Das Ziel muss die Verbesserung der Lebensqualität sein, nicht eine bloße Lebensverlängerung in einer aussichtslosen Situation.",
+      "keywords": ["Patientenwille", "Lebensqualität", "Prognose", "Schluckdefizit", "Aspirationsrisiko"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Nennen** Sie 3 Warnzeichen, bei denen [PFLEGEKRAFT] die Nahrungsaufnahme bei [PATIENT] sofort abbrechen muss.",
+    "list_label": "Abbruchkriterien Nahrungsaufnahme",
+    "count": 3,
+    "correct_answers": [
+      "Starker Hustenreiz oder Würgen",
+      "Zyanose (Blaufärbung der Lippen/Haut)",
+      "Atemnot oder pfeifende Atemgeräusche",
+      "Massive Verweigerung oder plötzliche Erschöpfung"
+    ],
+    "all_valid_answers": [
+      "Husten",
+      "Würgen",
+      "Blaufärbung",
+      "Zyanose",
+      "Atemnot",
+      "Erstickungsgefühl"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Warnzeichen."
+  },
+  {
+    "q_id": "m3_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "ernaehrung_physiologie",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "statement": "Zur Unterstützung der oralen Phase sollte [PFLEGEKRAFT] darauf achten, dass [PATIENT] seine Zahnprothese (falls vorhanden) während des Essens trägt.",
+    "answer": "richtig",
+    "explanation": "Ein passender Zahnersatz ist Voraussetzung für die mechanische Zerkleinerung der Nahrung im Mundraum und bereitet den Schluckvorgang vor.",
+    "source_hint": "M3B.1 Ernährungslehre / Dysphagie"
+  },
+  {
+    "q_id": "m3_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "ernaehrungsmanagement_komplex",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Beschreiben** Sie die Bedeutung der Mundpflege nach dem Essen für [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Begründung (Infektionsschutz, Aspiration).",
+    "data": {
+      "box_label": "Mundpflege nach Mahlzeit",
+      "correct_answer": "Bei [PATIENT] besteht die Gefahr des „Hamsterns“, also das Verbleiben von Speiseresten in den Wangentaschen. Diese Reste können später unkontrolliert aspiriert werden. Zudem beugt die Reinigung der Mundhöhle Entzündungen (Soor/Parotitis) vor, da Speisereste einen Nährboden für Keime darstellen.",
+      "keywords": ["Hamstern", "stille Aspiration", "Wangentasche", "Soorprophylaxe", "Hygiene"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Ordnen** Sie die Beobachtungen von [PFLEGEKRAFT] den entsprechenden Assessment-Kategorien zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Biometrische Daten",
+        "B": "Funktionelle Einschränkung",
+        "C": "Klinisches Symptom"
+      },
+      "statements": [
+        { "text": "[PATIENT] hat in den letzten 4 Wochen 3 kg Gewicht verloren.", "answer": "A" },
+        { "text": "[PATIENT] benötigt vollständige Unterstützung beim Anreichen der Kost.", "answer": "B" },
+        { "text": "[PATIENT] entwickelt beim Schlucken eine gurgelnde Stimme.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "ernaehrung_assessment",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_02"],
+    "instruction": " **Begründen** Sie, warum eine regelmäßige Flüssigkeitsbilanzierung für [PATIENT] im Krankenhaus wichtig ist.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung der Dehydrationsprophylaxe bei Dysphagie.",
+    "data": {
+      "box_label": "Flüssigkeitsbilanzierung",
+      "correct_answer": "Aufgrund der Schluckstörung nimmt [PATIENT] möglicherweise weniger Flüssigkeit zu sich, als er benötigt. Eine Bilanzierung erlaubt den exakten Vergleich zwischen Einfuhr und Ausfuhr, um eine drohende Dehydration frühzeitig zu erkennen und ggf. durch intravenöse Gaben gegenzusteuern.",
+      "keywords": ["Dehydratation", "Exsikkose", "Einfuhrkontrolle", "Flüssigkeitsbedarf", "Überwachung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Analysieren** Sie die Symptome von [PATIENT] am Vormittag (38,4 °C, frösteln, kühle blasse Haut) und identifizieren Sie die Fieberphase.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die korrekte Benennung und physiologische Begründung.",
+    "data": {
+      "box_label": "Analyse der Fieberphase",
+      "correct_answer": "[PATIENT] befindet sich am Vormittag in der Phase des Fieberanstiegs (Stadium incrementi). Der Sollwert im Hypothalamus ist erhöht, und der Körper drosselt die Durchblutung der Haut (Blässe, Kälte), um Wärme im Inneren zu speichern und den Ist-Wert an den neuen Sollwert anzupassen.",
+      "keywords": ["Fieberanstieg", "Stadium incrementi", "Sollwerterhöhung", "Wärmeproduktion", "Zentralisation"],
+      "min_rows": 4
+    }
+  },
+  {
+    "id": "m3_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "statement": "Am Abend bei einer Temperatur von 39,2 °C und heißer, geröteter Haut darf [PFLEGEKRAFT] bei [PATIENT] kühle Wadenwickel zur Fiebersenkung durchführen.",
+    "answer": "richtig",
+    "explanation": "Wadenwickel dürfen nur in der Phase der Fieberhöhe durchgeführt werden, wenn die Extremitäten (Beine/Füße) warm und gut durchblutet sind, was bei [PATIENT] am Abend der Fall ist.",
+    "source_hint": "M3A6 Pflege fieberkranker Menschen"
+  },
+  {
+    "q_id": "m3_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Nennen** Sie 4 pflegerische Maßnahmen, die [PFLEGEKRAFT] am Abend bei der Fieberhöhe von [PATIENT] durchführen sollte.",
+    "list_label": "Maßnahmen bei Fieberhöhe",
+    "count": 4,
+    "correct_answers": [
+      "Raumtemperatur senken (ohne Zugluft)",
+      "Leichte Bekleidung / Decken entfernen",
+      "Kühle Getränke anbieten",
+      "Waschungen mit lauwarmem Wasser",
+      "Engmaschige Vitalzeichenkontrolle"
+    ],
+    "all_valid_answers": [
+      "Raum kühlen",
+      "Wadenwickel",
+      "viel trinken",
+      "Waschung",
+      "Vitalwerte messen",
+      "leichte Zudecke"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m3_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Begründen** Sie den Verdacht auf ein Resorptionsfieber bei [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die fachliche Herleitung aus dem Fall.",
+    "data": {
+      "box_label": "Resorptionsfieber-Analyse",
+      "correct_answer": "Ein Resorptionsfieber ist wahrscheinlich, da das Fieber exakt 2 Tage nach der Operation auftritt, die Temperatur unter 38,5 °C lag (am Vormittag) und keine Anzeichen für eine Infektion vorliegen. Ursache ist der physiologische Abbau von Blutergüssen oder Gewebetrümmern nach dem operativen Eingriff.",
+      "keywords": ["aseptisch", "postoperativ", "Gewebetrümmer", "Blutabbau", "Zeitpunkt"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "koerperpflege_basis",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Nennen** Sie 3 Kriterien der Hautbeobachtung, die [PFLEGEKRAFT] bei [PATIENT] aufgrund des hohen Fiebers besonders beachten muss.",
+    "list_label": "Hautbeobachtung bei Fieber",
+    "count": 3,
+    "correct_answers": [
+      "Hautfarbe (Rötung, Blässe, Zyanose)",
+      "Hauttemperatur (heiß, kühl)",
+      "Hautturgor (Flüssigkeitsstatus)",
+      "Hautbeschaffenheit (Schweiß, Trockenheit)"
+    ],
+    "all_valid_answers": [
+      "Farbe",
+      "Temperatur",
+      "Turgor",
+      "Spannung",
+      "Schweiß",
+      "Feuchtigkeit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m3_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "statement": "Bei [PATIENT] besteht am Abend bei 39,2 °C die Gefahr einer Krisis, die durch einen plötzlichen Blutdruckabfall und kalten Schweiß gekennzeichnet ist.",
+    "answer": "richtig",
+    "explanation": "Ein rascher Temperaturabfall (Krisis) ist eine massive Kreislaufbelastung und ein pflegerischer Notfall, auf den [PFLEGEKRAFT] vorbereitet sein muss.",
+    "source_hint": "M3A6 Komplikationen bei Fieber"
+  },
+  {
+    "q_id": "m3_fall_nl_008",
+    "type": "nennen_liste",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Nennen** Sie 4 Prophylaxen, die für [PATIENT] aufgrund der Fiebererkrankung und der postoperativen Immobilität jetzt besonders wichtig sind.",
+    "list_label": "Wichtige Prophylaxen für [PATIENT]",
+    "count": 4,
+    "correct_answers": [
+      "Thromboseprophylaxe",
+      "Dekubitusprophylaxe",
+      "Pneumonieprophylaxe",
+      "Obstipationsprophylaxe",
+      "Soor- und Parotitisprophylaxe"
+    ],
+    "all_valid_answers": [
+      "Thrombose",
+      "Dekubitus",
+      "Pneumonie",
+      "Lungenentzündung",
+      "Obstipation",
+      "Verstopfung",
+      "Soor",
+      "Mundpflege"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Prophylaxe."
+  },
+  {
+    "q_id": "m3_fall_tab_001",
+    "type": "tabelle_3spalten",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Vervollständigen** Sie den Temperaturverlauf von [PATIENT].",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Zeitpunkt", "Temperaturwert", "Klinische Bezeichnung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Vormittag" },
+              { "type": "input", "correct_answer": "38,4 °C" },
+              { "type": "input", "correct_answer": "Leichtes Fieber", "keywords": ["leicht"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Abend" },
+              { "type": "input", "correct_answer": "39,2 °C" },
+              { "type": "input", "correct_answer": "Hohes Fieber", "keywords": ["hoch"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_010",
+    "type": "freitext_box",
+    "topic": "immunsystem_abwehr",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Erläutern** Sie kurz die positive Funktion des Fiebers für den Heilungsprozess von [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Beschreibung der Immunaktivierung.",
+    "data": {
+      "box_label": "Sinn des Fiebers",
+      "correct_answer": "Fieber ist ein Schutzmechanismus des Immunsystems. Die erhöhte Körpertemperatur beschleunigt Stoffwechselvorgänge und aktiviert Abwehrzellen (Leukozyten), die für den Abbau der postoperativen Gewebetrümmer und die Wundheilung bei [PATIENT] notwendig sind.",
+      "keywords": ["Schutzmechanismus", "Stoffwechsel", "Abwehrzellen", "Heilung", "Immunsystem"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_011",
+    "type": "freitext_box",
+    "topic": "fieber_thermoregulation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_03"],
+    "instruction": " **Begründen** Sie, warum [PFLEGEKRAFT] [PATIENT] in der Phase des Fieberanstiegs (Vormittag) warm zudecken sollte.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung der Angleichung von Ist- an Sollwert.",
+    "data": {
+      "box_label": "Wärmezufuhr im Anstieg",
+      "correct_answer": "Im Fieberanstieg liegt der Sollwert über dem Ist-Wert. Durch Zudecken und warme Getränke wird der Körper bei der Wärmeproduktion unterstützt. Dies verkürzt die Phase des belastenden Frierens/Schüttelfrosts, da der Ist-Wert den neuen Sollwert schneller erreicht.",
+      "keywords": ["Sollwert", "Ist-Wert", "Angleichung", "Wärmezufuhr", "Frieren"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_009",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Nennen** Sie die vier Bestandteile der Pflegediagnose nach dem PESR-Schema, die [PFLEGEKRAFT] für [PATIENT] formuliert hat.",
+    "list_label": "PESR-Bestandteile bei [PATIENT]",
+    "count": 4,
+    "correct_answers": [
+      "Problem: Gefahr einer Mangelernährung",
+      "Einflussfaktor: Nahrungsverweigerung bei Desorientierung",
+      "Symptom: Lippenpressen",
+      "Ressource: Reagiert positiv auf klassische Musik"
+    ],
+    "all_valid_answers": [
+      "Problem",
+      "Einflussfaktor",
+      "Ethiologie",
+      "Symptom",
+      "Ressource"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt zugeordnetem Element aus dem Fall."
+  },
+  {
+    "q_id": "m3_fall_ft_012",
+    "type": "freitext_box",
+    "topic": "ethik_pflege",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Erläutern** Sie das ethische Dilemma, in dem sich [PFLEGEKRAFT] bezüglich der Nahrungsverweigerung von [PATIENT] befindet.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Darstellung des Konflikts zwischen Autonomie und Fürsorge.",
+    "data": {
+      "box_label": "Ethisches Dilemma Analyse",
+      "correct_answer": "[PFLEGEKRAFT] erlebt einen Konflikt zwischen dem Prinzip des Respekts vor der Autonomie (Lippenpressen als Ablehnung) und der Fürsorgepflicht (Vermeidung von Exsikkose/Hunger). Ein Dilemma entsteht, da beide Handlungsoptionen – Respektieren der Ablehnung oder forcierte Ernährung – ethisch problematisch sind und gegeneinander abgewogen werden müssen.",
+      "keywords": ["Autonomieprinzip", "Fürsorgepflicht", "Werteabwägung", "Zwangslage", "Konflikt"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "statement": "Das von [PFLEGEKRAFT] formulierte Ziel „nimmt innerhalb der nächsten 24 Stunden mindestens 500 ml Flüssigkeit zu sich“ erfüllt alle Kriterien der SMART-Regel.",
+    "answer": "richtig",
+    "explanation": "Das Ziel ist spezifisch (Flüssigkeit), messbar (500 ml), akzeptiert (im Team/Kontext), realistisch und terminiert (24 Stunden).",
+    "source_hint": "M3.B2 III. Ziele festlegen"
+  },
+  {
+    "q_id": "m3_fall_zu_003",
+    "type": "zuordnung",
+    "topic": "identitaet_petzold",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Ordnen** Sie die Beobachtungen von [PFLEGEKRAFT] den korrekten Säulen der Identität nach Petzold zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Säule der Leiblichkeit",
+        "B": "Säule der sozialen Bezüge",
+        "C": "Säule der Werte und Normen"
+      },
+      "statements": [
+        { "text": "[PATIENT] leidet an einer fortgeschrittenen Demenz (Alzheimer).", "answer": "A" },
+        { "text": "Die Tochter von [PATIENT] ist als Ressource in die Pflege eingebunden.", "answer": "B" },
+        { "text": "[PATIENT] legt großen Wert auf „strenge Etikette“ und Höflichkeit.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_010",
+    "type": "nennen_liste",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Nennen** Sie den Artikel der Pflege-Charta, auf den sich [PFLEGEKRAFT] beruft, um die Würde von [PATIENT] zu schützen.",
+    "list_label": "Relevanter Artikel der Pflege-Charta",
+    "count": 1,
+    "correct_answers": ["Artikel 1: Selbstbestimmung und Hilfe zur Selbsthilfe"],
+    "all_valid_answers": [
+      "Artikel 1",
+      "Selbstbestimmung",
+      "Recht auf Selbstbestimmung"
+    ],
+    "points": 2,
+    "scoring_info": "2 Punkte für die korrekte Nennung des Artikels."
+  },
+  {
+    "q_id": "m3_fall_ft_013",
+    "type": "freitext_box",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Beschreiben** Sie, welche Bedeutung die Ressource „Musik“ im PESR-Schema für die Maßnahmenplanung bei [PATIENT] hat.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Verknüpfung von Ressource und Zielerreichung.",
+    "data": {
+      "box_label": "Bedeutung von Ressourcen",
+      "correct_answer": "Ressourcen sind Fähigkeiten oder Vorlieben, die der Patient zur Problembewältigung nutzt. Da [PATIENT] positiv auf klassische Musik reagiert, nutzt [PFLEGEKRAFT] dies als Intervention, um eine entspannte Atmosphäre zu schaffen und so die Abwehrhaltung (Lippenpressen) beim Anreichen von Flüssigkeit zu mindern.",
+      "keywords": ["Ressourcenorientierung", "Intervention", "Linderung", "Fähigkeit", "Problembewältigung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "ethik_pflege",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction_select": " **Entscheiden** Sie, welche ethischen Prinzipien laut Beauchamp und Childress in der Fallbesprechung über [PATIENT] primär abgewogen werden müssen.",
+    "instruction_justify": " **Begründen** Sie eine Ihrer Entscheidungen.",
+    "points": 5,
+    "data": {
+      "options": [
+        { "label": "Prinzip der Gerechtigkeit", "correct": false },
+        { "label": "Prinzip des Respekts vor der Autonomie", "correct": true },
+        { "label": "Prinzip der Fürsorge", "correct": true },
+        { "label": "Prinzip des Nichtschadens", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Prinzip der Fürsorge",
+          "text": "Das Team muss prüfen, ob eine künstliche Ernährung dem Wohl von [PATIENT] dient, indem sie Leiden verhindert, oder ob sie lediglich den Sterbeprozess künstlich verlängert."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_014",
+    "type": "freitext_box",
+    "topic": "identitaet_petzold",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Erläutern** Sie, warum das „Wegbrechen“ einer Identitätssäule bei [PATIENT] zu einer Krise führt.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Beschreibung des seelischen Gleichgewichts (Petzold).",
+    "data": {
+      "box_label": "Identitätskrise bei [PATIENT]",
+      "correct_answer": "Durch die Demenz ist die Säule der Leiblichkeit (Gesundheit/Geist) massiv beschädigt. Wenn tragende Säulen wegbrechen und die verbliebenen Bereiche (wie die Etikette-Werte) dies nicht mehr kompensieren können, gerät das seelische Gleichgewicht aus dem Lot, was sich bei [PATIENT] in Form von Verweigerung und Rückzug äußert.",
+      "keywords": ["Wegbrechen", "Säulen", "Gleichgewicht", "Balance", "Kompensation"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_rf_008",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess_methodik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "statement": "Bei dem im Fall beschriebenen Lippenpressen handelt es sich um ein verdecktes Pflegeproblem.",
+    "answer": "falsch",
+    "explanation": "Das Lippenpressen ist eine beobachtbare Reaktion und somit ein aktuelles, offensichtliches Pflegeproblem.",
+    "source_hint": "M3.B2 II. Probleme und Ressourcen"
+  },
+  {
+    "q_id": "m3_fall_ft_015",
+    "type": "freitext_box",
+    "topic": "ethik_pflege",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_04"],
+    "instruction": " **Benennen** Sie die Schritte des ethischen Entscheidungsprozesses, die [PFLEGEKRAFT] in der Fallbesprechung durchläuft.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Schritt in der logischen Abfolge.",
+    "data": {
+      "box_label": "Entscheidungsfindungsprozess",
+      "correct_answer": "Der Prozess umfasst: 1. Identifikation des moralischen Problems, 2. Informationssammlung (Fakten), 3. Analyse (Welche Prinzipien sind betroffen?), 4. Entwicklung von Handlungsoptionen, 5. Auswahl und Begründung der Handlung sowie 6. die kritische Reflexion.",
+      "keywords": ["Identifikation", "Analyse", "Optionen", "Auswahl", "Reflexion", "Prinzipien"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_011",
+    "type": "nennen_liste",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Nennen** Sie die Distanzzone nach Hall, in der sich [PFLEGEKRAFT] bei der Ganzkörperpflege von [PATIENT] befindet, und geben Sie den Meterbereich an.",
+    "list_label": "Distanzzone bei Körperpflege",
+    "count": 2,
+    "correct_answers": [
+      "Intime Distanz",
+      "0 bis 45 cm"
+    ],
+    "all_valid_answers": [
+      "Intimzone",
+      "unter 45 cm",
+      "0 - 0,45 m"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt für die Zone, 1 Punkt für den Bereich."
+  },
+  {
+    "q_id": "m3_fall_rf_009",
+    "type": "richtig_falsch",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "statement": "Wenn [PFLEGEKRAFT] im Pflegebericht einträgt: „Patient schämt sich sehr wegen der Pflege durch eine Frau“, ist dies eine fachlich korrekte, objektive Dokumentation.",
+    "answer": "falsch",
+    "explanation": "Dies ist eine subjektive Interpretation/Wertung. Korrekt wäre eine wertfreie Beschreibung beobachtbarer Zeichen, z. B.: „Bewohner wendet den Blick ab und errötet bei der Intimpflege“.",
+    "source_hint": "M 3.B2 Dokumentation in der Pflege"
+  },
+  {
+    "q_id": "m3_fall_ft_016",
+    "type": "freitext_box",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Beschreiben** Sie den Unterschied zwischen einfachem „Anfassen“ und der von [PFLEGEKRAFT] angewandten „Berührung als Kunst“.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Darstellung von Intention und Achtsamkeit.",
+    "data": {
+      "box_label": "Anfassen vs. Berühren",
+      "correct_answer": "Simples Anfassen ist funktional und oft routinemäßig. Berührung als Kunst bedeutet bei [PFLEGEKRAFT], dass sie die Handlung bewusst gestaltet, durch verbale Ankündigung vorbereitet und durch flächigen Hautkontakt Sicherheit vermittelt, statt [PATIENT] nur punktuell zu greifen.",
+      "keywords": ["funktional", "bewusst", "Kunst", "Achtsamkeit", "Kommunikation"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction_select": " **Entscheiden** Sie, welche Maßnahmen zur Wahrung der Intimsphäre [PFLEGEKRAFT] bei der Pflege von [PATIENT] umsetzen muss.",
+    "instruction_justify": " **Begründen** Sie die Notwendigkeit dieser Maßnahmen gemäß der Pflege-Charta.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Tür des Zimmers während der Pflege offen lassen", "correct": false },
+        { "label": "Einsatz eines Paravents (Sichtschutz)", "correct": true },
+        { "label": "Nur die jeweils zu waschende Körperstelle abdecken", "correct": false },
+        { "label": "Nicht benötigte Körperstellen stets bedeckt halten", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Einsatz eines Paravents (Sichtschutz)",
+          "text": "Gemäß Artikel 3 der Pflege-Charta hat [PATIENT] ein Recht auf Wahrung seiner Privat- und Intimsphäre. Da das Zimmer ein halböffentlicher Raum ist, schützt der Paravent vor unangekündigten Blicken Dritter."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_nl_012",
+    "type": "nennen_liste",
+    "topic": "koerperpflege_basis",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Nennen** Sie 4 Kriterien der Hautbeobachtung, die [PFLEGEKRAFT] während der Ganzkörperpflege bei [PATIENT] beurteilen sollte.",
+    "list_label": "Hautbeobachtung bei [PATIENT]",
+    "count": 4,
+    "correct_answers": [
+      "Hautfarbe",
+      "Hautturgor (Spannungszustand)",
+      "Hauttemperatur",
+      "Hautbeschaffenheit (z.B. Verletzungen, Rötungen)"
+    ],
+    "all_valid_answers": [
+      "Farbe",
+      "Turgor",
+      "Temperatur",
+      "Beschaffenheit",
+      "Spannung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m3_fall_ft_017",
+    "type": "freitext_box",
+    "topic": "koerperpflege_basis",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Erläutern** Sie, unter welcher Voraussetzung [PFLEGEKRAFT] bei [PATIENT] eine belebende Waschung durchführen würde.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Beschreibung von Richtung und Wirkung.",
+    "data": {
+      "box_label": "Belebende Waschung",
+      "correct_answer": "Eine belebende Waschung erfolgt gegen die Haarwuchsrichtung mit eher kühlem Wasser. Sie wäre bei [PATIENT] indiziert, wenn er antriebslos wirkt oder am Morgen mobilisiert werden soll, um den venösen Rückfluss und die Wachheit zu fördern.",
+      "keywords": ["gegen Haarwuchsrichtung", "kühl", "venöser Rückfluss", "Antrieb", "Wachheit"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_zu_004",
+    "type": "zuordnung",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Ordnen** Sie die Dokumentationspflichten von [PFLEGEKRAFT] den richtigen Formularen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Durchführungsnachweis",
+        "B": "Pflegebericht",
+        "C": "Bewegungsplan"
+      },
+      "statements": [
+        { "text": "Abzeichnen der erledigten Ganzkörperwaschung mit Handzeichen.", "answer": "A" },
+        { "text": "Eintragung der beobachteten Rötung am Steißbein.", "answer": "B" },
+        { "text": "Dokumentation der Lagerungsintervalle aufgrund der Bettruhe.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m3_fall_ft_018",
+    "type": "freitext_box",
+    "topic": "interaktion_beruehrung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Begründen** Sie, warum [PFLEGEKRAFT] jeden Handgriff bei der Intimpflege von [PATIENT] verbal ankündigen muss.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung des Vertrauensschutzes in der Intimzone.",
+    "data": {
+      "box_label": "Ankündigung von Berührungen",
+      "correct_answer": "Da [PFLEGEKRAFT] massiv in die intime Distanzzone (0-45 cm) eindringt, wirkt eine unangekündigte Berührung bedrohlich und übergriffig. Die verbale Ankündigung gibt [PATIENT] die Kontrolle zurück, baut Vertrauen auf und vermindert Scham- und Angstgefühle.",
+      "keywords": ["Intimzone", "Grenzüberschreitung", "Kontrolle", "Vertrauen", "Schutz"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m3_fall_rf_010",
+    "type": "richtig_falsch",
+    "topic": "pflegedokumentation_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "statement": "Nach dem Medizinproduktegesetz muss [PFLEGEKRAFT] sicherstellen, dass das zur Temperaturmessung verwendete Fieberthermometer funktionsfähig und gereinigt ist.",
+    "answer": "richtig",
+    "explanation": "Pflegekräfte sind für den sachgerechten Umgang mit medizinischen Geräten verantwortlich und müssen die gesetzlichen Vorgaben zur Qualitätssicherung einhalten.",
+    "source_hint": "BZPG PFP Modul 3 A.6 Lernziele"
+  },
+  {
+    "q_id": "m3_fall_nl_013",
+    "type": "nennen_liste",
+    "topic": "pflegeplanung_evaluation",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m3_fall_05"],
+    "instruction": " **Nennen** Sie die 5-W-Fragen, die [PFLEGEKRAFT] bei der Maßnahmenplanung für die Hautpflege von [PATIENT] beantworten muss.",
+    "list_label": "Die 5-W-Fragen der Planung",
+    "count": 5,
+    "correct_answers": [
+      "Wer?",
+      "Was?",
+      "Wann?",
+      "Wie oft?",
+      "Wie?"
+    ],
+    "all_valid_answers": [
+      "Wer führt aus",
+      "Was wird gemacht",
+      "Zeitpunkt",
+      "Häufigkeit",
+      "Art und Weise"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Fragewort."
+  }
+]
