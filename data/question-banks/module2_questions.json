@@ -1,0 +1,4608 @@
+[
+  {
+    "q_id": "m2_rf_001",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Im ABCDE-Schema zur systematischen Beurteilung von Notfällen wird die neurologische Einschätzung unter dem Punkt 'D' (Disability) zusammengefasst.",
+    "answer": "richtig",
+    "explanation": "Laut den Quellen umfasst der Punkt 'D Disability' neurologische Aspekte wie Krampfanfälle, Schlaganfälle sowie den Bewusstseinszustand (Somnolenz, Sopor, Koma).",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_rf_002",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei Erfrierungen 2. Grades, die durch Blasenbildung gekennzeichnet sind, ist die betroffene Stelle sofort mit heißem Wasser zu erwärmen.",
+    "answer": "falsch",
+    "explanation": "Bei Erfrierungen 2. Grades wird zwar Erwärmen empfohlen, jedoch ist ein Notruf abzusetzen; zudem wird bei 1. Grad explizit kaltes Wasser zur Erwärmung genannt. Heißes Wasser wird in den Notfallmaßnahmen nicht aufgeführt.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_rf_003",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Ein Patient im Zustand des 'Sopor' reagiert nicht auf eine verbale Ansprache, zeigt jedoch noch Reaktionen auf gezielte Schmerzreize.",
+    "answer": "richtig",
+    "explanation": "Sopor ist als starke Bewusstseinsstörung definiert, bei der die Ansprechbarkeit stark eingeschränkt ist und der Patient nur auf Schmerzreize reagiert.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_rf_004",
+    "type": "medizintechnik_recht",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das Medizinprodukte-Durchführungsgesetz (MPDG) stellt die nationale Umsetzung europäischer Richtlinien zum Umgang mit Medizinprodukten in Deutschland dar.",
+    "answer": "richtig",
+    "explanation": "Das MPDG ist laut den Unterlagen die deutsche Umsetzung der europäischen Vorgaben (MDR) zur Zulassung und Anwendung von Medizinprodukten.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_005",
+    "type": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Medizinprodukte der Klasse IIb zeichnen sich dadurch aus, dass sie grundsätzlich länger als 30 Tage im menschlichen Körper verbleiben.",
+    "answer": "falsch",
+    "explanation": "Produkte, die länger als 30 Tage im Körper verbleiben (Implantate), werden laut Quellen der Klasse III (sehr hohes Risiko) zugeordnet.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_006",
+    "type": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Betreiber handelt im Sinne des 'Organisationsverschuldens' strafbar, wenn er ungeeignete Personen mit der Anwendung eines Medizinprodukts beauftragt.",
+    "answer": "richtig",
+    "explanation": "Gemäß MPBetreibV § 2 Abs. 4 muss der Betreiber sicherstellen, dass nur qualifizierte Personen Geräte anwenden; ein Verstoß gilt als Organisationsverschulden.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_007",
+    "type": "anatomie_bewegung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das menschliche Skelett macht beim Erwachsenen etwa 12 % des gesamten Körpergewichtes aus.",
+    "answer": "richtig",
+    "explanation": "Diese Angabe findet sich explizit in den anatomischen Grundlagen zum passiven Bewegungsapparat.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_008",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die anatomische Richtungsbezeichnung 'ventral' beschreibt eine Position, die in Richtung des Rückens (rückenwärts) gelegen ist.",
+    "answer": "falsch",
+    "explanation": "Ventral bedeutet bauchwärts. Die Bezeichnung für rückenwärts lautet 'dorsal'.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_009",
+    "type": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Kugelgelenk, wie zum Beispiel das Hüftgelenk, verfügt über insgesamt drei Bewegungsachsen.",
+    "answer": "richtig",
+    "explanation": "Das Kugelgelenk wird im Handout als Gelenkart mit drei Bewegungsachsen definiert.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_010",
+    "type": "neurologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Zu den klassischen Leitsymptomen des Morbus Parkinson gehören Rigor (Muskelsteifigkeit) und Tremor (Zittern).",
+    "answer": "richtig",
+    "explanation": "Diese Begriffe sind als Kernsymptome in der Beschreibung des Krankheitsbildes Parkinson aufgeführt.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_011",
+    "type": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Arteria cerebri anterior ist das Hauptgefäß für die Blutversorgung des Schläfen- und Scheitellappens des Großhirns.",
+    "answer": "falsch",
+    "explanation": "Die Arteria cerebri media versorgt den Schläfen- und Scheitellappen. Die Arteria cerebri anterior versorgt primär die Innenfläche der Gehirnhälften.",
+    "source_hint": "M 2.2_Präsentation_Nervensystem und Blutversorgung18.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_012",
+    "type": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die arterielle Blutversorgung des Gehirns (Circulus arteriosus) wird sowohl durch die A. carotis interna als auch durch die A. vertebralis gespeist.",
+    "answer": "richtig",
+    "explanation": "Die Anatomie der Blutversorgung zeigt, dass diese beiden großen Arterienpaare den Gefäßring an der Hirnbasis versorgen.",
+    "source_hint": "M 2.2_Präsentation_Nervensystem und Blutversorgung18.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_013",
+    "type": "mobilitaet_degeneration",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das 'Tannenbaumphänomen' bei Osteoporose bezeichnet seitliche Hautfalten am Rücken, die durch das Zusammensinken der Wirbelkörper entstehen.",
+    "answer": "richtig",
+    "explanation": "Das Phänomen ist eine direkte Folge der Wirbelkörpereinbrüche und der damit verbundenen Verkürzung des Rumpfes.",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_rf_014",
+    "type": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Längerfristige Immobilität hat bei alten Menschen ausschließlich körperliche Folgen, während die kognitiven Fähigkeiten davon unberührt bleiben.",
+    "answer": "falsch",
+    "explanation": "Die Quellen belegen, dass Immobilität auch zu verkümmernden kognitiven Fähigkeiten durch fehlende Umweltreize führt.",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_rf_015",
+    "type": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der motorischen Entwicklung eines Kindes wird das freie Stehen und Gehen üblicherweise im Alter von etwa 18 Monaten erreicht.",
+    "answer": "richtig",
+    "explanation": "Die Grafik zur Entwicklung der Körper- und Handmotorik ordnet das freie Stehen und Gehen dem Meilenstein von 18 Monaten zu.",
+    "source_hint": "M 2.2_Präsentation_Wie entwickelt sich Bewegung im Laufe des Lebens.18.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_016",
+    "type": "pflege_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das strukturierte 5-Schritte-Modell der Anleitung beginnt mit der Aktivierung des Vorwissens beim Angeleiteten.",
+    "answer": "richtig",
+    "explanation": "Dies ist der erste Schritt im kreisförmigen Prozessmodell der Anleitung.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_rf_017",
+    "type": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Pädagogische Anleitung in der Pflege ist laut Definition gesetzlich auf die Unterweisung von Pflegeschülern beschränkt.",
+    "answer": "falsch",
+    "explanation": "Die Definition schließt ausdrücklich auch Angehörige, Patienten und neue Mitarbeiter als Zielgruppen der Anleitung mit ein.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_rf_018",
+    "type": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine professionelle Evaluation einer Anleitungssituation sollte die Perspektiven des Anleitenden, des Angeleiteten und des Plenums berücksichtigen.",
+    "answer": "richtig",
+    "explanation": "Die multiperspektivische Reflexion wird als notwendiger Bestandteil zur Qualitätskontrolle der Anleitung aufgeführt.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_rf_019",
+    "type": "medizintechnik_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Medizinprodukte der Klasse III umfassen alle aktiven und nicht aktiven Produkte, die für eine maximale Anwendungsdauer von 14 Tagen konzipiert sind.",
+    "answer": "falsch",
+    "explanation": "Klasse III umfasst unter anderem Produkte, die länger als 30 Tage im Körper verbleiben.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_020",
+    "type": "anatomie_bewegung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das 'Periost' (Knochenhaut) bildet die innere, schwammartige Schicht des Knochens, die für die hohe Stabilität bei geringem Gewicht sorgt.",
+    "answer": "falsch",
+    "explanation": "Das Periost ist die äußere Schicht, die den Knochen ernährt. Die schwammartige Innenschicht wird als 'Spongiosa' bezeichnet.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_021",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das Akronym 'HITS' im Rahmen der Reanimation steht für die potenziell reversiblen Ursachen Herzbeuteltamponade, Intoxikation, Thromboembolie und Spannungspneumothorax.",
+    "answer": "richtig",
+    "explanation": "Diese vier Ursachen werden unter dem Merkmal 'HITS' zusammengefasst und müssen bei einem Kreislaufstillstand geprüft werden.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_rf_022",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei Erfrierungen 3. Grades (Gewebeuntergang) ist es eine wichtige Erstmaßnahme, die betroffenen Gliedmaßen aktiv zu bewegen, um die Durchblutung zu fördern.",
+    "answer": "falsch",
+    "explanation": "Laut den Notfallmaßnahmen bei Erfrierungen 3. Grades gilt: Notruf absetzen und die betroffenen Stellen ausdrücklich nicht bewegen.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_rf_023",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Berechnung Sauerstoffvorrat: Eine 2-Liter-Sauerstoffflasche mit einem Flaschendruck von 200 bar reicht bei einem Patientenbedarf von 4 l/min für genau 100 Minuten.",
+    "answer": "richtig",
+    "explanation": "Formel: (2 Liter * 200 bar) / 4 l/min = 400 Liter / 4 l/min = 100 Minuten.",
+    "source_hint": "Modul 2 Fachwissen (Reanimation/Logistik)"
+  },
+  {
+    "q_id": "m2_rf_024",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das proximale Handgelenk zählt zu den Eigelenken und verfügt über insgesamt zwei Bewegungsachsen.",
+    "answer": "richtig",
+    "explanation": "Das Eigelenk (Articulatio ellipsoidea) ermöglicht Bewegungen in zwei Richtungen, im Gegensatz zum dreiachsigen Kugelgelenk.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_025",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach der Gleit-Filament-Theorie der Muskelkontraktion wird die für das Lösen der Myosinköpfchen vom Aktin benötigte Energie in Form von ATP bereitgestellt.",
+    "answer": "richtig",
+    "explanation": "Die Bindung von ATP führt zum Lösen des Myosinkopfes vom Aktinfilament, was den Kontraktionszyklus ermöglicht.",
+    "source_hint": "Anatomie/Physiologie Modul 2"
+  },
+  {
+    "q_id": "m2_rf_026",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Transversalebene teilt den menschlichen Körper anatomisch in eine vordere (ventrale) und eine hintere (dorsale) Hälfte.",
+    "answer": "falsch",
+    "explanation": "Die Transversalebene teilt den Körper in oben und unten. Die Teilung in vorne und hinten erfolgt durch die Frontalebene.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_027",
+    "type": "richtig_falsch",
+    "topic": "neurologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das periphere Nervensystem des Menschen besteht anatomisch aus 31 Paaren von Hirnnerven und 12 Paaren von Spinalnerven.",
+    "answer": "falsch",
+    "explanation": "Es ist genau umgekehrt: Es gibt 12 Paare von Hirnnerven und 31 Paare von Spinalnerven.",
+    "source_hint": "Modul 2 Kernwissen Neurologie"
+  },
+  {
+    "q_id": "m2_rf_028",
+    "type": "richtig_falsch",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Reflexbogen besteht aus einem Rezeptor, einem sensiblen Nerv, einem Reflexzentrum im Gehirn, einem motorischen Nerv und dem Erfolgsorgan.",
+    "answer": "falsch",
+    "explanation": "Das Reflexzentrum liegt bei den meisten Reflexen im Rückenmark, um eine extrem schnelle Reaktion ohne Umweg über das Gehirn zu ermöglichen.",
+    "source_hint": "Neurologie Basics Modul 2"
+  },
+  {
+    "q_id": "m2_rf_029",
+    "type": "richtig_falsch",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die tägliche Produktionsmenge des Liquor cerebrospinalis beträgt ca. 500 bis 700 ml, während das aktuell zirkulierende Gesamtvolumen nur etwa 120 bis 200 ml umfasst.",
+    "answer": "richtig",
+    "explanation": "Dies verdeutlicht die hohe Dynamik des Liquorsystems mit mehrmaligem Austausch pro Tag.",
+    "source_hint": "Neuroanatomie Modul 2"
+  },
+  {
+    "q_id": "m2_rf_030",
+    "type": "richtig_falsch",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die Arteria basilaris, die Teile des Hirnstamms und Kleinhirns versorgt, entsteht anatomisch aus der Vereinigung der beiden Arteriae vertebrales.",
+    "answer": "richtig",
+    "explanation": "Die beiden Wirbelarterien (Verebralis) vereinigen sich an der Schädelbasis zur unpaaren Basilararterie.",
+    "source_hint": "M 2.2_Präsentation_Nervensystem und Blutversorgung18.11.24.pdf"
+  },
+  {
+    "q_id": "m2_rf_031",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Aktive Medizinprodukte, die zur kontinuierlichen Überwachung von Vitalparametern dienen (z. B. Patientenmonitore), werden der Risikoklasse I zugeordnet.",
+    "answer": "falsch",
+    "explanation": "Solche Geräte haben ein höheres Risikopotenzial und werden der Klasse IIb zugeordnet.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_032",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die CE-Kennzeichnung auf einem Medizinprodukt bestätigt primär dessen therapeutische Wirksamkeit, vergleichbar mit der Zulassung eines Arzneimittels.",
+    "answer": "falsch",
+    "explanation": "Die CE-Kennzeichnung besagt nur, dass das Produkt den geltenden europäischen Sicherheits- und Leistungsanforderungen entspricht (Konformität).",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_033",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die sicherheitstechnische Kontrolle (STK) für bestimmte aktive Medizinprodukte muss gemäß Betreiberverordnung spätestens alle zwei Jahre durchgeführt werden.",
+    "answer": "richtig",
+    "explanation": "Die STK dient der frühzeitigen Mängelerkennung und ist eine Betreiberpflicht mit zweijährigem Intervall.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_rf_034",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Vorkommnisse mit Medizinprodukten, die zum Tod oder einer schwerwiegenden Verschlechterung des Gesundheitszustandes geführt haben, müssen dem BfArM gemeldet werden.",
+    "answer": "richtig",
+    "explanation": "Das BfArM ist die zentrale Behörde für das Meldewesen und die Risikoerfassung bei Medizinprodukten.",
+    "source_hint": "Medizinprodukterecht Modul 2"
+  },
+  {
+    "q_id": "m2_rf_035",
+    "type": "richtig_falsch",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das 'Tannenbaumphänomen' bei fortgeschrittener Osteoporose beschreibt seitliche Hautfalten am Rücken, die durch das Zusammensinken der Wirbelsäule entstehen.",
+    "answer": "richtig",
+    "explanation": "Durch den Höhenverlust der Wirbelkörper wird die Haut am Rücken gestaucht, was zu den typischen Falten führt.",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_rf_036",
+    "type": "richtig_falsch",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Längerfristige Immobilität kann bei alten Menschen zu einem Teufelskreis aus fehlenden Umweltreizen und dem Verfall kognitiver Fähigkeiten führen.",
+    "answer": "richtig",
+    "explanation": "Die Immobilität hat gravierende psychosoziale Folgen, darunter den Abbau geistiger Leistungen und den Verlust von Lebensmut.",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_rf_037",
+    "type": "richtig_falsch",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der sogenannte 'Witwenbuckel' bei Osteoporose-Patienten ist die klinische Bezeichnung für eine pathologische Lordose der Brustwirbelsäule (BWS).",
+    "answer": "falsch",
+    "explanation": "Der Witwenbuckel ist eine pathologische Kyphose (Rundrücken) der BWS. Eine Lordose ist eine Krümmung nach vorne (wie in der HWS oder LWS).",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_rf_038",
+    "type": "richtig_falsch",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im strukturierten 5-Schritte-Modell der pädagogischen Anleitung folgt der Schritt 'Vertiefung' unmittelbar auf den Schritt 'Vorwissen aktivieren'.",
+    "answer": "falsch",
+    "explanation": "Auf 'Vorwissen aktivieren' folgt die 'Erarbeitung', dann die 'Durchführung' und erst danach die 'Vertiefung'.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_rf_039",
+    "type": "richtig_falsch",
+    "topic": "pflege_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Zu einer professionellen Evaluation einer Anleitungssituation gehört die Reflexion aus den Perspektiven des Angeleiteten, des Anleitenden und des Plenums.",
+    "answer": "richtig",
+    "explanation": "Diese multiperspektivische Sichtweise sichert die Qualität und den Lernerfolg der Anleitung.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_rf_040",
+    "type": "richtig_falsch",
+    "topic": "pflege_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das primäre Ziel einer pädagogischen Anleitung in der Pflege ist es, die Arbeitsgeschwindigkeit des Pflegepersonals durch die Übernahme von Aufgaben durch den Patienten zu erhöhen.",
+    "answer": "falsch",
+    "explanation": "Ziel ist die Befähigung und Autonomie des Patienten (Hilfe zur Selbsthilfe), nicht primär die Effizienzsteigerung des Personals.",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_nl_001",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die fünf Komponenten des ABCDE-Schemas zur systematischen Beurteilung von Notfällen.",
+    "list_label": "ABCDE-Schema",
+    "count": 5,
+    "correct_answers": [
+      "A: Airway",
+      "B: Breathing",
+      "C: Circulation",
+      "D: Disability",
+      "E: Environment"
+    ],
+    "all_valid_answers": [
+      "A: Airway",
+      "Atemwege",
+      "B: Breathing",
+      "Beatmung",
+      "Atmung",
+      "C: Circulation",
+      "Kreislauf",
+      "D: Disability",
+      "Defizit",
+      "Neurologie",
+      "E: Environment",
+      "Umgebung",
+      "Exposition"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt benannter Komponente."
+  },
+  {
+    "q_id": "m2_nl_002",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 4 H's der potenziell reversiblen Ursachen eines Kreislaufstillstands.",
+    "list_label": "Die 4 H's",
+    "count": 4,
+    "correct_answers": [
+      "Hypoxie",
+      "Hypovolämie",
+      "Hypo-/Hyperkaliämie",
+      "Hypothermie"
+    ],
+    "all_valid_answers": [
+      "Hypoxie",
+      "Sauerstoffmangel",
+      "Hypovolämie",
+      "Volumenmangel",
+      "Flüssigkeitsverlust",
+      "Hypokaliämie",
+      "Hyperkaliämie",
+      "Elektrolytstörung",
+      "Metabolische Störung",
+      "Hypothermie",
+      "Unterkühlung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem H."
+  },
+  {
+    "q_id": "m2_nl_003",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei klinischen Stadien der Bewusstseinsstörung.",
+    "list_label": "Bewusstseinsstadien",
+    "count": 3,
+    "correct_answers": [
+      "Somnolenz",
+      "Sopor",
+      "Koma"
+    ],
+    "all_valid_answers": [
+      "Somnolenz",
+      "Schläfrigkeit",
+      "Sopor",
+      "Stupor",
+      "Koma",
+      "Bewusstlosigkeit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Stadium."
+  },
+  {
+    "q_id": "m2_nl_004",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei Hauptabschnitte der Wirbelsäule und die jeweilige Anzahl der Wirbelkörper.",
+    "list_label": "Wirbelsäulenabschnitte",
+    "count": 3,
+    "correct_answers": [
+      "Halswirbelsäule (7)",
+      "Brustwirbelsäule (12)",
+      "Lendenwirbelsäule (5)"
+    ],
+    "all_valid_answers": [
+      "Halswirbelsäule",
+      "HWS",
+      "7 Wirbel",
+      "Brustwirbelsäule",
+      "BWS",
+      "12 Wirbel",
+      "Lendenwirbelsäule",
+      "LWS",
+      "5 Wirbel"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Abschnitt mit richtiger Wirbelanzahl."
+  },
+  {
+    "q_id": "m2_nl_005",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie vier verschiedene Formen von echten Gelenken (Diarthrosen).",
+    "list_label": "Gelenkformen",
+    "count": 4,
+    "correct_answers": [
+      "Kugelgelenk",
+      "Eigelenk",
+      "Sattelgelenk",
+      "Scharniergelenk"
+    ],
+    "all_valid_answers": [
+      "Kugelgelenk",
+      "Articulatio sphaeroidea",
+      "Eigelenk",
+      "Articulatio ellipsoidea",
+      "Sattelgelenk",
+      "Articulatio sellaris",
+      "Scharniergelenk",
+      "Ginglymus",
+      "Radgelenk",
+      "Zapfengelenk"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Gelenkform."
+  },
+  {
+    "q_id": "m2_nl_006",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei Schichten der Hirnhäute (Meningen).",
+    "list_label": "Hirnhäute",
+    "count": 3,
+    "correct_answers": [
+      "Dura mater",
+      "Arachnoidea",
+      "Pia mater"
+    ],
+    "all_valid_answers": [
+      "Dura mater",
+      "harte Hirnhaut",
+      "Arachnoidea",
+      "Spinngewebshaut",
+      "Pia mater",
+      "weiche Hirnhaut",
+      "zarte Hirnhaut"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Hirnhaut."
+  },
+  {
+    "q_id": "m2_nl_007",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die vier Lappen des Großhirns.",
+    "list_label": "Großhirnlappen",
+    "count": 4,
+    "correct_answers": [
+      "Stirnlappen",
+      "Scheitellappen",
+      "Schläfenlappen",
+      "Hinterhauptlappen"
+    ],
+    "all_valid_answers": [
+      "Stirnlappen",
+      "Frontallappen",
+      "Scheitellappen",
+      "Parietallappen",
+      "Schläfenlappen",
+      "Temporallappen",
+      "Hinterhauptlappen",
+      "Okzipitallappen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Lappen."
+  },
+  {
+    "q_id": "m2_nl_008",
+    "type": "nennen_liste",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die vier Risikoklassen für Medizinprodukte gemäß MDR.",
+    "list_label": "Risikoklassen",
+    "count": 4,
+    "correct_answers": [
+      "Klasse I",
+      "Klasse IIa",
+      "Klasse IIb",
+      "Klasse III"
+    ],
+    "all_valid_answers": [
+      "Klasse I",
+      "Klasse 1",
+      "Klasse IIa",
+      "Klasse 2a",
+      "Klasse IIb",
+      "Klasse 2b",
+      "Klasse III",
+      "Klasse 3"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Klasse."
+  },
+  {
+    "q_id": "m2_nl_009",
+    "type": "nennen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie fünf physische Folgen von Immobilität beim alten Menschen.",
+    "list_label": "Folgen der Immobilität",
+    "count": 5,
+    "correct_answers": [
+      "Dekubitusrisiko",
+      "Kontrakturrisiko",
+      "Thromboserisiko",
+      "Infektionsrisiko",
+      "Inkontinenz"
+    ],
+    "all_valid_answers": [
+      "Dekubitusrisiko",
+      "Wundliegen",
+      "Kontrakturrisiko",
+      "Gelenkversteifung",
+      "Thromboserisiko",
+      "Blutgerinnsel",
+      "Infektionsrisiko",
+      "Pneumoniegefahr",
+      "Inkontinenz",
+      "Elektrolytentgleisung",
+      "Nierenerkrankung",
+      "Herz- oder Lungenerkrankung"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekter Folge."
+  },
+  {
+    "q_id": "m2_nl_010",
+    "type": "nennen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie vier Faktoren, die für einen gesunden Knochenstoffwechsel benötigt werden.",
+    "list_label": "Faktoren Knochenstoffwechsel",
+    "count": 4,
+    "correct_answers": [
+      "Kalzium",
+      "Vitamin D",
+      "Bewegung",
+      "Sauerstoff"
+    ],
+    "all_valid_answers": [
+      "Kalzium",
+      "Ca2+",
+      "Vitamin D",
+      "Sonnenlicht",
+      "Bewegung",
+      "mechanische Belastung",
+      "Sauerstoff",
+      "Zellatmung",
+      "Osteoblasten"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Faktor."
+  },
+  {
+    "q_id": "m2_nl_011",
+    "type": "nennen_liste",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die 5 Schritte des strukturierten Anleitungsmodells in der richtigen Reihenfolge.",
+    "list_label": "Schritte der Anleitung",
+    "count": 5,
+    "correct_answers": [
+      "1. Vorwissen aktivieren",
+      "2. Erarbeitung",
+      "3. Durchführung",
+      "4. Vertiefung",
+      "5. Reflexion"
+    ],
+    "all_valid_answers": [
+      "Vorwissen aktivieren",
+      "Vorkenntnisse prüfen",
+      "Erarbeitung",
+      "Planung",
+      "Durchführung",
+      "Praktische Umsetzung",
+      "Vertiefung",
+      "Übung",
+      "Reflexion",
+      "Auswertung",
+      "Evaluation"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Schritt in der richtigen Reihenfolge."
+  },
+  {
+    "q_id": "m2_nl_012",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei Symptome eines Herzinfarkts, die typischerweise bei Frauen auftreten können.",
+    "list_label": "Symptome Frau",
+    "count": 3,
+    "correct_answers": [
+      "Übelkeit / Erbrechen",
+      "Rückenschmerzen",
+      "Luftnot"
+    ],
+    "all_valid_answers": [
+      "Übelkeit",
+      "Erbrechen",
+      "Emesis",
+      "Rückenschmerzen",
+      "Schmerzen zwischen Schulterblättern",
+      "Luftnot",
+      "Dyspnoe",
+      "Oberbauchschmerzen",
+      "Schlafstörungen",
+      "Erschöpfung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m2_nl_013",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die Merkmale der Erfrierungsgrade 1° bis 3°.",
+    "list_label": "Erfrierungsgrade",
+    "count": 3,
+    "correct_answers": [
+      "1°: Hautrötungen",
+      "2°: Blasenbildung",
+      "3°: Gewebeuntergang"
+    ],
+    "all_valid_answers": [
+      "1° Hautrötungen",
+      "Rötung",
+      "2° Blasenbildung",
+      "Frostbeulen",
+      "3° Gewebeuntergang",
+      "Nekrose",
+      "schwarze Verfärbung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Merkmal zum Grad."
+  },
+  {
+    "q_id": "m2_nl_014",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei Kardinalsymptome des Parkinson-Syndroms.",
+    "list_label": "Parkinson-Symptome",
+    "count": 3,
+    "correct_answers": [
+      "Rigor",
+      "Tremor",
+      "Hypokinese / Akinese"
+    ],
+    "all_valid_answers": [
+      "Rigor",
+      "Muskelsteifigkeit",
+      "Tremor",
+      "Zittern",
+      "Muskelzittern",
+      "Hypokinese",
+      "Akinese",
+      "Bewegungsarmut",
+      "Bewegungslosigkeit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Fachbegriff."
+  },
+  {
+    "q_id": "m2_nl_015",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie fünf Kriterien der professionellen Bewegungsbeobachtung.",
+    "list_label": "Beobachtungskriterien",
+    "count": 5,
+    "correct_answers": [
+      "Körperhaltung",
+      "Gangbild",
+      "Beweglichkeit",
+      "Muskelkraft",
+      "Muskeltonus"
+    ],
+    "all_valid_answers": [
+      "Körperhaltung",
+      "Haltung",
+      "Gang",
+      "Gangbild",
+      "Beweglichkeit",
+      "Mobilität",
+      "Muskelkraft",
+      "Kraft",
+      "Muskeltonus",
+      "Muskelspannung",
+      "Koordination",
+      "abnorme Bewegungen",
+      "Bewegungseinschränkungen"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m2_nl_016",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie vier wesentliche Bestandteile, die den Aufbau eines echten Gelenks (Diarthrose) kennzeichnen.",
+    "list_label": "Bestandteile eines echten Gelenks",
+    "count": 4,
+    "correct_answers": [
+      "Gelenkknorpel",
+      "Gelenkkapsel",
+      "Gelenkspalt",
+      "Gelenkschmiere (Synovia)"
+    ],
+    "all_valid_answers": [
+      "Gelenkknorpel",
+      "Gelenkkapsel",
+      "Gelenkspalt",
+      "Gelenkschmiere",
+      "Synovia",
+      "Synovialflüssigkeit",
+      "Gelenkflächen",
+      "Gelenkinnenhaut"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benanntem Bestandteil."
+  },
+  {
+    "q_id": "m2_nl_017",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die zwei Hauptgewebearten des Knochenaufbaus nach ihrer makroskopischen Struktur.",
+    "list_label": "Knochengewebearten",
+    "count": 2,
+    "correct_answers": [
+      "Kompakta (harter Lamellenknochen)",
+      "Spongiosa (schwammartiger Knochen)"
+    ],
+    "all_valid_answers": [
+      "Kompakta",
+      "Lamellenknochen",
+      "Substantia compacta",
+      "Spongiosa",
+      "Knochenbälkchen",
+      "Substantia spongiosa"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Gewebeart."
+  },
+  {
+    "q_id": "m2_nl_018",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei anatomischen Abschnitte des Hirnstamms.",
+    "list_label": "Teile des Hirnstamms",
+    "count": 3,
+    "correct_answers": [
+      "Mittelhirn",
+      "Brücke (Pons)",
+      "Verlängertes Mark (Medulla oblongata)"
+    ],
+    "all_valid_answers": [
+      "Mittelhirn",
+      "Mesencephalon",
+      "Brücke",
+      "Pons",
+      "Verlängertes Mark",
+      "Medulla oblongata",
+      "Nachhirn"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Abschnitt."
+  },
+  {
+    "q_id": "m2_nl_019",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die ersten vier Hirnnerven (I bis IV) mit ihrem korrekten Fachnamen.",
+    "list_label": "Hirnnerven I-IV",
+    "count": 4,
+    "correct_answers": [
+      "I: N. olfactorius (Riechnerv)",
+      "II: N. opticus (Sehnerv)",
+      "III: N. oculomotorius (Augenbewegungsnerv)",
+      "IV: N. trochlearis (Augenrollnerv)"
+    ],
+    "all_valid_answers": [
+      "I: N. olfactorius",
+      "Riechnerv",
+      "II: N. opticus",
+      "Sehnerv",
+      "III: N. oculomotorius",
+      "Augenbewegungsnerv",
+      "IV: N. trochlearis",
+      "Augenrollnerv",
+      "Rollnerv"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Nervenpaar."
+  },
+  {
+    "q_id": "m2_nl_020",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die Anzahl der Spinalnervenpaare pro Rückenmarksabschnitt.",
+    "list_label": "Spinalnervenpaare",
+    "count": 5,
+    "correct_answers": [
+      "8 Halsnervenpaare (zervikal)",
+      "12 Brustnervenpaare (thorakal)",
+      "5 Lendennervenpaare (lumbal)",
+      "5 Kreuzbeinnervenpaare (sakral)",
+      "1 Steißbeinnervenpaar (coccygeal)"
+    ],
+    "all_valid_answers": [
+      "8 Halsnervenpaare",
+      "zervikal",
+      "12 Brustnervenpaare",
+      "thorakal",
+      "5 Lendennervenpaare",
+      "lumbal",
+      "5 Kreuzbeinnervenpaare",
+      "sakral",
+      "1 Steißbeinnervenpaar",
+      "coccygeal",
+      "kokzygeal"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Abschnitt mit richtiger Anzahl."
+  },
+  {
+    "q_id": "m2_nl_021",
+    "type": "nennen_liste",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei Pflichten des Betreibers von Medizinprodukten laut MPBetreibV.",
+    "list_label": "Betreiberpflichten",
+    "count": 3,
+    "correct_answers": [
+      "Bestandsverzeichnis führen",
+      "Medizinproduktebuch führen",
+      "STK (Sicherheitstechnische Kontrollen) durchführen/veranlassen"
+    ],
+    "all_valid_answers": [
+      "Bestandsverzeichnis führen",
+      "Medizinproduktebuch führen",
+      "STK",
+      "Sicherheitstechnische Kontrolle",
+      "MTK",
+      "Messtechnische Kontrolle",
+      "Meldung von Vorkommnissen",
+      "Aufbewahrung von Gebrauchsanweisungen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Pflicht."
+  },
+  {
+    "q_id": "m2_nl_022",
+    "type": "nennen_liste",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie zwei wesentliche Voraussetzungen bzw. Pflichten, die eine Pflegekraft als Anwender vor dem Gebrauch eines Medizinprodukts erfüllen muss.",
+    "list_label": "Anwenderpflichten",
+    "count": 2,
+    "correct_answers": [
+      "Einweisung in das Gerät durch den Betreiber erhalten",
+      "Prüfung der Funktionsfähigkeit und des Zustands vor dem Gebrauch"
+    ],
+    "all_valid_answers": [
+      "Einweisung erhalten",
+      "Schulung",
+      "Funktionsprüfung vor Gebrauch",
+      "Sichtprüfung auf Mängel",
+      "Beachtung der Gebrauchsanweisung",
+      "Eigenprüfung der Qualifikation"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Anwenderpflicht."
+  },
+  {
+    "q_id": "m2_nl_023",
+    "type": "nennen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei motorische Meilensteine der kindlichen Entwicklung und den dazugehörigen Zeitrahmen (Monate/Jahre) laut den Unterrichtsmaterialien.",
+    "list_label": "Entwicklungsmeilensteine",
+    "count": 3,
+    "correct_answers": [
+      "Freies Sitzen (ca. 9–10 Monate)",
+      "Stehen mit Festhalten (ca. 10–15 Monate)",
+      "Freies Gehen (ca. 18 Monate)"
+    ],
+    "all_valid_answers": [
+      "Freies Sitzen",
+      "10 Monate",
+      "Stehen mit Festhalten",
+      "10-15 Monate",
+      "Freies Gehen",
+      "18 Monate",
+      "Sicheres Treppensteigen (2,5-3 Jahre)",
+      "Fahrradfahren (4-6 Jahre)"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Meilenstein mit passender Zeitangabe."
+  },
+  {
+    "q_id": "m2_nl_024",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie vier anatomische Richtungsbezeichnungen (als Gegensatzpaare).",
+    "list_label": "Richtungsbezeichnungen",
+    "count": 4,
+    "correct_answers": [
+      "Kranial (kopfwärts) – Kaudal (steißwärts)",
+      "Ventral (bauchwärts) – Dorsal (rückenwärts)",
+      "Proximal (rumpfnah) – Distal (rumpffern)",
+      "Dexter (rechts) – Sinister (links)"
+    ],
+    "all_valid_answers": [
+      "Kranial",
+      "kopfwärts",
+      "Kaudal",
+      "steißwärts",
+      "Ventral",
+      "bauchwärts",
+      "Dorsal",
+      "rückenwärts",
+      "Proximal",
+      "rumpfnah",
+      "Distal",
+      "rumpffern",
+      "Dexter",
+      "rechts",
+      "Sinister",
+      "links",
+      "Lateral",
+      "Medial",
+      "Anterior",
+      "Posterior"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benanntem Paar oder zwei Einzelbegriffen."
+  },
+  {
+    "q_id": "m2_nl_025",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die drei anatomischen Hauptebenen des menschlichen Körpers.",
+    "list_label": "Anatomische Ebenen",
+    "count": 3,
+    "correct_answers": [
+      "Sagittalebene",
+      "Frontalebene",
+      "Transversalebene"
+    ],
+    "all_valid_answers": [
+      "Sagittalebene",
+      "Frontalebene",
+      "Transversalebene",
+      "Mediansagittalebene"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Ebene."
+  },
+  {
+    "q_id": "m2_nl_026",
+    "type": "nennen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei konkrete physische Sekundärerkrankungen, die laut den Quellen direkt durch längerfristige Immobilität gefördert werden.",
+    "list_label": "Physische Immobilitätsfolgen",
+    "count": 3,
+    "correct_answers": [
+      "Dekubitus (Wundliegen)",
+      "Thrombose",
+      "Kontrakturen (Gelenkversteifung)"
+    ],
+    "all_valid_answers": [
+      "Dekubitus",
+      "Wundliegen",
+      "Thrombose",
+      "Blutgerinnsel",
+      "Kontrakturen",
+      "Gelenkversteifung",
+      "Pneumonie",
+      "Lungenentzündung",
+      "Infektionsrisiko",
+      "Inkontinenz",
+      "Elektrolytentgleisung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benannter Folgeerkrankung."
+  },
+  {
+    "q_id": "m2_nl_027",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei klinische Merkmale, die auf einen akuten Schlaganfall hindeuten (Schnellerkennung).",
+    "list_label": "Symptome Schlaganfall",
+    "count": 3,
+    "correct_answers": [
+      "Hängender Mundwinkel (Fazialisparese)",
+      "Halbseitenlähmung (Hemiparese)",
+      "Sprach- oder Sprechstörungen (Aphasie)"
+    ],
+    "all_valid_answers": [
+      "Hängender Mundwinkel",
+      "Fazialisparese",
+      "Halbseitenlähmung",
+      "Hemiparese",
+      "Sprachstörungen",
+      "Aphasie",
+      "Bewusstseinsstörung",
+      "Sehstörung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m2_nl_028",
+    "type": "nennen_liste",
+    "topic": "pflege_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie drei Zielgruppen, an die sich eine pädagogische Anleitung im pflegerischen Kontext richtet.",
+    "list_label": "Zielgruppen der Anleitung",
+    "count": 3,
+    "correct_answers": [
+      "Pflegeempfänger (Patienten/Bewohner)",
+      "Angehörige",
+      "Auszubildende (Schüler) oder neue Mitarbeiter"
+    ],
+    "all_valid_answers": [
+      "Pflegeempfänger",
+      "Patienten",
+      "Bewohner",
+      "Zu pflegende Menschen",
+      "Angehörige",
+      "Familienmitglieder",
+      "Auszubildende",
+      "Schüler",
+      "Auszubildende Pflegefachleute",
+      "Neue Mitarbeiter",
+      "Kollegen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Zielgruppe."
+  },
+  {
+    "q_id": "m2_nl_029",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie die anatomischen Strukturen, die unmittelbar für die Ernährung des Knochengewebes zuständig sind.",
+    "list_label": "Knochenernährung",
+    "count": 2,
+    "correct_answers": [
+      "Periost (Knochenhaut)",
+      "Einziehende Blutgefäße"
+    ],
+    "all_valid_answers": [
+      "Periost",
+      "Knochenhaut",
+      "Blutgefäße",
+      "Vasa nutritia",
+      "arterielle Zufuhr"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Struktur."
+  },
+  {
+    "q_id": "m2_nl_030",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen** Sie fünf Knochen, die den Gehirnschädel (Neurocranium) bilden.",
+    "list_label": "Knochen des Gehirnschädels",
+    "count": 5,
+    "correct_answers": [
+      "Stirnbein (Os frontale)",
+      "Scheitelbein (Os parietale)",
+      "Hinterhauptsbein (Os occipitale)",
+      "Schläfenbein (Os temporale)",
+      "Keilbein (Os sphenoidale)"
+    ],
+    "all_valid_answers": [
+      "Stirnbein",
+      "Os frontale",
+      "Scheitelbein",
+      "Os parietale",
+      "Hinterhauptsbein",
+      "Os occipitale",
+      "Schläfenbein",
+      "Os temporale",
+      "Keilbein",
+      "Os sphenoidale",
+      "Siebbein",
+      "Os ethmoidale"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt benanntem Knochen."
+  },
+  {
+    "q_id": "m2_tab_001",
+    "type": "tabelle_vergleich",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen** Sie echte Gelenke (Diarthrosen) und unechte Gelenke (Synarthrosen) hinsichtlich ihrer Merkmale.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Echte Gelenke (Diarthrosen)",
+          "Unechte Gelenke (Synarthrosen)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Gelenkspalt"
+              },
+              {
+                "type": "input",
+                "correct_answer": "vorhanden",
+                "keywords": [
+                  "ja",
+                  "vorhanden"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "nicht vorhanden",
+                "keywords": [
+                  "nein",
+                  "fehlend",
+                  "keiner"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Beweglichkeit"
+              },
+              {
+                "type": "input",
+                "correct_answer": "gut beweglich",
+                "keywords": [
+                  "frei",
+                  "beweglich"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "unbeweglich bis wenig beweglich",
+                "keywords": [
+                  "starr",
+                  "fest",
+                  "gering"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen** und  **beschreiben**  Sie die drei klinischen Stadien der Bewusstseinsstörung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Begriff und Beschreibung.",
+    "data": {
+      "table": {
+        "headers": [
+          "Stadium",
+          "Beschreibung",
+          "Reaktion auf Reize"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Somnolenz",
+                "keywords": [
+                  "Somnolenz"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Leichte Bewusstseinstrübung, schläfrig.",
+                "keywords": [
+                  "schläfrig",
+                  "benommen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Durch Ansprache oder Anfassen leicht erweckbar.",
+                "keywords": [
+                  "Ansprache",
+                  "erweckbar"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Sopor",
+                "keywords": [
+                  "Sopor",
+                  "Stupor"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schwere Bewusstseinsstörung.",
+                "keywords": [
+                  "tief",
+                  "schwer"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Nur durch starke Schmerzreize weckbar, keine Reaktion auf Ansprache.",
+                "keywords": [
+                  "Schmerzreiz",
+                  "keine Ansprache"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_003",
+    "type": "tabelle_3spalten",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vervollständigen** Sie die Übersicht zu den Erfrierungsgraden und den entsprechenden Erstmaßnahmen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Grad",
+          "Symptome",
+          "Maßnahmen"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "1. Grad"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hautrötungen",
+                "keywords": [
+                  "Rötung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Langsames Erwärmen, ggf. kaltes Wasser nutzen.",
+                "keywords": [
+                  "Erwärmen",
+                  "Wasser"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "2. Grad"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Blasenbildungen",
+                "keywords": [
+                  "Blasen",
+                  "Frostbeulen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Erwärmen, Notruf absetzen.",
+                "keywords": [
+                  "Notruf",
+                  "Erwärmen"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "3. Grad"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gewebeuntergang",
+                "keywords": [
+                  "Nekrose",
+                  "Absterben"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Notruf absetzen, betroffene Stellen nicht bewegen.",
+                "keywords": [
+                  "Notruf",
+                  "nicht bewegen"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie das ABCDE-Schema zur systematischen Beurteilung im Notfall.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Begriff/Bedeutung.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung (Fachbegriff)",
+          "Zentraler Prüfaspekt / Maßnahme"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "B"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Breathing",
+                "keywords": [
+                  "Atmung",
+                  "Belüftung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Atemfrequenz und -qualität prüfen.",
+                "keywords": [
+                  "Frequenz",
+                  "Atem"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "D"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Disability",
+                "keywords": [
+                  "Neurologie",
+                  "Defizit"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Neurologischer Status, Bewusstsein (GCS), Pupillen.",
+                "keywords": [
+                  "Bewusstsein",
+                  "Neurologie"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "E"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Environment",
+                "keywords": [
+                  "Umgebung",
+                  "Exposition"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Einflussfaktoren wie Unterkühlung oder Vergiftung prüfen.",
+                "keywords": [
+                  "Temperatur",
+                  "Vergiftung"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vervollständigen** Sie die Angaben zu den Abschnitten der Wirbelsäule.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Wirbelsäulenabschnitt",
+          "Anzahl der Wirbel",
+          "Physiologische Krümmung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Halswirbelsäule (HWS)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "7",
+                "keywords": [
+                  "sieben"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Lordose",
+                "keywords": [
+                  "Halslordose"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Brustwirbelsäule (BWS)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "12",
+                "keywords": [
+                  "zwölf"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Kyphose",
+                "keywords": [
+                  "Brustkyphose"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Lendenwirbelsäule (LWS)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "5",
+                "keywords": [
+                  "fünf"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Lordose",
+                "keywords": [
+                  "Lendenlordose"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen** Sie die drei Hirnhäute (Meningen) von außen nach innen.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Namen.",
+    "data": {
+      "table": {
+        "headers": [
+          "Lage",
+          "Fachbegriff (Latein)",
+          "Deutscher Name"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Außen"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dura mater",
+                "keywords": [
+                  "Dura"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Harte Hirnhaut",
+                "keywords": [
+                  "hart"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Mitte"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Arachnoidea",
+                "keywords": [
+                  "Spinngewebshaut"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Spinngewebshaut",
+                "keywords": [
+                  "Spinne"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Innen"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Pia mater",
+                "keywords": [
+                  "Pia"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Weiche / zarte Hirnhaut",
+                "keywords": [
+                  "weich",
+                  "zart"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_007",
+    "type": "tabelle_vergleich",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen** Sie das zentrale (ZNS) und das periphere Nervensystem (PNS).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "System",
+          "Anatomische Bestandteile",
+          "Funktionale Einheiten"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "ZNS"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gehirn und Rückenmark",
+                "keywords": [
+                  "Cerebrum",
+                  "Medulla spinalis"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Zentrum für Informationsverarbeitung und Steuerung.",
+                "keywords": [
+                  "Zentrum",
+                  "Steuerung",
+                  "Verarbeitung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "PNS"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hirnnerven und Spinalnerven",
+                "keywords": [
+                  "Nervenpaare",
+                  "peripher"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Leitungssystem zwischen Körperperipherie und ZNS.",
+                "keywords": [
+                  "Leitung",
+                  "Verbindung"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_008",
+    "type": "tabelle_3spalten",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie den Risikoklassen von Medizinprodukten ein Beispiel und das Risikopotenzial zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Risikoklasse",
+          "Beispiel",
+          "Risikopotenzial"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Klasse I"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Rollstuhl / Gehhilfe",
+                "keywords": [
+                  "Brille",
+                  "Verband"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "gering",
+                "keywords": [
+                  "niedrig"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Klasse IIb"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Beatmungsgerät",
+                "keywords": [
+                  "Defibrillator",
+                  "Monitor"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "hoch",
+                "keywords": [
+                  "erhöht"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Klasse III"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Herzkatheter / Implantat",
+                "keywords": [
+                  "aktiv",
+                  "Hüftprothese"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "sehr hoch",
+                "keywords": [
+                  "kritisch"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_009",
+    "type": "tabelle_vergleich",
+    "topic": "medizintechnik_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Differenzieren** Sie zwischen Übernahmeverschulden und Organisationsverschulden im klinischen Alltag.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Haftungsform",
+          "Verantwortlicher",
+          "Kern der Pflichtverletzung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Übernahmeverschulden"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Anwender (Pflegekraft)",
+                "keywords": [
+                  "Durchführender"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Übernahme einer Aufgabe trotz mangelnder Qualifikation oder Einweisung.",
+                "keywords": [
+                  "Qualifikation",
+                  "Kompetenz",
+                  "Einweisung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Organisationsverschulden"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Betreiber (Klinikleitung)",
+                "keywords": [
+                  "Arbeitgeber"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Mangelhafte Organisation, z.B. Einsatz von ungeschultem Personal.",
+                "keywords": [
+                  "Struktur",
+                  "Organisation",
+                  "Personalwahl"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_010",
+    "type": "tabelle_2spalten",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen** Sie die Schichten des Knochenaufbaus und ihre Funktion.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Schicht/Funktion.",
+    "data": {
+      "table": {
+        "headers": [
+          "Schicht / Gewebeart",
+          "Hauptfunktion / Merkmal"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Periost",
+                "keywords": [
+                  "Knochenhaut"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz und Ernährung des Knochens (Gefäße/Nerven).",
+                "keywords": [
+                  "Ernährung",
+                  "Gefäße",
+                  "Schmerz"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Spongiosa",
+                "keywords": [
+                  "Knochenbälkchen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schwammartiges Gerüst für Stabilität bei geringem Gewicht.",
+                "keywords": [
+                  "leicht",
+                  "Stabilität",
+                  "Bälkchen"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_011",
+    "type": "tabelle_2spalten",
+    "topic": "neurologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben** Sie die drei Kardinalsymptome (Trias) des Morbus Parkinson.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Beschreibung.",
+    "data": {
+      "table": {
+        "headers": [
+          "Symptom",
+          "Kurzbeschreibung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Rigor"
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Muskelsteifigkeit durch erhöhten Muskeltonus.",
+                "keywords": [
+                  "Steifheit",
+                  "Spannung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Tremor"
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Unwillkürliches Muskelzittern (oft in Ruhe).",
+                "keywords": [
+                  "Zittern"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Akinese"
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Bewegungsarmut bis hin zur Bewegungslosigkeit.",
+                "keywords": [
+                  "Armut",
+                  "Hypokinese"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_012",
+    "type": "tabelle_2spalten",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie physische Sekundärerkrankungen den entsprechenden Folgen der Immobilität zu.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Risiko / Sekundärerkrankung",
+          "Ursächliche Folge der Immobilität"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kontrakturen",
+                "keywords": [
+                  "Versteifung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Fehlende Gelenkbewegung führt zur Verkürzung von Sehnen/Muskeln.",
+                "keywords": [
+                  "Bewegungsmangel",
+                  "Sehnen"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Pneumonie",
+                "keywords": [
+                  "Lungenentzündung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Mangelhafte Lungenbelüftung begünstigt Infektionen.",
+                "keywords": [
+                  "Belüftung",
+                  "Atmen"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_013",
+    "type": "tabelle_vergleich",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen** Sie die Symptomatik eines Herzinfarkts bei Männern und Frauen.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Symptombereich",
+          "Typisch Mann",
+          "Typisch Frau"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Hauptschmerzort"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hinter dem Brustbein (retrosternal)",
+                "keywords": [
+                  "Brust",
+                  "Thorax"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Oberbauch / Rücken",
+                "keywords": [
+                  "Bauch",
+                  "Wirbelsäule"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Zusatzsymptome"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Todesangst, Kaltschweißigkeit",
+                "keywords": [
+                  "Angst",
+                  "Schweiß"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Übelkeit, Atemnot, Erschöpfung",
+                "keywords": [
+                  "Emesis",
+                  "Dyspnoe"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_014",
+    "type": "tabelle_3spalten",
+    "topic": "anatomie_bewegung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Vervollständigen** Sie die Gelenklehre hinsichtlich Formen, Achsen und Beispielen.",
+    "points": 9,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Gelenkform",
+          "Anzahl Bewegungsachsen",
+          "Beispiel im Körper"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kugelgelenk",
+                "keywords": [
+                  "Sphaeroidea"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "3",
+                "keywords": [
+                  "drei"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hüftgelenk / Schulter",
+                "keywords": [
+                  "Hüfte"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Sattelgelenk",
+                "keywords": [
+                  "Sellaris"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "2",
+                "keywords": [
+                  "zwei"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Daumengrundgelenk",
+                "keywords": [
+                  "Daumen"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Scharniergelenk",
+                "keywords": [
+                  "Ginglymus"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "1",
+                "keywords": [
+                  "eine"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ellbogengelenk (Humeroulnar)",
+                "keywords": [
+                  "Ellbogen",
+                  "Finger"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_tab_015",
+    "type": "tabelle_3spalten",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern** Sie drei ausgewählte Schritte des 5-Schritte-Modells der pflegerischen Anleitung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Schrittname/Aufgabe.",
+    "data": {
+      "table": {
+        "headers": [
+          "Schritt",
+          "Bezeichnung",
+          "Zentrale Aufgabe / Ziel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "1."
+              },
+              {
+                "type": "input",
+                "correct_answer": "Vorwissen aktivieren",
+                "keywords": [
+                  "Vorkenntnisse"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Prüfen, was der Lernende bereits weiß oder kann.",
+                "keywords": [
+                  "Kenntnis",
+                  "Stand"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "3."
+              },
+              {
+                "type": "input",
+                "correct_answer": "Durchführung",
+                "keywords": [
+                  "Umsetzung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Praktisches Vollziehen der Handlung unter Anleitung.",
+                "keywords": [
+                  "Praxis",
+                  "Handlung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "5."
+              },
+              {
+                "type": "input",
+                "correct_answer": "Reflexion",
+                "keywords": [
+                  "Auswertung",
+                  "Nachbesprechung"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gemeinsame Analyse des Lernerfolgs und des Prozesses.",
+                "keywords": [
+                  "Evaluation",
+                  "Gefühl",
+                  "Feedback"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_ft_001",
+    "type": "freitext_box",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern** Sie das ABCDE-Schema und seine Bedeutung für das Notfallmanagement.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Vollständigkeit der Komponenten und Begründung der Priorisierung.",
+    "data": {
+      "box_label": "ABCDE-Schema",
+      "correct_answer": "Das ABCDE-Schema dient der schnellen und strukturierten Beurteilung lebensbedrohlicher Notfälle nach Prioritäten. Es unterteilt sich in Airway (Atemwege), Breathing (Atmung), Circulation (Kreislauf), Disability (Neurologie) und Environment (Umgebung). Durch dieses Vorgehen werden die kritischsten Bedrohungen zuerst identifiziert und stabilisiert (Treat first what kills first). Dies minimiert Fehler unter Stress und sichert eine leitliniengerechte Versorgung des Patienten.",
+      "keywords": [
+        "Priorisierung",
+        "Airway",
+        "Breathing",
+        "Circulation",
+        "Disability",
+        "Environment"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_002",
+    "type": "freitext_box",
+    "topic": "anatomie_bewegung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben** Sie die Gleit-Filament-Theorie der Muskelkontraktion.",
+    "points": 4,
+    "scoring_info": "Punkte für die Benennung der Filamente, den Prozess der Bindung und den Energieverbrauch.",
+    "data": {
+      "box_label": "Muskelkontraktion",
+      "correct_answer": "Die Muskelkontraktion basiert auf dem Ineinandergleiten von Aktin- und Myosinfilamenten. Nach einem Nervenimpuls wird Kalzium ausgeschüttet, wodurch Myosinköpfchen an Aktin binden können. Durch den sogenannten Kraftschlag knicken die Köpfchen um und ziehen die Aktinfilamente zur Mitte, was den Muskel verkürzt. Zum Lösen der Bindung und zur Rückkehr in die Ausgangslage ist die Bindung von ATP zwingend erforderlich.",
+      "keywords": [
+        "Aktin",
+        "Myosin",
+        "Kalzium",
+        "Kraftschlag",
+        "ATP-Verbrauch"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_003",
+    "type": "freitext_box",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erklären** Sie die Pathophysiologie der Osteoporose.",
+    "points": 4,
+    "scoring_info": "Fokus auf das Ungleichgewicht im Stoffwechsel und die strukturellen Folgen.",
+    "data": {
+      "box_label": "Pathophysiologie Osteoporose",
+      "correct_answer": "Osteoporose ist ein krankhafter Knochenschwund, bei dem die Knochenmasse über das physiologische Maß hinaus abnimmt. Ursächlich ist ein Ungleichgewicht zwischen knochenaufbauenden Osteoblasten und knochenabbauenden Osteoklasten. Dies führt zu einer verminderten Belastbarkeit der schwammartigen Spongiosa (Knochenbälkchen). Infolgedessen treten gehäuft Spontanfrakturen an Wirbelkörpern und dem Oberschenkelknochen auf.",
+      "keywords": [
+        "Knochenschwund",
+        "Spongiosa",
+        "Osteoblasten",
+        "Osteoklasten",
+        "Frakturrisiko"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_004",
+    "type": "freitext_box",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Begründen** Sie, warum die Reanimationsfrequenz laut Guidelines 100–120 Kompressionen pro Minute betragen sollte.",
+    "points": 3,
+    "scoring_info": "Begründung über das Zeitfenster der Herzkammerfüllung und die Aufrechterhaltung des Perfusionsdrucks.",
+    "data": {
+      "box_label": "HLW Frequenz",
+      "correct_answer": "Eine Frequenz von 100–120/Min ist optimal, um einen ausreichenden koronaren und zerebralen Perfusionsdruck aufzubauen. Bei einer zu niedrigen Frequenz bricht der Blutfluss zwischen den Kompressionen zu stark ab. Eine Frequenz über 120/Min lässt dem Herzen nicht genug Zeit für die passive Füllung während der Entlastungsphase. Die Einhaltung dieses Bereichs stellt somit die bestmögliche Versorgung lebenswichtiger Organe sicher.",
+      "keywords": [
+        "Perfusionsdruck",
+        "Füllungsphase",
+        "Guidelines 2021",
+        "Blutfluss",
+        "Effizienz"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_005",
+    "type": "freitext_box",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern** Sie den Aufbau und die Funktion des Liquorsystems.",
+    "points": 4,
+    "scoring_info": "Punkte für Produktionsort, Zirkulation und Schutzfunktion.",
+    "data": {
+      "box_label": "Liquorsystem",
+      "correct_answer": "Der Liquor cerebrospinalis wird in den Plexus choroidei der Ventrikel mit einer Tagesmenge von ca. 500–700 ml gebildet. Er zirkuliert im inneren und äußeren Liquorraum (Subarachnoidalraum) um Gehirn und Rückenmark. Mechanisch dient er als Wasserkissen zum Schutz vor Erschütterungen und reduziert das Eigengewicht des Gehirns. Zudem spielt er eine wichtige Rolle beim Stoffaustausch und der Entsorgung von Stoffwechselprodukten des ZNS.",
+      "keywords": [
+        "Plexus choroidei",
+        "Ventrikel",
+        "Subarachnoidalraum",
+        "Schutzfunktion",
+        "Stoffwechsel"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_006",
+    "type": "freitext_box",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben** Sie den Circulus arteriosus cerebri und seine klinische Bedeutung.",
+    "points": 4,
+    "scoring_info": "Benennung der zuführenden Gefäße und Erläuterung der Kollateralfunktion.",
+    "data": {
+      "box_label": "Hirnblutversorgung",
+      "correct_answer": "Der Circulus arteriosus cerebri ist ein Gefäßring an der Gehirnbasis, der die Blutversorgung sicherstellt. Er wird durch die A. carotis interna und das Vertebralsystem (A. vertebralis / A. basilaris) gespeist. Die klinische Bedeutung liegt in der Ausbildung von Kollateralkreisläufen. Bei einem langsamen Verschluss einer zuführenden Arterie kann die Versorgung oft durch die anderen Gefäße des Rings kompensiert werden.",
+      "keywords": [
+        "Gefäßring",
+        "A. carotis interna",
+        "A. vertebralis",
+        "Kollateralkreislauf",
+        "Kompensation"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_007",
+    "type": "freitext_box",
+    "topic": "anatomie_bewegung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Erklären** Sie den Unterschied zwischen Lordose und Kyphose im Aufbau der Wirbelsäule.",
+    "points": 3,
+    "scoring_info": "Punkte für die korrekte Richtungszuordnung und Lokalisation.",
+    "data": {
+      "box_label": "Wirbelsäulenkrümmung",
+      "correct_answer": "Lordose und Kyphose bezeichnen die physiologischen Krümmungen der Wirbelsäule in der Sagittalebene. Eine Lordose ist eine Krümmung nach vorne (ventral) und findet sich in der Hals- und Lendenwirbelsäule. Die Kyphose beschreibt eine Krümmung nach hinten (dorsal) und ist charakteristisch für die Brustwirbelsäule und das Kreuzbein. Gemeinsam ermöglichen sie die Stoßdämpferfunktion der Achse bei aufrechter Haltung.",
+      "keywords": [
+        "HWS/LWS",
+        "BWS",
+        "ventrale Krümmung",
+        "dorsale Krümmung",
+        "physiologisch"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_008",
+    "type": "freitext_box",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Begründen** Sie die rechtliche Pflicht zur Hilfeleistung gemäß § 323c StGB.",
+    "points": 3,
+    "scoring_info": "Nennung des Paragraphen, der Strafbarkeit und der Einschränkungen (Zumutbarkeit).",
+    "data": {
+      "box_label": "Rechtliche Grundlagen",
+      "correct_answer": "Nach § 323c StGB ist jeder Mensch gesetzlich verpflichtet, bei Unglücksfällen oder Not Erste Hilfe zu leisten. Ein Verstoß wird als unterlassene Hilfeleistung mit Freiheitsstrafe bis zu einem Jahr oder Geldstrafe geahndet. Die Pflicht besteht jedoch nur, wenn die Hilfeleistung erforderlich und dem Helfenden zumutbar ist. Eine Ausnahme gilt insbesondere dann, wenn eine erhebliche Eigengefahr besteht oder andere wichtige Pflichten verletzt würden.",
+      "keywords": [
+        "§ 323c StGB",
+        "Unterlassene Hilfeleistung",
+        "Strafbarkeit",
+        "Zumutbarkeit",
+        "Eigengefahr"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_009",
+    "type": "freitext_box",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern** Sie die CE-Kennzeichnung und ihre Bedeutung für Medizinprodukte.",
+    "points": 3,
+    "scoring_info": "Bedeutung im europäischen Binnenmarkt und Abgrenzung zur Qualitätsgarantie.",
+    "data": {
+      "box_label": "CE-Kennzeichnung",
+      "correct_answer": "Die CE-Kennzeichnung dokumentiert, dass ein Medizinprodukt den geltenden europäischen Sicherheits- und Leistungsanforderungen entspricht (Konformität) [M 2.3]. Sie ist die Voraussetzung für das Inverkehrbringen und den freien Warenverkehr im europäischen Binnenmarkt [M 2.3]. Im Gegensatz zu Arzneimittelzulassungen bestätigt sie primär die Einhaltung technischer Normen und grundlegender Sicherheitsaspekte durch den Hersteller [M 2.3]. Ohne dieses Kennzeichen darf ein Medizinprodukt in der EU nicht professionell betrieben werden [M 2.3].",
+      "keywords": [
+        "Konformität",
+        "Sicherheitsanforderungen",
+        "Inverkehrbringen",
+        "EU-Recht",
+        "Zertifizierung"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_010",
+    "type": "freitext_box",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben** Sie den Reflexbogen und benennen Sie seine fünf Bestandteile.",
+    "points": 4,
+    "scoring_info": "Definition des Reflexes und korrekte Benennung der Kette.",
+    "data": {
+      "box_label": "Reflexphysiologie",
+      "correct_answer": "Ein Reflex ist eine unwillkürliche, schnelle Reaktion des Körpers auf einen Reiz [M 2.2]. Der Weg verläuft über den Reflexbogen: Zuerst nimmt der Rezeptor den Reiz auf [M 2.2]. Über den sensiblen (afferenten) Nerv gelangt die Information zum Reflexzentrum (meist im Rückenmark) [M 2.2]. Dort erfolgt die Umschaltung auf den motorischen (efferenten) Nerv, der den Impuls zum Erfolgsorgan (z. B. Muskel) leitet [M 2.2].",
+      "keywords": [
+        "unwillkürlich",
+        "Rezeptor",
+        "sensibler Nerv",
+        "Reflexzentrum",
+        "Erfolgsorgan"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_011",
+    "type": "freitext_box",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erklären** Sie die motorische Entwicklung vom Säugling bis zum Kleinkind anhand von drei Meilensteinen.",
+    "points": 3,
+    "scoring_info": "Nennung von drei korrekten Meilensteinen mit Zeitangabe.",
+    "data": {
+      "box_label": "Kindliche Entwicklung",
+      "correct_answer": "Die motorische Entwicklung erfolgt in festen Zeitfenstern, wobei individuelle Schwankungen normal sind. Ein früher Meilenstein ist das freie Sitzen, welches meist um den 10. Lebensmonat erreicht wird. Zwischen dem 10. und 15. Monat beginnt das Kind, sich an Gegenständen zum Stehen hochzuziehen. Das freie Gehen wird im Durchschnitt im Alter von ca. 18 Monaten als zentraler Abschluss der frühen Körpermotorik realisiert.",
+      "keywords": [
+        "Meilenstein",
+        "freies Sitzen",
+        "Hochziehen",
+        "freies Gehen",
+        "18 Monate"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_012",
+    "type": "freitext_box",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Begründen** Sie, warum längerfristige Immobilität das Risiko für eine Thrombose erhöht.",
+    "points": 3,
+    "scoring_info": "Erklärung über den Blutfluss und die Muskelpumpe.",
+    "data": {
+      "box_label": "Thromboserisiko",
+      "correct_answer": "Immobilität führt zu einem verlangsamten Blutfluss in den Venen, da die unterstützende Wadenmuskelpumpe nicht betätigt wird. Dieser Blutstau (Stase) ist eine Hauptkomponente der Virchow-Trias zur Entstehung von Blutgerinnseln. Zusätzlich können veränderte Strömungsverhältnisse die Gefäßwand schädigen und die Blutgerinnung aktivieren. In der Folge steigt das Risiko, dass ein Thrombus ein Gefäß verschließt oder eine Lungenembolie auslöst.",
+      "keywords": [
+        "Blutstau",
+        "Wadenmuskelpumpe",
+        "Venenstase",
+        "Blutgerinnsel",
+        "Virchow-Trias"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_ft_013",
+    "type": "freitext_box",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern** Sie die drei Kardinalsymptome des Morbus Parkinson.",
+    "points": 4,
+    "scoring_info": "Benennung und kurze Erläuterung der Fachbegriffe.",
+    "data": {
+      "box_label": "Parkinson-Trias",
+      "correct_answer": "Das Parkinson-Syndrom ist primär durch drei motorische Leitsymptome gekennzeichnet. Der Rigor beschreibt eine dauerhafte Muskelsteifigkeit durch erhöhten Muskeltonus. Der Tremor äußert sich als unwillkürliches Muskelzittern, das meist in Ruhe auftritt. Als drittes Symptom tritt die Hypokinese (Bewegungsarmut) bis hin zur Akinese (Bewegungslosigkeit) auf, was sich oft im kleinschrittigen Gangbild zeigt.",
+      "keywords": [
+        "Rigor",
+        "Tremor",
+        "Hypokinese",
+        "Akinese",
+        "Leitsymptome"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_014",
+    "type": "freitext_box",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben** Sie das strukturierte 5-Schritte-Modell der pädagogischen Anleitung.",
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt benanntem Schritt in der richtigen Reihenfolge.",
+    "data": {
+      "box_label": "Anleitprozess",
+      "correct_answer": "Der Anleitprozess folgt einem zirkulären Modell zur gezielten Vermittlung von Kompetenzen. Im 1. Schritt wird das Vorwissen aktiviert, gefolgt von der 2. Phase, der gemeinsamen Erarbeitung. Der 3. Schritt ist die praktische Durchführung der Handlung. Danach erfolgt im 4. Schritt die Vertiefung der Lerninhalte, bevor der Prozess im 5. Schritt mit der Reflexion abgeschlossen wird.",
+      "keywords": [
+        "Vorwissen",
+        "Erarbeitung",
+        "Durchführung",
+        "Vertiefung",
+        "Reflexion"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_ft_015",
+    "type": "freitext_box",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erklären** Sie die Blut-Liquor-Schranke und ihre Funktion.",
+    "points": 3,
+    "scoring_info": "Erklärung als Barriere zwischen Blutstrom und ZNS.",
+    "data": {
+      "box_label": "Physiologische Barriere",
+      "correct_answer": "Die Blut-Liquor-Schranke ist eine physiologische Barriere zwischen dem Blutstrom und dem Liquorsystem des ZNS. Sie wird vor allem durch das Epithel der Plexus choroidei gebildet und kontrolliert selektiv den Stoffaustausch. Ihre Hauptaufgabe ist der Schutz des Gehirns vor Krankheitserregern und Giftstoffen bei gleichzeitiger Passage von Nährstoffen. Eine intakte Schranke ist essenziell für die Aufrechterhaltung des konstanten Milieus im Gehirn.",
+      "keywords": [
+        "Schutzfunktion",
+        "Plexus choroidei",
+        "selektive Passage",
+        "Milieu-Konstanz",
+        "ZNS"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_zu_001",
+    "type": "zuordnung",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie die Buchstaben des ABCDE-Schemas den korrekten medizinischen Beurteilungsschwerpunkten zu.",
+    "points": 5,
+    "data": {
+      "legend": {
+        "A": "Airway (Atemwege)",
+        "B": "Breathing (Belüftung/Atmung)",
+        "C": "Circulation (Kreislauf)",
+        "D": "Disability (Neurologisches Defizit)",
+        "E": "Environment (Umgebung/Exposition)"
+      },
+      "statements": [
+        {
+          "text": "Kontrolle der Atemwege auf Freiheit und Fremdkörper.",
+          "answer": "A"
+        },
+        {
+          "text": "Beurteilung von Atemfrequenz, Rhythmus und Qualität.",
+          "answer": "B"
+        },
+        {
+          "text": "Prüfung von Puls, Blutdruck und Anzeichen eines Schocks.",
+          "answer": "C"
+        },
+        {
+          "text": "Einschätzung des Bewusstseinszustands (GCS) und der Pupillen.",
+          "answer": "D"
+        },
+        {
+          "text": "Schutz vor Wärmeverlust und Suche nach Begleitverletzungen.",
+          "answer": "E"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_zu_002",
+    "type": "zuordnung",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie die lateinischen Bezeichnungen der Großhirnlappen den entsprechenden deutschen Begriffen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Frontallappen",
+        "B": "Parietallappen",
+        "C": "Temporallappen",
+        "D": "Okzipitallappen"
+      },
+      "statements": [
+        {
+          "text": "Stirnlappen",
+          "answer": "A"
+        },
+        {
+          "text": "Scheitellappen",
+          "answer": "B"
+        },
+        {
+          "text": "Schläfenlappen",
+          "answer": "C"
+        },
+        {
+          "text": "Hinterhauptlappen",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_zu_003",
+    "type": "zuordnung",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie die Risikoklassen für Medizinprodukte (MDR) den passenden Beispielen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Klasse I",
+        "B": "Klasse IIa",
+        "C": "Klasse IIb",
+        "D": "Klasse III"
+      },
+      "statements": [
+        {
+          "text": "Gehhilfen, Rollstühle, Mullbinden",
+          "answer": "A"
+        },
+        {
+          "text": "Einmalspritzen, Hörgeräte, Ultraschallgeräte",
+          "answer": "B"
+        },
+        {
+          "text": "Anästhesiegeräte, Defibrillatoren, Dialysegeräte",
+          "answer": "C"
+        },
+        {
+          "text": "Herzkatheter, Gelenkprothesen, resorbierbares Nahtmaterial",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_zu_004",
+    "type": "zuordnung",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie die Begriffe der Bewusstseinsstadien den klinischen Beschreibungen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Somnolenz",
+        "B": "Sopor",
+        "C": "Koma"
+      },
+      "statements": [
+        {
+          "text": "Patient ist schläfrig, aber durch lautstarke Ansprache gut erweckbar.",
+          "answer": "A"
+        },
+        {
+          "text": "Patient reagiert nicht auf Ansprache, zeigt aber gezielte Abwehr bei Schmerzreizen.",
+          "answer": "B"
+        },
+        {
+          "text": "Tiefe Bewusstlosigkeit; keine Reaktion auf Schmerzreize, Schutzreflexe fehlen.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_zu_005",
+    "type": "zuordnung",
+    "topic": "anatomie_bewegung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen** Sie die anatomischen Richtungsbezeichnungen den korrekten Lagebeschreibungen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Kranial",
+        "B": "Kaudal",
+        "C": "Ventral",
+        "D": "Dorsal"
+      },
+      "statements": [
+        {
+          "text": "In Richtung des Kopfes (kopfwärts) gelegen.",
+          "answer": "A"
+        },
+        {
+          "text": "In Richtung des Steißbeins (steißwärts) gelegen.",
+          "answer": "B"
+        },
+        {
+          "text": "Auf der Bauchseite (bauchwärts) gelegen.",
+          "answer": "C"
+        },
+        {
+          "text": "Auf der Rückenseite (rückenwärts) gelegen.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie die fehlenden Abschnitte der menschlichen Wirbelsäule.",
+    "points": 3,
+    "data": {
+      "list_label": "Wirbelsäulenabschnitte",
+      "given_items": [
+        "Halswirbelsäule (7 Wirbel)",
+        "Brustwirbelsäule (12 Wirbel)"
+      ],
+      "missing_items": [
+        "Lendenwirbelsäule",
+        "Kreuzbein",
+        "Steißbein"
+      ],
+      "all_valid_missing": [
+        "Lendenwirbelsäule",
+        "LWS",
+        "5 Lendenwirbel",
+        "Kreuzbein",
+        "Os sacrum",
+        "Steißbein",
+        "Os coccygis"
+      ]
+    }
+  },
+  {
+    "q_id": "m2_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie die Namen der drei Hirnhäute (Meningen).",
+    "points": 3,
+    "data": {
+      "list_label": "Die drei Meningen",
+      "given_items": [],
+      "missing_items": [
+        "Dura mater",
+        "Arachnoidea",
+        "Pia mater"
+      ],
+      "all_valid_missing": [
+        "Dura mater",
+        "harte Hirnhaut",
+        "Arachnoidea",
+        "Spinngewebshaut",
+        "Pia mater",
+        "weiche Hirnhaut",
+        "zarte Hirnhaut"
+      ]
+    }
+  },
+  {
+    "q_id": "m2_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie die 4 H's der potenziell reversiblen Ursachen eines Kreislaufstillstands.",
+    "points": 4,
+    "data": {
+      "list_label": "Die 4 H's",
+      "given_items": [
+        "Hypoxie"
+      ],
+      "missing_items": [
+        "Hypovolämie",
+        "Hypo- / Hyperkaliämie",
+        "Hypothermie"
+      ],
+      "all_valid_missing": [
+        "Hypovolämie",
+        "Volumenmangel",
+        "Hypokaliämie",
+        "Hyperkaliämie",
+        "Elektrolytstörungen",
+        "Hypothermie",
+        "Unterkühlung"
+      ]
+    }
+  },
+  {
+    "q_id": "m2_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie drei wesentliche physische Risiken bzw. Folgen, die durch längerfristige Immobilität entstehen können.",
+    "points": 3,
+    "data": {
+      "list_label": "Physische Immobilitätsfolgen",
+      "given_items": [
+        "Infektionsrisiko (z. B. Pneumonie)"
+      ],
+      "missing_items": [
+        "Dekubitusrisiko",
+        "Thromboserisiko",
+        "Kontrakturrisiko"
+      ],
+      "all_valid_missing": [
+        "Dekubitusrisiko",
+        "Wundliegen",
+        "Thromboserisiko",
+        "Venenverschluss",
+        "Kontrakturrisiko",
+        "Gelenkversteifung",
+        "Inkontinenz",
+        "Obstipation"
+      ]
+    }
+  },
+  {
+    "q_id": "m2_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen** Sie die fehlenden Schritte im zirkulären 5-Schritte-Modell der pädagogischen Anleitung.",
+    "points": 3,
+    "data": {
+      "list_label": "Schritte der Anleitung",
+      "given_items": [
+        "1. Vorwissen aktivieren",
+        "3. Durchführung"
+      ],
+      "missing_items": [
+        "2. Erarbeitung",
+        "4. Vertiefung",
+        "5. Reflexion"
+      ],
+      "all_valid_missing": [
+        "Erarbeitung",
+        "Planung",
+        "Vertiefung",
+        "Übungsphase",
+        "Reflexion",
+        "Auswertung",
+        "Evaluation"
+      ]
+    }
+  },
+  {
+    "q_id": "m2_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren** Sie den Begriff 'Diarthrose' und **nennen** Sie 3 Beispiele für echte Gelenke im menschlichen Körper.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Diarthrose",
+      "definition_correct": "Diarthrosen sind echte Gelenke, die durch einen Gelenkspalt zwischen den Knochenenden gekennzeichnet sind. Sie besitzen eine Gelenkkapsel, Gelenkschmiere (Synovia) und ermöglichen eine hohe Beweglichkeit.",
+      "definition_keywords": [
+        "Gelenkspalt",
+        "beweglich",
+        "Gelenkkapsel",
+        "Synovia"
+      ],
+      "definition_points": 3,
+      "examples_label": "Beispiele",
+      "examples_count": 3,
+      "correct_examples": [
+        "Hüftgelenk",
+        "Schultergelenk",
+        "Kniegelenk"
+      ],
+      "all_valid_examples": [
+        "Hüftgelenk",
+        "Schultergelenk",
+        "Kniegelenk",
+        "Handgelenk",
+        "Ellbogengelenk",
+        "Sprunggelenk",
+        "Daumengrundgelenk"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren** Sie den Begriff 'Medizinprodukt' und **nennen** Sie 3 konkrete Beispiele.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Medizinprodukt",
+      "definition_correct": "Ein Medizinprodukt ist ein Gegenstand, Stoff oder eine Software, dessen Hauptwirkung im Gegensatz zu Arzneimitteln primär physikalisch oder physikochemisch erfolgt. Es dient der Erkennung, Überwachung, Behandlung oder Linderung von Krankheiten und Verletzungen.",
+      "definition_keywords": [
+        "physikalisch",
+        "Wirkungsweise",
+        "Zweckbestimmung",
+        "kein Arzneimittel"
+      ],
+      "definition_points": 3,
+      "examples_label": "Beispiele",
+      "examples_count": 3,
+      "correct_examples": [
+        "Rollstuhl",
+        "Blutdruckmessgerät",
+        "Herzkatheter"
+      ],
+      "all_valid_examples": [
+        "Rollstuhl",
+        "Gehhilfe",
+        "Blutdruckmessgerät",
+        "Beatmungsgerät",
+        "Herzkatheter",
+        "Implantat",
+        "Defibrillator",
+        "Infusionspumpe",
+        "Mullbinde"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren** Sie das Krankheitsbild 'Osteoporose' und **nennen** Sie 4 Faktoren, die für einen gesunden Knochenstoffwechsel zwingend erforderlich sind.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition Osteoporose",
+      "definition_correct": "Osteoporose ist ein krankhafter Knochenschwund, bei dem die Knochenmasse über das physiologische Maß hinaus abnimmt. Dabei sinkt vor allem die Belastbarkeit der Knochenbälkchen (Spongiosa), was zu einem erhöhten Risiko für Spontanfrakturen führt.",
+      "definition_keywords": [
+        "Knochenschwund",
+        "Spongiosa",
+        "Knochenmasse",
+        "Frakturrisiko"
+      ],
+      "definition_points": 3,
+      "examples_label": "Stoffwechselfaktoren",
+      "examples_count": 4,
+      "correct_examples": [
+        "Kalzium",
+        "Vitamin D",
+        "Bewegung",
+        "Sauerstoff"
+      ],
+      "all_valid_examples": [
+        "Kalzium",
+        "Ca2+",
+        "Vitamin D",
+        "Sonnenlicht",
+        "Bewegung",
+        "mechanische Belastung",
+        "Sauerstoff",
+        "Osteoblasten"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren** Sie den 'Reflexbogen' und **nennen** Sie seine 5 anatomischen Bestandteile in der korrekten Reihenfolge.",
+    "points": 8,
+    "data": {
+      "definition_label": "Definition Reflexbogen",
+      "definition_correct": "Der Reflexbogen beschreibt den neuronalen Übertragungsweg eines Reflexes. Ein Reflex ist eine unwillkürliche, schnelle Reaktion des Körpers auf einen spezifischen Reiz, die meist auf Rückenmarksebene ohne Beteiligung des Gehirns umgeschaltet wird.",
+      "definition_keywords": [
+        "unwillkürlich",
+        "Reizweg",
+        "Rückenmark",
+        "schnell"
+      ],
+      "definition_points": 3,
+      "examples_label": "Bestandteile",
+      "examples_count": 5,
+      "correct_examples": [
+        "1. Rezeptor",
+        "2. sensibler Nerv",
+        "3. Reflexzentrum",
+        "4. motorischer Nerv",
+        "5. Erfolgsorgan"
+      ],
+      "all_valid_examples": [
+        "Rezeptor",
+        "sensibler Nerv",
+        "Afferenz",
+        "Reflexzentrum",
+        "Rückenmark",
+        "motorischer Nerv",
+        "Efferenz",
+        "Erfolgsorgan",
+        "Muskel"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren** Sie 'Reanimation' und **nennen** Sie 3 Basismaßnahmen (BLS) laut den aktuellen Leitlinien.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Reanimation",
+      "definition_correct": "Die Reanimation oder Wiederbelebung umfasst alle Maßnahmen zur Aufrechterhaltung oder Wiederherstellung der Atmung und des Kreislaufs bei einem Patienten mit Herz-Kreislauf-Stillstand.",
+      "definition_keywords": [
+        "Wiederbelebung",
+        "Kreislaufstillstand",
+        "Atmung",
+        "Herzstillstand"
+      ],
+      "definition_points": 3,
+      "examples_label": "Maßnahmen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Herzdruckmassage",
+        "Beatmung",
+        "Defibrillation (AED)"
+      ],
+      "all_valid_examples": [
+        "Herzdruckmassage",
+        "Thoraxkompression",
+        "Beatmung",
+        "Defibrillation",
+        "Notruf absetzen",
+        "AED-Einsatz"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden** Sie, welche der folgenden Aussagen zur Durchführung der Herz-Lungen-Wiederbelebung (HLW) gemäß ERC-Leitlinien korrekt sind.",
+    "instruction_justify": " **Begründen** Sie eine Ihrer richtigen Entscheidungen.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Die empfohlene Drucktiefe beträgt beim Erwachsenen 5 bis maximal 6 cm.",
+          "correct": true
+        },
+        {
+          "label": "Die Kompressionsfrequenz sollte zwischen 140 und 160 pro Minute liegen.",
+          "correct": false
+        },
+        {
+          "label": "Das Verhältnis von Herzdruckmassage zu Beatmung beträgt bei Erwachsenen 30:2.",
+          "correct": true
+        },
+        {
+          "label": "Ein Wechsel des Komprimierenden wird alle 5 Minuten empfohlen.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Die empfohlene Drucktiefe beträgt beim Erwachsenen 5 bis maximal 6 cm.",
+          "text": "Diese Tiefe ist notwendig, um einen ausreichenden Ausstoß des Blutes aus den Herzkammern zu gewährleisten, ohne dabei schwere innere Organverletzungen zu provozieren."
+        },
+        {
+          "option": "Das Verhältnis von Herzdruckmassage zu Beatmung beträgt bei Erwachsenen 30:2.",
+          "text": "Dieses Verhältnis stellt sicher, dass die Unterbrechungen der Thoraxkompressionen für die Beatmung minimal bleiben, um den notwendigen Perfusionsdruck im Kreislauf aufrechtzuerhalten."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden** Sie, welche der folgenden Konsequenzen direkte physische Folgen von längerfristiger Immobilität sind.",
+    "instruction_justify": " **Begründen** Sie eine Ihrer Entscheidungen fachlich.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Erhöhtes Risiko für Thrombosen durch verlangsamten Blutfluss.",
+          "correct": true
+        },
+        {
+          "label": "Verlust von Selbstvertrauen und Lebensmut.",
+          "correct": false
+        },
+        {
+          "label": "Entstehung von Kontrakturen durch Sehnenverkürzung.",
+          "correct": true
+        },
+        {
+          "label": "Verkümmernde kognitive Fähigkeiten.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Erhöhtes Risiko für Thrombosen durch verlangsamten Blutfluss.",
+          "text": "Durch fehlende Muskelbewegung (Wadenmuskelpumpe) staut sich das Blut in den Venen, was laut Virchow-Trias die Bildung von Blutgerinnseln massiv begünstigt."
+        },
+        {
+          "option": "Entstehung von Kontrakturen durch Sehnenverkürzung.",
+          "text": "Ohne regelmäßige physiologische Gelenkbewegung verkürzen sich Sehnen und Bänder, was zu einer dauerhaften Gelenkversteifung (Kontraktur) führt."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden** Sie, welche Hirnabschnitte anatomisch zum Hirnstamm (Truncus cerebri) zählen.",
+    "instruction_justify": " **Begründen** Sie die funktionelle Bedeutung dieses Bereichs.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Mittelhirn (Mesencephalon)",
+          "correct": true
+        },
+        {
+          "label": "Kleinhirn (Cerebellum)",
+          "correct": false
+        },
+        {
+          "label": "Brücke (Pons)",
+          "correct": true
+        },
+        {
+          "label": "Zwischenhirn (Diencephalon)",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Mittelhirn (Mesencephalon)",
+          "text": "Das Mittelhirn gehört zusammen mit Pons und Medulla oblongata zum Hirnstamm, da hier lebenswichtige Reflexzentren und die Regulation von Wachheit und Schlaf lokalisiert sind."
+        },
+        {
+          "option": "Brücke (Pons)",
+          "text": "Die Brücke ist ein wesentlicher Teil des Hirnstamms und dient als zentrale Schaltstation für Nervenbahnen zwischen Großhirn und Kleinhirn."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden** Sie, welche Pflichten ein Betreiber gemäß Medizinprodukte-Betreiberverordnung (MPBetreibV) erfüllen muss.",
+    "instruction_justify": " **Begründen** Sie, warum die Einweisungspflicht für die Pflegepraxis so wichtig ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Führen eines Bestandsverzeichnisses für alle aktiven Produkte.",
+          "correct": true
+        },
+        {
+          "label": "Einweisung der Anwender in die Handhabung der Medizinprodukte.",
+          "correct": true
+        },
+        {
+          "label": "Eigenständige Durchführung technischer Reparaturen durch Hilfspersonal.",
+          "correct": false
+        },
+        {
+          "label": "Verzicht auf STK-Prüfungen bei Produkten der Klasse I.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Einweisung der Anwender in die Handhabung der Medizinprodukte.",
+          "text": "Die Einweisung ist essenziell, um Anwendungsfehler zu vermeiden und das Personal vor Haftung durch Übernahmeverschulden zu schützen, falls sie ein Gerät ohne Kenntnis bedienen."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden** Sie, welche Symptome typischerweise auf einen Herzinfarkt bei einer Frau hindeuten (atypische Symptomatik).",
+    "instruction_justify": " **Begründen** Sie, warum diese Erkennung im Notfallmanagement kritisch ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Massive Todesangst und Vernichtungsschmerz hinter dem Brustbein.",
+          "correct": false
+        },
+        {
+          "label": "Übelkeit, Erbrechen und Oberbauchschmerzen.",
+          "correct": true
+        },
+        {
+          "label": "Schmerzen zwischen den Schulterblättern und Luftnot.",
+          "correct": true
+        },
+        {
+          "label": "Taubheitsgefühl ausschließlich im rechten Bein.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Übelkeit, Erbrechen und Oberbauchschmerzen.",
+          "text": "Frauen zeigen oft vegetative Symptome statt des klassischen Brustschmerzes, weshalb diese Zeichen im Notfallmanagement oft verkannt werden und eine verzögerte Hilfeleistung droht."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_extra_001",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Gemäß den Guidelines 2021 sollte die Thoraxkompression bei Erwachsenen mit einer Frequenz von 100 bis 120 pro Minute und einer Drucktiefe von 5 bis 6 cm durchgeführt werden.",
+    "answer": "richtig",
+    "explanation": "Diese spezifischen Werte für Frequenz und Drucktiefe sind in den aktuellen Leitlinien zur Reanimation zwingend vorgegeben.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_extra_002",
+    "type": "definition_plus_beispiele",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie die Formel zur Berechnung des Sauerstoffvorrats einer Gasflasche und  **nennen**  Sie die drei dafür benötigten Parameter.",
+    "points": 6,
+    "data": {
+      "definition_label": "Berechnungsformel",
+      "definition_correct": "Die Restlaufzeit des Sauerstoffvorrats wird berechnet, indem der Flascheninhalt (Flaschenvolumen in Litern multipliziert mit dem Flaschendruck in bar) durch den Patientenbedarf pro Minute dividiert wird.",
+      "definition_keywords": [
+        "Volumen",
+        "Druck",
+        "Bedarf",
+        "Dividieren"
+      ],
+      "definition_points": 3,
+      "examples_label": "Parameter",
+      "examples_count": 3,
+      "correct_examples": [
+        "Flaschenvolumen (Liter)",
+        "Flaschendruck (bar)",
+        "Patientenbedarf (l/min)"
+      ],
+      "all_valid_examples": [
+        "Flaschengröße",
+        "Druckanzeige Manometer",
+        "Liter pro Minute",
+        "O2-Bedarf"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m2_extra_003",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Unter 'Telereanimation' versteht man die Anleitung zur Herz-Lungen-Wiederbelebung per Telefon durch den zuständigen Leitstellendisponenten bis zum Eintreffen der Rettungskräfte.",
+    "answer": "richtig",
+    "explanation": "Die Telereanimation dient dazu, die therapiefreie Zeit zu überbrücken und Ersthelfer fachlich zu unterstützen.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_extra_004",
+    "type": "freitext_box",
+    "topic": "erste_hilfe",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie die Bedeutung einer Patientenverfügung gemäß § 1901a BGB im Kontext von Notfallmaßnahmen.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die korrekte Einordnung der Verbindlichkeit und des Patientenwillens.",
+    "data": {
+      "box_label": "Patientenverfügung § 1901a BGB",
+      "correct_answer": "Gemäß § 1901a BGB ist eine schriftliche Patientenverfügung rechtlich bindend, sofern sie den konkreten Behandlungswillen für die aktuelle Lebens- und Behandlungssituation zum Ausdruck bringt. Liegt eine solche Verfügung vor, in der lebensverlängernde Maßnahmen explizit abgelehnt werden, darf eine Reanimation nicht eingeleitet bzw. muss abgebrochen werden, da der Patientenwille Vorrang vor der allgemeinen Hilfspflicht hat. Die Prüfung der Aktualität und Anwendbarkeit ist dabei im Notfall eine besondere Herausforderung für das Fachpersonal.",
+      "keywords": [
+        "Selbstbestimmungsrecht",
+        "Patientenwille",
+        "Bindungswirkung",
+        "Behandlungsabbruch"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_extra_005",
+    "type": "tabelle_3spalten",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Differenzieren**  Sie die drei Schichten bzw. Gewebearten des Knochenaufbaus hinsichtlich ihrer Merkmale.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Bezeichnung",
+          "Strukturmerkmal",
+          "Hauptfunktion"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Periost",
+                "keywords": [
+                  "Knochenhaut"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Bindegewebige Außenhülle, reich an Gefäßen und Nerven.",
+                "keywords": [
+                  "Außen",
+                  "Gefäße",
+                  "Nerven"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz und Ernährung des Knochengewebes.",
+                "keywords": [
+                  "Ernährung",
+                  "Schutz"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Spongiosa",
+                "keywords": [
+                  "Knochenbälkchen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schwammartiges Gerüst im Inneren des Knochens.",
+                "keywords": [
+                  "schwamm",
+                  "innen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Stabilität bei geringem Gewicht; Ort der Osteoporose.",
+                "keywords": [
+                  "leicht",
+                  "stabil"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m2_extra_006",
+    "type": "richtig_falsch",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Liquor cerebrospinalis wird primär in den Plexus choroidei der Gehirnventrikel produziert.",
+    "answer": "richtig",
+    "explanation": "Diese spezialisierten Gefäßgeflechte in den Ventrikeln sind für die tägliche Liquorproduktion zuständig.",
+    "source_hint": "Neuroanatomie Modul 2"
+  },
+  {
+    "q_id": "m2_extra_007",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die sicherheitstechnische Kontrolle (STK) für Medizinprodukte muss grundsätzlich in einem Intervall von spätestens 12 Monaten durchgeführt werden.",
+    "answer": "falsch",
+    "explanation": "Laut den gesetzlichen Vorgaben beträgt die Frist für die STK bei den meisten aktiven Medizinprodukten spätestens alle zwei Jahre (24 Monate).",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_extra_008",
+    "type": "nennen_liste",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie das typische Hautphänomen am Rücken bei fortgeschrittener Osteoporose und  **erklären**  Sie dessen Entstehung.",
+    "list_label": "Hautphänomen",
+    "count": 2,
+    "correct_answers": [
+      "Tannenbaumphänomen",
+      "Entstehung durch das Zusammensinken der Wirbelsäule"
+    ],
+    "all_valid_answers": [
+      "Tannenbaumphänomen",
+      "Tannenbaumeffekt",
+      "Wirbelkörpereinbrüche führen zu Hautfalten",
+      "Zusammensinken der Wirbel"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt für den Namen, 1 Punkt für die Ursache."
+  },
+  {
+    "q_id": "m2_extra_009",
+    "type": "freitext_box",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie den Begriff 'orthostatische Dysregulation' als Folge von Immobilität.",
+    "points": 3,
+    "scoring_info": "Fokus auf die Unfähigkeit des Kreislaufs zur schnellen Anpassung.",
+    "data": {
+      "box_label": "Orthostatische Reaktionen",
+      "correct_answer": "Die orthostatische Dysregulation beschreibt die verminderte Fähigkeit des Herz-Kreislauf-Systems, den Blutdruck beim Wechsel von einer liegenden in eine aufrechte Körperhaltung stabil zu halten. Durch längerfristige Immobilität 'verlernt' der Körper diese Anpassungsreaktion, was bei Mobilisationsversuchen zu Schwindel, Schwarzwerden vor den Augen oder Synkopen führen kann.",
+      "keywords": [
+        "Kreislaufanpassung",
+        "aufrechte Haltung",
+        "Blutdruckabfall",
+        "Mobilisation"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_extra_010",
+    "type": "zuordnung",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie den Behörden ihre korrekten Zuständigkeitsbereiche im Medizinprodukterecht zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "BfArM (Bonn)",
+        "B": "Paul-Ehrlich-Institut (Langen)",
+        "C": "Physikalisch-Technische Bundesanstalt (Braunschweig)"
+      },
+      "statements": [
+        {
+          "text": "Zuständig für die Risikoerfassung und Bewertung von Medizinprodukten sowie zentrale Meldestelle für Vorkommnisse.",
+          "answer": "A"
+        },
+        {
+          "text": "Zuständig für die staatliche Chargenfreigabe bei Impfstoffen und biomedizinischen Medizinprodukten.",
+          "answer": "B"
+        },
+        {
+          "text": "Zuständig für das Messwesen und die physikalische Sicherheit.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_extra_011",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der Durchführung einer Herzdruckmassage im Pflegebett muss zwingend ein Reanimationsbrett als harte Unterlage verwendet werden, um eine effektive Kompression zu gewährleisten.",
+    "answer": "richtig",
+    "explanation": "Ohne harte Unterlage würde die Matratze den Druck abfedern, wodurch die notwendige Drucktiefe am Herzen nicht erreicht werden kann.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_extra_012",
+    "type": "nennen_liste",
+    "topic": "neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie die Anzahl der Spinalnervenpaare und deren Aufteilung auf die Rückenmarksabschnitte.",
+    "list_label": "31 Spinalnervenpaare",
+    "count": 5,
+    "correct_answers": [
+      "8 Halsnervenpaare",
+      "12 Brustnervenpaare",
+      "5 Lendennervenpaare",
+      "5 Kreuzbeinnervenpaare",
+      "1 Steißbeinnervenpaar"
+    ],
+    "all_valid_answers": [
+      "8 zervikal",
+      "12 thorakal",
+      "5 lumbal",
+      "5 sakral",
+      "1 coccygeal"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Paar/Abschnitt."
+  },
+  {
+    "q_id": "m2_extra_013",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der sogenannte 'Witwenbuckel' bei Osteoporose ist die klinische Bezeichnung für eine pathologische Lordose im Bereich der Brustwirbelsäule.",
+    "answer": "falsch",
+    "explanation": "Ein Witwenbuckel ist eine pathologische Kyphose (Rundrücken), keine Lordose (Hohlkreuz).",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_extra_014",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein typisches klinisches Zeichen für eine Aspiration oder ein Bolusgeschehen ist ein pfeifendes Geräusch bei der Einatmung.",
+    "answer": "richtig",
+    "explanation": "Pfeifende Atemgeräusche deuten auf eine Einengung oder Verlegung der Atemwege durch Fremdkörper hin.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_extra_015",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Verstöße gegen die Bestimmungen des Medizinprodukterechts können nach aktuellem Recht mit einer Geldstrafe von bis zu 25.000 € geahndet werden.",
+    "answer": "richtig",
+    "explanation": "Das Gesetz sieht bei Ordnungswidrigkeiten und Straftaten im Umgang mit Medizinprodukten empfindliche Strafen bis hin zu fünf Jahren Freiheitsentzug vor.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "fall_id": "m2_fall_01",
+    "title": "Notfall im Speisesaal: Plötzliche Bewusstlosigkeit",
+    "topics_covered": [
+      "erste_hilfe",
+      "neurologie"
+    ],
+    "patient": {
+      "name": "Elisabeth Bauer",
+      "alter": 82,
+      "geschlecht": "w",
+      "wohnsituation": "Bewohnerin in der stationären Langzeitpflege",
+      "beruf": "ehem. Lehrerin"
+    },
+    "setting": "Pflegeheim, Speisesaal während des Mittagessens",
+    "pflegekraft": "Sarah (Pflegefachkraft)",
+    "paragraphs": [
+      "Während des Mittagessens sackt Frau Bauer plötzlich in ihrem Stuhl zusammen und reagiert nicht mehr auf die lautstarke Ansprache durch das Personal. Sarah eilt herbei und beginnt sofort mit der strukturierten Beurteilung nach dem ABCDE-Schema. Die Atemwege (A) scheinen frei zu sein, jedoch wirkt die Atmung (B) flach und unregelmäßig.",
+      "Bei der neurologischen Einschätzung (D) stellt Sarah fest, dass die Bewohnerin weder auf Ansprache noch auf sanftes Rütteln reagiert. Ein gezielter Schmerzreiz durch Reiben über das Brustbein führt lediglich zu einer schwachen Abwehrreaktion, was auf einen Zustand des Sopors hindeutet. Sarah bemerkt zudem einen hängenden Mundwinkel auf der rechten Seite.",
+      "Da der Verdacht auf einen akuten Schlaganfall besteht, setzt ein Kollege sofort den Notruf 112 ab. Sarah kontrolliert kontinuierlich Puls und Atmung. Plötzlich hört die Eigenatmung auf und die Pulse an der Halsschlagader sind nicht mehr tastbar.",
+      "Sarah lässt Frau Bauer vorsichtig auf den Boden gleiten. Da sie sich im Pflegeheim befinden, greift sie zum bereitstehenden Notfallequipment. Sie beginnt sofort mit der Herz-Lungen-Wiederbelebung im Verhältnis 30:2 und fordert eine harte Unterlage (Reanimationsbrett) an, um die Effektivität der Thoraxkompressionen sicherzustellen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "V.a. Apoplex (Schlaganfall) mit konsekutivem Kreislaufstillstand"
+        },
+        {
+          "label": "Status",
+          "value": "Soporös bei Eintreffen, GCS 6, Blutdruck initial 190/110 mmHg"
+        },
+        {
+          "label": "Maßnahmen",
+          "value": "Erfolgreiche Reanimation (ROSC), Intubation, Verlegung Stroke Unit"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Bauer",
+      "ERKRANKUNG": "Schlaganfall",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m2_fall_02",
+    "title": "Sturzereignis bei manifester Osteoporose",
+    "topics_covered": [
+      "anatomie_bewegung",
+      "mobilitaet_degeneration"
+    ],
+    "patient": {
+      "name": "Karl-Heinz Schmidt",
+      "alter": 78,
+      "geschlecht": "m",
+      "wohnsituation": "lebt allein in einer Seniorenwohnung",
+      "beruf": "ehem. Schlosser"
+    },
+    "setting": "Privatwohnung, Badezimmer",
+    "pflegekraft": "Markus (Ambulante Pflege)",
+    "paragraphs": [
+      "Beim morgendlichen Besuch findet Markus Herrn Schmidt am Boden liegend im Badezimmer vor. Der Patient klagt über massive Schmerzen in der linken Hüfte und kann das Bein nicht mehr aktiv bewegen. Markus führt einen Bodycheck durch und bemerkt eine Fehlstellung (Außenrotation) des betroffenen Beins sowie eine deutliche Verkürzung im Vergleich zur rechten Seite.",
+      "In der Anamnese ist eine fortgeschrittene Osteoporose bekannt. Markus erinnert sich an die Pathophysiologie: Die Belastbarkeit der Spongiosa (Knochenbälkchen) ist bei Herrn Schmidt massiv reduziert, was das Risiko für Spontanfrakturen oder Brüche bei Bagatellstürzen extrem erhöht. Am Rücken des Patienten ist zudem ein deutlicher 'Witwenbuckel' (Kyphose der BWS) erkennbar.",
+      "Markus beruhigt den Patienten und deckt ihn zur Wärmeerhaltung zu. Er vermeidet jegliche unnötige Bewegung des betroffenen Gelenks, um weitere Schäden am Periost und umliegenden Gewebe zu minimieren. Er wartet auf den Rettungsdienst, während er den Kreislauf überwacht, da er eine orthostatische Dysregulation durch das lange Liegen befürchtet.",
+      "Nach dem Vorfall reflektiert Markus die Folgen der nun drohenden Immobilität. Er weiß, dass Herr Schmidt nun ein hohes Risiko für Sekundärerkrankungen wie Thrombosen oder Kontrakturen hat, da die muskuläre Unterstützung des Blutflusses (Wadenmuskelpumpe) durch die Bettlägerigkeit ausbleibt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Schenkelhalsfraktur links bei manifester Osteoporose"
+        },
+        {
+          "label": "Befund",
+          "value": "Kyphose der BWS, Tannenbaumphänomen erkennbar"
+        },
+        {
+          "label": "Therapie",
+          "value": "Operative Versorgung mittels Duokopfprothese"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Schmidt",
+      "ERKRANKUNG": "Osteoporose",
+      "PFLEGEKRAFT": "Markus"
+    }
+  },
+  {
+    "fall_id": "m2_fall_03",
+    "title": "Pflege bei Morbus Parkinson",
+    "topics_covered": [
+      "neurologie",
+      "anatomie_bewegung"
+    ],
+    "patient": {
+      "name": "Walter Weber",
+      "alter": 72,
+      "geschlecht": "m",
+      "wohnsituation": "stationäre Pflege",
+      "beruf": "ehem. Buchhalter"
+    },
+    "setting": "Bewohnerzimmer, morgendliche Mobilisation",
+    "pflegekraft": "Jan (Pflegefachmann)",
+    "paragraphs": [
+      "Jan unterstützt Herrn Weber bei der morgendlichen Mobilisation aus dem Bett. Dabei fallen die typischen Kardinalsymptome des Parkinson-Syndroms auf: Herr Weber zeigt eine ausgeprägte Bewegungsarmut (Hypokinese), seine Gesichtsmimik wirkt starr und maskenhaft. Beim Versuch aufzustehen, spürt Jan den deutlichen Widerstand in der Muskulatur des Patienten (Rigor).",
+      "Zusätzlich zittert die rechte Hand von Herrn Weber im Ruhezustand (Tremor). Jan achtet auf das Gangbild: Der Patient geht mit kleinen, schlurfenden Schritten, der Oberkörper ist weit nach vorne gebeugt und die Kniegelenke (Scharniergelenke) sind leicht gebeugt. Jan weiß, dass dieses Gangbild das Sturzrisiko massiv erhöht.",
+      "Während der Körperpflege erklärt Jan dem Patienten die Bedeutung der nervalen Steuerung. Er erläutert, dass bei Parkinson die Informationsverarbeitung im Gehirn gestört ist, was die unwillkürlichen Bewegungsabläufe beeinträchtigt. Er achtet darauf, Herrn Weber Zeit zu geben, da jede Bewegung einen hohen bewussten Kraftaufwand erfordert.",
+      "Um die Gelenkbeweglichkeit zu erhalten, führt Jan passive Bewegungsübungen in den verschiedenen anatomischen Ebenen durch. Er achtet besonders auf die Frontalebene (Abduktion/Adduktion) der Hüfte, um einer Kontraktur vorzubeugen, da Herr Weber aufgrund seiner Erkrankung zur Immobilität neigt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Morbus Parkinson (idiopathisches Parkinson-Syndrom)"
+        },
+        {
+          "label": "Symptomatik",
+          "value": "Ausgeprägter Ruhetremor, Rigor der Extremitäten, Akinese"
+        },
+        {
+          "label": "Medikation",
+          "value": "L-Dopa Substitution"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Weber",
+      "ERKRANKUNG": "Morbus Parkinson",
+      "PFLEGEKRAFT": "Jan"
+    }
+  },
+  {
+    "fall_id": "m2_fall_04",
+    "title": "Gerätedefekt und rechtliche Konsequenzen",
+    "topics_covered": [
+      "medizintechnik_recht"
+    ],
+    "patient": {
+      "name": "Maria Russo",
+      "alter": 65,
+      "geschlecht": "w",
+      "wohnsituation": "Klinik, postoperative Station",
+      "beruf": "Rentnerin"
+    },
+    "setting": "Krankenhausstation, Nachtschicht",
+    "pflegekraft": "Elena (Pflegefachkraft)",
+    "paragraphs": [
+      "Elena stellt während ihres Rundgangs fest, dass eine Infusionspumpe (Medizinprodukt der Risikoklasse IIb) bei Frau Russo einen Fehlalarm ausgibt. Beim Versuch, das Gerät zu prüfen, bemerkt sie ein verschmortes Kabel am Netzanschluss. Sie erinnert sich sofort an das Verbot, defekte Kabel zu verwenden, da dies eine erhebliche Gefahr für Patient und Personal darstellt.",
+      "Elenas Kollegin schlägt vor, das Gerät einfach neu zu starten. Elena lehnt dies strikt ab. Sie weiß, dass sie als Anwenderin die Pflicht hat, das Gerät vor Gebrauch auf Funktionsfähigkeit zu prüfen. Da sie für diesen spezifischen Pumpentyp zudem keine offizielle Einweisung durch den Betreiber erhalten hat, würde sie bei einer Fehlbedienung unter 'Übernahmeverschulden' haften.",
+      "Elena nimmt das Gerät sofort aus dem Betrieb und kennzeichnet es als defekt. Sie informiert die Stationsleitung über das Vorkommnis. Gemäß dem Medizinprodukte-Durchführungsgesetz (MPDG) und der MPBetreibV muss dieser sicherheitstechnische Mangel dokumentiert und an die zuständige Behörde, das BfArM, gemeldet werden, da eine Gefährdung vorlag.",
+      "Der Betreiber des Krankenhauses wird in die Pflicht genommen, die Fristen für die sicherheitstechnische Kontrolle (STK) zu prüfen, die spätestens alle zwei Jahre erfolgen muss. Elena trägt den Vorfall gewissenhaft in das Medizinproduktebuch der Station ein, um der Dokumentationspflicht nachzukommen."
+    ],
+    "arztbrief": {
+      "show": false,
+      "fields": []
+    },
+    "variables": {
+      "PATIENT": "Frau Russo",
+      "ERKRANKUNG": "Vorkommnis mit Medizinprodukt",
+      "PFLEGEKRAFT": "Elena"
+    }
+  },
+  {
+    "fall_id": "m2_fall_05",
+    "title": "Anleitung zur rückenschonenden Mobilisation",
+    "topics_covered": [
+      "pflege_anleitung",
+      "anatomie_bewegung"
+    ],
+    "patient": {
+      "name": "Herbert Jung",
+      "alter": 69,
+      "geschlecht": "m",
+      "wohnsituation": "Kurklinik",
+      "beruf": "ehem. Busfahrer"
+    },
+    "setting": "Patientenzimmer, Übergang Bett zu Rollstuhl",
+    "pflegekraft": "Julia (Praxisanleiterin) & Lukas (Azubi)",
+    "paragraphs": [
+      "Julia führt mit dem Auszubildenden Lukas eine pädagogische Anleitung durch. Das Ziel ist die Vermittlung der Fertigkeit, Herrn Jung rückenschonend vom Bett in den Rollstuhl zu mobilisieren. Julia nutzt hierfür das strukturierte 5-Schritte-Modell. Im ersten Schritt aktiviert sie Lukas' Vorwissen über die Anatomie der Wirbelsäule und die physiologischen Krümmungen (Lordose/Kyphose).",
+      "In der Erarbeitungsphase (Schritt 2) besprechen sie gemeinsam die anatomischen Ebenen. Julia erklärt, dass Bewegungen in der Sagittalebene besonders den Rücken belasten können, wenn man die Last nicht nah am Körper führt. Lukas soll die theoretischen Hebelgesetze auf die Praxis übertragen.",
+      "Schritt 3 ist die Durchführung: Lukas leitet Herrn Jung unter Julias Aufsicht an. Dabei achtet Lukas darauf, dass die Wirbelsäule stabil bleibt und er primär aus den Knien arbeitet. In der anschließenden Vertiefung (Schritt 4) wiederholt Lukas die Griffe eigenständig bei einem zweiten Transfer, um Sicherheit zu gewinnen.",
+      "Im letzten Schritt folgt die Reflexion. Julia, Lukas und auch Herr Jung bewerten die Situation. Lukas reflektiert seine pädagogische Vermittlung gegenüber dem Patienten, während Julia die methodische Umsetzung der Anleitung beurteilt. Gemeinsam kommen sie zu dem Fazit, dass die korrekte Nutzung der anatomischen Achsen die körperliche Belastung für die Pflegekraft deutlich reduziert."
+    ],
+    "arztbrief": {
+      "show": false,
+      "fields": []
+    },
+    "variables": {
+      "PATIENT": "Herr Jung",
+      "ERKRANKUNG": "Bewegungseinschränkung",
+      "PFLEGEKRAFT": "Julia"
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_01"],
+    "statement": "Bei der initialen Beurteilung von [PATIENT] beginnt [PFLEGEKRAFT] korrekterweise mit dem Punkt 'A' (Airway) des ABCDE-Schemas.",
+    "answer": "richtig",
+    "explanation": "Laut ABCDE-Schema ist die Sicherung der Atemwege die erste Priorität bei der Beurteilung eines Notfallpatienten.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_01"],
+    "instruction": " **Nennen**  Sie die drei klinischen Stadien der Bewusstseinsstörung und ordnen Sie den Zustand von [PATIENT] (reagiert nur auf Schmerzreiz) fachlich korrekt ein.",
+    "list_label": "Bewusstseinsstadien",
+    "count": 4,
+    "correct_answers": [
+      "Somnolenz",
+      "Sopor",
+      "Koma",
+      "Zustand [PATIENT]: Sopor"
+    ],
+    "all_valid_answers": [
+      "Somnolenz",
+      "Sopor",
+      "Stupor",
+      "Koma",
+      "Sopor ([PATIENT])"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Stadium und 1 Punkt für die korrekte Einordnung von [PATIENT]."
+  },
+  {
+    "q_id": "m2_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "erste_hilfe",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_01"],
+    "instruction": " **Erläutern**  Sie, warum [PFLEGEKRAFT] für die Herzdruckmassage bei [PATIENT] zwingend ein Reanimationsbrett anfordert.",
+    "points": 3,
+    "scoring_info": "Punkte für die Begründung der Effektivität und Vermeidung von Dämpfung durch die Matratze.",
+    "data": {
+      "box_label": "Reanimationsbrett",
+      "correct_answer": "In einem Pflegebett würde die weiche Matratze den Kompressionsdruck abfedern, wodurch die notwendige Drucktiefe von 5-6 cm nicht erreicht werden kann. Das Reanimationsbrett bietet die erforderliche harte Unterlage, um das Herz effektiv zwischen Sternum und Wirbelsäule zu komprimieren und so einen künstlichen Minimalkreislauf aufrechtzuerhalten.",
+      "keywords": [
+        "harte Unterlage",
+        "Dämpfung",
+        "Drucktiefe",
+        "Effektivität",
+        "Matratze"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "erste_hilfe",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_01"],
+    "statement": "Gemäß den Guidelines 2021 sollte [PFLEGEKRAFT] die Thoraxkompressionen bei [PATIENT] mit einer Frequenz von 100 bis 120 pro Minute durchführen.",
+    "answer": "richtig",
+    "explanation": "Diese Frequenz ist in den aktuellen Leitlinien für eine effektive Reanimation vorgeschrieben.",
+    "source_hint": "M 2.1_Erste Hilfe_Herr Claßen.pdf"
+  },
+  {
+    "q_id": "m2_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "neurologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_01"],
+    "instruction_select": " **Entscheiden**  Sie, welche Symptome bei [PATIENT] laut Fallbericht auf einen akuten Schlaganfall hindeuten.",
+    "instruction_justify": " **Begründen**  Sie, warum bei diesem Verdacht eine schnelle Alarmierung lebenswichtig ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Hängender Mundwinkel",
+          "correct": true
+        },
+        {
+          "label": "Plötzlicher Atemstillstand",
+          "correct": false
+        },
+        {
+          "label": "Fehlende Reaktion auf verbale Ansprache",
+          "correct": true
+        },
+        {
+          "label": "Tachykardie",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Hängender Mundwinkel",
+          "text": "Ein hängender Mundwinkel ist ein klassisches neurologisches Defizit bei einem Schlaganfall. Da 'Zeit Hirn ist', muss sofort der Rettungsdienst (Stroke Unit) alarmiert werden, um irreversible Schäden am Gehirngewebe zu minimieren."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_02"],
+    "statement": "Bei der Osteoporose von [PATIENT] ist primär die Belastbarkeit der knöchernen Außenhülle (Kompakta) betroffen, während die Spongiosa unverändert bleibt.",
+    "answer": "falsch",
+    "explanation": "Osteoporose betrifft primär den schwammartig aufgebauten Knochen (Spongiosa), dessen Bälkchenstruktur ausgedünnt wird.",
+    "source_hint": "M 2.5_Handout_Altern und Osteoporose.pdf"
+  },
+  {
+    "q_id": "m2_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "mobilitaet_degeneration",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_02"],
+    "instruction": " **Begründen**  Sie fachlich, warum [PATIENT] nach dem Sturz ein massiv erhöhtes Thromboserisiko aufweist.",
+    "points": 3,
+    "scoring_info": "Erklärung über den verlangsamten Blutfluss und die fehlende Muskelpumpe.",
+    "data": {
+      "box_label": "Thromboserisiko",
+      "correct_answer": "Durch die sturzbedingte Immobilität entfällt die Betätigung der Wadenmuskelpumpe, die normalerweise den venösen Rückstrom zum Herzen unterstützt. Dies führt zu einem Blutstau (Stase) in den Venen, was eine zentrale Komponente der Virchow-Trias zur Entstehung von Blutgerinnseln darstellt.",
+      "keywords": [
+        "Stase",
+        "Wadenmuskelpumpe",
+        "venöser Rückstrom",
+        "Virchow-Trias",
+        "Immobilität"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_02"],
+    "instruction": " **Nennen**  Sie drei klinische Zeichen einer Fraktur, die [PFLEGEKRAFT] bei [PATIENT] beobachten konnte.",
+    "list_label": "Frakturzeichen bei [PATIENT]",
+    "count": 3,
+    "correct_answers": [
+      "Fehlstellung (Außenrotation)",
+      "Beinverkürzung",
+      "Funktionsverlust / Schmerzen"
+    ],
+    "all_valid_answers": [
+      "Fehlstellung",
+      "Außenrotation",
+      "Verkürzung",
+      "Schmerzen",
+      "Bewegungsunfähigkeit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genanntem Zeichen aus dem Fallbericht."
+  },
+  {
+    "q_id": "m2_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_03"],
+    "instruction": " **Ordnen**  Sie die bei [PATIENT] beobachteten Symptome den korrekten medizinischen Fachbegriffen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Rigor",
+        "B": "Tremor",
+        "C": "Hypokinese / Akinese"
+      },
+      "statements": [
+        {
+          "text": "Spürbarer Widerstand bei der passiven Bewegung der Extremitäten.",
+          "answer": "A"
+        },
+        {
+          "text": "Unwillkürliches Zittern der rechten Hand im Ruhezustand.",
+          "answer": "B"
+        },
+        {
+          "text": "Ausgeprägte Bewegungsarmut und maskenhafte Mimik.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_03"],
+    "instruction": " **Erläutern**  Sie das Gangbild von [PATIENT] und begründen Sie das daraus resultierende Sturzrisiko.",
+    "points": 4,
+    "scoring_info": "Punkte für die Beschreibung (kleinschrittig, vornübergeneigt) und die biomechanische Begründung (Schwerpunktverlagerung).",
+    "data": {
+      "box_label": "Parkinson-Gangbild",
+      "correct_answer": "[PATIENT] zeigt ein typisches Parkinson-Gangbild: Er geht mit kleinen, schlurfenden Schritten und hält den Oberkörper sowie die Kniegelenke gebeugt. Durch die vornübergeneigte Haltung verlagert sich der Körperschwerpunkt nach vorne, was zusammen mit der Start-Stopp-Problematik und dem fehlenden Mitschwingen der Arme das Gleichgewicht massiv beeinträchtigt und das Sturzrisiko erhöht.",
+      "keywords": [
+        "kleinschrittig",
+        "schlurfend",
+        "vornübergeneigt",
+        "Schwerpunkt",
+        "Gleichgewicht"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "statement": "Da [PFLEGEKRAFT] für den spezifischen Pumpentyp bei [PATIENT] keine Einweisung erhalten hat, würde sie bei Weiterbetrieb des Geräts unter 'Übernahmeverschulden' haften.",
+    "answer": "richtig",
+    "explanation": "Anwender dürfen Medizinprodukte nur bedienen, wenn sie darin eingewiesen wurden; andernfalls haften sie persönlich für Fehler.",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "instruction": " **Nennen**  Sie drei Dokumentations- oder Meldepflichten, die [PFLEGEKRAFT] nach dem Vorfall mit [PATIENT] erfüllen muss.",
+    "list_label": "Pflichten nach Vorkommnis",
+    "count": 3,
+    "correct_answers": [
+      "Eintrag in das Medizinproduktebuch",
+      "Meldung an den Betreiber / MPG-Beauftragten",
+      "Meldung an das BfArM"
+    ],
+    "all_valid_answers": [
+      "Medizinproduktebuch",
+      "BfArM-Meldung",
+      "Meldung Stationsleitung",
+      "Kennzeichnung als defekt",
+      "Meldung MPG-Beauftragter"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benannter Pflicht."
+  },
+  {
+    "q_id": "m2_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Erläutern**  Sie, wie [PFLEGEKRAFT] im ersten Schritt der Anleitung das Vorwissen des Auszubildenden prüft.",
+    "points": 3,
+    "scoring_info": "Bezugnahme auf die Anatomie der Wirbelsäule und die physiologischen Krümmungen.",
+    "data": {
+      "box_label": "Schritt 1: Vorwissen aktivieren",
+      "correct_answer": "[PFLEGEKRAFT] aktiviert das Vorwissen von Lukas, indem sie gezielt Fragen zur Anatomie der Wirbelsäule stellt. Dabei geht es um die Identifikation der Abschnitte (HWS, BWS, LWS) und das Verständnis der physiologischen Krümmungen wie Lordose und Kyphose. Ziel ist es, den aktuellen Wissensstand zu ermitteln, um die praktischen Handlungsabläufe für [PATIENT] darauf aufzubauen.",
+      "keywords": [
+        "HWS/BWS/LWS",
+        "Lordose",
+        "Kyphose",
+        "Wissensstand prüfen",
+        "Anatomie"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m2_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Ordnen**  Sie die Aktionen von Lukas und Julia den korrekten Phasen des 5-Schritte-Modells zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Schritt 2: Erarbeitung",
+        "B": "Schritt 3: Durchführung",
+        "C": "Schritt 4: Vertiefung",
+        "D": "Schritt 5: Reflexion"
+      },
+      "statements": [
+        {
+          "text": "Lukas führt den Transfer von [PATIENT] unter Aufsicht zum ersten Mal durch.",
+          "answer": "B"
+        },
+        {
+          "text": "Gemeinsame Analyse der Situation durch Lukas, Julia und [PATIENT].",
+          "answer": "D"
+        },
+        {
+          "text": "Besprechung der Hebelgesetze und der Belastung in der Sagittalebene.",
+          "answer": "A"
+        },
+        {
+          "text": "Lukas wiederholt den Transfer eigenständig, um Sicherheit zu gewinnen.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "statement": "Laut [PFLEGEKRAFT] belasten Bewegungen in der Sagittalebene den Rücken von Lukas besonders stark, wenn die Last (hier [PATIENT]) nicht nah am Körper geführt wird.",
+    "answer": "richtig",
+    "explanation": "Die Sagittalebene teilt den Körper in links und rechts; Vor- und Rückbeugen finden in dieser Ebene statt und erzeugen hohe Hebelkräfte auf die Wirbelsäule.",
+    "source_hint": "M 2.2_Handout_11.11.24.pdf"
+  },
+  {
+    "q_id": "m2_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "statement": "Die von [PFLEGEKRAFT] außer Betrieb genommene Infusionspumpe gehört laut Risikoklassifizierung der MDR zur Klasse IIb.",
+    "answer": "richtig",
+    "explanation": "Infusionspumpen zur Verabreichung von Medikamenten werden aufgrund ihres Gefährdungspotenzials der Risikoklasse IIb zugeordnet [M 2.3].",
+    "source_hint": "M 2.3_Medizinproduktegesetz.pdf"
+  },
+  {
+    "q_id": "m2_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "instruction": " **Nennen**  Sie drei Pflichtangaben, die [PFLEGEKRAFT] im Bestandsverzeichnis der Station für das defekte Gerät vorfinden muss.",
+    "list_label": "Inhalt Bestandsverzeichnis",
+    "count": 3,
+    "correct_answers": [
+      "Art und Typ des Gerätes",
+      "Seriennummer oder Fabrikatsnummer",
+      "Anschaffungsjahr"
+    ],
+    "all_valid_answers": [
+      "Gerätetyp",
+      "Modell",
+      "Seriennummer",
+      "Fabrikatsnummer",
+      "Code",
+      "Anschaffungsjahr",
+      "Standort",
+      "Fristen der STK"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Angabe [M 2.3]."
+  },
+  {
+    "q_id": "m2_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "medizintechnik_recht",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "instruction": " **Begründen**  Sie, warum [PFLEGEKRAFT] den Vorschlag der Kollegin, das Gerät bei [PATIENT] einfach neu zu starten, strikt ablehnt.",
+    "points": 4,
+    "scoring_info": "Punkte für die Erwähnung der Anwenderpflichten, der Patientensicherheit und der Haftung.",
+    "data": {
+      "box_label": "Ablehnung des Neustarts",
+      "correct_answer": "[PFLEGEKRAFT] handelt nach der MPBetreibV, welche vorschreibt, dass Medizinprodukte vor dem Gebrauch auf Funktionsfähigkeit und ordnungsgemäßen Zustand zu prüfen sind [M 2.3]. Ein verschmortes Kabel stellt eine offensichtliche Gefahr für Leib und Leben dar, weshalb der Betrieb untersagt ist [M 2.3]. Ein Neustart würde den technischen Mangel nicht beheben und könnte zu einem elektrischen Schlag oder Brand führen, wofür [PFLEGEKRAFT] persönlich haften würde (Übernahmeverschulden).",
+      "keywords": [
+        "Funktionsprüfung",
+        "Gefahr",
+        "Haftung",
+        "Übernahmeverschulden",
+        "MPBetreibV"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_fall_zu_003",
+    "type": "zuordnung",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "instruction": " **Ordnen**  Sie die im Fall genannten rechtlichen Begriffe den passenden Erläuterungen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Übernahmeverschulden",
+        "B": "Organisationsverschulden",
+        "C": "Zweckbestimmung"
+      },
+      "statements": [
+        {
+          "text": "Der Betreiber (Krankenhaus) setzt ungeschultes Personal an Geräten ein.",
+          "answer": "B"
+        },
+        {
+          "text": "Die Pumpe darf nur so eingesetzt werden, wie vom Hersteller festgelegt (z. B. nicht für Sondenkost).",
+          "answer": "C"
+        },
+        {
+          "text": "[PFLEGEKRAFT] bedient ein Gerät, für das sie keine Einweisung erhalten hat.",
+          "answer": "A"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "medizintechnik_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_04"],
+    "instruction_select": " **Entscheiden**  Sie, welche Behörde für die Meldung des Vorkommnisses bei [PATIENT] zuständig ist.",
+    "instruction_justify": " **Begründen**  Sie, warum diese Meldung für die Sicherheit von Medizinprodukten wichtig ist.",
+    "points": 4,
+    "data": {
+      "options": [
+        {
+          "label": "BfArM (Bonn)",
+          "correct": true
+        },
+        {
+          "label": "Paul-Ehrlich-Institut",
+          "correct": false
+        },
+        {
+          "label": "Gewerbeaufsichtsamt",
+          "correct": false
+        },
+        {
+          "label": "VDE",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "BfArM (Bonn)",
+          "text": "Das BfArM ist die zentrale Bundesoberbehörde für die Risikoerfassung und Bewertung von Medizinprodukten [M 2.3]. Meldungen über Vorkommnisse dienen dazu, Serienfehler oder Konstruktionsmängel frühzeitig zu erkennen, um Rückrufe oder Sicherheitswarnungen zum Schutz aller Patienten einzuleiten."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "statement": "In der Reflexionsphase (Schritt 5) der Anleitung von Lukas ist ausschließlich die Einschätzung der Praxisanleiterin Julia maßgeblich für die Bewertung des Lernerfolgs.",
+    "answer": "falsch",
+    "explanation": "Eine professionelle Evaluation muss multiperspektivisch erfolgen und schließt den Angeleiteten (Lukas), den Anleitenden (Julia) und das Plenum bzw. den Patienten mit ein [M 2.6].",
+    "source_hint": "M 2.6_Handout.pdf"
+  },
+  {
+    "q_id": "m2_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Nennen**  Sie die drei physiologischen Wirbelsäulenabschnitte, die [PFLEGEKRAFT] im ersten Schritt der Anleitung bei Lukas abfragt.",
+    "list_label": "Wirbelsäulenabschnitte",
+    "count": 3,
+    "correct_answers": [
+      "Halswirbelsäule (HWS)",
+      "Brustwirbelsäule (BWS)",
+      "Lendenwirbelsäule (LWS)"
+    ],
+    "all_valid_answers": [
+      "HWS",
+      "BWS",
+      "LWS",
+      "Halswirbel",
+      "Brustwirbel",
+      "Lendenwirbel"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benanntem Abschnitt [M 2.2]."
+  },
+  {
+    "q_id": "m2_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Beschreiben**  Sie die Inhalte von Schritt 2 (Erarbeitung) in der Anleitungssituation zwischen [PFLEGEKRAFT] und Lukas.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die korrekte Verknüpfung von Theorie (Hebelgesetze) und Praxis (Transfer).",
+    "data": {
+      "box_label": "Schritt 2: Erarbeitung",
+      "correct_answer": "In der Erarbeitungsphase besprechen [PFLEGEKRAFT] und Lukas den theoretischen Handlungsablauf für die Mobilisation von [PATIENT]. Dabei werden anatomische Grundlagen wie die Belastung der Wirbelsäule in der Sagittalebene und physikalische Prinzipien wie die Hebelgesetze thematisiert [M 2.6]. Ziel ist es, Lukas zu befähigen, die Last (den Patienten) nah am eigenen Körperschwerpunkt zu führen, um die Bandscheiben zu schonen.",
+      "keywords": [
+        "Handlungsablauf",
+        "Theorie-Praxis-Transfer",
+        "Hebelgesetze",
+        "Körperschwerpunkt",
+        "Planung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m2_fall_zu_004",
+    "type": "zuordnung",
+    "topic": "anatomie_bewegung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Ordnen**  Sie die anatomischen Fachbegriffe zur Wirbelsäule den entsprechenden physiologischen Krümmungen zu, die Lukas für die Mobilisation von [PATIENT] kennen muss.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "Lordose (Krümmung nach vorne)",
+        "B": "Kyphose (Krümmung nach hinten)"
+      },
+      "statements": [
+        {
+          "text": "Krümmung der Hals- und Lendenwirbelsäule.",
+          "answer": "A"
+        },
+        {
+          "text": "Krümmung der Brustwirbelsäule und des Kreuzbeins.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m2_fall_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "pflege_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m2_fall_05"],
+    "instruction": " **Ergänzen**  Sie die fehlenden Phasen im 5-Schritte-Modell der pädagogischen Anleitung, die Julia bei Lukas anwendet.",
+    "points": 3,
+    "data": {
+      "list_label": "Die 5 Schritte",
+      "given_items": [
+        "1. Vorwissen aktivieren",
+        "3. Durchführung"
+      ],
+      "missing_items": [
+        "2. Erarbeitung",
+        "4. Vertiefung",
+        "5. Reflexion"
+      ],
+      "all_valid_missing": [
+        "Erarbeitung",
+        "Vertiefung",
+        "Übungsphase",
+        "Reflexion",
+        "Evaluation",
+        "Auswertung"
+      ]
+    }
+  }
+]
