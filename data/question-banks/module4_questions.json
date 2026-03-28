@@ -1,0 +1,4165 @@
+[
+  {
+    "q_id": "m4_rf_001",
+    "type": "richtig_falsch",
+    "topic": "gyn_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der physiologische pH-Wert der Vagina liegt bei einer gesunden Frau im gebärfähigen Alter aufgrund der Milchsäurebakterien zwischen 5,5 und 6,0.",
+    "answer": "falsch",
+    "explanation": "Der physiologische pH-Wert der Vagina ist deutlich saurer und liegt zwischen 4,0 und 4,4, um Schutz vor Infektionen zu bieten.",
+    "source_hint": "Handout Physiologie der weiblichen Geschlechtsorgane"
+  },
+  {
+    "q_id": "m4_rf_002",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach der Naegele-Regel berechnet sich der voraussichtliche Entbindungstermin durch: Erster Tag der letzten Regel + 7 Tage - 3 Monate + 1 Jahr.",
+    "answer": "richtig",
+    "explanation": "Dies ist die korrekte Formel zur Berechnung des Entbindungstermins basierend auf einer durchschnittlichen Schwangerschaftsdauer von 280 Tagen.",
+    "source_hint": "Handout Physiologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_003",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das HELLP-Syndrom ist eine schwerwiegende Schwangerschaftskomplikation, die klinisch durch Hämolyse, erhöhte Leberwerte und eine niedrige Thrombozytenzahl gekennzeichnet ist.",
+    "answer": "richtig",
+    "explanation": "HELLP steht für Hemolysis, Elevated Liver enzymes, Low Platelet count und ist eine lebensbedrohliche Variante der Präeklampsie.",
+    "source_hint": "Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_004",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die organsensible Phase, in der Teratogene (Noxen) die schwersten Fehlbildungen verursachen können, liegt in der Embryonalperiode zwischen der 3. und 8. Woche p.c.",
+    "answer": "richtig",
+    "explanation": "Während der Organogenese (3.-8. Woche nach Befruchtung) werden die Organanlagen gebildet, weshalb schädigende Einflüsse hier besonders gravierende Folgen haben.",
+    "source_hint": "M 4.3 Handout, S. 7"
+  },
+  {
+    "q_id": "m4_rf_005",
+    "type": "richtig_falsch",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die physiologische Nachgeburtsperiode ist mit dem vollständigen Austritt des Kindes aus dem Geburtskanal abgeschlossen.",
+    "answer": "falsch",
+    "explanation": "Die Nachgeburtsperiode beginnt erst nach der Geburt des Kindes und endet mit der vollständigen Ausstoßung der Plazenta und der Eihäute.",
+    "source_hint": "M 4.2 Handout Die Geburt"
+  },
+  {
+    "q_id": "m4_rf_006",
+    "type": "richtig_falsch",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der funktionelle Verschluss des Foramen ovale gehört zu den wesentlichen Schritten der neonatalen Kreislaufumstellung unmittelbar nach dem ersten Atemzug.",
+    "answer": "richtig",
+    "explanation": "Durch die Druckveränderungen im Herz-Kreislauf-System nach der Lungenbelüftung schließt sich die Kurzschlussverbindung zwischen den Vorhöfen.",
+    "source_hint": "M 4.3 Unterricht, S. 32"
+  },
+  {
+    "q_id": "m4_rf_007",
+    "type": "richtig_falsch",
+    "topic": "ng_neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Ein kräftiger Saug- und Schluckreflex unmittelbar nach der Geburt gilt als pathologisches Zeichen für eine neurologische Überreizung des Neugeborenen.",
+    "answer": "falsch",
+    "explanation": "Der Saug- und Schluckreflex ist ein lebensnotwendiger, physiologischer Neugeborenenreflex, der die Nahrungsaufnahme sicherstellt.",
+    "source_hint": "M 4.3 Handout, S. 16/31"
+  },
+  {
+    "q_id": "m4_rf_008",
+    "type": "richtig_falsch",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Neugeborenes mit einem Apgar-Score von 6 Punkten nach fünf Minuten weist eine mittelschwere Anpassungsstörung (Depression) auf.",
+    "answer": "richtig",
+    "explanation": "Ein Score von 8-10 gilt als lebensfrisch, 5-7 als mittelschwere und unter 5 als schwere Depression/Anpassungsstörung.",
+    "source_hint": "M 4.3 Handout, S. 46 / Fallbeispiel Raffael"
+  },
+  {
+    "q_id": "m4_rf_009",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Besteht der Verdacht auf eine Analatresie beim Neugeborenen, ist eine rektale Temperaturmessung streng kontraindiziert.",
+    "answer": "richtig",
+    "explanation": "Bei einem Verschluss des Afters (Analatresie) würde eine rektale Messung zu Verletzungen führen; die Durchgängigkeit muss erst ärztlich geprüft werden.",
+    "source_hint": "M 4.3 Unterricht, S. 37"
+  },
+  {
+    "q_id": "m4_rf_010",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Uterusinvolution (Rückbildung der Gebärmutter) ist bei einem regelrechten Verlauf bereits 10 Tage nach der Entbindung vollständig abgeschlossen.",
+    "answer": "falsch",
+    "explanation": "Die vollständige Rückbildung und Heilung im Wochenbett dauert insgesamt etwa 6 bis 8 Wochen.",
+    "source_hint": "Handout Pflege im Wochenbett, S. 11"
+  },
+  {
+    "q_id": "m4_rf_011",
+    "type": "richtig_falsch",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Im Rahmen der Unterstützung von Eltern spielt das Modell der Salutogenese nach Antonovsky eine wichtige Rolle, um Ressourcen zur Bewältigung der neuen Lebensphase zu stärken.",
+    "answer": "richtig",
+    "explanation": "Die Salutogenese fokussiert auf Faktoren, die Gesundheit erhalten und fördern, was zentral für die Transition zur Elternschaft ist.",
+    "source_hint": "M 4.4 Handout, S. 27"
+  },
+  {
+    "q_id": "m4_rf_012",
+    "type": "richtig_falsch",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Zur Prävention des Plötzlichen Kindstods (SIDS) sollten Eltern angeleitet werden, den Säugling bevorzugt in Bauchlage schlafen zu lassen.",
+    "answer": "falsch",
+    "explanation": "Zur SIDS-Prävention ist die Rückenlage die empfohlene Schlafposition; die Bauchlage gilt als Risikofaktor.",
+    "source_hint": "M 4.3 Handout Beratung und Anleitung"
+  },
+  {
+    "q_id": "m4_rf_013",
+    "type": "richtig_falsch",
+    "topic": "gyn_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Sekundäre Geschlechtsmerkmale wie die weibliche Brustentwicklung oder die Schambehaarung sind bereits unmittelbar bei der Geburt vollständig ausgeprägt.",
+    "answer": "falsch",
+    "explanation": "Primäre Geschlechtsmerkmale sind bei der Geburt vorhanden; sekundäre Merkmale entwickeln sich erst während der Pubertät unter hormonellem Einfluss.",
+    "source_hint": "Handout Physiologie der weiblichen Geschlechtsorgane"
+  },
+  {
+    "q_id": "m4_rf_014",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Plazenta wiegt am Ende einer reifen Schwangerschaft durchschnittlich etwa 500 Gramm und hat einen Durchmesser von ca. 18 cm.",
+    "answer": "richtig",
+    "explanation": "Dies sind die physiologischen Durchschnittswerte für eine reife Plazenta.",
+    "source_hint": "Handout Physiologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_015",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Eine schwangerschaftsinduzierte Hypertonie (SIH) ist definiert als ein Blutdruckwert von über 140/90 mmHg, der erstmals nach der 20. SSW auftritt.",
+    "answer": "richtig",
+    "explanation": "Die SIH tritt typischerweise in der zweiten Schwangerschaftshälfte auf und unterscheidet sich von einer vorbestehenden Hypertonie.",
+    "source_hint": "Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_016",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das neonatale Entzugssyndrom bei Kindern von Müttern mit Crystal-Meth-Abusus wird standardmäßig mit Hilfe des Finnegan-Scores beurteilt.",
+    "answer": "richtig",
+    "explanation": "Der Finnegan-Score dient der objektiven Erfassung von Entzugssymptomen wie Zittern, Schreien oder Trinkschwäche bei Neugeborenen.",
+    "source_hint": "M 4.3 Handout, S. 18"
+  },
+  {
+    "q_id": "m4_rf_017",
+    "type": "richtig_falsch",
+    "topic": "ng_adaptation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die sogenannte 'Vernix caseosa' (Käseschmiere) sollte unmittelbar nach der Geburt mit Seife gründlich abgewaschen werden, um Infektionen der Neugeborenenhaut zu vermeiden.",
+    "answer": "falsch",
+    "explanation": "Die Vernix caseosa dient als Schutzschicht und Temperaturregulator; sie sollte einziehen oder nur vorsichtig abgetupft, aber nicht weggewaschen werden.",
+    "source_hint": "M 4.3 Handout, S. 33/37"
+  },
+  {
+    "q_id": "m4_rf_018",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Ein Kephalhämatom (Kopfblutunterreißung) überschreitet im Gegensatz zur Geburtsgeschwulst die Grenzen der einzelnen Schädelknochen (Suturen).",
+    "answer": "falsch",
+    "explanation": "Das Kephalhämatom ist eine Blutung unter der Knochenhaut und bleibt auf den jeweiligen Knochen begrenzt. Die Geburtsgeschwulst hingegen ist ein Ödem und überschreitet die Knochennähte.",
+    "source_hint": "M 4.3 Unterricht, S. 37"
+  },
+  {
+    "q_id": "m4_rf_019",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der 'Postpartum Blues' tritt meist um den 3. bis 5. Tag nach der Geburt auf und ist primär hormonell bedingt.",
+    "answer": "richtig",
+    "explanation": "Die Heultage sind eine vorübergehende depressive Verstimmung infolge des massiven Hormonabfalls nach der Plazentageburt.",
+    "source_hint": "Handout Pflege im Wochenbett, S. 11"
+  },
+  {
+    "q_id": "m4_rf_020",
+    "type": "richtig_falsch",
+    "topic": "geburt_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine physiologische Geburt liegt nur dann vor, wenn das Kind aus der vorderen Hinterhauptslage geboren wird.",
+    "answer": "richtig",
+    "explanation": "Die Definition der physiologischen Geburt beinhaltet zwingend die vordere Hinterhauptslage als Geburtslage.",
+    "source_hint": "M 4.2 Handout Die Geburt, S. 6"
+  },
+  {
+    "q_id": "m4_rf_021",
+    "type": "richtig_falsch",
+    "topic": "gyn_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Sekundäre Geschlechtsmerkmale beim Menschen, wie die weibliche Brustentwicklung, entstehen erst während der Pubertät unter dem Einfluss von Hormonen.",
+    "answer": "richtig",
+    "explanation": "Primäre Geschlechtsmerkmale sind von Geburt an vorhanden (Fortpflanzungsorgane), während sekundäre Merkmale sich erst in der Pubertät ausbilden.",
+    "source_hint": "Handout Physiologie der weiblichen Geschlechtsorgane"
+  },
+  {
+    "q_id": "m4_rf_022",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Beträgt der erste Tag der letzten Regel der 01.01.2024, so liegt der voraussichtliche Entbindungstermin nach der Naegele-Regel am 08.10.2024.",
+    "answer": "richtig",
+    "explanation": "Rechnung: 1. Tag + 7 Tage = 8. / Januar - 3 Monate = Oktober / + 1 Jahr. Dies ergibt den 08.10.",
+    "source_hint": "Handout Physiologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_023",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das zweite Trimenon einer Schwangerschaft umfasst den Zeitraum von der 14. bis zur abgeschlossenen 26. Schwangerschaftswoche.",
+    "answer": "richtig",
+    "explanation": "Die Trimenone teilen die SS in Abschnitte: 1. (1-13), 2. (14-26) und 3. (27-40).",
+    "source_hint": "M 4.3 Handout, S. 13"
+  },
+  {
+    "q_id": "m4_rf_024",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei einer Hyperemesis gravidarum kann ein Azetongeruch in der Ausatemluft auftreten, was auf eine beginnende metabolische Azidose hindeutet.",
+    "answer": "richtig",
+    "explanation": "Durch den Kohlenhydratmangel bei massivem Erbrechen verbrennt der Körper Fettreserven, wobei Ketonkörper entstehen, die als Azeton riechbar sind.",
+    "source_hint": "M 4.2 Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_025",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Eine schwangerschaftsinduzierte Hypertonie (SIH) ist klinisch dadurch definiert, dass sie grundsätzlich bereits vor der 20. SSW nachweisbar ist.",
+    "answer": "falsch",
+    "explanation": "Die SIH ist eine Spätgestose und tritt definitionsgemäß erst nach der 20. SSW auf.",
+    "source_hint": "M 4.2 Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_rf_026",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Gregg-Syndrom bezeichnet eine spezifische Embryopathie mit Fehlbildungen an Herz, Augen und Ohren infolge einer Rötelninfektion der Mutter.",
+    "answer": "richtig",
+    "explanation": "Rötelninfektionen in der Frühschwangerschaft führen zur sogenannten Rötelnembryopathie (Gregg-Syndrom).",
+    "source_hint": "M 4.3 Unterricht, S. 18"
+  },
+  {
+    "q_id": "m4_rf_027",
+    "type": "richtig_falsch",
+    "topic": "geburt_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Eröffnungsperiode dauert bei Erstgebärenden physiologisch meist nur ca. 2 bis 4 Stunden an.",
+    "answer": "falsch",
+    "explanation": "Die Eröffnungsperiode ist die längste Phase und dauert bei Erstgebärenden im Schnitt 10 bis 12 Stunden.",
+    "source_hint": "M 4.2 Handout Die Geburt"
+  },
+  {
+    "q_id": "m4_rf_028",
+    "type": "richtig_falsch",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die kleine Fontanelle am Hinterhaupt des Neugeborenen schließt sich im Gegensatz zur großen Fontanelle bereits innerhalb des ersten Vierteljahres nach der Geburt.",
+    "answer": "richtig",
+    "explanation": "Die kleine Fontanelle schließt sich früh (ca. 3 Monate), während die große Fontanelle bis zum 2. Lebensjahr (9.-26. Monat) offen bleiben kann.",
+    "source_hint": "M 4.3 Unterricht, S. 32"
+  },
+  {
+    "q_id": "m4_rf_029",
+    "type": "richtig_falsch",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein physiologischer Gewichtsverlust von bis zu 20 % des Geburtsgewichts gilt in den ersten Lebenstagen als völlig unbedenklich.",
+    "answer": "falsch",
+    "explanation": "Ein Gewichtsverlust von bis zu 7–10 % gilt als physiologisch; 20 % wäre ein Warnzeichen für massive Dehydration.",
+    "source_hint": "M 4.3 Handout, S. 34/41"
+  },
+  {
+    "q_id": "m4_rf_030",
+    "type": "richtig_falsch",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Moro-Reflex wird durch eine plötzliche Lageveränderung ausgelöst und zeigt sich durch ein symmetrisches Abspreizen und anschließendes Zusammenführen der Arme.",
+    "answer": "richtig",
+    "explanation": "Es handelt sich um den sogenannten Umklammerungsreflex, der auf plötzliche Reize erfolgt.",
+    "source_hint": "M 4.3 Handout, S. 31/ Unterricht S. 33"
+  },
+  {
+    "q_id": "m4_rf_031",
+    "type": "richtig_falsch",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Credé-Prophylaxe dient primär dem Schutz vor einer Neugeboreneninfektion der Augen durch Chlamydien oder Gonokokken während der Geburt.",
+    "answer": "richtig",
+    "explanation": "Dabei werden antibiotische oder silbernitrathaltige Augentropfen verabreicht, um eine Erblindung durch Infektionen im Geburtskanal zu verhindern.",
+    "source_hint": "M 4.3 Handout, S. 56"
+  },
+  {
+    "q_id": "m4_rf_032",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die sogenannte 'Hexenmilch' beim Neugeborenen wird durch eine krankhafte Überproduktion kindlicher Wachstumshormone ausgelöst.",
+    "answer": "falsch",
+    "explanation": "Hexenmilch (Sekretion der Brustdrüsen) entsteht durch den Übertritt von mütterlichem Östrogen auf das Kind und ist harmlos.",
+    "source_hint": "M 4.3 Unterricht, S. 33"
+  },
+  {
+    "q_id": "m4_rf_033",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Ein Kephalhämatom beim Neugeborenen ist eine Blutung unter der Knochenhaut, die – im Gegensatz zur Geburtsgeschwulst – niemals über die Schädelnähte hinausgeht.",
+    "answer": "richtig",
+    "explanation": "Da die Blutung unter der Knochenhaut liegt, wird sie durch die Verwachsungen an den Knochennähten begrenzt.",
+    "source_hint": "M 4.3 Unterricht, S. 37"
+  },
+  {
+    "q_id": "m4_rf_034",
+    "type": "richtig_falsch",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Neugeborenen-Screening auf Stoffwechselerkrankungen (z. B. PKU) erfolgt idealerweise bereits innerhalb der ersten 2 Lebensstunden im Kreißsaal.",
+    "answer": "falsch",
+    "explanation": "Das Screening erfolgt meist zwischen der 36. und 72. Lebensstunde, da bestimmte Stoffwechselprodukte erst nach Nahrungsaufnahme nachweisbar sind.",
+    "source_hint": "M 4.3 Handout, S. 68"
+  },
+  {
+    "q_id": "m4_rf_035",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Bonding beschreibt den Prozess der frühen emotionalen Bindungsaufnahme zwischen Eltern und Kind unmittelbar nach der Geburt.",
+    "answer": "richtig",
+    "explanation": "Der Hautkontakt ('Skin-to-Skin') direkt nach der Entbindung ist entscheidend für die psychische und physische Stabilisierung.",
+    "source_hint": "M 4.3 Handout, S. 65"
+  },
+  {
+    "q_id": "m4_rf_036",
+    "type": "richtig_falsch",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Begriff 'Entthronung' beschreibt in der Psychologie die belastende Situation eines älteren Geschwisterkindes durch die Ankunft eines neuen Babys.",
+    "answer": "richtig",
+    "explanation": "Das ältere Kind verliert seinen Status als Mittelpunkt der elterlichen Aufmerksamkeit an den Säugling.",
+    "source_hint": "M 4.4 Handout, S. 5/6"
+  },
+  {
+    "q_id": "m4_rf_037",
+    "type": "richtig_falsch",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Beim 'Handling' von Neugeborenen sollte darauf geachtet werden, das Kind nicht ruckartig, sondern über die Seite rollend hochzunehmen.",
+    "answer": "richtig",
+    "explanation": "Ressourcenorientiertes Handling unterstützt die natürliche Bewegung und vermeidet Schreckreaktionen des Kindes.",
+    "source_hint": "M 4.3 Unterricht, S. 27"
+  },
+  {
+    "q_id": "m4_rf_038",
+    "type": "richtig_falsch",
+    "topic": "ng_neurologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das Puppenaugenphänomen (Reflex) verschwindet bei reifen Neugeborenen erst nach etwa 6 Monaten vollständig.",
+    "answer": "falsch",
+    "explanation": "Das Puppenaugenphänomen verschwindet normalerweise bereits innerhalb der ersten 10 Lebenstage, sobald die Fixationsfähigkeit zunimmt.",
+    "source_hint": "M 4.3 Unterricht, S. 32"
+  },
+  {
+    "q_id": "m4_rf_039",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Eine Erb-Lähmung (Plexuslähmung) des Neugeborenen ist eine Nervenschädigung, die typischerweise durch einen Geburtsstillstand im Beckenausgang verursacht wird.",
+    "answer": "richtig",
+    "explanation": "Die Lähmung entsteht oft durch Zug am Kopf bei feststeckender Schulter (Schulterdystokie).",
+    "source_hint": "M 4.3 Unterricht, S. 37"
+  },
+  {
+    "q_id": "m4_rf_040",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Kinder mit einem Fetalen Alkoholsyndrom (FAS) weisen häufig lebenslange kognitive Einschränkungen und typische Gesichtsanomalien auf.",
+    "answer": "richtig",
+    "explanation": "Alkohol ist ein schweres Teratogen, das zu irreversiblen Hirnschäden und körperlichen Merkmalen führt.",
+    "source_hint": "M 4.3 Handout, S. 12"
+  },
+  {
+    "q_id": "m4_nl_001",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Trimenone einer Schwangerschaft inklusive der jeweiligen SSW-Bereiche.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "1. Trimenon: 1. bis 13. SSW | erstes Drittel | 1.-13. Woche",
+        "2. Trimenon: 14. bis 26. SSW | zweites Drittel | 14.-26. Woche",
+        "3. Trimenon: 27. bis 40. SSW | drittes Drittel | 27.-40. Woche"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_002",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier Formen oder Komplikationen der pathologischen Schwangerschaft.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Extrauteringravidität | EUG | Eileiterschwangerschaft",
+        "Abort | Fehlgeburt | Schwangerschaftsabbruch",
+        "Gestosen | Hyperemesis gravidarum | SIH | Präeklampsie | Eklampsie | HELLP-Syndrom",
+        "Plazentainsuffizienz | vorzeitige Plazentaablösung",
+        "Frühgeburt | Übertragung",
+        "Störungen des Glukosestoffwechsels | Gestationsdiabetes"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_003",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Kategorien teratogener Noxen mit jeweils einem Beispiel.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Physikalische Noxen: z.B. Ionisierende Strahlen | Röntgen | CT",
+        "Chemische Noxen: z.B. Medikamente | Alkohol | Drogen | Crystal Meth",
+        "Biologische Noxen: z.B. Infektionen | Röteln | Toxoplasmose | Varizellen | Zytomegalie"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_004",
+    "type": "nennen_liste",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Phasen der regelhaften physiologischen Geburt.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Eröffnungsperiode | Eröffnungsphase",
+        "Austreibungsperiode | Austreibungsphase",
+        "Nachgeburtsperiode | Nachgeburtsphase | Plazentaperiode"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_005",
+    "type": "nennen_liste",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier physiologische Hautbesonderheiten des Neugeborenen.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Vernix caseosa | Käseschmiere",
+        "Lanugobehaarung | Lanugo | Flaumhaare",
+        "Milien | Grießkörner | Hautgrieß",
+        "Erythema neonatorum | Neugeborenenexanthem",
+        "Neugeborenen-Schuppung",
+        "Cutis marmorata | Marmorierte Haut"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_006",
+    "type": "nennen_liste",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie fünf physiologische Reflexe des Neugeborenen.",
+    "points": 5,
+    "data": {
+      "count": 5,
+      "all_valid_answers": [
+        "Saugreflex",
+        "Suchreflex | Rooting-Reflex",
+        "Moro-Reflex | Umklammerungsreflex",
+        "Greifreflex | Palmar-/Plantargreifreflex",
+        "Schreitphänomen",
+        "Galant-Reflex",
+        "Puppenaugenphänomen",
+        "Fluchtreflex"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_007",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die fünf Parameter, die im Apgar-Score beurteilt werden.",
+    "points": 5,
+    "data": {
+      "count": 5,
+      "all_valid_answers": [
+        "Aussehen | Hautfarbe",
+        "Puls | Herzfrequenz | Herzschlag",
+        "Grimassieren | Reflexerregbarkeit | Reflexe",
+        "Aktivität | Muskeltonus",
+        "Respiration | Atmung"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_008",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei Prophylaxen, die unmittelbar oder zeitnah nach der Geburt beim Neugeborenen durchgeführt werden.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Vitamin-K-Prophylaxe | Konakion-Gabe | Blutungsprophylaxe",
+        "Credé-Prophylaxe | Augenprophylaxe | antibiotische Augentropfen",
+        "Neugeborenen-Screening | Stoffwechsel-Screening | Fersenblutentnahme",
+        "Hörscreening | Hörtest"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_009",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei Stoffwechselerkrankungen, die im Rahmen des Neugeborenen-Screenings erfasst werden.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "PKU | Phenylketonurie",
+        "Galaktosämie",
+        "Hypothyreose | Schilddrüsenunterfunktion",
+        "Ahornsirupkrankheit",
+        "Adrenogenitales Syndrom | AGS"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_010",
+    "type": "nennen_liste",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei mögliche geburtsbedingte Traumata am Skelettsystem des Kindes.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Klavikulafraktur | Schlüsselbeinbruch",
+        "Humerusfraktur | Oberarmbruch",
+        "Femurfraktur | Oberschenkelbruch",
+        "Schädelfraktur"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_011",
+    "type": "nennen_liste",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie zwei Nervenläsionen, die als Folge eines Geburtstraumas auftreten können.",
+    "points": 2,
+    "data": {
+      "count": 2,
+      "all_valid_answers": [
+        "Plexuslähmung | Erb-Lähmung | Armnervengeflechtlähmung",
+        "Fazialislähmung | Gesichtsnervenlähmung"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_012",
+    "type": "nennen_liste",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier physiologische Rückbildungs- oder Heilungsvorgänge im Wochenbett.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Uterusinvolution | Gebärmutterrückbildung",
+        "Heilung der Plazentahaftstelle",
+        "Lochienfluss | Wochenfluss",
+        "Hormonumstellung | Abfall von HCG/Östrogen/Progesteron",
+        "Laktationsbeginn | Milcheinschuss | Milchbildung",
+        "Rückbildung der Dehnungsvorgänge | Gewebestraffung"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_013",
+    "type": "nennen_liste",
+    "topic": "familie_transition",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die fünf primären Bezugspersonen bzw. Gruppen innerhalb des Familiensystems, für die die Geburt eine bedeutende Veränderung darstellt.",
+    "points": 5,
+    "data": {
+      "count": 5,
+      "all_valid_answers": [
+        "Mutter",
+        "Vater | Partner / Partnerin",
+        "Geschwister | Geschwisterkinder",
+        "Großeltern | Oma und Opa",
+        "Das Kind selbst | Neugeborenes"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_014",
+    "type": "nennen_liste",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier wesentliche Maßnahmen zur Prävention des Plötzlichen Kindstods (SIDS).",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Rückenlage | Schlafen auf dem Rücken",
+        "Schlafsack verwenden | keine losen Decken/Kissen",
+        "Rauchfreie Umgebung | Nichtrauchen in der Wohnung",
+        "Stillen | Muttermilchernährung",
+        "Zimmertemperatur 16-18 Grad Celsius | kühles Schlafzimmer",
+        "Feste Matratze | Verzicht auf Nestchen/Felle"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_015",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Kardinalsymptome einer Spätgestose (Präeklampsie) sowie ein Symptom des HELLP-Syndroms.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Ödeme | Wassereinlagerungen",
+        "Proteinurie | Eiweiß im Urin",
+        "Hypertonie | Bluthochdruck",
+        "Oberbauchschmerzen | Schmerzen im rechten Oberbauch"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_016",
+    "type": "nennen_liste",
+    "topic": "gyn_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die inneren primären Geschlechtsorgane der Frau.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Vagina | Scheide",
+        "Uterus | Gebärmutter",
+        "Tuben | Eileiter",
+        "Ovarien | Eierstöcke"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_017",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier sichtbare oder messbare körperliche Veränderungen der Mutter während einer physiologischen Schwangerschaft.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Gewichtszunahme",
+        "Bauchwachstum | Zunahme des Bauchumfangs",
+        "Brustwachstum | Vergrößerung der Mammae",
+        "Zunahme des Blutvolumens",
+        "Fundusstand-Erhöhung | Höhenwachstum der Gebärmutter",
+        "Pigmentveränderungen | Linea nigra | Schwangerschaftsstreifen"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_018",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei typische Merkmale oder Folgen des Fetalen Alkoholsyndroms (FAS).",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Hirnschäden | kognitive Einschränkungen | Intelligenzminderung",
+        "Gesichtsanomalien | typische Fazies | schmale Oberlippe",
+        "Wachstumsstörungen | Untergewicht | Minderwuchs",
+        "Verhaltensauffälligkeiten | Hyperaktivität"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_019",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier biologische Noxen (Infektionen), die in der Schwangerschaft zu Fehlbildungen oder Reifestörungen führen können.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Röteln | Rötelnvirus | Gregg-Syndrom",
+        "Toxoplasmose",
+        "Zytomegalie | CMV",
+        "Varizellen | Windpocken | Herpes zoster",
+        "Lues | Syphilis",
+        "Listeriose"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_020",
+    "type": "nennen_liste",
+    "topic": "geburt_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die vier Wehentypen, die den Geburtsverlauf maßgeblich steuern.",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Eröffnungswehen",
+        "Austreibungswehen",
+        "Presswehen",
+        "Nachgeburtswehen"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_021",
+    "type": "nennen_liste",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei fetalen Kurzschlussverbindungen (Shunts), die sich postnatal verschließen müssen.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Foramen ovale",
+        "Ductus arteriosus (Botalli)",
+        "Ductus venosus (Arantii)"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_022",
+    "type": "nennen_liste",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die beiden Hauptfontanellen des Neugeborenen und deren ungefähre Verschlusszeiten.",
+    "points": 2,
+    "data": {
+      "count": 2,
+      "all_valid_answers": [
+        "Große Fontanelle: Verschluss bis zum 2. Lebensjahr | 9.-26. Monat",
+        "Kleine Fontanelle: Verschluss innerhalb des 1. Vierteljahres | ca. 3 Monate"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_023",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier Bestandteile der ersten Vorsorgeuntersuchung (U1).",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Apgar-Score | Vitalitätsprüfung",
+        "Bestimmung von Gewicht, Länge und Kopfumfang | Maße und Gewichte",
+        "Überprüfung auf Fehlbildungen und Geburtstraumata",
+        "Vitamin-K-Gabe | Konakion-Gabe",
+        "Nabelschnur-pH-Wert-Bestimmung",
+        "Identifikation | Armbändchen anlegen"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_024",
+    "type": "nennen_liste",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei angeborene Fehlbildungen, die bei der Erstuntersuchung des Neugeborenen festgestellt werden können.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Spaltbildungen | Lippen-Kiefer-Gaumenspalte",
+        "Atresien | Analatresie | Ösophagusatresie",
+        "Down-Syndrom | Trisomie 21",
+        "Herzfehler",
+        "Spina bifida | offener Rücken"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_025",
+    "type": "nennen_liste",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie zwei physiologische Ursachen für die Entstehung einer Hyperbilirubinämie (Ikterus neonatorum).",
+    "points": 2,
+    "data": {
+      "count": 2,
+      "all_valid_answers": [
+        "Unreife der Leberenzyme | mangelnde Glukuronyltransferase",
+        "Vermehrter Abbau von Erythrozyten | hoher Hämoglobinabbau"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_026",
+    "type": "nennen_liste",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei wesentliche Elemente zur Förderung des Bondings unmittelbar nach der Geburt.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Haut-an-Haut-Kontakt | Skin-to-Skin",
+        "Blickkontakt | Eye Contact",
+        "Erstes Anlegen an die Brust | Stillbeginn",
+        "Ansprechen des Kindes | auditive Bindung"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_027",
+    "type": "nennen_liste",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Komponenten des Kohärenzgefühls im Modell der Salutogenese nach Antonovsky.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Verstehbarkeit | Comprehensibility",
+        "Handhabbarkeit | Bewältigbarkeit | Manageability",
+        "Sinnhaftigkeit | Bedeutungshaftigkeit | Meaningfulness"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_028",
+    "type": "nennen_liste",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie drei Prinzipien oder Techniken des ressourcenorientierten Handlings beim Neugeborenen.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Über die Seite rollen beim Aufnehmen/Ablegen",
+        "Unterstützung des Kopfes und Beckens",
+        "Ankündigung von Handlungen | Interaktion beim Bewegen",
+        "Vermeidung von ruckartigen Bewegungen"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_029",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie den wesentlichen Unterschied zwischen Frühgestosen und Spätgestosen hinsichtlich des Zeitpunkts ihres Auftretens.",
+    "points": 2,
+    "data": {
+      "count": 2,
+      "all_valid_answers": [
+        "Frühgestosen: Auftreten im 1. Trimenon | bis zur 13. SSW",
+        "Spätgestosen: Auftreten nach der 20. SSW | in der zweiten Schwangerschaftshälfte"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_nl_030",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die drei Erregergruppen, vor denen die Credé-Prophylaxe die Augen des Neugeborenen schützen soll.",
+    "points": 3,
+    "data": {
+      "count": 3,
+      "all_valid_answers": [
+        "Gonokokken | Gonorrhoe",
+        "Chlamydien",
+        "Gramnegative Keime"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_tab_001",
+    "type": "tabelle_3spalten",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Trimenone der Schwangerschaft ihren Zeiträumen und den physiologischen Schwerpunkten zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Trimester",
+          "SSW-Bereich",
+          "Hauptmerkmal / Phase"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "1. Trimenon",
+                "keywords": ["1", "erstes"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "1. - 13. SSW",
+                "keywords": ["1", "13"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Anpassungsphase / Organogenese",
+                "keywords": ["Anpassung", "Organe"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "2. Trimenon",
+                "keywords": ["2", "zweites"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "14. - 26. SSW",
+                "keywords": ["14", "26"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Phase des Wohlbefindens / Stabiler Zustand",
+                "keywords": ["Wohlbefinden", "stabil"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vervollständigen**  Sie die Tabelle zum Apgar-Score für die Extremwerte (0 und 2 Punkte).",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Parameter",
+          "0 Punkte",
+          "2 Punkte"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Puls (Herzfrequenz)",
+                "keywords": ["Puls", "Herz"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "kein Puls / Asystolie",
+                "keywords": ["kein", "fehlt"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "über 100/min",
+                "keywords": ["100"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Respiration (Atmung)",
+                "keywords": ["Atmung", "Respiration"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "keine / Apnoe",
+                "keywords": ["keine", "Apnoe"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "regelmäßig / kräftiges Schreien",
+                "keywords": ["Schreien", "regelmäßig"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_003",
+    "type": "tabelle_vergleich",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie das Kephalhämatom mit der Geburtsgeschwulst hinsichtlich ihrer klinischen Merkmale.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Kephalhämatom",
+          "Geburtsgeschwulst (Caput succedaneum)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Art der Schwellung",
+                "keywords": ["Art", "Inhalt"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Blutung unter Knochenhaut",
+                "keywords": ["Blut", "Knochenhaut"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ödem / Wassereinlagerung",
+                "keywords": ["Ödem", "Wasser"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Begrenzung",
+                "keywords": ["Grenze"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "an Schädelnähte gebunden",
+                "keywords": ["Schädelnähte", "begrenzt", "Suturen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "überschreitet Schädelnähte",
+                "keywords": ["überschreitet", "nicht begrenzt"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie Beispiele für teratogene Noxen und deren mögliche Schädigungen am Kind.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Kategorie",
+          "Beispiel",
+          "Mögliche Schädigung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Physikalische Noxen",
+                "keywords": ["Physikalisch"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ionisierende Strahlen (Röntgen)",
+                "keywords": ["Strahlen", "Röntgen", "CT"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Fehlbildungen / Chromosomenschäden",
+                "keywords": ["Fehlbildung", "ZNS", "Herz"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Biologische Noxen",
+                "keywords": ["Biologisch"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Röteln-Virus",
+                "keywords": ["Röteln"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gregg-Syndrom (Herz, Augen, Ohren)",
+                "keywords": ["Gregg", "Herz", "Auge", "Ohr"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie die Auslösung und die Reaktion bei wichtigen Neugeborenenreflexen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Reflex",
+          "Auslösung (Stimulus)",
+          "Reaktion des Kindes"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Moro-Reflex",
+                "keywords": ["Moro", "Umklammerung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Plötzliche Lageveränderung",
+                "keywords": ["Lage", "Reiz", "fallen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Abspreizen und Zusammenführen der Arme",
+                "keywords": ["Arme", "Abspreizen", "Umklammern"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Saugreflex",
+                "keywords": ["Saugen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Berührung des Mundraums",
+                "keywords": ["Mund", "Gaumen", "Lippen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Rhythmische Saugbewegungen",
+                "keywords": ["Saugen"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "geburt_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  und  **erläutern**  Sie die Phasen einer regelhaften Geburt.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Geburtsphase",
+          "Beschreibung",
+          "Dauer (Erstgebärende)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Eröffnungsperiode",
+                "keywords": ["Eröffnung"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Wehen bis zur vollständigen Mm-Öffnung",
+                "keywords": ["Wehen", "Muttermund", "Öffnung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 10 - 12 Stunden",
+                "keywords": ["10", "12"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Nachgeburtsperiode",
+                "keywords": ["Nachgeburt", "Plazenta"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Ausstoßung der Plazenta und Eihäute",
+                "keywords": ["Plazenta", "Eihäute", "Ausstoßung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 15 - 30 Minuten",
+                "keywords": ["15", "30"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_007",
+    "type": "tabelle_vergleich",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Unterscheiden**  Sie zwischen Früh- und Spätgestosen hinsichtlich Zeit und Symptomatik.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Vergleichspunkt",
+          "Frühgestose",
+          "Spätgestose"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Auftreten (Zeitpunkt)",
+                "keywords": ["Wann", "Zeit"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "1. Trimenon (bis 13. SSW)",
+                "keywords": ["1", "Trimenon", "13"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "nach der 20. SSW",
+                "keywords": ["20", "zweite", "Hälfte"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Leitsymptom",
+                "keywords": ["Symptom", "Merkmal"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Übermäßiges Erbrechen",
+                "keywords": ["Erbrechen", "Hyperemesis"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypertonie / Ödeme / Proteinurie",
+                "keywords": ["RR", "Blutdruck", "Eiweiß", "Ödeme", "SIH"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_008",
+    "type": "tabelle_3spalten",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Beschreiben**  Sie physiologische Hauterscheinungen des Neugeborenen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Erscheinung",
+          "Beschreibung",
+          "Bedeutung / Verlauf"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Vernix caseosa",
+                "keywords": ["Vernix", "Käseschmiere"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Weißlicher Belag auf der Haut",
+                "keywords": ["weiß", "Belag", "Schutz"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Hautschutz / zieht in ersten Tagen ein",
+                "keywords": ["Schutz", "einziehen"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Milien",
+                "keywords": ["Milien", "Grießkörner"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Kleine weiße Punkte im Gesicht",
+                "keywords": ["weiß", "Punkte", "Nase"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Talgdrüsenstauung / harmlos",
+                "keywords": ["Talg", "harmlos"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_009",
+    "type": "tabelle_vergleich",
+    "topic": "gyn_grundlagen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Stellen**  Sie primäre und sekundäre Geschlechtsmerkmale gegenüber.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Aspekt",
+          "Primäre Geschlechtsmerkmale",
+          "Sekundäre Geschlechtsmerkmale"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Zeitpunkt der Anlage",
+                "keywords": ["Wann", "Anlage"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "von Geburt an vorhanden",
+                "keywords": ["Geburt"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Entwicklung in der Pubertät",
+                "keywords": ["Pubertät"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Beispiele",
+                "keywords": ["Beispiel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Uterus, Vagina, Ovarien",
+                "keywords": ["Uterus", "Vagina", "Hoden", "Eierstöcke"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Brust, Schambehaarung",
+                "keywords": ["Brust", "Haare", "Stimme"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_010",
+    "type": "tabelle_3spalten",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Erläutern**  Sie wichtige Prophylaxen beim Neugeborenen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Maßnahme",
+          "Ziel / Schutz gegen",
+          "Zeitpunkt"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Vitamin-K-Gabe",
+                "keywords": ["Vitamin K", "Konakion"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Vermeidung von Blutungskomplikationen",
+                "keywords": ["Blutung", "Gerinnung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "U1, U2 und U3",
+                "keywords": ["U1", "U2", "U3"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Stoffwechsel-Screening",
+                "keywords": ["Screening", "Stoffwechsel"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Früherkennung von PKU, Hypothyreose etc.",
+                "keywords": ["PKU", "Hypothyreose", "Stoffwechsel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "3. Lebenstag (48-72h)",
+                "keywords": ["3", "Lebenstag", "48", "72"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_011",
+    "type": "tabelle_3spalten",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Benennen**  Sie die fetalen Shunts und deren Schicksal nach der Geburt.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Fetaler Shunt",
+          "Verbindung im Fetus",
+          "Postnataler Verschluss"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Foramen ovale",
+                "keywords": ["Foramen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Kurzschluss zwischen rechtem und linkem Vorhof",
+                "keywords": ["Vorhof", "Vorhöfe"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Funktionell sofort nach erstem Atemzug",
+                "keywords": ["Atemzug", "sofort"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Ductus arteriosus (Botalli)",
+                "keywords": ["Ductus", "Botalli"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Verbindung zwischen Lungenarterie und Aorta",
+                "keywords": ["Aorta", "Pulmonalarterie"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Verschluss durch Sauerstoffanstieg",
+                "keywords": ["Verschluss", "Sauerstoff"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_012",
+    "type": "tabelle_3spalten",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Geburtstraumata ihrer Lokalisation und Prognose zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Trauma",
+          "Lokalisation / Ursache",
+          "Prognose / Verlauf"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Klavikulafraktur",
+                "keywords": ["Klavikula", "Schlüsselbein"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schultergürtel / Schulterdystokie",
+                "keywords": ["Schulter"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gute Heilung mit Kallusbildung",
+                "keywords": ["Heilung", "Kallus"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Fazialislähmung",
+                "keywords": ["Fazialis", "Gesicht"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gesichtsnerv / Zangendruck",
+                "keywords": ["Nerv", "Zange"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Meist spontane Rückbildung",
+                "keywords": ["Rückbildung", "spontan"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_013",
+    "type": "tabelle_3spalten",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Vervollständigen**  Sie die Tabelle zu den Rückbildungsvorgängen im Puerperium.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Rückbildungsvorgang",
+          "Zeitraum",
+          "Pflegerische Beobachtung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Uterusinvolution",
+                "keywords": ["Uterus", "Involution", "Rückbildung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "6 - 8 Wochen",
+                "keywords": ["6", "8", "Wochen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Tasten des Fundusstandes",
+                "keywords": ["Fundus", "tasten"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Lochienfluss",
+                "keywords": ["Lochien", "Wochenfluss"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 4 - 6 Wochen",
+                "keywords": ["4", "6", "Wochen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Farbe, Menge und Geruch",
+                "keywords": ["Farbe", "Menge", "Geruch"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_014",
+    "type": "tabelle_vergleich",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie pränatale Schädigungen durch Alkohol mit dem neonatalen Crystal-Meth-Entzug.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Vergleichskriterium",
+          "Fetales Alkoholsyndrom (FAS)",
+          "Neonatales Entzugssyndrom (z.B. Crystal)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Art der Schädigung",
+                "keywords": ["Art", "Wirkung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dauerhafte Organ/Hirnschäden",
+                "keywords": ["dauerhaft", "Hirn", "Organ"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Postnatale Entzugssymptomatik",
+                "keywords": ["Entzug", "postnatal"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Klinisches Leitsymptom",
+                "keywords": ["Symptom"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gesichtsanomalien / Kleinwuchs",
+                "keywords": ["Gesicht", "Fazies", "Wuchs"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Zittern / schrilles Schreien",
+                "keywords": ["Zittern", "Schreien", "Unruhe"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_tab_015",
+    "type": "tabelle_2spalten",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Nennen**  Sie Maßnahmen zur SIDS-Prävention und deren Begründung.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Präventionsmaßnahme",
+          "Wissenschaftliche Begründung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Rückenlage",
+                "keywords": ["Rücken"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Vermeidung von CO2-Rückatmung / Überhitzung",
+                "keywords": ["CO2", "Atmung", "Überhitzung"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Rauchfreie Umgebung",
+                "keywords": ["Rauchen", "Nikotin"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Schutz der unreifen Atemwege / Lunge",
+                "keywords": ["Atemwege", "Lunge", "Reizung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_ft_001",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Erläutern**  Sie die Berechnung des voraussichtlichen Geburtstermins nach der Naegele-Regel.",
+    "points": 5,
+    "data": {
+      "keywords": ["erster Tag", "letzte Menstruation", "plus 7 Tage", "minus 3 Monate", "plus 1 Jahr"],
+      "correct_answer": "Die Naegele-Regel berechnet den Entbindungstermin ausgehend vom ersten Tag der letzten Regelblutung. Zu diesem Datum werden 7 Tage addiert, 3 Monate abgezogen und 1 Jahr hinzugezählt. Gegebenenfalls werden noch Abweichungen vom 28-Tage-Zyklus berücksichtigt. Diese Formel basiert auf einer durchschnittlichen Schwangerschaftsdauer von 280 Tagen bzw. 40 Wochen."
+    }
+  },
+  {
+    "q_id": "m4_ft_002",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Beschreiben**  Sie die wesentlichen Merkmale der fetalen Entwicklung im ersten Trimenon.",
+    "points": 5,
+    "data": {
+      "keywords": ["1. bis 13. SSW", "Organogenese", "Anpassungsphase", "Noxen-Anfälligkeit", "Organanlage"],
+      "correct_answer": "Das erste Trimenon umfasst die 1. bis 13. Schwangerschaftswoche und wird als Phase der Anpassung bezeichnet. In diesem Zeitraum findet zwischen der 3. und 8. Woche p.c. die Organogenese statt, in der alle wichtigen Organsysteme angelegt werden. Aufgrund dieser intensiven Differenzierung ist der Embryo in dieser Phase extrem anfällig für schädigende Einflüsse wie Noxen. Bis zum Ende des Trimenons ist die grundlegende Struktur des Kindes ausgebildet."
+    }
+  },
+  {
+    "q_id": "m4_ft_003",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Erklären**  Sie die klinische Definition und die Risiken der schwangerschaftsinduzierten Hypertonie (SIH).",
+    "points": 5,
+    "data": {
+      "keywords": ["über 140/90 mmHg", "nach der 20. SSW", "Plazentainsuffizienz", "Spätgestose", "Präeklampsie"],
+      "correct_answer": "Die schwangerschaftsinduzierte Hypertonie ist definiert als ein Blutdruckwert von über 140/90 mmHg, der erstmals nach der 20. Schwangerschaftswoche auftritt. Sie gehört zu den Spätgestosen und kann ohne Proteinurie verlaufen, birgt jedoch das Risiko einer Plazentainsuffizienz. Unbehandelt kann sich daraus eine Präeklampsie mit Ödemen und Eiweißausscheidung im Urin entwickeln, was eine engmaschige Überwachung erfordert."
+    }
+  },
+  {
+    "q_id": "m4_ft_004",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Begründen**  Sie, warum Alkoholkonsum in der Schwangerschaft zur Entstehung des Fetalen Alkoholsyndroms (FAS) führt.",
+    "points": 5,
+    "data": {
+      "keywords": ["Teratogen", "Plazentaschranke", "irreversible Hirnschäden", "ZNS-Störung", "Wachstumsstörung"],
+      "correct_answer": "Alkohol wirkt als schweres Teratogen und gelangt ungehindert über die Plazenta in den kindlichen Blutkreislauf. Da die kindliche Leber Alkohol noch nicht abbauen kann, führt die Exposition zu irreversiblen Schädigungen des Zentralnervensystems. Die Folgen sind lebenslange kognitive Einschränkungen, typische Gesichtsanomalien und intrauterine Wachstumsstörungen. Es gibt keine sichere Untergrenze für Alkoholkonsum in der Schwangerschaft."
+    }
+  },
+  {
+    "q_id": "m4_ft_005",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Erläutern**  Sie die Rötelnembryopathie (Gregg-Syndrom) und deren mögliche Folgen für das Kind.",
+    "points": 5,
+    "data": {
+      "keywords": ["Rubella-Virus", "Katarakt", "Herzfehler", "Schwerhörigkeit", "Mikrozephalie"],
+      "correct_answer": "Die Rötelnembryopathie entsteht durch eine Primärinfektion der Mutter mit dem Rubella-Virus in der Frühschwangerschaft. Das daraus resultierende Gregg-Syndrom ist durch eine klassische Trias gekennzeichnet: Defekte an den Augen (Katarakt, Glaukom), an den Ohren (Schwerhörigkeit bis Taubheit) und angeborene Herzfehler. Zusätzlich können Mikrozephalie und allgemeine Dystrophie auftreten, wobei das Risiko für Fehlbildungen im ersten Monat am höchsten ist."
+    }
+  },
+  {
+    "q_id": "m4_ft_006",
+    "type": "freitext_box",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Beschreiben**  Sie die drei Phasen einer regelhaften physiologischen Geburt.",
+    "points": 5,
+    "data": {
+      "keywords": ["Eröffnungsperiode", "Austreibungsperiode", "Nachgeburtsperiode", "Muttermundöffnung", "Plazentaausstoßung"],
+      "correct_answer": "Die Geburt unterteilt sich in die Eröffnungs-, Austreibungs- und Nachgeburtsperiode. In der Eröffnungsphase weitet sich der Muttermund durch regelmäßige Wehen auf ca. 10-12 cm. Die Austreibungsphase endet mit der eigentlichen Geburt des Kindes, wobei die Mutter aktiv durch Presswehen unterstützt. Den Abschluss bildet die Nachgeburtsperiode, in der die Plazenta sowie die Eihäute vollständig ausgestoßen werden."
+    }
+  },
+  {
+    "q_id": "m4_ft_007",
+    "type": "freitext_box",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Erklären**  Sie den Vorgang der Kreislaufumstellung beim Neugeborenen unmittelbar nach der Geburt.",
+    "points": 5,
+    "data": {
+      "keywords": ["Lungenbelüftung", "Foramen ovale", "Ductus arteriosus", "Druckveränderung", "Verschluss der Shunts"],
+      "correct_answer": "Mit dem ersten Atemzug entfalten sich die Lungen, wodurch der Gefäßwiderstand im Lungenkreislauf massiv sinkt und dieser durchblutet wird. Durch die Druckveränderungen im Herzen schließt sich das Foramen ovale funktionell sofort. In den folgenden Stunden und Tagen verschließen sich auch der Ductus arteriosus (Botalli) und der Ductus venosus. Damit wird der fetale Kurzschlusskreislauf durch den endgültigen postnatalen Kreislauf ersetzt."
+    }
+  },
+  {
+    "q_id": "m4_ft_008",
+    "type": "freitext_box",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Begründen**  Sie, warum Neugeborene physiologisch besonders stark von Hypothermie bedroht sind.",
+    "points": 5,
+    "data": {
+      "keywords": ["große Körperoberfläche", "Verdunstung", "unreifes Temperaturzentrum", "fehlendes Zittern", "Wärmeverlust"],
+      "correct_answer": "Neugeborene besitzen im Verhältnis zu ihrem Körpergewicht eine sehr große Oberfläche, über die sie viel Wärme abstrahlen. Zudem verlieren sie unmittelbar nach der Geburt durch die Verdunstung von Fruchtwasser auf der Haut massiv an Energie. Da ihr Temperaturzentrum im Gehirn noch unreif ist und sie nicht durch Muskelzittern Wärme erzeugen können, kühlen sie ohne äußeren Schutz extrem schnell aus. Dies kann zu lebensbedrohlichen Stoffwechselstörungen führen."
+    }
+  },
+  {
+    "q_id": "m4_ft_009",
+    "type": "freitext_box",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Erläutern**  Sie den Apgar-Score und dessen Bedeutung für die klinische Erstversorgung des Neugeborenen.",
+    "points": 5,
+    "data": {
+      "keywords": ["Vitalitätsbeurteilung", "1, 5 und 10 Minuten", "Puls und Atmung", "Reflexe", "Hautfarbe"],
+      "correct_answer": "Der Apgar-Score dient der objektiven Beurteilung der kindlichen Vitalität unmittelbar nach der Geburt zu drei Zeitpunkten. Bewertet werden Atmung, Puls, Muskeltonus, Hautfarbe und Reflexerregbarkeit mit jeweils 0 bis 2 Punkten. Ein Gesamtwert von 8-10 Punkten kennzeichnet ein lebensfrisches Kind, während niedrigere Werte auf Anpassungsstörungen oder eine Depression hinweisen. Er ist das wichtigste Instrument, um den Bedarf an sofortigen medizinischen Unterstützungsmaßnahmen festzustellen."
+    }
+  },
+  {
+    "q_id": "m4_ft_010",
+    "type": "freitext_box",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Beschreiben**  Sie die Unterschiede zwischen einem Kephalhämatom und einer Geburtsgeschwulst.",
+    "points": 5,
+    "data": {
+      "keywords": ["Blutung unter Knochenhaut", "Ödem", "Schädelnähte", "Suturen", "Begrenzung"],
+      "correct_answer": "Das Kephalhämatom ist eine Blutung unter der Knochenhaut, die streng an die Grenzen der jeweiligen Schädelknochen gebunden ist und die Suturen niemals überschreitet. Die Geburtsgeschwulst (Caput succedaneum) hingegen ist eine ödematöse Schwellung im Bindegewebe der Kopfhaut, die über die Schädelnähte hinausgeht. Während die Geburtsgeschwulst meist nach wenigen Tagen verschwindet, benötigt der Abbau des Kephalhämatoms mehrere Wochen. Beides sind Folgen mechanischer Einwirkungen während der Geburt."
+    }
+  },
+  {
+    "q_id": "m4_ft_011",
+    "type": "freitext_box",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Erklären**  Sie die Pathophysiologie der Hyperbilirubinämie beim Neugeborenen.",
+    "points": 5,
+    "data": {
+      "keywords": ["Leberunreife", "Glukuronyltransferase", "Erythrozytenabbau", "Ikterus neonatorum", "Kernikterus"],
+      "correct_answer": "Nach der Geburt müssen vermehrt Erythrozyten abgebaut werden, wodurch große Mengen an indirektem Bilirubin anfallen. Da das Enzym Glukuronyltransferase in der noch unreifen Neugeborenenleber unzureichend vorhanden ist, kann das Bilirubin nicht schnell genug in die wasserlösliche Form umgewandelt werden. Es kommt zur Gelbfärbung der Haut, dem Ikterus neonatorum. Bei extrem hohen Werten besteht die Gefahr eines Kernikterus, also einer dauerhaften Schädigung des Gehirns."
+    }
+  },
+  {
+    "q_id": "m4_ft_012",
+    "type": "freitext_box",
+    "topic": "wochenbett",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Begründen**  Sie, warum das Bonding unmittelbar nach der Geburt eine zentrale Rolle spielt.",
+    "points": 5,
+    "data": {
+      "keywords": ["Haut-zu-Haut-Kontakt", "emotionale Bindung", "Vitalwertstabilisierung", "Oxytocin", "Stillbeginn"],
+      "correct_answer": "Bonding beschreibt den frühen körperlichen und emotionalen Kontakt zwischen Eltern und Kind direkt nach der Entbindung. Der intensive Haut-zu-Haut-Kontakt stabilisiert die kindliche Atmung und Körpertemperatur und senkt den Stresslevel. Gleichzeitig wird bei der Mutter die Ausschüttung von Oxytocin gefördert, was die Bindung stärkt und den Stillstart erleichtert. Es bildet das Fundament für eine sichere Urbindung im neuen Familiensystem."
+    }
+  },
+  {
+    "q_id": "m4_ft_013",
+    "type": "freitext_box",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Erläutern**  Sie das Modell der Salutogenese nach Antonovsky im Kontext der Transition zur Elternschaft.",
+    "points": 5,
+    "data": {
+      "keywords": ["Kohärenzgefühl", "Verstehbarkeit", "Handhabbarkeit", "Sinnhaftigkeit", "Ressourcen"],
+      "correct_answer": "Das Modell der Salutogenese fokussiert darauf, welche Faktoren Menschen trotz hoher Belastungen gesund halten. Im Zentrum steht das Kohärenzgefühl, bestehend aus Verstehbarkeit, Handhabbarkeit und Sinnhaftigkeit der neuen Lebenssituation als Eltern. Eine erfolgreiche Transition zur Elternschaft gelingt eher, wenn Eltern die Veränderungen verstehen, sie als bewältigbar erleben und in der Fürsorge für das Kind einen tiefen Sinn sehen. Die Pflege unterstützt dies durch gezielte Ressourcenstärkung und Information."
+    }
+  },
+  {
+    "q_id": "m4_ft_014",
+    "type": "freitext_box",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Beschreiben**  Sie das psychologische Phänomen der Entthronung bei Geschwisterkindern nach der Geburt eines Babys.",
+    "points": 5,
+    "data": {
+      "keywords": ["Statusverlust", "Eifersucht", "Aufmerksamkeitsteilung", "Rollenveränderung", "Regression"],
+      "correct_answer": "Entthronung bezeichnet die krisenhafte Reaktion eines älteren Kindes auf die Ankunft eines neuen Geschwisterchens. Das Kind verliert seine bisherige Position als alleiniger Mittelpunkt der elterlichen Aufmerksamkeit und muss Ressourcen teilen. Dies äußert sich oft durch Eifersucht, Aggression oder Regression in frühere Entwicklungsphasen (z. B. wieder einnässen). Für die psychosoziale Gesundheit der Familie ist eine einfühlsame Begleitung des Geschwisterkindes in dieser Übergangsphase essenziell."
+    }
+  },
+  {
+    "q_id": "m4_ft_015",
+    "type": "freitext_box",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "question": " **Erklären**  Sie die wichtigsten Maßnahmen zur SIDS-Prävention und deren wissenschaftliche Grundlage.",
+    "points": 5,
+    "data": {
+      "keywords": ["Rückenlage", "rauchfrei", "Schlafsack", "16 bis 18 Grad", "feste Matratze"],
+      "correct_answer": "Die Prävention des Plötzlichen Kindstods (SIDS) basiert auf der Vermeidung von Risikofaktoren wie Überhitzung und Atemrückbehinderung. Wichtigste Maßnahme ist die Rückenlage zum Schlafen, da die Bauchlage das Risiko für CO2-Rückatmung erhöht. Eine rauchfreie Umgebung schützt die unreifen Atemwege, während die Verwendung eines Schlafsacks statt einer Decke das Ersticken verhindert. Die optimale Zimmertemperatur liegt bei kühlen 16-18 Grad Celsius auf einer festen Matratze ohne Kissen oder Felle."
+    }
+  },
+  {
+    "q_id": "m4_zu_001",
+    "type": "zuordnung",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Beispiele für teratogene Noxen der jeweils richtigen Kategorie zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "physikalische Noxen",
+        "B": "chemische Noxen",
+        "C": "biologische Noxen"
+      },
+      "statements": [
+        {
+          "text": "Ionisierende Strahlen (z. B. Röntgen, CT)",
+          "answer": "A"
+        },
+        {
+          "text": "Suchtmittel (z. B. Crystal Meth, Alkohol)",
+          "answer": "B"
+        },
+        {
+          "text": "Infektionen (z. B. Röteln, Toxoplasmose)",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_zu_002",
+    "type": "zuordnung",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Beschreibungen der Neugeborenenreflexe dem korrekten Fachbegriff zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Moro-Reflex",
+        "B": "Suchreflex",
+        "C": "Greifreflex",
+        "D": "Schreitphänomen"
+      },
+      "statements": [
+        {
+          "text": "Umklammerungsreaktion bei plötzlicher Lageveränderung",
+          "answer": "A"
+        },
+        {
+          "text": "Suchbewegungen des Mundes bei Berührung der Wange",
+          "answer": "B"
+        },
+        {
+          "text": "Reflexartiges Schließen der Hand bei Reizung der Innenfläche",
+          "answer": "C"
+        },
+        {
+          "text": "Schreitbewegungen bei Bodenkontakt der Füße in aufrechter Haltung",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_zu_003",
+    "type": "zuordnung",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die klinischen Maßnahmen dem korrekten Untersuchungszeitpunkt (U1 oder U2) zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "U1 (unmittelbar nach der Geburt)",
+        "B": "U2 (3. bis 10. Lebenstag)"
+      },
+      "statements": [
+        {
+          "text": "Erste Erhebung des Apgar-Scores",
+          "answer": "A"
+        },
+        {
+          "text": "Durchführung des Neugeborenen-Screenings auf Stoffwechselerkrankungen",
+          "answer": "B"
+        },
+        {
+          "text": "Erste Gabe von Vitamin K (Konakion)",
+          "answer": "A"
+        },
+        {
+          "text": "Durchführung der Hüft-Sonografie",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_zu_004",
+    "type": "zuordnung",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die pathologischen Erscheinungen bzw. Merkmale dem jeweiligen Trimenon zu, in dem sie typischerweise auftreten.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "1. Trimenon",
+        "B": "2. Trimenon",
+        "C": "3. Trimenon"
+      },
+      "statements": [
+        {
+          "text": "Hyperemesis gravidarum (übermäßiges Erbrechen)",
+          "answer": "A"
+        },
+        {
+          "text": "Phase der Organogenese (höchste Empfindlichkeit für Noxen)",
+          "answer": "A"
+        },
+        {
+          "text": "Spätgestosen wie SIH oder Präeklampsie",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_zu_005",
+    "type": "zuordnung",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die psychosozialen Reaktionsmuster der jeweils betroffenen Bezugsperson zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Mutter",
+        "B": "Vater",
+        "C": "Geschwister",
+        "D": "Großeltern"
+      },
+      "statements": [
+        {
+          "text": "Erleben des Phänomens der 'Entthronung'",
+          "answer": "C"
+        },
+        {
+          "text": "Neudefinition der Rolle innerhalb des erweiterten Familiensystems",
+          "answer": "D"
+        },
+        {
+          "text": "Körperliche Heilung und hormonelle Umstellung nach der Entbindung",
+          "answer": "A"
+        },
+        {
+          "text": "Aktiver Aufbau der Vater-Kind-Beziehung und Unterstützung der Partnerin",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden zwei Parameter des Apgar-Scores.",
+    "points": 2,
+    "data": {
+      "list_label": "Apgar-Parameter",
+      "given_items": [
+        "Aussehen (Hautfarbe)",
+        "Puls (Herzfrequenz)",
+        "Respiration (Atmung)"
+      ],
+      "missing_items": [
+        "Grimassieren (Reflexe)",
+        "Aktivität (Muskeltonus)"
+      ],
+      "all_valid_missing": [
+        "Grimassieren",
+        "Reflexe",
+        "Reflexerregbarkeit",
+        "Aktivität",
+        "Muskeltonus",
+        "Grundtonus"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie die fehlenden zwei Phasen der regelhaften physiologischen Geburt.",
+    "points": 2,
+    "data": {
+      "list_label": "Geburtsphasen",
+      "given_items": [
+        "Eröffnungsperiode"
+      ],
+      "missing_items": [
+        "Austreibungsperiode",
+        "Nachgeburtsperiode"
+      ],
+      "all_valid_missing": [
+        "Austreibungsperiode",
+        "Austreibungsphase",
+        "Nachgeburtsperiode",
+        "Nachgeburtsphase",
+        "Plazentaperiode"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie drei weitere physiologische Hautbesonderheiten des Neugeborenen.",
+    "points": 3,
+    "data": {
+      "list_label": "Hautbesonderheiten beim NG",
+      "given_items": [
+        "Vernix caseosa (Käseschmiere)",
+        "Lanugobehaarung"
+      ],
+      "missing_items": [
+        "Milien",
+        "Erythema neonatorum",
+        "Neugeborenen-Schuppung"
+      ],
+      "all_valid_missing": [
+        "Milien",
+        "Grießkörner",
+        "Erythema neonatorum",
+        "Neugeborenenexanthem",
+        "Neugeborenen-Schuppung",
+        "Hautschuppung",
+        "Cutis marmorata",
+        "Marmorierte Haut"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie zwei weitere Infektionskrankheiten (biologische Noxen), die in der Schwangerschaft gefährlich sein können.",
+    "points": 2,
+    "data": {
+      "list_label": "Biologische Noxen",
+      "given_items": [
+        "Röteln",
+        "Toxoplasmose"
+      ],
+      "missing_items": [
+        "Varizellen",
+        "Zytomegalie"
+      ],
+      "all_valid_missing": [
+        "Varizellen",
+        "Windpocken",
+        "Herpes zoster",
+        "Zytomegalie",
+        "CMV",
+        "Lues",
+        "Syphilis",
+        "Listeriose"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Ergänzen**  Sie drei wesentliche Maßnahmen zur Prävention des Plötzlichen Kindstods (SIDS).",
+    "points": 3,
+    "data": {
+      "list_label": "SIDS-Prävention",
+      "given_items": [
+        "Rückenlage zum Schlafen",
+        "Verwendung eines Schlafsacks"
+      ],
+      "missing_items": [
+        "Rauchfreie Umgebung",
+        "Zimmertemperatur 16-18 Grad",
+        "Stillen"
+      ],
+      "all_valid_missing": [
+        "Rauchfreie Umgebung",
+        "Nichtrauchen",
+        "Zimmertemperatur 16-18 Grad",
+        "Kühles Schlafzimmer",
+        "Stillen",
+        "Muttermilch",
+        "Feste Matratze",
+        "Verzicht auf Nestchen"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_def_001",
+    "type": "definition",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff 'Extrauteringravidität' und  **nennen**  Sie drei mögliche Risikofaktoren.",
+    "points": 5,
+    "data": {
+      "definition": "Eine Extrauteringravidität (EUG) bezeichnet eine Schwangerschaft, bei der sich das befruchtete Ei außerhalb der Gebärmutterhöhle (meist im Eileiter) einnistet.",
+      "all_valid_answers": [
+        "Eileiterschwangerschaft",
+        "Ektatische Schwangerschaft",
+        "Nidation außerhalb des Cavum uteri"
+      ],
+      "keywords": [
+        "Einnistung",
+        "außerhalb der Gebärmutter",
+        "Eileiter",
+        "Tuben",
+        "pathologische Gravidität"
+      ],
+      "additional_items": [
+        "Vorangegangene Entzündungen (Adnexitis)",
+        "Operationen an den Eileitern",
+        "Verwachsungen",
+        "Endometriose",
+        "Anatomische Besonderheiten"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_def_002",
+    "type": "definition",
+    "topic": "ng_vorsorge",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den 'Apgar-Score' und  **nennen**  Sie die fünf beurteilten Parameter.",
+    "points": 6,
+    "data": {
+      "definition": "Der Apgar-Score ist ein standardisiertes Schema zur objektiven Beurteilung des klinischen Zustands und der Vitalität eines Neugeborenen unmittelbar nach der Geburt (1, 5 und 10 Minuten).",
+      "all_valid_answers": [
+        "Apgar-Zahl",
+        "Apgar-Schema",
+        "Vitalitätsprüfung nach Virginia Apgar"
+      ],
+      "keywords": [
+        "Vitalität",
+        "Neugeborenes",
+        " Virginia Apgar",
+        "Punkteschema",
+        "Postnatal"
+      ],
+      "additional_items": [
+        "Atmung (Respiration)",
+        "Herzschlag (Puls)",
+        "Muskeltonus (Aktivität)",
+        "Reflexe (Grimassieren)",
+        "Hautfarbe (Aussehen)"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_def_003",
+    "type": "definition",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie 'Salutogenese' nach Antonovsky und  **nennen**  Sie die drei Kernkomponenten des Kohärenzgefühls.",
+    "points": 5,
+    "data": {
+      "definition": "Salutogenese bezeichnet ein Konzept, das sich mit der Entstehung und Erhaltung von Gesundheit befasst, anstatt sich primär auf Krankheitsursachen zu konzentrieren (Gegensatz zur Pathogenese).",
+      "all_valid_answers": [
+        "Gesundheitsentstehung",
+        "Ressourcenorientierung",
+        "Salutogenetisches Modell"
+      ],
+      "keywords": [
+        "Antonovsky",
+        "Gesundheitsförderung",
+        "Ressourcen",
+        "Kohärenzgefühl",
+        "Wohlbefinden"
+      ],
+      "additional_items": [
+        "Verstehbarkeit",
+        "Handhabbarkeit (Bewältigbarkeit)",
+        "Sinnhaftigkeit (Bedeutungshaftigkeit)"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_def_004",
+    "type": "definition",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie das 'Fetale Alkoholsyndrom' (FAS) und  **nennen**  Sie vier typische Symptome.",
+    "points": 6,
+    "data": {
+      "definition": "FAS bezeichnet eine dauerhafte vorgeburtliche Schädigung des Kindes durch mütterlichen Alkoholkonsum während der Schwangerschaft, die mit körperlichen und geistigen Beeinträchtigungen einhergeht.",
+      "all_valid_answers": [
+        "Alkoholembryopathie",
+        "Fetal Alcohol Syndrome",
+        "Fetal Alcohol Spectrum Disorder (FASD)"
+      ],
+      "keywords": [
+        "Teratogen",
+        "Alkohol",
+        "irreversibel",
+        "ZNS-Schädigung",
+        "Entwicklungsstörung"
+      ],
+      "additional_items": [
+        "Wachstumsstörungen (Dystrophie)",
+        "Gesichtsanomalien (z.B. schmale Oberlippe)",
+        "Kognitive Einschränkungen",
+        "Verhaltensauffälligkeiten / Hyperaktivität",
+        "Kleiner Kopfumfang (Mikrozephalie)"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_def_005",
+    "type": "definition",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie 'Vernix caseosa' und  **nennen**  Sie drei physiologische Funktionen.",
+    "points": 5,
+    "data": {
+      "definition": "Vernix caseosa ist die weißliche Käseschmiere, die die Haut des Neugeborenen bei der Geburt bedeckt und aus Talgdrüsensekret, abgestorbenen Epidermiszellen und Wasser besteht.",
+      "all_valid_answers": [
+        "Käseschmiere",
+        "Fruchtschmiere"
+      ],
+      "keywords": [
+        "Hautbelag",
+        "Talg",
+        "Fettschicht",
+        "Schutzschicht",
+        "Postnatal"
+      ],
+      "additional_items": [
+        "Wärmeregulation / Schutz vor Hypothermie",
+        "Hautpflege / Feuchtigkeitsschutz",
+        "Infektionsprophylaxe (antibakteriell)",
+        "Gleitmittel unter der Geburt"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Aussagen zur postnatalen Kreislaufumstellung korrekt sind.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Mit dem ersten Atemzug sinkt der Gefäßwiderstand in der Lunge massiv ab.",
+          "correct": true
+        },
+        {
+          "label": "Das Foramen ovale schließt sich funktionell unmittelbar nach der Geburt durch die Druckveränderung.",
+          "correct": true
+        },
+        {
+          "label": "Der Ductus arteriosus (Botalli) bleibt physiologisch lebenslang als offene Verbindung zur Aorta bestehen.",
+          "correct": false
+        },
+        {
+          "label": "Die Herzfrequenz eines gesunden Neugeborenen liegt in Ruhe bei ca. 60–80 Schlägen pro Minute.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Mit dem ersten Atemzug sinkt der Gefäßwiderstand in der Lunge massiv ab.",
+          "text": "Durch die Belüftung der Alveolen weiten sich die Lungengefäße, wodurch Blut aus dem rechten Herzen erstmals in den Lungenkreislauf einströmen kann."
+        },
+        {
+          "option": "Der Ductus arteriosus (Botalli) bleibt physiologisch lebenslang als offene Verbindung zur Aorta bestehen.",
+          "text": "Falsch, da sich der Ductus arteriosus postnatal durch den Anstieg des Sauerstoffpartialdrucks und den Wegfall plazentarer Hormone innerhalb kurzer Zeit verschließt."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Reflexe beim reifen Neugeborenen physiologisch vorhanden sind.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Moro-Reflex (Umklammerungsreflex)",
+          "correct": true
+        },
+        {
+          "label": "Greifreflex an Händen und Füßen",
+          "correct": true
+        },
+        {
+          "label": "Such- und Saugreflex",
+          "correct": true
+        },
+        {
+          "label": "Sicherer Einbeinstand-Reflex",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Such- und Saugreflex",
+          "text": "Diese Reflexe sind überlebenswichtig, da sie die Nahrungsaufnahme durch das Auffinden der Brustwarze und das Trinken sicherstellen."
+        },
+        {
+          "option": "Sicherer Einbeinstand-Reflex",
+          "text": "Falsch, da Neugeborene aufgrund der unreifen Motorik und fehlenden Muskelkraft weder stehen noch das Gleichgewicht halten können."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_vorsorge",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Maßnahmen zur Erstversorgung (U1) im Kreißsaal gehören.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Bestimmung des Apgar-Scores",
+          "correct": true
+        },
+        {
+          "label": "Verabreichung von Vitamin K (Konakion)",
+          "correct": true
+        },
+        {
+          "label": "Abschluss der vollständigen Masern-Impfung",
+          "correct": false
+        },
+        {
+          "label": "Identifikation des Kindes (Armbändchen)",
+          "correct": true
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Verabreichung von Vitamin K (Konakion)",
+          "text": "Dies erfolgt zur Blutungsprophylaxe, da Neugeborene über geringe Speicher verfügen und ein Risiko für Vitamin-K-Mangel-Blutungen besteht."
+        },
+        {
+          "option": "Abschluss der vollständigen Masern-Impfung",
+          "text": "Falsch, da Impfungen erst deutlich später im Säuglingsalter (meist ab dem 11. Monat) durchgeführt werden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Noxen in der Schwangerschaft biologischer Natur (Infektionen) sind.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Röteln-Virus",
+          "correct": true
+        },
+        {
+          "label": "Ionisierende Strahlen (Röntgen)",
+          "correct": false
+        },
+        {
+          "label": "Toxoplasmose-Erreger",
+          "correct": true
+        },
+        {
+          "label": "Crystal Meth",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Ionisierende Strahlen (Röntgen)",
+          "text": "Dies ist eine physikalische Noxe, die Zellschäden durch Energieeinwirkung verursacht, kein lebender biologischer Erreger."
+        },
+        {
+          "option": "Röteln-Virus",
+          "text": "Es handelt sich um einen biologischen Erreger, der bei Erstinfektion in der Schwangerschaft schwere Embryopathien (Gregg-Syndrom) auslösen kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Aussagen zum physiologischen Wochenbett (Puerperium) korrekt sind.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Das Wochenbett dauert im Durchschnitt ca. 6 bis 8 Wochen.",
+          "correct": true
+        },
+        {
+          "label": "Lochien (Wochenfluss) sind bei regelrechtem Verlauf immer geruchlos und hellrot.",
+          "correct": false
+        },
+        {
+          "label": "Die Überwachung der Uterusinvolution (Rückbildung) gehört zu den Kernaufgaben der Pflege.",
+          "correct": true
+        },
+        {
+          "label": "Eine körperliche Mobilisation sollte erst nach 14 Tagen erfolgen.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Überwachung der Uterusinvolution (Rückbildung) gehört zu den Kernaufgaben der Pflege.",
+          "text": "Die Kontrolle des Fundusstandes ist essenziell, um Rückbildungsstörungen oder Blutungsrisiken durch mangelnde Kontraktion frühzeitig zu erkennen."
+        },
+        {
+          "option": "Lochien (Wochenfluss) sind bei regelrechtem Verlauf immer geruchlos und hellrot.",
+          "text": "Falsch, da sich Farbe (von Rot über Braun zu Weiß) und Konsistenz der Lochien im Verlauf der Wochen physiologisch verändern."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_001",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Berechnen**  Sie den voraussichtlichen Entbindungstermin (ET) nach der Naegele-Regel, wenn der erste Tag der letzten Menstruation der 10. Mai 2024 war (bei einem Standardzyklus von 28. Tagen). Erläutern Sie kurz Ihren Rechenweg.",
+    "points": 5,
+    "data": {
+      "keywords": ["17. Februar 2025", "plus 7 Tage", "minus 3 Monate", "plus 1 Jahr"],
+      "correct_answer": "Der voraussichtliche Entbindungstermin ist der 17. Februar 2025. Der Rechenweg nach Naegele lautet: 10. Mai + 7 Tage = 17. Mai; Mai minus 3 Monate = Februar; 2024 plus 1 Jahr = 2025. Da der Zyklus 28 Tage beträgt, sind keine weiteren Korrekturen notwendig."
+    }
+  },
+  {
+    "q_id": "m4_extra_002",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die kritische Phase der Organogenese, in der die Organanlagen des Embryos gebildet werden, findet primär zwischen der 3. und 8. Woche post conceptionem (p.c.) statt.",
+    "answer": "richtig",
+    "explanation": "In diesem Zeitfenster werden fast alle wichtigen Organsysteme angelegt, weshalb der Embryo hier besonders empfindlich gegenüber Fehlbildungen durch Noxen ist.",
+    "source_hint": "M 4.3 Handout, S. 7"
+  },
+  {
+    "q_id": "m4_extra_003",
+    "type": "zuordnung",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Ordnen**  Sie die Beispiele für eine Plazentainsuffizienz der jeweils richtigen Verlaufsform (akut oder chronisch) zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "akute Plazentainsuffizienz",
+        "B": "chronische Plazentainsuffizienz"
+      },
+      "statements": [
+        {
+          "text": "Vorzeitige Plazentaablösung (Notfall)",
+          "answer": "A"
+        },
+        {
+          "text": "Mütterlicher Nikotinabusus über die gesamte Schwangerschaft",
+          "answer": "B"
+        },
+        {
+          "text": "Schwangerschaftsinduzierte Hypertonie (SIH) mit Gefäßveränderungen",
+          "answer": "B"
+        },
+        {
+          "text": "Nabelschnurvorfall unter der Geburt",
+          "answer": "A"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_004",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie vier spezifische Symptome des neonatalen Entzugssyndroms (z. B. nach mütterlichem Crystal-Meth-Abusus).",
+    "points": 4,
+    "data": {
+      "count": 4,
+      "all_valid_answers": [
+        "Durchfall | Diarrhoe",
+        "Erbrechen | Emesis",
+        "Krampfanfälle | Konvulsionen",
+        "Trinkschwäche | gieriges Trinken",
+        "Exzessives Saugen",
+        "Hohes, schrilles Schreien",
+        "Hyperexzitabilität | Zittern | Tremor"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_005",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine Erstinfektion mit Zytomegalie (CMV) in der Schwangerschaft ist für den Fetus meist harmlos, während Varizellen (Windpocken) grundsätzlich zur sofortigen Beendigung der Schwangerschaft führen müssen.",
+    "answer": "falsch",
+    "explanation": "Zytomegalie ist eine der häufigsten und gefährlichsten Virusinfektionen für das Ungeborene; Varizellen sind ebenfalls gefährlich, führen aber nicht zwangsläufig zu einem Abbruch, sondern erfordern engmaschige Diagnostik.",
+    "source_hint": "M 4.3 Unterricht, S. 18 / Podcast-Empfehlung"
+  },
+  {
+    "q_id": "m4_extra_006",
+    "type": "definition",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie den Begriff 'Spontanpartus' (physiologische Geburt) anhand von drei wesentlichen Kriterien.",
+    "points": 4,
+    "data": {
+      "definition": "Ein Spontanpartus ist die natürliche Entbindung eines reifen Kindes aus eigener Kraft der Mutter ohne operative Hilfe.",
+      "all_valid_answers": [
+        "Physiologische Geburt",
+        "Regelrechte Entbindung"
+      ],
+      "keywords": [
+        "vordere Hinterhauptslage",
+        "reifes Kind",
+        "38. bis 42. SSW",
+        "Spontaner Beginn",
+        "keine operative Hilfe"
+      ],
+      "additional_items": [
+        "Zeitrahmen 38+0 bis 41+6 SSW",
+        "Geburt aus Schädellage",
+        "Keine Zangen- oder Vakuumextraktion"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_007",
+    "type": "freitext_box",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Erläutern**  Sie die Ursache und die klinische Bedeutung der 'Cutis marmorata' beim Neugeborenen.",
+    "points": 4,
+    "data": {
+      "keywords": ["marmorierte Haut", "instabile Durchblutung", "Kälte", "Zentralisation", "physiologisch"],
+      "correct_answer": "Die Cutis marmorata bezeichnet eine bläulich-rote Marmorierung der Haut, die durch eine noch instabile periphere Durchblutung und Vasomotorik ausgelöst wird. Sie tritt häufig als Reaktion auf Kältereize auf, wenn das Neugeborene versucht, die Körperkerntemperatur zu halten. In der Regel ist dieses Phänomen physiologisch und harmlos, sofern das Kind ansonsten vital ist."
+    }
+  },
+  {
+    "q_id": "m4_extra_008",
+    "type": "tabelle_vergleich",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": " **Vergleichen**  Sie Milien mit der Acne neonatorum hinsichtlich ihrer Ursache und Lokalisation.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Milien",
+          "Acne neonatorum"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Ursache",
+                "keywords": ["Ursache"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Talgstauung",
+                "keywords": ["Talgstau", "Verstopfung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Androgen-Produktion",
+                "keywords": ["Hormone", "Androgene"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Typische Lokalisation",
+                "keywords": ["Wo", "Lokalisation"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nase und Wange",
+                "keywords": ["Nase", "Wange"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nase, Stirn und Wange",
+                "keywords": ["Stirn", "Gesicht"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_extra_009",
+    "type": "tabelle_2spalten",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Geben**  Sie die Merkmale der beiden Hauptfontanellen des Neugeborenen an.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld",
+    "data": {
+      "table": {
+        "headers": [
+          "Fontanelle",
+          "Verschlusszeitraum"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Große Fontanelle",
+                "keywords": ["Groß"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "9. bis 26. Lebensmonat",
+                "keywords": ["9", "26", "Monat"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kleine Fontanelle",
+                "keywords": ["Klein"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "innerhalb des 1. Vierteljahres (ca. 3 Monate)",
+                "keywords": ["Vierteljahr", "3", "Monate"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_extra_010",
+    "type": "freitext_box",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "question": " **Erklären**  Sie die hormonelle Ursache für das Auftreten von 'Fluor neonatorum' (vaginaler Ausfluss) oder 'Hexenmilch' beim Neugeborenen.",
+    "points": 4,
+    "data": {
+      "keywords": ["Übertritt von Östrogenen", "mütterliche Hormone", "plazentar", "Abstoßung", "physiologisch"],
+      "correct_answer": "Sowohl der Fluor neonatorum als auch die Hexenmilch (Sekretion der kindlichen Brustdrüsen) werden durch den plazentaren Übertritt mütterlicher Hormone (insbesondere Östrogene) auf das Kind hervorgerufen. Nach der Geburt sinkt dieser Hormonspiegel beim Kind rapide ab, was zur Abstoßung von Vaginalepithel oder einer vorübergehenden Brustdrüsenschwellung führt. Beide Erscheinungen sind harmlos und bedürfen keiner Therapie."
+    }
+  },
+  {
+    "q_id": "m4_extra_011",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, warum die Vitamin-K-Gabe (Konakion) standardmäßig dreimal durchgeführt wird.",
+    "instruction_justify": " **Begründen**  Sie Ihre Wahl.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Einmalgabe bei der U1 reicht nicht aus, um den Speicher für die ersten Lebenswochen zu füllen.",
+          "correct": true
+        },
+        {
+          "label": "Vitamin K wird im Darm erst gebildet, wenn das Kind feste Nahrung erhält.",
+          "correct": false
+        },
+        {
+          "label": "Zur Vermeidung von späten Vitamin-K-Mangel-Blutungen (z. B. Hirnblutungen).",
+          "correct": true
+        },
+        {
+          "label": "Vitamin K fördert primär den Knochenaufbau im ersten Lebensjahr.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Einmalgabe bei der U1 reicht nicht aus, um den Speicher für die ersten Lebenswochen zu füllen.",
+          "text": "Neugeborene haben physiologisch sehr niedrige Vitamin-K-Reserven und nehmen über die Muttermilch nur geringe Mengen auf, weshalb supplementiert werden muss."
+        },
+        {
+          "option": "Zur Vermeidung von späten Vitamin-K-Mangel-Blutungen (z. B. Hirnblutungen).",
+          "text": "Da Vitamin K essenziell für die Bildung von Gerinnungsfaktoren ist, schützt die dreimalige Gabe (U1, U2, U3) effektiv vor lebensgefährlichen Spätblutungen."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_012",
+    "type": "richtig_falsch",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Wird eine Phenylketonurie (PKU) im Neugeborenen-Screening nicht entdeckt und bleibt sie unbehandelt, führt dies aufgrund der Anreicherung von Phenylalanin zu schweren, irreversiblen geistigen Behinderungen.",
+    "answer": "richtig",
+    "explanation": "Die PKU ist eine Aminosäurestoffwechselstörung; ohne eine phenylalaninarme Diät wird das Gehirn durch Stoffwechselprodukte dauerhaft geschädigt.",
+    "source_hint": "M 4.3 Handout, S. 68"
+  },
+  {
+    "q_id": "m4_extra_013",
+    "type": "nennen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "question": " **Nennen**  Sie die zwingende therapeutische Konsequenz für die Ernährung eines Kindes, bei dem eine Galaktosämie diagnostiziert wurde.",
+    "points": 2,
+    "data": {
+      "count": 1,
+      "all_valid_answers": [
+        "Lebenslange laktosefreie Ernährung | galaktosefreie Diät | Verzicht auf Muttermilch und normale Säuglingsnahrung"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_014",
+    "type": "definition",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": " **Definieren**  Sie die 'angeborene Hypothyreose' und  **nennen**  Sie das Standard-Screening-Verfahren.",
+    "points": 4,
+    "data": {
+      "definition": "Die angeborene Hypothyreose ist eine Unterfunktion der Schilddrüse beim Neugeborenen, die unbehandelt zu schweren körperlichen und geistigen Entwicklungsstörungen (Kretinismus) führt.",
+      "all_valid_answers": [
+        "Schilddrüsenunterfunktion"
+      ],
+      "keywords": [
+        "Schilddrüse",
+        "Unterfunktion",
+        "Hormonmangel",
+        "Stoffwechsel-Screening",
+        "TSH-Wert"
+      ],
+      "additional_items": [
+        "TSH-Bestimmung aus Fersenblut (Kapillarblut)",
+        "Zeitpunkt: 36. bis 72. Lebensstunde"
+      ]
+    }
+  },
+  {
+    "q_id": "m4_extra_015",
+    "type": "ankreuzen_begruenden",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": " **Entscheiden**  Sie, welche Vorteile das '24-Stunden-Rooming-in' für die Mutter-Kind-Bindung bietet.",
+    "instruction_justify": " **Begründen**  Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Mutter lernt die Hunger- und Schlafsignale ihres Kindes schneller kennen.",
+          "correct": true
+        },
+        {
+          "label": "Es fördert das Stillen nach Bedarf, was den Milcheinschuss begünstigt.",
+          "correct": true
+        },
+        {
+          "label": "Rooming-in ist gesetzlich vorgeschrieben und darf nicht abgelehnt werden.",
+          "correct": false
+        },
+        {
+          "label": "Die Pflegekräfte haben dadurch weniger Arbeitsaufwand bei der Dokumentation.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Mutter lernt die Hunger- und Schlafsignale ihres Kindes schneller kennen.",
+          "text": "Durch die ständige Nähe kann die Mutter unmittelbar auf Bedürfnisse reagieren, was ihre intuitive Kompetenz und die Bindung stärkt."
+        },
+        {
+          "option": "Es fördert das Stillen nach Bedarf, was den Milcheinschuss begünstigt.",
+          "text": "Häufiges Anlegen bei ersten Hungerzeichen stimuliert die Prolaktinausschüttung und sichert einen erfolgreichen Stillstart."
+        }
+      ]
+    }
+  },
+  {
+    "fall_id": "m4_fall_01",
+    "title": "Risikomanagement in der Schwangerschaft",
+    "topics_covered": ["schwangerschaft_pathol", "schwangerschaft_noxen"],
+    "patient": {
+      "name": "Sabine Wagner",
+      "alter": 34,
+      "geschlecht": "w",
+      "wohnsituation": "Lebt mit Partner in einer Stadtwohnung",
+      "beruf": "Verkäuferin"
+    },
+    "setting": "Gynäkologische Ambulanz",
+    "pflegekraft": "Sarah (Hebamme)",
+    "paragraphs": [
+      "Frau Wagner stellt sich in der 24. Schwangerschaftswoche zur Routineuntersuchung vor. Bei der Anamnese gibt sie an, dass sie es bisher nicht geschafft hat, das Rauchen vollständig aufzugeben (ca. 5-10 Zigaretten täglich). Zudem wurde bei der letzten Untersuchung ein auffälliger Glukosetoleranztest durchgeführt, der den Verdacht auf einen Gestationsdiabetes bestätigt hat.",
+      "Die Patientin wirkt besorgt über die Auswirkungen auf ihr Kind. Die Hebamme Sarah erklärt ihr die Risiken von chemischen Noxen wie Nikotin, welche die Durchblutung der Plazenta verschlechtern und zu einer chronischen Plazentainsuffizienz führen können. Sarah betont, dass es keine sichere Untergrenze für den Konsum gibt.",
+      "Bezüglich des Gestationsdiabetes wird die Notwendigkeit einer strengen Blutzuckereinstellung besprochen, um fetale Fehlbildungen oder Reifestörungen zu vermeiden. Frau Wagner wird über die Anzeichen einer metabolischen Azidose (z. B. Azetongeruch) aufgeklärt, die bei massiven Stoffwechselentgleisungen auftreten kann.",
+      "Im Beratungsgespräch werden Strategien zur Raucherentwöhnung und ein Ernährungsplan erarbeitet. Sarah plant engmaschige Kontrollen des Fundusstandes und CTG-Überwachungen ein, um das Wachstum und die Vitalität des Kindes lückenlos zu überwachen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Diagnose", "value": "Gestationsdiabetes, Nikotinabusus in der Gravidität (24. SSW)" },
+        { "label": "Empfehlung", "value": "Ernährungsberatung, Diabetestagebuch, sofortiger Rauchstopp empfohlen." }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Wagner",
+      "ERKRANKUNG": "Gestationsdiabetes und Nikotinexposition",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m4_fall_02",
+    "title": "Der erste Atemzug: Physiologische Geburt und Erstversorgung",
+    "topics_covered": ["geburt_physiol", "ng_vorsorge", "ng_adaptation"],
+    "patient": {
+      "name": "Julia Keller",
+      "alter": 28,
+      "geschlecht": "w",
+      "wohnsituation": "Einfamilienhaus, Erstgebärende",
+      "beruf": "Erzieherin"
+    },
+    "setting": "Kreißsaal",
+    "pflegekraft": "Lukas (Pflegefachmann)",
+    "paragraphs": [
+      "Frau Keller befindet sich nach einer 10-stündigen Eröffnungsperiode nun in der Austreibungsphase. Die Geburt verläuft regelhaft aus der vorderen Hinterhauptslage. Unter aktiver Mithilfe von Frau Keller wird ein gesunder Junge geboren.",
+      "Unmittelbar nach der Geburt beobachtet Lukas den ersten Atemzug des Neugeborenen, der nach ca. 20 Sekunden durch den Kältereiz und die Thoraxkompression der vaginalen Entbindung stimuliert wird. Dies leitet die Kreislaufumstellung ein, bei der sich die Lungen entfalten und die fetalen Shunts (z. B. Foramen ovale) funktionell schließen.",
+      "Lukas führt die U1-Untersuchung durch und ermittelt den Apgar-Score. Das Kind weist einen Puls über 100/min, kräftiges Schreien, aktiven Muskeltonus und rosige Haut auf, was zu einem Score von 9/10/10 führt – das Kind ist 'lebensfrisch'.",
+      "Zur Blutungsprophylaxe verabreicht Lukas dem Kind die erste Dosis Vitamin K (Konakion) oral. Anschließend wird das Kind Frau Keller zum ersten Mal zum Bonding und Stillen angelegt ('Haut an Haut'), um die emotionale Bindung und den Stillstart innerhalb der ersten 30-60 Minuten zu fördern."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Geburtsmodus", "value": "Spontanpartus aus vorderer Hinterhauptslage" },
+        { "label": "Kind", "value": "männlich, Apgar 9/10/10, Vitamin K erhalten" }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Keller",
+      "ERKRANKUNG": "Physiologischer Geburtsverlauf",
+      "PFLEGEKRAFT": "Lukas"
+    }
+  },
+  {
+    "fall_id": "m4_fall_03",
+    "title": "Herausforderungen nach der Geburtszange",
+    "topics_covered": ["ng_pathologien", "ng_neurologie"],
+    "patient": {
+      "name": "Neugeborenes Paul (Mutter: Frau Meyer)",
+      "alter": 0,
+      "geschlecht": "m",
+      "wohnsituation": "Klinik, Wochenstation",
+      "beruf": "Säugling"
+    },
+    "setting": "Wochenstation",
+    "pflegekraft": "Monika (Kinderkrankenschwester)",
+    "paragraphs": [
+      "Der kleine Paul wurde gestern mittels Zangengeburt entbunden, da es in der Austreibungsphase zu einem Geburtsstillstand kam. Heute bemerkt Monika bei der morgendlichen Pflege eine deutliche Schwellung am Kopf, die die Schädelnähte nicht überschreitet – ein Kephalhämatom aufgrund der mechanischen Einwirkung.",
+      "Bei der neurologischen Einschätzung fällt Monika auf, dass der Moro-Reflex asymmetrisch ausgelöst wird: Der linke Arm bewegt sich kaum mit. Dies deutet auf eine Plexuslähmung (Erb-Lähmung) hin, die durch Zug am Armnervengeflecht während der schwierigen Geburt entstanden sein könnte.",
+      "Zusätzlich zeigt Pauls Haut eine gelbliche Verfärbung. Monika kontrolliert den Bilirubinwert, da ein Ikterus neonatorum vorliegt. Die Ursache liegt in der Unreife der Leberenzyme und dem vermehrten Erythrozytenabbau, der durch das Kephalhämatom (Blutabbau) noch verstärkt wird [25, NG-Handout].",
+      "Monika informiert den Kinderarzt zur weiteren Diagnostik und leitet die Eltern an, Paul beim Handling besonders am betroffenen Arm zu unterstützen und auf ausreichende Flüssigkeitszufuhr zu achten, um die Bilirubinausscheidung zu fördern."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Befund", "value": "Kephalhämatom rechts, Verdacht auf Plexus-parese links, Ikterus neonatorum" },
+        { "label": "Maßnahmen", "value": "Bilirubinkontrolle, Physiotherapie-Konsil für den Arm" }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Säugling Paul",
+      "ERKRANKUNG": "Geburtstrauma und Hyperbilirubinämie",
+      "PFLEGEKRAFT": "Monika"
+    }
+  },
+  {
+    "fall_id": "m4_fall_04",
+    "title": "Sicherer Start im Wochenbett",
+    "topics_covered": ["wochenbett", "eltern_anleitung"],
+    "patient": {
+      "name": "Elena Jung",
+      "alter": 31,
+      "geschlecht": "w",
+      "wohnsituation": "Kleine Wohnung, Partner berufstätig",
+      "beruf": "Bürokauffrau"
+    },
+    "setting": "Wochenstation",
+    "pflegekraft": "Katrin (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Jung hat vor zwei Tagen ihr erstes Kind entbunden. Bei der Visite klagt sie über schmerzende Brustwarzen beim Stillen. Katrin beobachtet den Stillvorgang und korrigiert die Anlegetechnik, um den Saugreflex des Kindes optimal zu nutzen und Hautläsionen zu vermeiden.",
+      "Katrin führt die routinemäßige Kontrolle der Uterusinvolution durch. Sie tastet den Fundusstand, der sich heute etwa 2 Querfinger unter dem Nabel befindet, und beurteilt die Lochien (Wochenfluss). Sie erklärt Frau Jung, dass diese Rückbildungsvorgänge essentiell für die Heilung der Plazentahaftstelle sind [2, Wochenbett-Handout].",
+      "Im Rahmen der Entlassungsvorbereitung führt Katrin ein Anleitungsgespräch zur sicheren Schlafumgebung (SIDS-Prävention) durch. Sie betont die Rückenlage, die Verwendung eines Schlafsacks und eine Zimmertemperatur von 16-18 Grad Celsius ohne Nestchen oder Kissen.",
+      "Frau Jung äußert Unsicherheiten bei der Nabelpflege. Katrin zeigt ihr, wie sie den Nabel trocken hält und auf Entzündungszeichen achtet, bis er zwischen dem 5. und 10. Tag physiologisch abfällt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        { "label": "Status", "value": "Wochenbett Tag 2, Uterus gut kontrahiert, Stillbeginn etabliert" },
+        { "label": "Anleitung", "value": "SIDS-Prävention und Nabelpflege erfolgt" }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Jung",
+      "ERKRANKUNG": "Regelrechtes Puerperium mit Stillberatungsbedarf",
+      "PFLEGEKRAFT": "Katrin"
+    }
+  },
+  {
+    "fall_id": "m4_fall_05",
+    "title": "Familie im Wandel: Transition und Geschwisterdynamik",
+    "topics_covered": ["familie_transition", "eltern_anleitung", "gyn_grundlagen"],
+    "patient": {
+      "name": "Familie Bauer (Mutter: Karin Bauer)",
+      "alter": 33,
+      "geschlecht": "w",
+      "wohnsituation": "Drei-Zimmer-Wohnung, Tochter Mia (4 Jahre)",
+      "beruf": "Lehrerin"
+    },
+    "setting": "Ambulante Nachsorge / Hausbesuch",
+    "pflegekraft": "Annette (Familienhebamme)",
+    "paragraphs": [
+      "Annette besucht Familie Bauer eine Woche nach der Geburt von Baby Leon. Die Mutter, Karin, fühlt sich durch den Schlafmangel erschöpft, aber glücklich. Annette nutzt den Ansatz der Salutogenese nach Antonovsky, um Karins Ressourcen (Kohärenzgefühl) zu stärken und den Fokus auf das zu legen, was trotz Belastung gesund hält.",
+      "Die 4-jährige Tochter Mia zeigt jedoch deutliche Eifersucht und verhält sich zeitweise aggressiv gegenüber dem Baby oder verfällt in babyhaftes Verhalten (Regression). Annette erklärt den Eltern das Phänomen der 'Entthronung' und rät dazu, Mia exklusive Zeiträume mit den Eltern einzuräumen [19, M4.4 Handout].",
+      "Im Gespräch kommen auch körperliche Aspekte zur Sprache. Karin stellt Fragen zur Wiederaufnahme der Sexualität und den Unterschieden in der Physiologie der Geschlechtsorgane nach einer Spontangeburt. Annette erläutert die anatomischen Veränderungen an Vagina und Zervix.",
+      "Zum Abschluss gibt Annette Tipps zum ressourcenorientierten Handling von Leon. Sie zeigt den Eltern, wie sie ihn über die Seite rollend aufnehmen können, um seine Eigenbewegung zu unterstützen und Schreckreaktionen zu minimieren."
+    ],
+    "arztbrief": {
+      "show": false,
+      "fields": []
+    },
+    "variables": {
+      "PATIENT": "Familie Bauer",
+      "ERKRANKUNG": "Psychosoziale Transition und Geschwisterrivalität",
+      "PFLEGEKRAFT": "Annette"
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "statement": "Das von [PATIENT] konsumierte Nikotin gehört zur Gruppe der chemischen Noxen.",
+    "answer": "richtig",
+    "explanation": "Nikotin und andere Suchtmittel werden als chemische Noxen klassifiziert, während ionisierende Strahlen physikalische und Infektionen biologische Noxen sind.",
+    "source_hint": "M 4.3 Handout, S. 7"
+  },
+  {
+    "q_id": "m4_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Nennen**  Sie drei potenzielle Risiken des Gestationsdiabetes für das Kind von [PATIENT].",
+    "list_label": "Risiken bei Gestationsdiabetes",
+    "count": 3,
+    "correct_answers": ["Fehlbildungen", "Reifestörungen", "Makrosomie", "metabolische Azidose"],
+    "all_valid_answers": ["Fehlbildungen", "Organfehlbildungen", "Reifestörungen", "Wachstumsstörungen", "Makrosomie", "hohes Geburtsgewicht", "metabolische Azidose", "Stoffwechselentgleisung"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Risiko"
+  },
+  {
+    "q_id": "m4_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Erläutern**  Sie, warum [PFLEGEKRAFT] gegenüber [PATIENT] betont, dass es beim Nikotinkonsum 'keine sichere Untergrenze' gibt.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Erläuterung der Plazentagängigkeit und Durchblutung.",
+    "data": {
+      "box_label": "Nikotinexposition in der Gravidität",
+      "correct_answer": "Nikotin gelangt als chemische Noxe ungehindert über die Plazentaschranke zum Kind. Es führt zu einer Vasokonstriktion der plazentaren Gefäße, was die Sauerstoff- und Nährstoffversorgung verschlechtert. Da das Kind die Giftstoffe nicht wie ein Erwachsener abbauen kann, wirkt jede Menge schädigend auf die Entwicklung.",
+      "keywords": ["Plazentaschranke", "Durchblutung", "Vasokonstriktion", "Nährstoffversorgung", "Sauerstoffmangel"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "statement": "Ein Azetongeruch in der Ausatemluft von [PATIENT] wäre ein ernstzunehmendes Warnzeichen für eine metabolische Azidose infolge des Gestationsdiabetes.",
+    "answer": "richtig",
+    "explanation": "Bei massiven Stoffwechselentgleisungen entstehen Ketonkörper, die über die Lunge als Azeton (Nagellackentferner-Geruch) abgeatmet werden.",
+    "source_hint": "Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction_select": " **Entscheiden**  Sie, welche Komplikation durch den Nikotinabusus bei [PATIENT] primär zu befürchten ist.",
+    "instruction_justify": " **Begründen**  Sie Ihre Entscheidung kurz.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Akute Plazentainsuffizienz", "correct": false },
+        { "label": "Chronische Plazentainsuffizienz", "correct": true },
+        { "label": "Frühgestose (Hyperemesis)", "correct": false },
+        { "label": "Down-Syndrom", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Chronische Plazentainsuffizienz",
+          "text": "Dauerhafter Nikotinkonsum schädigt die Plazentagefäße über die Zeit, was zu einer anhaltenden Unterversorgung und Wachstumsverzögerung des Kindes führt."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_tab_001",
+    "type": "tabelle_2spalten",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Benennen**  Sie zwei Überwachungsmaßnahmen, die [PFLEGEKRAFT] für [PATIENT] geplant hat, und deren Ziel.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": ["Maßnahme", "Ziel"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "CTG-Überwachung", "keywords": ["CTG"] },
+              { "type": "textarea", "correct_answer": "Überprüfung der kindlichen Herztöne / Vitalität", "keywords": ["Herztöne", "Vitalität"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Kontrolle des Fundusstandes", "keywords": ["Fundus"] },
+              { "type": "textarea", "correct_answer": "Beurteilung des zeitgerechten Gebärmutter- und Kindswachstums", "keywords": ["Wachstum", "Größe"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "schwangerschaft_physiol",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Ordnen**  Sie die Merkmale aus der Anamnese von [PATIENT] dem korrekten zeitlichen Abschnitt der Schwangerschaft zu.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "1. Trimenon",
+        "B": "2. Trimenon"
+      },
+      "statements": [
+        { "text": "Organogenese (Anfälligkeit für Fehlbildungen durch Noxen)", "answer": "A" },
+        { "text": "Aktueller Vorstellungszeitpunkt (24. SSW)", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Erläutern**  Sie den Zusammenhang zwischen der 24. SSW von [PATIENT] und der Gefahr der Fetopathie.",
+    "points": 5,
+    "data": {
+      "keywords": ["ab 9. SSW", "Reifungsstörung", "Wachstumsstörung", "Fetopathie", "Organreifung"],
+      "correct_answer": "Da [PATIENT] in der 24. SSW ist, befindet sie sich weit jenseits der Embryonalphase. Schädigende Einflüsse wie Nikotin führen nun nicht mehr primär zu Fehlbildungen der Organanlagen (Embryopathie), sondern zu Störungen der Organfunktion, Reifung und des Wachstums (Fetopathie). Das Kind ist also weiterhin gefährdet, jedoch in Form von Reifedefiziten.",
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "schwangerschaft_pathol",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "statement": "Bei der Beratung von [PATIENT] sollte [PFLEGEKRAFT] auch darauf hinweisen, dass Diabetes ein Risikofaktor für die Entstehung einer Spätgestose (SIH) ist.",
+    "answer": "richtig",
+    "explanation": "Laut Material gehören Frauen mit Diabetes mellitus zur Risikogruppe für die Entwicklung einer schwangerschaftsinduzierten Hypertonie.",
+    "source_hint": "Handout Pathologische Schwangerschaft"
+  },
+  {
+    "q_id": "m4_fall_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "schwangerschaft_noxen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_01"],
+    "instruction": " **Definieren**  Sie 'teratogene Noxen' im Kontext der Beratung von [PATIENT] und  **nennen**  Sie zwei weitere chemische Beispiele.",
+    "points": 5,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "Stoffe oder Einflüsse, die bei Exposition der Schwangeren Fehlbildungen oder Schädigungen beim ungeborenen Kind hervorrufen können.",
+      "definition_keywords": ["Fehlbildungen", "Schädigungen", "Ungeborenes", "Exposition"],
+      "definition_points": 3,
+      "examples_label": "Weitere chemische Noxen",
+      "examples_count": 2,
+      "correct_examples": ["Alkohol", "Medikamente", "Drogen", "Crystal Meth"],
+      "all_valid_examples": ["Alkohol", "Ethanol", "Medikamente", "Zytostatika", "Drogen", "Suchtmittel", "Crystal Meth", "Heroin"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "ng_adaptation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "statement": "Der erste Atemzug des Kindes von [PATIENT] wird unter anderem durch den Thoraxdruck während der Passage der vaginalen Entbindung begünstigt.",
+    "answer": "richtig",
+    "explanation": "Die Thoraxkompression bei der vaginalen Geburt hilft, Fruchtwasser aus der Lunge zu pressen und bereitet die Entfaltung der Alveolen vor.",
+    "source_hint": "M 4.3 Unterricht, S. 30"
+  },
+  {
+    "q_id": "m4_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Erläutern**  Sie die Zusammensetzung des Apgar-Scores von 9/10/10 für das Kind von [PATIENT].",
+    "points": 5,
+    "data": {
+      "box_label": "Apgar-Beurteilung",
+      "correct_answer": "Der Score von 9 nach einer Minute bedeutet, dass ein Punkt abgezogen wurde, meist aufgrund einer noch bläulichen Hautfarbe der Akren (Hautfarbe 1 Punkt). Die Werte 10 nach 5 und 10 Minuten zeigen eine optimale Anpassung in allen fünf Kategorien: Herzfrequenz über 100/min, kräftiges Schreien (Atmung), aktiver Muskeltonus, rosige Hautfarbe und prompte Reflexe.",
+      "keywords": ["Akren", "Hautfarbe", "Puls", "Atmung", "Reflexe", "Muskeltonus"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction_select": " **Entscheiden**  Sie, welche Prophylaxe [PFLEGEKRAFT] dem Kind von [PATIENT] unmittelbar verabreicht hat.",
+    "instruction_justify": " **Begründen**  Sie die Notwendigkeit dieser Maßnahme.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Vitamin-K-Prophylaxe", "correct": true },
+        { "label": "Hörscreening", "correct": false },
+        { "label": "PKU-Screening", "correct": false },
+        { "label": "Credé-Prophylaxe", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Vitamin-K-Prophylaxe",
+          "text": "Da Neugeborene geringe Vitamin-K-Speicher haben, dient die Gabe von Konakion der Vermeidung von gefährlichen Blutungskomplikationen (Blutungsprophylaxe)."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Nennen**  Sie die drei Kriterien eines Spontanpartus, die auf die Entbindung von [PATIENT] zutreffen.",
+    "list_label": "Merkmale Spontanpartus",
+    "count": 3,
+    "correct_answers": ["reifes Kind", "38.-42. SSW", "vordere Hinterhauptslage", "aus eigener Kraft / ohne operative Hilfe"],
+    "all_valid_answers": ["reifes Kind", "Termingeburt", "38. bis 42. Woche", "vordere Hinterhauptslage", "Schädellage", "ohne Zange/Vakuum", "ohne operative Hilfe"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Kriterium"
+  },
+  {
+    "q_id": "m4_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "ng_adaptation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Beschreiben**  Sie die Kreislaufumstellung, die [PFLEGEKRAFT] unmittelbar nach dem ersten Atemzug des Kindes beobachtet.",
+    "points": 5,
+    "data": {
+      "keywords": ["Lungenentfaltung", "Gefäßwiderstand", "Foramen ovale", "Ductus arteriosus", "Shunt-Verschluss"],
+      "correct_answer": "Durch den ersten Atemzug entfalten sich die Lungen, wodurch der Gefäßwiderstand sinkt und die Lungen durchblutet werden. Dies führt zu einer Druckumkehr im Herzen, die das Foramen ovale funktionell verschließt. In der Folge schließen sich auch der Ductus arteriosus und der Ductus venosus, womit der Übergang vom fetalen zum postnatalen Kreislauf vollzogen ist.",
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "statement": "Das von [PFLEGEKRAFT] geförderte Bonding zwischen [PATIENT] und ihrem Kind sollte idealerweise über einen Zeitraum von 2 Stunden ermöglicht werden.",
+    "answer": "richtig",
+    "explanation": "Laut Unterrichtsmaterialien wird eine Bonding-Dauer von ca. 2 Stunden empfohlen, um die Bindung optimal zu festigen.",
+    "source_hint": "M 4.3 Unterricht, S. 31"
+  },
+  {
+    "q_id": "m4_fall_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Vervollständigen**  Sie den Prophylaxe-Plan für Vitamin K, den [PFLEGEKRAFT] mit [PATIENT] bespricht.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld",
+    "data": {
+      "table": {
+        "headers": ["Zeitpunkt", "Dosis", "Verabreichung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "U1 (nach Geburt)", "keywords": ["U1"] },
+              { "type": "input", "correct_answer": "2 mg Konakion", "keywords": ["2", "mg"] },
+              { "type": "input", "correct_answer": "oral (Tropfen)", "keywords": ["oral", "Tropfen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "U2 (3.-10. Tag)", "keywords": ["U2"] },
+              { "type": "input", "correct_answer": "2 mg Konakion", "keywords": ["2", "mg"] },
+              { "type": "input", "correct_answer": "oral (Tropfen)", "keywords": ["oral", "Tropfen"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_fall_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Ergänzen**  Sie die weiteren Bestandteile der U1-Untersuchung, die [PFLEGEKRAFT] neben dem Apgar-Score durchführt.",
+    "points": 3,
+    "data": {
+      "list_label": "Bestandteile U1",
+      "given_items": ["Apgar-Score", "Vitamin-K-Gabe"],
+      "missing_items": ["Maße und Gewichte", "Ausschluss von Fehlbildungen", "Identifikation"],
+      "all_valid_missing": ["Körperlänge", "Gewicht", "Kopfumfang", "Fehlbildungen prüfen", "Geburtstraumata prüfen", "Armbändchen", "Namensarmband", "Nabelschnur-pH"]
+    }
+  },
+  {
+    "q_id": "m4_fall_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "instruction": " **Definieren**  Sie den Begriff 'Bonding' im Kontext der Erstversorgung durch [PFLEGEKRAFT] und  **nennen**  Sie zwei Wahrnehmungsebenen des Kindes dabei.",
+    "points": 5,
+    "data": {
+      "definition_label": "Definition Bonding",
+      "definition_correct": "Die frühe emotionale Bindungsaufnahme zwischen Eltern und Kind unmittelbar nach der Geburt, primär durch Haut-zu-Haut-Kontakt.",
+      "definition_keywords": ["Bindung", "emotional", "Hautkontakt", "postnatal"],
+      "definition_points": 3,
+      "examples_label": "Wahrnehmungsebenen des NG",
+      "examples_count": 2,
+      "correct_examples": ["Stimme", "Geruch", "Hautkontakt"],
+      "all_valid_examples": ["Stimme", "Hören", "Geruch", "Riechen", "Hautkontakt", "Tasten", "Wärme"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "geburt_physiol",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_02"],
+    "statement": "Bei [PATIENT] dauerte die Eröffnungsperiode 10 Stunden, was für eine Erstgebärende im physiologischen Normbereich liegt.",
+    "answer": "richtig",
+    "explanation": "Laut Handout dauert die Eröffnungsperiode bei Erstgebärenden durchschnittlich ca. 10 bis 12 Stunden.",
+    "source_hint": "Handout Die Geburt"
+  },
+  {
+    "q_id": "m4_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "statement": "Das bei [PATIENT] beobachtete Kephalhämatom überschreitet im Verlauf niemals die Schädelnähte (Suturen).",
+    "answer": "richtig",
+    "explanation": "Ein Kephalhämatom ist eine Blutung unter der Knochenhaut und bleibt daher auf die Fläche des jeweiligen Schädelknochens begrenzt.",
+    "source_hint": "M 4.3 Unterricht, S. 33/37"
+  },
+  {
+    "q_id": "m4_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Erklären**  Sie den Zusammenhang zwischen dem Kephalhämatom und der gelblichen Hautfarbe (Ikterus) von [PATIENT].",
+    "points": 5,
+    "data": {
+      "box_label": "Pathophysiologie Ikterus",
+      "correct_answer": "Durch das Kephalhämatom muss eine zusätzliche Menge an extravasalem Blut abgebaut werden. Dabei fällt vermehrt Bilirubin an. Da die Leber von [PATIENT] aufgrund einer physiologischen Unreife der Glukuronyltransferase noch nicht voll leistungsfähig ist, kumuliert das Bilirubin im Gewebe und führt zur Gelbfärbung der Haut.",
+      "keywords": ["Bilirubinabbau", "Erythrozyten", "Leberunreife", "Glukuronyltransferase", "indirektes Bilirubin"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Nennen**  Sie vier weitere physiologische Reflexe außer dem Moro-Reflex, die [PFLEGEKRAFT] bei [PATIENT] prüfen kann.",
+    "list_label": "Neugeborenenreflexe",
+    "count": 4,
+    "correct_answers": ["Saugreflex", "Suchreflex", "Greifreflex", "Schreitphänomen"],
+    "all_valid_answers": ["Saugreflex", "Suchreflex", "Rooting-Reflex", "Greifreflex", "Palmargreifreflex", "Schreitphänomen", "Galant-Reflex", "Puppenaugenphänomen"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Reflex"
+  },
+  {
+    "q_id": "m4_fall_tab_003",
+    "type": "tabelle_vergleich",
+    "topic": "ng_pathologien",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Unterscheiden**  Sie für die Eltern von [PATIENT] das Kephalhämatom von der Geburtsgeschwulst.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": ["Merkmal", "Kephalhämatom", "Geburtsgeschwulst"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Inhalt", "keywords": ["Inhalt", "Art"] },
+              { "type": "input", "correct_answer": "Blut (subperiostal)", "keywords": ["Blut"] },
+              { "type": "input", "correct_answer": "Ödem / Wasser", "keywords": ["Ödem", "Wasser"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Grenzen", "keywords": ["Grenze", "Naht"] },
+              { "type": "input", "correct_answer": "begrenzt durch Schädelnähte", "keywords": ["begrenzt", "Schädelnähte"] },
+              { "type": "input", "correct_answer": "überschreitet Schädelnähte", "keywords": ["überschreitet"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Beschreiben**  Sie die Ursache der bei [PATIENT] vermuteten Erb-Lähmung.",
+    "points": 4,
+    "data": {
+      "keywords": ["Plexuslähmung", "Zug", "Armnervengeflecht", "Geburtstrauma", "Schulterdystokie"],
+      "correct_answer": "Die Erb-Lähmung (Plexusparese) entsteht durch ein mechanisches Trauma während der Geburt, meist durch starken Zug oder Druck auf den Kopf bei festsitzender Schulter. Dabei werden die Nerven des Armgeflechts (Plexus brachialis) gedehnt oder geschädigt, was zu einer Bewegungsunfähigkeit des betroffenen Arms führt.",
+      "min_rows": 3
+    }
+  },
+  {
+    "q_id": "m4_fall_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction_select": " **Entscheiden**  Sie, welche Maßnahme zur Behandlung des Ikterus bei [PATIENT] bei steigenden Werten indiziert ist.",
+    "instruction_justify": " **Begründen**  Sie die Gefahr, die ohne Behandlung besteht.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Fototherapie", "correct": true },
+        { "label": "Antibiotikagabe", "correct": false },
+        { "label": "Vitamin-K-Hochdosis", "correct": false },
+        { "label": "Sofortiger Abstillen", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Fototherapie",
+          "text": "Wenn der Bilirubinwert zu hoch ansteigt, besteht die Gefahr eines Kernikterus (Gehirnschädigung). Fototherapie wandelt das Bilirubin in eine wasserlösliche Form um."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_008",
+    "type": "richtig_falsch",
+    "topic": "ng_neurologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "statement": "Der Moro-Reflex sollte bei einem gesunden Neugeborenen symmetrisch ausgelöst werden; die Asymmetrie bei [PATIENT] ist ein pathologischer Befund.",
+    "answer": "richtig",
+    "explanation": "Eine einseitige Reaktion beim Moro-Reflex deutet immer auf eine Verletzung (z.B. Fraktur oder Nervenlähmung) der nicht reagierenden Seite hin.",
+    "source_hint": "M 4.3 Unterricht, S. 37"
+  },
+  {
+    "q_id": "m4_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "ng_pathologien",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Ordnen**  Sie die Befunde von [PATIENT] der korrekten medizinischen Kategorie zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Weichteilverletzung",
+        "B": "Nervenläsion",
+        "C": "Anpassungsstörung"
+      },
+      "statements": [
+        { "text": "Kephalhämatom", "answer": "A" },
+        { "text": "Erb-Plexuslähmung", "answer": "B" },
+        { "text": "Ikterus neonatorum", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "ng_vorsorge",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "instruction": " **Definieren**  Sie 'Analatresie' und  **erklären**  Sie, warum [PFLEGEKRAFT] bei [PATIENT] vor der rektalen Temperaturmessung die Durchgängigkeit prüfen muss.",
+    "points": 5,
+    "data": {
+      "definition_label": "Analatresie",
+      "definition_correct": "Eine angeborene Fehlbildung, bei der der Afterverschluss (Atresie) vorliegt, also keine natürliche Öffnung des Mastdarms nach außen besteht.",
+      "definition_keywords": ["Fehlbildung", "Verschluss", "After", "Mastdarm"],
+      "definition_points": 3,
+      "examples_label": "Kontraindikation",
+      "examples_count": 1,
+      "correct_examples": ["Rektale Temperaturmessung streng kontraindiziert bei Verdacht auf Atresie"],
+      "all_valid_examples": ["Keine rektale Messung ohne ärztliche Prüfung der Durchgängigkeit", "Gefahr von Darmperforation"],
+      "points_per_example": 2
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_009",
+    "type": "richtig_falsch",
+    "topic": "ng_pathologien",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_03"],
+    "statement": "Zur Förderung der Bilirubinausscheidung bei [PATIENT] ist eine ausreichende Flüssigkeitszufuhr (Stillen/Füttern) eine essenzielle pflegerische Maßnahme.",
+    "answer": "richtig",
+    "explanation": "Flüssigkeit regt die Darmtätigkeit und Nierenfunktion an, wodurch Bilirubin schneller ausgeschieden werden kann.",
+    "source_hint": "Fallbeschreibung Paul"
+  },
+  {
+    "q_id": "m4_fall_rf_010",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "statement": "Die von [PFLEGEKRAFT] beobachteten Lochien (Wochenfluss) verändern im Verlauf des Puerperiums ihre Farbe von hellrot über bräunlich bis hin zu weißlich-gelb.",
+    "answer": "richtig",
+    "explanation": "Dies beschreibt den physiologischen Heilungsprozess der Plazentahaftstelle im Uterus [Wochenbett-Handout].",
+    "source_hint": "Handout Pflege im Wochenbett"
+  },
+  {
+    "q_id": "m4_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Beschreiben**  Sie den Vorgang der Uterusinvolution bei [PATIENT] und erläutern Sie, wie [PFLEGEKRAFT] diesen Prozess objektiv beurteilen kann.",
+    "points": 5,
+    "data": {
+      "box_label": "Uterusinvolution und Überwachung",
+      "correct_answer": "Die Uterusinvolution beschreibt die Rückbildung der Gebärmutter nach der Geburt. [PFLEGEKRAFT] beurteilt dies durch das Tasten des Fundusstandes im Verhältnis zum Nabel sowie durch die Kontrolle der Uteruskontraktion (fest vs. weich). Bei [PATIENT] liegt der Fundus am 2. Tag post partum physiologisch ca. 2 Querfinger unter dem Nabel.",
+      "keywords": ["Rückbildung", "Fundusstand", "Nabel", "Kontraktion", "Querfinger"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "eltern_anleitung",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Nennen**  Sie vier Maßnahmen zur SIDS-Prävention, die [PFLEGEKRAFT] im Entlassungsgespräch mit [PATIENT] thematisieren muss.",
+    "list_label": "SIDS-Präventionsmaßnahmen",
+    "count": 4,
+    "correct_answers": ["Rückenlage", "Schlafsack statt Decke", "rauchfreie Umgebung", "Zimmertemperatur 16-18°C"],
+    "all_valid_answers": ["Rückenlage", "Schlafen auf dem Rücken", "Schlafsack verwenden", "Keine Decken/Kissen", "Rauchfreie Umgebung", "Nichtrauchen", "Zimmertemperatur 16-18 Grad", "Kühles Schlafzimmer", "Feste Matratze", "Stillen"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme"
+  },
+  {
+    "q_id": "m4_fall_tab_004",
+    "type": "tabelle_2spalten",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Ordnen**  Sie den Lochien-Phasen die korrekte Farbe und den ungefähren Zeitraum zu, den [PFLEGEKRAFT] bei [PATIENT] überwacht.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld",
+    "data": {
+      "table": {
+        "headers": ["Wochenfluss-Phase", "Physiologische Farbe"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Lochia rubra (ca. 1.-3. Tag)", "keywords": ["rubra", "rot"] },
+              { "type": "input", "correct_answer": "Blutig / hellrot", "keywords": ["blutig", "rot"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Lochia fusca (ca. Ende 1. Woche)", "keywords": ["fusca", "braun"] },
+              { "type": "input", "correct_answer": "Braunrot / bräunlich", "keywords": ["braun"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_fall_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction_select": " **Entscheiden**  Sie, welcher physiologische Reflex des Neugeborenen bei der Korrektur der Anlegetechnik durch [PFLEGEKRAFT] besonders genutzt wird.",
+    "instruction_justify": " **Begründen**  Sie, warum die korrekte Technik Hautläsionen bei [PATIENT] verhindert.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Moro-Reflex", "correct": false },
+        { "label": "Saug- und Suchreflex", "correct": true },
+        { "label": "Greifreflex", "correct": false },
+        { "label": "Galant-Reflex", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Saug- und Suchreflex",
+          "text": "Durch das korrekte Anlegen erfasst das Kind den Warzenhof vollständig mit dem Mund. Dies verhindert mechanische Reibung an der Brustwarzenspitze und nutzt den Saugreflex effektiv aus."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_011",
+    "type": "richtig_falsch",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "statement": "Sollte [PFLEGEKRAFT] bei [PATIENT] feststellen, dass der Uterusfundus druckschmerzhaft ist oder die Lochien übelriechend sind, ist dies ein physiologischer Befund am 2. Tag.",
+    "answer": "falsch",
+    "explanation": "Druckschmerzhaftigkeit und übelriechende Lochien sind Warnsignale für eine Infektion (z. B. Endometritis) und erfordern ärztliche Abklärung.",
+    "source_hint": "Handout Pflege im Wochenbett, S. 12"
+  },
+  {
+    "q_id": "m4_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Nennen**  Sie drei Entzündungszeichen am Nabel, auf die [PFLEGEKRAFT] [PATIENT] in der Anleitung besonders hinweisen muss.",
+    "list_label": "Entzündungszeichen Nabel",
+    "count": 3,
+    "correct_answers": ["Rötung", "Schwellung", "übler Geruch", "Eitriges Sekret"],
+    "all_valid_answers": ["Rötung", "Rubor", "Schwellung", "Tumor", "Geruch", "Foetor", "Eiter", "Sekretion", "Nabelrötung"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Zeichen"
+  },
+  {
+    "q_id": "m4_fall_def_004",
+    "type": "definition",
+    "topic": "wochenbett",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Definieren**  Sie den Zeitraum des 'Wochenbetts' (Puerperium), in dem sich [PATIENT] gerade befindet.",
+    "points": 3,
+    "data": {
+      "definition": "Das Wochenbett umfasst den Zeitraum von der Geburt des Kindes und der Plazenta bis zur vollständigen Rückbildung der schwangerschaftsbedingten Veränderungen.",
+      "all_valid_answers": ["Puerperium", "Rückbildungsphase"],
+      "keywords": ["6 bis 8 Wochen", "Postnatal", "Rückbildung", "Heilung"],
+      "additional_items": ["Dauer ca. 6-8 Wochen"]
+    }
+  },
+  {
+    "q_id": "m4_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "wochenbett",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Begründen**  Sie, warum [PFLEGEKRAFT] das Bonding (Haut-zu-Haut-Kontakt) zwischen [PATIENT] und ihrem Kind auch am 2. Tag noch aktiv fördern sollte.",
+    "points": 4,
+    "data": {
+      "box_label": "Bedeutung des Bondings",
+      "correct_answer": "Bonding fördert die emotionale Bindung und Urbindung zwischen Mutter und Kind. Der Hautkontakt stimuliert die Oxytocinausschüttung bei [PATIENT], was die Milchbildung und die Uterusinvolution unterstützt. Gleichzeitig wirkt es beruhigend auf den Säugling und stabilisiert seine Vitalwerte.",
+      "keywords": ["Bindung", "Oxytocin", "Milchbildung", "Stabilisierung", "Urbindung"],
+      "min_rows": 3
+    }
+  },
+  {
+    "q_id": "m4_fall_zu_003",
+    "type": "zuordnung",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_04"],
+    "instruction": " **Ordnen**  Sie die Gegenstände aus dem Schlafumfeld von [PATIENT]s Kind der korrekten Bewertung im Sinne der SIDS-Prävention zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Empfehlenswert",
+        "B": "Gefährlich / Nicht empfohlen"
+      },
+      "statements": [
+        { "text": "Babyschlafsack in passender Größe", "answer": "A" },
+        { "text": "Felle oder weiche Nestchen im Kopfbereich", "answer": "B" },
+        { "text": "Große, lose Kopfkissen und Federbetten", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Erläutern**  Sie das von [PFLEGEKRAFT] beschriebene Phänomen der 'Entthronung' bei Tochter Mia.",
+    "points": 5,
+    "data": {
+      "box_label": "Entthronung im Geschwistersystem",
+      "correct_answer": "Entthronung bezeichnet den Statusverlust des erstgeborenen Kindes durch die Ankunft eines Geschwisterchens. Das Kind ist nicht mehr der alleinige Mittelpunkt der elterlichen Aufmerksamkeit und muss Ressourcen teilen. Dies führt häufig zu Eifersucht, Aggression oder Regression, wie im Fall von Mia beobachtet.",
+      "keywords": ["Statusverlust", "Aufmerksamkeit", "Eifersucht", "Regression", "Ressourcenteilung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_012",
+    "type": "richtig_falsch",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "statement": "Der Salutogenese-Ansatz, den [PFLEGEKRAFT] bei [PATIENT] anwendet, zielt primär darauf ab, Krankheitsursachen (Pathogenese) im Wochenbett zu identifizieren.",
+    "answer": "falsch",
+    "explanation": "Die Salutogenese fokussiert auf die Entstehung und Erhaltung von Gesundheit sowie die Stärkung von Ressourcen (Kohärenzgefühl), nicht auf die Krankheit.",
+    "source_hint": "M 4.4 Handout, S. 21/27"
+  },
+  {
+    "q_id": "m4_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Nennen**  Sie die drei Komponenten des Kohärenzgefühls nach Antonovsky, die [PFLEGEKRAFT] bei Mutter Karin stärken möchte.",
+    "list_label": "Säulen des Kohärenzgefühls",
+    "count": 3,
+    "correct_answers": ["Verstehbarkeit", "Handhabbarkeit", "Sinnhaftigkeit"],
+    "all_valid_answers": ["Verstehbarkeit", "Comprehensibility", "Handhabbarkeit", "Bewältigbarkeit", "Manageability", "Sinnhaftigkeit", "Bedeutungshaftigkeit", "Meaningfulness"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Begriff"
+  },
+  {
+    "q_id": "m4_fall_tab_005",
+    "type": "tabelle_2spalten",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Benennen**  Sie zwei Prinzipien des ressourcenorientierten Handlings, die [PFLEGEKRAFT] den Eltern zeigt.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld",
+    "data": {
+      "table": {
+        "headers": ["Handling-Technik", "Begründung / Ziel"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Über die Seite rollen", "keywords": ["Seite", "rollen"] },
+              { "type": "textarea", "correct_answer": "Unterstützung der Eigenbewegung / Vermeidung von Schreckreaktionen", "keywords": ["Eigenbewegung", "Schreck", "Moro"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Körpernahes Tragen / Begrenzung", "keywords": ["Tragen", "Begrenzung"] },
+              { "type": "textarea", "correct_answer": "Förderung der Sicherheit und Körperwahrnehmung", "keywords": ["Sicherheit", "Wahrnehmung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m4_fall_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "gyn_grundlagen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction_select": " **Entscheiden**  Sie, welche anatomische Veränderung nach der Spontangeburt von [PATIENT] dauerhaft bestehen bleibt.",
+    "instruction_justify": " **Begründen**  Sie Ihre Wahl.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Vollständiger Verschluss der Vagina", "correct": false },
+        { "label": "Quergeschlitzter äußerer Muttermund", "correct": true },
+        { "label": "Punktförmiger äußerer Muttermund", "correct": false },
+        { "label": "Vollständige Regeneration des Hymens", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Quergeschlitzter äußerer Muttermund",
+          "text": "Nach einer vaginalen Geburt verändert sich die Zervixöffnung von einer punktförmigen (Nullipara) zu einer quergeschlitzten Form (Para)."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m4_fall_rf_013",
+    "type": "richtig_falsch",
+    "topic": "familie_transition",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "statement": "Die von [PFLEGEKRAFT] begleitete Transition beschreibt den Übergang von der Paarbeziehung zur Elternschaft als einen krisenhaften, aber entwicklungsfördernden Prozess.",
+    "answer": "richtig",
+    "explanation": "Transitionen sind Schwellenereignisse im Lebenslauf, die eine Neuanpassung aller Rollen im System erfordern [M 4.4 Handout].",
+    "source_hint": "Handout Eltern werden"
+  },
+  {
+    "q_id": "m4_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Nennen**  Sie drei professionelle Akteure außerhalb der Klinik, die [PATIENT] im ersten Lebensjahr unterstützen können.",
+    "list_label": "Professionelle Unterstützung",
+    "count": 3,
+    "correct_answers": ["Freiberufliche Hebamme", "Familienhebamme", "Kinderarzt", "Frühe Hilfen"],
+    "all_valid_answers": ["Hebamme", "Familienhebamme", "Kinderarzt", "Kinderärztin", "Frühe Hilfen", "Sozialpädiatrisches Zentrum", "Stillberatung", "Jugendamt / Erziehungsberatung"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Nennung"
+  },
+  {
+    "q_id": "m4_fall_def_005",
+    "type": "definition",
+    "topic": "familie_transition",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Definieren**  Sie den Begriff 'Primäre Sozialisation' im Kontext der neuen Familie von [PATIENT].",
+    "points": 4,
+    "data": {
+      "definition": "Die primäre Sozialisation ist der erste und wichtigste Abschnitt des Hineinwachsens eines Kindes in die Gesellschaft, der fast ausschließlich innerhalb der Kernfamilie stattfindet.",
+      "all_valid_answers": ["Basis-Sozialisation", "Familiäre Sozialisation"],
+      "keywords": ["Kernfamilie", "Wertevermittlung", "Erziehung", "Grundsteinlegung", "Integration"],
+      "additional_items": ["Findet in den ersten Lebensjahren statt"]
+    }
+  },
+  {
+    "q_id": "m4_fall_ft_010",
+    "type": "freitext_box",
+    "topic": "eltern_anleitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Beschreiben**  Sie, wie [PFLEGEKRAFT] die Eltern anleitet, Leon 'über die Seite rollend' aufzunehmen, und warum dies ressourcenorientiert ist.",
+    "points": 5,
+    "data": {
+      "box_label": "Ressourcenorientiertes Handling",
+      "correct_answer": "Beim Aufnehmen wird der Säugling sanft über die Seite gerollt, bevor er angehoben wird. Dies ist ressourcenorientiert, da es die physiologische Bewegungsabfolge unterstützt, das Kind aktiv in den Prozess einbezieht und den Moro-Reflex (Schreckreaktion durch Fallgefühl) vermeidet. Es fördert die Körperwahrnehmung und Sicherheit von Leon.",
+      "keywords": ["rollen", "physiologisch", "Moro-Reflex", "Körperwahrnehmung", "Interaktion"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m4_fall_zu_004",
+    "type": "zuordnung",
+    "topic": "familie_transition",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m4_fall_05"],
+    "instruction": " **Ordnen**  Sie die Aussagen von Mutter Karin den drei Komponenten des Kohärenzgefühls nach Antonovsky zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Verstehbarkeit",
+        "B": "Handhabbarkeit",
+        "C": "Sinnhaftigkeit"
+      },
+      "statements": [
+        { "text": "'Ich begreife jetzt, warum Leon nachts so oft weint.'", "answer": "A" },
+        { "text": "'Trotz des Schlafmangels erfüllt mich die Sorge um Leon sehr.'", "answer": "C" },
+        { "text": "'Ich weiß mir bei Mias Eifersucht jetzt besser zu helfen.'", "answer": "B" }
+      ]
+    }
+  }
+]
