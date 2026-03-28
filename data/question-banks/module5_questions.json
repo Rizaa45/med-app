@@ -1,0 +1,5220 @@
+[
+  {
+    "q_id": "m5_rf_001",
+    "type": "richtig_falsch",
+    "topic": "chirurgie_intro",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das 'Tagebuch des Pflegeschülers Ingo Schremp' dient im Modul 5 als Reflexionsgrundlage, um persönliche Erwartungen und Lernziele für den chirurgischen Praxiseinsatz zu formulieren.",
+    "answer": "richtig",
+    "explanation": "Ingos Tagebuch wird laut Lehrplan genutzt, um Lernende aktiv an das Arbeitsfeld Chirurgie heranzuführen und den Praxiseinsatz vorzubereiten.",
+    "source_hint": "Handout ME 5.1, 5.2"
+  },
+  {
+    "q_id": "m5_rf_002",
+    "type": "richtig_falsch",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei Clinical Pathways (klinischen Behandlungspfaden) werden pflegerische und medizinische Maßnahmen bestimmten Fachkräften zu festen Zeitpunkten verbindlich zugewiesen.",
+    "answer": "richtig",
+    "explanation": "Clinical Pathways strukturieren den Behandlungsprozess zeitlich und personell verbindlich, um Qualität und Effizienz zu sichern.",
+    "source_hint": "Handout Modul 5.2"
+  },
+  {
+    "q_id": "m5_rf_003",
+    "type": "richtig_falsch",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "C-Fasern leiten Schmerzimpulse deutlich schneller weiter als A-delta-Fasern, da sie über eine dicke Myelinschicht verfügen.",
+    "answer": "falsch",
+    "explanation": "C-Fasern sind marklos und leiten langsam (dumpfer Schmerz), während A-delta-Fasern myelinisiert sind und Impulse schnell leiten (heller Erstschmerz).",
+    "source_hint": "M 5.3_Schmerz_Handout"
+  },
+  {
+    "q_id": "m5_rf_004",
+    "type": "richtig_falsch",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Entstehung eines Schmerzgedächtnisses wird dadurch begünstigt, dass sensible Nervenzellen bei ständiger Reizung zunehmend unempfindlicher gegenüber Schmerzreizen werden.",
+    "answer": "falsch",
+    "explanation": "Beim Schmerzgedächtnis werden die Nervenzellen empfindlicher (Sensibilisierung), sodass bereits geringe Reize starke Schmerzen auslösen können.",
+    "source_hint": "M 5.3_Schmerz_Handout"
+  },
+  {
+    "q_id": "m5_rf_005",
+    "type": "richtig_falsch",
+    "topic": "praeop_angst",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Nach der Einnahme der präoperativen Medikation (Prämedikation) zur Beruhigung darf der Patient das Bett wegen erhöhter Sturzgefahr nicht mehr alleine verlassen.",
+    "answer": "richtig",
+    "explanation": "Sedierende Medikamente beeinträchtigen das Reaktionsvermögen und die Standfestigkeit, weshalb der Patient im Bett bleiben muss.",
+    "source_hint": "M 5.6_Skript Teil II"
+  },
+  {
+    "q_id": "m5_rf_006",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die präoperative Nahrungskarenz besagt standardmäßig, dass Patienten bis zu 6 Stunden vor dem Eingriff noch klare Flüssigkeiten trinken dürfen.",
+    "answer": "falsch",
+    "explanation": "Feste Nahrung ist bis 6 Stunden vor der OP erlaubt, klare Flüssigkeiten hingegen bis zu 2 Stunden vorher.",
+    "source_hint": "M 5.6_Skript Teil III"
+  },
+  {
+    "q_id": "m5_rf_007",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das SBAR-Konzept dient der strukturierten Patientenübergabe und steht für Situation, Background, Assessment und Recommendation.",
+    "answer": "richtig",
+    "explanation": "SBAR ist ein international genutztes Kommunikationswerkzeug zur Vermeidung von Informationsverlusten bei Übergaben.",
+    "source_hint": "M 5.7_Skript Teil I"
+  },
+  {
+    "q_id": "m5_rf_008",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine sekundäre Wundheilung (per secundam) zeichnet sich dadurch aus, dass die Wundränder glatt anliegen und die Wunde innerhalb weniger Tage durch eine minimale Narbe verschlossen ist.",
+    "answer": "falsch",
+    "explanation": "Dies beschreibt die primäre Wundheilung. Die sekundäre Heilung erfolgt verzögert aus der Tiefe bei klaffenden Wundrändern.",
+    "source_hint": "Handout Wunde 5.8"
+  },
+  {
+    "q_id": "m5_rf_009",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der Durchführung subkutaner Injektionen sollte ein Rotationsschema eingehalten werden, um schmerzhafte Gewebeverhärtungen und Resorptionsstörungen zu vermeiden.",
+    "answer": "richtig",
+    "explanation": "Der regelmäßige Wechsel der Einstichstelle ist essenziell für die Gewebeschonung und eine gleichbleibende Wirkstoffaufnahme.",
+    "source_hint": "M 5_Injektionen_Handout"
+  },
+  {
+    "q_id": "m5_rf_010",
+    "type": "richtig_falsch",
+    "topic": "organisation_alltag",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die sogenannte 'Kardex-Visite' findet in der Regel direkt am Patientenbett statt, um eine unmittelbare Einbeziehung des Patienten zu ermöglichen.",
+    "answer": "falsch",
+    "explanation": "Die Kardex-Visite findet außerhalb des Patientenzimmers statt (Besprechung der Kurve); die patientenzentrierte Visite findet am Bett statt.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_011",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach einer Tonsillektomie besteht die größte Gefahr einer Nachblutung nicht nur am OP-Tag, sondern auch kritisch zwischen dem 4. und 6. postoperativen Tag.",
+    "answer": "richtig",
+    "explanation": "In dieser Phase lösen sich häufig die Schorfbeläge in den Wundnischen, was zu massiven Blutungen führen kann.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_012",
+    "type": "richtig_falsch",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Laut Definition der IASP (1979) ist Schmerz ein unangenehmes Sinneserlebnis, das zwingend an eine aktuell nachweisbare Gewebeschädigung gebunden ist.",
+    "answer": "falsch",
+    "explanation": "Schmerz kann laut Definition auch mit einer 'potentiellen' Gewebeschädigung verknüpft sein oder lediglich mit Begriffen einer solchen beschrieben werden.",
+    "source_hint": "M 5.3_Schmerz_Handout"
+  },
+  {
+    "q_id": "m5_rf_013",
+    "type": "richtig_falsch",
+    "topic": "schmerzmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die Smiley-Analogskala zur Schmerzeinschätzung kann bei Kindern bereits ab dem 3. Lebensjahr erfolgreich eingesetzt werden.",
+    "answer": "richtig",
+    "explanation": "Ab diesem Alter können Kinder Schmerzintensitäten meist schon gut den verschiedenen Gesichtsausdrücken der Skala zuordnen.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_014",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach dem Duschen am Vorabend der Operation sollte die Haut des Patienten im Bereich des geplanten OP-Feldes großzügig mit Bodylotion gepflegt werden.",
+    "answer": "falsch",
+    "explanation": "Die Haut darf nicht eingecremt werden, da eingefettete Haut die Wirksamkeit der intraoperativen Hautdesinfektion beeinträchtigt.",
+    "source_hint": "M 5.6_Skript Teil III"
+  },
+  {
+    "q_id": "m5_rf_015",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das postoperative Shivering (Kältezittern) ist für den Patienten gefährlich, da es den Sauerstoffbedarf des Körpers massiv ansteigen lässt.",
+    "answer": "richtig",
+    "explanation": "Durch das Zittern wird viel Energie verbraucht, was Herz und Kreislauf durch einen stark erhöhten O2-Bedarf belastet.",
+    "source_hint": "M 5.7_Skript Teil I"
+  },
+  {
+    "q_id": "m5_rf_016",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Der medizinische Fachbegriff 'Asepsis' beschreibt Maßnahmen, die darauf abzielen, eine Keimfreiheit zu erzielen bzw. Keime von einer Wunde fernzuhalten.",
+    "answer": "richtig",
+    "explanation": "Aseptisches Arbeiten ist die Grundlage der chirurgischen Wundversorgung zur Vermeidung von Infektionen.",
+    "source_hint": "Handout Wunde 5.8"
+  },
+  {
+    "q_id": "m5_rf_017",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das 'Verursacherkonzept' (direkte Verbindung zwischen Auslöser und Reaktion) ist ein Merkmal der Denkentwicklung bei Kleinkindern unter 5 Jahren.",
+    "answer": "falsch",
+    "explanation": "Das Verursacherkonzept tritt laut Material typischerweise bei Kindern im Schulalter (6.-12. LJ) in den Fokus.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_018",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Anatomische Pinzetten verfügen über ineinandergreifende Zähne und werden daher primär zum Halten von Wundrändern bei der Hautnaht verwendet.",
+    "answer": "falsch",
+    "explanation": "Chirurgische Pinzetten haben Zähne für sicheren Halt. Anatomische Pinzetten sind flach geriffelt und dienen dem schonenden Halten von Gewebe oder Material.",
+    "source_hint": "Handout Wunde 5.8 (Instrumentenkunde)"
+  },
+  {
+    "q_id": "m5_rf_019",
+    "type": "richtig_falsch",
+    "topic": "organisation_alltag",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Ein strukturiertes Entlassmanagement umfasst die rechtzeitige Planung der poststationären Versorgung und die Schulung der Patienten zur Förderung der Selbstpflegekompetenz.",
+    "answer": "richtig",
+    "explanation": "Ziel ist die Sicherstellung eines nahtlosen Übergangs in die häusliche Versorgung oder Rehabilitation.",
+    "source_hint": "Handout ME 5.1, 5.2"
+  },
+  {
+    "q_id": "m5_rf_020",
+    "type": "richtig_falsch",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Subjektive Informationen in der Pflegeanamnese sind Daten, die durch Pflegende direkt gemessen werden können, wie z.B. der Puls oder das Körpergewicht.",
+    "answer": "falsch",
+    "explanation": "Messbare Daten sind 'objektive' Informationen. 'Subjektive' Informationen sind das persönliche Erleben und die Empfindungen des Patienten.",
+    "source_hint": "Handout ME 5.1, 5.2"
+  },
+  {
+    "q_id": "m5_rf_021",
+    "type": "richtig_falsch",
+    "topic": "chirurgie_intro",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Einsatz von Fliegenlarven (Maden) in der Wundversorgung wird als Biochirurgie bezeichnet und dient primär dem enzymatischen Débridement von nekrotischem Gewebe.",
+    "answer": "richtig",
+    "explanation": "In Ingos Tagebuch wird beschrieben, dass Maden als 'kleinste Chirurgen' eingesetzt werden, um Beläge und abgestorbenes Gewebe aus Wunden zu entfernen.",
+    "source_hint": "Ingos Tagebuch / ME 5.1"
+  },
+  {
+    "q_id": "m5_rf_022",
+    "type": "richtig_falsch",
+    "topic": "pflegeanamnese",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Als objektive Daten in der Pflegeanamnese werden Informationen bezeichnet, die das persönliche Empfinden des Patienten widerspiegeln, wie etwa das Ausmaß von Übelkeit.",
+    "answer": "falsch",
+    "explanation": "Empfindungen wie Übelkeit oder Durst sind subjektive Informationen; objektive Daten sind messbare oder beobachtbare Fakten wie Laborwerte oder Vitalparameter.",
+    "source_hint": "Handout Modul 5.2"
+  },
+  {
+    "q_id": "m5_rf_023",
+    "type": "richtig_falsch",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Viszeraler Schmerz geht von den inneren Organen aus, wird oft als dumpf oder drückend beschrieben und lässt sich vom Patienten meist punktgenau lokalisieren.",
+    "answer": "falsch",
+    "explanation": "Viszeraler Schmerz (Eingeweideschmerz) ist im Gegensatz zum somatischen Schmerz oft nur schwer genau zu lokalisieren.",
+    "source_hint": "M 5.3_Schmerz_Handout"
+  },
+  {
+    "q_id": "m5_rf_024",
+    "type": "richtig_falsch",
+    "topic": "schmerzmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die Pharmakodynamik beschreibt die Wirkung eines Arzneimittels am Wirkort, während die Pharmakokinetik den Weg des Medikaments durch den Körper (z.B. Verteilung und Ausscheidung) umfasst.",
+    "answer": "richtig",
+    "explanation": "Dies sind die Standarddefinitionen der Arzneimittellehre, die im Rahmen der pflegerischen Schmerztherapie relevant sind.",
+    "source_hint": "M 5_Injektionen_Handout / M 5.8 Handout"
+  },
+  {
+    "q_id": "m5_rf_025",
+    "type": "richtig_falsch",
+    "topic": "praeop_angst",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei präoperativer Angst schüttet der Körper vermehrt Stresshormone wie Adrenalin und Kortisol aus, was zu einem messbaren Anstieg von Puls und Blutdruck führen kann.",
+    "answer": "richtig",
+    "explanation": "Die hormonelle Stressreaktion ist eine physiologische Antwort auf psychische Belastung (Medical Fear).",
+    "source_hint": "M 5.6_Skript Teil II"
+  },
+  {
+    "q_id": "m5_rf_026",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Beim sogenannten 'En-bloc-Aufstehen' steht der Patient rücken- und bauchdeckenschonend über die Seitenlage auf, was besonders nach Baucheröffnungen wichtig ist.",
+    "answer": "richtig",
+    "explanation": "Diese Technik minimiert die Spannung auf der Bauchdecke und verringert postoperative Wundschmerzen beim Mobilisieren.",
+    "source_hint": "M 5.6_Skript Teil III / M 5.7 Skript III"
+  },
+  {
+    "q_id": "m5_rf_027",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die Abkürzung PONV steht für 'Postoperative Neuralgia and Vertigo' und beschreibt chronische Nervenschmerzen nach einer Vollnarkose.",
+    "answer": "falsch",
+    "explanation": "PONV steht für 'Postoperative Nausea and Vomiting' (postoperative Übelkeit und Erbrechen).",
+    "source_hint": "M 5.7_Skript Teil I"
+  },
+  {
+    "q_id": "m5_rf_028",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine 'kolonisierte' Wunde unterscheidet sich von einer 'infizierten' Wunde dadurch, dass sich die vorhandenen Keime in der Wunde zwar vermehren, aber keine Entzündungsreaktion auslösen.",
+    "answer": "richtig",
+    "explanation": "Bei einer Kolonisation vermehren sich Keime ohne Gewebereaktion; erst bei einer Infektion treten Symptome wie Rubor, Calor und Schmerz auf.",
+    "source_hint": "M5 Wundmanagement Handout / ME 5.8"
+  },
+  {
+    "q_id": "m5_rf_029",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei einer delegierten medizinischen Aufgabe wie der Injektionsgabe trägt die Pflegefachkraft die Durchführungsverantwortung, während der Arzt die Anordnungsverantwortung behält.",
+    "answer": "richtig",
+    "explanation": "Der rechtliche Rahmen trennt zwischen der Entscheidung für die Therapie (Arzt) und der fachgerechten Ausführung (Pflege).",
+    "source_hint": "M 5_Injektionen_Handout"
+  },
+  {
+    "q_id": "m5_rf_030",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein auffallend häufiges Schlucken bei einem Kind nach einer Tonsillektomie gilt als klassisches Warnzeichen für eine drohende oder bereits bestehende Nachblutung.",
+    "answer": "richtig",
+    "explanation": "Häufiges Schlucken deutet darauf hin, dass das Kind Blut schluckt, das aus dem Wundgebiet in den Rachen läuft.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_031",
+    "type": "richtig_falsch",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das 'Patient-Blood-Management' zielt darauf ab, den Einsatz von Fremdblutkonserven bei planbaren Operationen durch die Erhöhung der Transfusionsrate auf über 10% zu fördern.",
+    "answer": "falsch",
+    "explanation": "Ziel ist die Reduktion von Fremdblutgaben zur Vermeidung von Unverträglichkeiten und Infektionsrisiken durch Optimierung des Eigenbluts.",
+    "source_hint": "M 5.6_Skript Teil II"
+  },
+  {
+    "q_id": "m5_rf_032",
+    "type": "richtig_falsch",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Gemäß der Gate-Control-Theorie können Impulse von dicken, myelinisierten Nervenfasern (Berührungsreize) die Weiterleitung von Schmerzsignalen im Rückenmark blockieren.",
+    "answer": "richtig",
+    "explanation": "Der 'Tormechanismus' im Hinterhorn des Rückenmarks entscheidet darüber, welche Reize zum Gehirn weitergeleitet werden.",
+    "source_hint": "M 5.3_Schmerz_Handout"
+  },
+  {
+    "q_id": "m5_rf_033",
+    "type": "richtig_falsch",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein warmer Halswickel ist bei einer akuten Tonsillitis die bevorzugte pflegerische Maßnahme zur Schmerzlinderung, während im chronischen Stadium kühle Wickel indiziert sind.",
+    "answer": "falsch",
+    "explanation": "Laut Material werden im akuten Stadium eher kühlende Wickel und im chronischen Stadium eher warme Wickel empfohlen.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_034",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der Haarkürzung mittels Clipper wird empfohlen, einen Sicherheitsabstand von mehreren Zentimetern um den geplanten Hautschnitt herum einzuhalten.",
+    "answer": "richtig",
+    "explanation": "Das Rasurschema sieht vor, das OP-Feld großräumig vorzubereiten, um Keimverschleppungen während des Eingriffs zu verhindern.",
+    "source_hint": "M 5.6_Skript Teil III"
+  },
+  {
+    "q_id": "m5_rf_035",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das postoperative Delir (Durchgangssyndrom) beginnt typischerweise mit einer erhöhten Vigilanz und einem gesteigerten Hungergefühl des Patienten.",
+    "answer": "falsch",
+    "explanation": "Ein Delir äußert sich eher durch psychomotorische Störungen, kognitive Defizite (Wahn) und Störungen des Schlaf-Wach-Rhythmus.",
+    "source_hint": "M 5.7_Skript Teil III"
+  },
+  {
+    "q_id": "m5_rf_036",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das TIME-Prinzip ist ein Konzept zur Wundbettvorbereitung, wobei 'M' für Moisture (Feuchtigkeitsmanagement) steht, um ein ideales Heilungsmilieu zu schaffen.",
+    "answer": "richtig",
+    "explanation": "TIME steht für Tissue (Gewebe), Infection/Inflammation, Moisture (Feuchtigkeit) und Edge (Wundrand).",
+    "source_hint": "Handout Wunde 5.8"
+  },
+  {
+    "q_id": "m5_rf_037",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Easy-Flow-Drainagen sind Kapillardrainagen, die das Sekret mittels Vakuum und Sog aus der Wunde in eine Flasche befördern.",
+    "answer": "falsch",
+    "explanation": "Easy-Flow-Drainagen arbeiten ohne Sog (Schwerkraft/Kapillarwirkung); Redon-Drainagen werden hingegen oft mit kontrolliertem Sog verwendet.",
+    "source_hint": "M 5.7_Skript Teil III"
+  },
+  {
+    "q_id": "m5_rf_038",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine Tonsillektomie (Entfernung der Gaumenmandeln) wird bei Kindern unter normalen Umständen selten vor dem 4. Lebensjahr durchgeführt.",
+    "answer": "richtig",
+    "explanation": "Die Indikation wird in sehr frühem Alter aufgrund des Operationsrisikos und der immunologischen Bedeutung der Tonsillen zurückhaltend gestellt.",
+    "source_hint": "Präsentation Lernantworten Modul 5.12-15"
+  },
+  {
+    "q_id": "m5_rf_039",
+    "type": "richtig_falsch",
+    "topic": "chirurgie_intro",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In Ingos Tagebuch wird reflektiert, dass chronische Wunden in der ambulanten Pflege oft harmloser aussehen als die akuten 'Stationswunden' im Krankenhaus.",
+    "answer": "falsch",
+    "explanation": "Ingo stellt fest, dass die Wunden in der ambulanten Pflege oft über Monate offen und 'schwieriger' waren, während Stationswunden oft harmlos wirken.",
+    "source_hint": "Ingos Tagebuch / ME 5.8"
+  },
+  {
+    "q_id": "m5_rf_040",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Präoperatives Atemtraining, beispielsweise mit dem 'Tri-Ball', dient dazu, postoperativen Komplikationen wie einer Pneumonie vorzubeugen.",
+    "answer": "richtig",
+    "explanation": "Das Einüben fördert die Lungenbelüftung und ist präoperativ effektiver, da der Patient noch keine Schmerzen oder Narkoseüberhänge hat.",
+    "source_hint": "M 5.6_Skript Teil III"
+  },
+  {
+    "q_id": "m5_nl_001",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 5 klassischen Entzündungszeichen.",
+    "list_label": "Entzündungszeichen",
+    "count": 5,
+    "correct_answers": [
+      "Rubor",
+      "Calor",
+      "Tumor",
+      "Dolor",
+      "Functio laesa"
+    ],
+    "all_valid_answers": [
+      "Rubor",
+      "Rötung",
+      "Calor",
+      "Überwärmung",
+      "Hitze",
+      "Tumor",
+      "Schwellung",
+      "Ödem",
+      "Dolor",
+      "Schmerz",
+      "Functio laesa",
+      "Funktionseinschränkung",
+      "gestörte Funktion"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Zeichen (lateinisch oder deutsch)."
+  },
+  {
+    "q_id": "m5_nl_002",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Wundheilungsphasen in der korrekten Reihenfolge.",
+    "list_label": "Wundheilungsphasen",
+    "count": 3,
+    "correct_answers": [
+      "Exsudationsphase",
+      "Proliferationsphase",
+      "Regenerationsphase"
+    ],
+    "all_valid_answers": [
+      "Exsudationsphase",
+      "Reinigungsphase",
+      "Inflammationsphase",
+      "Entzündungsphase",
+      "Proliferationsphase",
+      "Granulationsphase",
+      "Gewebeaufbauphase",
+      "Regenerationsphase",
+      "Epithelisierungsphase",
+      "Differenzierungsphase",
+      "Reifungsphase"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Phase."
+  },
+  {
+    "q_id": "m5_nl_003",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Formen der Keimbesiedlung bzw. Keimbelastung einer Wunde.",
+    "list_label": "Keimbesiedlung",
+    "count": 4,
+    "correct_answers": [
+      "Aseptische Wunde",
+      "Kontaminierte Wunde",
+      "Kolonisierte Wunde",
+      "Infizierte Wunde"
+    ],
+    "all_valid_answers": [
+      "Aseptische Wunde",
+      "keimfrei",
+      "sauber",
+      "Kontaminierte Wunde",
+      "verunreinigt",
+      "Kolonisierte Wunde",
+      "besiedelt",
+      "Kritisch kolonisierte Wunde",
+      "Infizierte Wunde",
+      "septisch",
+      "Wundinfektion"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Form."
+  },
+  {
+    "q_id": "m5_nl_004",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 6 Schritte des Pflegeprozesses nach dem Modell von Fiechter und Meier.",
+    "list_label": "Pflegeprozessschritte",
+    "count": 6,
+    "correct_answers": [
+      "Informationssammlung",
+      "Erkennen von Problemen und Ressourcen",
+      "Festlegen der Pflegeziele",
+      "Planung der Pflegemaßnahmen",
+      "Durchführung der Pflege",
+      "Beurteilung der Wirkung"
+    ],
+    "all_valid_answers": [
+      "Informationssammlung",
+      "Anamnese",
+      "Datenerhebung",
+      "Erkennen von Problemen und Ressourcen",
+      "Pflegediagnose",
+      "Problemanalyse",
+      "Festlegen der Pflegeziele",
+      "Zielsetzung",
+      "Planung der Pflegemaßnahmen",
+      "Interventionsplanung",
+      "Maßnahmenplanung",
+      "Durchführung der Pflege",
+      "Umsetzung",
+      "Intervention",
+      "Beurteilung der Wirkung",
+      "Evaluation",
+      "Auswertung"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro Prozessschritt."
+  },
+  {
+    "q_id": "m5_nl_005",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Bestandteile der präoperativen Patientenedukation zur Vorbeugung postoperativer Komplikationen.",
+    "list_label": "Inhalte der Patientenedukation",
+    "count": 4,
+    "correct_answers": [
+      "Atem- und Abhustetechniken",
+      "Gehen mit Gehhilfen",
+      "En-bloc-Aufstehen",
+      "Umgang mit der Patientenklingel"
+    ],
+    "all_valid_answers": [
+      "Atem- und Abhustetechniken",
+      "Atemübungen",
+      "Pneumonieprophylaxe",
+      "Gehen mit Gehhilfen",
+      "Mobilisation mit Unterarmgehstützen",
+      "En-bloc-Aufstehen",
+      "bauchdeckenschonendes Aufstehen",
+      "Aufstehen über die Seite",
+      "Umgang mit der Patientenklingel",
+      "Notrufbedienung",
+      "Inspirations-Trainer",
+      "Tri-Ball-Anwendung",
+      "Essen und Trinken in Flachlage"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Bestandteil."
+  },
+  {
+    "q_id": "m5_nl_006",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die Bedeutung der 4 Buchstaben des SBAR-Konzepts.",
+    "list_label": "SBAR-Konzept",
+    "count": 4,
+    "correct_answers": [
+      "Situation",
+      "Background",
+      "Assessment",
+      "Recommendation"
+    ],
+    "all_valid_answers": [
+      "Situation",
+      "Ist-Zustand",
+      "Background",
+      "Hintergrund",
+      "Vorgeschichte",
+      "Assessment",
+      "Einschätzung",
+      "Beurteilung",
+      "Recommendation",
+      "Empfehlung",
+      "Vorschlag"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Begriff."
+  },
+  {
+    "q_id": "m5_nl_007",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 häufige postoperative Komplikationen.",
+    "list_label": "Postoperative Komplikationen",
+    "count": 4,
+    "correct_answers": [
+      "Nachblutung",
+      "PONV",
+      "Shivering",
+      "Atemstörungen"
+    ],
+    "all_valid_answers": [
+      "Nachblutung",
+      "Hämorrhagie",
+      "PONV",
+      "Übelkeit und Erbrechen",
+      "Postoperative Nausea and Vomiting",
+      "Shivering",
+      "Kältezittern",
+      "Atemstörungen",
+      "Atemdepression",
+      "Hypoxie",
+      "Harnverhalt",
+      "Postoperatives Delir",
+      "Durchgangssyndrom",
+      "Thrombose",
+      "Lungenembolie"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Komplikation."
+  },
+  {
+    "q_id": "m5_nl_008",
+    "type": "nennen_liste",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 verschiedene Schmerzeinschätzungsinstrumente für unterschiedliche Patientengruppen.",
+    "list_label": "Schmerzskalen / Instrumente",
+    "count": 4,
+    "correct_answers": [
+      "NRS (Numerische Rating Skala)",
+      "Smiley-Analogskala",
+      "KUS-Skala",
+      "ZOPA"
+    ],
+    "all_valid_answers": [
+      "NRS",
+      "Numerische Rating Skala",
+      "Smiley-Analogskala",
+      "Wong-Baker-Skala",
+      "Gesichter-Skala",
+      "KUS-Skala",
+      "Kindliche Unbehagens- und Schmerzskala",
+      "ZOPA",
+      "Zurückhaltung, Orientierung, Psychomotorik, Andere",
+      "VAS",
+      "Visuelle Analogskala",
+      "BSN",
+      "Berner Schmerzscore für Neugeborene"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Instrument."
+  },
+  {
+    "q_id": "m5_nl_009",
+    "type": "nennen_liste",
+    "topic": "schmerzphysiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 grundsätzlichen Narkoseverfahren.",
+    "list_label": "Anästhesieverfahren",
+    "count": 3,
+    "correct_answers": [
+      "Allgemeinanästhesie",
+      "Regionalanästhesie",
+      "Lokalanästhesie"
+    ],
+    "all_valid_answers": [
+      "Allgemeinanästhesie",
+      "Vollnarkose",
+      "Regionalanästhesie",
+      "Teilnarkose",
+      "Leitungsanästhesie",
+      "Rückenmarksnahe Anästhesie",
+      "Lokalanästhesie",
+      "Örtliche Betäubung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Verfahren."
+  },
+  {
+    "q_id": "m5_nl_010",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 häufige Erreger nosokomialer Infektionen (Abkürzungen möglich).",
+    "list_label": "Nosokomiale Erreger",
+    "count": 4,
+    "correct_answers": [
+      "MRSA",
+      "VRE",
+      "MRGN",
+      "ESBL"
+    ],
+    "all_valid_answers": [
+      "MRSA",
+      "Methicillin-resistenter Staphylococcus aureus",
+      "VRE",
+      "Vancomycin-resistente Enterokokken",
+      "MRGN",
+      "Multiresistente gramnegative Stäbchen",
+      "ESBL",
+      "Extended Spectrum Beta-Lactamase",
+      "Staphylococcus aureus",
+      "Pseudomonas aeruginosa"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Erreger."
+  },
+  {
+    "q_id": "m5_nl_011",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 verschiedene Drainagearten.",
+    "list_label": "Drainagearten",
+    "count": 3,
+    "correct_answers": [
+      "Redon-Drainage",
+      "Easy-Flow-Drain",
+      "Penrose-Drain"
+    ],
+    "all_valid_answers": [
+      "Redon-Drainage",
+      "Saugdrainage",
+      "Easy-Flow-Drain",
+      "Schwerkraftdrainage",
+      "Penrose-Drain",
+      "Kapillardrainage",
+      "Robinson-Drainage",
+      "Thoraxdrainage"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Drainageart."
+  },
+  {
+    "q_id": "m5_nl_012",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Maßnahmen der pflegerischen präoperativen Vorbereitung unmittelbar am OP-Tag.",
+    "list_label": "Maßnahmen am OP-Tag",
+    "count": 4,
+    "correct_answers": [
+      "Prämedikation verabreichen",
+      "OP-Kleidung anziehen",
+      "Ablegen von Schmuck und Prothesen",
+      "Identifikationsarmband anlegen"
+    ],
+    "all_valid_answers": [
+      "Prämedikation verabreichen",
+      "Gabe von Beruhigungsmitteln",
+      "OP-Kleidung anziehen",
+      "frisches OP-Hemd",
+      "Einmalunterhose",
+      "Ablegen von Schmuck und Prothesen",
+      "Zahnprothesen entfernen",
+      "Brille/Kontaktlinsen ablegen",
+      "Identifikationsarmband anlegen",
+      "Überprüfung der Nüchternheit",
+      "Markierung des OP-Feldes kontrollieren",
+      "Vollständigkeit der Unterlagen prüfen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Maßnahme."
+  },
+  {
+    "q_id": "m5_nl_013",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Kriterien, die bei einem wundspezifischen Assessment erfasst werden.",
+    "list_label": "Wundassessment-Kriterien",
+    "count": 4,
+    "correct_answers": [
+      "Wundlokalisation",
+      "Wundgröße",
+      "Wundgrund",
+      "Exsudation"
+    ],
+    "all_valid_answers": [
+      "Wundlokalisation",
+      "Ort der Wunde",
+      "Wundgröße",
+      "Länge/Breite/Tiefe",
+      "Wundgrund",
+      "Gewebeart",
+      "Exsudation",
+      "Wundsekret",
+      "Menge/Farbe des Sekrets",
+      "Wundrand",
+      "Wundumgebung",
+      "Wundgeruch",
+      "Wundschmerz",
+      "Entzündungszeichen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Kriterium."
+  },
+  {
+    "q_id": "m5_nl_014",
+    "type": "nennen_liste",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 Beispiele für laparoskopische (minimal-invasive) OP-Verfahren.",
+    "list_label": "Minimal-invasive Eingriffe",
+    "count": 3,
+    "correct_answers": [
+      "Laparoskopische Cholezystektomie (CHE)",
+      "Laparoskopische Appendektomie",
+      "Laparoskopische Hernien-OP"
+    ],
+    "all_valid_answers": [
+      "Laparoskopische Cholezystektomie",
+      "Gallenblasenentfernung minimal-invasiv",
+      "CHE",
+      "Laparoskopische Appendektomie",
+      "Blinddarmentfernung minimal-invasiv",
+      "Laparoskopische Herniotomie",
+      "Leistenbruchoperation minimal-invasiv",
+      "Laparoskopische Splenektomie",
+      "Arthroskopie",
+      "Gelenkspiegelung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Verfahren."
+  },
+  {
+    "q_id": "m5_nl_015",
+    "type": "nennen_liste",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 pflegerische Verhaltensregeln nach einer Tonsillektomie bei Kindern zur Vermeidung von Nachblutungen.",
+    "list_label": "Pflegerische Regeln post-TE",
+    "count": 4,
+    "correct_answers": [
+      "Kein Räuspern oder heftiges Husten",
+      "Lauwarme oder kalte Wunschkost",
+      "Körperliche Schonung",
+      "Keine heißen Bäder oder Duschen"
+    ],
+    "all_valid_answers": [
+      "Kein Räuspern",
+      "nicht heftig Husten",
+      "Lauwarme oder kalte Wunschkost",
+      "säurearme Kost",
+      "weiche Kost",
+      "Milchspeiseeis essen",
+      "Körperliche Schonung",
+      "ruhige Aktivitäten",
+      "Keine heißen Bäder oder Duschen",
+      "Meiden von Wärme",
+      "nicht gurgeln",
+      "Eiskrawatte anlegen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Regel."
+  },
+  {
+    "q_id": "m5_nl_016",
+    "type": "nennen_liste",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Schmerzarten eingeteilt nach ihrem Entstehungsort (Pathogenese).",
+    "list_label": "Schmerzarten nach Entstehungsort",
+    "count": 3,
+    "correct_answers": [
+      "Somatischer Schmerz",
+      "Viszeraler Schmerz",
+      "Neuropathischer Schmerz"
+    ],
+    "all_valid_answers": [
+      "Somatischer Schmerz",
+      "Gliederschmerz",
+      "Oberflächen- oder Tiefenschmerz",
+      "Viszeraler Schmerz",
+      "Eingeweideschmerz",
+      "Organschmerz",
+      "Neuropathischer Schmerz",
+      "Nervenschmerz"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Schmerzart."
+  },
+  {
+    "q_id": "m5_nl_017",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die Bedeutung der 4 Buchstaben des TIME-Prinzips zur Wundbettvorbereitung.",
+    "list_label": "TIME-Prinzip",
+    "count": 4,
+    "correct_answers": [
+      "T = Tissue (Gewebe)",
+      "I = Infection (Infektion/Entzündung)",
+      "M = Moisture (Feuchtigkeit)",
+      "E = Edge (Wundrand)"
+    ],
+    "all_valid_answers": [
+      "T = Tissue",
+      "Gewebe",
+      "nekrotisches Gewebe",
+      "I = Infection",
+      "Infektion",
+      "Entzündung",
+      "Inflammation",
+      "M = Moisture",
+      "Feuchtigkeit",
+      "Exsudatmanagement",
+      "E = Edge",
+      "Wundrand",
+      "Epithelisierung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Buchstaben mit korrekter Bedeutung (deutsch oder englisch)."
+  },
+  {
+    "q_id": "m5_nl_018",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Typen von Wundauflagen und deren primäre Indikation.",
+    "list_label": "Wundauflagen und Indikation",
+    "count": 4,
+    "correct_answers": [
+      "Hydrogele: zum Aufweichen von Nekrosen",
+      "Alginate: für stark exsudierende Wunden",
+      "Schaumverbände: zur Sekretaufnahme und Polsterung",
+      "Hydrokolloide: zur Erhaltung eines feuchten Wundmilieus"
+    ],
+    "all_valid_answers": [
+      "Hydrogele",
+      "Nekrosenlösung",
+      "Befeuchtung",
+      "Alginate",
+      "starke Exsudation",
+      "Sekretbindung",
+      "Schaumverbände",
+      "Polsterung",
+      "Sekretmanagement",
+      "Hydrokolloide",
+      "Granulationsförderung",
+      "feuchte Wundbehandlung",
+      "Aktivkohle",
+      "Geruchsbindung",
+      "Infektionsbekämpfung",
+      "Silberauflagen",
+      "Keimreduktion"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Paar (Typ + Indikation)."
+  },
+  {
+    "q_id": "m5_nl_019",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Bestandteile der Checkliste für die Unterlagen beim OP-Transport.",
+    "list_label": "Checkliste OP-Unterlagen",
+    "count": 4,
+    "correct_answers": [
+      "Aktuelle Patientenkurve (Stammblatt)",
+      "Identifikationsarmband",
+      "Einwilligungserklärung für Operation",
+      "Einwilligungserklärung für Anästhesie"
+    ],
+    "all_valid_answers": [
+      "Patientenkurve",
+      "Stammblatt",
+      "Identifikationsarmband",
+      "Namensbändchen",
+      "Einwilligungserklärung OP",
+      "OP-Zustimmung",
+      "Einwilligungserklärung Anästhesie",
+      "Narkose-Einwilligung",
+      "Laborwerte",
+      "Röntgenbilder",
+      "Patientenetiketten",
+      "Aufklärungsbogen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Bestandteil."
+  },
+  {
+    "q_id": "m5_nl_020",
+    "type": "nennen_liste",
+    "topic": "schmerzmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 nicht-medikamentöse Maßnahmen der Schmerztherapie.",
+    "list_label": "Nicht-medikamentöse Schmerztherapie",
+    "count": 3,
+    "correct_answers": [
+      "Physikalische Therapie (Kälte/Wärme)",
+      "Entspannungsverfahren",
+      "Ablenkung"
+    ],
+    "all_valid_answers": [
+      "Physikalische Therapie",
+      "Kälteanwendung",
+      "Wärmeanwendung",
+      "Lagerung",
+      "Eiskrawatte",
+      "Entspannungsverfahren",
+      "Atementspannung",
+      "autogenes Training",
+      "Ablenkung",
+      "Musiktherapie",
+      "Gespräche",
+      "Spiegeltherapie",
+      "Basale Stimulation",
+      "Einreibungen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m5_nl_021",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 technische Ausstattungsmerkmale eines Aufwachraums.",
+    "list_label": "Ausstattung Aufwachraum (AWR)",
+    "count": 4,
+    "correct_answers": [
+      "Zentrales Monitorüberwachungssystem",
+      "Beatmungsgerät",
+      "Absauganlage",
+      "Sauerstoffanschlüsse"
+    ],
+    "all_valid_answers": [
+      "Zentrales Monitorüberwachungssystem",
+      "EKG-Monitor",
+      "Blutdruckmessgerät",
+      "Pulsoxymeter",
+      "Beatmungsgerät",
+      "Respirator",
+      "Absauganlage",
+      "Vakuumanschluss",
+      "Sauerstoffanschlüsse",
+      "O2-Gabe",
+      "Defibrillator",
+      "Notfalleinheit",
+      "Narkosewagen",
+      "Infusionspumpen",
+      "Perfusoren"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Ausstattungsmerkmal."
+  },
+  {
+    "q_id": "m5_nl_022",
+    "type": "nennen_liste",
+    "topic": "organisation_alltag",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 gängige Visitenformen im Krankenhaus.",
+    "list_label": "Visitenformen",
+    "count": 3,
+    "correct_answers": [
+      "Patientenzentrierte Visite",
+      "Kardex-Visite",
+      "Chefarzt- / Oberarztvisite"
+    ],
+    "all_valid_answers": [
+      "Patientenzentrierte Visite",
+      "Bettseitige Visite",
+      "Kardex-Visite",
+      "Kurvenvisite",
+      "Visite am Stationsstützpunkt",
+      "Chefarztvisite",
+      "Oberarztvisite",
+      "Klinische Visite",
+      "Interdisziplinäre Visite"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Visitenform."
+  },
+  {
+    "q_id": "m5_nl_023",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 chirurgische Instrumente, die typischerweise für einen aseptischen Verbandwechsel bereitgestellt werden.",
+    "list_label": "Instrumente Verbandwechsel",
+    "count": 4,
+    "correct_answers": [
+      "Anatomische Pinzette",
+      "Chirurgische Pinzette",
+      "Sterile Schere",
+      "Kornzange"
+    ],
+    "all_valid_answers": [
+      "Anatomische Pinzette",
+      "Chirurgische Pinzette",
+      "Sterile Schere",
+      "Cooperschere",
+      "Kornzange",
+      "Péan-Klemme",
+      "Kocher-Klemme",
+      "Scharfer Löffel"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Instrument."
+  },
+  {
+    "q_id": "m5_nl_024",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 Prinzipien bei der Durchführung eines aseptischen Verbandwechsels.",
+    "list_label": "Prinzipien aseptischer Verbandwechsel",
+    "count": 3,
+    "correct_answers": [
+      "Non-Touch-Prinzip",
+      "Einbahnstraßen-Prinzip (von sauber nach unrein)",
+      "Steriles Arbeiten"
+    ],
+    "all_valid_answers": [
+      "Non-Touch-Prinzip",
+      "Berührungsloses Arbeiten",
+      "Einbahnstraßen-Prinzip",
+      "Reihenfolge von sauber nach unrein",
+      "Steriles Arbeiten",
+      "Asepsis wahren",
+      "Händedesinfektion vor/nach Kontakt",
+      "Verwendung steriler Handschuhe"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m5_nl_025",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 4 bevorzugten Injektionsorte für eine subkutane (s.c.) Injektion.",
+    "list_label": "s.c. Injektionsorte",
+    "count": 4,
+    "correct_answers": [
+      "Bauchhaut (um den Bauchnabel)",
+      "Oberschenkel (Vorder-/Außenseite)",
+      "Oberarm (Außenseite)",
+      "Flankengegend (über dem Darmbeinkamm)"
+    ],
+    "all_valid_answers": [
+      "Bauchhaut",
+      "Abdomen",
+      "Oberschenkel",
+      "Oberschenkelaußenseite",
+      "Oberarm",
+      "Oberarmaußenseite",
+      "Flanke",
+      "Hüftbereich",
+      "Gesäßbereich (oberer äußerer Quadrant)"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Ort."
+  },
+  {
+    "q_id": "m5_nl_026",
+    "type": "nennen_liste",
+    "topic": "praeop_angst",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 Faktoren, die das Ausmaß der präoperativen Angst (Medical Fear) eines Patienten verstärken können.",
+    "list_label": "Angstverstärkende Faktoren",
+    "count": 3,
+    "correct_answers": [
+      "Ungenügende Aufklärung / Informationsdefizit",
+      "Angst vor Schmerzen",
+      "Angst vor dem Narkoseerlebnis (Kontrollverlust)"
+    ],
+    "all_valid_answers": [
+      "Ungenügende Aufklärung",
+      "Unwissenheit",
+      "Informationsmangel",
+      "Angst vor Schmerzen",
+      "Schmerzerwartung",
+      "Angst vor Narkose",
+      "Kontrollverlust",
+      "Angst vor dem Tod",
+      "Ungewissheit über den Befund",
+      "Persönlichkeitsfaktoren",
+      "Frühere negative Erfahrungen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Faktor."
+  },
+  {
+    "q_id": "m5_nl_027",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Hauptschichten der Haut in der anatomisch korrekten Reihenfolge von außen nach innen.",
+    "list_label": "Hautschichten",
+    "count": 3,
+    "correct_answers": [
+      "Epidermis (Oberhaut)",
+      "Dermis (Lederhaut)",
+      "Subkutis (Unterhaut)"
+    ],
+    "all_valid_answers": [
+      "Epidermis",
+      "Oberhaut",
+      "Dermis",
+      "Corium",
+      "Lederhaut",
+      "Subkutis",
+      "Unterhaut",
+      "subkutanes Fettgewebe"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Schicht (Reihenfolge muss stimmen)."
+  },
+  {
+    "q_id": "m5_nl_028",
+    "type": "nennen_liste",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 mögliche Folgeerkrankungen nach einer nicht adäquat behandelten Streptokokkenangina (Tonsillitis).",
+    "list_label": "Folgeerkrankungen Tonsillitis",
+    "count": 4,
+    "correct_answers": [
+      "Rheumatisches Fieber",
+      "Glomerulonephritis (Nephritis)",
+      "Endokarditis",
+      "Peritonsillarabszess"
+    ],
+    "all_valid_answers": [
+      "Rheumatisches Fieber",
+      "Glomerulonephritis",
+      "Nephritis",
+      "Nierenentzündung",
+      "Endokarditis",
+      "Herzinnenhautentzündung",
+      "Myokarditis",
+      "Peritonsillarabszess",
+      "Mandelabszess",
+      "Scharlach"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Folgeerkrankung."
+  },
+  {
+    "q_id": "m5_nl_029",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 wesentliche Unterschiede zwischen primärer und sekundärer Wundheilung.",
+    "list_label": "Unterschiede Wundheilung",
+    "count": 3,
+    "correct_answers": [
+      "Wundränder (glatt anliegend vs. klaffend/offen)",
+      "Heilungsdauer (kurz vs. langwierig)",
+      "Narbenbildung (minimal vs. deutlich ausgeprägt)"
+    ],
+    "all_valid_answers": [
+      "Wundränder",
+      "glatt vs klaffend",
+      "geschlossen vs offen",
+      "Heilungsdauer",
+      "Zeitlicher Ablauf",
+      "schnell vs verzögert",
+      "Narbenbildung",
+      "kaum Narbe vs deutliche Narbe",
+      "Infektionsgefahr",
+      "gering vs hoch"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benanntem Differenzierungsmerkmal."
+  },
+  {
+    "q_id": "m5_nl_030",
+    "type": "nennen_liste",
+    "topic": "organisation_alltag",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 3 zentrale Aspekte des Entlassmanagements in der Chirurgie.",
+    "list_label": "Aspekte Entlassmanagement",
+    "count": 3,
+    "correct_answers": [
+      "Erweiterung der Selbstpflegekompetenz (Beratung/Schulung)",
+      "Terminabstimmung für postoperative Nachsorge",
+      "Organisation von Hilfsmitteln oder ambulanter Pflege"
+    ],
+    "all_valid_answers": [
+      "Selbstpflegekompetenz stärken",
+      "Patientenedukation",
+      "Beraten/Anleiten/Schulen",
+      "Nachsorgeplanung",
+      "Terminkoordination",
+      "Hilfsmittelversorgung",
+      "Organisation ambulanter Pflegedienst",
+      "Entlassgespräch",
+      "Überleitungsbericht erstellen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Aspekt."
+  },
+  {
+    "q_id": "m5_tab_001",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die Tabelle zu den Phasen der Wundheilung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Phase",
+          "Zeitraum",
+          "Merkmale / Beschreibung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Exsudationsphase",
+                "keywords": [
+                  "Exsudation",
+                  "Reinigung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "1. bis 4. Tag",
+                "keywords": [
+                  "1",
+                  "4"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Blutstillung, Wundreinigung durch Phagozytose, Austritt von Wundsekret (Exsudat).",
+                "keywords": [
+                  "Blutstillung",
+                  "Reinigung",
+                  "Sekret"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Proliferationsphase",
+                "keywords": [
+                  "Proliferation",
+                  "Granulation"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "4. bis 14. Tag",
+                "keywords": [
+                  "4",
+                  "14"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Bildung von Granulationsgewebe, Wunde verkleinert sich, ist tiefrot und feucht-glänzend.",
+                "keywords": [
+                  "Granulationsgewebe",
+                  "tiefrot",
+                  "feucht"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_002",
+    "type": "tabelle_vergleich",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die primäre (p.p.) und die sekundäre (p.s.) Wundheilung anhand der genannten Kriterien.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kriterium",
+          "Primäre Heilung (p.p.)",
+          "Sekundäre Heilung (p.s.)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Wundränder"
+              },
+              {
+                "type": "input",
+                "correct_answer": "glatt anliegend",
+                "keywords": [
+                  "glatt",
+                  "geschlossen",
+                  "adaptiert"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "klaffend / offen",
+                "keywords": [
+                  "weit",
+                  "auseinander",
+                  "offen",
+                  "klaffend"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Narbenbildung"
+              },
+              {
+                "type": "input",
+                "correct_answer": "kaum / minimal",
+                "keywords": [
+                  "fein",
+                  "strichförmig",
+                  "kaum"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "deutlich / groß",
+                "keywords": [
+                  "breit",
+                  "deutlich",
+                  "ausgeprägt"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Heilungsdauer"
+              },
+              {
+                "type": "input",
+                "correct_answer": "kurz (Tage)",
+                "keywords": [
+                  "schnell",
+                  "kurz"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "lange (Wochen/Monate)",
+                "keywords": [
+                  "lang",
+                  "verzögert"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_003",
+    "type": "tabelle_3spalten",
+    "topic": "schmerzphysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Schmerzarten nach ihrer Pathogenese ein und **nennen** Sie jeweils ein Beispiel.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Schmerzart",
+          "Entstehungsort / Ursache",
+          "Beispiel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Somatischer Schmerz",
+                "keywords": [
+                  "somatisch"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Haut, Muskeln, Knochen, Gelenke (Bewegungsapparat).",
+                "keywords": [
+                  "Haut",
+                  "Muskel",
+                  "Knochen",
+                  "Gewebe"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schnittwunde / Fraktur",
+                "keywords": [
+                  "Fraktur",
+                  "Schnitt",
+                  "Verletzung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Viszeraler Schmerz",
+                "keywords": [
+                  "viszeral",
+                  "Eingeweide"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Innere Organe, meist dumpf und schlecht lokalisierbar.",
+                "keywords": [
+                  "Organe",
+                  "Eingeweide",
+                  "Bauchraum"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Kolik / Appendizitis",
+                "keywords": [
+                  "Kolik",
+                  "Blinddarm",
+                  "Galle"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Übersicht zu den Schmerzeinschätzungsinstrumenten.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Instrument",
+          "Zielgruppe",
+          "Methode / Merkmal"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "KUS-Skala",
+                "keywords": [
+                  "KUS"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Säuglinge / Kleinkinder",
+                "keywords": [
+                  "Kind",
+                  "Baby",
+                  "Säugling",
+                  "5. Lebensjahr"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Fremdeinschätzung anhand von Weinen, Gesichtsausdruck, Rumpfhaltung, Unruhe.",
+                "keywords": [
+                  "Fremdeinschätzung",
+                  "Punktesystem",
+                  "Beobachtung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Smiley-Analogskala",
+                "keywords": [
+                  "Smiley",
+                  "Gesichter"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Kinder ab 3 Jahren",
+                "keywords": [
+                  "Kinder",
+                  "3"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Selbsteinschätzung; Auswahl aus 6 Gesichtern, die Schmerzgrade darstellen.",
+                "keywords": [
+                  "Selbsteinschätzung",
+                  "Gesichter",
+                  "Wong-Baker"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_005",
+    "type": "tabelle_vergleich",
+    "topic": "schmerzphysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Anästhesieverfahren hinsichtlich Bewusstsein und Schmerzleitung.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kriterium",
+          "Allgemeinanästhesie",
+          "Regionalanästhesie"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Bewusstsein"
+              },
+              {
+                "type": "input",
+                "correct_answer": "ausgeschaltet (Schlaf)",
+                "keywords": [
+                  "weg",
+                  "bewusstlos",
+                  "Schlaf",
+                  "Hypnose"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "erhalten / wach",
+                "keywords": [
+                  "wach",
+                  "da",
+                  "erhalten"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Wirkungsort"
+              },
+              {
+                "type": "input",
+                "correct_answer": "zentral (Gehirn)",
+                "keywords": [
+                  "ZNS",
+                  "Gehirn",
+                  "ganzer Körper"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "peripher / Rückenmark",
+                "keywords": [
+                  "Nerven",
+                  "Rückenmark",
+                  "lokal",
+                  "Körperregion"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Informationen zu den Operationsverfahren.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Verfahren",
+          "Prinzip / Besonderheit",
+          "Beispiel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Laparoskopie",
+                "keywords": [
+                  "minimal-invasiv",
+                  "laparoskopisch",
+                  "Schlüsselloch"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Eingriff über kleine Stichkanäle unter Videosicht; geringeres Trauma.",
+                "keywords": [
+                  "Stichkanal",
+                  "Video",
+                  "klein"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "MIC-CHE",
+                "keywords": [
+                  "Gallenblase",
+                  "Appendektomie",
+                  "Hernie"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Osteosynthese",
+                "keywords": [
+                  "Knochen"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Stabile Verbindung von Knochenfragmenten durch Fremdmaterial.",
+                "keywords": [
+                  "Platten",
+                  "Schrauben",
+                  "Nagel"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Plattenosteosynthese",
+                "keywords": [
+                  "Marknagel",
+                  "DHS",
+                  "Platte"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_007",
+    "type": "tabelle_3spalten",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die Angaben zu den chirurgischen Drainagen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Typ",
+          "Funktionsprinzip",
+          "Wichtiger Pflegehinweis"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Redon-Drainage",
+                "keywords": [
+                  "Redon"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Aktive Sogdrainage (Vakuum) zur Sekretableitung.",
+                "keywords": [
+                  "Sog",
+                  "Vakuum",
+                  "aktiv"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Regelmäßige Vakuumkontrolle (Flasche darf nicht prall sein), Bilanzierung.",
+                "keywords": [
+                  "Vakuum",
+                  "bilanzieren"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Easy-Flow / Penrose",
+                "keywords": [
+                  "Easyflow",
+                  "Penrose",
+                  "Kapillar"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Passive Ableitung durch Kapillarwirkung oder Schwerkraft.",
+                "keywords": [
+                  "passiv",
+                  "Schwerkraft",
+                  "Kapillar"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Ableitung meist in den Verband oder Auffangbeutel; Hautschutz beachten.",
+                "keywords": [
+                  "Verband",
+                  "Hautschutz"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_008",
+    "type": "tabelle_vergleich",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Redon-Drainage und den Penrose-Docht.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kriterium",
+          "Redon-Drainage",
+          "Penrose-Drain / Docht"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Sog"
+              },
+              {
+                "type": "input",
+                "correct_answer": "ja (Vakuum)",
+                "keywords": [
+                  "aktiv",
+                  "Vakuum",
+                  "Sog"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "nein (passiv)",
+                "keywords": [
+                  "kein",
+                  "passiv",
+                  "Schwerkraft"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Auffangmedium"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Redonflasche",
+                "keywords": [
+                  "Flasche",
+                  "Behälter"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Verband / Beutel",
+                "keywords": [
+                  "Verband",
+                  "Wundbeutel"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_009",
+    "type": "tabelle_3spalten",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das SBAR-Konzept für die strukturierte Patientenübergabe.",
+    "points": 8,
+    "scoring_info": "1 Punkt pro korrektem Begriff und Inhalt.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung",
+          "Inhalt / Beispiel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "S"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Situation",
+                "keywords": [
+                  "Situation"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Identität, Diagnose, OP-Verfahren",
+                "keywords": [
+                  "Name",
+                  "Diagnose",
+                  "OP"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "B"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Background",
+                "keywords": [
+                  "Hintergrund",
+                  "Background"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Vorerkrankungen, Allergien",
+                "keywords": [
+                  "Anamnese",
+                  "Vorerkrankung",
+                  "Allergie"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "A"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Assessment",
+                "keywords": [
+                  "Einschätzung",
+                  "Beurteilung",
+                  "Assessment"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Aktueller Zustand, Vitalwerte",
+                "keywords": [
+                  "Werte",
+                  "Vitalwerte",
+                  "Vigilanz"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "R"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Recommendation",
+                "keywords": [
+                  "Empfehlung",
+                  "Vorschlag",
+                  "Recommendation"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Maßnahmen, Anordnungen",
+                "keywords": [
+                  "Vorgehen",
+                  "Plan",
+                  "Anordnung"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_010",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Tabelle zu nosokomialen Erregern.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Erreger-Name",
+          "Abkürzung",
+          "Besonderheit / Bedeutung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Methicillin-resistenter Staph. aureus",
+                "keywords": [
+                  "Staphylococcus",
+                  "Staph"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "MRSA",
+                "keywords": [
+                  "MRSA"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Häufigster multiresistenter Keim in Krankenhäusern; strenge Isolation nötig.",
+                "keywords": [
+                  "Krankenhauskeim",
+                  "Isolation",
+                  "Multiresistent"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Multiresistente gramnegative Stäbchen",
+                "keywords": [
+                  "gramnegative",
+                  "Stäbchen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "MRGN",
+                "keywords": [
+                  "MRGN"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Wird weiter unterteilt in 3MRGN und 4MRGN (je nach Anzahl resistenter Antibiotikaklassen).",
+                "keywords": [
+                  "Antibiotika",
+                  "Klassen",
+                  "3MRGN",
+                  "4MRGN"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_011",
+    "type": "tabelle_vergleich",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die anatomische und die chirurgische Pinzette.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Anatomische Pinzette",
+          "Chirurgische Pinzette"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Arbeitsende / Maul"
+              },
+              {
+                "type": "input",
+                "correct_answer": "flach geriffelt / glatt",
+                "keywords": [
+                  "flach",
+                  "geriffelt",
+                  "glatt"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Zähne (ineinandergreifend)",
+                "keywords": [
+                  "Zähne",
+                  "Sperre",
+                  "gekrallt"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Anwendung"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Halten von Material / Gefäßen",
+                "keywords": [
+                  "schonend",
+                  "Material",
+                  "Gefäße",
+                  "Tupfer"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fixieren von Wundrändern (Naht)",
+                "keywords": [
+                  "Wundrand",
+                  "Hautnaht",
+                  "fassen",
+                  "greifen"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_012",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Tabelle zum Keimgehalt von Wunden.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Keimbesiedlung",
+          "Definition",
+          "Klinisches Merkmal"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kolonisiert",
+                "keywords": [
+                  "kolonisiert",
+                  "colonia"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Mikroorganismen vermehren sich auf der Wundoberfläche.",
+                "keywords": [
+                  "Besiedlung",
+                  "vermehren"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Keine Immunreaktion des Wirts",
+                "keywords": [
+                  "keine Infektion",
+                  "Heilung ungestört"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Infiziert",
+                "keywords": [
+                  "infiziert",
+                  "Infektion"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Eindringen und Vermehren von Keimen im Gewebe.",
+                "keywords": [
+                  "Eindringen",
+                  "Gewebe"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Entzündungszeichen (Rubor, Calor...)",
+                "keywords": [
+                  "Entzündung",
+                  "Symptome",
+                  "Fieber"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_013",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Benennen** Sie die klassischen Entzündungszeichen mit dem entsprechenden lateinischen Fachbegriff.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Zeichen (deutsch)",
+          "Lateinischer Begriff",
+          "Beschreibung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Rötung",
+                "keywords": [
+                  "Rötung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Rubor",
+                "keywords": [
+                  "Rubor"
+                ]
+              },
+              {
+                "type": "text",
+                "content": "Durch verstärkte Durchblutung."
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Überwärmung",
+                "keywords": [
+                  "Wärme",
+                  "Hitze"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Calor",
+                "keywords": [
+                  "Calor"
+                ]
+              },
+              {
+                "type": "text",
+                "content": "Lokale Temperaturerhöhung."
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Schwellung",
+                "keywords": [
+                  "Schwellung",
+                  "Dicke"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Tumor",
+                "keywords": [
+                  "Tumor"
+                ]
+              },
+              {
+                "type": "text",
+                "content": "Flüssigkeitsansammlung im Gewebe."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_014",
+    "type": "tabelle_3spalten",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die präoperative Vorbereitung am OP-Tag.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Maßnahme",
+          "Besonderheit / Zeitpunkt",
+          "Begründung / Ziel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Nahrungskarenz",
+                "keywords": [
+                  "Nüchternheit",
+                  "Karenz"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "6h (fest) / 2h (flüssig)",
+                "keywords": [
+                  "6",
+                  "2"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Vermeidung von Aspiration (Einatmen von Mageninhalt) während der Narkose.",
+                "keywords": [
+                  "Aspiration",
+                  "Erbrechen",
+                  "Lunge"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Körperreinigung",
+                "keywords": [
+                  "Duschen",
+                  "Waschen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "kein Eincremen!",
+                "keywords": [
+                  "Creme",
+                  "Lotion",
+                  "Fett"
+                ]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Eingefettete Haut lässt sich nicht sicher desinfizieren.",
+                "keywords": [
+                  "Desinfektion",
+                  "Fett",
+                  "Hygien"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_tab_015",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die beiden häufigen pädiatrischen HNO-Eingriffe.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kriterium",
+          "Tonsillektomie (TE)",
+          "Adenotomie (AT)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Was wird entfernt?"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gaumenmandeln",
+                "keywords": [
+                  "Gaumen",
+                  "Tonsillen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Rachenmandeln (Polypen)",
+                "keywords": [
+                  "Rachen",
+                  "Polypen",
+                  "Adenoide"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Hauptkomplikation"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nachblutung",
+                "keywords": [
+                  "Blutung",
+                  "Nachblutung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "eher gering / Paukenerguss",
+                "keywords": [
+                  "Pauken",
+                  "Hörstörung"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_ft_001",
+    "type": "freitext_box",
+    "topic": "schmerzphysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Gate-Control-Theorie und ihre Bedeutung für die Schmerztherapie.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Hinterhorn",
+        "Rückenmark",
+        "Tormechanismus",
+        "Schmerzmodulation",
+        "dicke Nervenfasern"
+      ],
+      "correct_answer": "Die Gate-Control-Theorie beschreibt einen neuronalen Mechanismus im Hinterhorn des Rückenmarks, der wie ein 'Tor' für Schmerzimpulse wirkt. Durch die Stimulation dicker, myelinisierten Nervenfasern (z. B. durch Berührung oder Kälte) können die aufsteigenden Schmerzsignale gehemmt werden. Für die Therapie bedeutet dies, dass nicht-medikamentöse Maßnahmen wie Lagerung oder Kälteanwendung direkt die Schmerzweiterleitung zum Gehirn beeinflussen können. Diese körpereigene Schmerzmodulation ist ein zentraler Erklärungsansatz für die Wirkung physikalischer Therapiemaßnahmen."
+    }
+  },
+  {
+    "q_id": "m5_ft_002",
+    "type": "freitext_box",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den Ablauf eines aseptischen Verbandwechsels unter Berücksichtigung des Non-Touch-Prinzips.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Wundreinigung",
+        "Einbahnstraße",
+        "Asepsis",
+        "Keimverschleppung",
+        "sterile Instrumente"
+      ],
+      "correct_answer": "Beim aseptischen Verbandwechsel wird die Wunde streng von der sauberen Umgebung hin zur weniger sauberen Stelle gereinigt, was dem Einbahnstraßen-Prinzip entspricht. Das Non-Touch-Prinzip besagt hierbei, dass die Wunde und die sterilen Materialien niemals direkt mit den Fingern berührt werden dürfen. Stattdessen werden konsequent sterile Instrumente wie Pinzetten oder Kornzangen sowie sterile Handschuhe genutzt. Ziel dieser Vorgehensweise ist es, eine Keimverschleppung in die Wunde sicher zu verhindern und den Heilungsprozess nicht zu gefährden."
+    }
+  },
+  {
+    "q_id": "m5_ft_003",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie den Unterschied zwischen primärer und sekundärer Wundheilung.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Wundränder",
+        "Granulation",
+        "Narbenbildung",
+        "Infektionsrisiko",
+        "Wundverschluss"
+      ],
+      "correct_answer": "Die primäre Wundheilung (p.p.) erfolgt bei glatten, eng anliegenden Wundrändern, die meist durch eine Naht verschlossen sind und schnell mit minimaler Narbenbildung abheilen. Im Gegensatz dazu heilen Wunden bei der sekundären Wundheilung (p.s.) aus der Tiefe durch Granulationsgewebe auf, da die Wundränder klaffen oder ein Gewebeverlust vorliegt. Sekundär heilende Wunden benötigen deutlich mehr Zeit für den vollständigen Verschluss und führen in der Regel zu einer ausgeprägten Narbenbildung. Zudem ist das Infektionsrisiko bei der sekundären Heilung aufgrund der offenen Wundfläche deutlich höher."
+    }
+  },
+  {
+    "q_id": "m5_ft_004",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum die Nahrungskarenz (6h/2h-Regel) vor einer Operation strikt eingehalten werden muss.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Aspiration",
+        "Mageninhalt",
+        "Narkose",
+        "Schutzreflexe",
+        "Lungenentzündung"
+      ],
+      "correct_answer": "Die präoperative Nahrungskarenz dient primär der Vermeidung einer Aspiration von Mageninhalt während der Einleitung und Durchführung der Narkose. Da unter Narkose die Schutzreflexe wie Husten oder Schlucken ausgeschaltet sind, könnte Mageninhalt in den Rachen zurücklaufen und in die Luftröhre gelangen. Eine daraus resultierende Aspirationspneumonie ist eine lebensbedrohliche Komplikation für den Patienten. Die Zeitvorgabe von 6 Stunden für feste Nahrung und 2 Stunden für klare Flüssigkeiten gewährleistet eine weitgehende Magenentleerung vor dem Eingriff."
+    }
+  },
+  {
+    "q_id": "m5_ft_005",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die strukturierte Übergabe nach dem SBAR-Konzept im Aufwachraum.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Strukturierte Kommunikation",
+        "Patientensicherheit",
+        "Informationsübergabe",
+        "Assessment",
+        "Empfehlung"
+      ],
+      "correct_answer": "Das SBAR-Konzept ist ein standardisiertes Werkzeug für die strukturierte Kommunikation während der Patientenübergabe vom Aufwachraum an die Normalstation. Es gliedert sich in die Punkte Situation (aktuelle Diagnose), Background (Vorgeschichte), Assessment (klinischer Zustand) und Recommendation (Empfehlungen für die Nachsorge). Durch diese Systematik wird sichergestellt, dass keine sicherheitsrelevanten Informationen, wie etwa intraoperative Besonderheiten, verloren gehen. Dies trägt wesentlich zur Vermeidung von Behandlungsfehlern und zur Steigerung der Patientensicherheit bei."
+    }
+  },
+  {
+    "q_id": "m5_ft_006",
+    "type": "freitext_box",
+    "topic": "praeop_angst",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die hormonelle Stressreaktion bei präoperativer Angst und deren Auswirkungen auf den Patienten.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Adrenalin",
+        "Kortisol",
+        "Stresshormone",
+        "Vitalparameter",
+        "Schmerzwahrnehmung"
+      ],
+      "correct_answer": "Bei präoperativer Angst reagiert der Körper mit einer massiven Ausschüttung von Stresshormonen wie Adrenalin, Noradrenalin und Kortisol. Diese hormonelle Reaktion führt physiologisch zu einem Anstieg von Herzfrequenz und Blutdruck sowie zu einer gesteigerten Muskelspannung. Zudem verstärkt psychischer Stress die subjektive Schmerzwahrnehmung des Patienten erheblich. Eine professionelle Angstreduktion durch Pflegekräfte ist daher nicht nur psychologisch wichtig, sondern verbessert auch die körperliche Ausgangslage für die Operation und den Heilungsverlauf."
+    }
+  },
+  {
+    "q_id": "m5_ft_007",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das TIME-Prinzip im modernen Wundmanagement.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Wundbettvorbereitung",
+        "Exsudatmanagement",
+        "Nekrosen",
+        "Epithelisierung",
+        "Infektionsbekämpfung"
+      ],
+      "correct_answer": "Das TIME-Prinzip beschreibt einen systematischen Ansatz zur Wundbettvorbereitung bei chronischen oder komplizierten Wunden. Dabei steht T für Tissue-Management (Debridement von Nekrosen), I für Infection (Bekämpfung von Infektionen und Entzündungen) sowie M für Moisture-Management (optimale Wundfeuchtigkeit). Das E steht für Edge-Management, also die Beurteilung und Förderung der Epithelisierung vom Wundrand her. Durch dieses Schema kann die Pflegekraft für jede Phase der Wundheilung die passenden therapeutischen Schritte und Wundauflagen auswählen."
+    }
+  },
+  {
+    "q_id": "m5_ft_008",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum das Clippen statt des Rasierens der Haare im OP-Gebiet bevorzugt wird.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Mikroverletzungen",
+        "Keimbesiedlung",
+        "Infektionsrisiko",
+        "Hautintegrität",
+        "Hygienestandard"
+      ],
+      "correct_answer": "Das Kürzen der Haare mit einem elektrischen Clipper wird der herkömmlichen Rasur vorgezogen, da die Rasur häufig mikroskopisch kleine Hautverletzungen verursacht. In diesen Mikroläsionen können sich Keime ansiedeln und vermehren, was das Risiko für postoperative Wundinfektionen signifikant steigert. Clipping schont die Hautoberfläche und erhält die natürliche Schutzbarriere der Haut weitgehend aufrecht. Sollte eine Rasur dennoch unverzichtbar sein, darf diese laut Leitlinien nur unmittelbar vor dem Eingriff erfolgen."
+    }
+  },
+  {
+    "q_id": "m5_ft_009",
+    "type": "freitext_box",
+    "topic": "schmerzphysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Entstehung und die pflegerische Bedeutung des Schmerzgedächtnisses.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Chronifizierung",
+        "Sensibilisierung",
+        "Nervensystem",
+        "Schmerzreize",
+        "Schmerzschwelle"
+      ],
+      "correct_answer": "Ein Schmerzgedächtnis entsteht, wenn akute Schmerzen über längere Zeit unzureichend behandelt werden und sensible Nervenzellen im Rückenmark dauerhaft gereizt bleiben. Dies führt zu einer Sensibilisierung, wodurch die Schmerzschwelle sinkt und bereits geringfügige Reize als starker Schmerz wahrgenommen werden. Der Schmerz verselbstständigt sich und verliert seine ursprüngliche Warnfunktion, was zu einer dauerhaften Chronifizierung führt. Pflegerisch ist daher eine konsequente, frühzeitige Schmerztherapie entscheidend, um diese dauerhaften Veränderungen im Nervensystem zu verhindern."
+    }
+  },
+  {
+    "q_id": "m5_ft_010",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die pflegerische Überwachung im Aufwachraum unmittelbar nach einer Allgemeinanästhesie.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Vitalparameter",
+        "Vigilanz",
+        "Monitoring",
+        "Schutzreflexe",
+        "Frühwarnzeichen"
+      ],
+      "correct_answer": "Die pflegerische Überwachung im Aufwachraum umfasst die engmaschige Kontrolle der Vitalparameter wie Blutdruck, Herzfrequenz und Sauerstoffsättigung mittels technischem Monitoring. Besonders wichtig ist die Beurteilung der Vigilanz sowie die Überprüfung der Schutzreflexe, um die Atemwege zu sichern und Aspirationen zu vermeiden. Zudem werden Wundverbände und Drainagen regelmäßig auf Nachblutungen kontrolliert und die Schmerzintensität erfasst. Erst wenn der Patient stabil, wach und weitgehend schmerzfrei ist, darf die Rückverlegung auf die Normalstation erfolgen."
+    }
+  },
+  {
+    "q_id": "m5_ft_011",
+    "type": "freitext_box",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die Besonderheiten der pflegerischen Betreuung von Kindern nach einer Tonsillektomie.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Nachblutungsgefahr",
+        "häufiges Schlucken",
+        "Wunschkost",
+        "körperliche Schonung",
+        "KUS-Skala"
+      ],
+      "correct_answer": "Nach einer Tonsillektomie steht die Beobachtung auf Warnzeichen einer Nachblutung im Vordergrund, wie zum Beispiel auffallend häufiges Schlucken oder Blutspucken. Das Schmerzmanagement erfolgt mit altersgerechten Skalen (z. B. KUS-Skala) und wird durch Maßnahmen wie lokale Kälteanwendung oder das Essen von Eis unterstützt. Die Ernährung wird als gelenkte Wunschkost (kalt, weich, säurefrei) gestaltet, um die Wundbeläge im Rachen nicht zu verletzen. Zudem ist eine strikte körperliche Schonung für mindestens eine Woche sowie das Meiden von Hitze (Bäder/Sonne) für die Heilung essenziell."
+    }
+  },
+  {
+    "q_id": "m5_ft_012",
+    "type": "freitext_box",
+    "topic": "skillstraining",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum die Delegation ärztlicher Tätigkeiten an Pflegekräfte eine eigene Durchführungsverantwortung begründet.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Anordnungsverantwortung",
+        "Durchführungsverantwortung",
+        "Delegation",
+        "Fachstandard",
+        "Haftung"
+      ],
+      "correct_answer": "Im rechtlichen Rahmen der Delegation behält der Arzt zwar die Anordnungsverantwortung (Entscheidung über Indikation und Verfahren), die Pflegekraft übernimmt jedoch die volle Durchführungsverantwortung. Das bedeutet, dass sie rechtlich für die fachlich korrekte Ausführung nach aktuellem Standard verantwortlich ist und bei Fehlern haftbar gemacht werden kann. Die Pflegekraft muss vor der Übernahme prüfen, ob sie die notwendige Kompetenz zur Durchführung besitzt. Sollte sie Zweifel an der fachlichen Korrektheit der Anordnung haben, ist sie zur Remonstration (Einwand) verpflichtet."
+    }
+  },
+  {
+    "q_id": "m5_ft_013",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Unterschiede zwischen PONV, Shivering und dem postoperativen Delir.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Übelkeit",
+        "Kältezittern",
+        "Desorientierung",
+        "Durchgangssyndrom",
+        "Vigilanzstörung"
+      ],
+      "correct_answer": "PONV steht für postoperative Übelkeit und Erbrechen, die häufig durch Narkosegase oder Schmerzmittel ausgelöst wird und medikamentös therapiert werden muss. Shivering ist ein unkontrolliertes Kältezittern aufgrund von intraoperativem Wärmeverlust, welches den Sauerstoffbedarf des Körpers massiv erhöht und Herz-Kreislauf-Belastungen verursacht. Das postoperative Delir (oder Durchgangssyndrom) äußert sich hingegen durch akute Verwirrtheit, Desorientierung und psychomotorische Störungen. Während PONV und Shivering meist kurz nach der Narkose abklingen, erfordert ein Delir eine intensive pflegerische Überwachung zum Schutz des Patienten."
+    }
+  },
+  {
+    "q_id": "m5_ft_014",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie das Orem-Modell (Selbstpflegedefizit) im Kontext der perioperativen Pflege.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Selbstpflege",
+        "Selbstpflegedefizit",
+        "pflegerisches Ausgleichssystem",
+        "Patientenedukation",
+        "Autonomie"
+      ],
+      "correct_answer": "Das Orem-Modell geht davon aus, dass Menschen grundsätzlich für ihre eigene Pflege verantwortlich sind, diese Fähigkeit jedoch durch eine Operation zeitweise eingeschränkt ist (Selbstpflegedefizit). Die perioperative Pflege hat die Aufgabe, dieses Defizit durch stellvertretendes Handeln auszugleichen oder den Patienten durch gezielte Anleitung wieder zur Selbstpflege zu befähigen. Durch Patientenedukation (z. B. Einüben von Atemtechniken vor der OP) werden Ressourcen gestärkt, um die Autonomie des Patienten nach dem Eingriff schnellstmöglich wiederherzustellen. Die Pflege fungiert hierbei als unterstützendes und beratendes System."
+    }
+  },
+  {
+    "q_id": "m5_ft_015",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die Unterschiede zwischen VRE, MRSA, MRGN und ESBL als nosokomiale Erreger.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Multiresistente Erreger",
+        "Krankenhauskeime",
+        "Antibiotikaresistenz",
+        "Hygienemaßnahmen",
+        "Infektionsschutz"
+      ],
+      "correct_answer": "Diese Abkürzungen bezeichnen verschiedene multiresistente Erreger, die gegen gängige Antibiotika immun sind und häufig nosokomiale Infektionen verursachen. MRSA ist ein Methicillin-resistenter Staphylococcus aureus, während VRE für Vancomycin-resistente Enterokokken steht. MRGN sind multiresistente gramnegative Stäbchenbakterien, die je nach Resistenzlage gegen drei oder vier Antibiotikaklassen (3MRGN/4MRGN) eingeteilt werden. ESBL beschreibt Erreger, die Enzyme (Beta-Lactamasen) bilden, welche eine breite Palette von Penicillinen und Cephalosporinen unwirksam machen. Alle diese Keime erfordern in der chirurgischen Pflege strikte Isolations- und Hygienemaßnahmen."
+    }
+  },
+  {
+    "q_id": "m5_zu_001",
+    "type": "zuordnung",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Schmerzeinschätzungsinstrumente den passenden Zielgruppen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "NRS (Numerische Rating Skala)",
+        "B": "Smiley-Analogskala (Wong-Baker)",
+        "C": "KUS-Skala (Kindliche Unbehagens- und Schmerzskala)",
+        "D": "ZOPA"
+      },
+      "statements": [
+        {
+          "text": "Wache, kognitiv nicht eingeschränkte Erwachsene und Jugendliche.",
+          "answer": "A"
+        },
+        {
+          "text": "Kinder ab dem 3. Lebensjahr zur Selbsteinschätzung.",
+          "answer": "B"
+        },
+        {
+          "text": "Säuglinge und Kleinkinder bis zum 5. Lebensjahr (Fremdeinschätzung).",
+          "answer": "C"
+        },
+        {
+          "text": "Menschen mit Demenz oder erheblichen kognitiven Einschränkungen.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_zu_002",
+    "type": "zuordnung",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Wundauflagen bzw. Therapien der korrekten Indikation zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Hydrogel",
+        "B": "Alginat",
+        "C": "Schaumverband",
+        "D": "VAC-Therapie"
+      },
+      "statements": [
+        {
+          "text": "Aufweichen von trockenen Nekrosen und harten Fibrinbelägen.",
+          "answer": "A"
+        },
+        {
+          "text": "Bindung von Sekret bei sehr stark exsudierenden Wunden.",
+          "answer": "B"
+        },
+        {
+          "text": "Sekretaufnahme und polsternder Schutz gegen Druck.",
+          "answer": "C"
+        },
+        {
+          "text": "Großflächige Wundkonditionierung mittels kontrolliertem Unterdruck.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_zu_003",
+    "type": "zuordnung",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Drainagetypen ihrem Funktionsprinzip zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Redon-Drainage mit Sog",
+        "B": "Redon-Drainage ohne Sog",
+        "C": "Easy-Flow-Drain",
+        "D": "Penrose-Drain"
+      },
+      "statements": [
+        {
+          "text": "Aktive Ableitung von Wundsekret durch ein hergestelltes Vakuum.",
+          "answer": "A"
+        },
+        {
+          "text": "Sekretableitung aus der Wunde, nachdem das Vakuum 'gelassen' wurde.",
+          "answer": "B"
+        },
+        {
+          "text": "Passive Ableitung durch Kapillarwirkung und Schwerkraft über ein geriffeltes Silikonprofil.",
+          "answer": "C"
+        },
+        {
+          "text": "Einfache Kapillardrainage mittels einer Gummilasche oder eines Schlauchdochts.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_zu_004",
+    "type": "zuordnung",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die postoperativen Komplikationen ihren Symptomen bzw. Ursachen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "PONV",
+        "B": "Shivering",
+        "C": "Postoperatives Delir",
+        "D": "Aspiration"
+      },
+      "statements": [
+        {
+          "text": "Übelkeit und Erbrechen nach der Narkose.",
+          "answer": "A"
+        },
+        {
+          "text": "Unkontrolliertes Kältezittern infolge von Wärmeverlust im OP.",
+          "answer": "B"
+        },
+        {
+          "text": "Akute Verwirrtheit, Desorientierung und psychomotorische Unruhe.",
+          "answer": "C"
+        },
+        {
+          "text": "Eindringen von Mageninhalt in die Luftröhre bei fehlenden Schutzreflexen.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_zu_005",
+    "type": "zuordnung",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Stufen der Keimbesiedlung den Definitionen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "aseptisch",
+        "B": "kontaminiert",
+        "C": "kolonisiert",
+        "D": "infiziert"
+      },
+      "statements": [
+        {
+          "text": "Keimfrei, typisch für frisch chirurgisch versorgte und genähte Wunden.",
+          "answer": "A"
+        },
+        {
+          "text": "Vorhandensein von Keimen in der Wunde, die sich jedoch nicht vermehren.",
+          "answer": "B"
+        },
+        {
+          "text": "Besiedlung mit sich vermehrenden Bakterien ohne Immunreaktion des Wirtes.",
+          "answer": "C"
+        },
+        {
+          "text": "Eindringen und Vermehren von Keimen mit deutlicher Entzündungsreaktion (z.B. Eiter).",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden zwei klassischen Entzündungszeichen.",
+    "points": 2,
+    "data": {
+      "list_label": "Die 5 Entzündungszeichen",
+      "given_items": [
+        "Rubor (Rötung)",
+        "Calor (Überwärmung)",
+        "Tumor (Schwellung)"
+      ],
+      "missing_items": [
+        "Dolor (Schmerz)",
+        "Functio laesa (Funktionseinschränkung)"
+      ],
+      "all_valid_missing": [
+        "Dolor",
+        "Schmerz",
+        "Functio laesa",
+        "Funktionseinschränkung",
+        "gestörte Funktion"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Begriffe des SBAR-Konzepts zur strukturierten Übergabe.",
+    "points": 2,
+    "data": {
+      "list_label": "Bestandteile SBAR",
+      "given_items": [
+        "S = Situation",
+        "B = Background (Hintergrund)"
+      ],
+      "missing_items": [
+        "A = Assessment (Einschätzung)",
+        "R = Recommendation (Empfehlung)"
+      ],
+      "all_valid_missing": [
+        "Assessment",
+        "Einschätzung",
+        "Beurteilung",
+        "Recommendation",
+        "Empfehlung",
+        "Vorschlag"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Phasen der physiologischen Wundheilung.",
+    "points": 2,
+    "data": {
+      "list_label": "Wundheilungsphasen",
+      "given_items": [
+        "Exsudationsphase (Reinigungsphase)"
+      ],
+      "missing_items": [
+        "Proliferationsphase (Granulationsphase)",
+        "Regenerationsphase (Epithelisierungsphase)"
+      ],
+      "all_valid_missing": [
+        "Proliferationsphase",
+        "Granulationsphase",
+        "Regenerationsphase",
+        "Epithelisierungsphase",
+        "Differenzierungsphase"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie drei weitere pflegerische Interventionen der präoperativen Vorbereitung.",
+    "points": 3,
+    "data": {
+      "list_label": "Präoperative Pflegeinterventionen",
+      "given_items": [
+        "Nahrungskarenz",
+        "Körperreinigung"
+      ],
+      "missing_items": [
+        "Haarentfernung / Clipping",
+        "Prämedikation",
+        "Patienteneinwilligung kontrollieren"
+      ],
+      "all_valid_missing": [
+        "Haarentfernung",
+        "Clipping",
+        "Haarkürzung",
+        "Prämedikation",
+        "Beruhigungsmedikation",
+        "Patienteneinwilligung",
+        "OP-Aufklärung kontrollieren",
+        "Darmvorbereitung",
+        "Markierung OP-Feld"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Schritte des Pflegeprozesses nach dem Modell von Fiechter und Meier.",
+    "points": 3,
+    "data": {
+      "list_label": "Die 6 Schritte des Pflegeprozesses",
+      "given_items": [
+        "1. Informationssammlung",
+        "2. Probleme und Ressourcen erkennen",
+        "3. Pflegeziele festlegen"
+      ],
+      "missing_items": [
+        "4. Planung der Pflegemaßnahmen",
+        "5. Durchführung der Pflege",
+        "6. Beurteilung der Wirkung (Evaluation)"
+      ],
+      "all_valid_missing": [
+        "Maßnahmenplanung",
+        "Planung der Pflegemaßnahmen",
+        "Durchführung",
+        "Umsetzung der Pflege",
+        "Evaluation",
+        "Beurteilung der Wirkung",
+        "Auswertung"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "schmerzphysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'Nozizeption' und **nennen** Sie die 4 Phasen der Schmerzleitung.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition Nozizeption",
+      "definition_correct": "Nozizeption beschreibt die Aufnahme, Weiterleitung und Verarbeitung von Schmerzreizen durch das Nervensystem, vom Ort der Entstehung bis zur Wahrnehmung im Gehirn.",
+      "definition_keywords": [
+        "Nervensystem",
+        "Schmerzreize",
+        "Aufnahme",
+        "Weiterleitung",
+        "Verarbeitung"
+      ],
+      "definition_points": 3,
+      "examples_label": "Phasen der Schmerzleitung",
+      "examples_count": 4,
+      "correct_examples": [
+        "Transduktion",
+        "Transmission",
+        "Perzeption (Wahrnehmung)",
+        "Modulation"
+      ],
+      "all_valid_examples": [
+        "Transduktion",
+        "Schmerzentstehung",
+        "Transmission",
+        "Schmerzleitung",
+        "Perzeption",
+        "Wahrnehmung",
+        "Interpretation",
+        "Modulation",
+        "Schmerzbeeinflussung"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie 'Clinical Pathway' (klinischer Behandlungspfad) und **nennen** Sie 3 Vorteile dieses Instruments.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Clinical Pathway",
+      "definition_correct": "Ein Clinical Pathway ist ein Instrument zur Optimierung von Behandlungsprozessen, bei dem pflegerische und medizinische Maßnahmen für ein spezifisches Krankheitsbild interdisziplinär und zeitlich verbindlich festgelegt werden.",
+      "definition_keywords": [
+        "Behandlungsprozess",
+        "Optimierung",
+        "interdisziplinär",
+        "zeitlich verbindlich",
+        "Krankheitsbild"
+      ],
+      "definition_points": 3,
+      "examples_label": "Vorteile",
+      "examples_count": 3,
+      "correct_examples": [
+        "Sicherung der Behandlungsqualität",
+        "Effizienzsteigerung / Kosteneinsparung",
+        "Erhöhung der Transparenz im Team"
+      ],
+      "all_valid_examples": [
+        "Qualitätssicherung",
+        "Standardisierung",
+        "Kosteneffizienz",
+        "Transparenz",
+        "Verbindlichkeit der Aufgaben",
+        "Verkürzung der Liegezeit"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'nosokomiale Infektion' und **nennen** Sie 3 typische multiresistente Erreger.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "Eine nosokomiale Infektion ist eine Infektion, die ein Patient im zeitlichen Zusammenhang mit einer stationären oder ambulanten medizinischen Maßnahme erwirbt, sofern diese nicht bereits bei Aufnahme bestand.",
+      "definition_keywords": [
+        "Krankenhausinfektion",
+        "medizinische Maßnahme",
+        "zeitlicher Zusammenhang",
+        "nicht bei Aufnahme vorhanden"
+      ],
+      "definition_points": 3,
+      "examples_label": "Erreger (Abkürzungen)",
+      "examples_count": 3,
+      "correct_examples": [
+        "MRSA",
+        "VRE",
+        "MRGN"
+      ],
+      "all_valid_examples": [
+        "MRSA",
+        "VRE",
+        "MRGN",
+        "ESBL",
+        "Clostridium difficile"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie 'PONV' und **nennen** Sie 3 klinische Risikofaktoren für dessen Entstehung.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "PONV steht für 'Postoperative Nausea and Vomiting' und bezeichnet das Auftreten von Übelkeit und Erbrechen nach einer Anästhesie bzw. Operation.",
+      "definition_keywords": [
+        "Übelkeit",
+        "Erbrechen",
+        "postoperativ",
+        "Nausea",
+        "Vomiting"
+      ],
+      "definition_points": 3,
+      "examples_label": "Risikofaktoren",
+      "examples_count": 3,
+      "correct_examples": [
+        "Weibliches Geschlecht",
+        "Nichtraucherstatus",
+        "Hoher postoperativer Opiatbedarf"
+      ],
+      "all_valid_examples": [
+        "Weibliches Geschlecht",
+        "Nichtraucher",
+        "Opiatgabe",
+        "PONV in der Anamnese",
+        "Reisekrankheit (Kinetosen)",
+        "Art der Operation (z.B. HNO/Auge)"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie 'Perioperative Pflege' und **nennen** Sie die 3 Phasen, in die sie unterteilt wird.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "Perioperative Pflege umfasst die Vernetzung und Zusammenfassung aller pflegerischen Maßnahmen und Tätigkeiten in den Zeiträumen vor, während und nach einem chirurgischen Eingriff.",
+      "definition_keywords": [
+        "Vernetzung",
+        "Pflegetätigkeiten",
+        "vor während nach",
+        "Operation"
+      ],
+      "definition_points": 3,
+      "examples_label": "Phasen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Präoperative Phase",
+        "Intraoperative Phase",
+        "Postoperative Phase"
+      ],
+      "all_valid_examples": [
+        "Präoperativ",
+        "Intraoperativ",
+        "Postoperativ"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur präoperativen Vorbereitung korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich korrekt.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Nahrungskarenz für feste Kost beträgt standardmäßig 6 Stunden vor der OP.",
+          "correct": true
+        },
+        {
+          "label": "Nach dem Duschen am Vorabend sollte die Haut im OP-Feld gut eingecremt werden.",
+          "correct": false
+        },
+        {
+          "label": "Die Haarkürzung mit einem Clipper ist gegenüber der Rasur zu bevorzugen.",
+          "correct": true
+        },
+        {
+          "label": "Klare Flüssigkeiten dürfen bis unmittelbar vor der Narkoseeinleitung getrunken werden.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Nach dem Duschen am Vorabend sollte die Haut im OP-Feld gut eingecremt werden.",
+          "text": "Eingefettete Haut lässt sich nicht ausreichend desinfizieren, was das Infektionsrisiko erhöht."
+        },
+        {
+          "option": "Die Haarkürzung mit einem Clipper ist gegenüber der Rasur zu bevorzugen.",
+          "text": "Eine Rasur verursacht häufig Mikroverletzungen der Haut, in denen sich Keime ansiedeln können (erhöhtes Wundinfektionsrisiko)."
+        },
+        {
+          "option": "Klare Flüssigkeiten dürfen bis unmittelbar vor der Narkoseeinleitung getrunken werden.",
+          "text": "Die Karenzzeit für klare Flüssigkeiten beträgt 2 Stunden, um eine Aspiration während der Narkoseeinleitung zu vermeiden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Maßnahmen zu einem fachgerechten aseptischen Verbandwechsel gehören.",
+    "instruction_justify": "**Begründen** Sie eine korrekte und eine falsche Maßnahme.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Reinigung der Wunde nach dem 'Einbahnstraßen-Prinzip' von sauber nach unrein.",
+          "correct": true
+        },
+        {
+          "label": "Verwendung steriler Instrumente oder Handschuhe nach dem Non-Touch-Prinzip.",
+          "correct": true
+        },
+        {
+          "label": "Reinigung einer infizierten Wunde vor der Versorgung einer aseptischen Wunde.",
+          "correct": false
+        },
+        {
+          "label": "Abtupfen der Wundumgebung mit unsterilen Zellstofftupfern.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Reinigung der Wunde nach dem 'Einbahnstraßen-Prinzip' von sauber nach unrein.",
+          "text": "Dies verhindert die Verschleppung von Keimen aus belasteten Arealen in saubere Wundbereiche."
+        },
+        {
+          "option": "Reinigung einer infizierten Wunde vor der Versorgung einer aseptischen Wunde.",
+          "text": "In der chirurgischen Pflege gilt die Reihenfolge 'sauber vor unrein', um nosokomiale Infektionen durch Keimübertragung zu vermeiden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zum postoperativen Schmerzmanagement korrekt sind.",
+    "instruction_justify": "**Begründen** Sie Ihre Auswahl.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Schmerz ist immer das, was der Patient als solchen äußert (Subjektivität).",
+          "correct": true
+        },
+        {
+          "label": "Die Schmerzeinschätzung beginnt erst bei der ersten Mobilisation auf Station.",
+          "correct": false
+        },
+        {
+          "label": "Zur Verlaufskontrolle wird eine Numerische Rating Skala (NRS) von 0 bis 10 verwendet.",
+          "correct": true
+        },
+        {
+          "label": "Pflegerische Schmerztherapie umfasst ausschließlich medikamentöse Maßnahmen.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Schmerz ist immer das, was der Patient als solchen äußert (Subjektivität).",
+          "text": "Es gibt keine objektiven Messgeräte für Schmerz; die Aussage des Patienten ist die einzig valide Grundlage für die Therapie."
+        },
+        {
+          "option": "Die Schmerzeinschätzung beginnt erst bei der ersten Mobilisation auf Station.",
+          "text": "Laut Expertenstandard setzt das Schmerzmanagement unmittelbar zu Beginn des Auftrags (Aufnahme/Aufwachraum) ein, um eine Chronifizierung zu vermeiden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur physiologischen Wundheilung korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Primäre Wundheilung (p.p.) ist durch glatte, eng anliegende Wundränder gekennzeichnet.",
+          "correct": true
+        },
+        {
+          "label": "Granulationsgewebe in der Proliferationsphase ist typischerweise blass und trocken.",
+          "correct": false
+        },
+        {
+          "label": "Eine Wunde gilt als chronisch, wenn sie nach 8 Wochen fachgerechter Therapie nicht abgeheilt ist.",
+          "correct": true
+        },
+        {
+          "label": "In der Exsudationsphase findet der Aufbau von belastbarem Narbengewebe statt.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Granulationsgewebe in der Proliferationsphase ist typischerweise blass und trocken.",
+          "text": "Gesundes Granulationsgewebe ist tiefrot, feucht-glänzend und gut durchblutet; blasses Gewebe deutet auf eine Heilungsstörung hin."
+        },
+        {
+          "option": "In der Exsudationsphase findet der Aufbau von belastbarem Narbengewebe statt.",
+          "text": "Die Exsudationsphase dient der Reinigung der Wunde; der Gewebeaufbau erfolgt erst in der Proliferations- und Regenerationsphase."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Pflege von Kindern nach Tonsillektomie (TE) korrekt sind.",
+    "instruction_justify": "**Begründen** Sie eine richtige und eine falsche Aussage.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Auffallend häufiges Schlucken ist ein Leitsymptom für eine Nachblutung.",
+          "correct": true
+        },
+        {
+          "label": "Nach der OP sollte das Kind intensiv mit Salbeitee gurgeln, um die Wunde zu reinigen.",
+          "correct": false
+        },
+        {
+          "label": "Milchspeiseeis kann schmerzlindernd wirken und die Nahrungsaufnahme fördern.",
+          "correct": true
+        },
+        {
+          "label": "Heißes Duschen oder Baden am 1. postoperativen Tag fördert die Durchblutung und Heilung.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Nach der OP sollte das Kind intensiv mit Salbeitee gurgeln, um die Wunde zu reinigen.",
+          "text": "Gurgeln ist kontraindiziert, da die mechanische Belastung die empfindlichen Wundbeläge (Fibrin) ablösen und Nachblutungen provozieren kann."
+        },
+        {
+          "option": "Auffallend häufiges Schlucken ist ein Leitsymptom für eine Nachblutung.",
+          "text": "Das Kind schluckt reflektorisch das Blut, das aus den Tonsillennischen in den Rachen läuft; dies ist oft das erste Zeichen vor dem sichtbaren Blutspucken."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_extra_001",
+    "type": "richtig_falsch",
+    "topic": "chirurgie_intro",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der Biochirurgie (Madentherapie) werden Fliegenlarven eingesetzt, die selektiv gesundes Granulationsgewebe abtragen, um die Wundheilung durch mechanische Reizung zu fördern.",
+    "answer": "falsch",
+    "explanation": "Maden (Larven) fressen kein lebendes Gewebe, sondern ernähren sich von nekrotischem Material und Belägen (enzymatisches Débridement).",
+    "source_hint": "Ingos Tagebuch / Handout ME 5.1"
+  },
+  {
+    "q_id": "m5_extra_002",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie das primäre Ziel des Patient-Blood-Managements (PBM) und zwei dazugehörige Maßnahmen.",
+    "list_label": "Patient-Blood-Management",
+    "count": 3,
+    "correct_answers": [
+      "Vermeidung/Reduktion von Fremdbluttransfusionen",
+      "Einsatz von Cell-Savern (Eigenblutrückgewinnung)",
+      "Präoperative Behandlung einer Anämie"
+    ],
+    "all_valid_answers": [
+      "Vermeidung von Fremdblut",
+      "Sicherheit bei Transfusionswahrscheinlichkeit >= 10%",
+      "Cell-Saver",
+      "Maschinelle Autotransfusion",
+      "Optimierung des körpereigenen Blutvolumens",
+      "Erythropoetin-Gabe",
+      "Sparsame Blutentnahmen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt für das Ziel, je 1 Punkt für eine korrekte Maßnahme."
+  },
+  {
+    "q_id": "m5_extra_003",
+    "type": "tabelle_vergleich",
+    "topic": "schmerzmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Begriffe Pharmakokinetik und Pharmakodynamik.",
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Begriff",
+          "Zentrale Fragestellung / Definition"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Pharmakokinetik"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Was macht der Körper mit dem Medikament? (Aufnahme, Verteilung, Abbau, Ausscheidung)",
+                "keywords": [
+                  "Körper mit Medikament",
+                  "LADME",
+                  "Verteilung",
+                  "Abbau",
+                  "Ausscheidung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "content": "Pharmakodynamik"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Was macht das Medikament mit dem Körper? (Wirkungsweise am Rezeptor, biochemische Effekte)",
+                "keywords": [
+                  "Medikament mit Körper",
+                  "Wirkung",
+                  "Wirkort",
+                  "Rezeptor"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_extra_004",
+    "type": "richtig_falsch",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Berner Schmerzscore (BSN) ist ein validiertes Instrument zur Schmerzeinschätzung, das speziell für (beatmete) Neugeborene und Säuglinge entwickelt wurde.",
+    "answer": "richtig",
+    "explanation": "Der BSN nutzt physiologische Parameter (HF, SpO2) und Verhaltensmerkmale zur Schmerzbeurteilung bei Kleinstkindern.",
+    "source_hint": "M 5.4_Handout / BSN Skala"
+  },
+  {
+    "q_id": "m5_extra_005",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den Verwendungszweck und die korrekte Patientenedukation für den 'Tri-Ball' Atemtrainer.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Inspiration",
+        "Lungenbelüftung",
+        "Pneumonieprophylaxe",
+        "tief einatmen",
+        "Bälle oben halten"
+      ],
+      "correct_answer": "Der Tri-Ball ist ein Übungsgerät zur vertieften Inspiration, um die Belüftung der Lungenflügel zu verbessern und einer postoperativen Pneumonie vorzubeugen. Der Patient soll das Mundstück umschließen und so tief und gleichmäßig einatmen, dass die Bälle in den Kammern nacheinander aufsteigen und möglichst lange oben gehalten werden. Die Ausatmung erfolgt ohne Gerät. Die Anleitung sollte bereits präoperativ erfolgen, damit der Patient die Technik schmerzfrei einüben kann."
+    }
+  },
+  {
+    "q_id": "m5_extra_006",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das 'En-bloc-Aufstehen' über die Seitenlage ist besonders nach abdominalchirurgischen Eingriffen indiziert, um die Bauchmuskulatur zu entlasten und Wundschmerzen zu minimieren.",
+    "answer": "richtig",
+    "explanation": "Durch das Aufstehen über die Seite wird der Einsatz der geraden Bauchmuskeln vermieden, was die Naht schont und Schmerzen reduziert.",
+    "source_hint": "M 5.7_Skript Teil III"
+  },
+  {
+    "q_id": "m5_extra_007",
+    "type": "zuordnung",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Vigilanzstufen den passenden klinischen Beschreibungen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Somnolent",
+        "B": "Soporös",
+        "C": "Komatös"
+      },
+      "statements": [
+        {
+          "text": "Patient ist schläfrig, aber durch leichte Berührung oder leise Ansprache sofort erweckbar.",
+          "answer": "A"
+        },
+        {
+          "text": "Patient ist nur durch starke Reize (Schmerzreiz, lautes Anrufen) kurzzeitig und unvollständig erweckbar.",
+          "answer": "B"
+        },
+        {
+          "text": "Patient zeigt keinerlei Abwehr- oder Erweckungsreaktionen auf äußere Reize.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_extra_008",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 klinische Anzeichen, die auf eine postoperative Lungenembolie hindeuten können.",
+    "list_label": "Symptome Lungenembolie",
+    "count": 4,
+    "correct_answers": [
+      "Plötzliche Atemnot (Dyspnoe)",
+      "Stechender Brustschmerz",
+      "Tachykardie (schneller Puls)",
+      "Zyanose (Blaufärbung der Lippen/Haut)"
+    ],
+    "all_valid_answers": [
+      "Atemnot",
+      "Dyspnoe",
+      "Thoraxschmerz",
+      "Tachykardie",
+      "Herzfrequenzanstieg",
+      "Blutdruckabfall",
+      "Angstgefühl / Todesangst",
+      "Husten",
+      "Zyanose",
+      "Schweißausbruch"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Anzeichen."
+  },
+  {
+    "q_id": "m5_extra_009",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Wenn ein Patient postoperativ keinen Dauerkatheter hat, sollte die erste Spontanausscheidung von Urin spätestens 8 Stunden nach dem Eingriff erfolgen.",
+    "answer": "richtig",
+    "explanation": "Erfolgt innerhalb von 8 Stunden kein Spontanurin, besteht der Verdacht auf einen Harnverhalt, der pflegerische Interventionen erfordert.",
+    "source_hint": "M 5.7_Skript Teil III"
+  },
+  {
+    "q_id": "m5_extra_010",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie, warum das postoperative Infusionsprogramm bei Patienten mit vorbestehender Herzinsuffizienz besonders engmaschig überwacht werden muss.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Volumenüberlastung",
+        "Dekompensation",
+        "Lungenödem",
+        "Flüssigkeitsbilanzierung",
+        "Einfuhrgeschwindigkeit"
+      ],
+      "correct_answer": "Bei einer Herzinsuffizienz ist die Pumpleistung des Herzens eingeschränkt. Eine zu schnelle oder zu große Zufuhr von Infusionslösungen kann zu einer akuten Volumenüberlastung des Kreislaufs führen. Dies birgt die Gefahr einer kardialen Dekompensation, die sich klinisch in einem Lungenödem äußern kann. Daher müssen die Durchflussgeschwindigkeit exakt kontrolliert und die Flüssigkeitsbilanz sowie die Atmung (Rasselgeräusche) streng überwacht werden."
+    }
+  },
+  {
+    "q_id": "m5_extra_011",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das 'Einbahnstraßen-Prinzip' beim aseptischen Verbandwechsel bedeutet, dass die Wundreinigung immer von der Infektionsquelle (unrein) weg zur sauberen Umgebung erfolgen muss.",
+    "answer": "falsch",
+    "explanation": "Es muss genau umgekehrt gearbeitet werden: Von sauber nach unrein, um keine Keime in die sauberen Wundbereiche zu verschleppen.",
+    "source_hint": "Handout Wunde 5.8 / ME 5.8"
+  },
+  {
+    "q_id": "m5_extra_012",
+    "type": "zuordnung",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den chirurgischen Instrumenten ihren spezifischen Verwendungszweck zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Kornzange",
+        "B": "Scharfer Löffel",
+        "C": "Péanklemme",
+        "D": "Skalpell (Klinge Nr. 11)"
+      },
+      "statements": [
+        {
+          "text": "Fassen grober Gegenstände wie Kompressen oder Drainagen.",
+          "answer": "A"
+        },
+        {
+          "text": "Abtragen von fest haftenden Belägen und Nekrosen aus dem Wundgrund.",
+          "answer": "B"
+        },
+        {
+          "text": "Fassen von Gewebeteilen oder zum Halten von Fremdkörpern.",
+          "answer": "C"
+        },
+        {
+          "text": "Durchführung von punktförmigen Stichinzisionen.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_extra_013",
+    "type": "freitext_box",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie die Notwendigkeit eines Rotationsschemas bei der Durchführung subkutaner Injektionen.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Lipodystrophie",
+        "Gewebeverhärtung",
+        "Resorption",
+        "Hämatome",
+        "Einstichstellenwechsel"
+      ],
+      "correct_answer": "Ein Rotationsschema stellt sicher, dass die Einstichstellen bei wiederholten Injektionen (z. B. Insulin) systematisch gewechselt werden. Dies verhindert die Entstehung von schmerzhaften Gewebeverhärtungen und Gewebeveränderungen wie der Lipodystrophie (Fettgewebsschwund oder -wucherung). Solche Veränderungen würden die Resorption des Wirkstoffs unvorhersehbar machen. Zudem werden das Risiko für Hämatome gesenkt und die Hautregeneration gefördert."
+    }
+  },
+  {
+    "q_id": "m5_extra_014",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Einlage von Paukenröhrchen bei Kindern dient primär der Belüftung des Mittelohrs bei chronischem Paukenerguss, um bleibende Hörschäden und Sprachentwicklungsverzögerungen zu verhindern.",
+    "answer": "richtig",
+    "explanation": "Das Röhrchen ermöglicht den Druckausgleich und das Abfließen von Sekret, wenn die Ohrtrompete (Eustachische Röhre) nicht ausreichend funktioniert.",
+    "source_hint": "M 5.13 HNO Präsentation"
+  },
+  {
+    "q_id": "m5_extra_015",
+    "type": "freitext_box",
+    "topic": "paediatrie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Auswirkungen der 'kognitiven Unreife' auf das Krankheitserleben von Kleinkindern unter 5 Jahren.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Krankheitseinsicht",
+        "Ursache-Wirkung",
+        "Trennungsschmerz",
+        "magisches Denken",
+        "Sicherheit"
+      ],
+      "correct_answer": "Aufgrund der kognitiven Unreife fehlt Kleinkindern das Verständnis für anatomische Zusammenhänge und die Einsicht in die Notwendigkeit von Behandlungen. Sie können Ursache und Wirkung einer Krankheit noch nicht logisch verknüpfen und erleben medizinische Eingriffe oft als bedrohliche Strafe oder Angriff auf ihre Integrität. Die Trennung von den Bezugspersonen wiegt schwerer als das körperliche Leiden, da sie noch über keine eigenständigen Strategien zur Angstbewältigung verfügen. Deshalb ist die Anwesenheit der Eltern (Rooming-in) für ihr Sicherheitsgefühl essenziell."
+    }
+  },
+  {
+    "fall_id": "m5_fall_01",
+    "title": "Präoperative Vorbereitung bei elektivem Eingriff",
+    "topics_covered": [
+      "praeop_vorbereitung",
+      "praeop_angst",
+      "pflegeanamnese"
+    ],
+    "patient": {
+      "name": "Helga Weber",
+      "alter": 54,
+      "geschlecht": "w",
+      "wohnsituation": "lebt mit Ehemann in einer Wohnung",
+      "beruf": "IT-Projektleiterin"
+    },
+    "setting": "Chirurgische Station / OP-Vorbereitung",
+    "pflegekraft": "Werner (Anleiter)",
+    "paragraphs": [
+      "Frau Weber wird zur geplanten laparoskopischen Cholezystektomie (MIC-CHE) stationär aufgenommen. Im pflegerischen Aufnahmegespräch wirkt sie sehr angespannt; sie gibt an, große Angst vor dem Kontrollverlust unter Narkose zu haben ('Medical Fear'). Bei der chirurgischen Informationssammlung werden Allergien gegen Pflaster sowie eine bestehende Medikation gegen Bluthochdruck dokumentiert.",
+      "Im Rahmen des Pflegescreenings (RMK) bespricht die Pflegekraft mit Frau Weber die standardmäßigen Vorbereitungsmaßnahmen. Dazu gehört die strikte Einhaltung der Nahrungskarenz: Bis zu 6 Stunden vor der OP ist feste Nahrung erlaubt, klare Flüssigkeiten dürfen bis zu 2 Stunden vor dem Eingriff eingenommen werden. Die Patientin wird angewiesen, am Vorabend zu duschen, sich jedoch im OP-Feld keinesfalls einzucremen, um die Hautdesinfektion nicht zu behindern.",
+      "Ein wichtiger Teil der Patientenedukation ist das Einüben postoperativer Fertigkeiten. Da Frau Weber nach der laparoskopischen Operation Schmerzen im Bauchbereich haben könnte, trainiert Werner mit ihr das bauchdeckenschonende Aufstehen über die Seitenlage ('En-bloc-Aufstehen'). Zudem wird ihr die Anwendung des Tri-Ball Atemtrainers erklärt, um einer postoperativen Pneumonie vorzubeugen.",
+      "Am OP-Morgen erfolgt die Haarkürzung im Operationsfeld mittels Clipper, wobei ein großzügiger Sicherheitsabstand um den geplanten Schnittbereich eingehalten wird. Nach Gabe der ärztlich verordneten Prämedikation (Benzodiazepin) wird Frau Weber darauf hingewiesen, das Bett wegen erhöhter Sturzgefahr nicht mehr alleine zu verlassen. Der Transport zum OP erfolgt schließlich mit der vollständigen Kurve und der unterschriebenen Einwilligungserklärung."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Cholezystolithiasis, V.a. chronische Cholezystitis"
+        },
+        {
+          "label": "Geplantes Verfahren",
+          "value": "Laparoskopische Cholezystektomie"
+        },
+        {
+          "label": "Dringlichkeit",
+          "value": "Elektiv (geplant)"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Weber",
+      "ERKRANKUNG": "Gallensteinleiden",
+      "PFLEGEKRAFT": "Werner"
+    }
+  },
+  {
+    "fall_id": "m5_fall_02",
+    "title": "Postoperative Überwachung im Aufwachraum",
+    "topics_covered": [
+      "postop_ueberwachung",
+      "schmerzmanagement",
+      "schmerzphysiologie"
+    ],
+    "patient": {
+      "name": "Werner Hartmann",
+      "alter": 68,
+      "geschlecht": "m",
+      "wohnsituation": "Einfamilienhaus, barrierefrei",
+      "beruf": "Rentner"
+    },
+    "setting": "Aufwachraum (AWR)",
+    "pflegekraft": "Jutta (Fachkraft für Anästhesie)",
+    "paragraphs": [
+      "Herr Hartmann wurde soeben nach einer Hüft-Totalendoprothese (Hüft-TEP) aus dem OP in den Aufwachraum verlegt. Die Übergabe erfolgt strukturiert nach dem SBAR-Konzept: Situation (Hüft-TEP links), Background (bekannte COPD, keine Allergien), Assessment (Vitalparameter stabil, SpO2 96% unter 2L O2) und Recommendation (engmaschige Kontrolle auf Nachblutung).",
+      "Bei der ersten Vigilanzkontrolle ist der Patient somnolent, aber leicht erweckbar. Er klagt über starkes Kältezittern ('Shivering') infolge des intraoperativen Wärmeverlusts. Jutta setzt sofort ein Wärmeluftgebläse ein, um den erhöhten Sauerstoffbedarf des Patienten zu senken. Die Vitalparameter (Blutdruck, Herzfrequenz, SpO2) werden initial alle 10 Minuten dokumentiert.",
+      "Herr Hartmann äußert nun Schmerzen im Operationsgebiet. Zur Schmerzeinschätzung nutzt Jutta die Numerische Rating Skala (NRS), auf der der Patient den Wert 7 (starker Schmerz) angibt. Nach dem Expertenstandard Schmerzmanagement wird zeitnah ein Analgetikum über den liegenden Zugang verabreicht. Jutta dokumentiert die Maßnahme und plant die Re-Evaluation des Schmerzscores nach 30 Minuten.",
+      "Zudem wird Herr Hartmann auf Anzeichen von PONV (Postoperative Übelkeit und Erbrechen) beobachtet. Da er Nichtraucher ist und intraoperativ Opiate erhielt, gehört er zur Risikogruppe. Erst wenn der Schmerzscore im Bereich 2-3 liegt, der Patient stabil wach ist und keine relevanten Nachblutungen an den Drainagen (Redon mit Sog) vorliegen, erfolgt die Rückverlegung auf die Normalstation."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Coxarthrose links"
+        },
+        {
+          "label": "Eingriff",
+          "value": "Hüft-Totalendoprothese (zementfrei)"
+        },
+        {
+          "label": "Narkoseverfahren",
+          "value": "Allgemeinanästhesie"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Hartmann",
+      "ERKRANKUNG": "Coxarthrose",
+      "PFLEGEKRAFT": "Jutta"
+    }
+  },
+  {
+    "fall_id": "m5_fall_03",
+    "title": "Wundmanagement bei sekundärer Wundheilung",
+    "topics_covered": [
+      "wundmanagement",
+      "skillstraining"
+    ],
+    "patient": {
+      "name": "Thomas Schmidt",
+      "alter": 42,
+      "geschlecht": "m",
+      "wohnsituation": "lebt allein",
+      "beruf": "Bauingenieur"
+    },
+    "setting": "Chirurgische Station",
+    "pflegekraft": "Ingo (Pflegeschüler)",
+    "paragraphs": [
+      "Herr Schmidt entwickelte nach einer zunächst komplikationslosen Appendektomie eine postoperative Wundinfektion. Die Naht musste teilweise wieder eröffnet werden; ein Abstrich bestätigte eine Besiedlung mit MRSA. Die Wunde heilt nun sekundär (per secundam) aus der Tiefe durch Granulationsgewebe auf. Ingo bereitet den aseptischen Verbandwechsel unter Einhaltung strenger Isolationsmaßnahmen vor.",
+      "Beim Wundassessment dokumentiert Ingo die Lokalisation, die Größe sowie den Wundgrund. Dieser zeigt sich aktuell teilweise belegt mit Fibrin, aber auch mit tiefrotem, feucht-glänzendem Granulationsgewebe. Er wendet das TIME-Prinzip an: T (Tissue) - Entfernung von Belägen, I (Infection) - antimikrobielle Behandlung aufgrund des MRSA-Status, M (Moisture) - Management des Wundsekrets.",
+      "Bei der Durchführung des Verbandwechsels beachtet Ingo konsequent das 'Einbahnstraßen-Prinzip' (von sauber nach unrein) sowie das Non-Touch-Prinzip unter Verwendung steriler Pinzetten und Kornzangen. Zur Reinigung der infizierten Wunde nutzt er eine antiseptische Spüllösung. Als Wundauflage wird ein Hydrogel zum Aufweichen verbliebener Beläge gewählt, kombiniert mit einem Alginat zur Sekretbindung.",
+      "Ingo kontrolliert zudem die Umgebungshaut auf Entzündungszeichen (Rubor, Calor, Tumor) und dokumentiert den Wundschmerz (NRS 3). Die tägliche Fotodokumentation dient der objektiven Verlaufskontrolle. Da die sekundäre Wundheilung langwierig ist (Wochen bis Monate), wird Herr Schmidt über die Bedeutung einer eiweißreichen Ernährung und die notwendige körperliche Schonung aufgeklärt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Postoperative Wundinfektion (MRSA-Nachweis)"
+        },
+        {
+          "label": "Status",
+          "value": "Sekundär heilende Wunde nach Appendektomie"
+        },
+        {
+          "label": "Therapie",
+          "value": "Vakuumtherapie oder phasengerechte feuchte Wundbehandlung"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Schmidt",
+      "ERKRANKUNG": "Wundinfektion",
+      "PFLEGEKRAFT": "Ingo"
+    }
+  },
+  {
+    "fall_id": "m5_fall_04",
+    "title": "Pädiatrische Pflege nach Tonsillektomie",
+    "topics_covered": [
+      "paediatrie",
+      "schmerzmanagement",
+      "praeop_angst"
+    ],
+    "patient": {
+      "name": "Lucca",
+      "alter": 5,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit Eltern und Schwester",
+      "beruf": "Kindergartenkind"
+    },
+    "setting": "HNO-Station",
+    "pflegekraft": "Sarah (Pflegefachkraft)",
+    "paragraphs": [
+      "Der 5-jährige Lucca wurde heute aufgrund rezidivierender Angina tonsillaris operiert (Tonsillektomie und Adenotomie). Er befindet sich nun in der ersten postoperativen Phase auf der HNO-Station. Lucca leidet unter Trennungsangst und kognitiver Unreife; er kann den Grund für die Schmerzen im Hals kaum verstehen. Die Mutter ist im Rahmen des Rooming-in ständig bei ihm.",
+      "Sarah überwacht Lucca engmaschig auf Anzeichen einer Nachblutung, da die Gefahr am OP-Tag besonders hoch ist. Sie achtet besonders auf Warnzeichen wie auffallend häufiges Schlucken, Blutspucken oder Kreislaufinstabilität. Lucca wird angeleitet, Speichel und Sekret nicht zu schlucken, sondern schmerzfrei in eine Nierenschale auslaufen zu lassen.",
+      "Zur Schmerzeinschätzung nutzt Sarah die Smiley-Analogskala. Lucca wählt das traurige Gesicht aus, was einem NRS-Wert von etwa 6 entspricht. Zusätzlich zur verordneten Medikation wendet Sarah nicht-medikamentöse Maßnahmen an: Lucca erhält eine Eiskrawatte (lokale Kälteanwendung) und darf nach der ersten Karenzphase vorsichtig Milchspeiseeis essen, was kühlend und schmerzstillend wirkt.",
+      "Die pflegerische Edukation der Mutter umfasst wichtige Verhaltensregeln: Lucca darf sich in der ersten Woche nicht räuspern oder heftig husten, keine heißen Bäder nehmen und keine säurehaltigen Säfte trinken. Sarah erklärt kindgerecht mit Hilfe eines Bilderbuchs, dass die 'weißen Schutzpflaster' (Fibrinbeläge) im Rachen sehr empfindlich sind und nicht verletzt werden dürfen, damit kein neues Blut kommt."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Hyperplasie der Gaumen- und Rachenmandeln"
+        },
+        {
+          "label": "Operation",
+          "value": "Tonsillektomie (TE) und Adenotomie (AT)"
+        },
+        {
+          "label": "Risiko",
+          "value": "Erhöhte Nachblutungsgefahr (besonders am 4.-6. Tag)"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Lucca",
+      "ERKRANKUNG": "Mandeloperation",
+      "PFGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m5_fall_05",
+    "title": "Komplexer Fall: Fixateur externa und Diabetes",
+    "topics_covered": [
+      "skillstraining",
+      "organisation_alltag",
+      "postop_ueberwachung",
+      "wundmanagement"
+    ],
+    "patient": {
+      "name": "Maria Jansen",
+      "alter": 72,
+      "geschlecht": "w",
+      "wohnsituation": "alleinlebend, 3. Etage ohne Aufzug",
+      "beruf": "Rentnerin"
+    },
+    "setting": "Chirurgische Station",
+    "pflegekraft": "Ingo (Pflegeschüler)",
+    "paragraphs": [
+      "Frau Jansen wurde nach einem Sturz mit einer komplizierten Tibiafraktur aufgenommen. Zur Stabilisierung wurde primär ein Fixateur externa angelegt. Die Patientin leidet zudem an einem insulinpflichtigen Diabetes mellitus Typ 2. Ingo übernimmt die tägliche Pflege der Eintrittsstellen des Fixateurs unter aseptischen Bedingungen (Non-Touch-Prinzip), um eine Pin-Infektion zu vermeiden.",
+      "Aufgrund des Diabetes ist die Wundheilung physiologisch verzögert. Ingo führt unter Aufsicht die subkutane Injektion von Insulin mittels Pen durch. Er beachtet dabei streng das Rotationsschema der Einstichstellen am Bauch, um Lipodystrophien zu verhindern. Die Blutzuckerwerte werden engmaschig dokumentiert, da Operationen und Schmerzstress den Stoffwechsel stark beeinflussen.",
+      "Während der patientenzentrierten Visite bringt Ingo seine Beobachtungen zur eingeschränkten Mobilität ein. Da Frau Jansen in der 3. Etage wohnt und den Fixateur für mehrere Wochen tragen muss, besteht ein hohes Selbstpflegedefizit im Sinne des Orem-Modells. Die interdisziplinäre Zusammenarbeit zwischen Chirurgen, Pflege und Sozialdienst wird initiiert, um ein professionelles Entlassmanagement zu planen.",
+      "Ein wesentlicher Aspekt ist die Patientenedukation: Frau Jansen muss den Umgang mit Gehhilfen (Entlastung des Beins) sowie die korrekte Insulin-Selbstinjektion erneut sicher einüben. Ingo händigt ihr zudem eine Visitenkarte der Station mit Notfallnummern aus, um Sicherheit für die Zeit nach der Entlassung zu vermitteln. Die Sicherstellung der ambulanten Wundversorgung und Hilfsmittelorganisation steht im Fokus."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Offene Unterschenkelfraktur, Diabetes mellitus Typ 2"
+        },
+        {
+          "label": "Versorgung",
+          "value": "Osteosynthese mittels Fixateur externa"
+        },
+        {
+          "label": "Pflegefokus",
+          "value": "Pin-Pflege, Blutzuckereinstellung, Entlassplanung"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Jansen",
+      "ERKRANKUNG": "Unterschenkelfraktur",
+      "PFLEGEKRAFT": "Ingo"
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "statement": "Gemäß der Anweisung von [PFLEGEKRAFT] darf [PATIENT] bis zu 2 Stunden vor der Operation noch klare Flüssigkeiten zu sich nehmen.",
+    "answer": "richtig",
+    "explanation": "Die 6h/2h-Regel besagt, dass feste Nahrung bis 6 Stunden und klare Flüssigkeiten bis 2 Stunden vor dem Eingriff erlaubt sind.,",
+    "source_hint": "M 5.6 Skript Teil II & III"
+  },
+  {
+    "q_id": "m5_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Nennen** Sie 4 pflegerische Maßnahmen der unmittelbaren Operationsvorbereitung, die [PFLEGEKRAFT] bei [PATIENT] durchführen muss.",
+    "list_label": "Präoperative Maßnahmen",
+    "count": 4,
+    "correct_answers": [
+      "Nahrungskarenz sicherstellen",
+      "Körperreinigung (Duschen ohne Eincremen)",
+      "Haarkürzung mittels Clipper im OP-Feld",
+      "Prämedikation nach ärztlicher Anordnung verabreichen"
+    ],
+    "all_valid_answers": [
+      "Nahrungskarenz",
+      "Nüchternheit prüfen",
+      "Körperreinigung",
+      "Duschen",
+      "Haarkürzung",
+      "Clipping",
+      "Prämedikation",
+      "Identifikationsarmband anlegen",
+      "OP-Hemd anziehen",
+      "Schmuck/Prothesen ablegen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m5_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "praeop_angst",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Erläutern** Sie, wie [PFLEGEKRAFT] die präoperative Angst von [PATIENT] vor dem Kontrollverlust pflegerisch reduzieren kann.",
+    "points": 5,
+    "data": {
+      "box_label": "Angstreduktion",
+      "correct_answer": "[PFLEGEKRAFT] sollte durch empathische Gespräche Vertrauen aufbauen und [PATIENT] sachlich über den Ablauf informieren, um das Unbekannte greifbarer zu machen. Eine gezielte Patientenedukation über postoperative Abläufe gibt der Patientin ein Gefühl von Selbstwirksamkeit zurück. Zudem sollte die präoperative Medikation rechtzeitig verabreicht werden, um die psychische Anspannung physiologisch zu dämpfen.",
+      "keywords": ["Information", "Empathie", "Vertrauen", "Patientenedukation", "Prämedikation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_tab_001",
+    "type": "tabelle_2spalten",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Benennen** und **begründen** Sie die präoperativ eingeübten Fertigkeiten für [PATIENT].",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Eingeübte Fertigkeit", "Begründung"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "En-bloc-Aufstehen", "keywords": ["Seitenlage", "en bloc"] },
+              { "type": "textarea", "correct_answer": "Schonung der Bauchdecke und Reduktion von Wundschmerzen nach MIC-CHE.", "keywords": ["Bauchdecke", "Schonung", "Schmerz"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Tri-Ball / Atemtrainer", "keywords": ["Atemtraining", "Inspiration"] },
+              { "type": "textarea", "correct_answer": "Verbesserung der Lungenbelüftung zur Vermeidung einer Pneumonie.", "keywords": ["Pneumonie", "Belüftung", "Lunge"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "statement": "[PATIENT] sollte nach dem Duschen am Vorabend keine Bodylotion im OP-Feld verwenden, da dies die spätere Hautdesinfektion beeinträchtigen kann.",
+    "answer": "richtig",
+    "explanation": "Eingefettete Haut lässt sich nicht sicher desinfizieren, was das Infektionsrisiko erhöht.",
+    "source_hint": "M 5.6 Skript Teil III"
+  },
+  {
+    "q_id": "m5_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "pflegeanamnese",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Nennen** Sie 4 Informationsquellen, die [PFLEGEKRAFT] für die chirurgische Informationssammlung bei [PATIENT] nutzen kann.",
+    "list_label": "Informationsquellen",
+    "count": 4,
+    "correct_answers": [
+      "Gespräch mit der Patientin (direkt)",
+      "Beobachtung (objektiv)",
+      "Ärztlicher Aufnahmebefund / Arztbrief",
+      "Pflegescreening (z.B. RMK-Bogen)"
+    ],
+    "all_valid_answers": [
+      "Patientengespräch",
+      "Anamnese",
+      "Beobachtung",
+      "Arztbrief",
+      "Patientenakte",
+      "Pflegescreening",
+      "RMK-Bogen",
+      "Angehörige"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Quelle."
+  },
+  {
+    "q_id": "m5_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Begründen** Sie, warum [PATIENT] nach der Einnahme der Prämedikation das Bett nicht mehr alleine verlassen darf.",
+    "points": 4,
+    "data": {
+      "box_label": "Sicherheitsmaßnahme",
+      "correct_answer": "Die in der Prämedikation enthaltenen Benzodiazepine wirken sedierend und muskelrelaxierend. Dies führt zu einer Beeinträchtigung des Reaktionsvermögens und der Gangsicherheit, wodurch eine erhebliche Sturzgefahr besteht. [PATIENT] muss daher bis zum Transport in den OP im Bett bleiben.",
+      "keywords": ["Sedierung", "Sturzgefahr", "Benzodiazepine", "Muskelrelaxation", "Reaktionsvermögen"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m5_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction_select": "**Entscheiden** Sie, welche Unterlagen für den OP-Transport von [PATIENT] zwingend vollständig sein müssen.",
+    "instruction_justify": "**Begründen** Sie die Wichtigkeit der Einwilligungserklärung.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Unterschriebene Einwilligungserklärung für die OP", "correct": true },
+        { "label": "Aktuelle Patientenkurve mit Vitalwerten", "correct": true },
+        { "label": "Privates Tagebuch der Patientin", "correct": false },
+        { "label": "Bestätigung der Kostenübernahme der Versicherung", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Unterschriebene Einwilligungserklärung für die OP",
+          "text": "Ohne rechtsgültige Einwilligung darf kein chirurgischer Eingriff vorgenommen werden; sie dokumentiert die erfolgte Aufklärung durch den Arzt."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Ordnen** Sie die Aufgaben von [PFLEGEKRAFT] dem korrekten Zeitpunkt im Fall von [PATIENT] zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Bei Aufnahme / Vortag",
+        "B": "Am OP-Tag (morgens)",
+        "C": "Unmittelbar vor dem Transport"
+      },
+      "statements": [
+        { "text": "Einüben des bauchdeckenschonenden Aufstehens.", "answer": "A" },
+        { "text": "Haarkürzung mittels Clipper im OP-Feld.", "answer": "B" },
+        { "text": "Verabreichung der oralen Prämedikation.", "answer": "B" },
+        { "text": "Letzte Kontrolle der Vollständigkeit der Unterlagen.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_01"],
+    "instruction": "**Definieren** Sie 'Perioperative Pflege' im Kontext von [PATIENT] und **nennen** Sie die 3 Phasen.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "Die perioperative Pflege umfasst die Vernetzung aller Pflegetätigkeiten vor, während und nach dem operativen Eingriff, um [PATIENT] maximale Sicherheit und eine schnelle Genesung zu ermöglichen.",
+      "definition_keywords": ["Vernetzung", "Pflegetätigkeiten", "vor während nach", "Sicherheit"],
+      "definition_points": 3,
+      "examples_label": "Phasen",
+      "examples_count": 3,
+      "correct_examples": ["Präoperative Phase", "Intraoperative Phase", "Postoperative Phase"],
+      "all_valid_examples": ["Präoperativ", "Intraoperativ", "Postoperativ"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Führen** Sie die strukturierte Übergabe nach dem SBAR-Konzept für [PATIENT] vom AWR an die Station durch.",
+    "points": 5,
+    "data": {
+      "box_label": "SBAR-Übergabe",
+      "correct_answer": "S (Situation): [PATIENT], 68 J., nach Hüft-TEP links. B (Background): Bekannte COPD, keine Allergien. A (Assessment): Patient somnolent, aber erweckbar; aktuell stabiler Kreislauf (SpO2 96%); Shivering behoben durch Wärmeluftgebläse; NRS aktuell 7, Analgetikum gegeben. R (Recommendation): Engmaschige Überwachung auf Nachblutungen am Wundverband/Drainage und Re-Evaluation des Schmerzwertes in 30 Min.",
+      "keywords": ["Situation", "Background", "Assessment", "Recommendation", "Hüft-TEP"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Nennen** Sie 4 Vitalparameter, die [PFLEGEKRAFT] bei [PATIENT] im Aufwachraum engmaschig überwachen muss.",
+    "list_label": "Monitoring-Parameter",
+    "count": 4,
+    "correct_answers": [
+      "Blutdruck (RR)",
+      "Herzfrequenz (Puls)",
+      "Sauerstoffsättigung (SpO2)",
+      "Wachheitsgrad (Vigilanz)"
+    ],
+    "all_valid_answers": [
+      "Blutdruck",
+      "Herzfrequenz",
+      "Puls",
+      "Sauerstoffsättigung",
+      "Atmung",
+      "Atemfrequenz",
+      "Vigilanz",
+      "Wachheitsgrad",
+      "Bewusstsein",
+      "Körpertemperatur"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Parameter."
+  },
+  {
+    "q_id": "m5_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "statement": "Das postoperative 'Shivering' bei [PATIENT] ist gefährlich, da es den Sauerstoffbedarf des Körpers massiv ansteigen lässt.",
+    "answer": "richtig",
+    "explanation": "Durch das Kältezittern verbraucht die Muskulatur extrem viel Energie und Sauerstoff, was Herz und Kreislauf belastet.",
+    "source_hint": "M 5.7 Skript Teil I"
+  },
+  {
+    "q_id": "m5_fall_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Vervollständigen** Sie die Tabelle zu möglichen postoperativen Komplikationen bei [PATIENT].",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Komplikation", "Ursache im Fall", "Intervention"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Shivering", "keywords": ["Zittern", "Shivering"] },
+              { "type": "text", "content": "Intraoperativer Wärmeverlust" },
+              { "type": "input", "correct_answer": "Wärmeluftgebläse / Decken", "keywords": ["Wärme", "Bair Hugger", "Decke"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Nachblutung", "keywords": ["Blutung", "Hämorrhagie"] },
+              { "type": "text", "content": "Gefäßverletzung / OP-Trauma" },
+              { "type": "input", "correct_answer": "Kontrolle Verband & Drainage", "keywords": ["Kontrolle", "Verband", "Drainage"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "schmerzmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Beschreiben** Sie das pflegerische Schmerzmanagement für [PATIENT] gemäß dem Expertenstandard.",
+    "points": 5,
+    "data": {
+      "box_label": "Schmerzmanagement",
+      "correct_answer": "Zunächst erfolgt die Schmerzeinschätzung mittels der NRS-Skala, wobei [PATIENT] aktuell eine 7 angibt. Daraufhin muss zeitnah ein bedarfsadaptiertes Analgetikum nach ärztlicher Anordnung verabreicht werden. Die Wirkung der Medikation ist nach ca. 30 Minuten zu re-evaluieren und zu dokumentieren. Ziel ist es, den Schmerzscore in einen Bereich von 2-3 zu senken, um die Patientensicherheit und spätere Mobilisation zu gewährleisten.,",
+      "keywords": ["NRS-Skala", "Analgetikum", "Re-Evaluation", "Expertenstandard", "Dokumentation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "statement": "Eine Verlegung von [PATIENT] auf die Normalstation darf erst erfolgen, wenn sein Schmerzscore auf der NRS stabil im Bereich von 2-3 liegt.",
+    "answer": "richtig",
+    "explanation": "Ein akzeptables Schmerzniveau ist ein zentrales Verlegungskriterium aus dem AWR.",
+    "source_hint": "M 5.7 Skript Teil II"
+  },
+  {
+    "q_id": "m5_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Nennen** Sie 3 Risikofaktoren für PONV, die bei [PATIENT] vorliegen könnten.",
+    "list_label": "PONV Risikofaktoren",
+    "count": 3,
+    "correct_answers": [
+      "Intraoperative Opiatgabe",
+      "Nichtraucherstatus",
+      "Art der Operation (großer orthopädischer Eingriff)"
+    ],
+    "all_valid_answers": [
+      "Opiate",
+      "Nichtraucher",
+      "OP-Art",
+      "COPD (Narkosedauer)",
+      "Anästhesieverfahren"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Risikofaktor."
+  },
+  {
+    "q_id": "m5_fall_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Ergänzen** Sie die fehlenden Informationen für den SBAR-Punkt 'Background' bei [PATIENT].",
+    "points": 2,
+    "data": {
+      "list_label": "SBAR: Background",
+      "given_items": ["Hüft-TEP links"],
+      "missing_items": ["Bekannte COPD", "Keine Allergien"],
+      "all_valid_missing": ["COPD", "Lungenvorerkrankung", "keine Allergie", "Allergien negativ"]
+    }
+  },
+  {
+    "q_id": "m5_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction_select": "**Entscheiden** Sie, welche Beobachtungskriterien für die Redon-Drainage bei [PATIENT] zutreffen.",
+    "instruction_justify": "**Begründen** Sie die Kontrolle des Vakuums.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Kontrolle der Sekretmenge und -farbe (Bilanzierung)", "correct": true },
+        { "label": "Überprüfung des Vakuums (Sogkontrolle)", "correct": true },
+        { "label": "Drainageflasche immer oberhalb des Wundniveaus lagern", "correct": false },
+        { "label": "Sog bei Ankunft auf Station sofort 'lassen' (aufheben)", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Überprüfung des Vakuums (Sogkontrolle)",
+          "text": "Nur bei intaktem Vakuum kann Wundsekret aktiv abgesaugt werden, um Hämatome zu vermeiden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_02"],
+    "instruction": "**Erläutern** Sie, warum die Überwachung des Pulses bei [PATIENT] einen Hinweis auf eine innere Nachblutung geben kann.",
+    "points": 5,
+    "data": {
+      "box_label": "Kreislaufüberwachung",
+      "correct_answer": "Ein massiver Blutverlust führt zu einem verminderten zirkulierenden Blutvolumen. Der Körper versucht dies kompensatorisch durch eine Steigerung der Herzfrequenz (Tachykardie) auszugleichen, um die Sauerstoffversorgung der Organe aufrechtzuerhalten. Ein plötzlicher Pulsanstieg bei gleichzeitigem Blutdruckabfall ist daher ein klassisches Warnzeichen für eine hämorrhagische Komplikation.",
+      "keywords": ["Tachykardie", "Kompensation", "Blutverlust", "Volumenmangel", "Warnzeichen"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "skillstraining",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Beschreiben** Sie den aseptischen Verbandwechsel bei [PATIENT] unter Berücksichtigung der MRSA-Infektion.",
+    "points": 5,
+    "data": {
+      "box_label": "Verbandwechsel bei MRSA",
+      "correct_answer": "Aufgrund der MRSA-Besiedlung muss der Verbandwechsel unter strengen Isolationsvorgaben (Schutzkittel, Handschuhe, Mund-Nasen-Schutz) am Ende der Tour durchgeführt werden. [PFLEGEKRAFT] wendet das Non-Touch-Prinzip mit sterilen Instrumenten an und reinigt die Wunde nach dem Einbahnstraßen-Prinzip. Nach Abschluss der Maßnahme erfolgt eine gründliche Flächendesinfektion der patientennahen Umgebung und eine hygienische Händedesinfektion, um Keimverschleppungen auf der Station zu verhindern.,",
+      "keywords": ["Isolationsmaßnahmen", "Non-Touch-Prinzip", "Einbahnstraße", "Händedesinfektion", "Flächendesinfektion"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Nennen** Sie die 5 klassischen Entzündungszeichen, auf die [PFLEGEKRAFT] die Wundumgebung von [PATIENT] untersuchen muss.",
+    "list_label": "Entzündungszeichen",
+    "count": 5,
+    "correct_answers": ["Rubor (Rötung)", "Calor (Überwärmung)", "Tumor (Schwellung)", "Dolor (Schmerz)", "Functio laesa (Funktionseinschränkung)"],
+    "all_valid_answers": ["Rubor", "Rötung", "Calor", "Überwärmung", "Tumor", "Schwellung", "Dolor", "Schmerz", "Functio laesa", "Funktionseinschränkung"],
+    "points": 5,
+    "scoring_info": "1 Punkt pro Zeichen."
+  },
+  {
+    "q_id": "m5_fall_tab_003",
+    "type": "tabelle_vergleich",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Vergleichen** Sie die primäre Heilung (vor der Infektion) und die aktuelle sekundäre Heilung bei [PATIENT].",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Kriterium", "Primär (p.p.)", "Sekundär (p.s.)"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Wundränder" },
+              { "type": "input", "correct_answer": "glatt anliegend", "keywords": ["glatt", "adaptiert"] },
+              { "type": "input", "correct_answer": "klaffend / offen", "keywords": ["offen", "klaffend"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Heilungsdauer" },
+              { "type": "input", "correct_answer": "kurz (Tage)", "keywords": ["schnell", "kurz"] },
+              { "type": "input", "correct_answer": "langwierig (Wochen/Monate)", "keywords": ["lang", "Monate"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Wenden** Sie das TIME-Prinzip auf die aktuelle Wundsituation von [PATIENT] an.",
+    "points": 5,
+    "data": {
+      "box_label": "TIME-Anwendung",
+      "correct_answer": "T (Tissue): Entfernung von nekrotischem Gewebe und Fibrinbelägen zur Schaffung eines sauberen Wundgrundes. I (Infection): Behandlung der MRSA-Infektion durch antiseptische Spülungen. M (Moisture): Einsatz von Alginaten zur Aufnahme des überschüssigen Exsudats, um ein feuchtes, aber nicht mazeriertes Milieu zu erhalten. E (Edge): Beurteilung des Wundrandes auf beginnende Epithelisierung und Schutz der Wundumgebung.",
+      "keywords": ["Tissue", "Infection", "Moisture", "Edge", "Wundbettvorbereitung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "statement": "Da die Wunde von [PATIENT] mit MRSA infiziert ist, muss sie im Stationsablauf als letzte versorgt werden.",
+    "answer": "richtig",
+    "explanation": "Wunden mit multiresistenten Keimen werden aufgrund der notwendigen Schutzmaßnahmen und zur Vermeidung von Keimverschleppungen am Ende der Versorgungstour behandelt.",
+    "source_hint": "Handout Modul 5 ME 5.8"
+  },
+  {
+    "q_id": "m5_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Nennen** Sie 4 Instrumente bzw. Materialien, die [PFLEGEKRAFT] für den Verbandwechsel bei [PATIENT] bereitstellen muss.",
+    "list_label": "Materialliste",
+    "count": 4,
+    "correct_answers": [
+      "Anatomische Pinzette",
+      "Kornzange",
+      "Antiseptische Wundspüllösung",
+      "Hydrogel / Alginat (Wundauflage)"
+    ],
+    "all_valid_answers": [
+      "Pinzette",
+      "Kornzange",
+      "Wundspüllösung",
+      "Schere",
+      "sterile Handschuhe",
+      "Hydrogel",
+      "Alginat",
+      "sterile Kompressen",
+      "Abwurfbehälter"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Item."
+  },
+  {
+    "q_id": "m5_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Erläutern** Sie die Bedeutung der Fotodokumentation für den Heilungsverlauf von [PATIENT].",
+    "points": 4,
+    "data": {
+      "box_label": "Dokumentation",
+      "correct_answer": "Die Fotodokumentation ermöglicht eine objektive und unveränderliche Darstellung der Wundentwicklung über einen längeren Zeitraum. Sie dient dem interdisziplinären Team als Vergleichsbasis, um den Erfolg der gewählten Therapie (z. B. Wirksamkeit des Hydrogels) zu beurteilen. Zudem bietet sie rechtliche Sicherheit als Nachweis des Wundzustands bei Aufnahme und während der Behandlung.",
+      "keywords": ["Objektivität", "Verlaufskontrolle", "Beweismittel", "Interdisziplinarität", "Vergleichbarkeit"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m5_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Ordnen** Sie die Wundauflagen dem passenden Zweck bei [PATIENT] zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Hydrogel",
+        "B": "Alginat",
+        "C": "Antiseptikum"
+      },
+      "statements": [
+        { "text": "Bekämpfung der MRSA-Besiedlung im Wundgrund.", "answer": "C" },
+        { "text": "Aufweichen von hartnäckigen Fibrinbelägen.", "answer": "A" },
+        { "text": "Aufsaugen und Binden von Wundsekret (Exsudat).", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "statement": "Die sekundäre Wundheilung bei [PATIENT] führt in der Regel zu einer deutlich ausgeprägteren Narbenbildung als eine primäre Heilung.",
+    "answer": "richtig",
+    "explanation": "Da die Wunde aus der Tiefe durch Granulationsgewebe aufgefüllt werden muss, entsteht mehr Ersatzgewebe und somit eine größere Narbe.",
+    "source_hint": "M5 Wundmanagement Handout"
+  },
+  {
+    "q_id": "m5_fall_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_03"],
+    "instruction": "**Definieren** Sie den Begriff 'nosokomiale Infektion' im Kontext von [PATIENT] und **nennen** Sie 3 weitere typische Erreger.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition",
+      "definition_correct": "Eine Infektion, die [PATIENT] im zeitlichen Zusammenhang mit der Krankenhausbehandlung (hier Appendektomie) erworben hat und die bei Aufnahme noch nicht vorhanden war.",
+      "definition_keywords": ["Krankenhausinfektion", "zeitlicher Zusammenhang", "nicht bei Aufnahme", "erworben"],
+      "definition_points": 3,
+      "examples_label": "Multiresistente Erreger",
+      "examples_count": 3,
+      "correct_examples": ["VRE", "MRGN", "ESBL"],
+      "all_valid_examples": ["VRE", "MRGN", "ESBL", "Clostridium difficile", "3-MRGN", "4-MRGN"],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "statement": "Die größte Gefahr einer Nachblutung bei [PATIENT] besteht ausschließlich in den ersten 24 Stunden nach der Operation.",
+    "answer": "falsch",
+    "explanation": "Die Gefahr einer Nachblutung besteht am OP-Tag sowie besonders kritisch am 4. bis 6. postoperativen Tag, wenn sich die Schorfbeläge lösen.",
+    "source_hint": "Präsentation HNO 5.13"
+  },
+  {
+    "q_id": "m5_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Nennen** Sie 4 Anzeichen einer Nachblutung, auf die [PFLEGEKRAFT] bei [PATIENT] achten muss.",
+    "list_label": "Symptome Nachblutung",
+    "count": 4,
+    "correct_answers": [
+      "Auffallend häufiges Schlucken",
+      "Blutspucken",
+      "Übelkeit und Erbrechen (verschlucktes Blut)",
+      "Kreislaufinstabilität (Tachykardie, Blässe)"
+    ],
+    "all_valid_answers": [
+      "häufiges Schlucken",
+      "Blutspucken",
+      "Hämitemesis",
+      "Erbrechen von Blut",
+      "Tachykardie",
+      "Blutdruckabfall",
+      "Blässe",
+      "Unruhe"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m5_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Erläutern** Sie, warum [PFLEGEKRAFT] [PATIENT] anweisen muss, sich nicht zu räuspern und nicht zu gurgeln.",
+    "points": 5,
+    "data": {
+      "box_label": "Begründung Verhaltensregeln",
+      "correct_answer": "Räuspern, heftiges Husten oder Gurgeln erzeugen mechanischen Druck und Reibung im Operationsgebiet des Rachens. Da die Wundflächen nach einer Tonsillektomie nur durch empfindliche Fibrinbeläge ('weiße Schutzpflaster') geschützt sind, könnten diese vorzeitig abgelöst werden. Dies würde das Risiko für massive Nachblutungen signifikant erhöhen.",
+      "keywords": ["mechanischer Druck", "Fibrinbeläge", "Nachblutungsrisiko", "Wundheilung", "Ablösen"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_zu_003",
+    "type": "zuordnung",
+    "topic": "schmerzmanagement",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Ordnen** Sie die Merkmale den Schmerzskalen zu, die für [PATIENT] relevant sind.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "KUS-Skala",
+        "B": "Smiley-Analogskala"
+      },
+      "statements": [
+        {
+          "text": "Punktesystem zur Fremdeinschätzung (Mimik, Weinen, Rumpfhaltung).",
+          "answer": "A"
+        },
+        {
+          "text": "Selbsteinschätzung anhand von 6 Gesichtern; einsetzbar ab 3 Jahren.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_nl_008",
+    "type": "nennen_liste",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Nennen** Sie 4 Kriterien der 'gelenkten Wunschkost', die [PFLEGEKRAFT] für [PATIENT] beachten muss.",
+    "list_label": "Ernährungsregeln post-TE",
+    "count": 4,
+    "correct_answers": [
+      "Lauwarm oder kalt servieren",
+      "Weiche oder breiige Konsistenz",
+      "Keine säurehaltigen Speisen/Säfte",
+      "Keine kohlensäurehaltigen Getränke"
+    ],
+    "all_valid_answers": [
+      "kalt/lauwarm",
+      "weich",
+      "breiig",
+      "säurearm",
+      "kein Obst",
+      "keine Fruchtsäfte",
+      "kein Sprudel",
+      "keine scharfen Gewürze",
+      "Milchspeiseeis"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Regel."
+  },
+  {
+    "q_id": "m5_fall_ft_010",
+    "type": "freitext_box",
+    "topic": "paediatrie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Beschreiben** Sie, wie [PFLEGEKRAFT] die Trennungsangst von [PATIENT] durch Einbeziehung der Bezugspersonen mindern kann.",
+    "points": 5,
+    "data": {
+      "box_label": "Interaktion und Rooming-in",
+      "correct_answer": "Aufgrund der kognitiven Unreife im Alter von 5 Jahren benötigt [PATIENT] die ständige Anwesenheit der Eltern (Rooming-in), um Sicherheit zu gewinnen und Ängste abzubauen. [PFLEGEKRAFT] sollte die Mutter aktiv in die Pflege einbinden und sie als Experten für ihr Kind wertschätzen. Eine vertrauensvolle Atmosphäre wird zudem durch die Aushändigung einer Visitenkarte mit Notfallnummern geschaffen, was den Eltern signalisiert, dass sie jederzeit willkommen sind.",
+      "keywords": ["Rooming-in", "Sicherheit", "Vertrauen", "Bezugsperson", "Einbindung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Ergänzen** Sie die notwendigen Sofortmaßnahmen bei einer akuten Nachblutung bei [PATIENT].",
+    "points": 3,
+    "data": {
+      "list_label": "Notfallmaßnahmen Nachblutung",
+      "given_items": [
+        "Arzt sofort benachrichtigen",
+        "Kind nicht alleine lassen"
+      ],
+      "missing_items": [
+        "Oberkörperhochlagerung",
+        "Eiskrawatte anlegen",
+        "Kind zum Ausspucken anleiten"
+      ],
+      "all_valid_missing": [
+        "Oberkörper hoch",
+        "Eiskrawatte",
+        "Kälteanwendung",
+        "Ausspucken lassen",
+        "Ruhe bewahren",
+        "Nierenschale anreichen"
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_rf_008",
+    "type": "richtig_falsch",
+    "topic": "paediatrie",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "statement": "Das Auftreten von leichtem Fieber (Resorptionsfieber) am Tag der Operation ist bei [PATIENT] als normale postoperative Reaktion einzustufen.",
+    "answer": "richtig",
+    "explanation": "Laut klinischen Richtlinien ist Resorptionsfieber am OP-Tag eine normale physiologische Reaktion auf das Operationstrauma.",
+    "source_hint": "Präsentation HNO 5.13"
+  },
+  {
+    "q_id": "m5_fall_tab_004",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Vergleichen** Sie die Operationen Tonsillektomie (TE) und Adenotomie (AT), die bei [PATIENT] durchgeführt wurden.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Merkmal", "Tonsillektomie (TE)", "Adenotomie (AT)"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "content": "Entfernte Struktur" },
+              { "type": "input", "correct_answer": "Gaumenmandeln", "keywords": ["Gaumen"] },
+              { "type": "input", "correct_answer": "Rachenmandel / Polypen", "keywords": ["Rachen", "Polypen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "content": "Hauptrisiko" },
+              { "type": "input", "correct_answer": "Massive Nachblutung", "keywords": ["Nachblutung"] },
+              { "type": "input", "correct_answer": "Geringes Blutungsrisiko", "keywords": ["gering"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_fall_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "paediatrie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_04"],
+    "instruction": "**Definieren** Sie das 'Verursacherkonzept' im Kontext der kindlichen Denkentwicklung und **nennen** Sie 2 Konsequenzen für die Pflege.",
+    "points": 5,
+    "data": {
+      "definition_label": "Definition Verursacherkonzept",
+      "definition_correct": "Die Fähigkeit von Kindern (meist ab dem 6. LJ), eine direkte logische Verbindung zwischen einem Auslöser und der darauf folgenden körperlichen Reaktion bzw. Krankheit zu erkennen.",
+      "definition_keywords": ["Verbindung", "Auslöser", "Reaktion", "Krankheitsverständnis"],
+      "definition_points": 3,
+      "examples_label": "Pflegerische Konsequenzen",
+      "examples_count": 2,
+      "correct_examples": [
+        "Bessere Akzeptanz von Maßnahmen (z.B. Bettruhe)",
+        "Bereitschaft zur Übernahme von Eigenverantwortung"
+      ],
+      "all_valid_examples": [
+        "Akzeptanz Bettruhe",
+        "Mitwirkung bei Therapie",
+        "Verständnis für Schmerzursache",
+        "geringere Trennungsangst"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_011",
+    "type": "freitext_box",
+    "topic": "skillstraining",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Beschreiben** Sie die Durchführung der Pin-Pflege am Fixateur externa von [PATIENT] unter Einhaltung aseptischer Bedingungen.",
+    "points": 5,
+    "data": {
+      "box_label": "Fixateur-Pflege",
+      "correct_answer": "Die Pflege der Eintrittsstellen erfolgt streng aseptisch nach dem Non-Touch-Prinzip unter Verwendung steriler Instrumente und Handschuhe. Jede Pin-Stelle wird einzeln mit einer antiseptischen Lösung von innen nach außen (Einbahnstraßen-Prinzip) gereinigt, um Keime nicht in den Stichkanal zu verschleppen. Krusten sollten vorsichtig eingeweicht und entfernt werden, um Sekretstau zu vermeiden. Abschließend erfolgt die Abdeckung mit sterilen Schlitzkompressen, wobei auf Rötungen oder Eiter als Infektionszeichen geachtet wird.",
+      "keywords": ["aseptisch", "Non-Touch", "Einbahnstraße", "Stichkanal", "Infektionszeichen"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_nl_009",
+    "type": "nennen_liste",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Nennen** Sie 4 Schritte der korrekten Anwendung des Insulinpens bei [PATIENT].",
+    "list_label": "Insulin-Injektion",
+    "count": 4,
+    "correct_answers": [
+      "Hautdesinfektion und Trocknung abwarten",
+      "Pen entlüften (Sicherheitscheck)",
+      "Dosis einstellen und senkrecht einstechen",
+      "Injektionstaste drücken und 10 Sek. warten"
+    ],
+    "all_valid_answers": [
+      "Händedesinfektion",
+      "Desinfektion Injektionsstelle",
+      "Entlüften",
+      "Einheitencheck",
+      "Hautfalte (bei Bedarf)",
+      "senkrechter Einstich",
+      "10 Sekunden warten",
+      "Nadel entsorgen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Schritt."
+  },
+  {
+    "q_id": "m5_fall_rf_009",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "statement": "Der Diabetes mellitus von [PATIENT] hat keinen direkten Einfluss auf die Wundheilungsgeschwindigkeit ihrer Frakturstellen.",
+    "answer": "falsch",
+    "explanation": "Stoffwechselerkrankungen wie Diabetes mellitus Typ 2 sind systemische Störfaktoren, die die Wundheilung durch Durchblutungsstörungen und Immunschwäche verzögern.",
+    "source_hint": "Handout Wunde 5.8 / AB 29"
+  },
+  {
+    "q_id": "m5_fall_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "organisation_alltag",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Vervollständigen** Sie die Informationen zur ärztlichen Visite für den Fall von [PATIENT].",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Visitenform", "Ort / Merkmal", "Inhaltlicher Fokus"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Patientenzentriert", "keywords": ["patient"] },
+              { "type": "text", "content": "Direkt am Patientenbett" },
+              { "type": "input", "correct_answer": "Befinden, Schmerz, Mobilität", "keywords": ["Befinden", "Schmerz"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Kardex-Visite", "keywords": ["Kardex", "Kurve"] },
+              { "type": "text", "content": "Außerhalb des Zimmers" },
+              { "type": "input", "correct_answer": "Therapieplan, Labor, Röntgen", "keywords": ["Therapie", "Labor"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m5_fall_zu_004",
+    "type": "zuordnung",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Ordnen** Sie die chirurgischen Instrumente ihrem Zweck bei der Versorgung von [PATIENT] zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Chirurgische Pinzette",
+        "B": "Péanklemme",
+        "C": "Kornzange",
+        "D": "Anatomische Pinzette"
+      },
+      "statements": [
+        {
+          "text": "Sicheres Halten von Gewebe durch ineinandergreifende Zähne.",
+          "answer": "A"
+        },
+        {
+          "text": "Fassen von Gewebeteilen oder zum Halten von Fremdkörpern.",
+          "answer": "B"
+        },
+        {
+          "text": "Fassen grober Gegenstände wie Kompressen oder Drainagen.",
+          "answer": "C"
+        },
+        {
+          "text": "Schonendes Halten von Weichteilen oder Anreichen von Material.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m5_fall_ft_012",
+    "type": "freitext_box",
+    "topic": "organisation_alltag",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Planen** Sie 3 Schwerpunkte für das Entlassmanagement von [PATIENT] unter Berücksichtigung ihrer Wohnsituation.",
+    "points": 5,
+    "data": {
+      "box_label": "Entlassplanung",
+      "correct_answer": "Aufgrund der Wohnung im 3. Stock ohne Aufzug ist die Sicherstellung der häuslichen Mobilität (Gehen mit Gehhilfen auf Treppen) ein Hauptfokus. Zweitens muss die ambulante Wund- bzw. Pin-Pflege des Fixateurs organisiert werden (z. B. Pflegedienst). Drittens ist eine Schulung zur sicheren Insulin-Injektion und Blutzuckerselbstkontrolle notwendig, um die Patientin zur Selbstpflege im Sinne Orems zu befähigen.",
+      "keywords": ["Treppensteigen", "ambulanter Pflegedienst", "Insulinschulung", "Selbstpflegekompetenz", "Hilfsmittel"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_nl_010",
+    "type": "nennen_liste",
+    "topic": "postop_ueberwachung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Nennen** Sie 4 Kriterien, die [PFLEGEKRAFT] bei der Überwachung der Redon-Drainage bei [PATIENT] dokumentieren muss.",
+    "list_label": "Drainage-Assessment",
+    "count": 4,
+    "correct_answers": [
+      "Sekretmenge (Bilanzierung)",
+      "Sekretfarbe und -konsistenz",
+      "Intaktheit des Vakuums (Sog)",
+      "Zustand der Einstichstelle"
+    ],
+    "all_valid_answers": [
+      "Menge",
+      "Farbe",
+      "Konsistenz",
+      "Sog/Vakuum",
+      "Hautzustand",
+      "Lage der Drainage",
+      "Durchgängigkeit"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m5_fall_rf_010",
+    "type": "richtig_falsch",
+    "topic": "skillstraining",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "statement": "Beim Einhalten des Rotationsschemas für die Insulingabe darf [PATIENT] innerhalb eines Areals (z.B. Bauch) bleiben, solange die Einstichstellen etwa 1 cm auseinanderliegen.",
+    "answer": "falsch",
+    "explanation": "Das Rotationsschema verlangt einen systematischen Wechsel der Injektionsorte (z.B. verschiedene Quadranten), um Gewebeveränderungen wie Lipodystrophien sicher zu vermeiden.",
+    "source_hint": "Handout Subkutane Injektion"
+  },
+  {
+    "q_id": "m5_fall_ft_013",
+    "type": "freitext_box",
+    "topic": "praeop_vorbereitung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction": "**Erläutern** Sie die pflegerische Bedeutung der Patientenedukation zum Thema 'Gehen mit Gehhilfen' für [PATIENT].",
+    "points": 5,
+    "data": {
+      "box_label": "Pflegerische Edukation",
+      "correct_answer": "Die präoperative Anleitung gibt [PATIENT] Sicherheit im Umgang mit den Hilfsmitteln, bevor Schmerzen oder Narkosewirkungen die Konzentration einschränken. Durch das Einüben wird die postoperative Frühmobilisation erleichtert, was das Risiko für Komplikationen wie Thrombosen oder Pneumonien senkt. Zudem fördert es die Autonomie der Patientin für die Rückkehr in ihre häusliche Umgebung mit Treppenbelastung.",
+      "keywords": ["Sicherheit", "Frühmobilisation", "Autonomie", "Komplikationsprophylaxe", "Treppen"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m5_fall_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "postop_ueberwachung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m5_fall_05"],
+    "instruction_select": "**Entscheiden** Sie, welche Beobachtungen bei [PATIENT] auf ein postoperatives Delir hindeuten könnten.",
+    "instruction_justify": "**Begründen** Sie die Relevanz der Orientierungskontrolle.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Plötzliche Desorientierung zu Zeit und Ort", "correct": true },
+        { "label": "Störungen des Schlaf-Wach-Rhythmus", "correct": true },
+        { "label": "Verlangen nach einer Tasse Kaffee am Morgen", "correct": false },
+        { "label": "Leichte Rötung um eine Pin-Eintrittsstelle", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Plötzliche Desorientierung zu Zeit und Ort",
+          "text": "Akute Verwirrtheit und Desorientierung sind Leitsymptome eines Delirs (Durchgangssyndrom) und erfordern sofortige pflegerische Schutzmaßnahmen."
+        }
+      ]
+    }
+  }
+]
