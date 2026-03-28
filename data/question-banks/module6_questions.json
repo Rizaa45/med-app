@@ -1,0 +1,4933 @@
+[
+  {
+    "q_id": "m6_rf_001",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Krankenhäuser, die an einem System von Notfallstrukturen teilnehmen, müssen eine zentrale Notaufnahme (ZNA) direkt am Krankenhausstandort vorhalten.",
+    "answer": "richtig",
+    "explanation": "Gemäß den allgemeinen Anforderungen an alle Stufen des G-BA Stufenmodells muss die Notfallversorgung überwiegend in einer zentralen Notaufnahme am Krankenhausstandort stattfinden.",
+    "source_hint": "Grundlagen des Stufenmodells Notaufnahme"
+  },
+  {
+    "q_id": "m6_rf_002",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das 10-für-10-Prinzip im Crew Resource Management besagt, dass man sich 10 Minuten Zeit für eine Besinnungspause nehmen sollte, um die nächsten 10 Sekunden des Einsatzes effektiv zu planen.",
+    "answer": "falsch",
+    "explanation": "Das Prinzip lautet '10 Sekunden für 10 Minuten' – es geht darum, in einer kurzen Denkpause von 10 Sekunden die nächsten 10 Minuten des Handelns zu strukturieren.",
+    "source_hint": "M 6.1 Rahmenbedingungen der Notfallversorgung (CRM-Leitsätze)"
+  },
+  {
+    "q_id": "m6_rf_003",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Mitralklappe gehört zur Gruppe der Taschenklappen und verhindert den Rückstrom des Blutes aus der Aorta in die linke Herzkammer.",
+    "answer": "falsch",
+    "explanation": "Die Mitralklappe ist eine Segelklappe (AV-Klappe) zwischen dem linken Vorhof und der linken Kammer. Die Aortenklappe hingegen ist eine Taschenklappe.",
+    "source_hint": "BZPG Anatomie Herz-Herzkrankheiten Handout"
+  },
+  {
+    "q_id": "m6_rf_004",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Koronarvenensinus (Sinus coronarius) sammelt das sauerstoffarme Blut der Herzmuskulatur und mündet in den rechten Vorhof.",
+    "answer": "richtig",
+    "explanation": "Die Herzkranzvenen führen das verbrauchte Blut im Sinus coronarius zusammen, welcher es anschließend direkt in den rechten Vorhof abgibt.",
+    "source_hint": "BZPG Anatomie Herz-Herzkrankheiten Handout"
+  },
+  {
+    "q_id": "m6_rf_005",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Vorderwandinfarkt wird in der Regel durch den Verschluss der rechten Herzkranzarterie (RCA) verursacht.",
+    "answer": "falsch",
+    "explanation": "Ein Vorderwandinfarkt entsteht meist durch den Verschluss des Ramus interventricularis anterior (RIVA), welcher ein Ast der linken Herzkranzarterie (LCA) ist.",
+    "source_hint": "BZPG Anatomie Herz-Herzkrankheiten Handout (Lokalisation)"
+  },
+  {
+    "q_id": "m6_rf_006",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Arteriosklerose, auch als 'Gefäßverkalkung' bekannt, ist die Hauptursache für die Entstehung einer Koronaren Herzkrankheit (KHK).",
+    "answer": "richtig",
+    "explanation": "Die Verengung der Herzkranzgefäße durch Plaquebildung (Arteriosklerose) führt zu einer Minderdurchblutung und ist die definitorische Ursache der KHK.",
+    "source_hint": "M 6.3_Skript"
+  },
+  {
+    "q_id": "m6_rf_007",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das empfohlene Verhältnis von Thoraxkompressionen zu Beatmungen bei der Basisreanimation eines Erwachsenen beträgt 30:2.",
+    "answer": "richtig",
+    "explanation": "Gemäß den ERC-Leitlinien 2021 erfolgt die Herz-Lungen-Wiederbelebung bei Erwachsenen im Rhythmus von 30 Druckmassagen gefolgt von 2 Atemspenden.",
+    "source_hint": "M 6.4 - Erste Hilfe und erweiterte Reanimationsmaßnahmen"
+  },
+  {
+    "q_id": "m6_rf_008",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei einem bewusstlosen Patienten sollte die Atemkontrolle mittels Sehen, Hören und Fühlen für eine Dauer von mindestens 20 Sekunden durchgeführt werden.",
+    "answer": "falsch",
+    "explanation": "Die Prüfung der Atmung erfolgt durch Sehen, Hören und Fühlen für eine Dauer von maximal 10 Sekunden, um keine Zeit bei der Reanimation zu verlieren.",
+    "source_hint": "M 6.4 - Erste Hilfe und erweiterte Reanimationsmaßnahmen"
+  },
+  {
+    "q_id": "m6_rf_009",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei der Reanimation eines Neugeborenen (NLS) wird bei einer Herzfrequenz unter 60 bpm ein Kompressions-Ventilations-Verhältnis von 3:1 angewendet.",
+    "answer": "richtig",
+    "explanation": "Im Gegensatz zum Erwachsenen oder Kind wird beim Neugeborenen aufgrund der primär respiratorischen Ursache ein Verhältnis von 3 Druckimpulsen zu 1 Beatmung gewählt.",
+    "source_hint": "Analyse-Zusammenfassung zu NLS/ERC Leitlinien"
+  },
+  {
+    "q_id": "m6_rf_010",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Kinder haben im Verhältnis zum Mundraum eine deutlich größere Zunge als Erwachsene, was die Gefahr einer Atemwegsverlegung bei Bewusstlosigkeit erhöht.",
+    "answer": "richtig",
+    "explanation": "Dies ist eine der wesentlichen anatomischen Besonderheiten im Kindesalter, die bei der Atemwegssicherung berücksichtigt werden muss.",
+    "source_hint": "Analyse-Zusammenfassung Anatomische Besonderheiten"
+  },
+  {
+    "q_id": "m6_rf_011",
+    "type": "richtig_falsch",
+    "topic": "stressmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die 4-7-11-Atemtechnik sieht vor, dass man 7 Sekunden lang einatmet und 4 Sekunden lang ausatmet, um eine schnelle Beruhigung zu erzielen.",
+    "answer": "falsch",
+    "explanation": "Die Technik schreibt vor: 4 Sekunden einatmen und 7 Sekunden ausatmen. Die verlängerte Ausatmung aktiviert den Parasympathikus.",
+    "source_hint": "M6.5_Stresserleben_Fercke"
+  },
+  {
+    "q_id": "m6_rf_012",
+    "type": "richtig_falsch",
+    "topic": "stressmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Ein Grundsatz der psychologischen Akuthilfe lautet: 'Handeln hilft gegen Kontrollverlust und Hilflosigkeit'.",
+    "answer": "richtig",
+    "explanation": "Dies ist einer der sechs Grundsätze nach Hausmann, um Betroffenen in Notfallsituationen wieder Struktur und Selbstwirksamkeit zu vermitteln.",
+    "source_hint": "M6.5_Stresserleben_Fercke"
+  },
+  {
+    "q_id": "m6_rf_013",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das G-BA Stufenmodell zur stationären Notfallversorgung unterteilt Krankenhäuser in die drei Stufen: Basisnotfallversorgung, erweiterte Notfallversorgung und umfassende Notfallversorgung.",
+    "answer": "richtig",
+    "explanation": "Diese drei Stufen definieren die Anforderungen an Personal, Fachabteilungen und technische Ausstattung für die Teilnahme an der Notfallversorgung.",
+    "source_hint": "Grundlagen des Stufenmodells Notaufnahme"
+  },
+  {
+    "q_id": "m6_rf_014",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Während der Anspannungsphase der Herzaktion sind sowohl die Segelklappen als auch die Taschenklappen geschlossen.",
+    "answer": "richtig",
+    "explanation": "In der Anspannungsphase baut die Kammermuskulatur Druck auf; da dieser noch nicht den Gefäßdruck übersteigt, bleiben alle Klappen geschlossen (isovolumetrische Kontraktion).",
+    "source_hint": "BZPG Anatomie Herz-Herzkrankheiten Handout (Herzaktion)"
+  },
+  {
+    "q_id": "m6_rf_015",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei Frauen äußert sich ein Herzinfarkt häufiger durch unspezifische Symptome wie Oberbauchschmerzen oder Übelkeit anstelle des klassischen Vernichtungsschmerzes.",
+    "answer": "richtig",
+    "explanation": "Das sogenannte 'Frauenherz' zeigt oft atypische Symptome, was die Diagnose erschweren kann.",
+    "source_hint": "Modul_6.3_Herz-Kreislauf_Erkrankungen_Prezi"
+  },
+  {
+    "q_id": "m6_rf_016",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die empfohlene Drucktiefe bei der Herzdruckmassage eines Erwachsenen sollte zur Vermeidung von Rippenfrakturen maximal 4 cm betragen.",
+    "answer": "falsch",
+    "explanation": "Die empfohlene Drucktiefe liegt bei 5 bis 6 cm. Eine Tiefe von nur 4 cm wäre nicht ausreichend, um ein effektives Schlagvolumen zu generieren.",
+    "source_hint": "M 6.4 - Erste Hilfe und erweiterte Reanimationsmaßnahmen"
+  },
+  {
+    "q_id": "m6_rf_017",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei einer ineffektiven Hustenreaktion aufgrund eines Fremdkörpers sollte bei Säuglingen als erste Maßnahme sofort eine Serie von 5 Oberbauchkompressionen (Heimlich-Manöver) durchgeführt werden.",
+    "answer": "falsch",
+    "explanation": "Bei Säuglingen ist das Heimlich-Manöver aufgrund der Verletzungsgefahr innerer Organe kontraindiziert. Stattdessen werden 5 Rückenschläge und 5 Thoraxkompressionen durchgeführt.",
+    "source_hint": "Analyse-Zusammenfassung Fremdkörperaspiration"
+  },
+  {
+    "q_id": "m6_rf_018",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Thrombus, der eine Lungenembolie verursacht, stammt in den meisten Fällen aus einer arteriellen Thrombose der Halsschlagader.",
+    "answer": "falsch",
+    "explanation": "Ein Lungenembolus stammt fast immer aus dem venösen System, meist aus den tiefen Bein- oder Beckenvenen.",
+    "source_hint": "M 6.3_Skript"
+  },
+  {
+    "q_id": "m6_rf_019",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "In der Basisnotfallversorgung (Stufe 1) ist die Vorhaltung eines 24-Stunden-verfügbaren MRTs zwingend vorgeschrieben.",
+    "answer": "falsch",
+    "explanation": "Für die Stufe 1 (Basis) ist ein CT 24h verfügbar zu halten. Ein MRT wird erst ab der erweiterten Notfallversorgung (Stufe 2) gefordert.",
+    "source_hint": "Grundlagen des Stufenmodells Notaufnahme"
+  },
+  {
+    "q_id": "m6_rf_020",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die pädiatrische Basisreanimation (PBLS) beginnt bei einem leblosen Kind üblicherweise mit 5 initialen Beatmungen.",
+    "answer": "richtig",
+    "explanation": "Da Notfälle bei Kindern meist respiratorischer Ursache sind, wird die Reanimation mit Beatmungen eingeleitet, bevor die Herzdruckmassage beginnt.",
+    "source_hint": "Analyse-Zusammenfassung PBLS"
+  },
+  {
+    "q_id": "m6_rf_021",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Krankenhäuser der erweiterten Notfallversorgung (Stufe 2) müssen eine Intensivstation mit mindestens 10 Intensivbetten vorhalten, die zur Versorgung beatmeter Patienten ausgestattet sind.",
+    "answer": "richtig",
+    "explanation": "Gemäß den Anforderungen für die Stufe 2 ist eine Kapazität von mindestens 10 Intensivbetten inklusive Beatmungsmöglichkeit vorgeschrieben.",
+    "source_hint": "Grundlagen des Stufenmodells Notaufnahme"
+  },
+  {
+    "q_id": "m6_rf_022",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Während der Entspannungsphase der Herzaktion sind die Taschenklappen (Aorten- und Pulmonalklappe) geöffnet, um den Druck in den Kammern zu senken.",
+    "answer": "falsch",
+    "explanation": "In der Entspannungsphase schließen sich die Taschenklappen gerade wieder, um einen Rückstrom aus den Gefäßen zu verhindern, während alle Klappen kurzzeitig geschlossen bleiben.",
+    "source_hint": "Funktion Herz - Herzaktion (Grafik)"
+  },
+  {
+    "q_id": "m6_rf_023",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Eine Myokardruptur (Herzmuskelriss) stellt eine lebensgefährliche Komplikation dar, die als Folge eines Herzinfarkts auftreten kann.",
+    "answer": "richtig",
+    "explanation": "Die Myokardruptur ist explizit als eine der möglichen Folgeschäden und Komplikationen eines Infarkts gelistet.",
+    "source_hint": "Modul_6.3_Herz-Kreislauf_Erkrankungen_Prezi"
+  },
+  {
+    "q_id": "m6_rf_024",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Im ABCDE-Schema zur systematischen Patienteneinschätzung steht der Buchstabe 'C' primär für 'Cough' (Hustenreiz), um die Atemwege zu beurteilen.",
+    "answer": "falsch",
+    "explanation": "Der Buchstabe 'C' steht für 'Circulation' (Kreislauf), wobei Puls, Rekapillarisierungszeit und Blutungen beurteilt werden.",
+    "source_hint": "M 6.4 - ABCDE-Schema"
+  },
+  {
+    "q_id": "m6_rf_025",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei der Reanimation von Säuglingen sollte der Kopf wie beim Erwachsenen maximal überstreckt werden, um die Atemwege optimal freizuhalten.",
+    "answer": "falsch",
+    "explanation": "Bei Säuglingen wird die Neutralposition (Schnüffelstellung) empfohlen, da eine Überstreckung aufgrund der anatomischen Lage des Kehlkopfs die Atemwege eher verlegen kann.",
+    "source_hint": "Zusammenfassung Anatomische Besonderheiten / PBLS"
+  },
+  {
+    "q_id": "m6_rf_026",
+    "type": "richtig_falsch",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im transaktionalen Stressmodell nach Lazarus dient die Sekundärbewertung dazu, die verfügbaren Bewältigungsmöglichkeiten (Ressourcen) gegen die Anforderungen abzuwägen.",
+    "answer": "richtig",
+    "explanation": "Die Sekundärbewertung beurteilt, ob die Ressourcen ausreichen, um die in der Primärbewertung festgestellte Bedrohung oder Herausforderung zu meistern.",
+    "source_hint": "Zusammenfassung Stressmodell Lazarus"
+  },
+  {
+    "q_id": "m6_rf_027",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die Garantenstellung verpflichtet Pflegeeinrichtungen gesetzlich dazu, Schaden von pflegebedürftigen Personen abzuwenden und Pflege nach dem aktuellen Wissensstand zu garantieren.",
+    "answer": "richtig",
+    "explanation": "Dies ist die Definition der Garantenstellung, die sicherstellt, dass Pflege nach neuesten Erkenntnissen und zum Wohle des Patienten durchgeführt wird.",
+    "source_hint": "M 6.4 - Rechtliche Grundlagen (Garantenstellung)"
+  },
+  {
+    "q_id": "m6_rf_028",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Ramus circumflexus (RCX) ist ein wesentlicher Ast der rechten Herzkranzarterie (RCA).",
+    "answer": "falsch",
+    "explanation": "Der RCX ist ein Ast der linken Herzkranzarterie (LCA), zusammen mit dem RIVA.",
+    "source_hint": "Anatomie Herz - Herzkranzgefäße Ansicht"
+  },
+  {
+    "q_id": "m6_rf_029",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Koronarangiografie (Linksherzkatheteruntersuchung) gilt als diagnostischer Goldstandard bei Verdacht auf ein akutes Koronarsyndrom.",
+    "answer": "richtig",
+    "explanation": "Im Skript und in der Präsentation wird die Koronarangiografie explizit als Goldstandard für die Diagnostik und gleichzeitige Interventionsmöglichkeit genannt.",
+    "source_hint": "M 6.3_Skript / Modul_6.3_Prezi"
+  },
+  {
+    "q_id": "m6_rf_030",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das SAMPLER-Schema ist eine Ergänzung zum ABCDE-Schema und dient der Erhebung einer strukturierten Notfallanamnese.",
+    "answer": "richtig",
+    "explanation": "SAMPLER hilft dabei, wichtige Informationen wie Symptome, Allergien und Medikation systematisch abzufragen.",
+    "source_hint": "M 6.1 - Kritisch Kranke frühzeitig erkennen"
+  },
+  {
+    "q_id": "m6_rf_031",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei einer ineffektiven Hustenreaktion aufgrund eines Fremdkörpers sollten bei Kindern über einem Jahr als lebensrettende Maßnahme 5 Oberbauchkompressionen (Heimlich-Manöver) durchgeführt werden.",
+    "answer": "richtig",
+    "explanation": "Wenn Rückenschläge nicht helfen, ist das Heimlich-Manöver bei Kindern über einem Jahr die empfohlene Maßnahme bei ineffektivem Husten.",
+    "source_hint": "Zusammenfassung Fremdkörperaspiration"
+  },
+  {
+    "q_id": "m6_rf_032",
+    "type": "richtig_falsch",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Sogenannte 'Intrusionen', wie ungewollte Flashbacks oder belastende Erinnerungsfragmente, sind typische Symptome nach einem traumatischen Notfallereignis.",
+    "answer": "richtig",
+    "explanation": "Intrusionen sind ein Kernsymptom des Belastungserlebens bzw. der PTBS, bei dem das Ereignis ungewollt wiedererlebt wird.",
+    "source_hint": "Zusammenfassung Posttraumatische Belastungsstörung"
+  },
+  {
+    "q_id": "m6_rf_033",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "In der umfassenden Notfallversorgung (Stufe 3) müssen Krankenhäuser mindestens 20 Intensivbetten für die Versorgung beatmeter Patienten zur Verfügung stellen.",
+    "answer": "richtig",
+    "explanation": "Dies ist eine der Mindestanforderungen für die höchste Versorgungsstufe (Umfassend).",
+    "source_hint": "Grundlagen des Stufenmodells Notaufnahme"
+  },
+  {
+    "q_id": "m6_rf_034",
+    "type": "richtig_falsch",
+    "topic": "herz_anatomie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Während der Anspannungsphase der Herzaktion übersteigt der Druck in der linken Kammer bereits den Druck in der Aorta, was zum Öffnen der Aortenklappe führt.",
+    "answer": "falsch",
+    "explanation": "Das Öffnen der Klappen und das Übersteigen des Gefäßdrucks markieren den Beginn der Austreibungsphase. In der Anspannungsphase sind noch alle Klappen geschlossen.",
+    "source_hint": "Funktion Herz - Herzaktion"
+  },
+  {
+    "q_id": "m6_rf_035",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein kardiogener Schock ist definiert durch ein akutes Pumpversagen des Herzens, das zu einer unzureichenden Sauerstoffversorgung der Organe führt.",
+    "answer": "richtig",
+    "explanation": "Dies beschreibt die Pathophysiologie des kardiogenen Schocks, meist infolge eines massiven Myokardinfarkts.",
+    "source_hint": "M 6.4 - Kardiogener Schock"
+  },
+  {
+    "q_id": "m6_rf_036",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei Vorliegen einer Asystolie (Nulllinie im EKG) wird der Automatisierte Externe Defibrillator (AED) sofort einen Schock empfehlen, um das Herz wieder zu starten.",
+    "answer": "falsch",
+    "explanation": "Die Asystolie ist ein nicht-schockbarer Rhythmus. Der AED empfiehlt nur bei schockbaren Rhythmen wie Kammerflimmern einen Schock.",
+    "source_hint": "Gefährliche Herzrhythmusstörungen / Reanimation"
+  },
+  {
+    "q_id": "m6_rf_037",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im Newborn Life Support (NLS) wird bei unauffälligen Neugeborenen ein verzögertes Abnabeln von mindestens einer Minute empfohlen.",
+    "answer": "richtig",
+    "explanation": "Dies ist Teil der initialen Phase der Neugeborenenversorgung gemäß den ERC-Leitlinien 2021.",
+    "source_hint": "Zusammenfassung Versorgung Neugeborene (NLS)"
+  },
+  {
+    "q_id": "m6_rf_038",
+    "type": "richtig_falsch",
+    "topic": "stressmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die 4-7-11-Methode zur akuten Entspannung beschreibt einen Zyklus von 4 Sekunden Einatmen und 7 Sekunden Ausatmen über einen Zeitraum von 11 Minuten.",
+    "answer": "richtig",
+    "explanation": "Dies ist die korrekte Durchführung dieser Atemtechnik zur Stressregulation.",
+    "source_hint": "Zusammenfassung Stressbewältigung"
+  },
+  {
+    "q_id": "m6_rf_039",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im System der dualen Krankenhausfinanzierung in Deutschland werden die Investitionskosten (z.B. für Neubauten) von den gesetzlichen Krankenkassen getragen.",
+    "answer": "falsch",
+    "explanation": "Bei der dualen Finanzierung tragen die Länder die Investitionskosten, während die Krankenkassen die Betriebskosten (über Fallpauschalen) übernehmen.",
+    "source_hint": "Zusammenfassung Krankenhausfinanzierung"
+  },
+  {
+    "q_id": "m6_rf_040",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Fixierungsfehler im Crew Resource Management bedeutet, dass man starr an einer einmal getroffenen (evtl. falschen) Diagnose oder einem Plan festhält, trotz gegenteiliger Hinweise.",
+    "answer": "richtig",
+    "explanation": "Dies ist ein klassischer 'Human Factor' Fehler, den CRM durch regelmäßige Re-Evaluation (10-für-10) verhindern will.",
+    "source_hint": "M 6.1 - CRM Leitsatz Nr. 9"
+  },
+  {
+    "q_id": "m6_nl_001",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Stufen des G-BA Stufenmodells der stationären Notfallversorgung.",
+    "list_label": "Stufen des Notfallstufenmodells",
+    "count": 3,
+    "correct_answers": [
+      "Basisnotfallversorgung (Stufe 1)",
+      "Erweiterte Notfallversorgung (Stufe 2)",
+      "Umfassende Notfallversorgung (Stufe 3)"
+    ],
+    "all_valid_answers": [
+      "Basisnotfallversorgung",
+      "Stufe 1",
+      "Basisversorgung",
+      "Erweiterte Notfallversorgung",
+      "Stufe 2",
+      "Erweiterte Versorgung",
+      "Umfassende Notfallversorgung",
+      "Stufe 3",
+      "Umfassende Versorgung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Stufe."
+  },
+  {
+    "q_id": "m6_nl_002",
+    "type": "nennen_liste",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier Herzklappen und ordnen Sie diese jeweils der Gruppe der Segel- oder Taschenklappen zu.",
+    "list_label": "Herzklappensystem",
+    "count": 4,
+    "correct_answers": [
+      "Segelklappe: Trikuspidalklappe",
+      "Segelklappe: Mitralklappe (Bikuspidalklappe)",
+      "Taschenklappe: Pulmonalklappe",
+      "Taschenklappe: Aortenklappe"
+    ],
+    "all_valid_answers": [
+      "Segelklappe: Trikuspidalklappe",
+      "Trikuspidalis",
+      "rechte AV-Klappe",
+      "Segelklappe: Mitralklappe",
+      "Bikuspidalklappe",
+      "Bikuspis",
+      "linke AV-Klappe",
+      "Taschenklappe: Pulmonalklappe",
+      "Pulmonalis",
+      "Taschenklappe: Aortenklappe",
+      "Aortalklappe"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Klappe mit korrekter Zuordnung."
+  },
+  {
+    "q_id": "m6_nl_003",
+    "type": "nennen_liste",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier Phasen der Herzaktion.",
+    "list_label": "Phasen der Herzaktion",
+    "count": 4,
+    "correct_answers": [
+      "Anspannungsphase",
+      "Austreibungsphase",
+      "Entspannungsphase",
+      "Füllungsphase"
+    ],
+    "all_valid_answers": [
+      "Anspannungsphase",
+      "Austreibungsphase",
+      "Entspannungsphase",
+      "Füllungsphase",
+      "Kammerfüllungsphase"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Phase."
+  },
+  {
+    "q_id": "m6_nl_004",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei klinischen Erscheinungsformen des Akuten Koronarsyndroms (ACS).",
+    "list_label": "Formen des ACS",
+    "count": 3,
+    "correct_answers": [
+      "Instabile Angina Pectoris",
+      "NSTEMI (Nicht-ST-Hebungsinfarkt)",
+      "STEMI (ST-Hebungsinfarkt)"
+    ],
+    "all_valid_answers": [
+      "Instabile Angina Pectoris",
+      "instabile AP",
+      "NSTEMI",
+      "Nicht-ST-Hebungsinfarkt",
+      "Nicht-ST-Hebung-Myokardinfarkt",
+      "STEMI",
+      "ST-Hebungsinfarkt",
+      "ST-Hebungs-Myokardinfarkt"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Form."
+  },
+  {
+    "q_id": "m6_nl_005",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie fünf typische Leitsymptome eines akuten Herzinfarkts.",
+    "list_label": "Leitsymptome Herzinfarkt",
+    "count": 5,
+    "correct_answers": [
+      "Starker retrosternaler Schmerz",
+      "Ausstrahlung in Arm/Hals/Unterkiefer/Oberbauch",
+      "Todesangst oder Vernichtungsgefühl",
+      "Atemnot (Dyspnoe)",
+      "Kaltschweißigkeit / Übelkeit"
+    ],
+    "all_valid_answers": [
+      "Starker retrosternaler Schmerz",
+      "Schmerzen hinter dem Brustbein",
+      "Brustenge",
+      "Angina Pectoris",
+      "Ausstrahlung",
+      "Schmerzausstrahlung",
+      "Todesangst",
+      "Vernichtungsgefühl",
+      "Unruhe",
+      "Angst",
+      "Atemnot",
+      "Dyspnoe",
+      "Luftnot",
+      "Kaltschweißigkeit",
+      "kalter Schweiß",
+      "Übelkeit",
+      "Nausea",
+      "Erbrechen",
+      "Emesis"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrekt genanntem Leitsymptom."
+  },
+  {
+    "q_id": "m6_nl_006",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Faktoren der Virchow-Trias, die zur Entstehung von Thrombosen und Lungenembolien beitragen.",
+    "list_label": "Virchow-Trias",
+    "count": 3,
+    "correct_answers": [
+      "Gefäßwandschaden (Endothelschaden)",
+      "Verlangsamter Blutfluss (Stase)",
+      "Veränderte Blutzusammensetzung (Hyperkoagulabilität)"
+    ],
+    "all_valid_answers": [
+      "Gefäßwandschaden",
+      "Endothelschädigung",
+      "Verlangsamung der Blutströmung",
+      "Stase",
+      "Blutflussverlangsamung",
+      "Veränderung der Blutbeschaffenheit",
+      "Hyperkoagulabilität",
+      "erhöhte Gerinnungsneigung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genanntem Faktor."
+  },
+  {
+    "q_id": "m6_nl_007",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die fünf Buchstaben des ABCDE-Schemas und deren jeweilige Bedeutung für die systematische Patienteneinschätzung.",
+    "list_label": "ABCDE-Schema",
+    "count": 5,
+    "correct_answers": [
+      "A - Airway (Atemweg)",
+      "B - Breathing (Belüftung)",
+      "C - Circulation (Kreislauf)",
+      "D - Disability (Beeinträchtigung/Neurologie)",
+      "E - Exposure (Exposition/Untersuchung/Umfeld)"
+    ],
+    "all_valid_answers": [
+      "A",
+      "Airway",
+      "Atemweg",
+      "B",
+      "Breathing",
+      "Belüftung",
+      "Atmung",
+      "C",
+      "Circulation",
+      "Kreislauf",
+      "Zirkulation",
+      "D",
+      "Disability",
+      "Beeinträchtigung",
+      "Neurologischer Status",
+      "Neurologie",
+      "Defizit",
+      "E",
+      "Exposure",
+      "Environment",
+      "Exposition",
+      "Untersuchung",
+      "Umfeld"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Buchstaben mit Bedeutung."
+  },
+  {
+    "q_id": "m6_nl_008",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die potenziell reversiblen Ursachen eines Herz-Kreislauf-Stillstands (4Hs und HITS).",
+    "list_label": "Reversible Ursachen (4Hs & HITS)",
+    "count": 8,
+    "correct_answers": [
+      "Hypoxie",
+      "Hypovolämie",
+      "Hypo-/Hyperkaliämie",
+      "Hypo-/Hyperthermie",
+      "Herzbeuteltamponade",
+      "Intoxikation",
+      "Thromboembolie",
+      "Spannungspneumothorax"
+    ],
+    "all_valid_answers": [
+      "Hypoxie",
+      "Sauerstoffmangel",
+      "Hypovolämie",
+      "Volumenmangel",
+      "Flüssigkeitsmangel",
+      "Hypokaliämie",
+      "Hyperkaliämie",
+      "Kaliumhaushaltstörung",
+      "Hypothermie",
+      "Hyperthermie",
+      "Temperaturstörung",
+      "Herzbeuteltamponade",
+      "Perikardtamponade",
+      "Intoxikation",
+      "Vergiftung",
+      "Thromboembolie",
+      "Lungenembolie",
+      "LAE",
+      "Spannungspneumothorax",
+      "Pneumothorax"
+    ],
+    "points": 4,
+    "scoring_info": "0,5 Punkte pro korrekter Nennung."
+  },
+  {
+    "q_id": "m6_nl_009",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei wesentlichen Glieder der Rettungskette aus Sicht eines Ersthelfers.",
+    "list_label": "Rettungskette",
+    "count": 3,
+    "correct_answers": [
+      "Notruf (112)",
+      "Erste Hilfe (Sofortmaßnahmen)",
+      "Rettungsdienst / Qualifizierte medizinische Hilfe"
+    ],
+    "all_valid_answers": [
+      "Notruf",
+      "Notruf absetzen",
+      "112",
+      "Hilfe anfordern",
+      "Erste Hilfe",
+      "Sofortmaßnahmen",
+      "HLW",
+      "Basisreanimation",
+      "Rettungsdienst",
+      "Krankenhaus",
+      "professionelle Hilfe",
+      "Klinik"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Glied."
+  },
+  {
+    "q_id": "m6_nl_010",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die Anzahl der Initialbeatmungen sowie das anschließende Kompressions-Beatmungs-Verhältnis bei der pädiatrischen Reanimation (Kind).",
+    "list_label": "Pädiatrische HLW-Parameter",
+    "count": 2,
+    "correct_answers": [
+      "5 Initialbeatmungen",
+      "Verhältnis 15 : 2"
+    ],
+    "all_valid_answers": [
+      "5 Initialbeatmungen",
+      "5 Atemspenden",
+      "5 Beatmungen",
+      "15 zu 2",
+      "15:2",
+      "15 Kompressionen : 2 Beatmungen"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt für die Initialbeatmungen, 1 Punkt für das korrekte Verhältnis."
+  },
+  {
+    "q_id": "m6_nl_011",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier anatomische Besonderheiten bei Säuglingen und Kindern, die bei der Reanimation berücksichtigt werden müssen.",
+    "list_label": "Pädiatrische Anatomie",
+    "count": 4,
+    "correct_answers": [
+      "Proportional großer Hinterkopf",
+      "Große Zunge im Verhältnis zum Mundraum",
+      "Höher liegender Kehlkopf (Larynx)",
+      "Lange, weiche Epiglottis"
+    ],
+    "all_valid_answers": [
+      "großer Kopf",
+      "großer Hinterkopf",
+      "große Zunge",
+      "Zunge füllt Mundraum fast aus",
+      "höher liegender Kehlkopf",
+      "Larynx steht höher",
+      "hufeisenförmige Epiglottis",
+      "lange Kehldeckel",
+      "Epiglottis weicher",
+      "subglottische Enge",
+      "engste Stelle unterhalb der Stimmritze"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Besonderheit."
+  },
+  {
+    "q_id": "m6_nl_012",
+    "type": "nennen_liste",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Coping-Strategien zur Stressbewältigung nach dem transaktionalen Stressmodell.",
+    "list_label": "Coping-Strategien",
+    "count": 3,
+    "correct_answers": [
+      "Instrumentelles Coping",
+      "Emotionales Coping",
+      "Bewertungsorientiertes Coping"
+    ],
+    "all_valid_answers": [
+      "Instrumentelles Coping",
+      "problemorientiertes Coping",
+      "Emotionales Coping",
+      "emotionsorientiertes Coping",
+      "Bewertungsorientiertes Coping",
+      "kognitive Umdeutung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Strategie."
+  },
+  {
+    "q_id": "m6_nl_013",
+    "type": "nennen_liste",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Hauptsymptomgruppen der Posttraumatischen Belastungsstörung (PTBS).",
+    "list_label": "Symptomgruppen PTBS",
+    "count": 3,
+    "correct_answers": [
+      "Intrusionen (Wiedererleben)",
+      "Vermeidungsverhalten",
+      "Hyperarousal (Übererregung)"
+    ],
+    "all_valid_answers": [
+      "Intrusionen",
+      "Flashbacks",
+      "Wiedererleben",
+      "Nachhallerinnerungen",
+      "Vermeidung",
+      "Vermeidungsverhalten",
+      "sozialer Rückzug",
+      "Hyperarousal",
+      "Übererregung",
+      "Schlafstörungen",
+      "Schreckhaftigkeit"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Symptomgruppe."
+  },
+  {
+    "q_id": "m6_nl_014",
+    "type": "nennen_liste",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier Herzkranzarterien und ordnen Sie diesen ihr jeweiliges Hauptversorgungsgebiet am Herzen zu.",
+    "list_label": "Koronargefäße und Versorgung",
+    "count": 4,
+    "correct_answers": [
+      "LCA (linke Koronararterie): linkes Herz",
+      "RCA (rechte Koronararterie): rechtes Herz",
+      "RIVA (Ast der LCA): Vorderwand",
+      "RCX (Ast der LCA): Seitenwand / Rückwand"
+    ],
+    "all_valid_answers": [
+      "LCA",
+      "A. coronaria sinistra",
+      "linke Herzkranzarterie",
+      "RCA",
+      "A. coronaria dextra",
+      "rechte Herzkranzarterie",
+      "RIVA",
+      "LAD",
+      "Vorderwandarterie",
+      "RCX",
+      "Ramus circumflexus",
+      "Seitenwandarterie"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Gefäß mit korrektem Versorgungsgebiet."
+  },
+  {
+    "q_id": "m6_nl_015",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier klinische Komplikationen, die unmittelbar nach einem Herzinfarkt auftreten können.",
+    "list_label": "Komplikationen Herzinfarkt",
+    "count": 4,
+    "correct_answers": [
+      "Herzrhythmusstörungen (z.B. Kammerflimmern)",
+      "Kardiogener Schock",
+      "Akute Herzinsuffizienz",
+      "Myokardruptur (Herzmuskelriss)"
+    ],
+    "all_valid_answers": [
+      "Herzrhythmusstörungen",
+      "Kammerflimmern",
+      "Arrhythmien",
+      "Asystolie",
+      "Kardiogener Schock",
+      "Pumpversagen",
+      "Herzinsuffizienz",
+      "Linksherzinsuffizienz",
+      "Lungenödem",
+      "Myokardruptur",
+      "Herzmuskelriss",
+      "Herzwandaneurysma",
+      "Papillarmuskelabriss"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Komplikation."
+  },
+  {
+    "q_id": "m6_nl_016",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die sieben Buchstaben des SAMPLER-Schemas und deren jeweilige Bedeutung für die strukturierte Notfallanamnese.",
+    "list_label": "SAMPLER-Schema",
+    "count": 7,
+    "correct_answers": [
+      "S - Symptome",
+      "A - Allergien",
+      "M - Medikamente",
+      "P - Patientengeschichte (Vorerkrankungen)",
+      "L - Letzte Mahlzeit / Stuhlgang",
+      "E - Ereignis (Auffindesituation)",
+      "R - Risikofaktoren"
+    ],
+    "all_valid_answers": [
+      "S", "Symptome", "Beschwerden", "Hauptbeschwerde",
+      "A", "Allergien", "Unverträglichkeiten",
+      "M", "Medikamente", "Medikation", "Dauermedikation",
+      "P", "Patientengeschichte", "Vorerkrankungen", "Anamnese", "Vorgeschichte",
+      "L", "Letzte Mahlzeit", "Essen/Trinken", "Letzter Stuhlgang", "Letzte Periode",
+      "E", "Ereignis", "Auffindesituation", "Auslöser",
+      "R", "Risikofaktoren", "Gefahren"
+    ],
+    "points": 7,
+    "scoring_info": "1 Punkt pro korrektem Buchstaben mit Bedeutung."
+  },
+  {
+    "q_id": "m6_nl_017",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die Buchstaben des OPQRST-Schemas zur genaueren Schmerzanamnese und deren Bedeutung.",
+    "list_label": "OPQRST-Schema",
+    "count": 6,
+    "correct_answers": [
+      "O - Onset (Beginn)",
+      "P - Provokation / Palliation (Auslöser/Linderung)",
+      "Q - Qualität (Art des Schmerzes)",
+      "R - Region / Radiation (Ort/Ausstrahlung)",
+      "S - Stärke (Skala 1-10)",
+      "T - Time (Zeitlicher Verlauf)"
+    ],
+    "all_valid_answers": [
+      "O", "Onset", "Beginn", "Auftreten",
+      "P", "Provokation", "Palliation", "Verstärkung", "Linderung",
+      "Q", "Qualität", "Schmerzcharakter", "Wie fühlt es sich an",
+      "R", "Region", "Radiation", "Ort", "Lokalisation", "Ausstrahlung",
+      "S", "Severity", "Stärke", "Intensität", "NRS", "VAS",
+      "T", "Time", "Zeit", "Dauer", "Verlauf"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Buchstaben mit Bedeutung."
+  },
+  {
+    "q_id": "m6_nl_018",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier klinischen Hauptformen des Schocks.",
+    "list_label": "Schockformen",
+    "count": 4,
+    "correct_answers": [
+      "Hypovolämischer Schock",
+      "Kardiogener Schock",
+      "Distributiver Schock",
+      "Obstruktiver Schock"
+    ],
+    "all_valid_answers": [
+      "Hypovolämisch", "Volumenmangelschock", "Blutungsschock",
+      "Kardiogen", "Herzversagen", "Pumpversagen",
+      "Distributiv", "Anaphylaktisch", "Septisch", "Neurogen",
+      "Obstruktiv", "Vena-cava-Kompressionssyndrom", "Spannungspneu", "Lungenembolie"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Schockform."
+  },
+  {
+    "q_id": "m6_nl_019",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier invasive oder medikamentöse Therapieoptionen beim Akuten Koronarsyndrom (ACS).",
+    "list_label": "Therapie ACS",
+    "count": 4,
+    "correct_answers": [
+      "PTCA (Ballondilatation) / Stentimplantation",
+      "Bypass-Operation",
+      "Thrombozytenaggregationshemmer (z.B. ASS)",
+      "Systemische Lysetherapie"
+    ],
+    "all_valid_answers": [
+      "PTCA", "PCI", "Herzkatheter", "Stent", "Ballon",
+      "Bypass", "CABG", "Gefäßprothese",
+      "ASS", "Acetylsalicylsäure", "Clopidogrel", "Ticagrelor", "Aggregationshemmer",
+      "Lyse", "Thrombolyse", "Fibrinolyse"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Option."
+  },
+  {
+    "q_id": "m6_nl_020",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei zentrale Leitsätze oder Konzepte des Crew Resource Managements (CRM) zur Fehlervermeidung.",
+    "list_label": "CRM-Prinzipien",
+    "count": 3,
+    "correct_answers": [
+      "10-für-10 Prinzip (10 Sekunden für 10 Minuten)",
+      "Closed-Loop-Kommunikation",
+      "Hilfe frühzeitig anfordern"
+    ],
+    "all_valid_answers": [
+      "10 für 10", "10-für-10", "Denkpause", "Strukturierung",
+      "Closed Loop", "geschlossener Kommunikationskreis", "Rückbestätigung",
+      "Hilfe anfordern", "Support rufen", "nicht allein kämpfen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m6_nl_021",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei lebensgefährlichen Herzrhythmusstörungen, die zum Herz-Kreislauf-Stillstand führen können.",
+    "list_label": "Gefährliche Rhythmusstörungen",
+    "count": 3,
+    "correct_answers": [
+      "Ventrikuläre Tachykardie (V-Tach)",
+      "Kammerflimmern",
+      "Asystolie"
+    ],
+    "all_valid_answers": [
+      "ventrikuläre Tachykardie", "V-Tach", "VT", "Kammerflattern",
+      "Kammerflimmern", "VF",
+      "Asystolie", "Nulllinie", "Herzstillstand"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Störung."
+  },
+  {
+    "q_id": "m6_nl_022",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei herzspezifische Labormarker, die zur Diagnostik eines Myokardinfarkts herangezogen werden.",
+    "list_label": "Diagnostische Marker",
+    "count": 3,
+    "correct_answers": [
+      "Troponin T (oder I)",
+      "CK (Creatinkinase)",
+      "CK-MB"
+    ],
+    "all_valid_answers": [
+      "Troponin", "Troponin T", "Troponin I", "hochsensitives Troponin",
+      "CK", "Creatinkinase", "Kreatinkinase",
+      "CK-MB", "CK-MB-Anteil"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Marker."
+  },
+  {
+    "q_id": "m6_nl_023",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die zwei manuellen Maßnahmen bei einer ineffektiven Hustenreaktion infolge einer Fremdkörperaspiration beim Säugling (< 1 Jahr).",
+    "list_label": "Maßnahmen Aspiration Säugling",
+    "count": 2,
+    "correct_answers": [
+      "5 Rückenschläge",
+      "5 Thoraxkompressionen"
+    ],
+    "all_valid_answers": [
+      "5 Rückenschläge", "Schläge zwischen die Schulterblätter",
+      "5 Thoraxkompressionen", "5 Brustkorbkompressionen", "Druckstöße auf das Brustbein"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekt genannter Maßnahme."
+  },
+  {
+    "q_id": "m6_nl_024",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier wesentliche Schritte der Neugeborenen-Erstversorgung (Newborn Life Support) unmittelbar nach der Geburt.",
+    "list_label": "NLS Maßnahmen",
+    "count": 4,
+    "correct_answers": [
+      "Verzögertes Abnabeln (mind. 1 Min.)",
+      "Trocknen",
+      "Stimulieren",
+      "Wärmeerhalt / Wärmen"
+    ],
+    "all_valid_answers": [
+      "verzögertes Abnabeln", "spätes Abnabeln",
+      "Trocknen", "abtrocknen",
+      "Stimulieren", "Anreizen der Atmung", "taktile Stimulation",
+      "Wärmeerhalt", "Wärmen", "Wärmestrahler", "Einpacken"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Schritt."
+  },
+  {
+    "q_id": "m6_nl_025",
+    "type": "nennen_liste",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei typische Stressoren im Notfallgeschehen sowie drei mögliche Ressourcen zu deren Bewältigung.",
+    "list_label": "Stressoren und Ressourcen",
+    "count": 6,
+    "correct_answers": [
+      "Stressoren: Zeitdruck, Lebensgefahr, hohe Verantwortung",
+      "Ressourcen: Erfahrung, Teamunterstützung, klare Algorithmen"
+    ],
+    "all_valid_answers": [
+      "Zeitdruck", "Hektik", "Personalmangel", "Lebensgefahr", "Tod", "Verantwortung", "Ungewissheit",
+      "Erfahrung", "Fachkompetenz", "Team", "Zusammenhalt", "Algorithmen", "Leitlinien", "KIT", "PSNV"
+    ],
+    "points": 3,
+    "scoring_info": "0,5 Punkte pro Nennung (max. 3 Punkte)."
+  },
+  {
+    "q_id": "m6_nl_026",
+    "type": "nennen_liste",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier persönliche Stressverstärker (innere Antreiber), die das individuelle Stresserleben negativ beeinflussen können.",
+    "list_label": "Persönliche Stressverstärker",
+    "count": 4,
+    "correct_answers": [
+      "Perfektionismus",
+      "Ungeduld",
+      "Kontrollstreben",
+      "Einzelkämpfertum (Hilflosigkeitsverleugnung)"
+    ],
+    "all_valid_answers": [
+      "Perfektionismus", "Sei perfekt", "Fehlerangst",
+      "Ungeduld", "Beeil dich", "Hektik",
+      "Kontrollstreben", "Kontrollzwang",
+      "Einzelkämpfertum", "Ich muss das allein schaffen", "Hilflosigkeit unterdrücken",
+      "Selbstüberforderung", "Gefallen wollen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genanntem Verstärker."
+  },
+  {
+    "q_id": "m6_nl_027",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Schritte der Closed-Loop-Kommunikation.",
+    "list_label": "Elemente Closed-Loop",
+    "count": 3,
+    "correct_answers": [
+      "1. Sender gibt eine klare Anweisung",
+      "2. Empfänger wiederholt/bestätigt die Anweisung",
+      "3. Sender quittiert die korrekte Bestätigung"
+    ],
+    "all_valid_answers": [
+      "Anweisung geben", "Call-out",
+      "Bestätigung", "Wiederholen", "Read-back",
+      "Quittierung", "Check-back", "Bestätigen der Bestätigung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Kommunikationsschritt."
+  },
+  {
+    "q_id": "m6_nl_028",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier atypische Symptome, die bei Frauen im Rahmen eines Herzinfarkts häufiger auftreten als bei Männern.",
+    "list_label": "Atypische Symptome (Frauenherz)",
+    "count": 4,
+    "correct_answers": [
+      "Übelkeit / Erbrechen",
+      "Atemnot (Dyspnoe)",
+      "Oberbauchbeschwerden",
+      "Rückenschmerzen (zwischen Schulterblättern)"
+    ],
+    "all_valid_answers": [
+      "Übelkeit", "Nausea", "Erbrechen", "Emesis",
+      "Atemnot", "Dyspnoe", "Kurzatmigkeit",
+      "Oberbauchschmerzen", "Magenschmerzen", "Epigastrischer Schmerz",
+      "Rückenschmerzen", "Schmerzen zwischen Schulterblättern", "Nackenschmerzen",
+      "Müdigkeit", "Erschöpfung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m6_nl_029",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier spezifische Kindernotfälle, die im Unterricht behandelt wurden.",
+    "list_label": "Spezifische Kindernotfälle",
+    "count": 4,
+    "correct_answers": [
+      "Fremdkörperaspiration",
+      "Schütteltrauma",
+      "Thermische Notfälle (Verbrennung/Verbrühung)",
+      "Intoxikationen (Vergiftungen)"
+    ],
+    "all_valid_answers": [
+      "Fremdkörperaspiration", "Verschlucken", "Atemwegsobstruktion",
+      "Schütteltrauma", "SHT",
+      "Thermische Notfälle", "Verbrennung", "Verbrühung",
+      "Intoxikation", "Vergiftung", "Einnahme von Reinigern"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genanntem Notfall."
+  },
+  {
+    "q_id": "m6_nl_030",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie zwei zentrale rechtliche Begriffe/Grundlagen der Notfallversorgung in Deutschland.",
+    "list_label": "Rechtliche Grundlagen",
+    "count": 2,
+    "correct_answers": [
+      "Unterlassene Hilfeleistung (§ 323c StGB)",
+      "Garantenstellung"
+    ],
+    "all_valid_answers": [
+      "unterlassene Hilfeleistung", "Paragraf 323c StGB", "323c",
+      "Garantenstellung", "Obhutspflicht", "Garantenpflicht"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Grundlage."
+  },
+  {
+    "q_id": "m6_tab_001",
+    "type": "tabelle_vergleich",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die beiden klinischen Erscheinungsformen des Herzinfarkts hinsichtlich EKG-Befund und Labordiagnostik.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "STEMI",
+          "NSTEMI"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "EKG-Veränderung"
+              },
+              {
+                "type": "input",
+                "correct_answer": "ST-Strecken-Hebung",
+                "keywords": [
+                  "ST-Hebung",
+                  "Hebung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "keine ST-Hebung",
+                "keywords": [
+                  "keine Hebung",
+                  "T-Inversion",
+                  "ST-Senkung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Labordiagnostik (Troponin)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Troponin-Anstieg",
+                "keywords": [
+                  "positiv",
+                  "erhöht"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Troponin-Anstieg",
+                "keywords": [
+                  "positiv",
+                  "erhöht"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die Details zu den vier Herzklappen.",
+    "points": 8,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Name der Klappe",
+          "Typ (Segel/Tasche)",
+          "Lage (zwischen ...)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Trikuspidalklappe",
+                "keywords": [
+                  "Trikuspidal"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Segelklappe",
+                "keywords": [
+                  "Segel"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "rechter Vorhof / rechte Kammer",
+                "keywords": [
+                  "Atrium",
+                  "Ventriculus",
+                  "rechts"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Mitralklappe",
+                "keywords": [
+                  "Bikuspidalklappe",
+                  "Mitral"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Segelklappe",
+                "keywords": [
+                  "Segel"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "linker Vorhof / linke Kammer",
+                "keywords": [
+                  "Atrium",
+                  "Ventriculus",
+                  "links"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Aortenklappe",
+                "keywords": [
+                  "Aortal"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Taschenklappe",
+                "keywords": [
+                  "Tasche"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "linke Kammer / Aorta",
+                "keywords": [
+                  "Ventriculus",
+                  "Gefäß"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Pulmonalklappe",
+                "keywords": [
+                  "Pulmonal"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Taschenklappe",
+                "keywords": [
+                  "Tasche"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "rechte Kammer / Lungenarterie",
+                "keywords": [
+                  "Ventriculus",
+                  "Truncus pulmonalis"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_003",
+    "type": "tabelle_3spalten",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie das ABCDE-Schema zur systematischen Patienteneinschätzung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung (Fachbegriff)",
+          "Beurteilung / Parameter"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "A"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Airway",
+                "keywords": [
+                  "Atemweg"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Atemwege frei? (Fremdkörper, Trauma)",
+                "keywords": [
+                  "Obstruktion",
+                  "frei"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "B"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Breathing",
+                "keywords": [
+                  "Belüftung",
+                  "Atmung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Atemfrequenz, SpO2, Auskultation",
+                "keywords": [
+                  "Sättigung",
+                  "Frequenz"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "C"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Circulation",
+                "keywords": [
+                  "Kreislauf"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Puls, Blutdruck, Rekap-Zeit",
+                "keywords": [
+                  "RR",
+                  "HF",
+                  "Kapillar"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_004",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Reanimationsmaßnahmen bei Erwachsenen und Kindern (Laien/Basis).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Maßnahme",
+          "Erwachsene",
+          "Kinder (PBLS)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Start der Maßnahmen"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Sofort Kompressionen (nach Notruf)",
+                "keywords": [
+                  "Drücken"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "5 initiale Beatmungen",
+                "keywords": [
+                  "Atemspenden",
+                  "Beatmung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Verhältnis Drücken:Beatmen"
+              },
+              {
+                "type": "input",
+                "correct_answer": "30 : 2",
+                "keywords": [
+                  "30:2"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "15 : 2 (Profis) / 30 : 2 (Laien)",
+                "keywords": [
+                  "15:2",
+                  "15 zu 2"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die '4 Hs' als reversible Ursachen des Kreislaufstillstands.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Zeile (Bedeutung + Maßnahme).",
+    "data": {
+      "table": {
+        "headers": [
+          "H",
+          "Bedeutung",
+          "Therapiemaßnahme"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "H 1"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypoxie",
+                "keywords": [
+                  "Sauerstoffmangel"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "O2-Gabe / Atemwegssicherung",
+                "keywords": [
+                  "Sauerstoff",
+                  "Beatmung"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "H 2"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypovolämie",
+                "keywords": [
+                  "Volumenmangel"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Volumensubstitution",
+                "keywords": [
+                  "Infusion",
+                  "Flüssigkeit"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_006",
+    "type": "tabelle_3spalten",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie zwei der 'HITS' als reversible Ursachen des Kreislaufstillstands.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung",
+          "Therapiemaßnahme"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "T"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Thromboembolie",
+                "keywords": [
+                  "Lungenembolie",
+                  "Infarkt"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Lysetherapie",
+                "keywords": [
+                  "Lyse",
+                  "Thrombolyse"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "S"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Spannungspneumothorax",
+                "keywords": [
+                  "Pneu"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Entlastungspunktion / Thoraxdrainage",
+                "keywords": [
+                  "Monaldipuktion",
+                  "Drainage"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_007",
+    "type": "tabelle_vergleich",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die beiden lebensgefährlichen Herzrhythmusstörungen.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Kammerflimmern",
+          "Asystolie"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Mechanische/Elektrische Aktion"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Unkoordinierte Kontraktionen",
+                "keywords": [
+                  "Flimmern",
+                  "chaotisch"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Vollständiges Aussetzen",
+                "keywords": [
+                  "keine",
+                  "Nulllinie"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Schockempfehlung durch AED"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ja (schockbar)",
+                "keywords": [
+                  "ja",
+                  "Schock"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nein (nicht schockbar)",
+                "keywords": [
+                  "nein",
+                  "kein"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_008",
+    "type": "tabelle_3spalten",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie das SAMPLER-Schema für die Notfallanamnese.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Buchstabe",
+          "Bedeutung",
+          "Beispielfrage / Inhalt"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "A"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Allergien",
+                "keywords": [
+                  "Unverträglichkeiten"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gegen Medikamente oder Insekten?",
+                "keywords": [
+                  "Allergiepass"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "M"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Medikamente",
+                "keywords": [
+                  "Dauermedikation"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gerinnungshemmer? Insulin?",
+                "keywords": [
+                  "ASS",
+                  "Pille"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "P"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Patientengeschichte",
+                "keywords": [
+                  "Vorerkrankungen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Operationen? Bekannte Leiden?",
+                "keywords": [
+                  "Diabetes",
+                  "Hypertonie"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_009",
+    "type": "tabelle_3spalten",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Benennen** und **beschreiben** Sie die drei Coping-Strategien.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Strategie",
+          "Beschreibung",
+          "Ziel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Instrumentelles Coping",
+                "keywords": [
+                  "problemorientiert"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Aktive Problemlösung",
+                "keywords": [
+                  "Handeln",
+                  "Lösung"
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Beseitigung des Stressors"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Emotionales Coping",
+                "keywords": [
+                  "emotionsorientiert"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Umgang mit Gefühlen",
+                "keywords": [
+                  "Entlastung",
+                  "Gefühle"
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Regulierung der Belastung"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_010",
+    "type": "tabelle_vergleich",
+    "topic": "stressmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie Eustress und Disstress.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Eustress",
+          "Disstress"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Wirkung"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Anspornend / beflügelnd",
+                "keywords": [
+                  "positiv",
+                  "motivierend"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Belastend / überfordernd",
+                "keywords": [
+                  "negativ",
+                  "schädlich"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Bewertung"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Herausforderung",
+                "keywords": [
+                  "bewältigbar"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Bedrohung / Verlust",
+                "keywords": [
+                  "Gefahr"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_011",
+    "type": "tabelle_3spalten",
+    "topic": "rahmenbedingungen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Anforderungen des G-BA Stufenmodells für die Notaufnahmen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Stufe",
+          "Bezeichnung",
+          "Anforderung Intensivbetten"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "1"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Basisnotfallversorgung",
+                "keywords": [
+                  "Basis"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "mind. 6 Betten",
+                "keywords": [
+                  "6"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "2"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Erweiterte Notfallversorgung",
+                "keywords": [
+                  "Erweitert"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "mind. 10 Betten",
+                "keywords": [
+                  "10"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "3"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Umfassende Notfallversorgung",
+                "keywords": [
+                  "Umfassend"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "mind. 20 Betten",
+                "keywords": [
+                  "20"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_012",
+    "type": "tabelle_3spalten",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Abkürzungen der Herzkranzgefäße den vollen Namen und das Versorgungsgebiet zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Abkürzung",
+          "Vollständiger Name",
+          "Haupt-Versorgungsgebiet"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "RIVA"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ramus interventricularis anterior",
+                "keywords": [
+                  "interventricularis"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Vorderwand",
+                "keywords": [
+                  "Vorderwand"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "RCX"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ramus circumflexus",
+                "keywords": [
+                  "circumflexus"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Seitenwand / Rückwand",
+                "keywords": [
+                  "hinten",
+                  "Seite"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "RCA"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Arteria coronaria dextra",
+                "keywords": [
+                  "rechte",
+                  "coronaria"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "rechtes Herz",
+                "keywords": [
+                  "rechts"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_013",
+    "type": "tabelle_3spalten",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die Schockformen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Schocktyp",
+          "Definition / Ursache",
+          "Leitsymptom / Besonderheit"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kardiogener Schock",
+                "keywords": [
+                  "Kardiogen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Akutes Pumpversagen",
+                "keywords": [
+                  "Herzinfarkt",
+                  "Pumpen"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Tachykardie + Hypotonie",
+                "keywords": [
+                  "Blässe",
+                  "Oligurie"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Distributiver Schock",
+                "keywords": [
+                  "Distributiv"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Vasodilatation / Fehlverteilung",
+                "keywords": [
+                  "Sepsis",
+                  "Anaphylaxie"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "warme, gerötete Haut (anfangs)",
+                "keywords": [
+                  "warm",
+                  "rot"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_014",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Maßnahmen bei ineffektivem Husten infolge Fremdkörperaspiration.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Altersgruppe",
+          "Manuelle Maßnahme 1",
+          "Manuelle Maßnahme 2"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Säugling (< 1 Jahr)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "5 Rückenschläge",
+                "keywords": [
+                  "Schläge"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "5 Thoraxkompressionen",
+                "keywords": [
+                  "Brustkorb"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Kind (> 1 Jahr)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "5 Rückenschläge",
+                "keywords": [
+                  "Schläge"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "5 Oberbauchkompressionen",
+                "keywords": [
+                  "Heimlich",
+                  "Oberbauch"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_tab_015",
+    "type": "tabelle_3spalten",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Details zur Herzinfarkt-Diagnostik.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Marker / Verfahren",
+          "Zeitpunkt / Zweck",
+          "Bedeutung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Troponin T / I",
+                "keywords": [
+                  "Troponin"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "hochspezifisch nach 3-4h",
+                "keywords": [
+                  "Stunden",
+                  "Blut"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Goldstandard Herzmuskelschaden",
+                "keywords": [
+                  "Spezifisch",
+                  "Infarkt"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "12-Kanal-EKG",
+                "keywords": [
+                  "EKG"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Unmittelbar / Screening",
+                "keywords": [
+                  "sofort"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nachweis ST-Hebung (STEMI)",
+                "keywords": [
+                  "STEMI",
+                  "Lokalisation"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_ft_001",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Pathophysiologie der Arteriosklerose und deren Bedeutung für die Entstehung einer Koronaren Herzkrankheit (KHK).",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Plaquebildung",
+        "Gefäßlumen",
+        "Minderdurchblutung",
+        "Ischämie",
+        "Sauerstoffbedarf"
+      ],
+      "correct_answer": "Arteriosklerose beginnt mit Fettablagerungen in den Gefäßwänden, die im Verlauf zu einer stabilen oder instabilen Plaquebildung führen. Diese Plaques verengen das Gefäßlumen und behindern den normalen Blutfluss zu den Zielorganen. Im Falle der Herzkranzgefäße entsteht so eine KHK, bei der ein Missverhältnis zwischen Sauerstoffangebot und Sauerstoffbedarf (Ischämie) vorliegt. Dies kann bei Belastung zu Angina-Pectoris-Beschwerden oder bei einem kompletten Verschluss zum Myokardinfarkt führen."
+    }
+  },
+  {
+    "q_id": "m6_ft_002",
+    "type": "freitext_box",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den strukturierten Ablauf der Basisreanimation bei Erwachsenen nach dem Schema 'Prüfen - Rufen - Drücken'.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Bewusstsein",
+        "Atmung",
+        "Notruf 112",
+        "Thoraxkompression",
+        "30:2"
+      ],
+      "correct_answer": "Zuerst wird die Sicherheit der Einsatzstelle geprüft, gefolgt von der Kontrolle des Bewusstseins durch lautes Ansprechen und Schütteln sowie der Kontrolle der Atmung für maximal 10 Sekunden. Liegt keine normale Atmung vor, muss umgehend der Notruf 112 abgesetzt und ein AED angefordert werden. Anschließend beginnt der Helfer mit 30 kräftigen Thoraxkompressionen in der Mitte des Brustkorbs bei einer Frequenz von 100-120/Min. Im Wechsel folgen zwei Atemspenden, wobei das Kompressions-Beatmungs-Verhältnis von 30:2 bis zum Eintreffen professioneller Hilfe beibehalten wird."
+    }
+  },
+  {
+    "q_id": "m6_ft_003",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die klinischen Unterschiede zwischen einer instabilen Angina Pectoris, einem NSTEMI und einem STEMI.",
+    "points": 6,
+    "data": {
+      "keywords": [
+        "ST-Hebung",
+        "Troponin",
+        "Herzmuskelnekrose",
+        "EKG-Befund",
+        "Labormarker"
+      ],
+      "correct_answer": "Die instabile Angina Pectoris zeigt klinische Symptome eines ACS, jedoch ohne Anstieg der herzspezifischen Labormarker (Troponin) und ohne dauerhafte ST-Hebungen im EKG. Beim NSTEMI liegen ebenfalls keine ST-Hebungen vor, es ist jedoch ein Anstieg des Troponins als Zeichen einer Herzmuskelnekrose nachweisbar. Der STEMI ist durch die charakteristische, persistierende ST-Strecken-Hebung im 12-Kanal-EKG und einen begleitenden Anstieg der Myokardmarker gekennzeichnet. Alle drei Formen erfordern eine rasche diagnostische Abklärung, wobei der STEMI die höchste zeitliche Dringlichkeit für eine Revaskularisation besitzt."
+    }
+  },
+  {
+    "q_id": "m6_ft_004",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum bei Kindern im Rahmen der Reanimation 5 Initialbeatmungen vor dem Beginn der Thoraxkompressionen durchgeführt werden.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "respiratorische Ursache",
+        "Hypoxie",
+        "Sauerstoffmangel",
+        "Atemstillstand",
+        "Pädiatrie"
+      ],
+      "correct_answer": "Im Gegensatz zu Erwachsenen, bei denen meist eine primär kardiale Ursache vorliegt, resultiert ein Kreislaufstillstand bei Kindern überwiegend aus respiratorischen Problemen. Dieser Sauerstoffmangel (Hypoxie) führt sekundär zum Herzstillstand, weshalb die Anreicherung des Blutes mit Sauerstoff oberste Priorität hat. Durch die 5 Initialbeatmungen wird versucht, die Hypoxie sofort zu bekämpfen und die Prognose des Kindes zu verbessern. Erst nach dieser Oxygenierung wird mit den Herzdruckmassagen zur Zirkulation des Restsauerstoffs fortgefahren."
+    }
+  },
+  {
+    "q_id": "m6_ft_005",
+    "type": "freitext_box",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie das Transaktionale Stressmodell nach Lazarus unter besonderer Berücksichtigung der Primär- und Sekundärbewertung.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Bewertungsprozess",
+        "Ressourcen",
+        "Bedrohung",
+        "Herausforderung",
+        "Coping"
+      ],
+      "correct_answer": "Nach Lazarus entsteht Stress nicht allein durch einen Reiz, sondern durch den individuellen kognitiven Bewertungsprozess einer Situation. In der Primärbewertung wird geprüft, ob ein Ereignis irrelevant, positiv oder als Stressor (Bedrohung, Schaden/Verlust oder Herausforderung) einzustufen ist. Die Sekundärbewertung analysiert parallel, ob die eigenen Ressourcen ausreichen, um die Situation zu bewältigen. Übersteigen die Anforderungen die verfügbaren Bewältigungsmöglichkeiten, wird die Situation als stressreich erlebt und Coping-Strategien werden aktiviert."
+    }
+  },
+  {
+    "q_id": "m6_ft_006",
+    "type": "freitext_box",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den physiologischen Blutfluss durch das Herz und benennen Sie die vier Phasen der Herzaktion.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Vorhöfe",
+        "Kammern",
+        "Segelklappen",
+        "Anspannungsphase",
+        "Austreibungsphase"
+      ],
+      "correct_answer": "Das sauerstoffarme Blut fließt über den rechten Vorhof und die Trikuspidalklappe in die rechte Kammer, von wo es in die Lunge gepumpt wird, während das sauerstoffreiche Blut über den linken Vorhof und die Mitralklappe in die linke Kammer gelangt. Die Herzaktion unterteilt sich in die Systole und Diastole mit insgesamt vier Phasen: Anspannungs- und Austreibungsphase sowie Entspannungs- und Füllungsphase. Während der Anspannungsphase bauen die Kammern Druck bei geschlossenen Klappen auf, bevor das Blut in der Austreibungsphase in die großen Gefäße ausgeworfen wird. In der Füllungsphase strömt das Blut schließlich aus den Vorhöfen in die entspannten Kammern zurück."
+    }
+  },
+  {
+    "q_id": "m6_ft_007",
+    "type": "freitext_box",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das ABCDE-Schema und dessen grundlegende Anwendung bei der Versorgung kritisch kranker Patienten.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Priorisierung",
+        "Airway",
+        "Breathing",
+        "Circulation",
+        "Treat first what kills first"
+      ],
+      "correct_answer": "Das ABCDE-Schema ist ein Diagnose- und Behandlungsinstrument zur systematischen Priorisierung lebensbedrohlicher Probleme nach dem Leitsatz 'Treat first, what kills first'. Es umfasst die Bereiche Airway (Atemwegssicherung), Breathing (Beatmung/Belüftung), Circulation (Kreislauf/Blutstillung), Disability (Neurologischer Status) und Exposure (Untersuchung/Umfeld). Jede Stufe wird nacheinander abgearbeitet, und festgestellte Störungen müssen sofort behandelt werden, bevor zur nächsten Stufe übergegangen wird. Ziel ist die rasche Identifikation und Abwendung einer unmittelbaren Lebensgefahr."
+    }
+  },
+  {
+    "q_id": "m6_ft_008",
+    "type": "freitext_box",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum das 10-für-10-Prinzip im Crew Resource Management (CRM) die Patientensicherheit in Notfallsituationen erhöht.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Situationsbewusstsein",
+        "Fixierungsfehler",
+        "Team-Kommunikation",
+        "Strukturierung",
+        "Entscheidungsfindung"
+      ],
+      "correct_answer": "Das Prinzip '10 Sekunden für 10 Minuten Plan' unterbricht kurzzeitig das oft hektische Notfallgeschehen, um das Situationsbewusstsein des gesamten Teams zu schärfen. In diesen 10 Sekunden wird der aktuelle Stand evaluiert, der nächste Behandlungsschritt gemeinsam festgelegt und potenzielle Gefahrenquellen identifiziert. Dies verhindert effektiv sogenannte Fixierungsfehler, bei denen sich Helfer in Details verlieren oder an falschen Diagnosen festhalten. Durch den gemeinsamen Plan wird die Teamperformance gesteigert und die Fehlerquote bei kritischen Entscheidungen massiv gesenkt."
+    }
+  },
+  {
+    "q_id": "m6_ft_009",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Faktoren der Virchow-Trias und deren klinische Bedeutung für die Entstehung einer Lungenembolie.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Endothelschaden",
+        "Stase",
+        "Hyperkoagulabilität",
+        "Thrombose",
+        "Rechtsherzbelastung"
+      ],
+      "correct_answer": "Die Virchow-Trias beschreibt die drei ursächlichen Faktoren für die Entstehung einer Thrombose: Veränderungen der Gefäßwand (Endothelschaden), eine verlangsamte Blutströmung (Stase) und eine veränderte Blutbeschaffenheit (erhöhte Gerinnungsneigung). Wenn sich ein solcher Thrombus, meist in den Beinvenen, ablöst, gelangt er als Embolus über das rechte Herz in die Lungenarterien. Dort verursacht er einen Gefäßverschluss, der zu einer akuten Rechtsherzbelastung und einer lebensgefährlichen Störung des Gasaustauschs führt. Dies stellt das Krankheitsbild der Lungenembolie dar."
+    }
+  },
+  {
+    "q_id": "m6_ft_010",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die wesentlichen Besonderheiten der Neugeborenen-Erstversorgung nach den NLS-Leitlinien.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Wärmeerhalt",
+        "verzögertes Abnabeln",
+        "Stimulation",
+        "3:1 Verhältnis",
+        "Initialbeatmung"
+      ],
+      "correct_answer": "Die Erstversorgung beginnt mit dem Trocknen, dem Wärmeerhalt und einer taktilen Stimulation, um die Spontanatmung anzuregen, wobei ein verzögertes Abnabeln von mindestens einer Minute angestrebt wird. Falls das Neugeborene nicht atmet, werden 5 Initialbeatmungen durchgeführt, um die Lunge zu entfalten und das Fruchtwasser zu verdrängen. Bei einer Herzfrequenz unter 60 bpm trotz suffizienter Belüftung beginnt die Reanimation in einem speziellen Verhältnis von 3 Kompressionen zu einer Beatmung. Da die Ursache beim Neugeborenen fast immer respiratorisch ist, steht die effektive Ventilation im Zentrum aller Maßnahmen."
+    }
+  },
+  {
+    "q_id": "m6_ft_011",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das korrekte Vorgehen bei einem Kind mit Fremdkörperaspiration, das während der Maßnahmen das Bewusstsein verliert.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "PBLS-Algorithmus",
+        "Atemwege öffnen",
+        "5 Beatmungsversuche",
+        "15:2",
+        "Mundinspektion"
+      ],
+      "correct_answer": "Sobald ein Kind mit Fremdkörperaspiration bewusstlos wird, muss es vorsichtig auf dem Boden abgelegt und umgehend der Notruf 112 verständigt werden. Das Vorgehen wechselt nun in den pädiatrischen Basisreanimations-Algorithmus (PBLS), beginnend mit dem Öffnen der Atemwege und 5 initialen Beatmungsversuchen. Danach folgen 15 Thoraxkompressionen im Wechsel mit 2 Beatmungen (bei Profis), wobei vor jeder Beatmung kurz in den Mund geschaut wird, ob der Fremdkörper sichtbar geworden ist. Blindes Auswischen oder wiederholte Inspektionen ohne Sicht sind zu vermeiden, um den Fremdkörper nicht tiefer zu schieben."
+    }
+  },
+  {
+    "q_id": "m6_ft_012",
+    "type": "freitext_box",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie, warum die Anwendung der 'Closed-Loop-Kommunikation' in kritischen Notfallsituationen essenziell für die Fehlervermeidung ist.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Rückbestätigung",
+        "Kommunikationsschleife",
+        "Empfänger",
+        "Sender",
+        "Missverständnisse"
+      ],
+      "correct_answer": "Die Closed-Loop-Kommunikation stellt sicher, dass Informationen und Arbeitsaufträge vom Empfänger nicht nur gehört, sondern auch korrekt verstanden wurden. Der Sender gibt eine klare Anweisung, der Empfänger wiederholt diese lautstark (Read-back), und der Sender quittiert die Korrektheit (Check-back). Dieser geschlossene Kreislauf verhindert fatale Fehler, wie beispielsweise die Verwechslung von Medikamentendosierungen oder die Nicht-Ausführung dringender Maßnahmen durch unklare Adressierung. In stressigen Situationen reduziert dieses Verfahren das Risiko von Informationsverlusten und Fehlinterpretationen erheblich."
+    }
+  },
+  {
+    "q_id": "m6_ft_013",
+    "type": "freitext_box",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Konzepte der '4 Hs' und 'HITS' als potenziell reversible Ursachen eines Herz-Kreislauf-Stillstands.",
+    "points": 6,
+    "data": {
+      "keywords": [
+        "Kausale Therapie",
+        "Hypoxie",
+        "Hypovolämie",
+        "Intoxikation",
+        "Spannungspneumothorax"
+      ],
+      "correct_answer": "Diese Akronyme dienen als Gedächtnisstütze, um während einer Reanimation behandelbare Ursachen systematisch auszuschließen. Die '4 Hs' stehen für Hypoxie (Sauerstoffmangel), Hypovolämie (Flüssigkeitsverlust), Hypo-/Hyperthermie sowie Hypo-/Hyperkaliämie (Elektrolytstörungen). 'HITS' ergänzt diese um die Herzbeuteltamponade, Intoxikation (Vergiftung), Thromboembolie (z.B. Lungenembolie) und den Spannungspneumothorax. Nur wenn diese zugrundeliegenden Ursachen zeitnah durch spezifische Maßnahmen wie Volumengabe, Punktion oder Lyse behoben werden, besteht eine realistische Chance auf ein dauerhaftes Überleben des Patienten."
+    }
+  },
+  {
+    "q_id": "m6_ft_014",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die typische klinische Symptomatik und die notwendigen diagnostischen Schritte bei Verdacht auf ein Akutes Koronarsyndrom (ACS).",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Retrosternalschmerz",
+        "Todesangst",
+        "12-Kanal-EKG",
+        "Troponin",
+        "Koronarangiografie"
+      ],
+      "correct_answer": "Typische Symptome sind ein akut auftretender, drückender Retrosternalschmerz mit Ausstrahlung in den linken Arm, Kiefer oder Oberbauch, oft begleitet von Kaltschweißigkeit, Atemnot und massiver Todesangst. Als erste diagnostische Maßnahme muss unmittelbar ein 12-Kanal-EKG geschrieben werden, um nach ST-Hebungen zu suchen, die einen STEMI anzeigen. Parallel erfolgt eine Blutentnahme zur Bestimmung herzspezifischer Marker wie Troponin T/I und CK-MB. Der Goldstandard zur definitiven Sicherung der Diagnose und gleichzeitigen Behandlung verengter Gefäße ist die zeitnahe Durchführung einer Koronarangiografie (Linksherzkatheter)."
+    }
+  },
+  {
+    "q_id": "m6_ft_015",
+    "type": "freitext_box",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die Unterschiede zwischen instrumentellem, emotionalem und bewertungsorientiertem Coping.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "Bewältigungsstrategien",
+        "Problemlösung",
+        "Emotionsregulation",
+        "Umdeutung",
+        "Lazarus"
+      ],
+      "correct_answer": "Instrumentelles Coping zielt direkt auf die Veränderung oder Beseitigung des Stressors ab, zum Beispiel durch Informationseinholung oder aktives Handeln zur Problemlösung. Emotionales Coping dient primär der Regulierung der durch den Stress ausgelösten negativen Gefühle, etwa durch Entspannungstechniken oder das Sprechen über Belastungen, ohne die Situation selbst zu ändern. Bewertungsorientiertes Coping beinhaltet die kognitive Neubewertung der Situation, indem eine Bedrohung beispielsweise als Lernchance oder Herausforderung umgedeutet wird. Effektives Stressmanagement nutzt oft eine Kombination dieser Strategien, je nach Kontrollierbarkeit der Stresssituation."
+    }
+  },
+  {
+    "q_id": "m6_zu_001",
+    "type": "zuordnung",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die klinischen Erscheinungsformen des Akuten Koronarsyndroms (ACS) den entsprechenden Befunden in EKG und Labordiagnostik zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "STEMI (ST-Elevation Myocardial Infarction)",
+        "B": "NSTEMI (Non-ST-Elevation Myocardial Infarction)",
+        "C": "Instabile Angina Pectoris"
+      },
+      "statements": [
+        {
+          "text": "Charakteristische ST-Streckenhebungen im 12-Kanal-EKG und Nachweis von Troponin-Erhöhung.",
+          "answer": "A"
+        },
+        {
+          "text": "Keine ST-Streckenhebungen im EKG (ggf. Senkungen), aber laborchemischer Nachweis einer Herzmuskelnekrose (Troponin positiv).",
+          "answer": "B"
+        },
+        {
+          "text": "Klinische ACS-Symptomatik ohne ST-Hebungen und ohne Anstieg der herzspezifischen Labormarker (Troponin negativ).",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_zu_002",
+    "type": "zuordnung",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Schockformen ihren typischen Ursachen bzw. Mechanismen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Kardiogener Schock",
+        "B": "Hypovolämischer Schock",
+        "C": "Anaphylaktischer Schock (Distributiv)",
+        "D": "Obstruktiver Schock"
+      },
+      "statements": [
+        {
+          "text": "Akutes Pumpversagen des Herzens, meist infolge eines massiven Myokardinfarkts.",
+          "answer": "A"
+        },
+        {
+          "text": "Verminderung der zirkulierenden Blutmenge durch massiven Blut- oder Flüssigkeitsverlust.",
+          "answer": "B"
+        },
+        {
+          "text": "Schwere allergische Reaktion mit massiver Vasodilatation und Fehlverteilung des Volumens.",
+          "answer": "C"
+        },
+        {
+          "text": "Mechanische Behinderung des Blutstroms, z.B. durch Lungenembolie oder Spannungspneumothorax.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_zu_003",
+    "type": "zuordnung",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Herzklappen ihrer korrekten anatomischen Position und ihrem Klappentyp zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Mitralklappe",
+        "B": "Trikuspidalklappe",
+        "C": "Aortenklappe",
+        "D": "Pulmonalklappe"
+      },
+      "statements": [
+        {
+          "text": "Segelklappe zwischen linkem Vorhof und linker Kammer.",
+          "answer": "A"
+        },
+        {
+          "text": "Segelklappe zwischen rechtem Vorhof und rechter Kammer.",
+          "answer": "B"
+        },
+        {
+          "text": "Taschenklappe zwischen linker Kammer und der Hauptschlagader.",
+          "answer": "C"
+        },
+        {
+          "text": "Taschenklappe zwischen rechter Kammer und dem Lungengefäßstamm.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_zu_004",
+    "type": "zuordnung",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die spezifischen Reanimationsvorgaben den jeweiligen Altersgruppen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Erwachsene",
+        "B": "Kind (PBLS)",
+        "C": "Neugeborenes (NLS)"
+      },
+      "statements": [
+        {
+          "text": "Start mit Herzdruckmassage, Kompressions-Beatmungs-Verhältnis 30:2, Drucktiefe 5-6 cm.",
+          "answer": "A"
+        },
+        {
+          "text": "Start mit 5 Initialbeatmungen, Verhältnis 15:2 (für Fachpersonal), Drucktiefe ca. 1/3 des Thoraxdurchmessers.",
+          "answer": "B"
+        },
+        {
+          "text": "Verzögertes Abnabeln, Wärmemanagement, Kompressions-Beatmungs-Verhältnis 3:1.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_zu_005",
+    "type": "zuordnung",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Formen der Stressbewältigung (Coping) den praktischen Beispielen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Instrumentelles Coping",
+        "B": "Emotionales Coping",
+        "C": "Bewertungsorientiertes Coping"
+      },
+      "statements": [
+        {
+          "text": "Einholen von fachlichen Informationen und aktives Handeln zur Beseitigung der Stressursache.",
+          "answer": "A"
+        },
+        {
+          "text": "Anwendung von Entspannungstechniken (z.B. 4-7-11 Methode) zur Regulation der Belastungsgefühle.",
+          "answer": "B"
+        },
+        {
+          "text": "Kognitive Umdeutung einer bedrohlichen Situation in eine lösbare Herausforderung oder Lernchance.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Begriffe des ABCDE-Schemas zur systematischen Patienteneinschätzung.",
+    "points": 2,
+    "data": {
+      "list_label": "ABCDE-Schema",
+      "given_items": [
+        "A - Airway (Atemweg)",
+        "B - Breathing (Belüftung)",
+        "C - Circulation (Kreislauf)"
+      ],
+      "missing_items": [
+        "D - Disability (Neurologisches Defizit)",
+        "E - Exposure (Exposition / Umfeld)"
+      ],
+      "all_valid_missing": [
+        "D - Disability",
+        "Disability",
+        "Beeinträchtigung",
+        "neurologischer Status",
+        "neurologisches Defizit",
+        "E - Exposure",
+        "Exposure",
+        "Exposition",
+        "Umfeld",
+        "Environment",
+        "Untersuchung"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die zwei weiteren '4Hs' als potenzielle reversible Ursachen des Kreislaufstillstands.",
+    "points": 2,
+    "data": {
+      "list_label": "Die 4Hs",
+      "given_items": [
+        "Hypoxie",
+        "Hypovolämie"
+      ],
+      "missing_items": [
+        "Hypo- / Hyperkaliämie",
+        "Hypo- / Hyperthermie"
+      ],
+      "all_valid_missing": [
+        "Hypokaliämie",
+        "Hyperkaliämie",
+        "Elektrolytstörung",
+        "Hypothermie",
+        "Hyperthermie",
+        "Temperatur"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Begriffe des HITS-Schemas.",
+    "points": 2,
+    "data": {
+      "list_label": "HITS-Schema",
+      "given_items": [
+        "Herzbeuteltamponade",
+        "Intoxikation"
+      ],
+      "missing_items": [
+        "Thromboembolie",
+        "Spannungspneumothorax"
+      ],
+      "all_valid_missing": [
+        "Thromboembolie",
+        "Lungenembolie",
+        "LAE",
+        "Herzinfarkt",
+        "Spannungspneumothorax",
+        "Spannungspneu",
+        "Pneumothorax"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden drei Elemente der SAMPLER-Anamnese.",
+    "points": 3,
+    "data": {
+      "list_label": "SAMPLER-Schema",
+      "given_items": [
+        "S - Symptome",
+        "A - Allergien",
+        "M - Medikamente",
+        "P - Patientengeschichte (Vorerkrankungen)"
+      ],
+      "missing_items": [
+        "L - Letzte Mahlzeit",
+        "E - Ereignis",
+        "R - Risikofaktoren"
+      ],
+      "all_valid_missing": [
+        "Last meal",
+        "Letzte Mahlzeit",
+        "Letztes Essen",
+        "Events",
+        "Ereignis",
+        "Vorfall",
+        "Risk factors",
+        "Risikofaktoren"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Schritte innerhalb der Rettungskette.",
+    "points": 2,
+    "data": {
+      "list_label": "Glieder der Rettungskette",
+      "given_items": [
+        "Notruf (112)"
+      ],
+      "missing_items": [
+        "Erste Hilfe (Basismaßnahmen)",
+        "Rettungsdienst (Qualifizierte Hilfe)"
+      ],
+      "all_valid_missing": [
+        "Erste Hilfe",
+        "Sofortmaßnahmen",
+        "Basismaßnahmen",
+        "Rettungsdienst",
+        "Krankenhaus",
+        "Klinik",
+        "professionelle Hilfe"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'Akutes Koronarsyndrom' (ACS) und **nennen** Sie die drei klinischen Erscheinungsformen.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition ACS",
+      "definition_correct": "Das Akute Koronarsyndrom ist ein Sammelbegriff für die lebensbedrohlichen Phasen der koronaren Herzkrankheit, die durch eine kritische Minderdurchblutung des Herzmuskels (Ischämie) gekennzeichnet sind.",
+      "definition_keywords": [
+        "Sammelbegriff",
+        "lebensbedrohlich",
+        "KHK",
+        "Minderdurchblutung",
+        "Herzmuskel"
+      ],
+      "definition_points": 3,
+      "examples_label": "Formen des ACS",
+      "examples_count": 3,
+      "correct_examples": [
+        "Instabile Angina Pectoris",
+        "NSTEMI (Nicht-ST-Hebungsinfarkt)",
+        "STEMI (ST-Hebungsinfarkt)"
+      ],
+      "all_valid_examples": [
+        "Instabile Angina Pectoris",
+        "instabile AP",
+        "NSTEMI",
+        "Nicht-ST-Hebung-Myokardinfarkt",
+        "STEMI",
+        "ST-Hebungsinfarkt",
+        "Myokardinfarkt"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m6_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'Crew Resource Management' (CRM) und **nennen** Sie drei zentrale Leitsätze/Prinzipien.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition CRM",
+      "definition_correct": "Unter Crew Resource Management versteht man ein ursprünglich aus der Luftfahrt stammendes Schulungskonzept zur Verbesserung der Teamperformance und zum effektiven Fehlermanagement in kritischen Situationen.",
+      "definition_keywords": [
+        "Schulungskonzept",
+        "Teamperformance",
+        "Luftfahrt",
+        "Fehlermanagement",
+        "Kommunikation"
+      ],
+      "definition_points": 3,
+      "examples_label": "Leitsätze / Prinzipien",
+      "examples_count": 3,
+      "correct_examples": [
+        "10-für-10 Prinzip (10 Sekunden für 10 Minuten)",
+        "Closed-Loop-Kommunikation",
+        "Hilfe frühzeitig anfordern"
+      ],
+      "all_valid_examples": [
+        "10-für-10 Prinzip",
+        "10 Sekunden für 10 Minuten Plan",
+        "Closed-Loop-Kommunikation",
+        "Hilfe anfordern",
+        "Fixierungsfehler vermeiden",
+        "Teamleader ohne aktive Handlungen",
+        "Situationsbewusstsein"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m6_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie die 'Glasgow Coma Scale' (GCS) und **nennen** Sie die drei Kategorien der Bewertung.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition GCS",
+      "definition_correct": "Die Glasgow Coma Scale ist ein klinisches Punktesystem zur standardisierten Einschätzung der Bewusstseinslage eines Patienten nach einem Trauma oder bei neurologischen Notfällen.",
+      "definition_keywords": [
+        "Punktesystem",
+        "Einschätzung",
+        "Bewusstseinslage",
+        "Neurologie",
+        "SHT"
+      ],
+      "definition_points": 3,
+      "examples_label": "Bewertungskategorien",
+      "examples_count": 3,
+      "correct_examples": [
+        "Augenöffnung",
+        "Verbale Antwort (Äußerung)",
+        "Motorische Reaktion"
+      ],
+      "all_valid_examples": [
+        "Augenöffnung",
+        "verbale Antwort",
+        "verbale Reaktion",
+        "motorische Reaktion",
+        "Motorik",
+        "Sprechen"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m6_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie 'Posttraumatische Belastungsstörung' (PTBS) im Notfallkontext und **nennen** Sie die drei Hauptsymptomgruppen.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition PTBS",
+      "definition_correct": "Eine Posttraumatische Belastungsstörung ist eine verzögerte psychische Reaktion auf ein extrem belastendes, traumatisches Ereignis, das die üblichen Bewältigungsstrategien einer Person überfordert.",
+      "definition_keywords": [
+        "Reaktion",
+        "Trauma",
+        "Ereignis",
+        "Bewältigung",
+        "verzögert"
+      ],
+      "definition_points": 3,
+      "examples_label": "Symptomgruppen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Intrusionen (ungewolltes Wiedererleben/Flashbacks)",
+        "Vermeidungsverhalten",
+        "Hyperarousal (Übererregung)"
+      ],
+      "all_valid_examples": [
+        "Intrusionen",
+        "Wiedererleben",
+        "Flashbacks",
+        "Vermeidung",
+        "Vermeidungsverhalten",
+        "sozialer Rückzug",
+        "Hyperarousal",
+        "Übererregung",
+        "Schlafstörungen",
+        "Konzentrationsstörungen"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m6_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'Garantenstellung' und **nennen** Sie drei daraus resultierende Verpflichtungen für Pflegekräfte.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Garantenstellung",
+      "definition_correct": "Die Garantenstellung bezeichnet die rechtliche Pflicht einer Person (Garant), aufgrund ihrer besonderen beruflichen Position oder Vereinbarung aktiv zu handeln, um eine drohende Gefahr von einem Schutzgut (z.B. dem Patienten) abzuwenden.",
+      "definition_keywords": [
+        "Rechtliche Pflicht",
+        "Handeln",
+        "Gefahr abwenden",
+        "Position",
+        "Schutzgut"
+      ],
+      "definition_points": 3,
+      "examples_label": "Konsequenzen / Pflichten",
+      "examples_count": 3,
+      "correct_examples": [
+        "Pflicht zur aktiven Schadensabwehr",
+        "Handeln nach aktuellem Wissensstand (Pflegestandards)",
+        "Überwachungs- und Aufsichtspflicht"
+      ],
+      "all_valid_answers": [
+        "Schadensabwehr",
+        "Pflicht zum Handeln",
+        "Adäquate Pflege",
+        "aktuelle Wissensstandards",
+        "Aufsichtspflicht",
+        "Dokumentationspflicht",
+        "Sorgfaltspflicht"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m6_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Basisreanimation (BLS) beim Erwachsenen gemäß den Leitlinien korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Herzdruckmassage erfolgt mit einer Frequenz von 100-120/Min.",
+          "correct": true
+        },
+        {
+          "label": "Die Atemkontrolle sollte mindestens 15-20 Sekunden dauern.",
+          "correct": false
+        },
+        {
+          "label": "Die Kompressionstiefe liegt idealerweise zwischen 5 und 6 cm.",
+          "correct": true
+        },
+        {
+          "label": "Ein AED darf erst nach 5 Zyklen CPR (ca. 2 Minuten) angeschlossen werden.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Atemkontrolle sollte mindestens 15-20 Sekunden dauern.",
+          "text": "Dies ist falsch, da die Atemkontrolle maximal 10 Sekunden dauern darf, um den Start der lebensnotwendigen Kompressionen nicht unnötig zu verzögern."
+        },
+        {
+          "option": "Ein AED darf erst nach 5 Zyklen CPR angeschlossen werden.",
+          "text": "Dies ist falsch. Gemäß dem Algorithmus 'Prüfen-Rufen-Drücken' sollte ein AED sofort eingesetzt werden, sobald er verfügbar ist, um schockbare Rhythmen frühzeitig zu behandeln."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Maßnahmen zur Akutversorgung bei Verdacht auf Myokardinfarkt gehören.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Schreiben eines 12-Kanal-EKGs zur Differenzierung (STEMI vs. NSTEMI).",
+          "correct": true
+        },
+        {
+          "label": "Lagerung mit tiefem Oberkörper (Schocklage), um das Herz zu entlasten.",
+          "correct": false
+        },
+        {
+          "label": "Kontinuierliches Monitoring der Vitalparameter.",
+          "correct": true
+        },
+        {
+          "label": "Aufforderung an den Patienten, zur Schmerzlinderung tief einzuatmen und umherzugehen.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Lagerung mit tiefem Oberkörper (Schocklage).",
+          "text": "Dies ist falsch. Bei kardialen Notfällen ist die Oberkörperhochlagerung (Herz-Bett-Lagerung) indiziert, um die Vorlast zu senken und die Atmung zu erleichtern."
+        },
+        {
+          "option": "Aufforderung umherzugehen.",
+          "text": "Dies ist falsch. Körperliche Belastung erhöht den Sauerstoffbedarf des Myokards massiv, was das Missverhältnis zum Angebot verschlimmert und die Infarktzone vergrößern kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur pädiatrischen Reanimation (PBLS) korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Reanimation beginnt beim Kind üblicherweise mit 5 Initialbeatmungen.",
+          "correct": true
+        },
+        {
+          "label": "Das Standardverhältnis für medizinisches Fachpersonal beträgt 15:2.",
+          "correct": true
+        },
+        {
+          "label": "Bei Säuglingen muss der Kopf maximal nach hinten überstreckt werden.",
+          "correct": false
+        },
+        {
+          "label": "Eine Herzdruckmassage beim Neugeborenen erfolgt im Verhältnis 30:2.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Die Reanimation beginnt beim Kind üblicherweise mit 5 Initialbeatmungen.",
+          "text": "Dies ist korrekt, da Kindernotfälle meist respiratorischer Ursache sind und die Oxygenierung somit vorrangig vor der Zirkulation behandelt wird."
+        },
+        {
+          "option": "Bei Säuglingen muss der Kopf maximal nach hinten überstreckt werden.",
+          "text": "Dies ist falsch. Bei Säuglingen ist die Neutralposition (Schnüffelstellung) einzunehmen, da eine Überstreckung die Atemwege anatomisch bedingt verlegen kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "herz_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Anatomie und Physiologie des Herzens korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Die Mitralklappe ist die Segelklappe zwischen linkem Vorhof und linker Kammer.",
+          "correct": true
+        },
+        {
+          "label": "Der rechte Vorhof nimmt das sauerstoffreiche Blut aus der Lunge auf.",
+          "correct": false
+        },
+        {
+          "label": "In der Anspannungsphase der Systole sind alle vier Herzklappen geschlossen.",
+          "correct": true
+        },
+        {
+          "label": "Die Koronararterien werden primär während der Austreibungsphase (Systole) durchblutet.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Der rechte Vorhof nimmt das sauerstoffreiche Blut aus der Lunge auf.",
+          "text": "Dies ist falsch. Der rechte Vorhof nimmt das sauerstoffarme Blut aus dem Körperkreislauf auf; das sauerstoffreiche Blut gelangt in den linken Vorhof."
+        },
+        {
+          "option": "Die Koronararterien werden primär während der Austreibungsphase durchblutet.",
+          "text": "Dies ist falsch. Die Koronardurchblutung findet überwiegend in der Diastole (Entspannungs- und Füllungsphase) statt, da in der Systole die Gefäße durch die Muskelkontraktion komprimiert werden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "stressmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zu Coping-Strategien in akuten Belastungssituationen korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Instrumentelles Coping zielt auf die aktive Veränderung der Stressquelle ab.",
+          "correct": true
+        },
+        {
+          "label": "Die 4-7-11-Atemtechnik ist eine Form des emotionsorientierten Copings.",
+          "correct": true
+        },
+        {
+          "label": "Bewertungsorientiertes Coping ist in Notfällen grundsätzlich kontraindiziert.",
+          "correct": false
+        },
+        {
+          "label": "Perfektionismus dient als wirksame Ressource zur Stressreduktion.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Instrumentelles Coping zielt auf die aktive Veränderung der Stressquelle ab.",
+          "text": "Dies ist korrekt. Es handelt sich um ein problemorientiertes Handeln, wie z.B. das Befolgen eines Algorithmus, um die kritische Situation zu lösen."
+        },
+        {
+          "option": "Perfektionismus dient als wirksame Ressource zur Stressreduktion.",
+          "text": "Dies ist falsch. Perfektionismus ist ein persönlicher Stressverstärker (Antreiber), der den inneren Druck erhöht und die Stressreaktion verschlimmern kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_extra_001",
+    "type": "zuordnung",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Punktwerte der Glasgow Coma Scale (GCS) den entsprechenden Reaktionen in der Kategorie 'Motorik' zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "6 Punkte",
+        "B": "5 Punkte",
+        "C": "4 Punkte",
+        "D": "1 Punkt"
+      },
+      "statements": [
+        {
+          "text": "Befolgt Aufforderungen.",
+          "answer": "A"
+        },
+        {
+          "text": "Gezielte Abwehrbewegungen bei Schmerzreiz.",
+          "answer": "B"
+        },
+        {
+          "text": "Ungezielte Abwehrbewegungen bei Schmerzreiz.",
+          "answer": "C"
+        },
+        {
+          "text": "Keine motorische Reaktion.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_extra_002",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die prozentuale Körperoberfläche nach der Neuner-Regel bei Erwachsenen und Kleinkindern.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Körperregion",
+          "Erwachsener (%)",
+          "Kleinkind / Säugling (%)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Kopf"
+              },
+              {
+                "type": "input",
+                "correct_answer": "9 %",
+                "keywords": [
+                  "9"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "18 %",
+                "keywords": [
+                  "18"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Ein Bein (gesamt)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "18 %",
+                "keywords": [
+                  "18"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 14 %",
+                "keywords": [
+                  "14",
+                  "weniger"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_extra_003",
+    "type": "freitext_box",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Bedeutung der Kürzel DNR und DNI im klinischen Alltag und deren Verbindlichkeit im Notfall.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Do Not Resuscitate",
+        "Do Not Intubate",
+        "Patientenverfügung",
+        "Wiederbelebung",
+        "ärztliche Rücksprache"
+      ],
+      "correct_answer": "DNR steht für 'Do Not Resuscitate' (Nicht wiederbeleben) und DNI für 'Do Not Intubate' (Nicht intubieren). Diese Anweisungen basieren meist auf einer Patientenverfügung und sollten idealerweise vor einem Notfall mit dem ärztlichen Personal abgeklärt sein. In einer akuten, lebensbedrohlichen Situation ohne klare Dokumentation wird im Zweifel für das Leben entschieden, da oft keine Zeit zur Prüfung der rechtlichen Lage bleibt."
+    }
+  },
+  {
+    "q_id": "m6_extra_004",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier wesentliche Ausstattungsmerkmale oder Geräte, die in einem Schockraum zur Versorgung Schwerstverletzter vorhanden sein müssen.",
+    "list_label": "Schockraum-Ausstattung",
+    "count": 4,
+    "correct_answers": [
+      "Beatmungsgerät (Respirator)",
+      "Monitoring (EKG, SpO2, invasive RR-Messung)",
+      "Röntgengerät oder CT-Zugang",
+      "Defibrillator / Notfallwagen"
+    ],
+    "all_valid_answers": [
+      "Beatmungsgerät",
+      "Monitoring",
+      "Defibrillator",
+      "Sonografie",
+      "CT",
+      "Absaugung",
+      "ZVK-Sets",
+      "Thoraxdrainagen",
+      "Wärmemanagement",
+      "Infusionspumpen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Merkmal."
+  },
+  {
+    "q_id": "m6_extra_005",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei einem vorliegenden Kammerflimmern handelt es sich um einen schockbaren Rhythmus, während die pulslose elektrische Aktivität (PEA) nicht defibrilliert wird.",
+    "answer": "richtig",
+    "explanation": "Kammerflimmern und pulslose ventrikuläre Tachykardien sind schockbar. Asystolie und PEA sind nicht-schockbare Rhythmen, bei denen nur die CPR und Medikamentengabe erfolgen.",
+    "source_hint": "M 6.4 - Basismaßnahmen / Rhythmen"
+  },
+  {
+    "q_id": "m6_extra_006",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie das Konzept des 'verzögerten Abnabelns' bei Neugeborenen und nennen Sie den empfohlenen Zeitrahmen.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Plazentablut",
+        "Sauerstoffversorgung",
+        "1 Minute",
+        "Eisenreserven",
+        "Lungenbelüftung"
+      ],
+      "correct_answer": "Verzögertes Abnabeln bedeutet, dass die Nabelschnur bei gesunden Neugeborenen frühestens nach einer Minute geklemmt wird. Dies ermöglicht den Übertritt von zusätzlichem Blut aus der Plazenta zum Kind, was die Eisenreserven erhöht und den Übergang zur Lungenatmung stabilisiert. Erst nach der ersten Belüftung der Lunge ist der Kreislauf ausreichend umgestellt."
+    }
+  },
+  {
+    "q_id": "m6_extra_007",
+    "type": "nennen_liste",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die drei Schritte der 4-7-11-Atemmethode zur akuten Stressregulation.",
+    "list_label": "4-7-11 Methode",
+    "count": 3,
+    "correct_answers": [
+      "4 Sekunden lang einatmen",
+      "7 Sekunden lang ausatmen",
+      "Die Übung für 11 Minuten durchführen"
+    ],
+    "all_valid_answers": [
+      "4 Sek ein",
+      "7 Sek aus",
+      "11 Minuten Dauer"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Schritt."
+  },
+  {
+    "q_id": "m6_extra_008",
+    "type": "zuordnung",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Abkürzungen der Merkschemata ihren korrekten Inhalten zu.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "DMS-Kontrolle",
+        "B": "PECH-Schema"
+      },
+      "statements": [
+        {
+          "text": "Überprüfung von Durchblutung, Motorik und Sensibilität nach Extremitätentrauma.",
+          "answer": "A"
+        },
+        {
+          "text": "Erstmaßnahmen bei Sportverletzungen: Pause, Eis, Compression, Hochlagern.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_extra_009",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie, warum das Kompressions-Beatmungs-Verhältnis beim Neugeborenen (NLS) 3:1 beträgt, während es beim Kind (PBLS) bei 15:2 liegt.",
+    "points": 5,
+    "data": {
+      "keywords": [
+        "respiratorische Ursache",
+        "Oxygenierung",
+        "Fruchtwasserverdrängung",
+        "Lungenentfaltung",
+        "Zirkulation"
+      ],
+      "correct_answer": "Beim Neugeborenen ist die Ursache für eine Bradykardie fast ausschließlich ein Belüftungsproblem. Das 3:1 Verhältnis betont die Ventilation massiv, um Fruchtwasser zu verdrängen und die Lunge zu entfalten. Beim älteren Kind (PBLS) liegt zwar meist auch eine respiratorische Ursache vor, jedoch ist das Blutvolumen größer und eine höhere Frequenz an Kompressionen (15:2) ist notwendig, um den Kreislauf nach der Oxygenierung suffizient aufrechtzuerhalten."
+    }
+  },
+  {
+    "q_id": "m6_extra_010",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie drei Warnsignale oder Symptome, die auf ein Schütteltrauma bei einem Säugling hinweisen können.",
+    "list_label": "Symptome Schütteltrauma",
+    "count": 3,
+    "correct_answers": [
+      "Blässe und Erbrechen",
+      "Krampfanfälle",
+      "Atemstörungen / Apnoen"
+    ],
+    "all_valid_answers": [
+      "Blässe",
+      "Erbrechen",
+      "Krampfanfälle",
+      "Atemnot",
+      "Trinkschwäche",
+      "vorgewölbte Fontanelle",
+      "Apathie"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Symptom."
+  },
+  {
+    "q_id": "m6_extra_011",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei Verdacht auf eine Vergiftung durch Haushaltsreiniger bei Kindern sollte sofort das Auslösen von Erbrechen provoziert werden, um die Noxe zu entfernen.",
+    "answer": "falsch",
+    "explanation": "Das Auslösen von Erbrechen ist bei ätzenden Substanzen (Reiniger) oder schäumenden Mitteln streng kontraindiziert, da dies zu schweren Verätzungen der Speiseröhre oder Aspiration führen kann.",
+    "source_hint": "M 6.4 - Kindernotfälle (Intoxikation)"
+  },
+  {
+    "q_id": "m6_extra_012",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie das pathophysiologische Prinzip des Missverhältnisses zwischen Sauerstoffangebot und Sauerstoffbedarf am Herzen bei einer KHK.",
+    "points": 4,
+    "data": {
+      "keywords": [
+        "Ischämie",
+        "Koronarstenose",
+        "Belastung",
+        "Sauerstoffschuld",
+        "Myokard"
+      ],
+      "correct_answer": "Das Sauerstoffangebot wird durch den Blutfluss in den Koronararterien bestimmt, während der Bedarf durch Herzfrequenz und Kontraktionskraft steigt. Bei einer KHK ist das Angebot durch Stenosen (Engstellen) limitiert. Übersteigt der Bedarf (z.B. bei körperlicher Belastung) dieses limitierte Angebot, entsteht eine Ischämie, die klinisch als Angina Pectoris wahrgenommen wird."
+    }
+  },
+  {
+    "q_id": "m6_extra_013",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Fehler in der Notfallmedizin entstehen laut CRM-Konzept zu etwa 70 % durch menschliche Faktoren (Human Factors) und mangelnde Kommunikation.",
+    "answer": "richtig",
+    "explanation": "Dies ist der Hintergrund für die Einführung von CRM; nur ca. 30 % der Fehler sind rein technischer Natur.",
+    "source_hint": "M 6.1 - Rahmenbedingungen (CRM)"
+  },
+  {
+    "q_id": "m6_extra_014",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die Indikation für die stabile Seitenlage sowie die zwei wichtigsten Ziele dieser Lagerungsform.",
+    "list_label": "Stabile Seitenlage",
+    "count": 3,
+    "correct_answers": [
+      "Indikation: Bewusstlosigkeit bei vorhandener normaler Atmung",
+      "Ziel 1: Atemwege freihalten (Zurücksinken der Zunge verhindern)",
+      "Ziel 2: Aspiration verhindern (Ablaufen von Erbrochenem/Blut)"
+    ],
+    "all_valid_answers": [
+      "Bewusstlosigkeit mit Atmung",
+      "Atemwege frei",
+      "Aspiration vermeiden",
+      "Erstickungsschutz"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Nennung."
+  },
+  {
+    "q_id": "m6_extra_015",
+    "type": "tabelle_vergleich",
+    "topic": "rahmenbedingungen",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Finanzierungskomponenten eines Krankenhauses im System der dualen Finanzierung.",
+    "points": 4,
+    "scoring_info": "2 Punkte pro Zeile.",
+    "data": {
+      "table": {
+        "headers": [
+          "Kostenart",
+          "Kostenträger",
+          "Finanzierungsweg"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Investitionskosten (z.B. Gebäude, Großgeräte)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Die Bundesländer",
+                "keywords": [
+                  "Land",
+                  "Länder",
+                  "Staat"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fördermittel / Steuergelder",
+                "keywords": [
+                  "Förderung",
+                  "Steuer"
+                ]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "text",
+                "text": "Betriebskosten (z.B. Personal, Material)"
+              },
+              {
+                "type": "input",
+                "correct_answer": "Krankenkassen",
+                "keywords": [
+                  "GKV",
+                  "Versicherung"
+                ]
+              },
+              {
+                "type": "input",
+                "correct_answer": "DRG-Fallpauschalen",
+                "keywords": [
+                  "DRG",
+                  "Fallpauschale"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "fall_id": "m6_fall_01",
+    "title": "Akutes Koronarsyndrom in der Notaufnahme",
+    "topics_covered": ["herzkrankheiten", "bls_erwachsene", "rahmenbedingungen"],
+    "patient": {
+      "name": "Jürgen Müller",
+      "alter": 58,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit Ehefrau in einem Einfamilienhaus",
+      "beruf": "Bankkaufmann"
+    },
+    "setting": "Notaufnahme",
+    "pflegekraft": "Sarah (Pflegefachkraft ZNA)",
+    "paragraphs": [
+      "Herr Müller stellt sich fußläufig in der Notaufnahme vor und klagt über seit 30 Minuten bestehende, massive retrosternale Schmerzen mit Ausstrahlung in den linken Arm und den Unterkiefer. Er wirkt kaltschweißig und äußert Todesangst. Die Pflegekraft Sarah übernimmt die erste Einschätzung nach dem ABCDE-Schema.",
+      "In der A- und B-Beurteilung zeigt sich der Atemweg frei, bei einer Atemfrequenz von 22/Min. unter O2-Gabe. Die C-Evaluation ergibt einen Blutdruck von 160/95 mmHg und einen tachykarden Puls von 105/Min.. Sofort wird ein 12-Kanal-Ruhe-EKG geschrieben, welches deutliche ST-Streckenhebungen in den Ableitungen II, III und aVF zeigt.",
+      "Nach Rücksprache mit dem Diensthabenden Kardiologen wird Herr Müller zur weiteren Stabilisierung in den Schockraum verlegt. Das Team bereitet die invasive Revaskularisationstherapie (PTCA/Stent) vor. Während der Vorbereitung achtet Sarah auf eine klare Aufgabenverteilung und nutzt konsequent die 'Closed-Loop-Kommunikation', um Übermittlungsfehler bei der Medikamentengabe (z. B. ASS und Heparin) zu vermeiden.",
+      "Die Übergabe an das Team des Herzkatheterlabors erfolgt strukturiert nach dem ISBAR-Schema, um alle relevanten Hintergrundinformationen (SAMPLER) und durchgeführten Maßnahmen lückenlos zu kommunizieren."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Akutes Koronarsyndrom (STEMI der Hinterwand)"
+        },
+        {
+          "label": "Maßnahmen",
+          "value": "EKG-Monitoring, O2-Gabe, PTCA-Vorbereitung, medikamentöse Antikoagulation"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Müller",
+      "ERKRANKUNG": "STEMI",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m6_fall_02",
+    "title": "Reanimation auf der kardiologischen Station",
+    "topics_covered": ["bls_erwachsene", "herzkrankheiten", "rahmenbedingungen"],
+    "patient": {
+      "name": "Helga Schmidt",
+      "alter": 74,
+      "geschlecht": "w",
+      "wohnsituation": "Alleinstehend, seit 2 Tagen stationär",
+      "beruf": "Rentnerin (ehem. Lehrerin)"
+    },
+    "setting": "Station",
+    "pflegekraft": "Markus (Pflegefachmann)",
+    "paragraphs": [
+      "Während des Rundgangs findet Markus Frau Schmidt leblos in ihrem Bett vor. Er reagiert sofort nach dem Schema 'Prüfen - Rufen - Drücken'. Auf lautes Ansprechen und Schütteln erfolgt keine Reaktion, die Atemkontrolle (Sehen, Hören, Fühlen) für 10 Sekunden ergibt keine normale Atmung.",
+      "Markus setzt über die hausinterne Notrufnummer den Alarm für das Rea-Team ab und beginnt unmittelbar mit der Herzdruckmassage in der Mitte des Brustkorbs (Drucktiefe 5-6 cm, Frequenz 100-120/Min.). Eine Kollegin bringt den Notfallkoffer inklusive AED und Reanimationsbrett.",
+      "Nach Aufkleben der Elektroden analysiert der AED den Rhythmus und empfiehlt einen Schock (Kammerflimmern). Das Team führt die CPR im Verhältnis 30:2 fort. Während der Reanimation werden systematisch reversible Ursachen nach dem 4Hs & HITS-Schema abgeklärt, wobei insbesondere auf eine mögliche Hypoxie oder Thromboembolie geachtet wird.",
+      "Nach erfolgreichem Return of Spontaneous Circulation (ROSC) übernimmt der Notarzt die Patientin. Markus übergibt die Situation strukturiert nach dem SBAR-Schema (Situation, Background, Assessment, Recommendation)."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Ereignis",
+          "value": "Herz-Kreislauf-Stillstand bei Kammerflimmern"
+        },
+        {
+          "label": "Therapie",
+          "value": "Erfolgreiche Defibrillation, CPR 30:2, Verlegung auf Intensivstation"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Schmidt",
+      "ERKRANKUNG": "Kammerflimmern",
+      "PFLEGEKRAFT": "Markus"
+    }
+  },
+  {
+    "fall_id": "m6_fall_03",
+    "title": "Pädiatrischer Notfall: Fremdkörperaspiration",
+    "topics_covered": ["paediatrie_notfall", "stressmanagement"],
+    "patient": {
+      "name": "Lukas",
+      "alter": 2,
+      "geschlecht": "m",
+      "wohnsituation": "lebt bei den Eltern",
+      "beruf": "Kleinkind"
+    },
+    "setting": "Öffentlichkeit",
+    "pflegekraft": "Elena (Pflegefachkraft in der Nähe)",
+    "paragraphs": [
+      "Auf einem Spielplatz verschluckt sich der 2-jährige Lukas an einer Weintraube. Er beginnt plötzlich stark zu husten und greift sich an den Hals. Elena, die privat vor Ort ist, eilt zur Hilfe. Sie stellt fest, dass der Husten ineffektiv wird: Lukas gibt keine Laute mehr von sich, die Lippen verfärben sich bläulich (Zyanose).",
+      "Elena weist die umstehende Mutter an, sofort den Notruf 112 zu wählen. Sie führt bei Lukas 5 Rückenschläge zwischen die Schulterblätter durch. Da der Fremdkörper nicht gelöst wird, folgen 5 kräftige Oberbauchkompressionen (Heimlich-Manöver).",
+      "Plötzlich wird Lukas schlaff und verliert das Bewusstsein. Elena legt ihn vorsichtig auf den Boden und beginnt sofort mit den pädiatrischen Basismaßnahmen (PBLS). Sie öffnet die Atemwege in Neutralposition und gibt 5 initiale Beatmungsversuche, gefolgt von Thoraxkompressionen im Verhältnis 15:2.",
+      "Die Situation ist für die Eltern und Elena hochgradig stressbelastend. Elena versucht trotz der eigenen Anspannung strukturiert zu handeln, um der Hilflosigkeit entgegenzuwirken. Nach Eintreffen des Rettungsdienstes wird eine psychosoziale Betreuung für die Eltern initiiert."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Notfall",
+          "value": "Fremdkörperaspiration mit konsekutiver Bewusstlosigkeit"
+        },
+        {
+          "label": "Maßnahmen",
+          "value": "Manuelle Manöver, Einleitung PBLS, Fremdkörperentfernung durch RD"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Lukas",
+      "ERKRANKUNG": "Fremdkörperaspiration",
+      "PFLEGEKRAFT": "Elena"
+    }
+  },
+  {
+    "fall_id": "m6_fall_04",
+    "title": "Neugeborenen-Erstversorgung im Kreißsaal",
+    "topics_covered": ["paediatrie_notfall", "rahmenbedingungen"],
+    "patient": {
+      "name": "Neugeborenes Baby B.",
+      "alter": 0,
+      "geschlecht": "w",
+      "wohnsituation": "Gerade entbunden",
+      "beruf": "Säugling"
+    },
+    "setting": "Kreißsaal",
+    "pflegekraft": "Julia (Fachkinderkrankenpflegerin)",
+    "paragraphs": [
+      "Unmittelbar nach der Geburt im Kreißsaal zeigt das Neugeborene keine Eigenatmung und einen schlaffen Muskeltonus. Das Team beginnt sofort mit dem Newborn Life Support (NLS) Algorithmus. Während die Hebamme das verzögerte Abnabeln (mind. 1 Minute) sicherstellt, sorgt Julia für den Wärmeerhalt durch Trocknen und Stimulieren unter dem Wärmestrahler.",
+      "Da das Kind weiterhin apnoisch bleibt, führt Julia 5 Initialbeatmungen mit einem Beatmungsbeutel durch, um die Lunge zu entfalten. Die anschließende Beurteilung ergibt eine Herzfrequenz von lediglich 50 Schlägen pro Minute.",
+      "Gemäß den Leitlinien beginnt das Team nun mit der Herz-Lungen-Wiederbelebung im speziellen Neugeborenen-Verhältnis von 3 Kompressionen zu 1 Beatmung (3:1), da die Ursache primär respiratorisch ist. Die interdisziplinäre Zusammenarbeit zwischen Hebamme, Geburtshelfer und Julia verläuft nach CRM-Prinzipien hochkonzentriert.",
+      "Nach etwa zwei Minuten stabilisiert sich die Herzfrequenz auf über 100/Min. und das Baby beginnt unregelmäßig zu schnappen. Das Wärmemanagement und die kontinuierliche Überwachung der Vitalparameter (Sättigung/Puls) bleiben oberste Priorität bis zur Verlegung auf die Neonatologie."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Postnatale Anpassungsstörung, primäre Apnoe"
+        },
+        {
+          "label": "Therapie",
+          "value": "NLS-Algorithmus, Initialbeatmungen, CPR 3:1"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Baby B.",
+      "ERKRANKUNG": "Anpassungsstörung",
+      "PFLEGEKRAFT": "Julia"
+    }
+  },
+  {
+    "fall_id": "m6_fall_05",
+    "title": "Atypische Symptomatik: Herzinfarkt bei einer Frau",
+    "topics_covered": ["herzkrankheiten", "bls_erwachsene", "stressmanagement"],
+    "patient": {
+      "name": "Monika Weber",
+      "alter": 65,
+      "geschlecht": "w",
+      "wohnsituation": "lebt allein in Wohnung",
+      "beruf": "ehem. Buchhalterin"
+    },
+    "setting": "Station",
+    "pflegekraft": "Christian (Pflegefachmann)",
+    "paragraphs": [
+      "Frau Weber, die wegen einer leichten Infektion auf der internistischen Station liegt, klagt gegenüber Christian über plötzlich aufgetretene Übelkeit und drückende Schmerzen im Oberbauch. Da sie keinen typischen Brustschmerz angibt, vermutet Christian zunächst eine Magenverstimmung.",
+      "Erst bei einer erneuten Kontrolle bemerkt Christian eine zunehmende Blässe und Kurzatmigkeit (Dyspnoe) der Patientin. Er erinnert sich an die Besonderheiten der atypischen Infarktsymptomatik bei Frauen ('Frauenherz'). Sofort veranlasst er ein 12-Kanal-EKG und eine Blutentnahme zur Bestimmung des Troponins.",
+      "Das EKG zeigt keine ST-Hebungen, jedoch ist der Troponin-Wert massiv erhöht, was die Diagnose eines NSTEMI sichert. Frau Weber wird umgehend zur Koronarangiografie angemeldet. Christian fühlt sich belastet, da er die Symptome erst verzögert richtig gedeutet hat.",
+      "Nach dem Einsatz findet eine strukturierte Nachbesprechung im Team statt, um das Stresserleben zu verarbeiten (Coping). Christian nutzt das Gespräch als bewertungsorientierte Strategie, um aus der Situation für die Zukunft zu lernen und seine Kompetenz bei atypischen Notfällen zu stärken."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "NSTEMI bei atypischer Symptomatik (Oberbauchbeschwerden)"
+        },
+        {
+          "label": "Verlauf",
+          "value": "Troponin-Anstieg laborchemisch gesichert, Verlegung zur Koronarintervention"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Weber",
+      "ERKRANKUNG": "NSTEMI",
+      "PFLEGEKRAFT": "Christian"
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Beschreiben** Sie die Einschätzung von [PATIENT] nach dem ABCDE-Schema basierend auf den im Fall genannten Vitalparametern.",
+    "points": 5,
+    "data": {
+      "box_label": "ABCDE-Beurteilung [PATIENT]",
+      "correct_answer": "In der Kategorie A (Airway) und B (Breathing) ist der Atemweg frei, jedoch liegt eine erhöhte Atemfrequenz von 22/Min. vor. Die Kategorie C (Circulation) zeigt eine hypertensive Stoffwechsellage (160/95 mmHg) und eine Tachykardie (105/Min.), was zusammen mit dem EKG-Befund auf ein akutes kardiogenes Ereignis hindeutet. Die neurologische Situation (D - Disability) und die äußere Untersuchung (E - Exposure) müssen noch abschließend evaluiert werden, wobei der kalte Schweiß und die Todesangst bereits Hinweise auf eine vegetative Stressreaktion geben.",
+      "keywords": ["Atemfrequenz", "Tachykardie", "Hypertonie", "ST-Hebung", "Vegetativum"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m6_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "statement": "Aufgrund der ST-Hebungen in den Ableitungen II, III und aVF im EKG von [PATIENT] handelt es sich eindeutig um einen NSTEMI der Hinterwand.",
+    "answer": "falsch",
+    "explanation": "ST-Hebungen im EKG sind das definierende Merkmal eines STEMI (ST-Elevation Myocardial Infarction); ein NSTEMI zeigt laborchemische Infarktzeichen ohne diese spezifischen EKG-Hebungen.",
+    "source_hint": "ACS Diagnostik (EKG)"
+  },
+  {
+    "q_id": "m6_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Nennen** Sie drei herzspezifische Blutuntersuchungen, die [PFLEGEKRAFT] zur Bestätigung der Diagnose bei [PATIENT] veranlassen muss.",
+    "list_label": "Labordiagnostik ACS",
+    "count": 3,
+    "correct_answers": ["Troponin T (oder I)", "CK (Creatinkinase)", "CK-MB"],
+    "all_valid_answers": ["Troponin", "Troponin T", "Troponin I", "CK", "Creatinkinase", "CK-MB", "Kreatinkinase"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Labormarker."
+  },
+  {
+    "q_id": "m6_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction_select": "**Entscheiden** Sie, welche pflegerischen Sofortmaßnahmen [PFLEGEKRAFT] für [PATIENT] einleiten muss.",
+    "instruction_justify": "**Begründen** Sie eine Ihrer Entscheidungen unter Berücksichtigung der Diagnose.",
+    "points": 4,
+    "data": {
+      "options": [
+        { "label": "Oberkörperhochlagerung zur Herzentlastung.", "correct": true },
+        { "label": "Gabe von Sauerstoff via Maske.", "correct": true },
+        { "label": "Vorbereitung einer Schocklage (Beine hoch).", "correct": false },
+        { "label": "Aufforderung zur körperlichen Ruhe.", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Vorbereitung einer Schocklage.",
+          "text": "Die Schocklage ist beim Verdacht auf ein kardiogenes Problem (STEMI) kontraindiziert, da sie den venösen Rückstrom erhöht und das bereits belastete Herz von [PATIENT] weiter überfordern würde."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Erläutern** Sie anhand eines Beispiels aus der Medikamentenvorbereitung im Schockraum, wie [PFLEGEKRAFT] die 'Closed-Loop-Kommunikation' anwendet.",
+    "points": 4,
+    "data": {
+      "box_label": "Closed-Loop-Kommunikation im Schockraum",
+      "correct_answer": "Der Arzt gibt Sarah eine klare Anweisung (z.B. 'Sarah, gib 5000 Einheiten Heparin i.v.'). Sarah wiederholt diese Anweisung lautstark zur Bestätigung ('Ich gebe 5000 Einheiten Heparin i.v.'). Der Arzt quittiert dies ('Korrekt' / 'Check'), bevor das Medikament appliziert wird. Dies verhindert Verwechslungen und Dosierungsfehler in der Stresssituation.",
+      "keywords": ["Anweisung", "Wiederholung", "Rückbestätigung", "Quittierung", "Fehlervermeidung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Ordnen** Sie die Informationen aus dem ISBAR-Übergabeprotokoll für [PATIENT] den richtigen Kategorien zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "I": "Identification",
+        "S": "Situation",
+        "B": "Background",
+        "A": "Assessment"
+      },
+      "statements": [
+        { "text": "Jürgen Müller, 58 Jahre alt, Bankkaufmann.", "answer": "I" },
+        { "text": "Massive retrosternale Schmerzen seit 30 Min, STEMI im EKG.", "answer": "S" },
+        { "text": "Blutdruck 160/95 mmHg, tachykard, AF 22/Min.", "answer": "A" },
+        { "text": "Raucher, Stress im Beruf, lebt mit Ehefrau.", "answer": "B" }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "statement": "Nach dem Manchester Triage System (MTS) müsste [PATIENT] aufgrund des kardiologischen Schmerzes und der Zyanose-Gefahr in die Kategorie 'Gelb' eingestuft werden.",
+    "answer": "falsch",
+    "explanation": "Kardiologischer Schmerz bei gleichzeitigem V.a. STEMI und vitaler Bedrohung führt in der Regel zur Einstufung 'Rot' (sofort) oder mindestens 'Orange' (sehr dringend), da eine maximale Wartezeit von 0-10 Minuten zulässig ist.",
+    "source_hint": "MTS Triage-Diagramm"
+  },
+  {
+    "q_id": "m6_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Nennen** Sie drei typische 'Folgeschäden oder Komplikationen', die bei [PATIENT] in den nächsten Stunden auftreten könnten.",
+    "list_label": "Infarktkomplikationen",
+    "count": 3,
+    "correct_answers": ["Herzrhythmusstörungen (z.B. Kammerflimmern)", "Kardiogener Schock", "Linksherzinsuffizienz (Lungenödem)"],
+    "all_valid_answers": ["Herzrhythmusstörungen", "Kammerflimmern", "Asystolie", "Kardiogener Schock", "Pumpversagen", "Linksherzinsuffizienz", "Lungenödem", "Myokardruptur", "Herzwandaneurysma"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Komplikation."
+  },
+  {
+    "q_id": "m6_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Erläutern** Sie das pathophysiologische Ziel der Revaskularisationstherapie (PTCA/Stent), die bei [PATIENT] durchgeführt werden soll.",
+    "points": 4,
+    "data": {
+      "box_label": "Ziel der PTCA bei [PATIENT]",
+      "correct_answer": "Das Ziel der PTCA ist die mechanische Wiedereröffnung der durch einen Thrombus oder Plaques verschlossenen Koronararterie, um die Durchblutung des ischämischen Myokards wiederherzustellen. Dadurch wird das Missverhältnis zwischen Sauerstoffangebot und -bedarf behoben, um ein weiteres Absterben von Herzmuskelzellen zu verhindern ('Time is Muscle'). Ein Stent dient dabei als Gefäßstütze, um das Gefäß dauerhaft offen zu halten.",
+      "keywords": ["Wiedereröffnung", "Koronararterie", "Durchblutung", "Ischämie", "Stent"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_01"],
+    "instruction": "**Ergänzen** Sie die fehlenden Informationen für die ISBAR-Übergabe von [PATIENT] an das Katheterlabor.",
+    "points": 2,
+    "data": {
+      "list_label": "ISBAR-Details",
+      "given_items": [
+        "S (Situation): Hinterwand-STEMI",
+        "B (Background): Berufsstress, SAMPLER erhoben"
+      ],
+      "missing_items": [
+        "A (Assessment): RR 160/95, Puls 105, AF 22",
+        "R (Recommendation): Sofortige PTCA notwendig"
+      ],
+      "all_valid_missing": [
+        "A", "Assessment", "Vitalwerte", "RR", "Puls", "Status",
+        "R", "Recommendation", "Empfehlung", "PTCA", "Herzkatheter", "Intervention"
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Beschreiben** Sie die ersten drei entscheidenden Maßnahmen, die [PFLEGEKRAFT] unmittelbar nach dem Auffinden von [PATIENT] durchgeführt hat.",
+    "points": 4,
+    "data": {
+      "box_label": "Erste Maßnahmen Markus",
+      "correct_answer": "Zuerst erfolgte das 'Prüfen' des Bewusstseins durch lautes Ansprechen und Schütteln sowie die Kontrolle der Atmung für max. 10 Sekunden. Da keine normale Atmung vorlag, wurde das 'Rufen' (hausinterner Notruf für das Rea-Team) initiiert. Unmittelbar danach begann Markus mit dem 'Drücken', also der Herzdruckmassage in der Mitte des Brustkorbs mit einer Frequenz von 100-120/Min.",
+      "keywords": ["Prüfen", "Rufen", "Drücken", "Atemkontrolle", "Notruf"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "statement": "Der AED empfiehlt bei [PATIENT] einen Schock, da das vorliegende Kammerflimmern zu den nicht-schockbaren Rhythmen gehört.",
+    "answer": "falsch",
+    "explanation": "Kammerflimmern ist ein schockbarer Rhythmus. Der AED empfiehlt einen Schock, um die unkoordinierten elektrischen Aktionen zu beenden.",
+    "source_hint": "Gefährliche Rhythmen"
+  },
+  {
+    "q_id": "m6_fall_nl_003",
+    "type": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Nennen** Sie die vier reversiblen Ursachen der 'HITS'-Gruppe, die das Team bei [PATIENT] während der Reanimation abklären muss.",
+    "list_label": "HITS-Schema",
+    "count": 4,
+    "correct_answers": ["Herzbeuteltamponade", "Intoxikation", "Thromboembolie (Lungenembolie/Infarkt)", "Spannungspneumothorax"],
+    "all_valid_answers": ["Herzbeuteltamponade", "Intoxikation", "Vergiftung", "Thromboembolie", "Lungenembolie", "LAE", "Herzinfarkt", "Spannungspneumothorax", "Spannungspneu", "Pneumothorax"],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Ursache."
+  },
+  {
+    "q_id": "m6_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Führen** Sie die SBAR-Übergabe für [PATIENT] an den Notarzt durch, basierend auf dem im Fall beschriebenen Verlauf.",
+    "points": 5,
+    "data": {
+      "box_label": "SBAR-Übergabe [PATIENT]",
+      "correct_answer": "Situation: [PATIENT] wurde leblos im Bett aufgefunden. Background: Bekannte Kardiopathie, stationär seit 2 Tagen. Assessment: Herz-Kreislauf-Stillstand mit Kammerflimmern, 1 Schock durch AED abgegeben, CPR 30:2 für ca. 5 Minuten, danach ROSC mit eigenem Puls. Recommendation: Intensivpflichtige Überwachung und Ursachenabklärung notwendig.",
+      "keywords": ["Situation", "Background", "Assessment", "Recommendation", "ROSC"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m6_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction_select": "**Entscheiden** Sie, welche Parameter für die Herzdruckmassage bei [PATIENT] korrekt angewendet wurden.",
+    "instruction_justify": "**Begründen** Sie, warum die korrekte Entlastung des Brustkorbs essenziell ist.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Drucktiefe von 5 bis 6 cm.", "correct": true },
+        { "label": "Frequenz von 80 Kompressionen pro Minute.", "correct": false },
+        { "label": "Druckpunkt in der Mitte des Brustkorbs.", "correct": true },
+        { "label": "Vollständige Entlastung zwischen den Kompressionen.", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Vollständige Entlastung.",
+          "text": "Die vollständige Entlastung ermöglicht dem Herzen, sich in der Diastole wieder mit Blut zu füllen, was die Effektivität der Zirkulation bei der nächsten Kompression massiv erhöht."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Nennen** Sie drei Materialien/Geräte vom Notfallwagen, die Markus und sein Team bei der Reanimation von [PATIENT] eingesetzt haben oder bereitstellen mussten.",
+    "list_label": "Material Notfallwagen",
+    "count": 3,
+    "correct_answers": ["AED (Defibrillator)", "Reanimationsbrett", "Beatmungsbeutel mit Maske"],
+    "all_valid_answers": ["AED", "Defibrillator", "Reanimationsbrett", "Beatmungsbeutel", "Ambu-Beutel", "Absaugpumpe", "Guedel-Tubus", "Larynxtubus", "Sauerstoffflasche"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Material."
+  },
+  {
+    "q_id": "m6_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "bls_erwachsene",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "statement": "Markus durfte die Reanimation erst beginnen, nachdem er einen Guedel-Tubus zur Atemwegssicherung eingeführt hatte.",
+    "answer": "falsch",
+    "explanation": "Die Reanimation beginnt unmittelbar nach dem Rufen mit der Herzdruckmassage. Hilfsmittel zur Atemwegssicherung werden erst im weiteren Verlauf von Helfern bereitgestellt, um die 'No-flow-Zeit' zu minimieren.",
+    "source_hint": "Basisreanimation Step-by-Step"
+  },
+  {
+    "q_id": "m6_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Ordnen** Sie die Maßnahmen bei [PATIENT] den Gliedern der Rettungskette zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "G1": "Früherkennung / Notruf",
+        "G2": "Frühzeitige HLW",
+        "G3": "Frühzeitige Defibrillation",
+        "G4": "Postreanimationsphase"
+      },
+      "statements": [
+        { "text": "Markus erkennt Bewusstlosigkeit und wählt die Notrufnummer.", "answer": "G1" },
+        { "text": "Beginn der Thoraxkompressionen 30:2.", "answer": "G2" },
+        { "text": "Einsatz des AED und Schockabgabe bei Kammerflimmern.", "answer": "G3" },
+        { "text": "Verlegung von [PATIENT] auf die Intensivstation nach ROSC.", "answer": "G4" }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "bls_erwachsene",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Ergänzen** Sie die zwei weiteren '4Hs' als reversible Ursachen, die Markus bei [PATIENT] theoretisch in Betracht ziehen muss.",
+    "points": 2,
+    "data": {
+      "list_label": "Die 4Hs",
+      "given_items": [
+        "Hypoxie",
+        "Hypovolämie"
+      ],
+      "missing_items": [
+        "Hypo- / Hyperkaliämie",
+        "Hypo- / Hyperthermie"
+      ],
+      "all_valid_missing": ["Hypokaliämie", "Hyperkaliämie", "Elektrolytstörung", "Hypothermie", "Hyperthermie", "Temperaturstörung"]
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "bls_erwachsene",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_02"],
+    "instruction": "**Erläutern** Sie die Bedeutung des Begriffs 'ROSC' im Kontext der Reanimation von [PATIENT].",
+    "points": 3,
+    "data": {
+      "box_label": "ROSC bei [PATIENT]",
+      "correct_answer": "ROSC steht für 'Return of Spontaneous Circulation' und bezeichnet den Zeitpunkt, an dem [PATIENT] wieder einen tastbaren Eigenpuls hat. In diesem Fall war die Reanimation erfolgreich, woraufhin Markus die Maßnahmen pausieren und die Patientin an den Notarzt übergeben konnte, um in die intensivmedizinische Nachsorge überzugehen.",
+      "keywords": ["Eigenpuls", "Spontankreislauf", "Reanimationserfolg", "Zirkulation"],
+      "min_rows": 3
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Beschreiben** Sie, anhand welcher Kriterien Elena festgestellt hat, dass das Husten von [Lukas] ineffektiv wurde.",
+    "points": 4,
+    "data": {
+      "box_label": "Beurteilung Husten [Lukas]",
+      "correct_answer": "Elena erkannte das ineffektive Husten daran, dass Lukas keine Laute mehr von sich gab (Stimmlosigkeit) und seine Lippen eine bläuliche Verfärbung (Zyanose) zeigten. Bei effektivem Husten hätte er noch laut gehustet, weinen oder auf Ansprache antworten können. Die Atemnot war somit kritisch und erforderte manuelle Interventionen.",
+      "keywords": ["Stimmlosigkeit", "Zyanose", "Zunehmende Atemnot", "kein Weinen"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Nennen** Sie die zwei manuellen Maßnahmen, die Elena bei [Lukas] durchgeführt hat, solange er noch bei Bewusstsein war.",
+    "list_label": "Maßnahmen bei ineffektivem Husten (> 1 Jahr)",
+    "count": 2,
+    "correct_answers": ["5 Rückenschläge", "5 Oberbauchkompressionen (Heimlich-Manöver)"],
+    "all_valid_answers": ["5 Rückenschläge", "Rückenschläge", "Heimlich-Manöver", "Heimlich", "5 Oberbauchkompressionen", "abdominelle Kompressionen"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m6_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "statement": "Nachdem [Lukas] das Bewusstsein verlor, brachte Elena ihn in die stabile Seitenlage, um die Atemwege freizuhalten.",
+    "answer": "falsch",
+    "explanation": "Bei Bewusstlosigkeit infolge einer Aspiration muss unmittelbar mit dem PBLS-Algorithmus begonnen werden. Elena legte ihn auf den Rücken, öffnete die Atemwege und gab 5 initiale Beatmungsversuche.",
+    "source_hint": "Aspiration Algorithm (Bewusstlos)"
+  },
+  {
+    "q_id": "m6_fall_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction_select": "**Entscheiden** Sie, welche PBLS-Maßnahmen Elena bei [Lukas] korrekt anwenden muss.",
+    "instruction_justify": "**Begründen** Sie das gewählte Kompressions-Beatmungs-Verhältnis.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Kopf in Neutralposition bringen (Säuglings-Anatomie).", "correct": false },
+        { "label": "5 initiale Beatmungsversuche.", "correct": true },
+        { "label": "Drucktiefe von 1/3 des Thoraxdurchmessers.", "correct": true },
+        { "label": "Kompressions-Beatmungs-Verhältnis von 15:2.", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Verhältnis 15:2.",
+          "text": "Da Elena eine Pflegefachkraft (Profi) ist, wendet sie das pädiatrische Verhältnis 15:2 an, um der primär respiratorischen Ursache und dem erhöhten Oxygenierungsbedarf bei Kindern gerecht zu werden."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Erläutern** Sie, welche Regeln der psychosozialen Akuthilfe Elena im Umgang mit der Mutter von [Lukas] anwenden sollte.",
+    "points": 4,
+    "data": {
+      "box_label": "Umgang mit Eltern im Notfall",
+      "correct_answer": "Elena sollte Ruhe ausstrahlen (Präsenz zeigen) und der Mutter kurz erklären, was sie tut, um die Orientierungslosigkeit zu mindern. Durch die Einbindung der Mutter (Notruf wählen lassen) wird deren Hilflosigkeit reduziert (Handeln hilft gegen Ohnmacht). Elena sollte die Mutter nach dem Eintreffen der Retter abschirmen und für psychosoziale Unterstützung sorgen.",
+      "keywords": ["Präsenz", "Erklären", "Einbinden", "Abschirmen", "Hilflosigkeit mindern"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_zu_003",
+    "type": "zuordnung",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Ordnen** Sie die korrekten Maßnahmen bei Fremdkörperaspiration den Altersgruppen zu.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "S": "Säugling (< 1 Jahr)",
+        "K": "Kind (> 1 Jahr)"
+      },
+      "statements": [
+        { "text": "5 Rückenschläge gefolgt von 5 Thoraxkompressionen (Bruststöße).", "answer": "S" },
+        { "text": "5 Rückenschläge gefolgt von 5 Oberbauchkompressionen (Heimlich).", "answer": "K" }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Nennen** Sie zwei Warnsignale, die bei [Lukas] nach dem Ausstoßen des Fremdkörpers eine sofortige ärztliche Kontrolle erforderlich machen.",
+    "list_label": "Nachsorge Aspiration",
+    "count": 2,
+    "correct_answers": ["Anhaltender Hustenreiz", "Schluckbeschwerden", "Heiserkeit"],
+    "all_valid_answers": ["Husten", "Schluckbeschwerden", "Heiserkeit", "Stridor", "Fieber", "Lungenentzündung", "Atemnot", "Dyspnoe"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro Signal."
+  },
+  {
+    "q_id": "m6_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "statement": "Während der Reanimation von [Lukas] darf Elena den Mundraum blind auswischen, um eventuelle Reste der Weintraube zu entfernen.",
+    "answer": "falsch",
+    "explanation": "Ein blindes Auswischen des Mundes ist streng verboten, da der Fremdkörper dadurch tiefer in die Atemwege geschoben werden könnte. Nur sichtbare Fremdkörper dürfen vorsichtig entfernt werden.",
+    "source_hint": "Aspiration Algorithm (Caveat)"
+  },
+  {
+    "q_id": "m6_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Beschreiben** Sie eine akute Entspannungstechnik, die Elena nach dem belastenden Einsatz zur eigenen Stressregulation anwenden könnte.",
+    "points": 3,
+    "data": {
+      "box_label": "Selbsthilfe für Elena",
+      "correct_answer": "Elena könnte die 4-7-11-Methode anwenden: 4 Sekunden lang tief durch die Nase einatmen, 7 Sekunden lang durch den Mund ausatmen und dies über 11 Minuten fortführen. Diese Technik aktiviert den Parasympathikus und hilft, das Stressniveau nach der Notfallsituation wieder zu senken.",
+      "keywords": ["4-7-11 Methode", "Atmung", "Einatmen", "Ausatmen", "Entspannung"],
+      "min_rows": 3
+    }
+  },
+  {
+    "q_id": "m6_fall_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_03"],
+    "instruction": "**Ergänzen** Sie die fehlenden Schritte der Reanimation, nachdem [Lukas] bewusstlos geworden ist.",
+    "points": 3,
+    "data": {
+      "list_label": "PBLS bei [Lukas]",
+      "given_items": [
+        "Patienten auf dem Boden ablegen",
+        "Atemwege öffnen"
+      ],
+      "missing_items": [
+        "5 initiale Beatmungsversuche",
+        "15 Thoraxkompressionen",
+        "Mund kurz inspizieren vor Beatmung"
+      ],
+      "all_valid_missing": ["Beatmung", "Druckmassage", "Kompressionen", "Mundinspektion", "Fremdkörpersuche"]
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_010",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Beschreiben** Sie den strukturierten NLS-Algorithmus, den [PFLEGEKRAFT] und das Team bei [PATIENT] unmittelbar nach der Geburt angewendet haben.",
+    "points": 5,
+    "data": {
+      "box_label": "NLS-Algorithmus bei [PATIENT]",
+      "correct_answer": "Der NLS-Algorithmus begann mit dem verzögerten Abnabeln und dem sofortigen Wärmeerhalt durch Trocknen und Stimulieren. Da [PATIENT] keine Eigenatmung zeigte, wurden 5 Initialbeatmungen durchgeführt, um die Lunge zu entfalten. Nach der anschließenden Evaluation von Herzfrequenz, Tonus und Atmung wurde bei einer HF unter 60/Min. mit der HLW im Verhältnis 3:1 begonnen. Die kontinuierliche Überwachung der Sättigung und der Herzfrequenz begleitete den gesamten Prozess bis zur Stabilisierung.",
+      "keywords": ["verzögertes Abnabeln", "Trocknen", "Stimulieren", "5 Initialbeatmungen", "3:1 Verhältnis"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_011",
+    "type": "freitext_box",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] bei [PATIENT] das Abnabeln um mindestens eine Minute verzögert hat.",
+    "points": 4,
+    "data": {
+      "box_label": "Begründung verzögertes Abnabeln",
+      "correct_answer": "Das verzögerte Abnabeln ermöglicht den Übertritt von plazentarem Blut zu [PATIENT], was die Eisenreserven erhöht und den Übergang zur Lungenatmung physiologisch stabilisiert. Erst wenn die Lunge belüftet ist, findet die vollständige Kreislaufumstellung statt. Gemäß den ERC-Leitlinien 2021 ist dies ein wesentlicher Schritt der Erstversorgung, sofern keine unmittelbare lebensbedrohliche Blutung vorliegt.",
+      "keywords": ["Plazentablut", "Eisenreserven", "Kreislaufumstellung", "Lungenatmung", "Stabilität"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Nennen** Sie die drei Vitalparameter, die [PFLEGEKRAFT] bei [PATIENT] zur Beurteilung des Zustands heranziehen musste.",
+    "list_label": "Beurteilungskriterien NLS",
+    "count": 3,
+    "correct_answers": ["Muskeltonus", "Atmung", "Herzfrequenz"],
+    "all_valid_answers": ["Tonus", "Muskeltonus", "Atmung", "Eigenatmung", "Herzfrequenz", "HF", "Puls"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Parameter."
+  },
+  {
+    "q_id": "m6_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "statement": "Bei der Reanimation von [PATIENT] wurde ein Kompressions-Beatmungs-Verhältnis von 15:2 gewählt, da dies der Standard für medizinisches Fachpersonal bei Kindern ist.",
+    "answer": "falsch",
+    "explanation": "Im Newborn Life Support (NLS) wird beim Neugeborenen ein Verhältnis von 3:1 angewendet, da die Ursache des Stillstands fast immer respiratorisch ist und die Belüftung Vorrang hat. 15:2 gilt für Kinder jenseits der Neugeborenenperiode.",
+    "source_hint": "NLS Leitlinien vs. PBLS"
+  },
+  {
+    "q_id": "m6_fall_rf_008",
+    "type": "richtig_falsch",
+    "topic": "paediatrie_notfall",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "statement": "[PFLEGEKRAFT] sorgte für den Wärmeerhalt, indem sie [PATIENT] unter einen Wärmestrahler legte und abtrocknete.",
+    "answer": "richtig",
+    "explanation": "Trocknen und Wärmen sind essenzielle initiale Schritte bei der Neugeborenen-Erstversorgung, um eine Hypothermie zu vermeiden.",
+    "source_hint": "M 6.4 - Neugeborenenreanimation (NLS)"
+  },
+  {
+    "q_id": "m6_fall_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Beatmung von [PATIENT] während der NLS-Maßnahmen korrekt sind.",
+    "instruction_justify": "**Begründen** Sie eine Ihrer Entscheidungen.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Es wurden 5 initiale Beatmungen zur Lungenentfaltung durchgeführt.", "correct": true },
+        { "label": "Der Beatmungsdruck bei reifen Neugeborenen sollte ca. 30 cm H2O betragen.", "correct": true },
+        { "label": "Bei fehlendem Brustkorb-Heben muss sofort intubiert werden.", "correct": false },
+        { "label": "Initialbeatmungen dienen der Verdrängung des Fruchtwassers.", "correct": true }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "5 initiale Beatmungen.",
+          "text": "Dies ist korrekt, da die Lunge von [PATIENT] nach der Geburt erst mit Luft entfaltet werden muss, um den Gasaustausch zu ermöglichen und das Fruchtwasser zu verdrängen."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_zu_004",
+    "type": "zuordnung",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Ordnen** Sie die Maßnahmen bei [PATIENT] den Zeitintervallen des NLS-Algorithmus zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Innerhalb der ersten 60 Sekunden",
+        "B": "Nach den Initialbeatmungen",
+        "C": "Nach Stabilisierung"
+      },
+      "statements": [
+        { "text": "Trocknen, Stimulieren, Wärmen und Erstbeurteilung.", "answer": "A" },
+        { "text": "Wiederbeurteilung der Herzfrequenz und ggf. Beginn HLW 3:1.", "answer": "B" },
+        { "text": "Transportvorbereitung und kontinuierliches Monitoring.", "answer": "C" }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "paediatrie_notfall",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Ergänzen** Sie die fehlenden Zielwerte für die prähduktale SpO2-Sättigung bei Neugeborenen wie [PATIENT] laut NLS-Leitlinie.",
+    "points": 2,
+    "data": {
+      "list_label": "Akzeptable SpO2-Werte",
+      "given_items": [
+        "Nach 2 Minuten: ca. 65 %",
+        "Nach 5 Minuten: ca. 85 %"
+      ],
+      "missing_items": [
+        "Nach 10 Minuten: ca. 90 %"
+      ],
+      "all_valid_missing": ["90 %", "90 Prozent", "über 90 %"]
+    }
+  },
+  {
+    "q_id": "m6_fall_tab_006",
+    "type": "tabelle_vergleich",
+    "topic": "paediatrie_notfall",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Vergleichen** Sie die Reanimationsvorgaben für [PATIENT] (NLS) mit denen für ein 5-jähriges Kind (PBLS).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Neugeborenes (NLS)",
+          "Kind (PBLS)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "text": "Verhältnis Drücken:Beatmen" },
+              { "type": "input", "correct_answer": "3 : 1", "keywords": ["3:1"] },
+              { "type": "input", "correct_answer": "15 : 2", "keywords": ["15:2"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "text": "Fokus der Maßnahmen" },
+              { "type": "input", "correct_answer": "Ventilation / Lungenentfaltung", "keywords": ["Atmung", "Beatmung"] },
+              { "type": "input", "correct_answer": "Oxygenierung / Zirkulation", "keywords": ["Sauerstoff"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_008",
+    "type": "nennen_liste",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_04"],
+    "instruction": "**Nennen** Sie drei Prinzipien des Crew Resource Managements (CRM), die [PFLEGEKRAFT] und das Team im Kreißsaal anwenden mussten.",
+    "list_label": "CRM-Elemente im Einsatz",
+    "count": 3,
+    "correct_answers": ["Klare Aufgabenverteilung", "Geschlossene Kommunikation (Closed-Loop)", "Gegenseitige Unterstützung"],
+    "all_valid_answers": ["Rollenverteilung", "Closed-Loop", "Check-back", "Support", "Hilfe anfordern", "10-für-10"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m6_fall_ft_012",
+    "type": "freitext_box",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Erläutern** Sie, warum die von [PATIENT] geäußerten Symptome (Übelkeit, Oberbauchschmerzen) rückblickend auf einen Myokardinfarkt hindeuteten.",
+    "points": 4,
+    "data": {
+      "box_label": "Atypische Symptomatik bei [PATIENT]",
+      "correct_answer": "Bei Frauen tritt ein Herzinfarkt ('Frauenherz') oft ohne den klassischen massiven Brustschmerz auf. Stattdessen zeigen sich unspezifische Symptome wie Übelkeit, Erbrechen, Oberbauchbeschwerden oder Kurzatmigkeit. Da [PATIENT] genau diese Symptome aufwies, hätte frühzeitig an ein kardiogenes Ereignis gedacht werden müssen, auch wenn primär eine Magenverstimmung vermutet wurde.",
+      "keywords": ["Frauenherz", "atypisch", "Übelkeit", "Oberbauch", "NSTEMI"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_ft_013",
+    "type": "freitext_box",
+    "topic": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Beschreiben** Sie, wie [PFLEGEKRAFT] die strukturierte Nachbesprechung als Coping-Strategie nutzt.",
+    "points": 4,
+    "data": {
+      "box_label": "Stressbewältigung Christian",
+      "correct_answer": "Christian nutzt die Nachbesprechung als 'bewertungsorientiertes Coping'. Er setzt sich kognitiv mit dem Geschehen auseinander, reflektiert seine Entscheidungen und deutet das Erlebte als Lernchance um. Dies hilft ihm, die belastenden Gefühle der Selbstbeschuldigung zu reduzieren und seine fachliche Kompetenz für zukünftige ähnliche Situationen zu stärken.",
+      "keywords": ["bewertungsorientiert", "Umdeutung", "Lernchance", "Reflektion", "Belastung mindern"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m6_fall_nl_009",
+    "type": "nennen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Nennen** Sie die zwei diagnostischen Maßnahmen, die [PFLEGEKRAFT] bei [PATIENT] veranlasst hat, um den Verdacht auf einen Infarkt zu sichern.",
+    "list_label": "Diagnostik bei [PATIENT]",
+    "count": 2,
+    "correct_answers": ["12-Kanal-EKG", "Blutentnahme zur Troponin-Bestimmung"],
+    "all_valid_answers": ["EKG", "12-Kanal-EKG", "Troponin", "Blutwerte", "Herzmarker", "Troponin-Test"],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Maßnahme."
+  },
+  {
+    "q_id": "m6_fall_nl_010",
+    "type": "stressmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Nennen** Sie drei Ziele einer PSNV-Nachbesprechung (KIT) für das Pflegeteam nach einem kritischen Fall wie dem von [PATIENT].",
+    "list_label": "Ziele der Nachbesprechung",
+    "count": 3,
+    "correct_answers": ["Psychische Entlastung der Mitarbeiter", "Vermeidung von Traumatisierungen (PTBS)", "Stärkung des Teamzusammenhalts"],
+    "all_valid_answers": ["Entlastung", "Prävention", "PTBS vermeiden", "Teamstärkung", "Fehlermanagement", "Reflektion"],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Ziel."
+  },
+  {
+    "q_id": "m6_fall_rf_009",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "statement": "Bei [PATIENT] wurde ein NSTEMI diagnostiziert, da im EKG ST-Hebungen fehlten, aber das herzspezifische Troponin erhöht war.",
+    "answer": "richtig",
+    "explanation": "Der NSTEMI (Nicht-ST-Hebungsinfarkt) ist genau dadurch definiert: laborchemische Infarktzeichen (Troponin) ohne die typischen ST-Hebungen im EKG.",
+    "source_hint": "Infarkt-Differenzierung"
+  },
+  {
+    "q_id": "m6_fall_rf_010",
+    "type": "richtig_falsch",
+    "topic": "herzkrankheiten",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "statement": "Die klassischen Beschwerden eines Herzinfarkts treten bei Frauen wie [PATIENT] statistisch gesehen nur bei etwa einem Drittel der Fälle auf.",
+    "answer": "richtig",
+    "explanation": "Dies belegt die Wichtigkeit, bei Frauen auch auf atypische Symptome wie Übelkeit oder Dyspnoe zu achten.",
+    "source_hint": "Handout Anatomie/Herzkrankheiten (Frauenherz)"
+  },
+  {
+    "q_id": "m6_fall_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction_select": "**Entscheiden** Sie, welche pflegerischen Maßnahmen [PFLEGEKRAFT] für [PATIENT] nach der Diagnoseeinleitung sicherstellen muss.",
+    "instruction_justify": "**Begründen** Sie die Bedeutung der Bettruhe.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Absolute Bettruhe zur Minimierung des Sauerstoffbedarfs.", "correct": true },
+        { "label": "Kontinuierliches EKG-Monitoring.", "correct": true },
+        { "label": "Vorbereitung auf die Koronarangiografie.", "correct": true },
+        { "label": "Flachlagerung der Beine (Trendelenburg-Lagerung).", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Absolute Bettruhe.",
+          "text": "Bettruhe ist essenziell, um die körperliche Anstrengung und damit den Sauerstoffbedarf des Herzmuskels so gering wie möglich zu halten, um die Ischämiezone nicht zu vergrößern."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_zu_005",
+    "type": "zuordnung",
+    "topic": "rahmenbedingungen",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Ordnen** Sie die Informationen von [PATIENT] den Kategorien der SAMPLER-Anamnese zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "S": "Symptome",
+        "A": "Allergien",
+        "M": "Medikamente"
+      },
+      "statements": [
+        { "text": "Übelkeit, Oberbauchschmerzen, Kurzatmigkeit.", "answer": "S" },
+        { "text": "Keine bekannten Unverträglichkeiten gegen Kontrastmittel.", "answer": "A" },
+        { "text": "Nimmt keine Dauermedikation außer Vitaminpräparaten.", "answer": "M" }
+      ]
+    }
+  },
+  {
+    "q_id": "m6_fall_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "herzkrankheiten",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Ergänzen** Sie die herzspezifischen Labormarker, die [PFLEGEKRAFT] für [PATIENT] abgenommen hat.",
+    "points": 2,
+    "data": {
+      "list_label": "Herzmuskelmarker",
+      "given_items": [
+        "Creatinkinase (CK)"
+      ],
+      "missing_items": [
+        "Troponin (cTn)",
+        "CK-MB"
+      ],
+      "all_valid_missing": ["Troponin", "cTn", "CK-MB", "CK-MB-Anteil"]
+    }
+  },
+  {
+    "q_id": "m6_fall_tab_007",
+    "type": "tabelle_vergleich",
+    "topic": "herzkrankheiten",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m6_fall_05"],
+    "instruction": "**Vergleichen** Sie die klinischen Symptome von [PATIENT] mit dem 'klassischen' Bild eines Herzinfarkts.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Symptombereich",
+          "Klassisch (Mann)",
+          "[PATIENT] (Frauenherz)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              { "type": "text", "text": "Hauptschmerzort" },
+              { "type": "input", "correct_answer": "Retrosternal (Brustbein)", "keywords": ["Brust"] },
+              { "type": "input", "correct_answer": "Oberbauch / Rücken", "keywords": ["Bauch", "Magen"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "text", "text": "Begleitsymptome" },
+              { "type": "input", "correct_answer": "Ausstrahlung li. Arm", "keywords": ["Arm"] },
+              { "type": "input", "correct_answer": "Übelkeit / Erbrechen", "keywords": ["Übel", "Emesis"] }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
