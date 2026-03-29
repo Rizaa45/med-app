@@ -1,0 +1,4669 @@
+[
+  {
+    "q_id": "m8_rf_001",
+    "type": "richtig_falsch",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das Nephron als funktionelle Einheit der Niere besteht aus dem Nierenkörperchen zur Filtration und dem Tubulusapparat zur Rückgewinnung von Stoffen.",
+    "answer": "richtig",
+    "explanation": "Ein Nephron bildet eine funktionelle Einheit aus Nierenkörperchen (Filtration des Primärharns) und Tubulussystem (Konzentrierung durch Resorption).",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_002",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die glomeruläre Filtrationsrate (GFR) eines gesunden jungen Erwachsenen liegt bei ca. 120 ml/min und nimmt ab dem 50. Lebensjahr physiologisch leicht zu.",
+    "answer": "falsch",
+    "explanation": "Die GFR liegt zwar bei ca. 120 ml/min, nimmt aber nach dem 50. Lebensjahr um etwa 10 % pro Jahrzehnt ab, sie nimmt nicht zu.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_003",
+    "type": "richtig_falsch",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Hormon ANP (atriales natriuretisches Peptid) wird in den Herzvorhöfen gebildet und wirkt als Gegenspieler zu ADH und Aldosteron, indem es die Harnausscheidung fördert.",
+    "answer": "richtig",
+    "explanation": "ANP stammt aus den Herzvorhöfen und fördert die Harnausscheidung, womit es der wasserrückhaltenden Wirkung von ADH und Aldosteron entgegenwirkt.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_004",
+    "type": "richtig_falsch",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Eine Glukosurie tritt physiologisch bereits ab einer Blutglukosekonzentration von über 120 mg/dl auf, da dann die Nierenschwelle überschritten ist.",
+    "answer": "falsch",
+    "explanation": "Die Nierenschwelle für Glukose liegt höher, erst bei Blutglukosekonzentrationen über 180 mg/dl wird Glukose mit dem Urin ausgeschieden.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_005",
+    "type": "richtig_falsch",
+    "topic": "dialyse",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Am Shuntarm eines Dialysepatienten dürfen zur Schonung des Gefäßzugangs grundsätzlich keine Blutdruckmessungen oder Venenpunktionen durchgeführt werden.",
+    "answer": "richtig",
+    "explanation": "Zum Schutz und Erhalt der Shuntfunktion sind Blutentnahmen und Blutdruckmessungen am Shuntarm konsequent zu unterlassen.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_006",
+    "type": "richtig_falsch",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der Anspannungsphase der Herzaktion sind sowohl die Segelklappen als auch die Taschenklappen geschlossen, sodass kein Blutfluss stattfindet.",
+    "answer": "richtig",
+    "explanation": "Während der Anspannungsphase baut die Kammermuskulatur Druck auf; da alle Klappen geschlossen sind, bleibt das Blutvolumen in den Kammern kurzzeitig konstant.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_007",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Als äußere Atmung wird der Gasaustausch in den Kapillaren aller Körpergewebe bezeichnet, bei dem Sauerstoff an die Zellen abgegeben wird.",
+    "answer": "falsch",
+    "explanation": "Die äußere Atmung ist der Gasaustausch in der Lunge (Alveolen/Blut). Der Austausch zwischen Kapillaren und Gewebezellen wird als innere Atmung oder Gasaustausch im Gewebe bezeichnet.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_008",
+    "type": "richtig_falsch",
+    "topic": "pharmakologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Schleifendiuretika wie Furosemid zeichnen sich dadurch aus, dass sie auch bei einer fortgeschrittenen Einschränkung der Nierenfunktion noch wirksam sind.",
+    "answer": "richtig",
+    "explanation": "Im Gegensatz zu vielen anderen Diuretika behalten Schleifendiuretika ihre starke Wirkung auch bei fortgeschrittener Niereninsuffizienz bei.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_009",
+    "type": "richtig_falsch",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Gesundheitskompetenz umfasst ausschließlich die Fähigkeit, medizinische Fachbegriffe korrekt aussprechen und schreiben zu können.",
+    "answer": "falsch",
+    "explanation": "Gesundheitskompetenz (Health Literacy) ist umfassender und beinhaltet das Finden, Verstehen, Beurteilen und Anwenden von Gesundheitsinformationen im Alltag.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_010",
+    "type": "richtig_falsch",
+    "topic": "pflege_konzepte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Modell der Salutogenese beschäftigt sich im Gegensatz zur Pathogenese vorrangig mit der Frage, welche Faktoren einen Menschen gesund erhalten.",
+    "answer": "richtig",
+    "explanation": "Salutogenese fragt nach der Entstehung von Gesundheit und Ressourcen, während die Pathogenese die Entstehung und Entwicklung von Krankheiten fokussiert.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_011",
+    "type": "richtig_falsch",
+    "topic": "system_kh",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Nach der Pflege-Personal-Regelung (PPR 2.0) werden Patienten täglich in Leistungsstufen für die Allgemeinpflege (A) und die Spezielle Pflege (S) eingestuft.",
+    "answer": "richtig",
+    "explanation": "Die PPR 2.0 nutzt die Bereiche A (Allgemeinpflege) und S (Spezielle Pflege), um den pflegerischen Aufwand pro Patient und Tag messbar zu machen.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_012",
+    "type": "richtig_falsch",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die rechte Niere liegt aufgrund der Lage der Milz im linken Oberbauch meist etwas tiefer als die linke Niere.",
+    "answer": "falsch",
+    "explanation": "Die rechte Niere liegt tiefer, weil sich über ihr die Leber befindet, nicht wegen der Milz (diese liegt links).",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_013",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das Hormon Renin wird bei Minderdurchblutung der Niere ausgeschüttet und spaltet Angiotensinogen in Angiotensin I.",
+    "answer": "richtig",
+    "explanation": "Renin ist das Startenzym des RAAS; es wandelt Angiotensinogen in Angiotensin I um, welches dann durch ACE zu Angiotensin II wird.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_014",
+    "type": "richtig_falsch",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Eine Hyperkaliämie ist ein lebensbedrohlicher Zustand, da sie zu Herzrhythmusstörungen bis hin zum Herzstillstand führen kann.",
+    "answer": "richtig",
+    "explanation": "Ein zu hoher Kaliumspiegel beeinträchtigt die elektrische Erregbarkeit des Herzens massiv, was letale Folgen haben kann.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_015",
+    "type": "richtig_falsch",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Harnstoff ist das Endprodukt des Muskelstoffwechsels, während Kreatinin primär beim Abbau von Eiweißen in der Leber entsteht.",
+    "answer": "falsch",
+    "explanation": "Es ist genau umgekehrt: Harnstoff ist das Endprodukt des Eiweißstoffwechsels (Leber), Kreatinin das des Muskelstoffwechsels.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_016",
+    "type": "richtig_falsch",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der Peritonealdialyse dient das gut durchblutete Bauchfell des Patienten als körpereigene semipermeable Filtermembran.",
+    "answer": "richtig",
+    "explanation": "Im Gegensatz zur Hämodialyse (externer Filter) wird bei der Peritonealdialyse das Peritoneum zur Reinigung des Blutes genutzt.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_017",
+    "type": "richtig_falsch",
+    "topic": "herz_kreislauf",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die linke Herzkammer pumpt das sauerstoffreiche Blut über die Aorta in den Körperkreislauf.",
+    "answer": "richtig",
+    "explanation": "Die linke Kammer versorgt den großen Kreislauf (Körper), die rechte Kammer den kleinen Kreislauf (Lunge).",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_018",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Surfactant in den Alveolen dient dazu, die Oberflächenspannung herabzusetzen und so ein Kollabieren der Lungenbläschen bei der Ausatmung zu verhindern.",
+    "answer": "richtig",
+    "explanation": "Diese Substanz ist entscheidend für die Stabilität der Alveolen und die Lungenfunktion.",
+    "source_hint": "[Gemäß anatomischem Standardwissen im Kontext von M 8.3/8.8]"
+  },
+  {
+    "q_id": "m8_rf_019",
+    "type": "richtig_falsch",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Thiaziddiuretika können als Nebenwirkung zu einem Anstieg des Kalziumspiegels im Blut (Hyperkalzämie) führen.",
+    "answer": "richtig",
+    "explanation": "Zu den Nebenwirkungen der Thiazide gehören neben Hypokaliämie und Hypomagnesiämie auch die Hyperkalzämie sowie Blutzuckeranstiege.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_020",
+    "type": "richtig_falsch",
+    "topic": "system_kh",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Wenn eine Station die gesetzlichen Pflegepersonaluntergrenzen (PpUGV) einhält, kann sie laut Definition nicht mehr durch einen zu hohen Pflegeaufwand überlastet sein.",
+    "answer": "falsch",
+    "explanation": "Die PpUGV ist nur eine Mindestbesetzung; bei hohem Pflegeaufwand (messbar durch PPR 2.0) kann die Station trotz Einhaltung der Untergrenze überlastet sein.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m8_rf_021",
+    "type": "richtig_falsch",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Der Harnleiter (Ureter) ist bei der Frau ca. 4 cm lang und verläuft auf direktem Weg geradlinig zur Körperoberfläche.",
+    "answer": "falsch",
+    "explanation": "Die beschriebene Struktur ist die weibliche Harnröhre (Urethra). Der Harnleiter (Ureter) ist ca. 30 cm lang und verbindet das Nierenbecken mit der Harnblase.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 19 & 21"
+  },
+  {
+    "q_id": "m8_rf_022",
+    "type": "richtig_falsch",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Macula densa ist ein Teil des juxtaglomerulären Apparates und besteht aus spezialisierten Epithelzellen des distalen Tubulus.",
+    "answer": "richtig",
+    "explanation": "Die Macula densa liegt im distalen Tubulus an der Kontaktstelle zum Vas afferens und ist wesentlicher Bestandteil des juxtaglomerulären Apparates.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 11"
+  },
+  {
+    "q_id": "m8_rf_023",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die Glomeruli der Nieren filtrieren täglich ca. 1,5 Liter Primärharn, wovon ca. 180 Liter als Sekundärharn ausgeschieden werden.",
+    "answer": "falsch",
+    "explanation": "Es ist genau umgekehrt: Es werden ca. 180 Liter Primärharn filtriert, wovon nach der Rückresorption ca. 1,5 Liter als Sekundärharn (Urin) ausgeschieden werden.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 13 & 'Niere und Dialyse', Folie 75"
+  },
+  {
+    "q_id": "m8_rf_024",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Erythropoetin (EPO) ist ein Eiweißhormon, das bei Sauerstoffmangel in den Endothelzellen der peritubulären Kapillaren gebildet wird.",
+    "answer": "richtig",
+    "explanation": "EPO wird in der Niere (peritubuläre Kapillaren) produziert und stimuliert im Knochenmark die Bildung neuer Erythrozyten.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 28"
+  },
+  {
+    "q_id": "m8_rf_025",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Autoregulation der Niere stellt eine konstante glomeruläre Filtration in einem Blutdruckbereich zwischen ca. 80 und 180 mmHg sicher.",
+    "answer": "richtig",
+    "explanation": "In diesem Blutdruckbereich reguliert die Niere die Weite der Gefäße selbstständig, um die GFR stabil zu halten.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 14"
+  },
+  {
+    "q_id": "m8_rf_026",
+    "type": "richtig_falsch",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das antidiuretische Hormon (ADH) wirkt primär auf das Tubulussystem der Niere und bewirkt dort eine verstärkte Wasserrückgewinnung.",
+    "answer": "richtig",
+    "explanation": "ADH (aus dem Hypothalamus) macht die Sammelrohre und den distalen Tubulus wasserdurchlässiger, wodurch Wasser in den Körper zurückgeholt wird.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 29-30"
+  },
+  {
+    "q_id": "m8_rf_027",
+    "type": "richtig_falsch",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Osmorezeptoren zur Messung der Osmolarität (Salzkonzentration) im Plasma befinden sich anatomisch im Hypothalamus und in der Leber.",
+    "answer": "richtig",
+    "explanation": "Diese Rezeptoren messen die Salzkonzentration; bei Erhöhung wird ADH ausgeschüttet, um den Wasserhaushalt zu regulieren.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 33"
+  },
+  {
+    "q_id": "m8_rf_028",
+    "type": "richtig_falsch",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein typisches klinisches Zeichen für eine Dehydratation (Exsikkose) sind prall gefüllte, stark hervortretende Halsvenen.",
+    "answer": "falsch",
+    "explanation": "Bei Dehydratation sind die Halsvenen kollabiert. Prall gefüllte Halsvenen weisen eher auf eine Hyperhydratation oder Herzinsuffizienz hin.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 34"
+  },
+  {
+    "q_id": "m8_rf_029",
+    "type": "richtig_falsch",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Ein positiver Nachweis von Leukozyten mittels Urinteststreifen deutet klinisch auf eine bakterielle Infektion der ableitenden Harnwege hin.",
+    "answer": "richtig",
+    "explanation": "Leukozyten im Urin treten vermehrt bei Entzündungen und bakteriellen Infekten auf.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 26"
+  },
+  {
+    "q_id": "m8_rf_030",
+    "type": "richtig_falsch",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der Peritonealdialyse erfolgt der Stoffaustausch extrakorporal über eine künstliche semipermeable Membran in einem Dialysator.",
+    "answer": "falsch",
+    "explanation": "Dies beschreibt die Hämodialyse. Bei der Peritonealdialyse dient das körpereigene Bauchfell (Peritoneum) als Filtermembran.",
+    "source_hint": "Material 'Niere und Dialyse', Folie 79-80"
+  },
+  {
+    "q_id": "m8_rf_031",
+    "type": "richtig_falsch",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der Austreibungsphase des Herzens (Systole) sind die Taschenklappen geschlossen, um ein Zurückfließen des Blutes in die Kammern zu verhindern.",
+    "answer": "falsch",
+    "explanation": "In der Austreibungsphase müssen die Taschenklappen geöffnet sein, damit das Blut in die Aorta bzw. den Truncus pulmonalis strömen kann.",
+    "source_hint": "Material 'M 8.3-8.4_Anatomie_Lunge_Herz_Niere', Folie 62"
+  },
+  {
+    "q_id": "m8_rf_032",
+    "type": "richtig_falsch",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Ein Cor pulmonale bezeichnet eine Rechtsherzinsuffizienz, die infolge einer chronischen Lungenerkrankung wie z. B. COPD entsteht.",
+    "answer": "richtig",
+    "explanation": "Durch den erhöhten Widerstand in der Lunge muss die rechte Herzkammer mehr Arbeit leisten, was langfristig zur Insuffizienz führt.",
+    "source_hint": "Material 'M 8.3-8.4_Anatomie_Lunge_Herz_Niere', Folie 55 & 62"
+  },
+  {
+    "q_id": "m8_rf_033",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Der Kehlkopf (Larynx) gehört anatomisch zu den oberen Atemwegen, da er oberhalb der Luftröhre liegt.",
+    "answer": "falsch",
+    "explanation": "Der Kehlkopf (Larynx) markiert bereits den Beginn der unteren Atemwege. Zu den oberen Atemwegen gehören nur Nase und Rachen.",
+    "source_hint": "Material 'M 8.3-8.4_Anatomie_Lunge_Herz_Niere', Folie 56"
+  },
+  {
+    "q_id": "m8_rf_034",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im Ampelschema des Peak-Flow-Meters signalisiert der grüne Bereich (80–100 % des Bestwertes), dass das Asthma gut unter Kontrolle ist.",
+    "answer": "richtig",
+    "explanation": "Der grüne Bereich steht für Stabilität; Gelb bedeutet Vorsicht/Therapieanpassung, Rot bedeutet akute Gefahr [93, Pflegefachwissen M8.8].",
+    "source_hint": "Material 'M 8.8_Skript 1', Folie 93"
+  },
+  {
+    "q_id": "m8_rf_035",
+    "type": "richtig_falsch",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Das im Blut zirkulierende Enzym ACE (Angiotensin-converting-Enzym) ist dafür verantwortlich, Angiotensinogen direkt in Angiotensin I umzuwandeln.",
+    "answer": "falsch",
+    "explanation": "Renin wandelt Angiotensinogen in Angiotensin I um. ACE wandelt dann Angiotensin I in das wirksame Angiotensin II um.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 27"
+  },
+  {
+    "q_id": "m8_rf_036",
+    "type": "richtig_falsch",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Phosphatbinder sollten bei Dialysepatienten idealerweise zusammen mit den Mahlzeiten eingenommen werden, um das Phosphat direkt im Darm zu binden.",
+    "answer": "richtig",
+    "explanation": "Die Einnahme zu den Mahlzeiten ist entscheidend, damit das Phosphat aus der Nahrung gebunden und nicht resorbiert wird.",
+    "source_hint": "Material 'Arzneimittellehre' & 'Niere und Dialyse', Folie 79"
+  },
+  {
+    "q_id": "m8_rf_037",
+    "type": "richtig_falsch",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Gesundheitskompetenz (Health Literacy) umfasst die vier Kernfähigkeiten: Finden, Verstehen, Beurteilen und Anwenden von Informationen.",
+    "answer": "richtig",
+    "explanation": "Dies sind die klassischen Stufen zur Stärkung der Gesundheitskompetenz im Alltag.",
+    "source_hint": "Material 'M8.9 Stärkung der Gesundheitskompetenz', Folie 98"
+  },
+  {
+    "q_id": "m8_rf_038",
+    "type": "richtig_falsch",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Im pflegerischen Kontext bedeutet 'Informieren' die gezielte Vermittlung von praktischen Fertigkeiten, während 'Anleiten' lediglich die Weitergabe von Wissen beschreibt.",
+    "answer": "falsch",
+    "explanation": "Es ist umgekehrt: Informieren ist die bloße Weitergabe von Wissen. Anleiten ist die gezielte Unterstützung beim Erlernen praktischer Fertigkeiten.",
+    "source_hint": "Material 'M 8.2_Handout', Folie 50-51"
+  },
+  {
+    "q_id": "m8_rf_039",
+    "type": "richtig_falsch",
+    "topic": "pflege_konzepte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Modell der Pathogenese fragt nach Ressourcen und Faktoren, die eine Person trotz Belastungen gesund erhalten.",
+    "answer": "falsch",
+    "explanation": "Dies beschreibt das Modell der Salutogenese. Die Pathogenese fragt nach den Ursachen und der Entstehung von Krankheiten.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 10 & 'M 8.6_Handout', Folie 87"
+  },
+  {
+    "q_id": "m8_rf_040",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Alveolen besitzen eine Wand aus dünnem, einschichtigem Plattenepithel, um einen schnellen Gasaustausch durch Diffusion zu ermöglichen.",
+    "answer": "richtig",
+    "explanation": "Der Gasaustausch findet an dieser sehr dünnen Membran zwischen Atemluft und den umgebenden Kapillaren statt.",
+    "source_hint": "Material 'M 8.3-8.4_Anatomie_Lunge_Herz_Niere', Folie 58"
+  },
+  {
+    "q_id": "m8_nl_001",
+    "type": "nennen_liste",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die wesentlichen Bestandteile des Nephrons als funktionelle Einheit der Niere.",
+    "list_label": "Bestandteile des Nephrons",
+    "count": 2,
+    "correct_answers": [
+      "Nierenkörperchen",
+      "Tubulusapparat"
+    ],
+    "all_valid_answers": [
+      "Nierenkörperchen",
+      "Malpighi-Körperchen",
+      "Glomerulus und Bowman-Kapsel",
+      "Tubulusapparat",
+      "Nierenkanälchen",
+      "Harnkanälchen",
+      "Tubulussystem"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro Hauptbestandteil."
+  },
+  {
+    "q_id": "m8_nl_002",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei grundlegenden Prozesse der Harnbildung in der Niere.",
+    "list_label": "Prozesse der Harnbildung",
+    "count": 3,
+    "correct_answers": [
+      "Filtration",
+      "Resorption",
+      "Sekretion"
+    ],
+    "all_valid_answers": [
+      "Filtration",
+      "Glomeruläre Filtration",
+      "Abpressen des Primärharns",
+      "Resorption",
+      "Rückresorption",
+      "Tubuläre Rückgewinnung",
+      "Sekretion",
+      "Tubuläre Sekretion",
+      "Aktive Ausscheidung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Prozess."
+  },
+  {
+    "q_id": "m8_nl_003",
+    "type": "nennen_liste",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die ableitenden Harnwege beginnend nach den Nierenpapillen in der richtigen anatomischen Reihenfolge.",
+    "list_label": "Ableitende Harnwege",
+    "count": 4,
+    "correct_answers": [
+      "Nierenbecken",
+      "Harnleiter",
+      "Harnblase",
+      "Harnröhre"
+    ],
+    "all_valid_answers": [
+      "Nierenbecken",
+      "Pelvis renalis",
+      "Pyelon",
+      "Harnleiter",
+      "Ureter",
+      "Harnblase",
+      "Vesica urinaria",
+      "Blase",
+      "Harnröhre",
+      "Urethra"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benannter Station in richtiger Reihenfolge."
+  },
+  {
+    "q_id": "m8_nl_004",
+    "type": "nennen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier Hormone, die maßgeblich an der Regulation des Wasser- und Elektrolythaushaltes beteiligt sind.",
+    "list_label": "Hormone der Wasser-Elektrolyt-Regulation",
+    "count": 4,
+    "correct_answers": [
+      "ADH",
+      "Aldosteron",
+      "ANP",
+      "Renin"
+    ],
+    "all_valid_answers": [
+      "ADH",
+      "Antidiuretisches Hormon",
+      "Adiuretin",
+      "Vasopressin",
+      "Aldosteron",
+      "ANP",
+      "Atriales natriuretisches Peptid",
+      "Atriopeptin",
+      "Renin",
+      "Angiotensin II",
+      "Angiotensin"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Hormon."
+  },
+  {
+    "q_id": "m8_nl_005",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die fünf Stadien der chronischen Nierenerkrankung (CKD) basierend auf der Filtrationsleistung.",
+    "list_label": "Stadien der chronischen Niereninsuffizienz",
+    "count": 5,
+    "correct_answers": [
+      "Stadium 1",
+      "Stadium 2",
+      "Stadium 3",
+      "Stadium 4",
+      "Stadium 5"
+    ],
+    "all_valid_answers": [
+      "Stadium 1",
+      "Stadium I",
+      "Nierenschädigung mit normaler GFR",
+      "Stadium 2",
+      "Stadium II",
+      "Leichte Funktionseinschränkung",
+      "Stadium 3",
+      "Stadium III",
+      "Mittelschwere Funktionseinschränkung",
+      "Stadium 4",
+      "Stadium IV",
+      "Hochgradige Funktionseinschränkung",
+      "Stadium 5",
+      "Stadium V",
+      "Terminale Niereninsuffizienz",
+      "Dialysepflicht"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Stadium."
+  },
+  {
+    "q_id": "m8_nl_006",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie fünf Parameter, die üblicherweise mittels eines Urinteststreifens in der Pflege bestimmt werden können.",
+    "list_label": "Urinteststreifen-Parameter",
+    "count": 5,
+    "correct_answers": [
+      "Leukozyten",
+      "Nitrit",
+      "Proteine",
+      "Glukose",
+      "Erythrozyten"
+    ],
+    "all_valid_answers": [
+      "Leukozyten",
+      "Leukos",
+      "weiße Blutkörperchen",
+      "Nitrit",
+      "Bakteriennachweis",
+      "Proteine",
+      "Eiweiß",
+      "Glukose",
+      "Zucker",
+      "Erythrozyten",
+      "Blut",
+      "Hämoglobin",
+      "Hb",
+      "pH-Wert",
+      "Ketonkörper",
+      "Ketone",
+      "Urobilinogen",
+      "Bilirubin"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Parameter."
+  },
+  {
+    "q_id": "m8_nl_007",
+    "type": "nennen_liste",
+    "topic": "dialyse",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei wesentliche Unterschiede zwischen der Hämodialyse (HD) und der Peritonealdialyse (PD).",
+    "list_label": "Vergleich HD vs. PD",
+    "count": 3,
+    "correct_answers": [
+      "Ort des Verfahrens",
+      "Art der Filtermembran",
+      "Häufigkeit der Durchführung"
+    ],
+    "all_valid_answers": [
+      "Ort des Verfahrens",
+      "Klinik/Zentrum vs. zu Hause",
+      "extrakorporal vs. intrakorporal",
+      "Art der Filtermembran",
+      "künstlicher Dialysator vs. Bauchfell/Peritoneum",
+      "Häufigkeit der Durchführung",
+      "intermittierend (z.B. 3x/Woche) vs. kontinuierlich/täglich",
+      "Gefäßzugang",
+      "Shunt vs. PD-Katheter"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Differenzierungsmerkmal."
+  },
+  {
+    "q_id": "m8_nl_008",
+    "type": "nennen_liste",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier Herzklappen und ordnen Sie diese jeweils der Gruppe der Segelklappen oder Taschenklappen zu.",
+    "list_label": "Herzklappen und deren Typ",
+    "count": 4,
+    "correct_answers": [
+      "Trikuspidalklappe (Segelklappe)",
+      "Mitralklappe (Segelklappe)",
+      "Pulmonalklappe (Taschenklappe)",
+      "Aortenklappe (Taschenklappe)"
+    ],
+    "all_valid_answers": [
+      "Trikuspidalklappe",
+      "rechte AV-Klappe",
+      "Segelklappe",
+      "Mitralklappe",
+      "Bikuspidalklappe",
+      "linke AV-Klappe",
+      "Pulmonalklappe",
+      "rechte Taschenklappe",
+      "Aortenklappe",
+      "linke Taschenklappe"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Klappe mit korrekter Zuordnung."
+  },
+  {
+    "q_id": "m8_nl_009",
+    "type": "nennen_liste",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier typische Symptome einer Linksherzinsuffizienz.",
+    "list_label": "Symptome der Linksherzinsuffizienz",
+    "count": 4,
+    "correct_answers": [
+      "Dyspnoe",
+      "Husten",
+      "Lungenödem",
+      "Leistungsminderung"
+    ],
+    "all_valid_answers": [
+      "Dyspnoe",
+      "Atemnot",
+      "Belastungsdyspnoe",
+      "Ruhedyspnoe",
+      "Husten",
+      "Asthma cardiale",
+      "Reizhusten",
+      "Lungenödem",
+      "Rasselgeräusche",
+      "Wasser in der Lunge",
+      "Leistungsminderung",
+      "Schwäche",
+      "Zyanose",
+      "Einsatz der Atemhilfsmuskulatur"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m8_nl_010",
+    "type": "nennen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Farben des Peak-Flow-Ampelschemas beim Asthma bronchiale und deren jeweilige Bedeutung für den Patienten.",
+    "list_label": "Ampelschema Asthma",
+    "count": 3,
+    "correct_answers": [
+      "Grün (Stabil)",
+      "Gelb (Vorsicht)",
+      "Rot (Gefahr)"
+    ],
+    "all_valid_answers": [
+      "Grün",
+      "Normalwert",
+      "Asthma unter Kontrolle",
+      "Gelb",
+      "Vorsicht",
+      "Therapieanpassung nötig",
+      "Warnsignal",
+      "Rot",
+      "Gefahr",
+      "Notfall",
+      "ärztliche Hilfe sofort"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Farbe inklusive korrekter Bedeutung."
+  },
+  {
+    "q_id": "m8_nl_011",
+    "type": "nennen_liste",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei Gruppen von Diuretika und deren primären Wirkort im Tubulussystem.",
+    "list_label": "Diuretika-Gruppen und Wirkorte",
+    "count": 3,
+    "correct_answers": [
+      "Schleifendiuretika (Henle-Schleife)",
+      "Thiazide (distaler Tubulus)",
+      "Kaliumsparende Diuretika (Sammelrohr)"
+    ],
+    "all_valid_answers": [
+      "Schleifendiuretika",
+      "Furosemid-Typ",
+      "Henle-Schleife",
+      "Thiazide",
+      "Thiaziddiuretika",
+      "distaler Tubulus",
+      "Kaliumsparende Diuretika",
+      "Aldosteron-Antagonisten",
+      "Sammelrohr",
+      "Endstück des distalen Tubulus"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Gruppe mit korrektem Wirkort."
+  },
+  {
+    "q_id": "m8_nl_012",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier grundlegenden pflegerischen Tätigkeitsformen im Rahmen der Patientenberatung und Edukation laut Modul 8.2.",
+    "list_label": "Formen der Pflegeberatung/Edukation",
+    "count": 4,
+    "correct_answers": [
+      "Anleiten",
+      "Informieren",
+      "Schulen",
+      "Beraten"
+    ],
+    "all_valid_answers": [
+      "Anleiten",
+      "Anleitung",
+      "Informieren",
+      "Information",
+      "Schulen",
+      "Schulung",
+      "Beraten",
+      "Beratung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Form."
+  },
+  {
+    "q_id": "m8_nl_013",
+    "type": "nennen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier klinische Zeichen einer Dehydratation (Exsikkose).",
+    "list_label": "Zeichen der Dehydratation",
+    "count": 4,
+    "correct_answers": [
+      "Stehende Hautfalten",
+      "Trockene Schleimhäute",
+      "Oligurie",
+      "Hypotonie"
+    ],
+    "all_valid_answers": [
+      "Stehende Hautfalten",
+      "fehlende Hautspannung",
+      "Trockene Schleimhäute",
+      "trockener Mund",
+      "Oligurie",
+      "Anurie",
+      "wenig Urin",
+      "dunkler Urin",
+      "Hypotonie",
+      "niedriger Blutdruck",
+      "Tachykardie",
+      "schneller Puls",
+      "kollabierte Halsvenen",
+      "Bewusstseinseintrübung",
+      "Verwirrtheit"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Zeichen."
+  },
+  {
+    "q_id": "m8_nl_014",
+    "type": "nennen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier atemerleichternde Stellungen oder Maßnahmen bei akuter Atemnot (z. B. Asthmaanfall).",
+    "list_label": "Atemerleichternde Stellungen",
+    "count": 4,
+    "correct_answers": [
+      "Kutschersitz",
+      "Torwartstellung",
+      "Lippenbremse",
+      "Oberkörperhochlagerung"
+    ],
+    "all_valid_answers": [
+      "Kutschersitz",
+      "Torwartstellung",
+      "Lippenbremse",
+      "dosierte Lippenbremse",
+      "Oberkörperhochlagerung",
+      "aufrechtes Sitzen",
+      "Abstützen der Arme",
+      "Wandstellung",
+      "Päckchenstellung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Stellung/Maßnahme."
+  },
+  {
+    "q_id": "m8_nl_015",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die zwei primären Hormone, die von der Niere als endokrines Organ produziert werden, und deren Funktion.",
+    "list_label": "Endokrine Nierenfunktionen",
+    "count": 2,
+    "correct_answers": [
+      "Renin (Blutdruck)",
+      "Erythropoetin (Blutbildung)"
+    ],
+    "all_valid_answers": [
+      "Renin",
+      "Regulation Blutdruck",
+      "RAAS-Aktivierung",
+      "Erythropoetin",
+      "EPO",
+      "Steigerung der Erythropoese",
+      "Bildung roter Blutkörperchen"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro Hormon inklusive korrekter Funktionszuordnung."
+  },
+  {
+    "q_id": "m8_nl_016",
+    "type": "nennen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die sechs wichtigsten Elektrolyte (Mengenelemente) des menschlichen Körpers, die im klinischen Alltag regelmäßig im Serum kontrolliert werden.",
+    "list_label": "Wichtige Elektrolyte",
+    "count": 6,
+    "correct_answers": [
+      "Natrium",
+      "Kalium",
+      "Kalzium",
+      "Magnesium",
+      "Chlorid",
+      "Phosphat"
+    ],
+    "all_valid_answers": [
+      "Natrium",
+      "Na+",
+      "Kalium",
+      "K+",
+      "Kalzium",
+      "Calcium",
+      "Ca2+",
+      "Magnesium",
+      "Mg2+",
+      "Chlorid",
+      "Cl-",
+      "Phosphat",
+      "PO4 3-"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt genanntem Elektrolyt."
+  },
+  {
+    "q_id": "m8_nl_017",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier typische klinische Symptome einer Urämie (Harnvergiftung) bei fortgeschrittener Niereninsuffizienz.",
+    "list_label": "Symptome der Urämie",
+    "count": 4,
+    "correct_answers": [
+      "Juckreiz",
+      "Harnähnlicher Mundgeruch",
+      "Gelblich-braune Hautfärbung",
+      "Übelkeit/Erbrechen"
+    ],
+    "all_valid_answers": [
+      "Juckreiz",
+      "Pruritus",
+      "Harnähnlicher Mundgeruch",
+      "Foetor uraemicus",
+      "Gelblich-braune Hautfärbung",
+      "Urämie-Haut",
+      "Übelkeit",
+      "Erbrechen",
+      "Appetitlosigkeit",
+      "Müdigkeit",
+      "Schwäche",
+      "urämische Enzephalopathie",
+      "Verwirrtheit",
+      "Ödeme",
+      "Muskelzuckungen",
+      "Kussmaul-Atmung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m8_nl_018",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier wesentliche Regeln zum pflegerischen Umgang mit einem Dialyseshunt zur Vermeidung von Komplikationen.",
+    "list_label": "Regeln der Shuntpflege",
+    "count": 4,
+    "correct_answers": [
+      "Keine Blutdruckmessung am Shuntarm",
+      "Keine Blutentnahmen am Shuntarm",
+      "Tägliche Kontrolle der Shuntfunktion",
+      "Keine einschnürende Kleidung/Druck"
+    ],
+    "all_valid_answers": [
+      "Keine Blutdruckmessung am Shuntarm",
+      "Kein RR am Shuntarm",
+      "Keine Blutentnahmen am Shuntarm",
+      "keine Venenpunktion",
+      "keine Infusionen",
+      "Tägliche Kontrolle der Shuntfunktion",
+      "Prüfen von Schwirren oder Pulsation",
+      "Abhören des Shuntgeräusches",
+      "Keine einschnürende Kleidung",
+      "keine Uhren oder Armbänder",
+      "kein schweres Tragen am Shuntarm",
+      "kein Abstützen auf dem Shuntarm",
+      "Hygienische Behandlung",
+      "Kennzeichnung des Shuntarms"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Pflegeregel."
+  },
+  {
+    "q_id": "m8_nl_019",
+    "type": "nennen_liste",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier mögliche akute Komplikationen, die während einer Hämodialyse-Behandlung auftreten können.",
+    "list_label": "Komplikationen während der Dialyse",
+    "count": 4,
+    "correct_answers": [
+      "Blutdruckabfall (Hypotonie)",
+      "Muskelkrämpfe",
+      "Übelkeit/Erbrechen",
+      "Herzrhythmusstörungen"
+    ],
+    "all_valid_answers": [
+      "Blutdruckabfall",
+      "Hypotonie",
+      "intradialytische Hypotonie",
+      "Muskelkrämpfe",
+      "Wadenkrämpfe",
+      "Übelkeit",
+      "Erbrechen",
+      "Herzrhythmusstörungen",
+      "Arrhythmien",
+      "Kopfschmerzen",
+      "Schwindel",
+      "Shuntblutung",
+      "Allergische Reaktionen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Komplikation."
+  },
+  {
+    "q_id": "m8_nl_020",
+    "type": "nennen_liste",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die Gefäße der Nierendurchblutung beginnend bei der Hauptschlagader bis hin zum Kapillarknäuel des Nierenkörperchens in der richtigen anatomischen Reihenfolge.",
+    "list_label": "Arterielle Strombahn der Niere",
+    "count": 4,
+    "correct_answers": [
+      "Nierenarterie (A. renalis)",
+      "Zwischenlappenarterien (Aa. interlobares)",
+      "Bogenarterien (Aa. arcuatae)",
+      "Zwischenläppchenarterien (Aa. interlobulares)"
+    ],
+    "all_valid_answers": [
+      "Nierenarterie",
+      "A. renalis",
+      "Zwischenlappenarterien",
+      "Aa. interlobares",
+      "Bogenarterien",
+      "Aa. arcuatae",
+      "Zwischenläppchenarterien",
+      "Aa. interlobulares",
+      "Vas afferens",
+      "zuführende Arteriole"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Gefäßabschnitt in korrekter Reihenfolge."
+  },
+  {
+    "q_id": "m8_nl_021",
+    "type": "nennen_liste",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier typische Symptome einer Rechtsherzinsuffizienz (Rückwärtsversagen).",
+    "list_label": "Symptome der Rechtsherzinsuffizienz",
+    "count": 4,
+    "correct_answers": [
+      "Gestaute Halsvenen",
+      "Ödeme (Beine/Ankle)",
+      "Gewichtszunahme",
+      "Stauungsleber"
+    ],
+    "all_valid_answers": [
+      "Gestaute Halsvenen",
+      "Halsvenenstauung",
+      "Einflussstauung",
+      "Ödeme",
+      "Beinödeme",
+      "Knöchelödeme",
+      "Wassersucht",
+      "Gewichtszunahme",
+      "Stauungsleber",
+      "Hepatomegalie",
+      "Aszites",
+      "Bauchwassersucht",
+      "Stauungsgastritis",
+      "Appetitlosigkeit",
+      "Nykturie",
+      "nächtliches Wasserlassen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Symptom."
+  },
+  {
+    "q_id": "m8_nl_022",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei wesentliche Unterschiede zwischen dem akuten Nierenversagen (AKI) und der chronischen Nierenerkrankung (CKD).",
+    "list_label": "Unterschiede AKI vs. CKD",
+    "count": 3,
+    "correct_answers": [
+      "Beginn (schnell vs. schleichend)",
+      "Heilungschance (potenziell heilbar vs. meist irreversibel)",
+      "Häufigste Ursachen"
+    ],
+    "all_valid_answers": [
+      "Beginn",
+      "plötzlich vs. über Monate/Jahre",
+      "Heilungschance",
+      "reversibel vs. irreversibel",
+      "Verlauf",
+      "Ursachen",
+      "z. B. Schock/Sepsis vs. Diabetes/Hypertonie",
+      "Dauer",
+      "kurzfristig vs. dauerhaft/langfristig"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Differenzierungsmerkmal."
+  },
+  {
+    "q_id": "m8_nl_023",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier Bestandteile oder Parameter, die im Rahmen einer pflegerischen Flüssigkeitsbilanzierung erfasst werden müssen.",
+    "list_label": "Komponenten der Flüssigkeitsbilanz",
+    "count": 4,
+    "correct_answers": [
+      "Getränke (Einfuhr)",
+      "Infusionen (Einfuhr)",
+      "Urinmenge (Ausfuhr)",
+      "Erbrochenes/Durchfall (Ausfuhr)"
+    ],
+    "all_valid_answers": [
+      "Getränke",
+      "Trinkmenge",
+      "Infusionen",
+      "Parenterale Zufuhr",
+      "Sondennahrung",
+      "Wassergehalt fester Nahrung",
+      "Urinmenge",
+      "Miktion",
+      "Erbrochenes",
+      "Durchfall",
+      "Diarrhoe",
+      "Drainagemengen",
+      "Wundsekret",
+      "Blutverlust",
+      "Schweiß",
+      "Perspiratio"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benanntem Bilanzierungsparameter."
+  },
+  {
+    "q_id": "m8_nl_024",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei wichtige Ernährungsregeln, die Dialysepatienten zur Vermeidung von Elektrolyt- und Volumenstörungen beachten sollten.",
+    "list_label": "Ernährungsregeln bei Dialyse",
+    "count": 3,
+    "correct_answers": [
+      "Kaliumreduzierte Kost",
+      "Phosphatarme Kost",
+      "Trinkmengenbeschränkung"
+    ],
+    "all_valid_answers": [
+      "Kaliumreduzierte Kost",
+      "kaliumarme Ernährung",
+      "Phosphatarme Kost",
+      "wenig Phosphat",
+      "Trinkmengenbeschränkung",
+      "Flüssigkeitsrestriktion",
+      "Salzarme Kost",
+      "kochsalzarm",
+      "Eiweißkontrollierte Kost"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Regel."
+  },
+  {
+    "q_id": "m8_nl_025",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die vier grundlegenden Prinzipien der Motivierenden Gesprächsführung (Motivational Interviewing).",
+    "list_label": "Prinzipien des MI",
+    "count": 4,
+    "correct_answers": [
+      "Empathie ausdrücken",
+      "Diskrepanz entwickeln",
+      "Widerstand aufgreifen (geschmeidig damit umgehen)",
+      "Selbstwirksamkeit fördern"
+    ],
+    "all_valid_answers": [
+      "Empathie ausdrücken",
+      "Einfühlungsvermögen",
+      "Diskrepanz entwickeln",
+      "Unterschied zw. Ist und Soll zeigen",
+      "Widerstand aufgreifen",
+      "geschmeidig mit Widerstand umgehen",
+      "roll with resistance",
+      "Selbstwirksamkeit fördern",
+      "Zuversicht stärken",
+      "support self-efficacy"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m8_nl_026",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die drei Stufen oder Kernfähigkeiten der Gesundheitskompetenz (Health Literacy) nach Modul 8.9.",
+    "list_label": "Stufen der Gesundheitskompetenz",
+    "count": 3,
+    "correct_answers": [
+      "Finden",
+      "Verstehen",
+      "Beurteilen/Anwenden"
+    ],
+    "all_valid_answers": [
+      "Finden",
+      "Suchen",
+      "Recherchieren",
+      "Verstehen",
+      "Begreifen",
+      "Beurteilen",
+      "Bewerten",
+      "Anwenden",
+      "Umsetzen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Fähigkeit."
+  },
+  {
+    "q_id": "m8_nl_027",
+    "type": "nennen_liste",
+    "topic": "pflege_konzepte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die fünf Komponenten des bio-psycho-sozialen Modells der ICF (International Classification of Functioning).",
+    "list_label": "Komponenten der ICF",
+    "count": 5,
+    "correct_answers": [
+      "Körperfunktionen und -strukturen",
+      "Aktivitäten",
+      "Teilhabe (Partizipation)",
+      "Umweltfaktoren",
+      "Personbezogene Faktoren"
+    ],
+    "all_valid_answers": [
+      "Körperfunktionen und -strukturen",
+      "Biologische Aspekte",
+      "Aktivitäten",
+      "Leistungsfähigkeit",
+      "Teilhabe",
+      "Partizipation",
+      "Einbeziehung",
+      "Umweltfaktoren",
+      "Kontextfaktoren (extern)",
+      "Personbezogene Faktoren",
+      "Persönliche Faktoren",
+      "Kontextfaktoren (intern)"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro Komponente."
+  },
+  {
+    "q_id": "m8_nl_028",
+    "type": "nennen_liste",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie vier mögliche Nebenwirkungen einer Diuretikatherapie auf den Elektrolythaushalt.",
+    "list_label": "Elektrolytentgleisungen durch Diuretika",
+    "count": 4,
+    "correct_answers": [
+      "Hypokaliämie",
+      "Hyperkaliämie",
+      "Hypomagnesiämie",
+      "Hyperkalzämie/Hypokalzämie"
+    ],
+    "all_valid_answers": [
+      "Hypokaliämie",
+      "Kaliummangel",
+      "Hyperkaliämie",
+      "Kaliumüberschuss",
+      "Hypomagnesiämie",
+      "Magnesiummangel",
+      "Hyperkalzämie",
+      "Kalziumüberschuss",
+      "Hypokalzämie",
+      "Kalziummangel",
+      "Hyponatriämie",
+      "Natriummangel"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Störung."
+  },
+  {
+    "q_id": "m8_nl_029",
+    "type": "nennen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei wesentliche klinische Unterschiede zwischen COPD und Asthma bronchiale.",
+    "list_label": "COPD vs. Asthma",
+    "count": 3,
+    "correct_answers": [
+      "Reversibilität der Obstruktion",
+      "Verlauf (progredient vs. anfallsartig)",
+      "Häufigste Ursache (Rauchen vs. Allergie/Entzündung)"
+    ],
+    "all_valid_answers": [
+      "Reversibilität",
+      "reversibel (Asthma) vs. irreversibel (COPD)",
+      "Verlauf",
+      "progredient (COPD) vs. episodisch (Asthma)",
+      "Ursache",
+      "Tabakrauch vs. Allergene",
+      "Alter bei Erstdiagnose",
+      "Belastungsdyspnoe vs. anfallsartige Atemnot"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Differenzierungsmerkmal."
+  },
+  {
+    "q_id": "m8_nl_030",
+    "type": "nennen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie zwei häufige Ursachen und zwei lebensbedrohliche Folgen einer Hyperkaliämie.",
+    "list_label": "Ursachen und Folgen der Hyperkaliämie",
+    "count": 4,
+    "correct_answers": [
+      "Niereninsuffizienz (Ursache)",
+      "Kaliumsparende Diuretika (Ursache)",
+      "Herzrhythmusstörungen (Folge)",
+      "Herzstillstand (Folge)"
+    ],
+    "all_valid_answers": [
+      "Niereninsuffizienz",
+      "Nierenversagen",
+      "Kaliumsparende Diuretika",
+      "Aldosteron-Antagonisten",
+      "massive Zellzerstörung",
+      "Verbrennungen",
+      "Herzrhythmusstörungen",
+      "Arrhythmien",
+      "Herzstillstand",
+      "Asystolie",
+      "Lähmungen",
+      "Paresen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Nennung (2 Ursachen, 2 Folgen)."
+  },
+  {
+    "q_id": "m8_tab_001",
+    "type": "tabelle_3spalten",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vervollständigen Sie die Tabelle zu den Abschnitten des Nephrons.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Abschnitt",
+          "Hauptfunktion",
+          "Besonderheit"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Nierenkörperchen",
+                "keywords": ["Glomerulus", "Bowman"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Filtration des Blutes zum Primärharn",
+                "keywords": ["Filtration", "Primärharn"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Besteht aus Glomerulus & Bowman-Kapsel",
+                "keywords": ["Knäuel", "Kapsel"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Tubulusapparat",
+                "keywords": ["Tubulussystem", "Harnkanälchen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Rückgewinnung von Stoffen (Resorption) und Sekretion",
+                "keywords": ["Resorption", "Sekretion", "Konzentrierung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Besitzt die Henle-Schleife",
+                "keywords": ["Henle", "Mark"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_002",
+    "type": "tabelle_vergleich",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vergleichen Sie die beiden gängigen Dialyseverfahren.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Hämodialyse (HD)",
+          "Peritonealdialyse (PD)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Filtermembran",
+                "keywords": ["Filter", "Membran"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Künstliche Membran (Dialysator)",
+                "keywords": ["extrakorporal", "Dialysator", "Maschine"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Körpereigenes Bauchfell",
+                "keywords": ["Peritoneum", "Bauchfell"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Typischer Ort",
+                "keywords": ["Ort", "Durchführung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dialysezentrum / Klinik",
+                "keywords": ["Zentrum", "Krankenhaus"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Zuhause (Heimdialyse)",
+                "keywords": ["Heim", "Zuhause"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_003",
+    "type": "tabelle_3spalten",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie die drei Prozesse der Harnbildung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld (Ort/Beschreibung).",
+    "data": {
+      "table": {
+        "headers": [
+          "Prozess",
+          "Ort im Nephron",
+          "Kurzbeschreibung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Glomeruläre Filtration",
+                "keywords": ["Filtration"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Nierenkörperchen / Glomerulus",
+                "keywords": ["Bowman", "Kapsel"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Abpressen des zellfreien Primärharns aus dem Blut",
+                "keywords": ["Primärharn", "Druck", "Eiweißfrei"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Tubuläre Resorption",
+                "keywords": ["Resorption", "Rückgewinnung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Tubulusapparat",
+                "keywords": ["Kanälchen", "Harnkanälchen"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Rückgewinnung von Wasser und Nutztstoffen ins Blut",
+                "keywords": ["Wasser", "Glukose", "Elektrolyte"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_004",
+    "type": "tabelle_vergleich",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vergleichen Sie das Akute Nierenversagen (AKI) mit der Chronischen Nierenerkrankung (CKD).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Akutes Nierenversagen (AKI)",
+          "Chronische Nierenerkrankung (CKD)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Zeitlicher Verlauf",
+                "keywords": ["Beginn", "Dauer"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Plötzlich (Stunden bis Tage)",
+                "keywords": ["schnell", "akut"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Schleichend (Monate bis Jahre)",
+                "keywords": ["langsam", "langfristig"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Prognose",
+                "keywords": ["Heilung", "Reversibilität"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Potenziell heilbar (reversibel)",
+                "keywords": ["reversibel", "heilbar"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Fortschreitend (irreversibel)",
+                "keywords": ["irreversibel", "nicht heilbar"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Füllen Sie die Informationen zu den wichtigsten Elektrolyten aus.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Elektrolyt",
+          "Normalwert (Serum)",
+          "Zentrale Funktion/Gefahr"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Natrium (Na+)",
+                "keywords": ["Natrium"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "135 – 145 mmol/l",
+                "keywords": ["135", "145"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Regulation des Wasserhaushalts und osmotischen Drucks",
+                "keywords": ["Osmose", "Volumen", "Wasser"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kalium (K+)",
+                "keywords": ["Kalium"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "3,5 – 5,1 mmol/l",
+                "keywords": ["3,5", "5,1", "5,2"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Erregungsleitung; Gefahr von Herzrhythmusstörungen",
+                "keywords": ["Herz", "Rhythmus", "Nerven"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_006",
+    "type": "tabelle_vergleich",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Stellen Sie die Symptome von Dehydratation und Hyperhydratation gegenüber.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Symptom-Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Dehydratation (Wassermangel)",
+          "Hyperhydratation (Überwässerung)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Haut / Gewebe",
+                "keywords": ["Haut", "Turgor"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Stehende Hautfalten, trocken",
+                "keywords": ["Hautfalten", "Exsikkose"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ödeme (Schwellungen)",
+                "keywords": ["Ödem", "Beine"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Blutdruck / Venen",
+                "keywords": ["Kreislauf", "RR"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypotonie, kollabierte Halsvenen",
+                "keywords": ["niedrig", "RR"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypertonie, gestaute Halsvenen",
+                "keywords": ["hoch", "Stauung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_007",
+    "type": "tabelle_3spalten",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Differenzieren Sie die Diuretikagruppen.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Wirkstoffgruppe",
+          "Wirkort in der Niere",
+          "Einfluss auf Kaliumspiegel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Schleifendiuretika",
+                "keywords": ["Furosemid", "Torasemid"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Henle-Schleife",
+                "keywords": ["Henle"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hypokaliämie (Verlust)",
+                "keywords": ["Senkung", "niedrig"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kaliumsparende Diuretika",
+                "keywords": ["Aldosteronantagonisten", "Spironolacton"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Sammelrohr / distaler Tubulus",
+                "keywords": ["Sammelrohr", "Endstück"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Hyperkaliämie (Anstieg)",
+                "keywords": ["Anstieg", "Gefahr"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_008",
+    "type": "tabelle_vergleich",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vergleichen Sie die Symptomatik der Links- und Rechtsherzinsuffizienz.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom-Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Linksherzinsuffizienz",
+          "Rechtsherzinsuffizienz"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Stauungsort",
+                "keywords": ["Rückstau"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Lungenkreislauf",
+                "keywords": ["Lunge"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Körperkreislauf (Venen)",
+                "keywords": ["Körper", "Venen"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Typisches Symptom",
+                "keywords": ["Anzeichen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dyspnoe, Rasselgeräusche, Husten",
+                "keywords": ["Atemnot", "Lunge"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Beinödeme, gestaute Halsvenen",
+                "keywords": ["Schwellung", "Halsvene"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_009",
+    "type": "tabelle_3spalten",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die Herzklappen nach Typ und Lage zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Name der Klappe",
+          "Klappentyp",
+          "Lage (zwischen ...)"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Mitralklappe",
+                "keywords": ["Bikuspidalklappe"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Segelklappe",
+                "keywords": ["AV-Klappe"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "linkem Vorhof und Kammer",
+                "keywords": ["Atrium", "Ventrikel", "links"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Aortenklappe",
+                "keywords": ["Aorta"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Taschenklappe",
+                "keywords": ["Semilunarklappe"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "linker Kammer und Aorta",
+                "keywords": ["Kammer", "Aorta"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_010",
+    "type": "tabelle_3spalten",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie das Ampelschema bei der Peak-Flow-Messung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Farbe",
+          "Peak-Flow-Wert (% vom Bestwert)",
+          "Bedeutung / Maßnahme"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Gelb",
+                "keywords": ["Mittel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "50 – 80 %",
+                "keywords": ["50", "80"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Vorsicht; Therapie nach Plan intensivieren",
+                "keywords": ["Vorsicht", "Anpassung", "Arzt"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Rot",
+                "keywords": ["Gefahr"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "< 50 %",
+                "keywords": ["50", "unter"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gefahr / Notfall; sofort Notfallmedikament und Arzt",
+                "keywords": ["Gefahr", "Notfall", "Klinik"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_011",
+    "type": "tabelle_vergleich",
+    "topic": "atmung_asthma",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Unterscheiden Sie Asthma bronchiale und COPD.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Asthma bronchiale",
+          "COPD"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Verlaufstyp",
+                "keywords": ["Auftreten"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Episodisch / anfallsartig",
+                "keywords": ["Anfall", "schubweise"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Dauerhaft / progredient",
+                "keywords": ["fortschreitend", "chronisch"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Reversibilität",
+                "keywords": ["Heilbarkeit", "Umkehrbarkeit"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Weitgehend reversibel",
+                "keywords": ["umkehrbar", "reversibel"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Kaum reversibel (fixiert)",
+                "keywords": ["irreversibel", "fixiert"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_012",
+    "type": "tabelle_3spalten",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Analysieren Sie die Parameter der Urinteststreifendiagnostik.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Parameter",
+          "Normalbefund",
+          "Mögliche pathologische Ursache"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Glukose",
+                "keywords": ["Zucker"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Negativ",
+                "keywords": ["kein"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Diabetes mellitus (Nierenschwelle überschritten)",
+                "keywords": ["Diabetes", "Zucker", "Insulin"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Leukozyten",
+                "keywords": ["Leukos"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Negativ",
+                "keywords": ["kein"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Bakterielle Infektion der Harnwege",
+                "keywords": ["Infekt", "HWI", "Entzündung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_013",
+    "type": "tabelle_vergleich",
+    "topic": "pflege_konzepte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vergleichen Sie die Denkmodelle Pathogenese und Salutogenese.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Frage/Orientierung",
+          "Pathogenese",
+          "Salutogenese"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Kernfrage",
+                "keywords": ["Fokus"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Was macht den Menschen krank?",
+                "keywords": ["krank", "Ursache"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Was erhält den Menschen gesund?",
+                "keywords": ["gesund", "Ressourcen"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Ziel der Pflege",
+                "keywords": ["Maßnahme"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Krankheitsbekämpfung",
+                "keywords": ["Defizit", "Behandlung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Gesundheitsförderung",
+                "keywords": ["Ressourcen", "Stärkung"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_014",
+    "type": "tabelle_3spalten",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Definieren Sie die Formen der pflegerischen Patientenunterstützung.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Form",
+          "Definition",
+          "Beispiel"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Anleiten",
+                "keywords": ["Anleitung"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Gezielte Vermittlung praktischer Fertigkeiten",
+                "keywords": ["praktisch", "Fertigkeit", "Vormachen"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Inhalationstechnik zeigen",
+                "keywords": ["Inhalation", "Insulin", "Spritze"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Informieren",
+                "keywords": ["Information"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Weitergabe von Sachwissen",
+                "keywords": ["Wissen", "Fakten", "Sachebene"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Ablauf der Dialyse erklären",
+                "keywords": ["Ablauf", "Termin"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_tab_015",
+    "type": "tabelle_3spalten",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Vervollständigen Sie die Tabelle zu den Stadien der Niereninsuffizienz (nach MDRD).",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld (GFR/Beschreibung).",
+    "data": {
+      "table": {
+        "headers": [
+          "Stadium",
+          "GFR-Bereich (ml/min)",
+          "Beschreibung"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Stadium 3",
+                "keywords": ["III"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "30 – 59 ml/min",
+                "keywords": ["30", "59"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Mittelschwere Funktionseinschränkung",
+                "keywords": ["mittelschwer", "Insuffizienz"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Stadium 5",
+                "keywords": ["V"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "< 15 ml/min",
+                "keywords": ["15", "unter"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Terminale Niereninsuffizienz / Dialysepflicht",
+                "keywords": ["terminal", "Dialyse", "Versagen"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_ft_001",
+    "type": "freitext_box",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie den grundlegenden Aufbau und die Funktion des Nephrons als kleinste Funktionseinheit der Niere.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach fachlicher Korrektheit und Ausführlichkeit.",
+    "data": {
+      "box_label": "Aufbau und Funktion des Nephrons",
+      "correct_answer": "Das Nephron besteht aus dem Nierenkörperchen zur Filtration und dem Tubulussystem zur Stoffrückgewinnung. Im Nierenkörperchen, bestehend aus Glomerulus und Bowman-Kapsel, wird das Blut gefiltert und der sogenannte Primärharn gebildet. Das anschließende Tubulussystem dient der Rückresorption wichtiger Stoffe wie Wasser und Elektrolyte sowie der aktiven Sekretion von Abfallstoffen. Am Ende dieses Prozesses entsteht der konzentrierte Sekundärharn, der über die Sammelrohre in das Nierenbecken geleitet wird.",
+      "keywords": [
+        "Nierenkörperchen",
+        "Tubulusapparat",
+        "Filtration",
+        "Resorption",
+        "Glomerulus",
+        "Primärharn"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_002",
+    "type": "freitext_box",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie die drei wesentlichen Prozesse der Harnbildung (Filtration, Resorption, Sekretion).",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Vollständigkeit der Prozessbeschreibungen.",
+    "data": {
+      "box_label": "Prozesse der Harnbildung",
+      "correct_answer": "Die Harnbildung beginnt mit der glomerulären Filtration im Nierenkörperchen, bei der durch Druck der eiweißfreie Primärharn aus dem Blut abgepresst wird. Im folgenden Tubulusapparat findet die tubuläre Resorption statt, bei der etwa 99 % des Wassers und lebenswichtige Stoffe wie Glukose zurück ins Blut gelangen. Gleichzeitig erfolgt die tubuläre Sekretion, bei der bestimmte Abbauprodukte und Medikamente aktiv aus dem Blut in den Harn abgegeben werden. Das Ergebnis dieser komplexen Vorgänge ist der fertige, stark konzentrierte Sekundärharn.",
+      "keywords": [
+        "Glomeruläre Filtration",
+        "Tubuläre Resorption",
+        "Aktive Sekretion",
+        "Primärharn",
+        "Sekundärharn"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_003",
+    "type": "freitext_box",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erklären Sie die Rolle von ADH und Aldosteron in der Regulation des Wasser-Elektrolyt-Haushalts.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Beide Hormone müssen in ihrer Wirkung korrekt beschrieben werden.",
+    "data": {
+      "box_label": "Hormonelle Regulation",
+      "correct_answer": "ADH (Antidiuretisches Hormon) wird bei hoher Plasmaosmolarität ausgeschüttet und bewirkt in den Sammelrohren der Niere eine verstärkte Rückgewinnung von freiem Wasser. Aldosteron hingegen wird im Rahmen des RAAS-Systems freigesetzt und fördert primär die Rückresorption von Natrium, wodurch Wasser osmotisch folgt und das Blutvolumen steigt. Gleichzeitig sorgt Aldosteron für eine vermehrte Ausscheidung von Kalium über die Niere. Beide Hormone wirken somit zusammen wasserrückhaltend und regulieren den Blutdruck sowie die Elektrolytkonzentration.",
+      "keywords": [
+        "Wasserrückgewinnung",
+        "Natriumrückresorption",
+        "Plasmaosmolarität",
+        "RAAS",
+        "Sammelrohr",
+        "Antidiuretisches Hormon"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_004",
+    "type": "freitext_box",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Begründen Sie, warum bei Dialysepatienten eine kaliumreduzierte und phosphatarme Ernährung medizinisch notwendig ist.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Begründung muss beide Stoffe und deren Gefahren (Herz/Knochen) enthalten.",
+    "data": {
+      "box_label": "Ernährung bei Dialyse",
+      "correct_answer": "Da geschädigte Nieren Kalium nicht mehr ausreichend ausscheiden können, droht eine lebensgefährliche Hyperkaliämie, die zu schweren Herzrhythmusstörungen bis hin zum Stillstand führen kann. Eine phosphatarme Ernährung ist notwendig, da ein chronisch erhöhter Phosphatspiegel langfristig zu krankhaften Knochenveränderungen und Gefäßverkalkungen führt. Da die Dialyse allein diese Stoffe oft nicht ausreichend entfernen kann, ist die diätetische Steuerung durch den Patienten essenziell. Eine konsequente Auswahl und spezielle Zubereitung der Lebensmittel schützt somit vor akutem und chronischem Organversagen.",
+      "keywords": [
+        "Hyperkaliämie",
+        "Herzrhythmusstörungen",
+        "Knochenstoffwechsel",
+        "Gefäßverkalkung",
+        "Phosphatbinder"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_005",
+    "type": "freitext_box",
+    "topic": "dialyse",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie das Prinzip der Hämodialyse und die spezifische Funktion des Dialysators.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Berücksichtigung von Membran, Diffusion und Gegenstromprinzip.",
+    "data": {
+      "box_label": "Prinzip Hämodialyse",
+      "correct_answer": "Bei der Hämodialyse wird das Blut des Patienten extrakorporal in einem Dialysator gereinigt, der als künstliche Niere fungiert. Im Dialysator fließt das Blut an einer semipermeablen Membran vorbei, auf deren anderer Seite die Dialyseflüssigkeit im Gegenstromprinzip geleitet wird. Durch Diffusion wandern harnpflichtige Substanzen und überschüssige Elektrolyte entlang des Konzentrationsgefälles vom Blut in die Dialyselösung. Zusätzlich kann durch Ultrafiltration kontrolliert überschüssiges Wasser aus dem Blut entfernt werden, bevor es gereinigt zum Patienten zurückkehrt.",
+      "keywords": [
+        "Extrakorporal",
+        "Semipermeable Membran",
+        "Diffusion",
+        "Gegenstromprinzip",
+        "Ultrafiltration"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_006",
+    "type": "freitext_box",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie die wesentlichen Unterschiede zwischen der Hämodialyse und der Peritonealdialyse.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Unterschiede in Ort, Filtermedium und Zugang müssen genannt werden.",
+    "data": {
+      "box_label": "Vergleich HD vs. PD",
+      "correct_answer": "Die Hämodialyse ist ein extrakorporales Verfahren, bei dem das Blut meist dreimal pro Woche in einem Zentrum über eine Maschine und einen künstlichen Filter gereinigt wird. Im Gegensatz dazu nutzt die Peritonealdialyse das körpereigene Bauchfell (Peritoneum) als semipermeable Membran für den Stoffaustausch direkt im Körper. Hierbei wird eine Dialyselösung über einen Bauchwandkatheter eingeleitet, die dort für einige Stunden verbleibt und anschließend ausgetauscht wird. Während die Hämodialyse einen Gefäßshunt erfordert, bietet die Peritonealdialyse dem Patienten oft mehr zeitliche Flexibilität im häuslichen Umfeld.",
+      "keywords": [
+        "Extrakorporal vs. Intrakorporal",
+        "Bauchfell",
+        "Dialyseshunt",
+        "PD-Katheter",
+        "Heimdialyse"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_007",
+    "type": "freitext_box",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erklären Sie die Pathophysiologie der chronischen Niereninsuffizienz und die Entstehung der Urämie.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Fokus auf Nephronverlust und Retention von Giftstoffen.",
+    "data": {
+      "box_label": "Pathophysiologie CKD",
+      "correct_answer": "Die chronische Niereninsuffizienz ist ein schleichender Prozess, bei dem funktionsfähige Nephrone dauerhaft zugrunde gehen, oft infolge von Diabetes oder Bluthochdruck. Wenn die verbleibenden Nephrone den Verlust nicht mehr kompensieren können, sinkt die glomeruläre Filtrationsrate (GFR) unter kritische Werte. Dies führt zur Retention harnpflichtiger Substanzen wie Kreatinin und Harnstoff im Blut, was als Urämie oder Harnvergiftung bezeichnet wird. Dieser Zustand verursacht vielfältige Symptome wie Juckreiz, Übelkeit und neurologische Störungen und führt letztlich zur Dialysepflichtigkeit.",
+      "keywords": [
+        "Nephronverlust",
+        "GFR",
+        "Harnpflichtige Substanzen",
+        "Retention",
+        "Harnvergiftung",
+        "Urämie"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_008",
+    "type": "freitext_box",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Begründen Sie, warum am Shuntarm eines Dialysepatienten kein Blutdruck gemessen und kein Blut abgenommen werden darf.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Begründung muss das Risiko für Thrombose und Funktionsverlust enthalten.",
+    "data": {
+      "box_label": "Besonderheiten der Shuntpflege",
+      "correct_answer": "Ein Dialyseshunt ist eine künstliche Gefäßverbindung, die einen hohen Blutfluss sicherstellt und sehr empfindlich auf äußeren Druck und Verletzungen reagiert. Eine Blutdruckmessung mit der Manschette kann den Shunt komprimieren, was das Risiko für eine Thrombose oder einen kompletten Shuntverschluss massiv erhöht. Venenpunktionen bergen zudem die Gefahr von Infektionen oder Wandverletzungen, die diesen lebensnotwendigen Zugang dauerhaft unbrauchbar machen könnten. Zum Erhalt des Shunts müssen daher alle medizinischen Routinemaßnahmen konsequent am anderen Arm durchgeführt werden.",
+      "keywords": [
+        "AV-Fistel",
+        "Shuntverschluss",
+        "Thrombosegefahr",
+        "Kompression",
+        "Infektionsrisiko"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_009",
+    "type": "freitext_box",
+    "topic": "herz_kreislauf",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie die Pathophysiologie der Linksherzinsuffizienz und deren spezifische Auswirkung auf die Lungenfunktion.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Kausalkette: Pumpleistung -> Rückstau -> Ödem -> Dyspnoe.",
+    "data": {
+      "box_label": "Pathophysiologie Linksherzinsuffizienz",
+      "correct_answer": "Bei einer Linksherzinsuffizienz ist die linke Herzkammer nicht mehr fähig, das Blut ausreichend in den Körperkreislauf zu pumpen. Dies führt zu einem Rückstau des Blutes in den Lungenkreislauf, wodurch der Druck in den Lungenkapillaren pathologisch ansteigt. Infolgedessen wird Flüssigkeit aus den Gefäßen in das Lungengewebe und die Alveolen abgepresst, was sich klinisch als Lungenödem äußert. Die betroffenen Patienten leiden unter massiver Atemnot (Dyspnoe), Rasselgeräuschen und oft einem quälenden Hustenreiz.",
+      "keywords": [
+        "Rückwärtsversagen",
+        "Lungenstauung",
+        "Lungenödem",
+        "Dyspnoe",
+        "Kapillardruck"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_010",
+    "type": "freitext_box",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie das Ampelschema beim Asthma bronchiale und die jeweils damit verbundenen pflegerischen/medizinischen Maßnahmen.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Alle drei Farbbereiche mit korrekter Bedeutung und Handlung.",
+    "data": {
+      "box_label": "Ampelschema Asthma",
+      "correct_answer": "Das Ampelschema dient der Selbstkontrolle mittels Peak-Flow-Meter und unterteilt die Werte basierend auf dem persönlichen Bestwert des Patienten. Der grüne Bereich (80–100 %) bedeutet Stabilität und die Beibehaltung der normalen Basistherapie. Der gelbe Bereich (50–80 %) signalisiert eine Verschlechterung, die eine Intensivierung der Therapie nach einem festen Plan erfordert. Werte im roten Bereich (unter 50 %) bedeuten akute Gefahr, bei der sofort das Notfallmedikament eingenommen und ärztliche Hilfe aufgesucht werden muss.",
+      "keywords": [
+        "Peak-Flow-Messung",
+        "Selbstkontrolle",
+        "Bestwert",
+        "Notfallmedikation",
+        "Therapieplan"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_011",
+    "type": "freitext_box",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erklären Sie den Unterschied zwischen Anleiten, Informieren, Schulen und Beraten im Kontext der pflegerischen Patientenunterstützung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Alle vier Begriffe müssen voneinander abgegrenzt werden.",
+    "data": {
+      "box_label": "Formen der Patientenunterstützung",
+      "correct_answer": "Informieren bezeichnet die bloße Weitergabe von Fakten, während Anleiten die Vermittlung praktischer Fertigkeiten durch Vormachen und Üben umfasst. Schulen ist ein strukturierter, oft längerfristiger Prozess zur Förderung der Selbstmanagementkompetenz bei chronischen Erkrankungen. Beraten hingegen ist ein interaktiver Prozess, bei dem gemeinsam individuelle Lösungen erarbeitet werden, wobei die Entscheidungsautonomie des Patienten im Vordergrund steht. Alle vier Formen ergänzen sich gegenseitig, um die Gesundheitskompetenz der Patienten nachhaltig zu stärken.",
+      "keywords": [
+        "Wissensvermittlung",
+        "Praktische Fertigkeiten",
+        "Selbstmanagement",
+        "Entscheidungsautonomie",
+        "Edukation"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_012",
+    "type": "freitext_box",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Begründen Sie, warum die Methode der Motivierenden Gesprächsführung (MI) besonders bei chronisch kranken Menschen geeignet ist.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Fokus auf intrinsische Motivation und Umgang mit Widerstand.",
+    "data": {
+      "box_label": "Motivierende Gesprächsführung",
+      "correct_answer": "Chronisch Kranke müssen dauerhaft ihren Lebensstil anpassen, was häufig mit Ambivalenz und innerem Widerstand verbunden ist. MI setzt hier an, indem sie nicht belehrt, sondern die intrinsische Motivation des Patienten durch Empathie und das Aufzeigen von Diskrepanzen fördert. Durch den wertschätzenden Umgang mit Widerstand und die gezielte Stärkung der Selbstwirksamkeit wird der Patient zum Experten seiner eigenen Veränderung. Dies führt nachweislich zu einer höheren Adhärenz und einer besseren langfristigen Krankheitsbewältigung.",
+      "keywords": [
+        "Ambivalenz",
+        "Intrinsische Motivation",
+        "Selbstwirksamkeit",
+        "Widerstand aufgreifen",
+        "Adhärenz"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_013",
+    "type": "freitext_box",
+    "topic": "pflege_konzepte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie das Konzept der Salutogenese und diskutieren Sie dessen Bedeutung für die pflegerische Versorgung chronisch Kranker.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Berücksichtigung von Kohärenzgefühl und Ressourcenorientierung.",
+    "data": {
+      "box_label": "Konzept der Salutogenese",
+      "correct_answer": "Die Salutogenese konzentriert sich nicht auf die Entstehung von Krankheit (Pathogenese), sondern auf die Faktoren, die einen Menschen trotz Belastungen gesund erhalten. Ein zentrales Element ist das Kohärenzgefühl, das beschreibt, wie verstehbar, bewältigbar und sinnvoll eine Person ihre Lebenssituation empfindet. In der Pflege bedeutet dies, den Fokus konsequent auf die vorhandenen Ressourcen und Stärken des Patienten zu legen, anstatt nur Defizite zu therapieren. Ziel ist es, das subjektive Wohlbefinden und die Bewältigungskompetenz trotz chronischer Einschränkungen zu maximieren.",
+      "keywords": [
+        "Gesundheitsentstehung",
+        "Kohärenzgefühl",
+        "Ressourcenorientierung",
+        "Bewältigungsstrategie",
+        "Resilienz"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_014",
+    "type": "freitext_box",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie die praktische Durchführung einer Flüssigkeitsbilanzierung und erläutern Sie deren klinische Relevanz.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Korrekte Benennung von Einfuhr/Ausfuhr und Relevanz für Herz/Niere.",
+    "data": {
+      "box_label": "Flüssigkeitsbilanzierung",
+      "correct_answer": "Bei der Flüssigkeitsbilanzierung werden über meist 24 Stunden alle Einfuhren wie Getränke und Infusionen den Ausfuhren wie Urin oder Erbrochenem gegenübergestellt. Die klinische Relevanz liegt in der Früherkennung von Ödemen bei einer positiven Bilanz oder einer Dehydratation bei einer stark negativen Bilanz. Besonders bei Herz- und Niereninsuffizienz ermöglicht dies eine präzise Steuerung der Trinkmengen und Diuretikagaben durch das medizinische Team. Eine lückenlose Dokumentation ist dabei Voraussetzung für eine sichere Therapieentscheidung.",
+      "keywords": [
+        "Einfuhr-Ausfuhr-Vergleich",
+        "Volumenmanagement",
+        "Ödemprophylaxe",
+        "Exsikkose",
+        "Dokumentation"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_ft_015",
+    "type": "freitext_box",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erklären Sie die Wirkungsweise von ACE-Hemmern und deren spezifische nierenschützende Funktion bei Patienten mit Niereninsuffizienz.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Fokus auf Drucksenkung im Nierenkörperchen (Vas efferens).",
+    "data": {
+      "box_label": "Wirkung ACE-Hemmer",
+      "correct_answer": "ACE-Hemmer blockieren das Enzym, das Angiotensin I in das gefäßverengende Angiotensin II umwandelt, was primär den Blutdruck senkt. Spezifisch in der Niere bewirken sie eine Weitung des wegführenden Gefäßes (Vas efferens), wodurch der Filtrationsdruck im Nierenkörperchen sinkt. Diese Druckentlastung schützt die glomerulären Membranen vor mechanischer Schädigung und verlangsamt das Fortschreiten einer chronischen Niereninsuffizienz. Daher sind sie ein zentraler Baustein der Nephroprotektion, besonders bei diabetischen Begleiterkrankungen.",
+      "keywords": [
+        "Angiotensin-Converting-Enzym",
+        "Vasokonstriktion",
+        "Filtrationsdruck",
+        "Nephroprotektion",
+        "Vas efferens"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_zu_001",
+    "type": "zuordnung",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die Hormone ihren spezifischen Wirkungen auf den Wasser- und Elektrolythaushalt zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "ADH (Antidiuretisches Hormon)",
+        "B": "Aldosteron",
+        "C": "ANP (Atriales natriuretisches Peptid)",
+        "D": "Renin"
+      },
+      "statements": [
+        {
+          "text": "Fördert die Rückgewinnung von freiem Wasser in den Sammelrohren der Niere.",
+          "answer": "A"
+        },
+        {
+          "text": "Bewirkt eine gesteigerte Natriumrückresorption und damit verbunden eine Kaliumausscheidung.",
+          "answer": "B"
+        },
+        {
+          "text": "Wirkt als Gegenspieler von ADH und Aldosteron und fördert die Harnausscheidung.",
+          "answer": "C"
+        },
+        {
+          "text": "Startenzym des RAAS, das zur Bildung von Angiotensin II und damit zur Blutdrucksteigerung führt.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_zu_002",
+    "type": "zuordnung",
+    "topic": "pharmakologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die Diuretika-Gruppen ihrem primären Wirkort und dem Effekt auf den Kaliumspiegel zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Schleifendiuretika",
+        "B": "Thiaziddiuretika",
+        "C": "Kaliumsparende Diuretika"
+      },
+      "statements": [
+        {
+          "text": "Wirken stark an der Henle-Schleife und führen zu einem deutlichen Kaliumverlust (Hypokaliämie).",
+          "answer": "A"
+        },
+        {
+          "text": "Angriffspunkt im distalen Tubulus; Nebenwirkung ist ein moderater Kaliumabfall.",
+          "answer": "B"
+        },
+        {
+          "text": "Wirken schwach im Sammelrohr und können zu einem gefährlichen Kaliumanstieg (Hyperkaliämie) führen.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_zu_003",
+    "type": "zuordnung",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die Abschnitte des Nephrons ihren zentralen physiologischen Funktionen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Glomerulus",
+        "B": "Proximaler Tubulus",
+        "C": "Henle-Schleife",
+        "D": "Sammelrohr"
+      },
+      "statements": [
+        {
+          "text": "Ort der mechanischen Filtration des Blutes zur Gewinnung des Primärharns.",
+          "answer": "A"
+        },
+        {
+          "text": "Hauptort der Rückresorption (ca. 2/3) von Wasser, Elektrolyten sowie 100% Glukose.",
+          "answer": "B"
+        },
+        {
+          "text": "Dient der Konzentrierung des Harns durch einen Haarnadelbogen im Nierenmark.",
+          "answer": "C"
+        },
+        {
+          "text": "Letzte Instanz der Harnsammelwege vor dem Nierenbecken; Ort der hormonell gesteuerten Wasserregulation.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_zu_004",
+    "type": "zuordnung",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die Formen der Herzinsuffizienz den jeweils typischen klinischen Leitsymptomen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Linksherzinsuffizienz",
+        "B": "Rechtsherzinsuffizienz",
+        "C": "Globale Herzinsuffizienz"
+      },
+      "statements": [
+        {
+          "text": "Rückstau in die Lunge mit Belastungsdyspnoe, Rasselgeräuschen und Husten.",
+          "answer": "A"
+        },
+        {
+          "text": "Rückstau in den Körperkreislauf mit gestauten Halsvenen, Beinödemen und Aszites.",
+          "answer": "B"
+        },
+        {
+          "text": "Kombination der Symptome beider Herzhälften durch gleichzeitige Leistungsminderung beider Ventrikel.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_zu_005",
+    "type": "zuordnung",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die pflegerischen Beratungs- und Edukationsformen den korrekten Beschreibungen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Anleiten",
+        "B": "Informieren",
+        "C": "Schulen",
+        "D": "Beraten"
+      },
+      "statements": [
+        {
+          "text": "Gezielte Vermittlung von praktischen Fertigkeiten durch Vormachen und gemeinsames Üben (z. B. Inhalationstechnik) [Handout M8.2].",
+          "answer": "A"
+        },
+        {
+          "text": "Einseitige Weitergabe von Sachwissen und Fakten ohne zwingende Erfolgskontrolle [Handout M8.2].",
+          "answer": "B"
+        },
+        {
+          "text": "Strukturierter, oft mehrteiliger Prozess zur Förderung des Selbstmanagements bei chronischer Krankheit [Power Point Asthmaschulung].",
+          "answer": "C"
+        },
+        {
+          "text": "Interaktiver Prozess zur gemeinsamen Lösungsfindung unter Wahrung der Entscheidungsautonomie des Klienten [Handout M8.2].",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ergänzen Sie die fehlenden anatomischen Abschnitte eines vollständigen Nephrons in der richtigen Reihenfolge des Harnflusses.",
+    "points": 3,
+    "data": {
+      "list_label": "Bestandteile des Nephrons",
+      "given_items": [
+        "Glomerulus",
+        "Bowman-Kapsel",
+        "Proximaler Tubulus"
+      ],
+      "missing_items": [
+        "Henle-Schleife",
+        "Distaler Tubulus",
+        "Sammelrohr"
+      ],
+      "all_valid_missing": [
+        "Henle-Schleife",
+        "intermediärer Tubulus",
+        "Distaler Tubulus",
+        "Mittelstück",
+        "Sammelrohr",
+        "Tubulus reuniens"
+      ]
+    }
+  },
+  {
+    "q_id": "m8_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Ergänzen Sie die drei fehlenden Mengenelemente, die im klinischen Alltag wesentlicher Bestandteil des Elektrolythaushaltes sind.",
+    "points": 3,
+    "data": {
+      "list_label": "Wichtige Körperelektrolyte",
+      "given_items": [
+        "Natrium",
+        "Kalium",
+        "Kalzium"
+      ],
+      "missing_items": [
+        "Magnesium",
+        "Chlorid",
+        "Phosphat"
+      ],
+      "all_valid_missing": [
+        "Magnesium",
+        "Chlorid",
+        "Phosphat",
+        "Mg",
+        "Cl",
+        "P"
+      ]
+    }
+  },
+  {
+    "q_id": "m8_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ergänzen Sie zwei weitere pathologische Parameter, die mittels eines Urinteststreifens (Stix) nachgewiesen werden können.",
+    "points": 2,
+    "data": {
+      "list_label": "Parameter der Urinteststreifendiagnostik",
+      "given_items": [
+        "Protein",
+        "Glukose",
+        "Erythrozyten"
+      ],
+      "missing_items": [
+        "Leukozyten",
+        "Ketonkörper"
+      ],
+      "all_valid_missing": [
+        "Leukozyten",
+        "Leukos",
+        "Ketonkörper",
+        "Ketone",
+        "Nitrit",
+        "Urobilinogen",
+        "Bilirubin"
+      ]
+    }
+  },
+  {
+    "q_id": "m8_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ergänzen Sie die fehlenden Farbbereiche des Asthma-Ampelschemas inklusive ihrer Peak-Flow-Prozentwerte (vom Bestwert).",
+    "points": 2,
+    "data": {
+      "list_label": "Peak-Flow Ampelschema",
+      "given_items": [
+        "Grün (80 - 100%)"
+      ],
+      "missing_items": [
+        "Gelb (50 - 80%)",
+        "Rot (unter 50%)"
+      ],
+      "all_valid_missing": [
+        "Gelb (50-80%)",
+        "Warnbereich",
+        "Rot (unter 50%)",
+        "Gefahrenbereich",
+        "Notfall"
+      ]
+    }
+  },
+  {
+    "q_id": "m8_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Ergänzen Sie die Bezeichnungen für die fortgeschrittenen Stadien der Niereninsuffizienz nach der MDRD-Klassifikation.",
+    "points": 3,
+    "data": {
+      "list_label": "Stadien der chronischen Nierenerkrankung",
+      "given_items": [
+        "Stadium 1: Nierenschädigung mit normaler GFR",
+        "Stadium 2: Nierenschädigung mit leichter Funktionseinschränkung"
+      ],
+      "missing_items": [
+        "Stadium 3: Mittelschwere Funktionseinschränkung",
+        "Stadium 4: Hochgradige Funktionseinschränkung",
+        "Stadium 5: Terminale Niereninsuffizienz"
+      ],
+      "all_valid_missing": [
+        "Stadium 3",
+        "mittelschwer",
+        "Stadium 4",
+        "hochgradig",
+        "Stadium 5",
+        "terminal",
+        "Dialysepflicht"
+      ]
+    }
+  },
+  {
+    "q_id": "m8_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie die „Glomeruläre Filtrationsrate (GFR)“ und **nennen** Sie drei Faktoren, welche diesen Wert maßgeblich beeinflussen können.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition GFR",
+      "definition_correct": "Die GFR beschreibt das Gesamtvolumen an Primärharn, das von allen Nierenkörperchen beider Nieren pro Zeiteinheit filtriert wird. Sie gilt als wichtigster Parameter zur Beurteilung der renalen Filterleistung und zur Stadieneinteilung einer Niereninsuffizienz.",
+      "definition_keywords": [
+        "Filterleistung",
+        "Primärharn",
+        "Volumen pro Zeiteinheit",
+        "Nierenkörperchen",
+        "Clearance"
+      ],
+      "definition_points": 3,
+      "examples_label": "Einflussfaktoren",
+      "examples_count": 3,
+      "correct_examples": [
+        "Blutdruck (Autoregulation zwischen 80-180 mmHg)",
+        "Alter (physiologische Abnahme)",
+        "Nierenerkrankungen (z. B. Diabetes mellitus, Hypertonie)"
+      ],
+      "all_valid_examples": [
+        "Blutdruck",
+        "Alter",
+        "Diabetes mellitus",
+        "Hypertonie",
+        "Anzahl funktionsfähiger Nephrone",
+        "Flüssigkeitsstatus"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m8_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff „Urämie“ und **nennen** Sie vier typische klinische Symptome dieses Zustandes.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition Urämie",
+      "definition_correct": "Urämie bezeichnet die „Harnvergiftung“, also das klinische Zustandsbild bei fortgeschrittener Niereninsuffizienz, das durch die Retention (Rückhaltung) harnpflichtiger Substanzen (z. B. Kreatinin, Harnstoff) im Blut entsteht.",
+      "definition_keywords": [
+        "Harnvergiftung",
+        "Retention",
+        "harnpflichtige Substanzen",
+        "Nierenversagen",
+        "Kumulation"
+      ],
+      "definition_points": 3,
+      "examples_label": "Symptome",
+      "examples_count": 4,
+      "correct_examples": [
+        "Juckreiz (Pruritus)",
+        "Harnähnlicher Mundgeruch (Foetor uraemicus)",
+        "Übelkeit und Erbrechen",
+        "Gelblich-braune Hautfärbung"
+      ],
+      "all_valid_examples": [
+        "Juckreiz",
+        "Pruritus",
+        "Foetor uraemicus",
+        "Mundgeruch",
+        "Übelkeit",
+        "Erbrechen",
+        "Hautveränderungen",
+        "Ödeme",
+        "Müdigkeit",
+        "Enzephalopathie",
+        "Appetitlosigkeit"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m8_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff „Hämodialyse“ und **nennen** Sie drei mögliche Akutkomplikationen, die während der Behandlung auftreten können.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Hämodialyse",
+      "definition_correct": "Die Hämodialyse ist ein extrakorporales Nierenersatzverfahren, bei dem das Blut des Patienten über einen Dialysator (künstliche Niere) geleitet wird. Dort findet über eine semipermeable Membran mittels Diffusion und Ultrafiltration die Reinigung von Abfallstoffen und der Entzug von überschüssigem Wasser statt.",
+      "definition_keywords": [
+        "extrakorporal",
+        "Dialysator",
+        "semipermeable Membran",
+        "Diffusion",
+        "Ultrafiltration"
+      ],
+      "definition_points": 3,
+      "examples_label": "Akutkomplikationen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Blutdruckabfall (intradialytische Hypotonie)",
+        "Muskelkrämpfe (Wadenkrämpfe)",
+        "Übelkeit und Erbrechen"
+      ],
+      "all_valid_examples": [
+        "Hypotonie",
+        "Blutdruckabfall",
+        "Muskelkrämpfe",
+        "Wadenkrämpfe",
+        "Übelkeit",
+        "Erbrechen",
+        "Herzrhythmusstörungen",
+        "Kopfschmerzen",
+        "Schwindel"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m8_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie „Gesundheitskompetenz (Health Literacy)“ und **nennen** Sie die drei wesentlichen Stufen bzw. Kernkompetenzen nach Modul 8.9.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Gesundheitskompetenz",
+      "definition_correct": "Gesundheitskompetenz ist die Fähigkeit des Einzelnen, im Alltag Entscheidungen zu treffen, die sich positiv auf die Gesundheit auswirken. Sie umfasst das Wissen und die Motivation, Gesundheitsinformationen auf eine Weise zu nutzen, die zur Erhaltung oder Verbesserung der Lebensqualität beitragen.",
+      "definition_keywords": [
+        "Entscheidungsfähigkeit",
+        "Umgang mit Informationen",
+        "Gesundheitsförderung",
+        "Lebensqualität",
+        "Wissen"
+      ],
+      "definition_points": 3,
+      "examples_label": "Stufen/Kompetenzen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Finden (Suchen von Informationen)",
+        "Verstehen (Begreifen der Inhalte)",
+        "Beurteilen / Anwenden (Kritisches Bewerten und Umsetzen)"
+      ],
+      "all_valid_examples": [
+        "Finden",
+        "Verstehen",
+        "Beurteilen",
+        "Anwenden",
+        "Suchen",
+        "Bewerten"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m8_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "herz_kreislauf",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff „Cor pulmonale“ und **nennen** Sie drei mögliche Ursachen für diese Erkrankung.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Cor pulmonale",
+      "definition_correct": "Ein Cor pulmonale ist eine Hypertrophie und/oder Dilatation der rechten Herzkammer infolge einer Druckerhöhung im Lungenkreislauf (pulmonale Hypertonie), die durch primäre Erkrankungen der Lunge oder der Lungengefäße verursacht wird.",
+      "definition_keywords": [
+        "Rechtsherzveränderung",
+        "Lungenhochdruck",
+        "pulmonale Hypertonie",
+        "Lungenerkrankung",
+        "Rechtsherzbelastung"
+      ],
+      "definition_points": 3,
+      "examples_label": "Ursachen",
+      "examples_count": 3,
+      "correct_examples": [
+        "COPD (chronisch obstruktive Lungenerkrankung)",
+        "Lungenembolie",
+        "Lungenfibrose"
+      ],
+      "all_valid_examples": [
+        "COPD",
+        "Lungenembolie",
+        "Lungenfibrose",
+        "Pneumonie",
+        "Asthma bronchiale (langjährig)",
+        "Schlafapnoe"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m8_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Shuntpflege bei Dialysepatienten korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Am Shuntarm dürfen routinemäßig Blutdruckmessungen durchgeführt werden, solange die Manschette locker sitzt.",
+          "correct": false
+        },
+        {
+          "label": "Der Shunt sollte täglich auf Funktionszeichen wie Schwirren (Vibration) oder Pulsation kontrolliert werden.",
+          "correct": true
+        },
+        {
+          "label": "Blutentnahmen am Shuntarm sind zur Schonung anderer Venen zu bevorzugen.",
+          "correct": false
+        },
+        {
+          "label": "Einschnürende Kleidung oder Uhren am Shuntarm müssen konsequent vermieden werden.",
+          "correct": true
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Blutdruckmessung am Shuntarm",
+          "text": "Falsch, da der Manschettendruck den Shunt komprimieren und einen Shuntverschluss durch Thrombose provozieren kann."
+        },
+        {
+          "option": "Tägliche Kontrolle",
+          "text": "Richtig, da das fühlbare Schwirren ein Zeichen für die Durchgängigkeit und den hohen Blutfluss der AV-Fistel ist."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zum Wasser-Elektrolyt-Haushalt und dessen Regulation korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "ADH (Antidiuretisches Hormon) führt zu einer vermehrten Wasserausscheidung über die Niere.",
+          "correct": false
+        },
+        {
+          "label": "Eine Hyperkaliämie kann lebensbedrohliche Herzrhythmusstörungen bis hin zum Herzstillstand auslösen.",
+          "correct": true
+        },
+        {
+          "label": "Das Hormon ANP wirkt als Gegenspieler zu Aldosteron und fördert die Natrium- und Wasserausscheidung.",
+          "correct": true
+        },
+        {
+          "label": "Osmorezeptoren im Hypothalamus reagieren auf einen Abfall des Blutdrucks durch Hemmung der Durstzentrums.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Hyperkaliämie",
+          "text": "Richtig, da hohe Kaliumkonzentrationen die elektrische Erregbarkeit der Herzmuskelzellen massiv stören."
+        },
+        {
+          "option": "ADH-Wirkung",
+          "text": "Falsch, ADH macht die Sammelrohre wasserdurchlässig und führt zur Wasserrückgewinnung (Antidiurese), nicht zur Ausscheidung."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Maßnahmen und Inhalte zentraler Bestandteil einer Asthmaschulung für Kinder und Eltern sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Das Erlernen der korrekten Inhalationstechnik (z. B. mit Spacer) ist eine Kernkompetenz der Schulung.",
+          "correct": true
+        },
+        {
+          "label": "Das Peak-Flow-Ampelschema dient der objektiven Selbsteinschätzung und Steuerung der Therapie.",
+          "correct": true
+        },
+        {
+          "label": "Bei einem akuten Anfall ist körperliche Belastung zur 'Lungenöffnung' empfehlenswert.",
+          "correct": false
+        },
+        {
+          "label": "Schulungen sollten ausschließlich durch Ärzte durchgeführt werden, um Fachlichkeit zu garantieren.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Inhalationstechnik",
+          "text": "Richtig, da nur bei korrekter Technik der Wirkstoff die tiefen Atemwege erreicht und nicht im Mund-Rachen-Raum hängen bleibt."
+        },
+        {
+          "option": "Interprofessionelles Team",
+          "text": "Falsch, laut Skript arbeiten interprofessionelle Teams (Pflege, Pädagogen, Psychologen), um alle Aspekte der chronischen Erkrankung abzudecken."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Pharmakotherapie bei Patienten mit eingeschränkter Nierenfunktion korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "ACE-Hemmer schützen die Niere (Nephroprotektion), indem sie den Filtrationsdruck in den Glomeruli senken.",
+          "correct": true
+        },
+        {
+          "label": "Diuretika steigern maßgeblich die Ausscheidung von harnpflichtigen Substanzen wie Kreatinin.",
+          "correct": false
+        },
+        {
+          "label": "Erythropoetin (EPO) wird bei renaler Anämie substituiert, um die Bildung roter Blutkörperchen anzuregen.",
+          "correct": true
+        },
+        {
+          "label": "Kaliumsparende Diuretika sind bei fortgeschrittener Niereninsuffizienz das Mittel der Wahl zur Ödemausschwemmung.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "ACE-Hemmer",
+          "text": "Richtig, sie weiten das abführende Gefäß (Vas efferens) und entlasten so mechanisch den Filterapparat."
+        },
+        {
+          "option": "Kaliumsparende Diuretika",
+          "text": "Falsch, sie bergen bei Niereninsuffizienz ein hohes Risiko für eine lebensbedrohliche Hyperkaliämie."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aspekte bei der Durchführung einer klinischen Flüssigkeitsbilanzierung korrekt sind.",
+    "instruction_justify": "**Begründen** Sie zwei Ihrer Entscheidungen fachlich.",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "Zur Einfuhr zählen neben Getränken auch Infusionen und der Wassergehalt von Sondennahrung.",
+          "correct": true
+        },
+        {
+          "label": "Die Bilanzierung ist bei Patienten mit Herz- oder Niereninsuffizienz zur Vermeidung von Ödemen essenziell.",
+          "correct": true
+        },
+        {
+          "label": "Eine 'negative Bilanz' bedeutet, dass der Patient mehr Flüssigkeit aufgenommen als ausgeschieden hat.",
+          "correct": false
+        },
+        {
+          "label": "Der Schweiß (Perspiratio) muss bei der Standardbilanz am Patientenbett exakt in Millilitern gemessen werden.",
+          "correct": false
+        }
+      ],
+      "justify_count": 2,
+      "sample_justifications": [
+        {
+          "option": "Zweck der Bilanz",
+          "text": "Richtig, da bei diesen Patienten die Regulationsmechanismen gestört sind und eine Volumenüberlastung schnell zu Lungenödemen führen kann."
+        },
+        {
+          "option": "Negative Bilanz",
+          "text": "Falsch, eine negative Bilanz bedeutet, dass die Ausfuhr größer ist als die Einfuhr (z. B. gewollte Entwässerung)."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_extra_001",
+    "type": "zuordnung",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie die anatomischen Strukturen ihrer Lage innerhalb der Niere zu (Rinde vs. Mark).",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Nierenrinde (Cortex renalis)",
+        "B": "Nierenmark (Medulla renalis)"
+      },
+      "statements": [
+        {
+          "text": "Enthält die Nierenkörperchen (Glomeruli und Bowman-Kapseln).",
+          "answer": "A"
+        },
+        {
+          "text": "Beinhaltet die Markpyramiden und die Papillengänge.",
+          "answer": "B"
+        },
+        {
+          "text": "Ort der Henle-Schleifen und der Sammelrohre.",
+          "answer": "B"
+        },
+        {
+          "text": "Äußere Schicht unter der Nierenkapsel, umschließt die Markpyramiden als Nierensäulen.",
+          "answer": "A"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_extra_002",
+    "type": "freitext_box",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie das Prinzip des glomerulären Filtrationsdrucks und nennen Sie die beteiligten physikalischen Kräfte.",
+    "points": 4,
+    "scoring_info": "Einbeziehung von Kapillardruck vs. Gegendrücken.",
+    "data": {
+      "box_label": "Glomerulärer Filtrationsdruck",
+      "correct_answer": "Der effektive Filtrationsdruck (ca. 10 mmHg) ist die treibende Kraft für die Bildung des Primärharns. Er resultiert aus dem hohen Blutdruck in den glomerulären Kapillaren (ca. 50 mmHg), dem der kolloidosmotische Druck des Plasmas (ca. 25 mmHg) und der hydrostatische Druck in der Bowman-Kapsel (ca. 15 mmHg) entgegenwirken. Nur wenn der Kapillardruck diese Gegendrücke übersteigt, findet eine Filtration statt.",
+      "keywords": [
+        "hydrostatischer Kapillardruck",
+        "kolloidosmotischer Druck",
+        "Kapseldruck",
+        "effektiver Filtrationsdruck",
+        "Primärharnbildung"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m8_extra_003",
+    "type": "nennen_liste",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die Abfolge der Kaskade des Renin-Angiotensin-Aldosteron-Systems (RAAS) bis zur Wirkung auf den Blutdruck.",
+    "list_label": "RAAS-Kaskade",
+    "count": 4,
+    "correct_answers": [
+      "Renin spaltet Angiotensinogen zu Angiotensin I",
+      "ACE wandelt Angiotensin I in Angiotensin II um",
+      "Angiotensin II bewirkt Vasokonstriktion",
+      "Aldosteron fördert Natrium-/Wasserrückresorption"
+    ],
+    "all_valid_answers": [
+      "Renin",
+      "Angiotensinogen zu Angiotensin I",
+      "ACE",
+      "Angiotensin-Converting-Enzym",
+      "Angiotensin II",
+      "Aldosteron",
+      "Blutdruckanstieg",
+      "Vasokonstriktion"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Kaskadenschritt."
+  },
+  {
+    "q_id": "m8_extra_004",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei einer chronischen Nierenerkrankung (CKD) kommt es aufgrund einer verminderten Erythropoetin-Produktion in der Niere zu einer renalen Anämie.",
+    "answer": "richtig",
+    "explanation": "Da Erythropoetin (EPO) maßgeblich in der Niere gebildet wird, führt ein Funktionsverlust des Organs zu einem Mangel an diesem Hormon und folglich zu einer gestörten Blutbildung im Knochenmark.",
+    "source_hint": "Material 'Anatomie_Niere_Harnsystem', Folie 28"
+  },
+  {
+    "q_id": "m8_extra_005",
+    "type": "freitext_box",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Beschreiben Sie die Mechanismen der Autoregulation der Niere (Myogene Antwort und tubuloglomeruläres Feedback).",
+    "points": 4,
+    "scoring_info": "Trennung zwischen Gefäßreaktion und Feedback durch die Macula densa.",
+    "data": {
+      "box_label": "Autoregulation der Niere",
+      "correct_answer": "Die Autoregulation hält die GFR bei Blutdruckschwankungen zwischen 80 und 180 mmHg stabil. Die myogene Antwort (Bayliss-Effekt) bewirkt eine Kontraktion der zuführenden Arteriole bei Dehnung durch hohen Druck. Das tubuloglomeruläre Feedback nutzt die Macula densa im JGA, um die NaCl-Konzentration im Tubulus zu messen; bei zu hoher Konzentration (hohe GFR) wird die Arteriole verengt, um die Filtration zu drosseln.",
+      "keywords": [
+        "Bayliss-Effekt",
+        "zuführende Arteriole",
+        "Vas afferens",
+        "Macula densa",
+        "NaCl-Konzentration",
+        "GFR-Stabilität"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_extra_006",
+    "type": "zuordnung",
+    "topic": "harnsystem_anatomie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "Ordnen Sie den makroskopischen Strukturen der Niere ihre korrekte Sammel- oder Durchlassfunktion zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Nierenkelche (Calices renales)",
+        "B": "Nierenbecken (Pelvis renalis)",
+        "C": "Nierenhilum"
+      },
+      "statements": [
+        {
+          "text": "Zentrale Einbuchtung, an der Blutgefäße, Nerven und der Harnleiter ein- bzw. austreten.",
+          "answer": "C"
+        },
+        {
+          "text": "Umschließen die Nierenpapillen und fangen den dort austretenden Sekundärharn auf.",
+          "answer": "A"
+        },
+        {
+          "text": "Trichterförmiger Hohlraum, der den Urin aus allen Kelchen sammelt und in den Ureter leitet.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_extra_007",
+    "type": "nennen_liste",
+    "topic": "pflege_konzepte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei Techniken des 'Aktiven Zuhörens', die in der professionellen Gesprächsführung eingesetzt werden.",
+    "list_label": "Techniken Aktives Zuhören",
+    "count": 3,
+    "correct_answers": [
+      "Paraphrasieren",
+      "Verbalisieren",
+      "Nachfragen/Klären"
+    ],
+    "all_valid_answers": [
+      "Paraphrasieren",
+      "Wiederholen mit eigenen Worten",
+      "Verbalisieren emotionaler Erlebnisinhalte",
+      "Gefühle ansprechen",
+      "Nachfragen",
+      "Klären",
+      "Zusammenfassen",
+      "Impulse geben",
+      "Wahrnehmung überprüfen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benannter Technik."
+  },
+  {
+    "q_id": "m8_extra_008",
+    "type": "tabelle_3spalten",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vervollständigen Sie die Tabelle zu den Phasen der Herzaktion.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld (Klappenstatus/Beschreibung).",
+    "data": {
+      "table": {
+        "headers": [
+          "Phase",
+          "Status der Klappen",
+          "Geschehen in den Kammern"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Anspannungsphase",
+                "keywords": ["Anspannung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Alle Klappen geschlossen",
+                "keywords": ["geschlossen", "zu"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Druckaufbau in der Kammermuskulatur ohne Blutfluss",
+                "keywords": ["Druck", "kein Fluss"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Füllungsphase",
+                "keywords": ["Füllung"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "AV-Klappen offen, Taschenklappen zu",
+                "keywords": ["Segelklappen offen", "Taschenklappen zu"]
+              },
+              {
+                "type": "textarea",
+                "correct_answer": "Blut fließt aus den Vorhöfen in die Kammern",
+                "keywords": ["Einströmen", "Diastole"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_extra_009",
+    "type": "ankreuzen_begruenden",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "Wählen Sie die korrekte Aussage zur Aussagekraft des Serum-Kreatinins.",
+    "instruction_justify": "Begründen Sie das Phänomen des 'blinden Flecks' beim Kreatininanstieg.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Kreatinin steigt linear zum Verlust der Nephrone sofort an.",
+          "correct": false
+        },
+        {
+          "label": "Das Serum-Kreatinin steigt erst bei einer GFR-Reduktion von über 50 % deutlich an.",
+          "correct": true
+        },
+        {
+          "label": "Kreatinin ist unabhängig von der Muskelmasse des Patienten.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Anstieg erst ab 50%",
+          "text": "Dies nennt man den 'blinden Fleck' der Nierendiagnostik. Da die Niere über große Reservekapazitäten verfügt, können die verbleibenden Nephrone den Ausfall lange kompensieren, sodass der Serumwert erst bei massiver Schädigung pathologisch wird."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_extra_010",
+    "type": "freitext_box",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Erläutern Sie die physiologische Wirkung der 'Lippenbremse' bei obstruktiven Atemwegserkrankungen.",
+    "points": 3,
+    "scoring_info": "Erwähnung des Bronchialkollapses und des Gegendrucks.",
+    "data": {
+      "box_label": "Wirkungsweise Lippenbremse",
+      "correct_answer": "Durch das Ausatmen gegen den Widerstand der locker aufeinanderliegenden Lippen entsteht ein Rückstau (positiver Ausatmdruck) in den Bronchien. Dieser Gegendruck verhindert, dass die instabilen kleinen Atemwege (Bronchiolen) bei der Ausatmung kollabieren. Dadurch kann mehr verbrauchte Luft abgeatmet werden und die Überblähung der Lunge wird reduziert.",
+      "keywords": [
+        "Widerstand",
+        "Rückstau",
+        "Bronchialkollaps",
+        "Atemwegskompression",
+        "Ausatmung"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m8_extra_011",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine Pyelonephritis (Nierenbeckenentzündung) entsteht meist hämatogen (über die Blutbahn) durch Staphylokokken.",
+    "answer": "falsch",
+    "explanation": "Die Pyelonephritis entsteht meist aufsteigend (aszendierend) aus der Harnblase. Der häufigste Erreger ist das Darmbakterium Escherichia coli.",
+    "source_hint": "Material 'M 8.4_Niere und Dialyse', Folie 42"
+  },
+  {
+    "q_id": "m8_extra_012",
+    "type": "nennen_liste",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie drei klinische Anzeichen, die bei einem Peritonealdialyse-Patienten auf eine beginnende Peritonitis (Bauchfellentzündung) hindeuten.",
+    "list_label": "Symptome Peritonitis bei PD",
+    "count": 3,
+    "correct_answers": [
+      "Trübes Dialysat (Auslauf)",
+      "Bauchschmerzen",
+      "Fieber"
+    ],
+    "all_valid_answers": [
+      "Trübes Dialysat",
+      "Eintrübung des Auslaufs",
+      "Bauchschmerzen",
+      "Abwehrspannung",
+      "Fieber",
+      "Übelkeit",
+      "Erbrechen",
+      "Rötung an der Katheteraustrittsstelle"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m8_extra_013",
+    "type": "tabelle_vergleich",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Vergleichen Sie die primäre und die sekundäre Hypertonie.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": [
+          "Merkmal",
+          "Primäre (essenzielle) Hypertonie",
+          "Sekundäre Hypertonie"
+        ],
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Häufigkeit",
+                "keywords": ["Anteil", "Prozent"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 90 % der Fälle",
+                "keywords": ["häufig", "90"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "ca. 10 % der Fälle",
+                "keywords": ["selten", "10"]
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "input",
+                "correct_answer": "Ursache",
+                "keywords": ["Entstehung", "Grund"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Keine organische Ursache findbar",
+                "keywords": ["multifaktoriell", "Lebensstil"]
+              },
+              {
+                "type": "input",
+                "correct_answer": "Folge einer Grunderkrankung",
+                "keywords": ["Niere", "Endokrin", "Medikamente"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_extra_014",
+    "type": "freitext_box",
+    "topic": "pflege_konzepte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "Diskutieren Sie die Auswirkungen einer chronischen Erkrankung eines Kindes (z. B. Asthma) auf die gesamte Familie laut Modul 8.8.",
+    "points": 4,
+    "scoring_info": "Berücksichtigung von Eltern und Geschwistern.",
+    "data": {
+      "box_label": "Belastung der Familie",
+      "correct_answer": "Die chronische Erkrankung eines Kindes belastet das gesamte Familiensystem massiv. Eltern leiden unter ständiger Angst vor Anfällen, Schlafentzug und hohen Pflegeanforderungen, was oft zur Vernachlässigung der eigenen Bedürfnisse oder Partnerschaftskonflikten führt. Geschwisterkinder ('Schattenkinder') erhalten oft weniger Aufmerksamkeit, da sich alles um das kranke Kind dreht. Der Alltag muss strikt um Therapiepläne und Notfallbereitschaft herum organisiert werden.",
+      "keywords": [
+        "Geschwister",
+        "Schattenkinder",
+        "Elternbelastung",
+        "Angst",
+        "Alltagsorganisation",
+        "Familiensystem"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m8_extra_015",
+    "type": "nennen_liste",
+    "topic": "pharmakologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "Nennen Sie die Stufen der Vitamin-D-Aktivierung im Körper und den Beitrag der Niere.",
+    "list_label": "Vitamin D Aktivierung",
+    "count": 3,
+    "correct_answers": [
+      "Bildung/Aufnahme der Vorstufe (Haut/Nahrung)",
+      "Hydroxylierung in der Leber",
+      "Umwandlung in Calcitriol in der Niere"
+    ],
+    "all_valid_answers": [
+      "Vitamin D3 Vorstufe",
+      "Cholecalciferol",
+      "Leberpassage",
+      "Nierenpassage",
+      "Aktivierung",
+      "Calcitriol",
+      "1,25-Dihydroxy-Cholecalciferol"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Schritt, insbesondere die Rolle der Niere als letzte Station."
+  },
+  {
+    "fall_id": "m8_fall_01",
+    "title": "Vom schleichenden Verlust zur Dialysepflicht",
+    "topics_covered": [
+      "niere_pathophysiologie",
+      "dialyse",
+      "niere_pflege_diagnostik",
+      "pharmakologie"
+    ],
+    "patient": {
+      "name": "Gerhard Müller",
+      "alter": 62,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit Ehefrau in einer Mietwohnung, 2. Stock",
+      "beruf": "Rentner (ehem. Schlosser)"
+    },
+    "setting": "Nephrologische Fachstation",
+    "pflegekraft": "Pflegefachkraft Sarah",
+    "paragraphs": [
+      "Herr Müller wird mit einer chronischen Nierenerkrankung (CKD) im Stadium 5 (terminale Niereninsuffizienz) stationär aufgenommen. Er klagt über quälenden Juckreiz, extreme Müdigkeit und einen metallischen, harnähnlichen Geschmack im Mund. Die GFR liegt aktuell bei 12 ml/min, das Serum-Kreatinin ist auf 8,5 mg/dl angestiegen.",
+      "Aufgrund der ausgeprägten Urämie-Symptome wird die Einleitung einer Hämodialyse (HD) beschlossen. Zur Vorbereitung wurde bereits vor vier Wochen eine AV-Fistel (Shunt) am linken Unterarm angelegt. Sarah führt die tägliche Shuntkontrolle durch: Sie tastet das typische Schwirren und achtet auf Zeichen einer Infektion oder Hämatome. Sie kennzeichnet den Arm deutlich, damit dort keine Blutentnahmen oder Blutdruckmessungen erfolgen.",
+      "Im Rahmen der Patientenedukation bespricht Sarah mit Herrn Müller die notwendige Ernährungsumstellung. Da die Nieren Kalium nicht mehr ausreichend ausscheiden können, drohen Herzrhythmusstörungen, weshalb er eine kaliumreduzierte Kost einhalten muss. Zudem wird eine phosphatarme Ernährung und die Einnahme von Phosphatbindern zu den Mahlzeiten erklärt, um Knochenschäden vorzubeugen.",
+      "Die medikamentöse Therapie umfasst zudem Erythropoetin (EPO) zur Behandlung der renalen Anämie sowie Vitamin D3 zur Unterstützung des Kalziumhaushalts. Sarah leitet Herrn Müller zur täglichen Gewichtskontrolle und zum Führen eines Trinkmengentagebuchs an, da er aufgrund der versiegenden Diurese nur noch 500 ml plus die Menge der Vortagesausfuhr trinken darf."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnosen",
+          "value": "Chronische Niereninsuffizienz Stad. V (MDRD) bei hypertensiver Nephrosklerose, renale Anämie, Hyperkaliämie, Urämie-Syndrom."
+        },
+        {
+          "label": "Labor (aktuell)",
+          "value": "Kreatinin 8,5 mg/dl (Norm <1,2), Harnstoff 180 mg/dl (Norm <50), Kalium 6,2 mmol/l (Norm 3,5-5,1), GFR 12 ml/min."
+        },
+        {
+          "label": "Therapieplan",
+          "value": "Hämodialyse 3x wöchentlich, kaliumarme/phosphatfeste Diät, Flüssigkeitsrestriktion 800ml/24h."
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Müller",
+      "ERKRANKUNG": "Chronische Niereninsuffizienz Stadium 5",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m8_fall_02",
+    "title": "Akute Krise nach chirurgischem Eingriff",
+    "topics_covered": [
+      "niere_pathophysiologie",
+      "fluessigkeit_elyte",
+      "niere_pflege_diagnostik"
+    ],
+    "patient": {
+      "name": "Sabine Fischer",
+      "alter": 55,
+      "geschlecht": "w",
+      "wohnsituation": "alleinstehend",
+      "beruf": "Verwaltungsangestellte"
+    },
+    "setting": "Intensivstation",
+    "pflegekraft": "Fachkrankenpfleger Thomas",
+    "paragraphs": [
+      "Frau Fischer wurde vor 24 Stunden nach einer großen Bauchoperation auf die Intensivstation verlegt. Thomas bemerkt bei der stündlichen Bilanzierung einen plötzlichen Abfall der Urinausscheidung auf unter 20 ml/h (Oligurie). Trotz Flüssigkeitssubstitution steigt der Blutdruck nicht adäquat an, was auf ein prärenales akutes Nierenversagen (AKI) hindeutet.",
+      "Das aktuelle Labor zeigt einen Anstieg des Kaliums auf 6,5 mmol/l. Thomas weiß, dass dies lebensbedrohliche Herzrhythmusstörungen bis hin zum Herzstillstand auslösen kann. Er informiert sofort den Arzt und bereitet ein EKG-Monitoring vor. Die Patientin wirkt zunehmend schläfrig und klagt über Kribbelgefühle in den Extremitäten.",
+      "Thomas führt eine strikte Einfuhr-Ausfuhr-Bilanzierung durch und wiegt die Patientin auf der Bettenwaage, um eine drohende Hyperhydratation frühzeitig an einer raschen Gewichtszunahme zu erkennen. In der Lunge sind erste Rasselgeräusche hörbar, was auf beginnende Ödeme hinweist.",
+      "Zur Diagnostik wird eine Urinprobe mittels Teststreifen untersucht. Thomas achtet besonders auf das spezifische Gewicht und das Vorhandensein von Erythrozyten oder Leukozyten, um eine intrarenale Ursache wie eine Entzündung auszuschließen. Auf ärztliche Anordnung verabreicht er Schleifendiuretika, um die Diurese wieder anzukurbeln."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Verlauf",
+          "value": "Akutes Nierenversagen (AKI), wahrscheinlich prärenal bei postoperativer Hypovolämie."
+        },
+        {
+          "label": "Befunde",
+          "value": "Anurie/Oligurie, Serum-Kalium 6,5 mmol/l, Kreatinin-Anstieg von 0,9 auf 2,1 mg/dl innerhalb 24h."
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Fischer",
+      "ERKRANKUNG": "Akutes Nierenversagen",
+      "PFLEGEKRAFT": "Thomas"
+    }
+  },
+  {
+    "fall_id": "m8_fall_03",
+    "title": "Wenn das Herz die Last nicht mehr trägt",
+    "topics_covered": [
+      "herz_kreislauf",
+      "fluessigkeit_elyte",
+      "pharmakologie",
+      "pflege_konzepte"
+    ],
+    "patient": {
+      "name": "Hildegard Jensen",
+      "alter": 74,
+      "geschlecht": "w",
+      "wohnsituation": "lebt allein in einer Seniorenwohnung",
+      "beruf": "Rentnerin"
+    },
+    "setting": "Kardiologische Station",
+    "pflegekraft": "Pflegefachkraft Jan",
+    "paragraphs": [
+      "Frau Jensen wird mit zunehmender Atemnot (Dyspnoe) und stark geschwollenen Beinen aufgenommen. Jan stellt bei der Aufnahmeuntersuchung zudem gestaute Halsvenen fest. Diese Kombination deutet auf eine dekompensierte globale Herzinsuffizienz hin, wobei der Rückstau in die Lunge (Linksherzinsuffizienz) die Dyspnoe und der Rückstau in den Körper (Rechtsherzinsuffizienz) die Ödeme verursacht.",
+      "Die Patientin wirkt verängstigt und traut sich kaum zu atmen. Jan wendet Techniken des Aktiven Zuhörens an, paraphrasiert ihre Sorgen und bringt sie in eine atemerleichternde Oberkörperhochlagerung. Er erklärt ihr die medikamentöse Therapie mit ACE-Hemmern zur Entlastung des Herzens und Diuretika zur Ausschwemmung der Wassereinlagerungen.",
+      "Jan leitet Frau Jensen zum täglichen Wiegen vor dem Frühstück an und erklärt ihr, dass eine Gewichtszunahme von mehr als 0,5 kg/Tag auf eine erneute Wasseransammlung hindeutet. Er bespricht mit ihr eine Trinkmengenbeschränkung auf 1200 ml, um das Herz-Kreislauf-System nicht weiter zu belasten.",
+      "Im Sinne der Motivierenden Gesprächsführung versucht Jan, Frau Jensens Ressourcen zu stärken (Salutogenese-Ansatz). Sie erarbeiten gemeinsam, wie sie trotz ihrer Einschränkungen (ICF-Modell: Partizipation) wieder kleine Spaziergänge in ihren Alltag integrieren kann, sobald sie stabilisiert ist."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnosen",
+          "value": "Globale Herzinsuffizienz (NYHA IV), Cor pulmonale, arterielle Hypertonie, periphere Ödeme."
+        },
+        {
+          "label": "Medikation",
+          "value": "Furosemid 40mg 1-1-0, Ramipril 5mg 1-0-0, Kalium-Präparat bei Bedarf."
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Jensen",
+      "ERKRANKUNG": "Globale Herzinsuffizienz",
+      "PFLEGEKRAFT": "Jan"
+    }
+  },
+  {
+    "fall_id": "m8_fall_04",
+    "title": "Raphaels Weg zur Pusteblume",
+    "topics_covered": [
+      "atmung_asthma",
+      "beratung_edukation",
+      "pflege_konzepte"
+    ],
+    "patient": {
+      "name": "Raphael Maximilian",
+      "alter": 8,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit Eltern und kleinem Bruder",
+      "beruf": "Grundschüler"
+    },
+    "setting": "Pädiatrische Ambulanz",
+    "pflegekraft": "Pflegeexpertin Petra",
+    "paragraphs": [
+      "Raphael wurde kürzlich mit Asthma bronchiale diagnostiziert. Seine Eltern sind sehr besorgt und haben Angst vor dem nächsten Atemnotanfall. Petra plant eine kindgerechte Asthmaschulung, um die Gesundheitskompetenz der ganzen Familie zu stärken. Sie nutzt das Scheibenmodell, um Raphael zu erklären, wie sich seine Bronchien bei einem Anfall verengen.",
+      "Gemeinsam üben sie die Anwendung des Peak-Flow-Meters. Petra erklärt Raphael das Ampelschema: Grün bedeutet, alles ist super; Gelb heißt 'Pass auf' und erfordert eine Therapieanpassung; Rot signalisiert akute Gefahr, bei der sofort das Notfallmedikament und ein Arzt nötig sind. Raphael lernt, seine Werte täglich zu dokumentieren.",
+      "Ein zentraler Punkt ist die Inhalationstechnik. Da Raphael noch jung ist, verwendet er ein Dosieraerosol mit einer Inhalierhilfe (Spacer), um sicherzustellen, dass der Wirkstoff tief in die Lunge gelangt und nicht im Mund hängen bleibt. Petra korrigiert spielerisch seine Haltung und achtet auf die Koordination von Auslösung und Einatmung.",
+      "Petra zeigt Raphael und seinen Eltern zudem atemerleichternde Stellungen wie den Kutschersitz oder die Torwartstellung. Sie üben die 'Lippenbremse', die Raphael hilft, seine Ausatmung zu kontrollieren und einen Kollaps der Atemwege zu verhindern. Zum Schluss besprechen sie die Belastung für den kleinen Bruder ('Schattenkind') und suchen nach Ressourcen für die Eltern."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Asthma bronchiale (extrinsisch), Grad II."
+        },
+        {
+          "label": "Empfehlung",
+          "value": "Teilnahme an strukturierter Asthmaschulung, tägliche Peak-Flow-Messung, Bedarfsmedikation immer mitführen."
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Raphael",
+      "ERKRANKUNG": "Asthma bronchiale",
+      "PFLEGEKRAFT": "Petra"
+    }
+  },
+  {
+    "fall_id": "m8_fall_05",
+    "title": "Mehr Freiheit durch das Bauchfell",
+    "topics_covered": [
+      "dialyse",
+      "beratung_edukation",
+      "niere_pflege_diagnostik",
+      "pflege_konzepte"
+    ],
+    "patient": {
+      "name": "Karin Weber",
+      "alter": 48,
+      "geschlecht": "w",
+      "wohnsituation": "berufstätig, möchte flexibel bleiben",
+      "beruf": "Lehrerin"
+    },
+    "setting": "Dialyse-Trainingszentrum",
+    "pflegekraft": "Dialysefachkraft Markus",
+    "paragraphs": [
+      "Frau Weber ist seit sechs Monaten an der Hämodialyse, empfindet die Termine im Zentrum aber als enorme Belastung für ihren Berufsalltag. Sie möchte zur Peritonealdialyse (PD) wechseln, um die Behandlung zu Hause durchführen zu können. Markus berät sie umfassend über die Voraussetzungen der Heimdialyse, insbesondere die notwendige Hygiene.",
+      "Er schult Frau Weber im Umgang mit dem PD-Katheter (Tenckhoff-Katheter). Er betont die Wichtigkeit der Händedesinfektion und des Mundschutzes beim Beutelwechsel, um eine lebensgefährliche Peritonitis (Bauchfellentzündung) zu vermeiden. Frau Weber lernt, den Auslauf auf Trübungen zu kontrollieren, was ein Frühwarnzeichen für eine Infektion wäre.",
+      "In biografischen Gesprächen (Biografiearbeit) arbeiten sie heraus, wie der neue Behandlungsrhythmus in ihren Schulalltag integriert werden kann. Markus nutzt das Modell der Salutogenese, um ihren Fokus auf die gewonnene Autonomie und Lebensqualität zu lenken, anstatt nur die Last der täglichen Durchführung zu sehen.",
+      "Ergänzend erfolgt eine Ernährungsberatung. Markus erklärt, dass sie bei der PD oft etwas mehr Eiweiß zu sich nehmen darf als bei der HD, aber weiterhin auf Phosphat und Kalium achten muss. Er verwendet den personenzentrierten Ansatz, um auf ihre individuellen Ängste vor der Selbstbehandlung einzugehen und ihre Selbstwirksamkeit zu stärken."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Status",
+          "value": "Umstellung von HD auf CAPD (kontinuierliche ambulante Peritonealdialyse) geplant."
+        },
+        {
+          "label": "Voraussetzung",
+          "value": "Gute Compliance, hygienisches Umfeld vorhanden, erfolgreiches Abschlusstraining der Patientin."
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Weber",
+      "ERKRANKUNG": "Terminale Niereninsuffizienz",
+      "PFLEGEKRAFT": "Markus"
+    }
+  },
+  {
+    "q_id": "m8_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_01"],
+    "instruction": "**Erläutern** Sie die Ursache für den quälenden Juckreiz und den harnähnlichen Geschmack bei [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Erläuterung der Retentionssubstanzen.",
+    "data": {
+      "box_label": "Urämie-Symptomatik",
+      "correct_answer": "Diese Symptome sind Zeichen einer Urämie (Harnvergiftung). Da die Nieren von [PATIENT] kaum noch filtrieren (GFR 12 ml/min), reichern sich harnpflichtige Substanzen wie Harnstoff und Kreatinin im Blut an. Der Juckreiz entsteht durch die Ablagerung dieser Stoffe (insb. Phosphat/Harnstoff) in der Haut, während der Geschmack durch die Ausscheidung von Harnstoff über die Schleimhäute (Foetor uraemicus) verursacht wird.",
+      "keywords": [
+        "Urämie",
+        "Retention",
+        "harnpflichtige Substanzen",
+        "Harnstoff",
+        "Phosphat",
+        "Foetor uraemicus"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_01"],
+    "instruction": "**Nennen** Sie vier spezifische Regeln zur Shuntpflege, die [PFLEGEKRAFT] bei [PATIENT] beachten und dokumentieren muss.",
+    "list_label": "Shuntpflege-Regeln",
+    "count": 4,
+    "correct_answers": [
+      "Keine Blutdruckmessung am Shuntarm",
+      "Keine Blutentnahmen/Infusionen am Shuntarm",
+      "Tägliche Kontrolle auf Schwirren/Pulsation",
+      "Vermeidung von einengender Kleidung/Druck"
+    ],
+    "all_valid_answers": [
+      "Kein RR am Shuntarm",
+      "Keine Venenpunktion",
+      "Schwirren tasten",
+      "Geräusch abhören",
+      "Keine Uhren/Armbänder",
+      "Nicht auf dem Arm schlafen",
+      "Keine schweren Lasten tragen",
+      "Hautpflege/Infektionsschutz"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Regel."
+  },
+  {
+    "q_id": "m8_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "pharmakologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_01"],
+    "statement": "[PATIENT] erhält Erythropoetin (EPO), um die GFR direkt zu steigern und die Filterleistung der Niere zu verbessern.",
+    "answer": "falsch",
+    "explanation": "EPO steigert nicht die GFR, sondern wird substituiert, um die renale Anämie zu behandeln, indem es die Bildung roter Blutkörperchen (Erythropoese) im Knochenmark anregt.",
+    "source_hint": "M 8.4_Niere und Dialyse, Folie 79"
+  },
+  {
+    "q_id": "m8_fall_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_01"],
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur aktuellen Stoffwechsellage von [PATIENT] korrekt sind.",
+    "instruction_justify": "**Begründen** Sie die Gefahr des Kaliumwertes (6,2 mmol/l).",
+    "points": 6,
+    "data": {
+      "options": [
+        {
+          "label": "[PATIENT] befindet sich laut MDRD im Stadium 5 (terminale Niereninsuffizienz).",
+          "correct": true
+        },
+        {
+          "label": "Der Kreatininwert von 8,5 mg/dl ist für dieses Stadium untypisch niedrig.",
+          "correct": false
+        },
+        {
+          "label": "Es besteht das Risiko einer metabolischen Azidose (Übersäuerung).",
+          "correct": true
+        },
+        {
+          "label": "Aufgrund der GFR von 12 ml/min ist eine Dialyse noch nicht zwingend erforderlich.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Kaliumgefahr",
+          "text": "Der Kaliumwert von 6,2 mmol/l (Hyperkaliämie) ist lebensbedrohlich, da er die elektrische Erregungsleitung am Herzen stört und zu schweren Herzrhythmusstörungen bis hin zum Herzstillstand führen kann."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_01"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] mit [PATIENT] die Einnahme von Phosphatbindern direkt zu den Mahlzeiten besprechen muss.",
+    "points": 3,
+    "scoring_info": "Erläuterung der Wirkungsweise im Darm.",
+    "data": {
+      "box_label": "Edukation Phosphatbinder",
+      "correct_answer": "Phosphatbinder müssen zu den Mahlzeiten eingenommen werden, damit sie das im Essen enthaltene Phosphat direkt im Magen-Darm-Trakt binden können. Ohne diese Bindung würde das Phosphat ins Blut aufgenommen werden. Da die Niere von [PATIENT] Phosphat nicht mehr ausscheiden kann, würde ein hoher Spiegel langfristig zu Knochenveränderungen und Gefäßverkalkungen führen.",
+      "keywords": [
+        "Bindung im Darm",
+        "Nahrungsphosphat",
+        "Knochenschutz",
+        "Gefäßverkalkung",
+        "Einnahmezeitpunkt"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m8_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "niere_pathophysiologie",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_02"],
+    "statement": "Bei [PATIENT] liegt wahrscheinlich ein prärenales akutes Nierenversagen vor, verursacht durch den postoperativen Volumenverlust.",
+    "answer": "richtig",
+    "explanation": "Prärenal bedeutet 'vor der Niere' liegend; Schock oder Blut-/Volumenverlust (wie nach OP) führen zu einer Minderdurchblutung und damit zum plötzlichen Funktionsausfall.",
+    "source_hint": "M 8.4_Niere und Dialyse, Folie 76"
+  },
+  {
+    "q_id": "m8_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_02"],
+    "instruction": "**Beschreiben** Sie das Vorgehen von [PFLEGEKRAFT] bei der Flüssigkeitsbilanzierung und warum das tägliche Wiegen hierbei eine Kontrollfunktion hat.",
+    "points": 4,
+    "scoring_info": "Einbeziehung von Einfuhr/Ausfuhr und Gewichtszunahme als Ödemzeichen.",
+    "data": {
+      "box_label": "Bilanzierung und Monitoring",
+      "correct_answer": "[PFLEGEKRAFT] muss alle Einfuhren (Infusionen, Getränke) und Ausfuhren (Urin, Drainage, Erbrochenes) exakt dokumentieren und gegenrechnen. Das tägliche Wiegen dient als objektive Kontrolle: Eine rasche Gewichtszunahme (>0,5-1kg/Tag) deutet bei Oligurie auf eine Wasseransammlung im Körper (Ödeme) hin, da die Flüssigkeit nicht ausgeschieden wird. Dies ist wichtig, um eine lebensgefährliche Überwässerung (z.B. Lungenödem) frühzeitig zu erkennen.",
+      "keywords": [
+        "Einfuhr-Ausfuhr",
+        "Dokumentation",
+        "Oligurie",
+        "Hyperhydratation",
+        "Ödeme",
+        "Gewichtskontrolle"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "fluessigkeit_elyte",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_02"],
+    "instruction": "[PATIENT] zeigt eine Hyperkaliämie (6,5 mmol/l). **Nennen** Sie drei klinische Warnsymptome und eine pflegerische Sofortmaßnahme.",
+    "list_label": "Hyperkaliämie-Management",
+    "count": 4,
+    "correct_answers": [
+      "Kribbelgefühle (Parästhesien)",
+      "Muskelschwäche/Lähmungen",
+      "Herzrhythmusstörungen",
+      "Sofortige Information des Arztes / EKG-Monitoring"
+    ],
+    "all_valid_answers": [
+      "Kribbeln",
+      "Schwäche",
+      "Arrhythmien",
+      "Pulsunregelmäßigkeiten",
+      "Arzt info",
+      "EKG vorbereiten",
+      "Notfallset bereitstellen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Symptom/Maßnahme."
+  },
+  {
+    "q_id": "m8_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "herz_kreislauf",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_03"],
+    "instruction": "**Erläutern** Sie, warum [PATIENT] unter Dyspnoe und Rasselgeräuschen in der Lunge leidet, obwohl primär das Herz erkrankt ist.",
+    "points": 4,
+    "scoring_info": "Kausalkette: Linksherzschwäche -> Rückstau -> Lungenödem.",
+    "data": {
+      "box_label": "Pathophysiologie Linksherzinsuffizienz",
+      "correct_answer": "Durch die Linksherzinsuffizienz kann die linke Kammer das Blut nicht mehr ausreichend in den Körper pumpen. Es kommt zu einem Rückstau des Blutes in die Lungengefäße. Der dadurch steigende Druck in den Lungenkapillaren presst Flüssigkeit in das Lungengewebe und die Alveolen (Lungenödem). Dies behindert den Gasaustausch, was die Atemnot (Dyspnoe) und die hörbaren Rasselgeräusche bei [PATIENT] verursacht.",
+      "keywords": [
+        "Rückstau",
+        "Lungenkapillardruck",
+        "Lungenödem",
+        "Gasaustausch",
+        "Linksherzinsuffizienz"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_03"],
+    "instruction": "[PFLEGEKRAFT] möchte die Ressourcen von [PATIENT] stärken. **Nennen** Sie die vier Grundprinzipien der Motivierenden Gesprächsführung, die hierbei hilfreich sind.",
+    "list_label": "Prinzipien MI",
+    "count": 4,
+    "correct_answers": [
+      "Empathie ausdrücken",
+      "Diskrepanz entwickeln",
+      "Widerstand aufgreifen (geschmeidig damit umgehen)",
+      "Selbstwirksamkeit fördern"
+    ],
+    "all_valid_answers": [
+      "Empathie",
+      "Diskrepanz",
+      "Widerstand",
+      "Selbstwirksamkeit",
+      "Zuversicht stärken"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Prinzip."
+  },
+  {
+    "q_id": "m8_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "**Beschreiben** Sie die korrekte Inhalationstechnik mit dem Dosieraerosol und der Inhalierhilfe (Spacer), die [PFLEGEKRAFT] [PATIENT] beibringt.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Schritte: Schütteln, Aufsetzen, Ausatmen, Auslösen, langsame Einatmung, Atem anhalten.",
+    "data": {
+      "box_label": "Inhalationstechnik Raphael",
+      "correct_answer": "Zuerst muss [PATIENT] das Dosieraerosol kräftig schütteln und die Schutzkappe entfernen. Dann setzt er das Inhaliergerät fest auf den Spacer auf. Nach einer entspannten Ausatmung nimmt er das Mundstück des Spacers in den Mund, löst einen Sprühstoß aus und atmet dann langsam und tief ein. Zum Schluss hält [PATIENT] den Atem für ca. 5 bis 10 Sekunden an, damit der Wirkstoff sich in den Bronchien absetzen kann.",
+      "keywords": [
+        "Schütteln",
+        "Spacer",
+        "Ausatmen",
+        "Auslösen",
+        "Einatmen",
+        "Atem anhalten"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "[PFLEGEKRAFT] plant eine strukturierte Asthmaschulung. **Nennen** Sie drei übergeordnete Ziele, die damit für [PATIENT] und seine Familie erreicht werden sollen.",
+    "list_label": "Ziele der Asthmaschulung",
+    "count": 3,
+    "correct_answers": [
+      "Steigerung des Wissens über die Krankheit",
+      "Erlernen von Notfallvermeidungsmaßnahmen",
+      "Unterstützung bei der psychischen Krankheitsbewältigung"
+    ],
+    "all_valid_answers": [
+      "Wissen über Asthma",
+      "Notfallvermeidung",
+      "Krankheitsbewältigung",
+      "Selbstständigkeit fördern",
+      "Sportteilnahme ermöglichen",
+      "weniger Fehlzeiten in der Schule",
+      "weniger Krankenhausaufenthalte"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genanntem Ziel laut Skript 8.8."
+  },
+  {
+    "q_id": "m8_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "[PFLEGEKRAFT] zeigt [PATIENT] verschiedene Positionen zur Atemerleichterung. **Ordnen** Sie die Bezeichnungen den Beschreibungen zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Kutschersitz",
+        "B": "Torwartstellung",
+        "C": "Lippenbremse",
+        "D": "Päckchenstellung"
+      },
+      "statements": [
+        {
+          "text": "Sitzend, die Unterarme auf den Oberschenkeln abgestützt, um die Atemhilfsmuskulatur zu aktivieren.",
+          "answer": "A"
+        },
+        {
+          "text": "Im Stehen leicht vornübergeneigt, die Hände auf die Knie gestützt, um den Brustkorb zu entlasten.",
+          "answer": "B"
+        },
+        {
+          "text": "Ausatmen gegen den Widerstand der locker aufeinanderliegenden Lippen, um den Bronchialkollaps zu verhindern.",
+          "answer": "C"
+        },
+        {
+          "text": "Kauernde Position auf dem Boden, Stirn auf die Arme gelegt, zur maximalen Entspannung.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "**Erklären** Sie das Peak-Flow-Ampelschema, das [PFLEGEKRAFT] [PATIENT] und seinen Eltern für die tägliche Dokumentation vermittelt.",
+    "points": 3,
+    "scoring_info": "Erläuterung aller drei Farbbereiche und deren Bedeutung.",
+    "data": {
+      "box_label": "Ampelschema Peak-Flow",
+      "correct_answer": "Das Ampelschema unterteilt die Messwerte in drei Bereiche: Grün (80-100% des Bestwertes) bedeutet, dass das Asthma gut unter Kontrolle ist und die normale Therapie fortgesetzt wird. Gelb (50-80%) ist ein Warnsignal und erfordert eine Intensivierung der Medikamente nach Plan. Rot (unter 50%) signalisiert akute Gefahr; hier muss [PATIENT] sofort sein Notfallmedikament nehmen und ein Arzt kontaktiert werden.",
+      "keywords": [
+        "Grün (Stabil)",
+        "Gelb (Warnung)",
+        "Rot (Gefahr)",
+        "Bestwert",
+        "Therapieplan",
+        "Notfallmedikament"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m8_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "statement": "Die Lippenbremse hilft [PATIENT], durch einen künstlichen Druckaufbau in den Atemwegen das Kollabieren der Bronchien während der Ausatmung zu verhindern.",
+    "answer": "richtig",
+    "explanation": "Der erzeugte Rückstau entbläht die Bronchien und verbessert die Ausatemfunktion sowie den Sekrettransport.",
+    "source_hint": "Skript M 8.8, Folie 55"
+  },
+  {
+    "q_id": "m8_fall_tab_001",
+    "type": "tabelle_2spalten",
+    "topic": "pflege_konzepte",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "Die Erkrankung von [PATIENT] betrifft die ganze Familie. **Analysieren** Sie die Belastungssituation der Familienmitglieder.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Person", "Spezifische Belastung / Rolle"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Eltern", "keywords": ["Mutter", "Vater"] },
+              { "type": "textarea", "correct_answer": "Ständige Angst vor Anfällen, Schlafentzug, hohe Alltagsorganisation.", "keywords": ["Angst", "Sorge", "Wachsamkeit"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Kleiner Bruder", "keywords": ["Geschwister"] },
+              { "type": "textarea", "correct_answer": "Rolle als 'Schattenkind', erfährt oft weniger Aufmerksamkeit.", "keywords": ["Schattenkind", "Eifersucht", "Vernachlässigung"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "**Nennen** Sie vier häufige Auslöser für einen Asthmaanfall, die [PATIENT] im Alltag meiden sollte.",
+    "list_label": "Asthma-Auslöser",
+    "count": 4,
+    "correct_answers": [
+      "Tierhaare (z. B. Katzen)",
+      "Hausstaubmilben",
+      "Pollen",
+      "Körperliche Anstrengung (Belastungsasthma)"
+    ],
+    "all_valid_answers": [
+      "Haustiere",
+      "Pollen",
+      "Hausstaub",
+      "Kalte Luft",
+      "Stress",
+      "Rauchen",
+      "Infekte",
+      "Abgase"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Auslöser."
+  },
+  {
+    "q_id": "m8_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] in der Schulung gezielt die 'Health Literacy' (Gesundheitskompetenz) der Eltern fördert.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte. Bezug auf Entscheidungsfähigkeit und Vermeidungsstrategien.",
+    "data": {
+      "box_label": "Health Literacy Förderung",
+      "correct_answer": "Eine hohe Gesundheitskompetenz befähigt die Eltern von [PATIENT], relevante Informationen zu Asthma zu finden, zu verstehen und kritisch zu beurteilen. Dies ist essenziell, damit sie im Alltag sichere Entscheidungen treffen können, z. B. beim Erkennen von Warnsignalen oder der korrekten Anpassung der Medikation nach dem Ampelschema. Durch gestärkte Health Literacy sinkt das Risiko für Fehlanwendungen und unnötige Notaufnahme-Besuche.",
+      "keywords": [
+        "Informationen finden",
+        "Verstehen",
+        "Entscheidungsfindung",
+        "Selbstmanagement",
+        "Handlungskompetenz"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "statement": "Im interprofessionellen Team für die Asthmaschulung von [PATIENT] arbeiten ausschließlich Ärzte und Pflegefachkräfte zusammen.",
+    "answer": "falsch",
+    "explanation": "Laut Skript gehören auch Pädagogen, Psychologen sowie Sport- und Atemtherapeuten zum Team, um alle Ebenen der chronischen Erkrankung abzudecken.",
+    "source_hint": "Power Point Asthmaschulung, Folie 4"
+  },
+  {
+    "q_id": "m8_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "atmung_asthma",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_04"],
+    "instruction": "[PFLEGEKRAFT] nutzt das 'Scheibenmodell' zur Erklärung. **Nennen** Sie die vier Zustände der Bronchien, die dieses Modell visualisiert.",
+    "list_label": "Scheibenmodell-Zustände",
+    "count": 4,
+    "correct_answers": [
+      "1: Mir geht’s sehr gut",
+      "2: Husten / Räuspern",
+      "3: Giemen / Pfeifen",
+      "4: Atemnot"
+    ],
+    "all_valid_answers": [
+      "Beschwerdefrei",
+      "Leichte Symptome",
+      "Nebengeräusche",
+      "Akute Atemnot"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Stufe."
+  },
+  {
+    "q_id": "m8_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "**Erläutern** Sie den grundlegenden Unterschied zwischen der Hämodialyse (HD) und der Peritonealdialyse (PD), den [PFLEGEKRAFT] [PATIENT] im Beratungsgespräch erklärt.",
+    "points": 4,
+    "scoring_info": "Fokus auf extrakorporal vs. intrakorporal und Filtermembran.",
+    "data": {
+      "box_label": "HD vs. PD Beratung",
+      "correct_answer": "Die Hämodialyse ist ein extrakorporales Verfahren, bei dem das Blut von [PATIENT] über eine Maschine durch einen künstlichen Filter (Dialysator) geleitet wird. Im Gegensatz dazu findet der Stoffaustausch bei der Peritonealdialyse intrakorporal statt. Hierbei dient das körpereigene Bauchfell als semipermeable Membran, über die Giftstoffe in eine in den Bauchraum eingeleitete Dialyseflüssigkeit diffundieren.",
+      "keywords": [
+        "extrakorporal",
+        "intrakorporal",
+        "Dialysator",
+        "Bauchfell",
+        "Peritoneum",
+        "semipermeabel"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "Zur Vermeidung einer Peritonitis muss [PATIENT] den Auslauf des Dialysats genau beobachten. **Nennen** Sie drei klinische Anzeichen einer beginnenden Infektion.",
+    "list_label": "Zeichen der Peritonitis",
+    "count": 3,
+    "correct_answers": [
+      "Trübes Dialysat (Auslauf)",
+      "Bauchschmerzen",
+      "Fieber"
+    ],
+    "all_valid_answers": [
+      "Trübung",
+      "Abdominalschmerz",
+      "Temperaturerhöhung",
+      "Übelkeit",
+      "Erbrechen",
+      "Harte Bauchdecke"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Symptom."
+  },
+  {
+    "q_id": "m8_fall_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "dialyse",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction_select": "**Entscheiden** Sie, welche Hygienemaßnahmen [PFLEGEKRAFT] für [PATIENT] als überlebenswichtig schult.",
+    "instruction_justify": "**Begründen** Sie die Notwendigkeit des Mundschutzes beim Beutelwechsel.",
+    "points": 6,
+    "data": {
+      "options": [
+        { "label": "Konsequente Händedesinfektion vor jedem Kontakt mit dem PD-Katheter.", "correct": true },
+        { "label": "Ein steriler Ganzkörperanzug muss bei jedem Wechsel getragen werden.", "correct": false },
+        { "label": "Tragen eines Mundschutzes während des An- und Abschlusses der Beutel.", "correct": true },
+        { "label": "Die Katheteraustrittsstelle muss täglich mit Leitungswasser gespült werden.", "correct": false }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Mundschutz",
+          "text": "Richtig, da beim Sprechen oder Atmen Keime aus dem Mund-Rachen-Raum (z. B. Staphylokokken) auf die offenen Konnektionsstellen gelangen und so direkt in den Bauchraum verschleppt werden könnten, was eine schwere Peritonitis auslöst."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m8_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "pflege_konzepte",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "**Wenden** Sie den Salutogenese-Ansatz auf den Wunsch von [PATIENT] nach einem Wechsel zur PD an und erläutern Sie die Bedeutung des Kohärenzgefühls.",
+    "points": 4,
+    "scoring_info": "Bezug auf Verstehbarkeit, Bewältigbarkeit und Sinnhaftigkeit.",
+    "data": {
+      "box_label": "Salutogenese bei Karin Weber",
+      "correct_answer": "Durch den Wechsel zur PD gewinnt [PATIENT] Autonomie zurück, was die Bewältigbarkeit ihrer Situation (Handhabbarkeit) steigert. Wenn sie die Durchführung der Heimdialyse versteht (Verstehbarkeit) und diese als sinnvoll für ihren Berufsalltag als Lehrerin erlebt (Sinnhaftigkeit), stärkt dies ihr Kohärenzgefühl. Der Fokus verschiebt sich von der krankmachenden Belastung im Zentrum hin zu den Ressourcen der Selbstwirksamkeit im eigenen Heim.",
+      "keywords": [
+        "Kohärenzgefühl",
+        "Verstehbarkeit",
+        "Bewältigbarkeit",
+        "Sinnhaftigkeit",
+        "Ressourcenorientierung",
+        "Autonomie"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "niere_pflege_diagnostik",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "statement": "Bei der Peritonealdialyse darf [PATIENT] im Vergleich zur Hämodialyse oft etwas mehr Eiweiß zu sich nehmen, muss aber weiterhin auf Kalium und Phosphat achten.",
+    "answer": "richtig",
+    "explanation": "Über das Bauchfell gehen bei der PD vermehrt Proteine verloren, weshalb der Eiweißbedarf höher ist als bei der HD.",
+    "source_hint": "Skript M 8.4, Folie 79"
+  },
+  {
+    "q_id": "m8_fall_nl_008",
+    "type": "nennen_liste",
+    "topic": "pflege_konzepte",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "[PFLEGEKRAFT] wendet das ICF-Modell an. **Nennen** Sie drei Komponenten dieses Modells, die für die Versorgungsplanung von [PATIENT] (Berufstätigkeit vs. Dialysezeit) relevant sind.",
+    "list_label": "ICF-Komponenten bei Karin Weber",
+    "count": 3,
+    "correct_answers": [
+      "Aktivitäten (z. B. Unterrichten)",
+      "Teilhabe / Partizipation (Berufsleben)",
+      "Umweltfaktoren (Arbeitsplatz Schule)"
+    ],
+    "all_valid_answers": [
+      "Aktivitäten",
+      "Teilhabe",
+      "Partizipation",
+      "Umweltfaktoren",
+      "Personbezogene Faktoren",
+      "Körperfunktionen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genannter Komponente mit Fallbezug."
+  },
+  {
+    "q_id": "m8_fall_ft_010",
+    "type": "freitext_box",
+    "topic": "beratung_edukation",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "**Beschreiben** Sie, wie [PFLEGEKRAFT] die 'Motivierende Gesprächsführung' (MI) einsetzt, um [PATIENT] bei der Entscheidung für die Heimbehandlung zu unterstützen.",
+    "points": 4,
+    "scoring_info": "Bezug auf Empathie, Diskrepanz und Selbstwirksamkeit.",
+    "data": {
+      "box_label": "MI Techniken Karin Weber",
+      "correct_answer": "[PFLEGEKRAFT] drückt zunächst Empathie für die belastende Situation von [PATIENT] im Dialysezentrum aus. Dann entwickelt er gemeinsam mit ihr die Diskrepanz zwischen ihrem Wunsch nach beruflicher Flexibilität und den starren HD-Zeiten. Durch das Aufgreifen ihrer Ängste und die gezielte Förderung ihrer Selbstwirksamkeit beim Erlernen der Technik bestärkt er [PATIENT] darin, die Verantwortung für die Heimdialyse selbstbewusst zu übernehmen.",
+      "keywords": [
+        "Empathie",
+        "Diskrepanz",
+        "Selbstwirksamkeit",
+        "Ambivalenz",
+        "Widerstand aufgreifen"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m8_fall_tab_002",
+    "type": "tabelle_vergleich",
+    "topic": "dialyse",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "**Vergleichen** Sie für [PATIENT] die Merkmale des bisherigen und des geplanten Verfahrens.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro Feld.",
+    "data": {
+      "table": {
+        "headers": ["Merkmal", "Hämodialyse (alt)", "Peritonealdialyse (neu)"],
+        "rows": [
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Gefäßzugang", "keywords": ["Zugang"] },
+              { "type": "input", "correct_answer": "AV-Fistel (Shunt)", "keywords": ["Shunt"] },
+              { "type": "input", "correct_answer": "PD-Katheter (Tenckhoff)", "keywords": ["Bauchkatheter"] }
+            ]
+          },
+          {
+            "cells": [
+              { "type": "input", "correct_answer": "Häufigkeit", "keywords": ["Intervall"] },
+              { "type": "input", "correct_answer": "3x pro Woche", "keywords": ["intermittierend"] },
+              { "type": "input", "correct_answer": "Täglich / mehrfach", "keywords": ["kontinuierlich"] }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m8_fall_nl_009",
+    "type": "nennen_liste",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "instruction": "**Nennen** Sie drei konkrete Inhalte, die [PFLEGEKRAFT] in die Anleitung zur PD-Katheter-Pflege bei [PATIENT] integriert.",
+    "list_label": "Katheterpflege-Inhalte",
+    "count": 3,
+    "correct_answers": [
+      "Täglicher Verbandwechsel an der Austrittsstelle",
+      "Beobachtung auf Entzündungszeichen (Rötung, Eiter)",
+      "Fixierung des Katheters zur Vermeidung von Zug"
+    ],
+    "all_valid_answers": [
+      "Hautdesinfektion",
+      "Fixierung",
+      "Verbandwechsel",
+      "Beobachtung der Austrittsstelle",
+      "Dokumentation"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Angabe."
+  },
+  {
+    "q_id": "m8_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "beratung_edukation",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m8_fall_05"],
+    "statement": "Bei der 'Teach-Back-Methode' bittet [PFLEGEKRAFT] [PATIENT], die Informationen zum Beutelwechsel mit eigenen Worten zu wiederholen, um das Verständnis sicherzustellen.",
+    "answer": "richtig",
+    "explanation": "Diese Methode ist zentral zur Stärkung der Gesundheitskompetenz und Überprüfung des Lernerfolgs bei komplexen Handlungen.",
+    "source_hint": "Skript M 8.9, Folie 16"
+  }
+]
