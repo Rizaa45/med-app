@@ -32,6 +32,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#0b0f19;color:#f8fafc
 .cb-handle{position:absolute;top:-1px;left:-1px;width:20px;height:20px;background:rgba(99,102,241,.85);border-radius:5px;cursor:grab;display:none;align-items:center;justify-content:center;font-size:8px;color:#fff;z-index:30;line-height:1;user-select:none}
 .cb-handle:active{cursor:grabbing}
 .cb:hover .cb-handle,.cb.cb-active .cb-handle{display:flex}
+/* CB RESIZE HANDLES */
+.cb-resize{position:absolute;width:14px;height:14px;background:rgba(99,102,241,.85);border-radius:3px;cursor:nwse-resize;display:none;z-index:31}
+.cb-resize-r{right:-7px;top:50%;transform:translateY(-50%);cursor:ew-resize;width:8px;height:24px}
+.cb-resize-b{bottom:-7px;left:50%;transform:translateX(-50%);cursor:ns-resize;height:8px;width:24px}
+.cb-resize-br{bottom:-7px;right:-7px;cursor:nwse-resize}
+.cb:hover .cb-resize,.cb.cb-active .cb-resize{display:block}
 [contenteditable="true"]{outline:none;transition:background .2s;border-radius:4px}
 [contenteditable="true"]:focus{background:rgba(99,102,241,.06)}
 ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#1e293b;border-radius:10px;border:2px solid #0b0f19}
@@ -40,23 +46,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#0b0f19;color:#f8fafc
 @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
 @keyframes slideInWorkspace{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 .slide-animate{animation:slideInWorkspace .6s cubic-bezier(.22,1,.36,1) forwards}
-
-/* ANIMATIONS - all use fill-mode forwards via the class */
 @keyframes animFadeIn{from{opacity:0}to{opacity:1}}
-@keyframes animSlideLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
-@keyframes animSlideRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
-@keyframes animSlideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-@keyframes animSlideDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:translateY(0)}}
-@keyframes animZoomIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
-@keyframes animBounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.95)}100%{opacity:1;transform:scale(1)}}
+@keyframes animSlideLeft{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:translateX(0)}}
+@keyframes animSlideRight{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:translateX(0)}}
+@keyframes animSlideUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+@keyframes animSlideDown{from{opacity:0;transform:translateY(-60px)}to{opacity:1;transform:translateY(0)}}
+@keyframes animZoomIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@keyframes animBounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.95)}100%{transform:scale(1)}}
 @keyframes animFlipIn{from{opacity:0;transform:perspective(600px) rotateY(-90deg)}to{opacity:1;transform:perspective(600px) rotateY(0)}}
-@keyframes animGrowX{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:scaleX(1)}}
-@keyframes animElastic{0%{opacity:0;transform:scale(0)}55%{opacity:1;transform:scale(1.06)}70%{transform:scale(.96)}85%{transform:scale(1.02)}100%{opacity:1;transform:scale(1)}}
-@keyframes animBlurIn{from{opacity:0;filter:blur(15px)}to{opacity:1;filter:blur(0)}}
-
-/* Force animated elements to stay visible after animation */
-[data-anim]{will-change:opacity,transform}
-
 .anim-badge{position:absolute;top:0;right:0;background:#6366f1;color:#fff;font-size:6px;padding:1px 4px;border-radius:0 6px 0 4px;z-index:25;pointer-events:none;font-weight:800;text-transform:uppercase;letter-spacing:.5px}
 .added-element{position:absolute;z-index:20;border:2px solid transparent;border-radius:8px;cursor:default}
 .added-element.el-selected{border-color:#6366f1;box-shadow:0 0 0 1px #6366f1}
@@ -94,12 +91,24 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#0b0f19;color:#f8fafc
 .export-dropdown.open{display:block}
 .export-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;font-size:11px;font-weight:600;color:#cbd5e1;cursor:pointer;transition:all .15s;border:none;background:none;width:100%;text-align:left}
 .export-item:hover{background:#334155;color:#fff}
+/* Slide prompt bar */
+.slide-prompt-bar{position:absolute;bottom:0;left:0;right:0;z-index:35;display:flex;gap:4px;padding:6px 10px;background:rgba(15,23,42,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(99,102,241,.2);opacity:0;transition:opacity .2s}
+.presentation-slide:hover .slide-prompt-bar{opacity:1}
+.slide-prompt-bar input{flex:1;background:#1e293b;border:1px solid #334155;color:#e2e8f0;border-radius:8px;padding:6px 12px;font-size:12px;outline:none}
+.slide-prompt-bar input:focus{border-color:#6366f1}
+.slide-prompt-bar button{background:#6366f1;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}
+.slide-prompt-bar button:hover{background:#818cf8}
+.slide-prompt-bar button:disabled{opacity:.5;cursor:not-allowed}
+/* Theme selector */
+.theme-option{width:44px;height:32px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .15s}
+.theme-option:hover{transform:scale(1.1)}
+.theme-option.selected{border-color:#6366f1;box-shadow:0 0 0 2px rgba(99,102,241,.4)}
 .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:35;backdrop-filter:blur(2px)}
 .sidebar-overlay.active{display:block}
-.img-src-tag{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.65);color:#fff;font-size:7px;padding:2px 6px;border-radius:3px;z-index:5;pointer-events:none;letter-spacing:.3px;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-
 @media(max-width:1024px){
 #sidebar{position:fixed;left:0;top:0;bottom:0;z-index:40;width:min(400px,85vw)!important;max-width:85vw}
+#sidebar-toggle{position:fixed!important;left:0!important;top:50%!important;z-index:41}
+#sidebar:not(.sidebar-closed)~#sidebar-toggle,body .sidebar-open-toggle{left:min(400px,85vw)!important}
 }
 @media(max-width:768px){
 nav{height:auto!important;min-height:48px;padding:8px 10px!important;flex-wrap:wrap;gap:6px}
@@ -111,27 +120,32 @@ nav .flex.gap-2.items-center{gap:4px;flex-wrap:wrap}
 #present-btn{padding:4px 8px!important;font-size:9px!important}
 #script-toggle-btn{padding:4px 8px!important;font-size:9px!important}
 nav .relative button.bg-white{padding:4px 10px!important;font-size:9px!important}
-#editor-toolbar{max-width:calc(100vw - 16px)!important;left:50%!important;transform:translateX(-50%)!important;top:auto;bottom:60px;position:fixed!important;overflow-x:auto!important;flex-wrap:nowrap!important;z-index:55!important}
+#editor-toolbar{max-width:calc(100vw - 16px)!important;left:50%!important;transform:translateX(-50%)!important;top:auto;bottom:60px;position:fixed!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;flex-wrap:nowrap!important;z-index:55!important}
 #sidebar{width:100vw!important;max-width:100vw!important}
+#sidebar .p-5{padding:12px!important}
+#sidebar-toggle{position:fixed!important;left:0!important;top:50%!important;transform:translateY(-50%)!important;z-index:41!important;width:28px!important;height:40px!important}
+#sidebar:not(.sidebar-closed)~#sidebar-toggle{left:calc(100vw - 28px)!important}
 #workspace-container{padding:1rem 0 3rem!important}
 #slide-scaler{gap:1.5rem!important}
 #script-panel{height:55vh!important;max-height:55vh!important}
 .slide-tools{opacity:1!important}
+.slide-prompt-bar{opacity:1!important}
 }
 @media(max-width:480px){
 nav{padding:6px 8px!important}
 nav .flex.items-center.gap-5 a{display:none}
+nav .font-black.text-lg{font-size:12px}
 #present-btn span{display:none}
 #script-toggle-btn span{display:none}
 }
 @media print{
 @page{size:landscape;margin:0}
-nav,#sidebar,.no-print,#sidebar-toggle,.slide-number,.slide-tools,#script-panel,#present-overlay,.el-controls,.el-resize,.add-menu-dropdown,.bg-picker-popup,#el-props,.anim-badge,.anim-panel,.export-dropdown,.cb-handle,.sidebar-overlay,.img-src-tag{display:none!important}
+nav,#sidebar,.no-print,#sidebar-toggle,.slide-number,.slide-tools,#script-panel,#present-overlay,.el-controls,.el-resize,.add-menu-dropdown,.bg-picker-popup,#el-props,.anim-badge,.anim-panel,.export-dropdown,.cb-handle,.sidebar-overlay,.cb-resize,.slide-prompt-bar{display:none!important}
 html,body{overflow:visible!important;background:#fff!important;height:auto!important}
 body{display:block!important}body>.flex{display:block!important;overflow:visible!important;height:auto!important}
 #workspace-container{display:block!important;overflow:visible!important;padding:0!important;background:none!important;height:auto!important;flex:none!important}
 #slide-scaler{transform:none!important;margin:0!important;gap:0!important;display:block!important}
-.presentation-slide{width:100vw!important;height:100vh!important;page-break-after:always;page-break-inside:avoid;box-shadow:none!important;border-radius:0!important;margin:0!important;opacity:1!important;animation:none!important;position:relative!important}
+.presentation-slide{width:100vw!important;height:100vh!important;page-break-after:always;page-break-inside:avoid;box-shadow:none!important;border-radius:0!important;margin:0!important;opacity:1!important;animation:none!important;position:relative!important;flex-shrink:0!important}
 .presentation-slide:last-child{page-break-after:auto}
 .added-element,.cb{border-color:transparent!important;box-shadow:none!important}
 *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important}
@@ -153,6 +167,7 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <button onclick="document.execCommand('bold')" class="tb-btn"><i class="fas fa-bold"></i></button>
 <button onclick="document.execCommand('italic')" class="tb-btn"><i class="fas fa-italic"></i></button>
 <button onclick="document.execCommand('underline')" class="tb-btn"><i class="fas fa-underline"></i></button>
+<button onclick="document.execCommand('strikeThrough')" class="tb-btn"><i class="fas fa-strikethrough"></i></button>
 <div class="tb-divider"></div>
 <label class="tb-btn relative"><i class="fas fa-font"></i><input type="color" value="#000000" onchange="document.execCommand('foreColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
 <label class="tb-btn relative"><i class="fas fa-highlighter"></i><input type="color" value="#fef08a" onchange="document.execCommand('hiliteColor',false,this.value)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label>
@@ -172,10 +187,10 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <div class="relative"><button onclick="toggleExportMenu()" class="bg-white text-slate-900 hover:bg-indigo-500 hover:text-white px-5 py-1.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"><i class="fas fa-file-export"></i> Export <i class="fas fa-chevron-down text-[8px] ml-1"></i></button><div id="export-dropdown" class="export-dropdown no-print"><button onclick="window.print();closeExportMenu()" class="export-item"><i class="fas fa-file-pdf text-red-400 w-4"></i> Als PDF drucken</button><button onclick="exportPPTX();closeExportMenu()" class="export-item"><i class="fas fa-file-powerpoint text-orange-400 w-4"></i> Als PPTX</button></div></div>
 </div>
 </nav>
-
 <div class="flex flex-1 overflow-hidden relative">
 <aside id="sidebar" class="w-[400px] border-r border-slate-800 bg-[#111520] flex flex-col z-40 shrink-0 relative">
 <div class="p-5 overflow-y-auto flex-1 space-y-6">
+<!-- PDF -->
 <section class="space-y-3">
 <h3 class="text-[10px] font-black text-rose-400 uppercase tracking-widest border-b border-slate-800 pb-2 flex items-center gap-2"><i class="fas fa-file-pdf"></i> PDF Import</h3>
 <div id="pdf-zone" class="upload-zone rounded-xl p-4 text-center" onclick="document.getElementById('pdf-input').click()" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="event.preventDefault();this.classList.remove('drag-over');handlePdfDrop(event)">
@@ -189,17 +204,35 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <button onclick="fillContextFromPdf()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 py-2 rounded-lg font-bold text-xs transition-colors border border-slate-700 flex items-center justify-center gap-2"><i class="fas fa-paste"></i> Text direkt einfügen</button>
 </div>
 </section>
+<!-- TOPIC -->
 <section class="space-y-3">
 <h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">1. Inhalt & Kontext</h3>
 <input type="text" id="topic" placeholder="Hauptthema" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500">
 <textarea id="context" rows="5" placeholder="Fallbeispiel, Symptome, Stichpunkte..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500"></textarea>
 </section>
+<!-- SPEAKERS -->
 <section class="space-y-3">
 <div class="flex justify-between items-center border-b border-slate-800 pb-2"><h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest">2. Sprecher-Team</h3><button onclick="addSpeaker()" class="text-slate-400 hover:text-indigo-400"><i class="fas fa-plus-circle text-lg"></i></button></div>
 <div id="speaker-list" class="flex flex-wrap gap-2"></div>
 </section>
+<!-- THEME CHOOSER -->
 <section class="space-y-3">
-<h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Einstellungen</h3>
+<h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">3. Stil & Design</h3>
+<span class="text-xs font-bold text-slate-400">Farbschema</span>
+<div class="flex gap-2 flex-wrap" id="theme-chooser">
+<button onclick="selectTheme('auto')" class="theme-option selected" style="background:linear-gradient(135deg,#6366f1,#3b82f6);position:relative" data-theme="auto" title="KI wählt"><span class="absolute inset-0 flex items-center justify-center text-white text-[8px] font-black">AUTO</span></button>
+<button onclick="selectTheme('indigo')" class="theme-option" style="background:linear-gradient(135deg,#1e1b4b,#818cf8)" data-theme="indigo" title="Indigo"></button>
+<button onclick="selectTheme('ocean')" class="theme-option" style="background:linear-gradient(135deg,#0c4a6e,#38bdf8)" data-theme="ocean" title="Ozean"></button>
+<button onclick="selectTheme('forest')" class="theme-option" style="background:linear-gradient(135deg,#064e3b,#34d399)" data-theme="forest" title="Wald"></button>
+<button onclick="selectTheme('rose')" class="theme-option" style="background:linear-gradient(135deg,#881337,#fb7185)" data-theme="rose" title="Rose"></button>
+<button onclick="selectTheme('sunset')" class="theme-option" style="background:linear-gradient(135deg,#7c2d12,#fb923c)" data-theme="sunset" title="Sonnenuntergang"></button>
+</div>
+<span class="text-xs font-bold text-slate-400 mt-2 block">Design-Beschreibung <span class="text-slate-600">(optional)</span></span>
+<input type="text" id="theme-description" placeholder="z.B. minimalistisch, modern, verspielt..." class="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-sm text-white outline-none focus:border-indigo-500">
+</section>
+<!-- SETTINGS -->
+<section class="space-y-3">
+<h3 class="text-[10px] font-black text-indigo-500 uppercase tracking-widest border-b border-slate-800 pb-2">4. Einstellungen</h3>
 <div class="flex justify-between items-center"><span class="text-xs font-bold text-slate-400">Folienanzahl</span><span id="slide-val" class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded">KI entscheidet</span></div>
 <input type="range" id="slide-count" min="0" max="15" value="0" oninput="updateSlideLabel(this.value)" class="w-full accent-indigo-500">
 <div class="pt-3 border-t border-slate-800 space-y-3">
@@ -221,7 +254,6 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 </div>
 </aside>
 <button onclick="toggleSidebar()" class="absolute left-[400px] top-1/2 -translate-y-1/2 bg-slate-800 border border-slate-700 text-slate-300 w-6 h-16 rounded-r-xl flex items-center justify-center hover:text-white hover:bg-slate-700 transition-all z-50 shadow-xl no-print" id="sidebar-toggle"><i class="fas fa-chevron-left text-xs"></i></button>
-
 <main id="workspace-container">
 <div id="slide-scaler">
 <div class="presentation-slide theme-midnight flex flex-col items-center justify-center text-center p-12 relative overflow-hidden">
@@ -242,7 +274,6 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 </div>
 </main>
 </div>
-
 <div id="el-props" class="items-center gap-2 bg-[#1a1f2e]/95 backdrop-blur-xl border border-slate-700 rounded-xl shadow-2xl p-2 no-print">
 <div class="flex items-center gap-1 text-[9px] text-slate-400 font-bold uppercase px-2">Element</div><div class="w-px h-5 bg-slate-700"></div>
 <div class="flex items-center gap-1"><span class="text-[9px] text-slate-500 w-5">Op</span><input type="range" id="el-opacity" min="5" max="100" value="100" class="w-16 accent-indigo-500 h-1" oninput="setElOpacity(this.value)"><span id="el-opacity-val" class="text-[9px] text-slate-400 w-7">100%</span></div>
@@ -250,7 +281,6 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <button onclick="duplicateSelected()" class="tb-btn w-7 h-7"><i class="fas fa-copy text-[10px]"></i></button>
 <button onclick="deleteSelected()" class="tb-btn w-7 h-7 hover:!bg-red-600"><i class="fas fa-trash text-[10px]"></i></button>
 </div>
-
 <div id="script-panel" class="fixed bottom-0 left-0 right-0 bg-[#0d1117] border-t border-slate-700 z-[60] shadow-2xl no-print" style="height:420px">
 <div class="h-full flex flex-col">
 <div class="flex items-center justify-between px-6 py-3 border-b border-slate-800 shrink-0">
@@ -264,7 +294,6 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <div id="script-content" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
 </div>
 </div>
-
 <div id="present-overlay"><div id="present-container"></div>
 <div id="present-controls" class="present-controls">
 <button onclick="exitPresentation()" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2"><i class="fas fa-times"></i> ESC</button>
@@ -272,7 +301,6 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 <div class="w-[100px]"></div>
 </div>
 </div>
-
 <script>
 pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 let isSidebarOpen=true,scriptPanelOpen=false,scriptViewMode='notes';
@@ -281,620 +309,450 @@ let slideScripts=[],currentSlidesData=null,extractedPdfText='',pdfFileName='';
 let activeElement=null,isDragging=false,isResizing=false;
 let dragStartX,dragStartY,dragElStartLeft,dragElStartTop,resizeStartW,resizeStartH;
 let cbDragging=null,cbStartX,cbStartY,cbStartL,cbStartT;
+let cbResizing=null,cbResizeStartX,cbResizeStartY,cbResizeStartW,cbResizeStartH,cbResizeType='';
 let presentIdx=0,presentTotal=0,controlsTimer=null;
-let collectedImageSources=[];
+let selectedTheme='auto';
+const ANIMS={none:{name:'Keine',css:'none'},fadeIn:{name:'Einblenden',css:'animFadeIn'},slideLeft:{name:'Von links',css:'animSlideLeft'},slideRight:{name:'Von rechts',css:'animSlideRight'},slideUp:{name:'Von unten',css:'animSlideUp'},slideDown:{name:'Von oben',css:'animSlideDown'},zoomIn:{name:'Zoom',css:'animZoomIn'},bounceIn:{name:'Bounce',css:'animBounceIn'},flipIn:{name:'Flip',css:'animFlipIn'}};
 
-const ANIMS={
-none:{name:'Keine',css:'none'},
-fadeIn:{name:'Einblenden',css:'animFadeIn'},
-slideLeft:{name:'Von links',css:'animSlideLeft'},
-slideRight:{name:'Von rechts',css:'animSlideRight'},
-slideUp:{name:'Von unten',css:'animSlideUp'},
-slideDown:{name:'Von oben',css:'animSlideDown'},
-zoomIn:{name:'Zoom',css:'animZoomIn'},
-bounceIn:{name:'Bounce',css:'animBounceIn'},
-flipIn:{name:'Flip',css:'animFlipIn'},
-growX:{name:'Wachsen',css:'animGrowX'},
-elastic:{name:'Elastisch',css:'animElastic'},
-blurIn:{name:'Schärfe',css:'animBlurIn'}
-};
+function isMobile(){return window.innerWidth<=768;}
+function updateSidebarOverlay(){const overlay=document.getElementById('sidebar-overlay');if(!overlay)return;if(isMobile()&&isSidebarOpen){overlay.classList.add('active');}else{overlay.classList.remove('active');}}
 
-function isMobile(){return window.innerWidth<=768}
-function updateSidebarOverlay(){const o=document.getElementById('sidebar-overlay');if(!o)return;if(isMobile()&&isSidebarOpen)o.classList.add('active');else o.classList.remove('active')}
+// THEME SELECTION
+function selectTheme(id){
+  selectedTheme=id;
+  document.querySelectorAll('#theme-chooser .theme-option').forEach(b=>{
+    b.classList.toggle('selected',b.dataset.theme===id);
+  });
+}
 
-// ═══════════════════════════════════════
-// PALETTES
-// ═══════════════════════════════════════
 const palettes=[
-{id:'indigo',dark:'theme-midnight',light:'theme-soft',accent:'#818cf8',acHex:'818cf8'},
-{id:'ocean',dark:'theme-ocean',light:'theme-clean',accent:'#38bdf8',acHex:'38bdf8'},
-{id:'forest',dark:'theme-forest',light:'theme-warm',accent:'#34d399',acHex:'34d399'},
-{id:'rose',dark:'theme-crimson',light:'theme-soft',accent:'#fb7185',acHex:'fb7185'},
-{id:'sunset',dark:'theme-sunset',light:'theme-warm',accent:'#fb923c',acHex:'fb923c'}
+  {id:'indigo',dark:'theme-midnight',light:'theme-soft',accent:'#818cf8',acHex:'818cf8'},
+  {id:'ocean',dark:'theme-ocean',light:'theme-clean',accent:'#38bdf8',acHex:'38bdf8'},
+  {id:'forest',dark:'theme-forest',light:'theme-warm',accent:'#34d399',acHex:'34d399'},
+  {id:'rose',dark:'theme-crimson',light:'theme-soft',accent:'#fb7185',acHex:'fb7185'},
+  {id:'sunset',dark:'theme-sunset',light:'theme-warm',accent:'#fb923c',acHex:'fb923c'}
 ];
 let P=palettes[0];
 const decos=[
-a=>`<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:.08"></div><div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:.06"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
-a=>`<div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
-a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)"></div><div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:.06"></div>`,
-a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)"></div>`
+  a=>`<div class="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl" style="background:${a};opacity:.08"></div><div class="absolute -bottom-32 -left-32 w-72 h-72 rounded-full blur-3xl" style="background:${a};opacity:.06"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px"></div>`,
+  a=>`<div class="absolute top-0 right-0 w-[600px] h-[600px]" style="background:radial-gradient(circle at top right,${a}18,transparent 60%)"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px]" style="background:radial-gradient(circle at bottom left,${a}12,transparent 60%)"></div>`,
+  a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)"></div><div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full blur-3xl" style="background:${a};opacity:.06"></div>`,
+  a=>`<div class="absolute inset-0" style="background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px)"></div>`
 ];
 let decoIdx=0;
-function pickPalette(){P=palettes[Math.floor(Math.random()*palettes.length)];decoIdx=Math.floor(Math.random()*decos.length)}
-function getDeco(){const fn=decos[decoIdx%decos.length];decoIdx++;return fn(P.accent)}
+const fallbackImgs=['https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80','https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80'];
 
-// ═══════════════════════════════════════
-// IMAGE SYSTEM — Completely rethought
-// Uses Wikimedia Commons API + Pexels + curated
-// ═══════════════════════════════════════
-
-// Strategy: AI gives us a Wikipedia article name or very specific medical term.
-// We search Wikimedia Commons for real photos of that exact thing.
-// Fallback: curated topic-specific Unsplash photos (hand-picked, verified working)
-
-const CURATED={
-  // Each key maps to a VERIFIED working Unsplash photo URL
-  nursing:['photo-1576765608535-5f04d1e3f289','photo-1612349317150-e413f6a5b16d','photo-1559839734-2b71ea197ec2'],
-  hospital:['photo-1519494026892-80bbd2d6fd0d','photo-1504439468489-c8920d796a29','photo-1516549655169-df83a0774514'],
-  medical:['photo-1579684385127-1ef15d508118','photo-1576091160399-112ba8d25d1d','photo-1551190822-a9333d879b1f'],
-  anatomy:['photo-1530026405186-ed1f139313f8','photo-1532187863486-abf9dbad1b69','photo-1628595351029-c2bf17511435'],
-  elderly:['photo-1559757175-5700dde675bc','photo-1581595220892-b0739db3ba8c','photo-1587854692152-cbe660dbde88'],
-  hygiene:['photo-1584634731339-252c581abfc5','photo-1585559604959-6388fe69c5c0','photo-1603398938378-e54eab446dde'],
-  surgery:['photo-1551076805-e1869033e561','photo-1571772996211-2f02c9727629','photo-1582719508461-905c673771fd'],
-  lab:['photo-1579165466949-3180a3d056d5','photo-1582719471384-894fbb16564e','photo-1538108149393-fbbd81895907'],
-  pills:['photo-1471864190281-a93a3070b6de','photo-1550572017-edd951aa8f72','photo-1587854692152-cbe660dbde88'],
-  rehab:['photo-1571019613454-1cb2f99b2d8b','photo-1506126613408-eca07ce68773','photo-1544367567-0f2fcb009e0b'],
-  lung:['photo-1530497610245-94d3c16cda28','photo-1559757148-5c350d0d3c56','photo-1631815588090-d4bfec5b1ccb'],
-  heart:['photo-1559757175-5700dde675bc','photo-1628595351029-c2bf17511435','photo-1666214280557-091e5bf7f5ce']
-};
-const ALL_CURATED=Object.values(CURATED).flat();
-
-// Search Wikimedia Commons for real images
-async function searchWikimediaImage(query){
-  try{
-    const url=`https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query+' filetype:bitmap')}&srnamespace=6&srlimit=5&format=json&origin=*`;
-    const r=await fetch(url);
-    const d=await r.json();
-    const results=d.query?.search||[];
-    if(!results.length)return null;
-    // Get the first result's image URL
-    const title=results[0].title;
-    const infoUrl=`https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=800&format=json&origin=*`;
-    const r2=await fetch(infoUrl);
-    const d2=await r2.json();
-    const pages=d2.query?.pages;
-    if(!pages)return null;
-    const page=Object.values(pages)[0];
-    const info=page?.imageinfo?.[0];
-    if(!info)return null;
-    return {url:info.thumburl||info.url, source:'Wikimedia Commons: '+title.replace('File:','')};
-  }catch(e){return null}
-}
-
-// Search Pexels (free, no API key needed for small usage via their CDN)
-function getPexelsUrl(query,idx){
-  // Pexels doesn't have a free JS API, but we can use their image CDN with specific IDs
-  // Instead we use a smart fallback
-  return null;
-}
-
-// Main image resolver - tries multiple sources
-async function resolveImage(searchQuery, category, idx){
-  // 1. Try Wikimedia Commons for specific medical terms
-  if(searchQuery && searchQuery.length>3){
-    const wm=await searchWikimediaImage(searchQuery);
-    if(wm)return wm;
+function pickPalette(){
+  if(selectedTheme!=='auto'){
+    const found=palettes.find(p=>p.id===selectedTheme);
+    if(found){P=found;decoIdx=Math.floor(Math.random()*decos.length);return;}
   }
-
-  // 2. Use curated Unsplash photos matched by category
-  const cat=matchCategory(searchQuery,category);
-  const photos=CURATED[cat]||CURATED.medical;
-  const photoId=photos[idx%photos.length];
-  return {
-    url:`https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=800&q=80`,
-    source:`Unsplash (${cat})`
-  };
+  P=palettes[Math.floor(Math.random()*palettes.length)];decoIdx=Math.floor(Math.random()*decos.length);
 }
+function getDeco(){const fn=decos[decoIdx%decos.length];decoIdx++;return fn(P.accent);}
 
-function matchCategory(query,hint){
-  const q=((query||'')+(hint||'')).toLowerCase();
-  if(/lung|atem|pneum|spirom|triflow|beatm|respir/i.test(q))return 'lung';
-  if(/herz|card|heart|kreislauf|blutdruck/i.test(q))return 'heart';
-  if(/pflege|nurse|nurs|pflegekraft/i.test(q))return 'nursing';
-  if(/krankenhaus|hospital|station|klinik/i.test(q))return 'hospital';
-  if(/alt|senior|elder|geria|demen/i.test(q))return 'elderly';
-  if(/hygien|desinf|wasch|sauber|steril/i.test(q))return 'hygiene';
-  if(/op |chiru|surgery|wunde|naht/i.test(q))return 'surgery';
-  if(/labor|blut|test|diagno/i.test(q))return 'lab';
-  if(/medik|arznei|tablette|pill|pharma/i.test(q))return 'pills';
-  if(/mobil|rehab|physio|bewegung|therap/i.test(q))return 'rehab';
-  if(/anatom|körper|organ|muskel/i.test(q))return 'anatomy';
-  return 'medical';
-}
-
-// Synchronous fallback for initial render (async images load later)
-function getQuickImageUrl(category,idx){
-  const cat=matchCategory(category,'');
-  const photos=CURATED[cat]||CURATED.medical;
-  const photoId=photos[idx%photos.length];
-  return `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=800&q=80`;
-}
-
-function buildImageBlock(imgUrl,idx,sourceLabel){
-  const fb=`https://images.unsplash.com/${ALL_CURATED[idx%ALL_CURATED.length]}?auto=format&fit=crop&w=800&q=80`;
-  if(sourceLabel)collectedImageSources.push(sourceLabel);
-  return `<div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group/img bg-slate-200" data-img-idx="${idx}">
-<div class="img-loading absolute inset-0 z-0"></div>
-<img src="${imgUrl}" crossorigin="anonymous" class="w-full h-full object-cover relative z-10" alt="" loading="lazy"
-  onerror="this.onerror=null;this.src='${fb}';this.previousElementSibling.style.display='none'"
-  onload="this.previousElementSibling.style.display='none'">
-${sourceLabel?`<div class="img-src-tag no-print">${sourceLabel}</div>`:''}
-<div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover/img:opacity-100 flex flex-col items-center justify-center gap-2 transition-all z-20 no-print rounded-2xl">
-  <button onclick="this.closest('.group\\/img').querySelector('.img-f').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-upload mr-1.5"></i>Eigenes Bild</button>
-  <button onclick="promptImageSearch(this)" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-search mr-1.5"></i>Bild suchen</button>
-  <button onclick="var u=prompt('Bild-URL:');if(u)this.closest('.group\\/img').querySelector('img').src=u" class="bg-slate-700 text-white px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-link mr-1.5"></i>URL einfügen</button>
-</div>
-<input type="file" class="img-f hidden" accept="image/*" onchange="const r=new FileReader();r.onload=e=>this.closest('.group\\/img').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0])">
-</div>`;
-}
-
-async function promptImageSearch(btn){
-  const q=prompt('Suchbegriff für Bild (Englisch empfohlen, z.B. "incentive spirometer"):');
-  if(!q)return;
-  const container=btn.closest('.group\\/img');
-  const img=container.querySelector('img');
-  const loader=container.querySelector('.img-loading');
-  if(loader)loader.style.display='block';
-  // Try wikimedia first
-  const wm=await searchWikimediaImage(q);
-  if(wm){
-    img.src=wm.url;
-    const tag=container.querySelector('.img-src-tag');
-    if(tag)tag.textContent=wm.source;
-  }else{
-    // Fallback to category match
-    const cat=matchCategory(q,'');
-    const photos=CURATED[cat]||CURATED.medical;
-    img.src=`https://images.unsplash.com/${photos[0]}?auto=format&fit=crop&w=800&q=80`;
-  }
-}
-
-// After slides render, try to upgrade images with wikimedia
-async function upgradeSlideImages(slides){
-  for(let i=0;i<slides.length;i++){
-    const s=slides[i];
-    if(s.type!=='split'||!s.imageSearch)continue;
-    const container=document.querySelector(`[data-slide-index="${i}"] [data-img-idx="${i}"]`);
-    if(!container)continue;
-    const img=container.querySelector('img');
-    const wm=await searchWikimediaImage(s.imageSearch);
-    if(wm&&img){
-      img.src=wm.url;
-      const tag=container.querySelector('.img-src-tag');
-      if(tag)tag.textContent=wm.source;
-      // Also update collected sources
-      collectedImageSources.push(wm.source);
-    }
-  }
-}
-
-// ═══════════════════════════════════════
-// LAYOUTS
-// ═══════════════════════════════════════
 const TITLE_LAYOUTS=[
-{heading:{l:8,t:26,w:84,ta:'center',fs:'4.5rem'},line:{l:38,t:51,w:24},sub:{l:12,t:56,w:76,ta:'center'},speaker:{l:55,t:87,w:40,ta:'right'},label:{l:4,t:4}},
-{heading:{l:6,t:18,w:55,ta:'left',fs:'4rem'},line:{l:6,t:50,w:12},sub:{l:6,t:55,w:50,ta:'left'},speaker:{l:6,t:87,w:40,ta:'left'},label:{l:6,t:6}},
-{heading:{l:6,t:40,w:80,ta:'left',fs:'3.8rem'},line:{l:6,t:38,w:8},sub:{l:6,t:66,w:55,ta:'left'},speaker:{l:58,t:87,w:38,ta:'right'},label:{l:6,t:6}}
+  {name:'centered',heading:{l:8,t:26,w:84,ta:'center',fs:'4.5rem'},line:{l:38,t:51,w:24},sub:{l:12,t:56,w:76,ta:'center'},speaker:{l:55,t:87,w:40,ta:'right'},label:{l:4,t:4}},
+  {name:'left-bold',heading:{l:6,t:18,w:55,ta:'left',fs:'4rem'},line:{l:6,t:50,w:12},sub:{l:6,t:55,w:50,ta:'left'},speaker:{l:6,t:87,w:40,ta:'left'},label:{l:6,t:6}},
+  {name:'bottom-heavy',heading:{l:6,t:40,w:80,ta:'left',fs:'3.8rem'},line:{l:6,t:38,w:8},sub:{l:6,t:66,w:55,ta:'left'},speaker:{l:58,t:87,w:38,ta:'right'},label:{l:6,t:6}},
+  {name:'right-aligned',heading:{l:20,t:24,w:76,ta:'right',fs:'4.2rem'},line:{l:72,t:52,w:24},sub:{l:25,t:56,w:71,ta:'right'},speaker:{l:55,t:87,w:41,ta:'right'},label:{l:72,t:5}}
 ];
 const SPLIT_LAYOUTS=[
-{text:{l:3,t:6,w:48},img:{l:54,t:4,w:43,h:92},spk:{l:3,t:90,w:40}},
-{text:{l:48,t:6,w:48},img:{l:3,t:4,w:43,h:92},spk:{l:48,t:90,w:40}},
-{text:{l:4,t:8,w:40},img:{l:48,t:6,w:49,h:88},spk:{l:4,t:90,w:35}}
+  {name:'text-left',text:{l:3,t:6,w:48},img:{l:54,t:4,w:43,h:92},spk:{l:3,t:90,w:40}},
+  {name:'text-right',text:{l:48,t:6,w:48},img:{l:3,t:4,w:43,h:92},spk:{l:48,t:90,w:40}},
+  {name:'text-narrow',text:{l:4,t:8,w:40},img:{l:48,t:6,w:49,h:88},spk:{l:4,t:90,w:35}}
 ];
 const GRID_LAYOUTS=[
-{positions:[[3,20,45,35],[52,20,45,35],[3,58,45,35],[52,58,45,35]]},
-{positions:[[3,25,22,60],[27,25,22,60],[51,25,22,60],[75,25,22,60]]},
-{positions:[[3,18,45,32],[52,25,45,32],[3,55,45,32],[52,62,45,32]]}
+  {name:'2x2',positions:[[3,20,45,35],[52,20,45,35],[3,58,45,35],[52,58,45,35]]},
+  {name:'row',positions:[[3,25,22,60],[27,25,22,60],[51,25,22,60],[75,25,22,60]]},
+  {name:'stagger',positions:[[3,18,45,32],[52,25,45,32],[3,55,45,32],[52,62,45,32]]}
 ];
 let titleVar=0,splitVar=0,gridVar=0;
-function pickLayouts(){titleVar=Math.floor(Math.random()*TITLE_LAYOUTS.length);splitVar=Math.floor(Math.random()*SPLIT_LAYOUTS.length);gridVar=Math.floor(Math.random()*GRID_LAYOUTS.length)}
+function pickLayouts(){titleVar=Math.floor(Math.random()*TITLE_LAYOUTS.length);splitVar=Math.floor(Math.random()*SPLIT_LAYOUTS.length);gridVar=Math.floor(Math.random()*GRID_LAYOUTS.length);}
 
-// ═══════════════════════════════════════
-// HELPERS
-// ═══════════════════════════════════════
-function CB(l,t,w,extra=''){return `<div class="cb" style="left:${l}%;top:${t}%;width:${w}%;${extra}"><div class="cb-handle no-print" onmousedown="startCbDrag(event)" ontouchstart="startCbDragTouch(event)">⋮⋮</div>`}
-function CBend(){return `</div>`}
-function animAttr(type,delay,dur,label){
-if(!document.getElementById('anim-enabled')?.checked)return '';
-return ` data-anim="${type}" data-anim-delay="${delay}" data-anim-duration="${dur}" data-anim-label="${label||''}"`;
-}
+function CB(l,t,w,extra=''){return `<div class="cb" style="left:${l}%;top:${t}%;width:${w}%;${extra}"><div class="cb-handle no-print" onmousedown="startCbDrag(event)" ontouchstart="startCbDragTouch(event)">⋮⋮</div><div class="cb-resize cb-resize-r no-print" onmousedown="startCbResize(event,'r')" ontouchstart="startCbResizeTouch(event,'r')"></div><div class="cb-resize cb-resize-b no-print" onmousedown="startCbResize(event,'b')" ontouchstart="startCbResizeTouch(event,'b')"></div><div class="cb-resize cb-resize-br no-print" onmousedown="startCbResize(event,'br')" ontouchstart="startCbResizeTouch(event,'br')"></div>`;}
+function CBend(){return `</div>`;}
+function animAttr(type,delay,dur,label){if(!document.getElementById('anim-enabled')?.checked)return '';return ` data-anim="${type}" data-anim-delay="${delay}" data-anim-duration="${dur}" data-anim-label="${label||''}"`;} 
 
-// ═══════════════════════════════════════
-// UI
-// ═══════════════════════════════════════
-function toggleSidebar(){const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');isSidebarOpen=!isSidebarOpen;if(isSidebarOpen){sb.classList.remove('sidebar-closed');btn.style.left=isMobile()?'calc(100vw - 28px)':'400px';ico.classList.replace('fa-chevron-right','fa-chevron-left')}else{sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right')}updateSidebarOverlay();setTimeout(scaleSlideToFit,350)}
-function updateSlideLabel(v){document.getElementById('slide-val').innerText=v==0?'KI entscheidet':v}
-function addSpeaker(){const n=prompt("Name:");if(n&&n.trim()){speakers.push(n.trim());renderSpeakers()}}
-function renderSpeakers(){document.getElementById('speaker-list').innerHTML=speakers.map((s,i)=>`<div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">${s}<button onclick="speakers.splice(${i},1);renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button></div>`).join('')}
-function toggleExportMenu(){document.getElementById('export-dropdown').classList.toggle('open')}
-function closeExportMenu(){document.getElementById('export-dropdown').classList.remove('open')}
-function showBtn(id){const b=document.getElementById(id);b.classList.remove('hidden');b.classList.add('flex')}
-function scaleSlideToFit(){const c=document.getElementById('workspace-container'),sc=document.getElementById('slide-scaler'),aw=c.clientWidth-(isMobile()?20:80),scale=Math.min(aw/1280,1);sc.style.transform=`scale(${scale})`;sc.style.marginBottom=`${sc.offsetHeight*scale-sc.offsetHeight}px`}
-function getCurrentScale(){const sc=document.getElementById('slide-scaler'),r=sc.getBoundingClientRect();return r.width/(sc.offsetWidth||1280)}
-window.addEventListener('resize',()=>{scaleSlideToFit();updateSidebarOverlay();const btn=document.getElementById('sidebar-toggle');if(isSidebarOpen)btn.style.left=isMobile()?'calc(100vw - 28px)':'400px'});
+function toggleSidebar(){const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');isSidebarOpen=!isSidebarOpen;if(isSidebarOpen){sb.classList.remove('sidebar-closed');if(!isMobile()){btn.style.left='400px';}else{btn.style.left='calc(100vw - 28px)';}ico.classList.replace('fa-chevron-right','fa-chevron-left');}else{sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right');}updateSidebarOverlay();setTimeout(scaleSlideToFit,350);}
+function updateSlideLabel(v){document.getElementById('slide-val').innerText=v==0?'KI entscheidet':v;}
+function addSpeaker(){const n=prompt("Name:");if(n&&n.trim()){speakers.push(n.trim());renderSpeakers();}}
+function renderSpeakers(){document.getElementById('speaker-list').innerHTML=speakers.map((s,i)=>`<div class="bg-indigo-900/40 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">${s}<button onclick="speakers.splice(${i},1);renderSpeakers()" class="hover:text-red-400 ml-1"><i class="fas fa-times"></i></button></div>`).join('');}
+function toggleExportMenu(){document.getElementById('export-dropdown').classList.toggle('open');}
+function closeExportMenu(){document.getElementById('export-dropdown').classList.remove('open');}
+function showBtn(id){const b=document.getElementById(id);b.classList.remove('hidden');b.classList.add('flex');}
 
-document.addEventListener('focusin',e=>{if(e.target.hasAttribute('contenteditable')&&e.target.closest('.presentation-slide')){document.getElementById('editor-toolbar').classList.remove('hidden');document.getElementById('editor-toolbar').classList.add('flex')}});
-document.addEventListener('click',e=>{if(!e.target.hasAttribute('contenteditable')&&!e.target.closest('#editor-toolbar')&&!e.target.closest('.tb-select')){document.getElementById('editor-toolbar').classList.add('hidden');document.getElementById('editor-toolbar').classList.remove('flex')}if(!e.target.closest('.relative'))closeExportMenu();if(!e.target.closest('.slide-tools'))document.querySelectorAll('.add-menu-dropdown.open').forEach(m=>m.classList.remove('open'))});
-function setFontSize(px){document.execCommand('fontSize',false,'1');const c=window.getSelection()?.anchorNode?.parentElement?.closest?.('[contenteditable]');if(!c)return;c.querySelectorAll('font[size="1"]').forEach(el=>{const s=document.createElement('span');s.style.fontSize=px+'px';s.innerHTML=el.innerHTML;el.parentNode.replaceChild(s,el)})}
+function scaleSlideToFit(){const c=document.getElementById('workspace-container'),sc=document.getElementById('slide-scaler'),aw=c.clientWidth-(isMobile()?20:80),scale=Math.min(aw/1280,1);sc.style.transform=`scale(${scale})`;sc.style.marginBottom=`${sc.offsetHeight*scale-sc.offsetHeight}px`;}
+function getCurrentScale(){const sc=document.getElementById('slide-scaler'),r=sc.getBoundingClientRect();return r.width/(sc.offsetWidth||1280);}
+window.addEventListener('resize',()=>{scaleSlideToFit();updateSidebarOverlay();const btn=document.getElementById('sidebar-toggle');if(isSidebarOpen){if(isMobile()){btn.style.left='calc(100vw - 28px)';}else{btn.style.left='400px';}}});
 
-// ═══════════════════════════════════════
-// PDF
-// ═══════════════════════════════════════
-function handlePdfDrop(e){const f=e.dataTransfer.files[0];if(f&&f.type==='application/pdf')processPdf(f)}
-function handlePdfSelect(e){if(e.target.files[0])processPdf(e.target.files[0])}
+document.addEventListener('focusin',e=>{if(e.target.hasAttribute('contenteditable')&&e.target.closest('.presentation-slide')){document.getElementById('editor-toolbar').classList.remove('hidden');document.getElementById('editor-toolbar').classList.add('flex');}});
+document.addEventListener('click',e=>{if(!e.target.hasAttribute('contenteditable')&&!e.target.closest('#editor-toolbar')&&!e.target.closest('.tb-select')){document.getElementById('editor-toolbar').classList.add('hidden');document.getElementById('editor-toolbar').classList.remove('flex');}if(!e.target.closest('.relative'))closeExportMenu();if(!e.target.closest('.slide-tools'))document.querySelectorAll('.add-menu-dropdown.open').forEach(m=>m.classList.remove('open'));});
+function setFontSize(px){document.execCommand('fontSize',false,'1');const c=window.getSelection()?.anchorNode?.parentElement?.closest?.('[contenteditable]');if(!c)return;c.querySelectorAll('font[size="1"]').forEach(el=>{const s=document.createElement('span');s.style.fontSize=px+'px';s.innerHTML=el.innerHTML;el.parentNode.replaceChild(s,el);});}
+
+function handlePdfDrop(e){const f=e.dataTransfer.files[0];if(f&&f.type==='application/pdf')processPdf(f);}
+function handlePdfSelect(e){if(e.target.files[0])processPdf(e.target.files[0]);}
 async function processPdf(file){
-document.getElementById('pdf-upload-ui').classList.add('hidden');document.getElementById('pdf-loading-ui').classList.remove('hidden');document.getElementById('pdf-result').classList.add('hidden');document.getElementById('pdf-zone').classList.add('has-file');
-try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;let t='';for(let i=1;i<=pdf.numPages;i++){document.getElementById('pdf-loading-text').textContent=`Seite ${i}/${pdf.numPages}...`;const p=await pdf.getPage(i);const tc=await p.getTextContent();t+=tc.items.map(x=>x.str).join(' ')+'\n\n'}
-extractedPdfText=t.trim();pdfFileName=file.name;document.getElementById('pdf-name').textContent=file.name;document.getElementById('pdf-pages').textContent=`${pdf.numPages} Seiten`;document.getElementById('pdf-loading-ui').classList.add('hidden');document.getElementById('pdf-result').classList.remove('hidden');
-}catch(e){console.error(e);resetPdf()}}
-function resetPdf(){extractedPdfText='';pdfFileName='';document.getElementById('pdf-input').value='';document.getElementById('pdf-upload-ui').classList.remove('hidden');document.getElementById('pdf-loading-ui').classList.add('hidden');document.getElementById('pdf-result').classList.add('hidden');document.getElementById('pdf-zone').classList.remove('has-file')}
-function fillContextFromPdf(){if(extractedPdfText){document.getElementById('context').value=extractedPdfText.substring(0,5000);document.getElementById('topic').value=pdfFileName.replace('.pdf','')}}
+  document.getElementById('pdf-upload-ui').classList.add('hidden');document.getElementById('pdf-loading-ui').classList.remove('hidden');document.getElementById('pdf-result').classList.add('hidden');document.getElementById('pdf-zone').classList.add('has-file');
+  try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;let t='';for(let i=1;i<=pdf.numPages;i++){document.getElementById('pdf-loading-text').textContent=`Seite ${i}/${pdf.numPages}...`;const p=await pdf.getPage(i);const tc=await p.getTextContent();t+=tc.items.map(x=>x.str).join(' ')+'\n\n';}
+  extractedPdfText=t.trim();pdfFileName=file.name;document.getElementById('pdf-name').textContent=file.name;document.getElementById('pdf-pages').textContent=`${pdf.numPages} Seiten`;document.getElementById('pdf-loading-ui').classList.add('hidden');document.getElementById('pdf-result').classList.remove('hidden');
+  }catch(e){console.error(e);resetPdf();}
+}
+function resetPdf(){extractedPdfText='';pdfFileName='';document.getElementById('pdf-input').value='';document.getElementById('pdf-upload-ui').classList.remove('hidden');document.getElementById('pdf-loading-ui').classList.add('hidden');document.getElementById('pdf-result').classList.add('hidden');document.getElementById('pdf-zone').classList.remove('has-file');}
+function fillContextFromPdf(){if(extractedPdfText){document.getElementById('context').value=extractedPdfText.substring(0,5000);document.getElementById('topic').value=pdfFileName.replace('.pdf','');}}
 async function aiExtractPdf(){
-if(!extractedPdfText)return;const btn=document.getElementById('ai-extract-btn');btn.innerHTML='<i class="fas fa-circle-notch animate-spin"></i> Analysiere...';btn.disabled=true;
-try{const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:`Analysiere PDF-Text:\n"""\n${extractedPdfText.substring(0,5000)}\n"""\nFinde: 1.Aufgabenstellung 2.Fallbeispiel 3.Hauptthema 4.Titelvorschlag\nNUR JSON: {"titel":"...","aufgabe":"...","fallbeispiel":"...","thema":"..."}`})});
-const data=await res.json();const a=JSON.parse(data.text.replace(/```json|```/g,'').trim());
-document.getElementById('topic').value=a.titel||a.thema||'';let ctx='';if(a.aufgabe)ctx+='AUFGABE:\n'+a.aufgabe+'\n\n';if(a.fallbeispiel)ctx+='FALLBEISPIEL:\n'+a.fallbeispiel;document.getElementById('context').value=ctx||extractedPdfText.substring(0,3000);
-}catch(e){fillContextFromPdf()}finally{btn.innerHTML='<i class="fas fa-brain"></i> KI Auto-Erkennung';btn.disabled=false}}
+  if(!extractedPdfText)return;const btn=document.getElementById('ai-extract-btn');btn.innerHTML='<i class="fas fa-circle-notch animate-spin"></i> Analysiere...';btn.disabled=true;
+  try{const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:`Analysiere PDF-Text:\n"""\n${extractedPdfText.substring(0,5000)}\n"""\nFinde: 1.Aufgabenstellung 2.Fallbeispiel 3.Hauptthema 4.Titelvorschlag\nNUR JSON: {"titel":"...","aufgabe":"...","fallbeispiel":"...","thema":"..."}`})});
+  const data=await res.json();const a=JSON.parse(data.text.replace(/```json|```/g,'').trim());
+  document.getElementById('topic').value=a.titel||a.thema||'';let ctx='';if(a.aufgabe)ctx+='AUFGABE:\n'+a.aufgabe+'\n\n';if(a.fallbeispiel)ctx+='FALLBEISPIEL:\n'+a.fallbeispiel;document.getElementById('context').value=ctx||extractedPdfText.substring(0,3000);
+  }catch(e){fillContextFromPdf();}finally{btn.innerHTML='<i class="fas fa-brain"></i> KI Auto-Erkennung';btn.disabled=false;}
+}
 
-// ═══════════════════════════════════════
+// IMPROVED IMAGE GENERATION
+function getImageUrl(prompt,headline,idx){
+  if(!prompt)return fallbackImgs[idx%fallbackImgs.length];
+  // Use the imagePrompt directly - it should already be descriptive from AI
+  const seed=Math.floor(Math.random()*999999)+idx*7919;
+  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=800&height=700&nologo=true&seed=${seed}`;
+}
+function buildImageBlock(imgUrl,idx){
+  const fb=fallbackImgs[idx%fallbackImgs.length];
+  return `<div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative group/img bg-slate-200"><div class="img-loading absolute inset-0 z-0"></div><img src="${imgUrl}" class="w-full h-full object-cover relative z-10" alt="" loading="lazy" onload="this.previousElementSibling.style.display='none'" onerror="this.onerror=null;this.src='${fb}';this.previousElementSibling.style.display='none'"><div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover/img:opacity-100 flex flex-col items-center justify-center gap-2 transition-all z-20 no-print rounded-2xl"><button onclick="this.closest('.group\\/img').querySelector('.img-f').click()" class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-upload mr-1.5"></i>Hochladen</button><button onclick="var u=prompt('URL:');if(u)this.closest('.group\\/img').querySelector('img').src=u" class="bg-slate-700 text-white px-4 py-2 rounded-lg font-bold text-xs"><i class="fas fa-link mr-1.5"></i>URL</button></div><input type="file" class="img-f hidden" accept="image/*" onchange="const r=new FileReader();r.onload=e=>this.closest('.group\\/img').querySelector('img').src=e.target.result;r.readAsDataURL(this.files[0])"></div>`;
+}
+
 // AI GENERATION
-// ═══════════════════════════════════════
 async function generatePresentation(){
-const topic=document.getElementById('topic').value,context=document.getElementById('context').value,count=document.getElementById('slide-count').value;
-const btn=document.getElementById('generate-btn');if(!topic&&!context)return alert("Bitte Thema oder Kontext eingeben!");
-btn.innerHTML=`<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;btn.disabled=true;
-collectedImageSources=[];
-const countRule=count>0?`Erstelle genau ${count} Folien.`:'Erstelle 8-12 Folien.';
+  const topic=document.getElementById('topic').value,context=document.getElementById('context').value,count=document.getElementById('slide-count').value;
+  const themeDesc=document.getElementById('theme-description').value;
+  const btn=document.getElementById('generate-btn');if(!topic&&!context)return alert("Bitte Thema oder Kontext eingeben!");
+  btn.innerHTML=`<i class="fas fa-circle-notch animate-spin"></i> Synthetisiere...`;btn.disabled=true;
+  const countRule=count>0?`Erstelle genau ${count} Folien.`:'Erstelle 8-12 Folien.';
+  const speakerInfo=speakers.length>0?`Sprecher: ${speakers.join(', ')}`:'Kein Sprecher-Team angegeben, lasse speaker-Felder weg.';
+  const themeInstruction=themeDesc?`\nDESIGN-STIL: ${themeDesc}. Passe Bildprompts und Ton daran an.`:'';
+  const prompt=`Erstelle eine professionelle medizinische Präsentation.\nThema: "${topic}"\nKontext: "${context}"\n${speakerInfo}\n${countRule}${themeInstruction}\n\nLAYOUTS: title,split,grid,stats,timeline,quote,sources,outro\nREGELN:\n1. Beginne mit title, ende mit sources dann outro\n2. Verschiedene Layouts nutzen\n3. imagePrompt: MUSS eine DETAILLIERTE ENGLISCHE SZENE-BESCHREIBUNG sein die DIREKT zum Folieninhalt passt. Beispiel: Wenn Folie über Pflege handelt: "A compassionate nurse in blue scrubs carefully checking elderly patient blood pressure in bright modern hospital room, warm lighting, professional medical care". KEINE abstrakten Begriffe, sondern KONKRETE VISUELLE SZENEN mit Personen, Aktionen, Setting.\n4. contentHtml: <ul><li>, <strong>\n5. Texte Deutsch\n${speakers.length===0?'6. KEIN speaker-Feld in die Folien, da keine Sprecher angegeben wurden.':'6. speaker pro Folie angeben.'}\n\nPro Folie: notes (Stichpunkte), script (Redetext)\n\nNUR JSON:\n{"slides":[{"type":"title","headline":"...","subtitle":"..."${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"split","headline":"...","contentHtml":"...","imagePrompt":"detailed english scene description with people actions and setting"${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"grid","headline":"...","items":[{"title":"...","value":"..."}]${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"stats","headline":"...","stats":[{"value":"...","label":"..."}]${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"timeline","headline":"...","steps":[{"title":"...","description":"..."}]${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"quote","quote":"...","author":"..."${speakers.length>0?',"speaker":"..."':''},"notes":"...","script":"..."},{"type":"sources","textSources":["..."],"imageSources":["..."],"notes":"...","script":"..."},{"type":"outro","headline":"...","subtitle":"...","notes":"...","script":"..."}]}`;
+  try{const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
+  const data=await res.json();const parsed=JSON.parse(data.text.replace(/```json|```/g,'').trim());
+  currentSlidesData=parsed.slides;pickPalette();pickLayouts();renderPresentation(parsed.slides);saveHistory(topic,context,parsed.slides);if(isSidebarOpen)toggleSidebar();
+  }catch(e){console.error(e);alert("Fehler bei der Generierung.");}
+  finally{btn.innerHTML=`<i class="fas fa-wand-magic-sparkles"></i> Generieren`;btn.disabled=false;}
+}
 
-const prompt=`Erstelle eine professionelle medizinische Präsentation.
-Thema: "${topic}"
-Kontext: "${context}"
-Sprecher: ${speakers.length>0?speakers.join(', '):'Projekt-Team'}
-${countRule}
+// PER-SLIDE AI EDIT
+async function editSlideByPrompt(slideIndex, promptInput){
+  const btn=promptInput.nextElementSibling;
+  const userPrompt=promptInput.value.trim();
+  if(!userPrompt)return;
+  btn.disabled=true;btn.innerHTML='<i class="fas fa-circle-notch animate-spin"></i>';
+  const oldSlide=currentSlidesData[slideIndex];
+  const hasSpeakers=speakers.length>0;
+  try{
+    const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:`Du hast eine Folie in einer medizinischen Präsentation. Ändere sie basierend auf der Anweisung des Nutzers.\n\nAktuelle Folie (JSON):\n${JSON.stringify(oldSlide)}\n\nNutzer-Anweisung: "${userPrompt}"\n\nREGELN:\n1. Behalte den type bei, es sei denn der Nutzer will explizit einen anderen.\n2. imagePrompt MUSS eine DETAILLIERTE ENGLISCHE SZENE-BESCHREIBUNG sein mit konkreten Personen, Aktionen und Setting.\n3. Texte auf Deutsch.\n4. Gib NUR die geänderte Folie als JSON zurück.\n${hasSpeakers?'5. speaker-Feld beibehalten':'5. KEIN speaker-Feld'}\n\nNUR JSON (eine einzelne Folie, KEIN Array):`})});
+    const data=await res.json();
+    const newSlide=JSON.parse(data.text.replace(/```json|```/g,'').trim());
+    currentSlidesData[slideIndex]=newSlide;
+    // Re-render just this slide
+    rerenderSingleSlide(slideIndex, newSlide);
+    promptInput.value='';
+  }catch(e){console.error(e);alert('Fehler beim Bearbeiten der Folie.');}
+  finally{btn.disabled=false;btn.innerHTML='<i class="fas fa-paper-plane"></i> Ändern';}
+}
 
-LAYOUTS: title,split,grid,stats,timeline,quote,sources,outro
-REGELN:
-1. Beginne mit title, ende mit sources dann outro
-2. Verschiedene Layouts nutzen
-3. Für split-Folien: imageSearch muss ein EXAKTER ENGLISCHER Wikipedia-Artikelname oder medizinischer Fachbegriff sein, z.B. "Incentive spirometer", "Chest physiotherapy", "Nasogastric intubation", "Pulse oximeter". KEINE Sätze, KEINE Beschreibungen - nur der FACHBEGRIFF des Geräts/der Prozedur/des Konzepts.
-4. imageCategory: Wähle eine Kategorie: nursing, hospital, medical, anatomy, elderly, hygiene, surgery, lab, pills, rehab, lung, heart
-5. contentHtml: Verwende <ul><li>, <strong>
-6. Alle Texte auf Deutsch
+function rerenderSingleSlide(index, slideData){
+  const scaler=document.getElementById('slide-scaler');
+  const oldSlideEl=scaler.querySelectorAll('.presentation-slide')[index];
+  if(!oldSlideEl)return;
+  
+  // Build new slide
+  const total=currentSlidesData.length;
+  const ac=P.accent;
+  const s=slideData;
+  const i=index;
+  
+  const slide=document.createElement('div');slide.className='presentation-slide slide-animate';
+  slide.style.animationDelay='0s';slide.style.opacity='0';slide.dataset.slideIndex=i;
+  
+  const num=`<div class="slide-number absolute bottom-3 left-4 text-[9px] font-bold uppercase tracking-[.2em] opacity-20 z-30 no-print">${i+1}/${total}</div>`;
+  const tools=buildSlideTools();
+  const promptBar=buildSlidePromptBar(i);
+  let html='';
+  const dk=()=>slide.classList.add(P.dark,'dark-slide');
+  const lt=()=>slide.classList.add(P.light);
+  const hasSpeakers=speakers.length>0;
+  const spkHtml=(speaker)=>hasSpeakers&&speaker?`<div class="text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${speaker}</div>`:'';
 
-Pro Folie: notes (Stichpunkte), script (Redetext 2-3 Sätze)
+  html=buildSlideHtml(s,i,total,ac,dk,lt,tools,num,spkHtml,hasSpeakers);
+  slide.innerHTML=html+promptBar;
+  
+  // Replace old slide
+  oldSlideEl.replaceWith(slide);
+  
+  // Update script data
+  slideScripts[i]={slideNumber:i+1,headline:s.headline||s.quote||s.type,speaker:s.speaker||'Alle',notes:s.notes||'',script:s.script||'',type:s.type};
+  renderScriptPanel();
+  
+  // Add anim badges
+  slide.querySelectorAll('[data-anim]').forEach(el=>{if(el.dataset.anim!=='none'){const b=document.createElement('span');b.className='anim-badge no-print';b.textContent=ANIMS[el.dataset.anim]?.name||'';el.style.position=el.style.position||'relative';el.appendChild(b);}});
+}
 
-NUR JSON:
-{"slides":[
-{"type":"title","headline":"...","subtitle":"...","speaker":"...","notes":"...","script":"..."},
-{"type":"split","headline":"...","contentHtml":"...","imageSearch":"Wikipedia article name in English","imageCategory":"lung","speaker":"...","notes":"...","script":"..."},
-{"type":"grid","headline":"...","items":[{"title":"...","value":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"stats","headline":"...","stats":[{"value":"...","label":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"timeline","headline":"...","steps":[{"title":"...","description":"..."}],"speaker":"...","notes":"...","script":"..."},
-{"type":"quote","quote":"...","author":"...","speaker":"...","notes":"...","script":"..."},
-{"type":"sources","textSources":["..."],"notes":"...","script":"..."},
-{"type":"outro","headline":"...","subtitle":"...","notes":"...","script":"..."}
-]}`;
+function buildSlidePromptBar(idx){
+  return `<div class="slide-prompt-bar no-print"><input type="text" placeholder="Folie bearbeiten... z.B. 'Ändere das Bild zu einem OP-Saal'" onkeydown="if(event.key==='Enter')editSlideByPrompt(${idx},this)"><button onclick="editSlideByPrompt(${idx},this.previousElementSibling)"><i class="fas fa-paper-plane"></i> Ändern</button></div>`;
+}
 
-try{const res=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
-const data=await res.json();const parsed=JSON.parse(data.text.replace(/```json|```/g,'').trim());
-currentSlidesData=parsed.slides;pickPalette();pickLayouts();renderPresentation(parsed.slides);
-saveHistory(topic,context,parsed.slides);if(isSidebarOpen)toggleSidebar();
-// Async upgrade images after render
-setTimeout(()=>upgradeSlideImages(parsed.slides),500);
-}catch(e){console.error(e);alert("Fehler bei der Generierung.")}
-finally{btn.innerHTML=`<i class="fas fa-wand-magic-sparkles"></i> Generieren`;btn.disabled=false}}
-
-// ═══════════════════════════════════════
-// RENDER - with fixed animations
-// ═══════════════════════════════════════
+// RENDER ENGINE
 function renderPresentation(slides){
-const scaler=document.getElementById('slide-scaler');scaler.innerHTML='';slideScripts=[];
-collectedImageSources=[];
-const total=slides.length,ac=P.accent;let ltToggle=0;
+  const scaler=document.getElementById('slide-scaler');scaler.innerHTML='';slideScripts=[];
+  const total=slides.length,ac=P.accent;let ltToggle=0;
+  const hasSpeakers=speakers.length>0;
 
-slides.forEach((s,i)=>{
-slideScripts.push({slideNumber:i+1,headline:s.headline||s.quote||s.type,speaker:s.speaker||'Alle',notes:s.notes||'',script:s.script||'',type:s.type});
-const slide=document.createElement('div');slide.className='presentation-slide slide-animate';
-slide.style.animationDelay=`${i*.08}s`;slide.style.opacity='0';slide.dataset.slideIndex=i;
-const num=`<div class="slide-number absolute bottom-3 left-4 text-[9px] font-bold uppercase tracking-[.2em] opacity-20 z-30 no-print">${i+1}/${total}</div>`;
-const tools=buildSlideTools();
-let html='';
-const dk=()=>slide.classList.add(P.dark,'dark-slide');
-const lt=()=>slide.classList.add(P.light);
+  slides.forEach((s,i)=>{
+    slideScripts.push({slideNumber:i+1,headline:s.headline||s.quote||s.type,speaker:s.speaker||'Alle',notes:s.notes||'',script:s.script||'',type:s.type});
+    const slide=document.createElement('div');slide.className='presentation-slide slide-animate';
+    slide.style.animationDelay=`${i*.08}s`;slide.style.opacity='0';slide.dataset.slideIndex=i;
+    const num=`<div class="slide-number absolute bottom-3 left-4 text-[9px] font-bold uppercase tracking-[.2em] opacity-20 z-30 no-print">${i+1}/${total}</div>`;
+    const tools=buildSlideTools();
+    const promptBar=buildSlidePromptBar(i);
+    let html='';
+    const dk=()=>slide.classList.add(P.dark,'dark-slide');
+    const lt=()=>slide.classList.add(P.light);
+    const spkHtml=(speaker)=>hasSpeakers&&speaker?`<div class="text-[10px] font-bold uppercase tracking-widest opacity-30">🎤 ${speaker}</div>`:'';
 
-if(s.type==='title'){
-dk();const V=TITLE_LAYOUTS[titleVar];
-html=`${getDeco()}
-${CB(V.label.l,V.label.t,20)}<span class="uppercase tracking-[.3em] text-[10px] font-bold opacity-40"${animAttr('fadeIn',0,500,'Label')}>Klinische Fallstudie</span>${CBend()}
-${CB(V.heading.l,V.heading.t,V.heading.w)}<h1 contenteditable="true" class="font-['Playfair_Display'] font-black leading-[1.08] drop-shadow-lg" style="font-size:${V.heading.fs};text-align:${V.heading.ta}"${animAttr('blurIn',200,800,'Titel')}>${s.headline}</h1>${CBend()}
-${CB(V.line.l,V.line.t,V.line.w)}<div class="h-1.5 rounded-full" style="background:${ac};transform-origin:left"${animAttr('growX',600,600,'Linie')}></div>${CBend()}
-${CB(V.sub.l,V.sub.t,V.sub.w)}<p contenteditable="true" class="text-2xl font-light opacity-60" style="text-align:${V.sub.ta}"${animAttr('slideUp',800,600,'Untertitel')}>${s.subtitle}</p>${CBend()}
-${CB(V.speaker.l,V.speaker.t,V.speaker.w)}<div class="glass-card px-5 py-2.5 inline-block" style="text-align:${V.speaker.ta}"${animAttr('fadeIn',1100,500,'Sprecher')}><span class="text-[10px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span></div>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='split'){
-lt();const V=SPLIT_LAYOUTS[splitVar];
-const imgUrl=getQuickImageUrl(s.imageCategory||s.imageSearch||'medical',i);
-const imgSrc=s.imageSearch||s.imageCategory||'Unsplash';
-html=`
-${CB(V.text.l,V.text.t,V.text.w,'height:80%')}
-<div class="w-14 h-1.5 rounded-full mb-6" style="background:${ac};transform-origin:left"${animAttr('growX',0,500,'Akzent')}></div>
-<h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8"${animAttr('slideLeft',150,600,'Titel')}>${s.headline}</h2>
-<div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60"${animAttr('slideUp',350,600,'Inhalt')}>${s.contentHtml}</div>
-<div class="mt-8 pt-4 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',800,400,'Sprecher')}>🎤 ${s.speaker}</div>
-${CBend()}
-${CB(V.img.l,V.img.t,V.img.w,'height:'+V.img.h+'%')}
-<div${animAttr('zoomIn',200,700,'Bild')} class="w-full h-full">${buildImageBlock(imgUrl,i,imgSrc)}</div>
-${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='grid'){
-const useDk=ltToggle%2===0;ltToggle++;if(useDk)dk();else lt();
-const items=(s.items||[]).slice(0,4);const GL=GRID_LAYOUTS[gridVar];
-const cc=useDk?'glass-card':'bg-white rounded-2xl shadow-lg border border-slate-100';
-html=`${useDk?getDeco():''}
-${CB(3,3,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Titel')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
-${items.map((it,j)=>{const p=GL.positions[j]||[3,20,45,35];return `${CB(p[0],p[1],p[2],'height:'+p[3]+'%')}<div class="${cc} p-7 h-full flex flex-col justify-center"${animAttr('zoomIn',200+j*200,500,'Karte '+(j+1))}><div class="text-3xl font-black mb-2" style="color:${ac}">${String(j+1).padStart(2,'0')}</div><h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">${it.title}</h3><p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p></div>${CBend()}`}).join('')}
-${CB(3,92,30)}<div class="text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',1000,400,'Sprecher')}>🎤 ${s.speaker}</div>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='stats'){
-dk();const stats=(s.stats||[]).slice(0,4);const sw=90/stats.length;
-html=`${getDeco()}
-${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Titel')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
-${stats.map((st,j)=>`${CB(5+j*sw,25,sw-2,'height:60%')}<div class="text-center glass-card p-8 h-full flex flex-col justify-center"${animAttr('elastic',300+j*250,600,'Stat '+(j+1))}><div contenteditable="true" class="text-6xl font-black mb-3" style="color:${ac}">${st.value}</div><div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div></div>${CBend()}`).join('')}
-${CB(3,90,30)}<div class="text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',1200,400,'Sprecher')}>🎤 ${s.speaker}</div>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='timeline'){
-lt();const steps=(s.steps||[]).slice(0,5);const sw=88/steps.length;
-html=`
-${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Titel')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
-${CB(6,42,84,'height:4px')}<div class="w-full h-full rounded-full opacity-15" style="background:${ac};transform-origin:left"${animAttr('growX',200,800,'Linie')}></div>${CBend()}
-${steps.map((st,j)=>`${CB(6+j*sw,28,sw-1,'height:60%')}<div class="flex flex-col items-center text-center h-full"${animAttr('slideUp',400+j*200,500,'Schritt '+(j+1))}><div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${ac}">${j+1}</div><h3 contenteditable="true" class="text-base font-black mb-2">${st.title}</h3><p contenteditable="true" class="text-sm opacity-55">${st.description}</p></div>${CBend()}`).join('')}
-${CB(3,92,30)}<div class="text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',1200,400,'Sprecher')}>🎤 ${s.speaker}</div>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='quote'){
-dk();html=`${getDeco()}
-${CB(15,15,70,'text-align:center')}<div class="text-[7rem] leading-none opacity-15 mb-2" style="color:${ac}"${animAttr('fadeIn',0,600,'Icon')}><i class="fas fa-quote-left"></i></div>${CBend()}
-${CB(10,35,80,'text-align:center')}<blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.5rem] font-bold leading-snug italic"${animAttr('blurIn',300,900,'Zitat')}>${s.quote}</blockquote>${CBend()}
-${CB(35,72,30,'text-align:center')}<div class="w-16 h-[3px] rounded-full mx-auto mb-4" style="background:${ac};transform-origin:center"${animAttr('growX',900,500,'Linie')}></div><cite contenteditable="true" class="text-lg font-bold not-italic opacity-50"${animAttr('fadeIn',1100,500,'Autor')}>— ${s.author}</cite>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='sources'){
-slide.classList.add('theme-slate','dark-slide');
-const allImg=[...new Set([...collectedImageSources.filter(x=>x)])];
-html=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>
-${CB(3,3,55)}<h2 contenteditable="true" class="text-5xl font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Titel')}><span class="w-2 h-12 rounded-full inline-block" style="background:${ac}"></span>Quellenverzeichnis</h2>${CBend()}
-${CB(3,22,44,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideLeft',200,600,'Text')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-book-medical"></i> Textquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.textSources||['Eigene Recherche']).map(x=>`<li>${x}</li>`).join('')}</ul></div>${CBend()}
-${CB(50,22,47,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideRight',400,600,'Bilder')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-camera"></i> Bildquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${allImg.length?allImg.map(x=>`<li>${x}</li>`).join(''):'<li>Wikimedia Commons</li><li>Unsplash.com (lizenzfrei)</li>'}</ul></div>${CBend()}
-${tools}${num}`;
-}
-else if(s.type==='outro'){
-dk();
-html=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${ac};opacity:.12"></div><div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${ac};opacity:.08"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px"></div>
-${CB(20,25,60,'text-align:center')}<i class="fas fa-hands-clapping text-6xl mb-8" style="color:${ac}"${animAttr('elastic',0,800,'Icon')}></i><h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6"${animAttr('blurIn',300,800,'Titel')}>${s.headline||'Vielen Dank'}</h1><p contenteditable="true" class="text-3xl font-light opacity-50"${animAttr('fadeIn',800,600,'Untertitel')}>${s.subtitle||'Fragen?'}</p>${CBend()}
-${tools}${num}`;
-}
-else{lt();html=`${CB(10,30,80,'text-align:center')}<h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2><p contenteditable="true" class="text-xl opacity-60">${s.subtitle||s.contentHtml||''}</p>${CBend()}${tools}${num}`}
+    // ════ TITLE ════
+    if(s.type==='title'){
+      dk();const V=TITLE_LAYOUTS[titleVar];
+      html=`${getDeco()}
+        ${CB(V.label.l,V.label.t,20)}<span class="uppercase tracking-[.3em] text-[10px] font-bold opacity-40"${animAttr('fadeIn',0,400,'Label')}>Klinische Fallstudie</span>${CBend()}
+        ${CB(V.heading.l,V.heading.t,V.heading.w)}<h1 contenteditable="true" class="font-['Playfair_Display'] font-black leading-[1.08] drop-shadow-lg" style="font-size:${V.heading.fs};text-align:${V.heading.ta}"${animAttr('slideUp',100,800,'Überschrift')}>${s.headline}</h1>${CBend()}
+        ${CB(V.line.l,V.line.t,V.line.w)}<div class="h-1.5 rounded-full" style="background:${ac}"${animAttr('zoomIn',500,500,'Linie')}></div>${CBend()}
+        ${CB(V.sub.l,V.sub.t,V.sub.w)}<p contenteditable="true" class="text-2xl font-light opacity-60" style="text-align:${V.sub.ta}"${animAttr('fadeIn',600,600,'Untertitel')}>${s.subtitle}</p>${CBend()}
+        ${hasSpeakers&&s.speaker?`${CB(V.speaker.l,V.speaker.t,V.speaker.w)}<div class="glass-card px-5 py-2.5 inline-block" style="text-align:${V.speaker.ta}"${animAttr('slideRight',900,500,'Sprecher')}><span class="text-[10px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span></div>${CBend()}`:''}
+        ${tools}${num}`;
+    }
+    else if(s.type==='split'){
+      lt();const V=SPLIT_LAYOUTS[splitVar];const imgUrl=getImageUrl(s.imagePrompt,s.headline,i);
+      html=`
+        ${CB(V.text.l,V.text.t,V.text.w,'height:80%')}
+          <div class="w-14 h-1.5 rounded-full mb-6" style="background:${ac}"${animAttr('zoomIn',0,400,'Akzent')}></div>
+          <h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8"${animAttr('slideLeft',100,700,'Überschrift')}>${s.headline}</h2>
+          <div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60"${animAttr('slideLeft',300,600,'Inhalt')}>${s.contentHtml}</div>
+          ${hasSpeakers&&s.speaker?`<div class="mt-8 pt-4 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',800,400,'Sprecher')}>🎤 ${s.speaker}</div>`:''}
+        ${CBend()}
+        ${CB(V.img.l,V.img.t,V.img.w,'height:'+V.img.h+'%')}
+          <div${animAttr('slideRight',200,800,'Bild')} class="w-full h-full">${buildImageBlock(imgUrl,i)}</div>
+        ${CBend()}
+        ${tools}${num}`;
+    }
+    else if(s.type==='grid'){
+      const useDk=ltToggle%2===0;ltToggle++;if(useDk)dk();else lt();
+      const items=(s.items||[]).slice(0,4);const GL=GRID_LAYOUTS[gridVar];
+      const cc=useDk?'glass-card':'bg-white rounded-2xl shadow-lg border border-slate-100';
+      html=`${useDk?getDeco():''}
+        ${CB(3,3,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
+        ${items.map((it,j)=>{const p=GL.positions[j]||[3,20,45,35];return `${CB(p[0],p[1],p[2],'height:'+p[3]+'%')}<div class="${cc} p-7 h-full flex flex-col justify-center"${animAttr('zoomIn',200+j*150,500,'Karte '+(j+1))}><div class="text-3xl font-black mb-2" style="color:${ac}">${String(j+1).padStart(2,'0')}</div><h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">${it.title}</h3><p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p></div>${CBend()}`;}).join('')}
+        ${hasSpeakers&&s.speaker?`${CB(3,92,30)}${spkHtml(s.speaker)}${CBend()}`:''}
+        ${tools}${num}`;
+    }
+    else if(s.type==='stats'){
+      dk();const stats=(s.stats||[]).slice(0,4);const sw=90/stats.length;
+      html=`${getDeco()}
+        ${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
+        ${stats.map((st,j)=>`${CB(5+j*sw,25,sw-2,'height:60%')}<div class="text-center glass-card p-8 h-full flex flex-col justify-center"${animAttr('bounceIn',200+j*200,600,'Stat '+(j+1))}><div contenteditable="true" class="text-6xl font-black mb-3" style="color:${ac}">${st.value}</div><div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div></div>${CBend()}`).join('')}
+        ${hasSpeakers&&s.speaker?`${CB(3,90,30)}${spkHtml(s.speaker)}${CBend()}`:''}
+        ${tools}${num}`;
+    }
+    else if(s.type==='timeline'){
+      lt();const steps=(s.steps||[]).slice(0,5);const sw=88/steps.length;
+      html=`
+        ${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}
+        ${CB(6,42,84,'height:4px')}<div class="w-full h-full rounded-full opacity-15" style="background:${ac}"${animAttr('zoomIn',0,800,'Linie')}></div>${CBend()}
+        ${steps.map((st,j)=>`${CB(6+j*sw,28,sw-1,'height:60%')}<div class="flex flex-col items-center text-center h-full"${animAttr('slideUp',200+j*200,500,'Schritt '+(j+1))}><div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${ac}">${j+1}</div><h3 contenteditable="true" class="text-base font-black mb-2">${st.title}</h3><p contenteditable="true" class="text-sm opacity-55">${st.description}</p></div>${CBend()}`).join('')}
+        ${hasSpeakers&&s.speaker?`${CB(3,92,30)}${spkHtml(s.speaker)}${CBend()}`:''}
+        ${tools}${num}`;
+    }
+    else if(s.type==='quote'){
+      dk();html=`${getDeco()}
+        ${CB(15,15,70,'text-align:center')}<div class="text-[7rem] leading-none opacity-15 mb-2" style="color:${ac}"${animAttr('zoomIn',0,600,'Icon')}><i class="fas fa-quote-left"></i></div>${CBend()}
+        ${CB(10,35,80,'text-align:center')}<blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.5rem] font-bold leading-snug italic"${animAttr('fadeIn',300,900,'Zitat')}>${s.quote}</blockquote>${CBend()}
+        ${CB(35,72,30,'text-align:center')}<div class="w-16 h-[3px] rounded-full mx-auto mb-4" style="background:${ac}"${animAttr('zoomIn',800,400,'Linie')}></div><cite contenteditable="true" class="text-lg font-bold not-italic opacity-50"${animAttr('fadeIn',1000,500,'Autor')}>— ${s.author}</cite>${CBend()}
+        ${hasSpeakers&&s.speaker?`${CB(35,88,30,'text-align:center')}${spkHtml(s.speaker)}${CBend()}`:''}
+        ${tools}${num}`;
+    }
+    else if(s.type==='sources'){
+      slide.classList.add('theme-slate','dark-slide');
+      html=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>
+        ${CB(3,3,55)}<h2 contenteditable="true" class="text-5xl font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-12 rounded-full inline-block" style="background:${ac}"></span>Quellenverzeichnis</h2>${CBend()}
+        ${CB(3,22,44,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideLeft',200,600,'Textquellen')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-book-medical"></i> Textquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.textSources||['Eigene Daten']).map(x=>`<li>${x}</li>`).join('')}</ul></div>${CBend()}
+        ${CB(50,22,47,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideRight',400,600,'Bildquellen')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-camera"></i> Bildmaterial</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.imageSources||['KI-generiert']).map(x=>`<li>${x}</li>`).join('')}</ul></div>${CBend()}
+        ${tools}${num}`;
+    }
+    else if(s.type==='outro'){
+      dk();const outVar=Math.floor(Math.random()*2);
+      html=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${ac};opacity:.12"></div><div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${ac};opacity:.08"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px"></div>
+        ${outVar===0?`
+          ${CB(20,25,60,'text-align:center')}<i class="fas fa-hands-clapping text-6xl mb-8" style="color:${ac}"${animAttr('bounceIn',0,800,'Icon')}></i><h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6"${animAttr('zoomIn',300,800,'Überschrift')}>${s.headline||'Vielen Dank'}</h1><p contenteditable="true" class="text-3xl font-light opacity-50"${animAttr('fadeIn',800,600,'Untertitel')}>${s.subtitle||'Fragen?'}</p>${CBend()}
+        `:`
+          ${CB(5,30,60,'text-align:left')}<h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6"${animAttr('slideLeft',100,800,'Überschrift')}>${s.headline||'Vielen Dank'}</h1><div class="w-20 h-1.5 rounded-full mb-6" style="background:${ac}"${animAttr('zoomIn',500,400,'Linie')}></div><p contenteditable="true" class="text-3xl font-light opacity-50"${animAttr('fadeIn',700,600,'Untertitel')}>${s.subtitle||'Fragen?'}</p>${CBend()}
+          ${CB(72,20,20,'text-align:center')}<i class="fas fa-hands-clapping text-7xl" style="color:${ac};opacity:.3"${animAttr('bounceIn',0,800,'Icon')}></i>${CBend()}
+        `}
+        ${tools}${num}`;
+    }
+    else{lt();html=`${CB(10,30,80,'text-align:center')}<h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2><p contenteditable="true" class="text-xl opacity-60">${s.subtitle||s.contentHtml||''}</p>${CBend()}${tools}${num}`;}
 
-slide.innerHTML=html;scaler.appendChild(slide);
-slide.querySelectorAll('[data-anim]').forEach(el=>{if(el.dataset.anim!=='none'){const b=document.createElement('span');b.className='anim-badge no-print';b.textContent=ANIMS[el.dataset.anim]?.name||'';el.style.position=el.style.position||'relative';el.appendChild(b)}});
-});
-showBtn('present-btn');showBtn('script-toggle-btn');renderScriptPanel();setTimeout(scaleSlideToFit,200);
+    slide.innerHTML=html+promptBar;scaler.appendChild(slide);
+    slide.querySelectorAll('[data-anim]').forEach(el=>{if(el.dataset.anim!=='none'){const b=document.createElement('span');b.className='anim-badge no-print';b.textContent=ANIMS[el.dataset.anim]?.name||'';el.style.position=el.style.position||'relative';el.appendChild(b);}});
+  });
+  showBtn('present-btn');showBtn('script-toggle-btn');renderScriptPanel();setTimeout(scaleSlideToFit,200);
 }
 
-function buildSlideTools(){return `<div class="slide-tools absolute top-3 right-3 z-30 no-print flex gap-2"><div class="relative"><button onclick="toggleAddMenu(this)" class="w-8 h-8 bg-indigo-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-indigo-500 text-xs"><i class="fas fa-plus"></i></button><div class="add-menu-dropdown absolute right-0 top-10 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-1.5 min-w-[160px] z-50"><button onclick="addTextBox(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-font w-4 text-indigo-400"></i>Text</button><button onclick="addShape(this,'rect')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="far fa-square w-4 text-blue-400"></i>Rechteck</button><button onclick="addShape(this,'circle')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="far fa-circle w-4 text-emerald-400"></i>Kreis</button><button onclick="addLine(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-minus w-4 text-amber-400"></i>Linie</button><div class="border-t border-slate-700 my-1"></div><button onclick="addImageElement(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-image w-4 text-rose-400"></i>Bild</button></div></div><button onclick="openAnimPanel(this)" class="w-8 h-8 bg-amber-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-amber-500 text-xs"><i class="fas fa-sparkles"></i></button><button onclick="changeSlideBg(this)" class="w-8 h-8 bg-slate-700/90 backdrop-blur rounded-lg text-slate-300 shadow-lg flex items-center justify-center hover:bg-slate-600 text-xs"><i class="fas fa-palette"></i></button></div>`}
-function toggleAddMenu(btn){const m=btn.nextElementSibling;document.querySelectorAll('.add-menu-dropdown.open').forEach(x=>{if(x!==m)x.classList.remove('open')});m.classList.toggle('open')}
+// This is used by rerenderSingleSlide - same logic as in renderPresentation but for one slide
+function buildSlideHtml(s,i,total,ac,dk,lt,tools,num,spkHtml,hasSpeakers){
+  let html='';
+  if(s.type==='title'){
+    dk();const V=TITLE_LAYOUTS[titleVar];
+    html=`${getDeco()}${CB(V.label.l,V.label.t,20)}<span class="uppercase tracking-[.3em] text-[10px] font-bold opacity-40"${animAttr('fadeIn',0,400,'Label')}>Klinische Fallstudie</span>${CBend()}${CB(V.heading.l,V.heading.t,V.heading.w)}<h1 contenteditable="true" class="font-['Playfair_Display'] font-black leading-[1.08] drop-shadow-lg" style="font-size:${V.heading.fs};text-align:${V.heading.ta}"${animAttr('slideUp',100,800,'Überschrift')}>${s.headline}</h1>${CBend()}${CB(V.line.l,V.line.t,V.line.w)}<div class="h-1.5 rounded-full" style="background:${ac}"${animAttr('zoomIn',500,500,'Linie')}></div>${CBend()}${CB(V.sub.l,V.sub.t,V.sub.w)}<p contenteditable="true" class="text-2xl font-light opacity-60" style="text-align:${V.sub.ta}"${animAttr('fadeIn',600,600,'Untertitel')}>${s.subtitle}</p>${CBend()}${hasSpeakers&&s.speaker?`${CB(V.speaker.l,V.speaker.t,V.speaker.w)}<div class="glass-card px-5 py-2.5 inline-block" style="text-align:${V.speaker.ta}"${animAttr('slideRight',900,500,'Sprecher')}><span class="text-[10px] uppercase tracking-widest font-bold opacity-60">Präsentiert von: <span class="opacity-100 font-black">${s.speaker}</span></span></div>${CBend()}`:''}${tools}${num}`;
+  } else if(s.type==='split'){
+    lt();const V=SPLIT_LAYOUTS[splitVar];const imgUrl=getImageUrl(s.imagePrompt,s.headline,i);
+    html=`${CB(V.text.l,V.text.t,V.text.w,'height:80%')}<div class="w-14 h-1.5 rounded-full mb-6" style="background:${ac}"${animAttr('zoomIn',0,400,'Akzent')}></div><h2 contenteditable="true" class="text-[2.5rem] font-black leading-[1.15] mb-8"${animAttr('slideLeft',100,700,'Überschrift')}>${s.headline}</h2><div contenteditable="true" class="text-[1.05rem] leading-[1.8] opacity-60"${animAttr('slideLeft',300,600,'Inhalt')}>${s.contentHtml}</div>${hasSpeakers&&s.speaker?`<div class="mt-8 pt-4 border-t border-current/10 text-[10px] font-bold uppercase tracking-widest opacity-30"${animAttr('fadeIn',800,400,'Sprecher')}>🎤 ${s.speaker}</div>`:''}${CBend()}${CB(V.img.l,V.img.t,V.img.w,'height:'+V.img.h+'%')}<div${animAttr('slideRight',200,800,'Bild')} class="w-full h-full">${buildImageBlock(imgUrl,i)}</div>${CBend()}${tools}${num}`;
+  } else if(s.type==='grid'){
+    dk();const items=(s.items||[]).slice(0,4);const GL=GRID_LAYOUTS[gridVar];const cc='glass-card';
+    html=`${getDeco()}${CB(3,3,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}${items.map((it,j)=>{const p=GL.positions[j]||[3,20,45,35];return `${CB(p[0],p[1],p[2],'height:'+p[3]+'%')}<div class="${cc} p-7 h-full flex flex-col justify-center"${animAttr('zoomIn',200+j*150,500,'Karte '+(j+1))}><div class="text-3xl font-black mb-2" style="color:${ac}">${String(j+1).padStart(2,'0')}</div><h3 contenteditable="true" class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">${it.title}</h3><p contenteditable="true" class="text-lg font-semibold leading-snug">${it.value}</p></div>${CBend()}`;}).join('')}${hasSpeakers&&s.speaker?`${CB(3,92,30)}${spkHtml(s.speaker)}${CBend()}`:''}${tools}${num}`;
+  } else if(s.type==='stats'){
+    dk();const stats=(s.stats||[]).slice(0,4);const sw=90/stats.length;
+    html=`${getDeco()}${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}${stats.map((st,j)=>`${CB(5+j*sw,25,sw-2,'height:60%')}<div class="text-center glass-card p-8 h-full flex flex-col justify-center"${animAttr('bounceIn',200+j*200,600,'Stat '+(j+1))}><div contenteditable="true" class="text-6xl font-black mb-3" style="color:${ac}">${st.value}</div><div contenteditable="true" class="text-sm font-bold uppercase tracking-widest opacity-50">${st.label}</div></div>${CBend()}`).join('')}${hasSpeakers&&s.speaker?`${CB(3,90,30)}${spkHtml(s.speaker)}${CBend()}`:''}${tools}${num}`;
+  } else if(s.type==='timeline'){
+    lt();const steps=(s.steps||[]).slice(0,5);const sw=88/steps.length;
+    html=`${CB(3,4,60)}<h2 contenteditable="true" class="text-[2.3rem] font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-10 rounded-full inline-block" style="background:${ac}"></span>${s.headline}</h2>${CBend()}${CB(6,42,84,'height:4px')}<div class="w-full h-full rounded-full opacity-15" style="background:${ac}"${animAttr('zoomIn',0,800,'Linie')}></div>${CBend()}${steps.map((st,j)=>`${CB(6+j*sw,28,sw-1,'height:60%')}<div class="flex flex-col items-center text-center h-full"${animAttr('slideUp',200+j*200,500,'Schritt '+(j+1))}><div class="w-14 h-14 rounded-full flex items-center justify-center text-white font-black text-lg mb-5 shadow-lg shrink-0" style="background:${ac}">${j+1}</div><h3 contenteditable="true" class="text-base font-black mb-2">${st.title}</h3><p contenteditable="true" class="text-sm opacity-55">${st.description}</p></div>${CBend()}`).join('')}${hasSpeakers&&s.speaker?`${CB(3,92,30)}${spkHtml(s.speaker)}${CBend()}`:''}${tools}${num}`;
+  } else if(s.type==='quote'){
+    dk();html=`${getDeco()}${CB(15,15,70,'text-align:center')}<div class="text-[7rem] leading-none opacity-15 mb-2" style="color:${ac}"${animAttr('zoomIn',0,600,'Icon')}><i class="fas fa-quote-left"></i></div>${CBend()}${CB(10,35,80,'text-align:center')}<blockquote contenteditable="true" class="font-['Playfair_Display'] text-[2.5rem] font-bold leading-snug italic"${animAttr('fadeIn',300,900,'Zitat')}>${s.quote}</blockquote>${CBend()}${CB(35,72,30,'text-align:center')}<div class="w-16 h-[3px] rounded-full mx-auto mb-4" style="background:${ac}"${animAttr('zoomIn',800,400,'Linie')}></div><cite contenteditable="true" class="text-lg font-bold not-italic opacity-50"${animAttr('fadeIn',1000,500,'Autor')}>— ${s.author}</cite>${CBend()}${hasSpeakers&&s.speaker?`${CB(35,88,30,'text-align:center')}${spkHtml(s.speaker)}${CBend()}`:''}${tools}${num}`;
+  } else if(s.type==='sources'){
+    html=`<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.02) 1px,transparent 1px);background-size:24px 24px"></div>${CB(3,3,55)}<h2 contenteditable="true" class="text-5xl font-black flex items-center gap-4"${animAttr('slideDown',0,600,'Überschrift')}><span class="w-2 h-12 rounded-full inline-block" style="background:${ac}"></span>Quellenverzeichnis</h2>${CBend()}${CB(3,22,44,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideLeft',200,600,'Textquellen')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-book-medical"></i> Textquellen</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.textSources||['Eigene Daten']).map(x=>`<li>${x}</li>`).join('')}</ul></div>${CBend()}${CB(50,22,47,'height:70%')}<div class="glass-card p-8 h-full"${animAttr('slideRight',400,600,'Bildquellen')}><h3 class="text-lg font-bold mb-6 flex items-center gap-3" style="color:${ac}"><i class="fas fa-camera"></i> Bildmaterial</h3><ul contenteditable="true" class="list-disc list-inside text-base opacity-60 space-y-3">${(s.imageSources||['KI-generiert']).map(x=>`<li>${x}</li>`).join('')}</ul></div>${CBend()}${tools}${num}`;
+  } else if(s.type==='outro'){
+    dk();
+    html=`<div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full blur-3xl" style="background:${ac};opacity:.12"></div><div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full blur-3xl" style="background:${ac};opacity:.08"></div><div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:24px 24px"></div>${CB(20,25,60,'text-align:center')}<i class="fas fa-hands-clapping text-6xl mb-8" style="color:${ac}"${animAttr('bounceIn',0,800,'Icon')}></i><h1 contenteditable="true" class="font-['Playfair_Display'] text-7xl font-black leading-tight mb-6"${animAttr('zoomIn',300,800,'Überschrift')}>${s.headline||'Vielen Dank'}</h1><p contenteditable="true" class="text-3xl font-light opacity-50"${animAttr('fadeIn',800,600,'Untertitel')}>${s.subtitle||'Fragen?'}</p>${CBend()}${tools}${num}`;
+  } else {
+    lt();html=`${CB(10,30,80,'text-align:center')}<h2 contenteditable="true" class="text-4xl font-black mb-6">${s.headline||s.type}</h2><p contenteditable="true" class="text-xl opacity-60">${s.subtitle||s.contentHtml||''}</p>${CBend()}${tools}${num}`;
+  }
+  return html;
+}
 
-// ═══════════════════════════════════════
-// CB DRAG
-// ═══════════════════════════════════════
-function startCbDrag(e){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;cbDragging=cb;cbStartX=e.clientX;cbStartY=e.clientY;cbStartL=parseFloat(cb.style.left)||0;cbStartT=parseFloat(cb.style.top)||0;cb.classList.add('cb-active');document.body.style.cursor='grabbing'}
-function startCbDragTouch(e){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;const t=e.touches[0];cbDragging=cb;cbStartX=t.clientX;cbStartY=t.clientY;cbStartL=parseFloat(cb.style.left)||0;cbStartT=parseFloat(cb.style.top)||0;cb.classList.add('cb-active')}
+function buildSlideTools(){return `<div class="slide-tools absolute top-3 right-3 z-30 no-print flex gap-2"><div class="relative"><button onclick="toggleAddMenu(this)" class="w-8 h-8 bg-indigo-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-indigo-500 text-xs"><i class="fas fa-plus"></i></button><div class="add-menu-dropdown absolute right-0 top-10 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-1.5 min-w-[160px] z-50"><button onclick="addTextBox(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-font w-4 text-indigo-400"></i>Text</button><button onclick="addShape(this,'rect')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="far fa-square w-4 text-blue-400"></i>Rechteck</button><button onclick="addShape(this,'circle')" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="far fa-circle w-4 text-emerald-400"></i>Kreis</button><button onclick="addLine(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-minus w-4 text-amber-400"></i>Linie</button><div class="border-t border-slate-700 my-1"></div><button onclick="addImageElement(this)" class="w-full text-left px-3 py-2 text-[11px] text-slate-300 hover:bg-slate-700 rounded-lg flex items-center gap-2"><i class="fas fa-image w-4 text-rose-400"></i>Bild</button></div></div><button onclick="openAnimPanel(this)" class="w-8 h-8 bg-amber-600/90 backdrop-blur rounded-lg text-white shadow-lg flex items-center justify-center hover:bg-amber-500 text-xs"><i class="fas fa-sparkles"></i></button><button onclick="changeSlideBg(this)" class="w-8 h-8 bg-slate-700/90 backdrop-blur rounded-lg text-slate-300 shadow-lg flex items-center justify-center hover:bg-slate-600 text-xs"><i class="fas fa-palette"></i></button></div>`;}
+function toggleAddMenu(btn){const m=btn.nextElementSibling;document.querySelectorAll('.add-menu-dropdown.open').forEach(x=>{if(x!==m)x.classList.remove('open');});m.classList.toggle('open');}
+
+// CB DRAGGING
+function startCbDrag(e){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;cbDragging=cb;cbStartX=e.clientX;cbStartY=e.clientY;cbStartL=parseFloat(cb.style.left)||0;cbStartT=parseFloat(cb.style.top)||0;cb.classList.add('cb-active');document.body.style.cursor='grabbing';}
+function startCbDragTouch(e){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;const touch=e.touches[0];cbDragging=cb;cbStartX=touch.clientX;cbStartY=touch.clientY;cbStartL=parseFloat(cb.style.left)||0;cbStartT=parseFloat(cb.style.top)||0;cb.classList.add('cb-active');}
+
+// CB RESIZING
+function startCbResize(e,type){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;cbResizing=cb;cbResizeType=type;cbResizeStartX=e.clientX;cbResizeStartY=e.clientY;cbResizeStartW=parseFloat(cb.style.width)||20;cbResizeStartH=cb.offsetHeight;cb.classList.add('cb-active');document.body.style.cursor=type==='r'?'ew-resize':type==='b'?'ns-resize':'nwse-resize';}
+function startCbResizeTouch(e,type){e.preventDefault();e.stopPropagation();const cb=e.target.closest('.cb');if(!cb)return;const touch=e.touches[0];cbResizing=cb;cbResizeType=type;cbResizeStartX=touch.clientX;cbResizeStartY=touch.clientY;cbResizeStartW=parseFloat(cb.style.width)||20;cbResizeStartH=cb.offsetHeight;cb.classList.add('cb-active');}
+
 document.addEventListener('mousemove',e=>{
-if(cbDragging){const s=getCurrentScale();cbDragging.style.left=Math.max(0,Math.min(95,cbStartL+(e.clientX-cbStartX)/s/1280*100))+'%';cbDragging.style.top=Math.max(0,Math.min(95,cbStartT+(e.clientY-cbStartY)/s/720*100))+'%'}
-if(activeElement&&isDragging){const s=getCurrentScale();activeElement.style.left=Math.max(0,dragElStartLeft+(e.clientX-dragStartX)/s)+'px';activeElement.style.top=Math.max(0,dragElStartTop+(e.clientY-dragStartY)/s)+'px'}
-if(activeElement&&isResizing){const s=getCurrentScale();activeElement.style.width=Math.max(30,resizeStartW+(e.clientX-dragStartX)/s)+'px';activeElement.style.height=Math.max(10,resizeStartH+(e.clientY-dragStartY)/s)+'px'}
+  if(cbDragging){const scale=getCurrentScale();const dx=(e.clientX-cbStartX)/scale/1280*100;const dy=(e.clientY-cbStartY)/scale/720*100;cbDragging.style.left=Math.max(0,Math.min(95,cbStartL+dx))+'%';cbDragging.style.top=Math.max(0,Math.min(95,cbStartT+dy))+'%';}
+  if(cbResizing){const scale=getCurrentScale();if(cbResizeType==='r'||cbResizeType==='br'){const dx=(e.clientX-cbResizeStartX)/scale/1280*100;cbResizing.style.width=Math.max(5,cbResizeStartW+dx)+'%';}if(cbResizeType==='b'||cbResizeType==='br'){const dy=(e.clientY-cbResizeStartY)/scale;cbResizing.style.height=Math.max(20,cbResizeStartH+dy)+'px';}}
+  if(activeElement&&isDragging){const scale=getCurrentScale();activeElement.style.left=Math.max(0,dragElStartLeft+(e.clientX-dragStartX)/scale)+'px';activeElement.style.top=Math.max(0,dragElStartTop+(e.clientY-dragStartY)/scale)+'px';}
+  if(activeElement&&isResizing){const scale=getCurrentScale();activeElement.style.width=Math.max(30,resizeStartW+(e.clientX-dragStartX)/scale)+'px';activeElement.style.height=Math.max(10,resizeStartH+(e.clientY-dragStartY)/scale)+'px';}
 });
 document.addEventListener('touchmove',e=>{
-if(cbDragging){const t=e.touches[0],s=getCurrentScale();cbDragging.style.left=Math.max(0,Math.min(95,cbStartL+(t.clientX-cbStartX)/s/1280*100))+'%';cbDragging.style.top=Math.max(0,Math.min(95,cbStartT+(t.clientY-cbStartY)/s/720*100))+'%';e.preventDefault()}
-if(activeElement&&isDragging){const t=e.touches[0],s=getCurrentScale();activeElement.style.left=Math.max(0,dragElStartLeft+(t.clientX-dragStartX)/s)+'px';activeElement.style.top=Math.max(0,dragElStartTop+(t.clientY-dragStartY)/s)+'px';e.preventDefault()}
-if(activeElement&&isResizing){const t=e.touches[0],s=getCurrentScale();activeElement.style.width=Math.max(30,resizeStartW+(t.clientX-dragStartX)/s)+'px';activeElement.style.height=Math.max(10,resizeStartH+(t.clientY-dragStartY)/s)+'px';e.preventDefault()}
+  if(cbDragging){const touch=e.touches[0];const scale=getCurrentScale();const dx=(touch.clientX-cbStartX)/scale/1280*100;const dy=(touch.clientY-cbStartY)/scale/720*100;cbDragging.style.left=Math.max(0,Math.min(95,cbStartL+dx))+'%';cbDragging.style.top=Math.max(0,Math.min(95,cbStartT+dy))+'%';e.preventDefault();}
+  if(cbResizing){const touch=e.touches[0];const scale=getCurrentScale();if(cbResizeType==='r'||cbResizeType==='br'){const dx=(touch.clientX-cbResizeStartX)/scale/1280*100;cbResizing.style.width=Math.max(5,cbResizeStartW+dx)+'%';}if(cbResizeType==='b'||cbResizeType==='br'){const dy=(touch.clientY-cbResizeStartY)/scale;cbResizing.style.height=Math.max(20,cbResizeStartH+dy)+'px';}e.preventDefault();}
+  if(activeElement&&isDragging){const touch=e.touches[0];const scale=getCurrentScale();activeElement.style.left=Math.max(0,dragElStartLeft+(touch.clientX-dragStartX)/scale)+'px';activeElement.style.top=Math.max(0,dragElStartTop+(touch.clientY-dragStartY)/scale)+'px';e.preventDefault();}
+  if(activeElement&&isResizing){const touch=e.touches[0];const scale=getCurrentScale();activeElement.style.width=Math.max(30,resizeStartW+(touch.clientX-dragStartX)/scale)+'px';activeElement.style.height=Math.max(10,resizeStartH+(touch.clientY-dragStartY)/scale)+'px';e.preventDefault();}
 },{passive:false});
-document.addEventListener('mouseup',()=>{if(cbDragging){cbDragging.classList.remove('cb-active');cbDragging=null;document.body.style.cursor=''}if(activeElement){isDragging=false;isResizing=false;activeElement=null;document.body.style.cursor=''}});
-document.addEventListener('touchend',()=>{if(cbDragging){cbDragging.classList.remove('cb-active');cbDragging=null}if(activeElement){isDragging=false;isResizing=false;activeElement=null}});
+document.addEventListener('mouseup',()=>{if(cbDragging){cbDragging.classList.remove('cb-active');cbDragging=null;document.body.style.cursor='';}if(cbResizing){cbResizing.classList.remove('cb-active');cbResizing=null;cbResizeType='';document.body.style.cursor='';}if(activeElement){isDragging=false;isResizing=false;activeElement=null;document.body.style.cursor='';}});
+document.addEventListener('touchend',()=>{if(cbDragging){cbDragging.classList.remove('cb-active');cbDragging=null;}if(cbResizing){cbResizing.classList.remove('cb-active');cbResizing=null;cbResizeType='';}if(activeElement){isDragging=false;isResizing=false;activeElement=null;}});
 
-// ═══════════════════════════════════════
-// ANIMATION EDITOR + FIXED PLAYBACK
-// ═══════════════════════════════════════
-function openAnimPanel(btn){
-const slide=btn.closest('.presentation-slide');slide.querySelectorAll('.anim-panel').forEach(p=>p.remove());
-const els=slide.querySelectorAll('[data-anim]');if(!els.length){alert('Keine animierbaren Elemente.');return}
-const panel=document.createElement('div');panel.className='anim-panel no-print';
-let h=`<div class="p-3 border-b border-white/5 flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 flex items-center gap-2"><i class="fas fa-sparkles"></i> Animationen</span><div class="flex gap-1"><button onclick="previewAnims(this.closest('.presentation-slide'))" class="text-[10px] text-slate-300 bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded font-bold"><i class="fas fa-eye mr-1"></i>Test</button><button onclick="this.closest('.anim-panel').remove()" class="text-slate-400 hover:text-white px-2"><i class="fas fa-times text-xs"></i></button></div></div>`;
-els.forEach((el,idx)=>{
-const label=el.dataset.animLabel||'Element';
-h+=`<div class="anim-item"><span class="text-slate-400 font-bold min-w-[65px] truncate text-[10px]">${label}</span><select class="anim-sel" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.anim=this.value;updateBadge(this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}])">`;
-Object.entries(ANIMS).forEach(([k,v])=>{h+=`<option value="${k}"${k===el.dataset.anim?' selected':''}>${v.name}</option>`});
-h+=`</select><input type="number" class="anim-num" value="${el.dataset.animDelay||0}" min="0" step="100" title="Delay" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.animDelay=this.value"><input type="number" class="anim-num" value="${el.dataset.animDuration||600}" min="100" step="100" title="Dauer" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.animDuration=this.value"></div>`;
-});
-panel.innerHTML=h;slide.appendChild(panel);
-}
-function updateBadge(el){let b=el.querySelector('.anim-badge');if(el.dataset.anim==='none'){if(b)b.remove();return}if(!b){b=document.createElement('span');b.className='anim-badge no-print';el.appendChild(b)}b.textContent=ANIMS[el.dataset.anim]?.name||''}
+// ANIMATION EDITOR
+function openAnimPanel(btn){const slide=btn.closest('.presentation-slide');slide.querySelectorAll('.anim-panel').forEach(p=>p.remove());const els=slide.querySelectorAll('[data-anim]');if(!els.length){alert('Keine animierbaren Elemente.');return;}const panel=document.createElement('div');panel.className='anim-panel no-print';let h=`<div class="p-3 border-b border-white/5 flex items-center justify-between"><span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 flex items-center gap-2"><i class="fas fa-sparkles"></i> Animationen</span><div class="flex gap-1"><button onclick="previewAnims(this.closest('.presentation-slide'))" class="text-[10px] text-slate-300 bg-slate-700 hover:bg-slate-600 px-2 py-1 rounded font-bold"><i class="fas fa-eye mr-1"></i>Vorschau</button><button onclick="this.closest('.anim-panel').remove()" class="text-slate-400 hover:text-white px-2"><i class="fas fa-times text-xs"></i></button></div></div>`;els.forEach((el,idx)=>{const label=el.dataset.animLabel||'Element';h+=`<div class="anim-item"><span class="text-slate-400 font-bold min-w-[65px] truncate text-[10px]">${label}</span><select class="anim-sel" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.anim=this.value;updateBadge(this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}])">`;Object.entries(ANIMS).forEach(([k,v])=>{h+=`<option value="${k}"${k===el.dataset.anim?' selected':''}>${v.name}</option>`;});h+=`</select><input type="number" class="anim-num" value="${el.dataset.animDelay||0}" min="0" step="100" title="Delay ms" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.animDelay=this.value"><input type="number" class="anim-num" value="${el.dataset.animDuration||600}" min="100" step="100" title="Duration ms" onchange="this.closest('.presentation-slide').querySelectorAll('[data-anim]')[${idx}].dataset.animDuration=this.value"></div>`;});panel.innerHTML=h;slide.appendChild(panel);}
+function updateBadge(el){let b=el.querySelector('.anim-badge');if(el.dataset.anim==='none'){if(b)b.remove();return;}if(!b){b=document.createElement('span');b.className='anim-badge no-print';el.appendChild(b);}b.textContent=ANIMS[el.dataset.anim]?.name||'';}
+function previewAnims(slide){const els=slide.querySelectorAll('[data-anim]');els.forEach(el=>{if(el.dataset.anim==='none')return;el.style.opacity='0';el.style.animation='none';});setTimeout(()=>{els.forEach(el=>{if(el.dataset.anim==='none')return;const css=ANIMS[el.dataset.anim]?.css;if(!css)return;setTimeout(()=>{el.style.animation=`${css} ${el.dataset.animDuration||600}ms cubic-bezier(.22,1,.36,1) forwards`;},parseInt(el.dataset.animDelay)||0);});},50);}
 
-// FIXED: Animations now properly persist — elements stay visible
-function playAnimations(container){
-const els=container.querySelectorAll('[data-anim]');
-// First: make all non-animated elements visible, hide animated ones
-els.forEach(el=>{
-  if(!el.dataset.anim||el.dataset.anim==='none'){
-    el.style.opacity='1';
-    el.style.animation='none';
-    return;
-  }
-  el.style.opacity='0';
-  el.style.animation='none';
-});
-// Then trigger animations with proper forwards fill
-requestAnimationFrame(()=>{
-  requestAnimationFrame(()=>{
-    els.forEach(el=>{
-      if(!el.dataset.anim||el.dataset.anim==='none')return;
-      const css=ANIMS[el.dataset.anim]?.css;
-      if(!css||css==='none')return;
-      const dur=el.dataset.animDuration||600;
-      const delay=parseInt(el.dataset.animDelay)||0;
-      setTimeout(()=>{
-        el.style.animation=`${css} ${dur}ms cubic-bezier(.22,1,.36,1) both`;
-        // Safety: ensure element stays visible after animation
-        setTimeout(()=>{el.style.opacity='1'},parseInt(dur)+50);
-      },delay);
-    });
-  });
-});
-}
-
-function previewAnims(slide){playAnimations(slide)}
-
-// ═══════════════════════════════════════
 // SCRIPT PANEL
-// ═══════════════════════════════════════
-function toggleScriptPanel(){scriptPanelOpen=!scriptPanelOpen;document.getElementById('script-panel').classList.toggle('panel-open',scriptPanelOpen);document.getElementById('workspace-container').style.paddingBottom=scriptPanelOpen?'440px':'4rem'}
-function setScriptView(mode){scriptViewMode=mode;document.querySelectorAll('.script-tab').forEach(t=>{t.classList.toggle('tab-active',t.dataset.mode===mode);t.classList.toggle('text-slate-400',t.dataset.mode!==mode)});renderScriptPanel()}
-function renderScriptPanel(){const c=document.getElementById('script-content');if(!slideScripts.length){c.innerHTML='<p class="text-slate-500 text-sm">Noch keine Präsentation.</p>';return}const icons={title:'fa-star',split:'fa-columns',grid:'fa-th-large',stats:'fa-chart-bar',timeline:'fa-stream',quote:'fa-quote-left',sources:'fa-book',outro:'fa-flag-checkered'};c.innerHTML=slideScripts.map(s=>`<div class="bg-slate-800/50 rounded-xl border border-slate-700/50 p-5"><div class="flex items-center gap-3 mb-3"><div class="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center text-indigo-400 text-xs"><i class="fas ${icons[s.type]||'fa-file'}"></i></div><div><span class="text-[10px] text-indigo-400 font-bold uppercase">Folie ${s.slideNumber}</span><h4 class="text-sm font-bold text-white">${s.headline}</h4></div><span class="ml-auto text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded font-bold">🎤 ${s.speaker}</span></div><div class="whitespace-pre-line text-slate-300 text-sm leading-relaxed ${scriptViewMode==='full'?'italic':''}">${scriptViewMode==='notes'?s.notes:s.script}</div></div>`).join('')}
-function exportScript(){if(!slideScripts.length)return;let t=`SKRIPT\n${'═'.repeat(50)}\n\n`;slideScripts.forEach(s=>{t+=`▸ FOLIE ${s.slideNumber}: ${s.headline}\n  ${'-'.repeat(40)}\n  ${scriptViewMode==='notes'?s.notes:s.script}\n\n`});const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain;charset=utf-8'}));a.download='Skript.txt';a.click()}
+function toggleScriptPanel(){scriptPanelOpen=!scriptPanelOpen;document.getElementById('script-panel').classList.toggle('panel-open',scriptPanelOpen);document.getElementById('workspace-container').style.paddingBottom=scriptPanelOpen?'440px':'4rem';}
+function setScriptView(mode){scriptViewMode=mode;document.querySelectorAll('.script-tab').forEach(t=>{t.classList.toggle('tab-active',t.dataset.mode===mode);t.classList.toggle('text-slate-400',t.dataset.mode!==mode);});renderScriptPanel();}
+function renderScriptPanel(){const c=document.getElementById('script-content');if(!slideScripts.length){c.innerHTML='<p class="text-slate-500 text-sm">Noch keine Präsentation.</p>';return;}const icons={title:'fa-star',split:'fa-columns',grid:'fa-th-large',stats:'fa-chart-bar',timeline:'fa-stream',quote:'fa-quote-left',sources:'fa-book',outro:'fa-flag-checkered'};c.innerHTML=slideScripts.map(s=>`<div class="bg-slate-800/50 rounded-xl border border-slate-700/50 p-5"><div class="flex items-center gap-3 mb-3"><div class="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center text-indigo-400 text-xs"><i class="fas ${icons[s.type]||'fa-file'}"></i></div><div><span class="text-[10px] text-indigo-400 font-bold uppercase">Folie ${s.slideNumber}</span><h4 class="text-sm font-bold text-white">${s.headline}</h4></div><span class="ml-auto text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded font-bold">🎤 ${s.speaker}</span></div><div class="whitespace-pre-line text-slate-300 text-sm leading-relaxed ${scriptViewMode==='full'?'italic':''}">${scriptViewMode==='notes'?s.notes:s.script}</div></div>`).join('');}
+function exportScript(){if(!slideScripts.length)return;let t=`SKRIPT\n${'═'.repeat(50)}\n\n`;slideScripts.forEach(s=>{t+=`▸ FOLIE ${s.slideNumber}: ${s.headline}\n  ${'-'.repeat(40)}\n  ${scriptViewMode==='notes'?s.notes:s.script}\n\n`;});const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain;charset=utf-8'}));a.download='Skript.txt';a.click();}
 
-// ═══════════════════════════════════════
 // ADDED ELEMENTS
-// ═══════════════════════════════════════
-function getSlide(btn){return btn.closest('.presentation-slide')}
-function addTextBox(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';el.style.cssText='left:340px;top:260px;width:300px;min-height:60px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div contenteditable="true" style="font-size:18px;padding:10px;min-height:40px;outline:none;cursor:text;border-radius:6px;">Text...</div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el)}
-function addShape(btn,shape){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';const rad=shape==='circle'?'50%':'12px';el.style.cssText=`left:440px;top:260px;width:180px;height:180px;`;el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div class="w-full h-full" style="border-radius:${rad};background:rgba(99,102,241,.15);border:2px solid rgba(99,102,241,.5)"></div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el)}
-function addLine(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';el.style.cssText='left:340px;top:360px;width:400px;height:6px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div class="w-full h-full rounded-full" style="background:#6366f1"></div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el)}
-function addImageElement(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.onchange=()=>{const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{const el=document.createElement('div');el.className='added-element el-selected';el.style.cssText='left:390px;top:210px;width:300px;height:250px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><img src="${ev.target.result}" class="w-full h-full object-cover rounded-xl shadow-lg"><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el)};r.readAsDataURL(f)};inp.click()}
-function selectEl(el){document.querySelectorAll('.added-element.el-selected').forEach(x=>x.classList.remove('el-selected'));if(el){el.classList.add('el-selected');showElProps(el)}else hideElProps()}
-function showElProps(el){document.getElementById('el-props').classList.add('visible');document.getElementById('el-opacity').value=(parseFloat(el.style.opacity||1)*100);document.getElementById('el-opacity-val').textContent=Math.round((el.style.opacity||1)*100)+'%'}
-function hideElProps(){document.getElementById('el-props').classList.remove('visible')}
-function setElOpacity(v){const el=document.querySelector('.added-element.el-selected');if(el){el.style.opacity=v/100;document.getElementById('el-opacity-val').textContent=v+'%'}}
-function duplicateSelected(){const el=document.querySelector('.added-element.el-selected');if(el){const c=el.cloneNode(true);c.style.left=(parseInt(el.style.left)+30)+'px';c.style.top=(parseInt(el.style.top)+30)+'px';el.parentElement.appendChild(c);selectEl(c)}}
-function deleteSelected(){const el=document.querySelector('.added-element.el-selected');if(el){el.remove();hideElProps()}}
-function startElDrag(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isDragging=true;dragStartX=e.clientX;dragStartY=e.clientY;dragElStartLeft=parseInt(el.style.left)||0;dragElStartTop=parseInt(el.style.top)||0;document.body.style.cursor='grabbing'}
-function startElResize(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isResizing=true;dragStartX=e.clientX;dragStartY=e.clientY;resizeStartW=el.offsetWidth;resizeStartH=el.offsetHeight;document.body.style.cursor='nwse-resize'}
-function startElDragTouch(e,el){e.preventDefault();e.stopPropagation();const t=e.touches[0];activeElement=el;isDragging=true;dragStartX=t.clientX;dragStartY=t.clientY;dragElStartLeft=parseInt(el.style.left)||0;dragElStartTop=parseInt(el.style.top)||0}
-function startElResizeTouch(e,el){e.preventDefault();e.stopPropagation();const t=e.touches[0];activeElement=el;isResizing=true;dragStartX=t.clientX;dragStartY=t.clientY;resizeStartW=el.offsetWidth;resizeStartH=el.offsetHeight}
-document.addEventListener('mousedown',e=>{if(e.target.closest('#el-props')||e.target.closest('.anim-panel')||e.target.closest('.cb-handle'))return;const el=e.target.closest('.added-element');if(el){selectEl(el);if(!e.target.closest('.el-controls')&&!e.target.closest('.el-resize')&&!e.target.hasAttribute('contenteditable'))startElDrag(e,el)}else if(!e.target.closest('#editor-toolbar'))selectEl(null)});
-document.addEventListener('keydown',e=>{if(e.key==='Delete'&&!e.target.hasAttribute('contenteditable'))deleteSelected()});
+function getSlide(btn){return btn.closest('.presentation-slide');}
+function addTextBox(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='text';el.style.cssText='left:340px;top:260px;width:300px;min-height:60px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><label class="el-btn" style="background:#334155"><i class="fas fa-palette"></i><input type="color" value="#000000" onchange="this.closest('.added-element').querySelector('.el-text-c').style.color=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label><button class="el-btn" style="background:#6366f1" onclick="dupEl(this.closest('.added-element'))"><i class="fas fa-copy"></i></button><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div contenteditable="true" class="el-text-c" style="font-size:18px;padding:10px;min-height:40px;outline:none;cursor:text;border-radius:6px;">Text eingeben...</div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el);}
+function addShape(btn,shape){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='shape';const rad=shape==='circle'?'50%':'12px';el.style.cssText=`left:440px;top:260px;width:180px;height:180px;`;el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><label class="el-btn" style="background:#334155"><i class="fas fa-fill-drip"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.shape-f').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div class="shape-f w-full h-full" style="border-radius:${rad};background:rgba(99,102,241,.15);border:2px solid rgba(99,102,241,.5)"></div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el);}
+function addLine(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='line';el.style.cssText='left:340px;top:360px;width:400px;height:6px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><label class="el-btn" style="background:#334155"><i class="fas fa-palette"></i><input type="color" value="#6366f1" onchange="this.closest('.added-element').querySelector('.line-i').style.background=this.value" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"></label><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><div class="line-i w-full h-full rounded-full" style="background:#6366f1"></div><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el);}
+function addImageElement(btn){const slide=getSlide(btn);btn.closest('.add-menu-dropdown').classList.remove('open');const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.onchange=()=>{const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{const el=document.createElement('div');el.className='added-element el-selected';el.dataset.type='image';el.style.cssText='left:390px;top:210px;width:300px;height:250px;';el.innerHTML=`<div class="el-controls no-print"><div class="el-drag" onmousedown="startElDrag(event,this.closest('.added-element'))" ontouchstart="startElDragTouch(event,this.closest('.added-element'))"><i class="fas fa-grip-vertical mr-1"></i>Move</div><button class="el-btn" style="background:#6366f1" onclick="dupEl(this.closest('.added-element'))"><i class="fas fa-copy"></i></button><button class="el-btn el-del" onclick="this.closest('.added-element').remove();hideElProps()"><i class="fas fa-trash"></i></button></div><img src="${ev.target.result}" class="w-full h-full object-cover rounded-xl shadow-lg"><div class="el-resize no-print" onmousedown="startElResize(event,this.closest('.added-element'))" ontouchstart="startElResizeTouch(event,this.closest('.added-element'))"></div>`;slide.appendChild(el);selectEl(el);};r.readAsDataURL(f);};inp.click();}
+function dupEl(el){const c=el.cloneNode(true);c.style.left=(parseInt(el.style.left)+30)+'px';c.style.top=(parseInt(el.style.top)+30)+'px';el.parentElement.appendChild(c);selectEl(c);}
+function selectEl(el){document.querySelectorAll('.added-element.el-selected').forEach(x=>x.classList.remove('el-selected'));if(el){el.classList.add('el-selected');showElProps(el);}else hideElProps();}
+function showElProps(el){document.getElementById('el-props').classList.add('visible');document.getElementById('el-opacity').value=(parseFloat(el.style.opacity||1)*100);document.getElementById('el-opacity-val').textContent=Math.round((el.style.opacity||1)*100)+'%';}
+function hideElProps(){document.getElementById('el-props').classList.remove('visible');}
+function setElOpacity(v){const el=document.querySelector('.added-element.el-selected');if(el){el.style.opacity=v/100;document.getElementById('el-opacity-val').textContent=v+'%';}}
+function duplicateSelected(){const el=document.querySelector('.added-element.el-selected');if(el)dupEl(el);}
+function deleteSelected(){const el=document.querySelector('.added-element.el-selected');if(el){el.remove();hideElProps();}}
+function startElDrag(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isDragging=true;dragStartX=e.clientX;dragStartY=e.clientY;dragElStartLeft=parseInt(el.style.left)||0;dragElStartTop=parseInt(el.style.top)||0;document.body.style.cursor='grabbing';}
+function startElResize(e,el){e.preventDefault();e.stopPropagation();activeElement=el;isResizing=true;dragStartX=e.clientX;dragStartY=e.clientY;resizeStartW=el.offsetWidth;resizeStartH=el.offsetHeight;document.body.style.cursor='nwse-resize';}
+function startElDragTouch(e,el){e.preventDefault();e.stopPropagation();const touch=e.touches[0];activeElement=el;isDragging=true;dragStartX=touch.clientX;dragStartY=touch.clientY;dragElStartLeft=parseInt(el.style.left)||0;dragElStartTop=parseInt(el.style.top)||0;}
+function startElResizeTouch(e,el){e.preventDefault();e.stopPropagation();const touch=e.touches[0];activeElement=el;isResizing=true;dragStartX=touch.clientX;dragStartY=touch.clientY;resizeStartW=el.offsetWidth;resizeStartH=el.offsetHeight;}
+document.addEventListener('mousedown',e=>{if(e.target.closest('#el-props')||e.target.closest('.anim-panel')||e.target.closest('.cb-handle')||e.target.closest('.cb-resize')||e.target.closest('.slide-prompt-bar'))return;const el=e.target.closest('.added-element');if(el){selectEl(el);if(!e.target.closest('.el-controls')&&!e.target.closest('.el-resize')&&!e.target.hasAttribute('contenteditable'))startElDrag(e,el);}else if(!e.target.closest('#editor-toolbar'))selectEl(null);});
+document.addEventListener('keydown',e=>{if(e.key==='Delete'&&!e.target.hasAttribute('contenteditable')&&!e.target.closest('input')&&!e.target.closest('textarea'))deleteSelected();});
 
-// ═══════════════════════════════════════
-// BG EDITOR
-// ═══════════════════════════════════════
-function changeSlideBg(btn){const slide=btn.closest('.presentation-slide');slide.querySelectorAll('.bg-picker-popup').forEach(p=>p.remove());const pk=document.createElement('div');pk.className='bg-picker-popup absolute top-14 right-3 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-4 z-50 no-print';pk.style.width='220px';pk.innerHTML=`<div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Hintergrund</div><div class="grid grid-cols-5 gap-2 mb-3">${['#ffffff','#f8fafc','#fef3c7','#ecfdf5','#eef2ff','#0f172a','#1e1b4b','#0c4a6e','#064e3b','#881337'].map(c=>`<button onclick="applyBg(this,'${c}')" class="w-8 h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${c}"></button>`).join('')}</div><div class="flex gap-2 items-center mb-3"><label class="flex-1 flex items-center gap-2 text-[10px] text-slate-300 font-bold"><input type="color" value="#ffffff" onchange="applyBg(this,this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none">Custom</label><button onclick="this.closest('.bg-picker-popup').remove()" class="text-slate-400 hover:text-white text-xs"><i class="fas fa-times"></i></button></div>`;slide.appendChild(pk)}
-function applyBg(btn,c){const s=btn.closest('.presentation-slide');s.style.background=c;const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);s.style.color=(r*299+g*587+b*114)/1000>128?'#0f172a':'#fff';btn.closest('.bg-picker-popup').remove()}
+// BACKGROUND EDITOR
+function changeSlideBg(btn){const slide=btn.closest('.presentation-slide');slide.querySelectorAll('.bg-picker-popup').forEach(p=>p.remove());const pk=document.createElement('div');pk.className='bg-picker-popup absolute top-14 right-3 bg-[#1a1f2e] border border-slate-700 rounded-xl shadow-2xl p-4 z-50 no-print';pk.style.width='220px';pk.innerHTML=`<div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Hintergrund</div><div class="grid grid-cols-5 gap-2 mb-3">${['#ffffff','#f8fafc','#fef3c7','#ecfdf5','#eef2ff','#0f172a','#1e1b4b','#0c4a6e','#064e3b','#881337'].map(c=>`<button onclick="applyBg(this,'${c}')" class="w-8 h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${c}"></button>`).join('')}</div><div class="flex gap-2 items-center mb-3"><label class="flex-1 flex items-center gap-2 text-[10px] text-slate-300 font-bold"><input type="color" value="#ffffff" onchange="applyBg(this,this.value)" class="w-6 h-6 rounded cursor-pointer bg-transparent border-none">Custom</label><button onclick="this.closest('.bg-picker-popup').remove()" class="text-slate-400 hover:text-white text-xs"><i class="fas fa-times"></i></button></div><div class="border-t border-slate-700 pt-3"><div class="text-[10px] font-bold text-slate-400 mb-2">Gradients</div><div class="grid grid-cols-4 gap-2">${['linear-gradient(135deg,#667eea,#764ba2)','linear-gradient(135deg,#4facfe,#00f2fe)','linear-gradient(135deg,#43e97b,#38f9d7)','linear-gradient(135deg,#f093fb,#f5576c)','linear-gradient(135deg,#0c0a1d,#1e1b4b)','linear-gradient(135deg,#041525,#075985)','linear-gradient(135deg,#021a13,#047857)','linear-gradient(135deg,#1a0610,#881337)'].map(g=>`<button onclick="applyBgG(this,'${g}')" class="w-full h-8 rounded-lg border border-slate-600 hover:scale-110 transition-transform" style="background:${g}"></button>`).join('')}</div></div>`;slide.appendChild(pk);}
+function applyBg(btn,c){const s=btn.closest('.presentation-slide');s.style.background=c;const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);s.style.color=(r*299+g*587+b*114)/1000>128?'#0f172a':'#fff';btn.closest('.bg-picker-popup').remove();}
+function applyBgG(btn,g){const s=btn.closest('.presentation-slide');s.style.background=g;s.style.color='#fff';btn.closest('.bg-picker-popup').remove();}
 
-// ═══════════════════════════════════════
-// PRESENT MODE - FIXED ANIMATIONS
-// ═══════════════════════════════════════
-function startPresentation(){
-const srcSlides=document.querySelectorAll('#slide-scaler .presentation-slide');if(!srcSlides.length)return;
-const overlay=document.getElementById('present-overlay'),container=document.getElementById('present-container');
-container.innerHTML='';presentTotal=srcSlides.length;presentIdx=0;
-srcSlides.forEach((src,i)=>{
-const wrap=document.createElement('div');wrap.className='present-slide-wrap'+(i===0?' active':'');
-const clone=src.cloneNode(true);
-clone.querySelectorAll('.no-print,.slide-tools,.el-controls,.el-resize,.add-menu-dropdown,.bg-picker-popup,.slide-number,.anim-panel,.anim-badge,.cb-handle,.img-src-tag').forEach(x=>x.remove());
-clone.querySelectorAll('[contenteditable]').forEach(x=>x.removeAttribute('contenteditable'));
-clone.classList.remove('slide-animate');clone.style.opacity='1';clone.style.animation='none';clone.style.position='relative';clone.style.top='auto';clone.style.left='auto';clone.style.borderRadius='0';clone.style.boxShadow='none';clone.style.margin='0';
-// Reset all animated elements to visible initially
-clone.querySelectorAll('[data-anim]').forEach(el=>{el.style.opacity='1';el.style.animation='none'});
-wrap.appendChild(clone);container.appendChild(wrap);
-});
-overlay.classList.add('active');document.body.style.overflow='hidden';scalePresentSlides();updatePresentCounter();showPresentControls();
-// Play animations on first slide
-setTimeout(()=>playPresentAnims(),100);
-try{document.documentElement.requestFullscreen?.()}catch(e){}
-}
-function scalePresentSlides(){const vw=window.innerWidth,vh=window.innerHeight,scale=Math.min(vw/1280,vh/720);document.querySelectorAll('.present-slide-wrap').forEach(w=>{w.style.cssText=`position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(${scale});transform-origin:center;width:1280px;height:720px;${w.classList.contains('active')?'display:block':'display:none'}`})}
-function showPresentSlide(idx){document.querySelectorAll('.present-slide-wrap').forEach((w,i)=>{w.classList.toggle('active',i===idx);w.style.display=i===idx?'block':'none'});updatePresentCounter();playPresentAnims()}
-
-function playPresentAnims(){
-const active=document.querySelector('.present-slide-wrap.active');
-if(!active)return;
-playAnimations(active);
-}
-
-function presentNext(){if(presentIdx<presentTotal-1){presentIdx++;showPresentSlide(presentIdx);scalePresentSlides()}}
-function presentPrev(){if(presentIdx>0){presentIdx--;showPresentSlide(presentIdx);scalePresentSlides()}}
-function exitPresentation(){document.getElementById('present-overlay').classList.remove('active');document.body.style.overflow='';if(document.fullscreenElement)document.exitFullscreen?.()}
-function updatePresentCounter(){document.getElementById('present-counter').textContent=`${presentIdx+1} / ${presentTotal}`}
-function showPresentControls(){const c=document.getElementById('present-controls');c.classList.add('show');clearTimeout(controlsTimer);controlsTimer=setTimeout(()=>c.classList.remove('show'),3000)}
-
-document.addEventListener('keydown',e=>{const o=document.getElementById('present-overlay');if(o.classList.contains('active')){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();presentNext()}if(e.key==='ArrowLeft'){e.preventDefault();presentPrev()}if(e.key==='Escape')exitPresentation();showPresentControls()}});
+// PRESENT MODE
+function startPresentation(){const srcSlides=document.querySelectorAll('#slide-scaler .presentation-slide');if(!srcSlides.length)return;const overlay=document.getElementById('present-overlay'),container=document.getElementById('present-container');container.innerHTML='';presentTotal=srcSlides.length;presentIdx=0;srcSlides.forEach((src,i)=>{const wrap=document.createElement('div');wrap.className='present-slide-wrap'+(i===0?' active':'');const clone=src.cloneNode(true);clone.querySelectorAll('.no-print,.slide-tools,.el-controls,.el-resize,.add-menu-dropdown,.bg-picker-popup,.slide-number,.anim-panel,.anim-badge,.cb-handle,.cb-resize,.slide-prompt-bar').forEach(x=>x.remove());clone.querySelectorAll('[contenteditable]').forEach(x=>x.removeAttribute('contenteditable'));clone.classList.remove('slide-animate');clone.style.opacity='1';clone.style.animation='none';clone.style.position='relative';clone.style.top='auto';clone.style.left='auto';clone.style.borderRadius='0';clone.style.boxShadow='none';clone.style.margin='0';wrap.appendChild(clone);container.appendChild(wrap);});overlay.classList.add('active');document.body.style.overflow='hidden';scalePresentSlides();updatePresentCounter();showPresentControls();playPresentAnims();try{document.documentElement.requestFullscreen?.();}catch(e){}}
+function scalePresentSlides(){const vw=window.innerWidth,vh=window.innerHeight,scale=Math.min(vw/1280,vh/720);document.querySelectorAll('.present-slide-wrap').forEach(w=>{w.style.cssText=`position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(${scale});transform-origin:center;width:1280px;height:720px;${w.classList.contains('active')?'display:block':'display:none'}`;});}
+function showPresentSlide(idx){document.querySelectorAll('.present-slide-wrap').forEach((w,i)=>{w.classList.toggle('active',i===idx);w.style.display=i===idx?'block':'none';});updatePresentCounter();playPresentAnims();}
+function playPresentAnims(){const active=document.querySelector('.present-slide-wrap.active');if(!active)return;const els=active.querySelectorAll('[data-anim]');els.forEach(el=>{if(!el.dataset.anim||el.dataset.anim==='none'){el.style.opacity='1';return;}el.style.opacity='0';el.style.animation='none';});setTimeout(()=>{els.forEach(el=>{if(!el.dataset.anim||el.dataset.anim==='none')return;const css=ANIMS[el.dataset.anim]?.css;if(!css)return;setTimeout(()=>{el.style.animation=`${css} ${el.dataset.animDuration||600}ms cubic-bezier(.22,1,.36,1) forwards`;},parseInt(el.dataset.animDelay)||0);});},50);}
+function presentNext(){if(presentIdx<presentTotal-1){presentIdx++;showPresentSlide(presentIdx);scalePresentSlides();}}
+function presentPrev(){if(presentIdx>0){presentIdx--;showPresentSlide(presentIdx);scalePresentSlides();}}
+function exitPresentation(){document.getElementById('present-overlay').classList.remove('active');document.body.style.overflow='';if(document.fullscreenElement)document.exitFullscreen?.();}
+function updatePresentCounter(){document.getElementById('present-counter').textContent=`${presentIdx+1} / ${presentTotal}`;}
+function showPresentControls(){const c=document.getElementById('present-controls');c.classList.add('show');clearTimeout(controlsTimer);controlsTimer=setTimeout(()=>c.classList.remove('show'),3000);}
+document.addEventListener('keydown',e=>{const o=document.getElementById('present-overlay');if(o.classList.contains('active')){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();presentNext();}if(e.key==='ArrowLeft'){e.preventDefault();presentPrev();}if(e.key==='Escape')exitPresentation();showPresentControls();}});
 document.getElementById('present-overlay').addEventListener('mousemove',showPresentControls);
 document.getElementById('present-overlay').addEventListener('touchstart',showPresentControls);
-document.getElementById('present-overlay').addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('.present-controls')){if(e.clientX>window.innerWidth/2)presentNext();else presentPrev();showPresentControls()}});
-window.addEventListener('resize',()=>{if(document.getElementById('present-overlay').classList.contains('active'))scalePresentSlides()});
-document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&document.getElementById('present-overlay').classList.contains('active'))exitPresentation()});
-let ptsx=0,ptsy=0;
-document.getElementById('present-overlay').addEventListener('touchstart',e=>{ptsx=e.touches[0].clientX;ptsy=e.touches[0].clientY});
-document.getElementById('present-overlay').addEventListener('touchend',e=>{if(!document.getElementById('present-overlay').classList.contains('active'))return;const dx=e.changedTouches[0].clientX-ptsx;if(Math.abs(dx)>50){if(dx<0)presentNext();else presentPrev();showPresentControls()}});
+document.getElementById('present-overlay').addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('.present-controls')){if(e.clientX>window.innerWidth/2)presentNext();else presentPrev();showPresentControls();}});
+window.addEventListener('resize',()=>{if(document.getElementById('present-overlay').classList.contains('active'))scalePresentSlides();});
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&document.getElementById('present-overlay').classList.contains('active'))exitPresentation();});
+let presentTouchStartX=0,presentTouchStartY=0;
+document.getElementById('present-overlay').addEventListener('touchstart',e=>{presentTouchStartX=e.touches[0].clientX;presentTouchStartY=e.touches[0].clientY;});
+document.getElementById('present-overlay').addEventListener('touchend',e=>{if(!document.getElementById('present-overlay').classList.contains('active'))return;const dx=e.changedTouches[0].clientX-presentTouchStartX;const dy=e.changedTouches[0].clientY-presentTouchStartY;if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){if(dx<0)presentNext();else presentPrev();showPresentControls();}});
 
-// ═══════════════════════════════════════
-// PPTX
-// ═══════════════════════════════════════
+// PPTX EXPORT
 async function exportPPTX(){
-if(!currentSlidesData?.length){alert('Bitte zuerst generieren.');return}
-const pptx=new PptxGenJS();pptx.defineLayout({name:'W',width:13.33,height:7.5});pptx.layout='W';
-const isDk=t=>['title','stats','quote','outro','sources'].includes(t);
-const bgDk={'theme-midnight':'0c0a1d','theme-ocean':'041525','theme-forest':'021a13','theme-crimson':'1a0610','theme-sunset':'1a0800','theme-slate':'0f172a'};
-const bgLt={'theme-clean':'FFFFFF','theme-warm':'fffbeb','theme-soft':'f8fafc'};
-for(let i=0;i<currentSlidesData.length;i++){
-const s=currentSlidesData[i];const slide=pptx.addSlide();
-const dark=isDk(s.type);const bgC=dark?(bgDk[P.dark]||'0f172a'):(bgLt[P.light]||'FFFFFF');
-slide.background={color:bgC};slide.transition={type:'fade',speed:0.5};
-const tc=dark?'FFFFFF':'0f172a',sc=dark?'94a3b8':'64748b';
-if(s.type==='title'){slide.addText(s.headline||'',{x:1,y:2,w:11.33,h:2,fontSize:44,bold:true,color:tc,align:'center',fontFace:'Plus Jakarta Sans'});slide.addShape(pptx.ShapeType.rect,{x:5.66,y:4.2,w:2,h:.08,fill:{color:P.acHex}});slide.addText(s.subtitle||'',{x:2,y:4.5,w:9.33,h:1,fontSize:20,color:sc,align:'center'});slide.addText(`Präsentiert von: ${s.speaker||''}`,{x:7,y:6.5,w:5,h:.5,fontSize:10,color:sc,align:'right'})}
-else if(s.type==='split'){slide.addText(s.headline||'',{x:.8,y:.8,w:6,h:1.5,fontSize:28,bold:true,color:tc});const ct=(s.contentHtml||'').replace(/<[^>]*>/g,' ').trim();slide.addText(ct,{x:.8,y:2.5,w:6,h:4,fontSize:14,color:sc,wrap:true})}
-else if(s.type==='grid'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});(s.items||[]).slice(0,4).forEach((it,j)=>{const pos=[[.8,2],[6.8,2],[.8,4.5],[6.8,4.5]][j];slide.addShape(pptx.ShapeType.roundRect,{x:pos[0],y:pos[1],w:5.5,h:2.2,fill:{color:dark?'1e293b':'f1f5f9'},rectRadius:.15});slide.addText(it.title||'',{x:pos[0]+.3,y:pos[1]+.3,w:4.5,h:.4,fontSize:9,bold:true,color:sc});slide.addText(it.value||'',{x:pos[0]+.3,y:pos[1]+.8,w:4.5,h:1,fontSize:14,color:tc,wrap:true})})}
-else if(s.type==='stats'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});const sts=(s.stats||[]).slice(0,4),sw=11/sts.length;sts.forEach((st,j)=>{const x=.8+j*sw+sw*.05;slide.addShape(pptx.ShapeType.roundRect,{x,y:2.5,w:sw*.9,h:3.5,fill:{color:'1e293b'},rectRadius:.15});slide.addText(st.value||'',{x,y:3,w:sw*.9,h:1.5,fontSize:36,bold:true,color:P.acHex,align:'center'});slide.addText(st.label||'',{x,y:4.5,w:sw*.9,h:.8,fontSize:10,color:sc,align:'center'})})}
-else if(s.type==='timeline'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});const steps=(s.steps||[]).slice(0,5),sw=11/steps.length;steps.forEach((st,j)=>{const cx=1.3+j*sw+sw/2;slide.addShape(pptx.ShapeType.ellipse,{x:cx-.35,y:2.95,w:.7,h:.7,fill:{color:P.acHex}});slide.addText(`${j+1}`,{x:cx-.35,y:2.95,w:.7,h:.7,fontSize:16,bold:true,color:'FFFFFF',align:'center',valign:'middle'});slide.addText(st.title||'',{x:cx-sw/2+.2,y:3.9,w:sw-.4,h:.6,fontSize:12,bold:true,color:tc,align:'center'});slide.addText(st.description||'',{x:cx-sw/2+.2,y:4.5,w:sw-.4,h:1.5,fontSize:10,color:sc,align:'center',wrap:true})})}
-else if(s.type==='quote'){slide.addText(`"${s.quote||''}"`,{x:1.5,y:2,w:10.33,h:3,fontSize:28,italic:true,color:tc,align:'center',valign:'middle',fontFace:'Playfair Display'});slide.addText(`— ${s.author||''}`,{x:3,y:5.5,w:7.33,h:.6,fontSize:14,color:sc,align:'center'})}
-else if(s.type==='sources'){slide.addText('Quellenverzeichnis',{x:.8,y:.5,w:11,h:1.2,fontSize:32,bold:true,color:tc});const allI=[...new Set(collectedImageSources.filter(x=>x))];slide.addText('Textquellen:\n'+(s.textSources||[]).map(x=>'• '+x).join('\n'),{x:.8,y:2.2,w:5.5,h:4,fontSize:12,color:sc,valign:'top',wrap:true});slide.addText('Bildquellen:\n'+(allI.length?allI:['Wikimedia Commons','Unsplash.com']).map(x=>'• '+x).join('\n'),{x:7,y:2.2,w:5.5,h:4,fontSize:12,color:sc,valign:'top',wrap:true})}
-else if(s.type==='outro'){slide.addText(s.headline||'Vielen Dank',{x:1,y:2.5,w:11.33,h:2,fontSize:44,bold:true,color:tc,align:'center'});slide.addText(s.subtitle||'',{x:2,y:4.8,w:9.33,h:1,fontSize:22,color:sc,align:'center'})}
-}
-pptx.writeFile({fileName:`Praesentation_${new Date().toLocaleDateString('de-DE')}.pptx`});
+  if(!currentSlidesData?.length){alert('Bitte zuerst generieren.');return;}
+  const pptx=new PptxGenJS();pptx.defineLayout({name:'W',width:13.33,height:7.5});pptx.layout='W';
+  const isDk=t=>['title','stats','quote','outro','sources'].includes(t);
+  const bgDk={'theme-midnight':'0c0a1d','theme-ocean':'041525','theme-forest':'021a13','theme-crimson':'1a0610','theme-sunset':'1a0800','theme-slate':'0f172a'};
+  const bgLt={'theme-clean':'FFFFFF','theme-warm':'fffbeb','theme-soft':'f8fafc'};
+  for(let i=0;i<currentSlidesData.length;i++){
+    const s=currentSlidesData[i];const slide=pptx.addSlide();
+    const dark=isDk(s.type);const bgC=dark?(bgDk[P.dark]||'0f172a'):(bgLt[P.light]||'FFFFFF');
+    slide.background={color:bgC};slide.transition={type:'fade',speed:0.5};
+    const tc=dark?'FFFFFF':'0f172a',sc=dark?'94a3b8':'64748b';
+    if(s.type==='title'){slide.addText(s.headline||'',{x:1,y:2,w:11.33,h:2,fontSize:44,bold:true,color:tc,align:'center',fontFace:'Plus Jakarta Sans'});slide.addShape(pptx.ShapeType.rect,{x:5.66,y:4.2,w:2,h:.08,fill:{color:P.acHex}});slide.addText(s.subtitle||'',{x:2,y:4.5,w:9.33,h:1,fontSize:20,color:sc,align:'center'});if(s.speaker)slide.addText(`Präsentiert von: ${s.speaker}`,{x:7,y:6.5,w:5,h:.5,fontSize:10,color:sc,align:'right'});}
+    else if(s.type==='split'){slide.addText(s.headline||'',{x:.8,y:.8,w:6,h:1.5,fontSize:28,bold:true,color:tc});const ct=(s.contentHtml||'').replace(/<[^>]*>/g,' ').trim();slide.addText(ct,{x:.8,y:2.5,w:6,h:4,fontSize:14,color:sc,wrap:true});try{slide.addImage({path:getImageUrl(s.imagePrompt,s.headline,i),x:7.5,y:.5,w:5.33,h:6.5,rounding:true});}catch(e){}}
+    else if(s.type==='grid'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});(s.items||[]).slice(0,4).forEach((it,j)=>{const pos=[[.8,2],[6.8,2],[.8,4.5],[6.8,4.5]][j];slide.addShape(pptx.ShapeType.roundRect,{x:pos[0],y:pos[1],w:5.5,h:2.2,fill:{color:dark?'1e293b':'f1f5f9'},rectRadius:.15});slide.addText(it.title||'',{x:pos[0]+.3,y:pos[1]+.3,w:4.5,h:.4,fontSize:9,bold:true,color:sc});slide.addText(it.value||'',{x:pos[0]+.3,y:pos[1]+.8,w:4.5,h:1,fontSize:14,color:tc,wrap:true});});}
+    else if(s.type==='stats'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});const sts=(s.stats||[]).slice(0,4),sw=11/sts.length;sts.forEach((st,j)=>{const x=.8+j*sw+sw*.05;slide.addShape(pptx.ShapeType.roundRect,{x,y:2.5,w:sw*.9,h:3.5,fill:{color:'1e293b'},rectRadius:.15});slide.addText(st.value||'',{x,y:3,w:sw*.9,h:1.5,fontSize:36,bold:true,color:P.acHex,align:'center'});slide.addText(st.label||'',{x,y:4.5,w:sw*.9,h:.8,fontSize:10,color:sc,align:'center'});});}
+    else if(s.type==='timeline'){slide.addText(s.headline||'',{x:.8,y:.5,w:11,h:1.2,fontSize:28,bold:true,color:tc});const steps=(s.steps||[]).slice(0,5),sw=11/steps.length;steps.forEach((st,j)=>{const cx=1.3+j*sw+sw/2;slide.addShape(pptx.ShapeType.ellipse,{x:cx-.35,y:2.95,w:.7,h:.7,fill:{color:P.acHex}});slide.addText(`${j+1}`,{x:cx-.35,y:2.95,w:.7,h:.7,fontSize:16,bold:true,color:'FFFFFF',align:'center',valign:'middle'});slide.addText(st.title||'',{x:cx-sw/2+.2,y:3.9,w:sw-.4,h:.6,fontSize:12,bold:true,color:tc,align:'center'});slide.addText(st.description||'',{x:cx-sw/2+.2,y:4.5,w:sw-.4,h:1.5,fontSize:10,color:sc,align:'center',wrap:true});});}
+    else if(s.type==='quote'){slide.addText(`"${s.quote||''}"`,{x:1.5,y:2,w:10.33,h:3,fontSize:28,italic:true,color:tc,align:'center',valign:'middle',fontFace:'Playfair Display'});slide.addText(`— ${s.author||''}`,{x:3,y:5.5,w:7.33,h:.6,fontSize:14,color:sc,align:'center'});}
+    else if(s.type==='sources'){slide.addText('Quellenverzeichnis',{x:.8,y:.5,w:11,h:1.2,fontSize:32,bold:true,color:tc});slide.addText('Textquellen:\n'+(s.textSources||[]).map(x=>'• '+x).join('\n'),{x:.8,y:2.2,w:5.5,h:4,fontSize:12,color:sc,valign:'top',wrap:true});slide.addText('Bildmaterial:\n'+(s.imageSources||[]).map(x=>'• '+x).join('\n'),{x:7,y:2.2,w:5.5,h:4,fontSize:12,color:sc,valign:'top',wrap:true});}
+    else if(s.type==='outro'){slide.addText(s.headline||'Vielen Dank',{x:1,y:2.5,w:11.33,h:2,fontSize:44,bold:true,color:tc,align:'center'});slide.addText(s.subtitle||'',{x:2,y:4.8,w:9.33,h:1,fontSize:22,color:sc,align:'center'});}
+  }
+  pptx.writeFile({fileName:`Praesentation_${new Date().toLocaleDateString('de-DE')}.pptx`});
 }
 
-// ═══════════════════════════════════════
 // HISTORY
-// ═══════════════════════════════════════
-function saveHistory(topic,context,slides){localStorage.setItem('slm_creator_history',JSON.stringify({topic,context,speakers:[...speakers],slides,paletteId:P.id,titleVar,splitVar,gridVar,timestamp:Date.now()}));const recent=JSON.parse(localStorage.getItem('slm_recent')||'[]');recent.unshift({topic,date:new Date().toLocaleDateString('de-DE'),slides:slides.length,speakers:[...speakers]});if(recent.length>10)recent.length=10;localStorage.setItem('slm_recent',JSON.stringify(recent));localStorage.setItem('slm_gen_count',String(parseInt(localStorage.getItem('slm_gen_count')||'0')+1));document.getElementById('restore-btn').classList.add('hidden')}
-function restoreHistory(){const raw=localStorage.getItem('slm_creator_history');if(!raw)return;try{const e=JSON.parse(raw);document.getElementById('topic').value=e.topic||'';document.getElementById('context').value=e.context||'';speakers.length=0;(e.speakers||[]).forEach(s=>speakers.push(s));renderSpeakers();const p=palettes.find(x=>x.id===e.paletteId);if(p)P=p;else pickPalette();titleVar=e.titleVar||0;splitVar=e.splitVar||0;gridVar=e.gridVar||0;currentSlidesData=e.slides;renderPresentation(e.slides);if(isSidebarOpen)toggleSidebar()}catch(e){console.error(e)}}
-function checkHistory(){if(localStorage.getItem('slm_creator_history')){const b=document.getElementById('restore-btn');b.classList.remove('hidden');b.classList.add('flex')}}
+function saveHistory(topic,context,slides){localStorage.setItem('slm_creator_history',JSON.stringify({topic,context,speakers:[...speakers],slides,paletteId:P.id,titleVar,splitVar,gridVar,timestamp:Date.now()}));const recent=JSON.parse(localStorage.getItem('slm_recent')||'[]');recent.unshift({topic,date:new Date().toLocaleDateString('de-DE'),slides:slides.length,speakers:[...speakers]});if(recent.length>10)recent.length=10;localStorage.setItem('slm_recent',JSON.stringify(recent));localStorage.setItem('slm_gen_count',String(parseInt(localStorage.getItem('slm_gen_count')||'0')+1));document.getElementById('restore-btn').classList.add('hidden');}
+function restoreHistory(){const raw=localStorage.getItem('slm_creator_history');if(!raw)return;try{const e=JSON.parse(raw);document.getElementById('topic').value=e.topic||'';document.getElementById('context').value=e.context||'';speakers.length=0;(e.speakers||[]).forEach(s=>speakers.push(s));renderSpeakers();const p=palettes.find(x=>x.id===e.paletteId);if(p)P=p;else pickPalette();titleVar=e.titleVar||0;splitVar=e.splitVar||0;gridVar=e.gridVar||0;currentSlidesData=e.slides;renderPresentation(e.slides);if(isSidebarOpen)toggleSidebar();}catch(e){console.error(e);}}
+function checkHistory(){if(localStorage.getItem('slm_creator_history')){const b=document.getElementById('restore-btn');b.classList.remove('hidden');b.classList.add('flex');}}
 
-// ═══════════════════════════════════════
 // INIT
-// ═══════════════════════════════════════
 setTimeout(scaleSlideToFit,100);checkHistory();
-if(isMobile()&&isSidebarOpen){
-setTimeout(()=>{const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');isSidebarOpen=false;sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right');updateSidebarOverlay();scaleSlideToFit()},200);
-}
+if(isMobile()&&isSidebarOpen){setTimeout(()=>{const sb=document.getElementById('sidebar'),btn=document.getElementById('sidebar-toggle'),ico=btn.querySelector('i');isSidebarOpen=false;sb.classList.add('sidebar-closed');btn.style.left='0';ico.classList.replace('fa-chevron-left','fa-chevron-right');updateSidebarOverlay();scaleSlideToFit();},200);}
 window.addEventListener('DOMContentLoaded',()=>{
-const p=new URLSearchParams(window.location.search);
-if(p.get('from')==='pdf'){document.getElementById('context').value=(sessionStorage.getItem('pdf_text')||'').substring(0,5000);sessionStorage.removeItem('pdf_text')}
-if(p.get('from')==='pdf-analysis'){const a=JSON.parse(sessionStorage.getItem('pdf_analysis')||'{}');document.getElementById('topic').value=a.titel||'';let c='';if(a.aufgabe&&a.aufgabe!=='Nicht gefunden')c+='AUFGABE:\n'+a.aufgabe+'\n\n';if(a.fallbeispiel&&a.fallbeispiel!=='Nicht gefunden')c+='FALLBEISPIEL:\n'+a.fallbeispiel;document.getElementById('context').value=c;sessionStorage.removeItem('pdf_analysis');sessionStorage.removeItem('pdf_text')}
-if(p.get('from')==='template'){const t=JSON.parse(sessionStorage.getItem('template')||'{}');if(t.topic)document.getElementById('topic').value=t.topic;if(t.context)document.getElementById('context').value=t.context;sessionStorage.removeItem('template')}
+  const p=new URLSearchParams(window.location.search);
+  if(p.get('from')==='pdf'){document.getElementById('context').value=(sessionStorage.getItem('pdf_text')||'').substring(0,5000);sessionStorage.removeItem('pdf_text');}
+  if(p.get('from')==='pdf-analysis'){const a=JSON.parse(sessionStorage.getItem('pdf_analysis')||'{}');document.getElementById('topic').value=a.titel||'';let c='';if(a.aufgabe&&a.aufgabe!=='Nicht gefunden')c+='AUFGABE:\n'+a.aufgabe+'\n\n';if(a.fallbeispiel&&a.fallbeispiel!=='Nicht gefunden')c+='FALLBEISPIEL:\n'+a.fallbeispiel;document.getElementById('context').value=c;sessionStorage.removeItem('pdf_analysis');sessionStorage.removeItem('pdf_text');}
+  if(p.get('from')==='template'){const t=JSON.parse(sessionStorage.getItem('template')||'{}');if(t.topic)document.getElementById('topic').value=t.topic;if(t.context)document.getElementById('context').value=t.context;sessionStorage.removeItem('template');}
 });
 </script>
 </body>
