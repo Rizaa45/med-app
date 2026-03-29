@@ -1,0 +1,3879 @@
+[
+  {
+    "q_id": "m7_rf_001",
+    "type": "richtig_falsch",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Pflegegrad 5 wird seit der Einführung des neuen Begutachtungssystems 2017 ausschließlich über das Punktesystem der 6 Begutachtungsmodule ermittelt.",
+    "answer": "falsch",
+    "explanation": "Es gibt gemäß § 15 Abs. 4 SGB XI Sonderregelungen für 'besondere Bedarfskonstellationen' (z. B. Wachkoma), bei denen Versicherte unabhängig von der Punktzahl direkt dem Pflegegrad 5 zugeordnet werden.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_002",
+    "type": "richtig_falsch",
+    "topic": "praevention_gesundheit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Unter Sekundärprävention versteht man Maßnahmen, die darauf abzielen, Risiken für Erkrankungen zu minimieren, noch bevor eine gesundheitliche Schädigung eintritt.",
+    "answer": "falsch",
+    "explanation": "Maßnahmen zur Risikominimierung vor Entstehung einer Krankheit werden als Primärprävention bezeichnet. Sekundärprävention zielt auf die Früherkennung bereits bestehender, aber noch unerkannter Krankheiten ab.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_003",
+    "type": "richtig_falsch",
+    "topic": "pankreas_physiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das Pankreas liegt retroperitoneal, also hinter dem Bauchfell an der Bauchwand festgewachsen, und befindet sich anatomisch unterhalb des Magens.",
+    "answer": "richtig",
+    "explanation": "Das Pankreas liegt im Oberbauch retroperitoneal und ist in die drei Abschnitte Kopf, Körper und Schwanz unterteilt.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_004",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Der HbA1c-Wert im Blut ermöglicht eine langfristige Beurteilung des Blutzuckerspiegels über einen Zeitraum von etwa 8 bis 12 Wochen.",
+    "answer": "richtig",
+    "explanation": "Da HbA1c an die Erythrozyten gebunden ist, spiegelt der Wert deren mittlere Lebensdauer von ca. 3 Monaten wider und dient daher als 'Blutzuckergedächtnis'.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_005",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach der zeitlich orientierten Definition der ICW gilt eine Wunde als chronisch, wenn sie trotz fachgerechter Therapie nach einem Zeitraum von 6 Wochen keine Heilungstendenz zeigt.",
+    "answer": "falsch",
+    "explanation": "Die zeitliche Grenze, ab der eine Wunde als chronisch bezeichnet wird, liegt bei 8 Wochen.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_006",
+    "type": "richtig_falsch",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Um bei einer kapillären Blutentnahme den Blutfluss zu erleichtern, sollte die Punktionsstelle nach dem Einstich leicht gequetscht werden, damit genügend Kapillarblut austritt.",
+    "answer": "falsch",
+    "explanation": "Das Gewebe darf nicht gequetscht werden, da sonst Gewebswasser austritt, welches das Blut verdünnt und den Messwert verfälscht.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_007",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die menschliche Wirbelsäule besteht aus insgesamt 33 Wirbelkörpern und weist eine charakteristische Doppel-S-Krümmung auf.",
+    "answer": "richtig",
+    "explanation": "Die Wirbelsäule unterteilt sich in Hals-, Brust-, Lenden-, Kreuzbein- und Steißbeinwirbel; die Krümmung ermöglicht den aufrechten Gang.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_008",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das Strukturmodell zur Entbürokratisierung der Pflegedokumentation umfasst die vier Elemente SIS, individueller Maßnahmenplan, Berichteblatt und Evaluation.",
+    "answer": "richtig",
+    "explanation": "Diese vier aufeinander aufbauenden Elemente bilden den Kern des wissenschaftsbasierten Konzepts zur Strukturierung des Pflegeprozesses.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_009",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im Fallbeispiel Urban wurden zwei separate Dokumentationssysteme angelegt, um die fachliche Arbeit vor den Angehörigen geheim zu halten.",
+    "answer": "falsch",
+    "explanation": "Die zwei Systeme dienten der Sicherung der fachlichen Integrität, da der Angehörige die Dokumentation beim Klienten mitlas und kritisch kommentierte, nicht der Geheimhaltung.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_010",
+    "type": "richtig_falsch",
+    "topic": "transkulturelle_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der aktuellen deutschen Gesellschaft hat gut jede vierte Person (ca. 26,0 %) einen Migrationshintergrund.",
+    "answer": "richtig",
+    "explanation": "Dieser hohe Anteil macht transkulturelle Kompetenz und Kultursensibilität zu einer zentralen Anforderung im Pflegeberuf.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_011",
+    "type": "richtig_falsch",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Superabsorber sind aufgrund ihrer hohen Saugleistung ideal für stark exsudierende Wunden und können bei Bedarf passgenau zerschnitten werden.",
+    "answer": "falsch",
+    "explanation": "Superabsorber dürfen ausdrücklich nicht zerschnitten werden, da sonst die absorbierenden Partikel austreten können.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_012",
+    "type": "richtig_falsch",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Pflegebedürftigkeit im Sinne des SGB XI setzt voraus, dass die Beeinträchtigung der Selbstständigkeit dauerhaft, voraussichtlich für mindestens sechs Monate, besteht.",
+    "answer": "richtig",
+    "explanation": "Dies ist ein zentrales Kriterium des Pflegebedürftigkeitsbegriffs gemäß § 14 SGB XI.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_013",
+    "type": "richtig_falsch",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der Netzhaut (Retina) des menschlichen Auges sind die Zapfen für das Sehen in der Dämmerung und die Stäbchen für das Farbsehen zuständig.",
+    "answer": "falsch",
+    "explanation": "Es ist genau umgekehrt: Die Stäbchen sind für das Hell-Dunkel-Sehen (Dämmerung) und die Zapfen für das Farb- und Tagsehen verantwortlich.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_014",
+    "type": "richtig_falsch",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Pflegefachpersonen dürfen die kapilläre Blutentnahme zur Blutzuckermessung in der ambulanten Pflege eigenverantwortlich ohne vorherige ärztliche Anordnung durchführen.",
+    "answer": "falsch",
+    "explanation": "Die kapilläre Blutentnahme ist eine ärztliche Tätigkeit der Heilkunde, die einer Delegation und einer ärztlichen Anordnung bedarf.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_015",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Zu den fünf klassischen Entzündungszeichen einer Wunde gehören Calor (Überwärmung), Rubor (Rötung) und Tumor (Schwellung).",
+    "answer": "richtig",
+    "explanation": "Ergänzt werden diese durch Dolor (Schmerz) und Functio laesa (Funktionsverlust).",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_016",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der medikamentösen Stufentherapie bei Diabetes Typ II stellt die Gabe von oralen Antidiabetika wie Metformin die erste Stufe der Behandlung dar.",
+    "answer": "falsch",
+    "explanation": "Die erste Stufe ist die Basistherapie (Ernährungsumstellung, Bewegung, Gewichtsreduktion). Medikamente kommen erst in Stufe 2 zum Einsatz.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_017",
+    "type": "richtig_falsch",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Nach dem Anforderungs-Ressourcen-Modell von Peter Becker gelten Entspannungstechniken und Hobbys als externe Ressourcen eines Individuums.",
+    "answer": "falsch",
+    "explanation": "Entspannungstechniken und Hobbys werden den internen (persönlichen) Ressourcen zugeordnet. Externe Ressourcen sind z. B. das soziale Netzwerk oder der Wohnraum.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_018",
+    "type": "richtig_falsch",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die exokrine Funktion des Pankreas besteht in der Produktion von Verdauungsenzymen wie Lipase, Alpha-Amylase und Trypsin.",
+    "answer": "richtig",
+    "explanation": "Dieser Pankreassaft wird in den Dünndarm abgegeben, um Fette, Kohlenhydrate und Eiweiße aufzuspalten.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_019",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Bei einer Paraplegie liegt eine Schädigung des Rückenmarks oberhalb des ersten Brustwirbels vor, wodurch alle vier Extremitäten gelähmt sind.",
+    "answer": "falsch",
+    "explanation": "Das beschreibt eine Tetraplegie. Bei einer Paraplegie liegt die Schädigung tiefer (Brust- oder Lendenwirbelsäule), wodurch nur die Beine und ggf. der Rumpf betroffen sind.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_020",
+    "type": "richtig_falsch",
+    "topic": "transkulturelle_pflege",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Kultursensibilität erfordert von Pflegefachpersonen den Prozess der Selbstreflexion, um die eigene Lebenswelt wahrzunehmen und fremde Lebenswelten besser einordnen zu können.",
+    "answer": "richtig",
+    "explanation": "Selbstreflexion ist die Basis, um Vorurteile abzubauen und sich feinfühlig auf Klienten aus anderen Kulturen einzustellen.",
+    "source_hint": ""
+  },
+  {
+    "q_id": "m7_rf_021",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der ambulanten Pflege nimmt die Pflegefachkraft die Rolle eines Gastes im privaten Lebensraum des Klienten ein, was eine besondere Berücksichtigung familiensystemischer Bedingungen erfordert.",
+    "answer": "richtig",
+    "explanation": "Ambulante Pflege findet im Privathaushalt statt. Dies erfordert laut Material die Beachtung familiärer Bedingungen und eine besondere Sensibilität in der Beziehungsgestaltung.",
+    "source_hint": "M 7.12 Skript / M 7.1 & 7.2 Übersicht"
+  },
+  {
+    "q_id": "m7_rf_022",
+    "type": "richtig_falsch",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Ottawa-Charta der WHO definiert Gesundheitsförderung als einen Prozess, der darauf abzielt, allen Menschen ein höheres Maß an Selbstbestimmung über ihre Gesundheit zu ermöglichen.",
+    "answer": "richtig",
+    "explanation": "Dies entspricht exakt der Definition der Ottawa-Charta, die darauf ausgerichtet ist, Menschen zur Stärkung ihrer Gesundheit zu befähigen.",
+    "source_hint": "Modul 7.3_Handout"
+  },
+  {
+    "q_id": "m7_rf_023",
+    "type": "richtig_falsch",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im Begutachtungssystem zur Ermittlung des Pflegegrades wird das Modul 4 'Selbstversorgung' mit einer Gewichtung von 40 % am stärksten berücksichtigt.",
+    "answer": "richtig",
+    "explanation": "Die Selbstversorgung (Modul 4) hat mit 40 % den größten Anteil an der Gesamtbewertung der Pflegebedürftigkeit.",
+    "source_hint": "M 7.4_Handout / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_024",
+    "type": "richtig_falsch",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Das erste Element des Strukturmodells (SIS) beginnt mit der fachlichen Risikoeinschätzung durch die Pflegefachkraft, bevor der Klient befragt wird.",
+    "answer": "falsch",
+    "explanation": "Die SIS beginnt im Element 1 mit der Eigeneinschätzung der pflegebedürftigen Person ('Was bewegt Sie im Augenblick?'), nicht mit der fachlichen Einschätzung.",
+    "source_hint": "M 7.12_Skript / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_025",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die menschliche Wirbelsäule setzt sich aus 33 Wirbelkörpern zusammen, wobei die Doppel-S-Krümmung die Stabilität für den aufrechten Gang bietet.",
+    "answer": "richtig",
+    "explanation": "Das Material bestätigt den Aufbau aus 33 Wirbeln und die funktionelle Bedeutung der Doppel-S-Krümmung.",
+    "source_hint": "BZPG PFP Modul 7.5 (1)"
+  },
+  {
+    "q_id": "m7_rf_026",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die sogenannte Nierenschwelle, ab der Glukose im Urin nachweisbar wird, liegt bei einem Blutzuckerspiegel von über 150 mg/dl.",
+    "answer": "falsch",
+    "explanation": "Die Nierenschwelle liegt laut Material bei einem Wert von über 180 mg/dl (entspricht ca. 10 mmol/l).",
+    "source_hint": "M 7.6_Skript / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_027",
+    "type": "richtig_falsch",
+    "topic": "pankreas_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Die endokrine Funktion des Pankreas wird primär durch die Alpha-Zellen des Inselapparates wahrgenommen, welche das blutzuckersenkende Hormon Insulin produzieren.",
+    "answer": "falsch",
+    "explanation": "Insulin wird von den Beta-Zellen produziert. Die Alpha-Zellen produzieren das Hormon Glukagon, welches den Blutzuckerspiegel hebt.",
+    "source_hint": "Modul 7 Klausur / M 7.6 Skript"
+  },
+  {
+    "q_id": "m7_rf_028",
+    "type": "richtig_falsch",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Bei der kapillären Blutentnahme muss der erste austretende Blutstropfen abgewischt werden, um eine Verfälschung des Messwertes durch Gewebsflüssigkeit zu verhindern.",
+    "answer": "richtig",
+    "explanation": "Das Abwischen des ersten Tropfens ist notwendig, da dieser oft einen hohen Anteil an Gewebswasser enthält, der das Ergebnis verfälschen könnte.",
+    "source_hint": "Handout_Kapilläre BE"
+  },
+  {
+    "q_id": "m7_rf_029",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Wunden wie das diabetische Fußsyndrom oder ein Dekubitus gelten unabhängig von ihrer bisherigen Bestandsdauer bereits von Beginn an als chronisch.",
+    "answer": "richtig",
+    "explanation": "Wunden, deren Behandlung zwingend die Therapie einer Grunderkrankung (Ursache) erfordert, werden fachlich sofort als chronisch eingestuft.",
+    "source_hint": "M 7.10 handout / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_030",
+    "type": "richtig_falsch",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Alginate sind die bevorzugte Wahl für die Versorgung von trockenen Wunden mit festen Belägen, da sie die Wunde aktiv befeuchten.",
+    "answer": "falsch",
+    "explanation": "Alginate sind für tiefe, blutende oder stark exsudierende Wunden indiziert. Zur Befeuchtung trockener Wunden werden Hydrogele eingesetzt.",
+    "source_hint": "M 7.10 handout / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_031",
+    "type": "richtig_falsch",
+    "topic": "transkulturelle_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "In der Interaktion mit nicht deutschsprachigen Personen ist es sinnvoll, Informationen in kleine 'Häppchen' aufzuteilen und visuelle Medien zur Verständigung einzusetzen.",
+    "answer": "richtig",
+    "explanation": "Das Material empfiehlt zur Überwindung von Sprachbarrieren einfache Sätze, die Begrenzung der Botschaften und den Einsatz von 'Häppchen-Taktik' sowie Bildern.",
+    "source_hint": "M 7.12_Skript"
+  },
+  {
+    "q_id": "m7_rf_032",
+    "type": "richtig_falsch",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Presbyopie (Alterssichtigkeit) ist eine Form der Fehlsichtigkeit, die durch eine krankhafte Zunahme der Linsenelastizität im höheren Lebensalter entsteht.",
+    "answer": "falsch",
+    "explanation": "Alterssichtigkeit entsteht durch die Abnahme (Verlust) der Elastizität der Linse, wodurch die Akkommodation (Anpassung) an nahe Gegenstände erschwert wird.",
+    "source_hint": "PP Sehen und Hören"
+  },
+  {
+    "q_id": "m7_rf_033",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Im Fall Urban wurden zwei separate Dokumentationssysteme (eines auf Station und eines beim Klienten) angelegt, da der Angehörige die Pflegedokumentation mitlas.",
+    "answer": "richtig",
+    "explanation": "Aufgrund der Skepsis und Kontrolle durch Herrn Urban wurde diese Maßnahme ergriffen, um die fachliche Arbeit ungestört dokumentieren zu können.",
+    "source_hint": "M 7.10 handout / Fall Urban"
+  },
+  {
+    "q_id": "m7_rf_034",
+    "type": "richtig_falsch",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Unter Verhältnisprävention versteht man Maßnahmen, die das individuelle Verhalten des Einzelnen beeinflussen, wie zum Beispiel die Teilnahme an einem Kurs zur Stressbewältigung.",
+    "answer": "falsch",
+    "explanation": "Maßnahmen zur Änderung des individuellen Verhaltens werden als Verhaltensprävention bezeichnet. Verhältnisprävention zielt auf die Gestaltung gesunder Lebensumwelten ab.",
+    "source_hint": "Modul 7.3_Handout / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_035",
+    "type": "richtig_falsch",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Freigemeinnützige Träger in der Pflege, wie zum Beispiel kirchliche Wohlfahrtsverbände, zeichnen sich dadurch aus, dass sie erwirtschaftete Überschüsse in die Einrichtung reinvestieren müssen.",
+    "answer": "richtig",
+    "explanation": "Freigemeinnützige Träger haben keine Gewinnerzielungsabsicht für Dritte; Überschüsse fließen laut Material als Reinvestment zurück in den sozialen Zweck.",
+    "source_hint": "M 7.4_Handout"
+  },
+  {
+    "q_id": "m7_rf_036",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Der Fachbegriff 'Parese' bezeichnet im Gegensatz zur 'Plegie' einen vollständigen Funktionsausfall von Muskelgruppen oder Extremitäten.",
+    "answer": "falsch",
+    "explanation": "Es ist umgekehrt: Eine Plegie ist der vollständige Funktionsausfall. Eine Parese ist ein Teilausfall der motorischen Funktionen mit Restmotorik.",
+    "source_hint": "BZPG PFP Modul 7.5 (1)"
+  },
+  {
+    "q_id": "m7_rf_037",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die Intensivierte Konventionelle Insulintherapie (ICT), auch Basis-Bolus-Konzept genannt, ermöglicht dem Patienten eine flexiblere Tagesgestaltung als die konventionelle Therapie.",
+    "answer": "richtig",
+    "explanation": "Bei der ICT wird die Insulinmenge flexibel an die Mahlzeit angepasst, während die konventionelle Therapie (CT) einem starren Zeit- und Ernährungsplan folgt.",
+    "source_hint": "Modul 7 Klausur / M 7.6 Skript"
+  },
+  {
+    "q_id": "m7_rf_038",
+    "type": "richtig_falsch",
+    "topic": "blutentnahme",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "statement": "Bei der Delegation der kapillären Blutentnahme übernimmt die ausführende Pflegekraft die Anordnungsverantwortung, während der Arzt die Durchführungsverantwortung behält.",
+    "answer": "falsch",
+    "explanation": "Der Arzt trägt die Anordnungsverantwortung. Die Pflegefachkraft übernimmt durch die Ausführung die Übernahme- und Durchführungsverantwortung.",
+    "source_hint": "Handout_Kapilläre BE"
+  },
+  {
+    "q_id": "m7_rf_039",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Das lateinische Fachwort 'Calor' steht in der Reihe der Entzündungszeichen für die sichtbare Rötung der Wunde.",
+    "answer": "falsch",
+    "explanation": "Calor bedeutet Überwärmung. Die Rötung wird mit dem Fachbegriff 'Rubor' bezeichnet.",
+    "source_hint": "M 7.10 handout / Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_rf_040",
+    "type": "richtig_falsch",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Die Myopie bezeichnet die Kurzsichtigkeit, bei der nahe Gegenstände scharf, weit entfernte Objekte jedoch unscharf wahrgenommen werden.",
+    "answer": "richtig",
+    "explanation": "Myopie ist der medizinische Fachbegriff für Kurzsichtigkeit, wie im Material zu den Änderungen des Sehvermögens aufgeführt.",
+    "source_hint": "PP Sehen und Hören"
+  },
+  {
+    "q_id": "m7_nl_001",
+    "type": "nennen_liste",
+    "topic": "praevention_gesundheit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Präventionsstufen mit je einem Beispiel.",
+    "list_label": "Präventionsstufen",
+    "count": 3,
+    "correct_answers": [
+      "Primärprävention (z. B. Impfung, Sonnenschutz)",
+      "Sekundärprävention (z. B. Screening-Untersuchungen, Früherkennung)",
+      "Tertiärprävention (z. B. Rehabilitation, Vermeidung von Folgeschäden)"
+    ],
+    "all_valid_answers": [
+      "Primärprävention",
+      "Primäre Prävention",
+      "Sekundärprävention",
+      "Sekundäre Prävention",
+      "Tertiärprävention",
+      "Tertiäre Prävention",
+      "Vorsorge",
+      "Früherkennung",
+      "Rehabilitation"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro Stufe mit korrektem Beispiel."
+  },
+  {
+    "q_id": "m7_nl_002",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 5 Pflegegrade mit ihren jeweiligen Punktebereichen.",
+    "list_label": "Pflegegrade und Punkte",
+    "count": 5,
+    "correct_answers": [
+      "Pflegegrad 1: 12,5 bis unter 27 Punkte",
+      "Pflegegrad 2: 27 bis unter 47,5 Punkte",
+      "Pflegegrad 3: 47,5 bis unter 70 Punkte",
+      "Pflegegrad 4: 70 bis unter 90 Punkte",
+      "Pflegegrad 5: 90 bis 100 Punkte"
+    ],
+    "all_valid_answers": [
+      "PG 1",
+      "Pflegegrad 1",
+      "12,5-27",
+      "PG 2",
+      "Pflegegrad 2",
+      "27-47,5",
+      "PG 3",
+      "Pflegegrad 3",
+      "47,5-70",
+      "PG 4",
+      "Pflegegrad 4",
+      "70-90",
+      "PG 5",
+      "Pflegegrad 5",
+      "90-100"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Pflegegrad inklusive Punktebereich."
+  },
+  {
+    "q_id": "m7_nl_003",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 6 Begutachtungsmodule des MDK zur Ermittlung der Pflegebedürftigkeit.",
+    "list_label": "Begutachtungsmodule",
+    "count": 6,
+    "correct_answers": [
+      "Mobilität",
+      "Kognitive und kommunikative Fähigkeiten",
+      "Verhaltensweisen und psychische Problemlagen",
+      "Selbstversorgung",
+      "Bewältigung von und selbstständiger Umgang mit krankheits- und therapiebedingten Anforderungen",
+      "Gestaltung des Alltagslebens und sozialer Kontakte"
+    ],
+    "all_valid_answers": [
+      "Mobilität",
+      "Kognition",
+      "Kommunikation",
+      "Verhaltensweisen",
+      "Psyche",
+      "Selbstversorgung",
+      "Krankheitsbedingte Anforderungen",
+      "Therapiebedingte Anforderungen",
+      "Alltagsleben",
+      "Soziale Kontakte",
+      "Modul 1",
+      "Modul 2",
+      "Modul 3",
+      "Modul 4",
+      "Modul 5",
+      "Modul 6"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt genanntem Modul."
+  },
+  {
+    "q_id": "m7_nl_004",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 6 Schritte des Pflegeprozesses nach Fiechter & Meier.",
+    "list_label": "Schritte nach Fiechter & Meier",
+    "count": 6,
+    "correct_answers": [
+      "Informationssammlung",
+      "Erkennen von Problemen und Ressourcen",
+      "Festlegen der Pflegeziele",
+      "Planung der Pflegemaßnahmen",
+      "Durchführung der Pflege",
+      "Beurteilung der Wirkung der Pflege (Evaluation)"
+    ],
+    "all_valid_answers": [
+      "Informationssammlung",
+      "Anamnese",
+      "Pflegeanamnese",
+      "Probleme und Ressourcen",
+      "Pflegediagnose",
+      "Pflegeziele",
+      "Planung",
+      "Pflegeplanung",
+      "Durchführung",
+      "Umsetzung",
+      "Evaluation",
+      "Auswertung",
+      "Überprüfung"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Prozessschritt."
+  },
+  {
+    "q_id": "m7_nl_005",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 4 Elemente des Strukturmodells (SIS).",
+    "list_label": "Elemente des Strukturmodells",
+    "count": 4,
+    "correct_answers": [
+      "Strukturierte Informationssammlung (SIS)",
+      "Individueller Maßnahmenplan",
+      "Berichteblatt",
+      "Evaluation"
+    ],
+    "all_valid_answers": [
+      "SIS",
+      "Strukturierte Informationssammlung",
+      "Maßnahmenplan",
+      "Pflegeplan",
+      "Berichteblatt",
+      "Pflegebericht",
+      "Evaluation",
+      "Auswertung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Element."
+  },
+  {
+    "q_id": "m7_nl_006",
+    "type": "nennen_liste",
+    "topic": "pankreas_physiologie",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Organabschnitte des Pankreas.",
+    "list_label": "Pankreasabschnitte",
+    "count": 3,
+    "correct_answers": [
+      "Pankreaskopf (Caput)",
+      "Pankreaskörper (Corpus)",
+      "Pankreasschwanz (Cauda)"
+    ],
+    "all_valid_answers": [
+      "Kopf",
+      "Caput",
+      "Pankreaskopf",
+      "Körper",
+      "Corpus",
+      "Pankreaskörper",
+      "Schwanz",
+      "Cauda",
+      "Pankreasschwanz"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Abschnitt."
+  },
+  {
+    "q_id": "m7_nl_007",
+    "type": "nennen_liste",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Zelltypen des Inselapparats mit ihren jeweiligen Hormonen.",
+    "list_label": "Inselzellen und Hormone",
+    "count": 3,
+    "correct_answers": [
+      "Alpha-Zellen: Glukagon",
+      "Beta-Zellen: Insulin",
+      "Delta-Zellen: Somatostatin"
+    ],
+    "all_valid_answers": [
+      "Alpha-Zellen",
+      "A-Zellen",
+      "Glukagon",
+      "Beta-Zellen",
+      "B-Zellen",
+      "Insulin",
+      "Delta-Zellen",
+      "D-Zellen",
+      "Somatostatin"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Kombination aus Zelltyp und Hormon."
+  },
+  {
+    "q_id": "m7_nl_008",
+    "type": "nennen_liste",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 exokrine Enzyme des Pankreas.",
+    "list_label": "Exokrine Enzyme",
+    "count": 4,
+    "correct_answers": [
+      "Trypsin",
+      "Chymotrypsin",
+      "Alpha-Amylase",
+      "Lipase"
+    ],
+    "all_valid_answers": [
+      "Trypsin",
+      "Chymotrypsin",
+      "Amylase",
+      "Alpha-Amylase",
+      "Lipase",
+      "Verdauungsenzyme"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Enzym."
+  },
+  {
+    "q_id": "m7_nl_009",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 5 klassischen Infektionszeichen einer Wunde (lateinisch und deutsch).",
+    "list_label": "Infektionszeichen",
+    "count": 5,
+    "correct_answers": [
+      "Calor (Überwärmung)",
+      "Rubor (Rötung)",
+      "Tumor (Schwellung)",
+      "Dolor (Schmerz)",
+      "Functio laesa (Funktionsverlust)"
+    ],
+    "all_valid_answers": [
+      "Calor",
+      "Überwärmung",
+      "Rubor",
+      "Rötung",
+      "Tumor",
+      "Schwellung",
+      "Dolor",
+      "Schmerz",
+      "Functio laesa",
+      "Funktionsverlust",
+      "Eingeschränkte Funktion"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Zeichen (Begriff oder Übersetzung ausreichend)."
+  },
+  {
+    "q_id": "m7_nl_010",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die 3 Wundheilungsphasen mit ihren Fachbegriffen.",
+    "list_label": "Wundheilungsphasen",
+    "count": 3,
+    "correct_answers": [
+      "Reinigungsphase (Exsudationsphase)",
+      "Granulationsphase (Proliferationsphase)",
+      "Epithelisierungsphase (Regenerationsphase)"
+    ],
+    "all_valid_answers": [
+      "Reinigungsphase",
+      "Exsudationsphase",
+      "Inflammationsphase",
+      "Granulationsphase",
+      "Proliferationsphase",
+      "Epithelisierungsphase",
+      "Regenerationsphase"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Phase."
+  },
+  {
+    "q_id": "m7_nl_011",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Beispiele für chronische Wunden.",
+    "list_label": "Chronische Wunden",
+    "count": 4,
+    "correct_answers": [
+      "Dekubitus",
+      "Diabetisches Fußsyndrom (DFS)",
+      "Ulcus cruris venosum",
+      "Ulcus cruris arteriosum"
+    ],
+    "all_valid_answers": [
+      "Dekubitus",
+      "Druckgeschwür",
+      "DFS",
+      "Diabetischer Fuß",
+      "Diabetisches Fußsyndrom",
+      "Ulcus cruris",
+      "Offenes Bein",
+      "Ulcus cruris venosum",
+      "Ulcus cruris arteriosum",
+      "Wunden bei pAVK"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Beispiel."
+  },
+  {
+    "q_id": "m7_nl_012",
+    "type": "nennen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 mögliche Spätfolgen des Diabetes mellitus.",
+    "list_label": "Spätfolgen Diabetes",
+    "count": 4,
+    "correct_answers": [
+      "Retinopathie (Netzhautschädigung)",
+      "Polyneuropathie (Nervenschädigung)",
+      "Diabetisches Fußsyndrom",
+      "Angiopathie (Gefäßschädigung)"
+    ],
+    "all_valid_answers": [
+      "Retinopathie",
+      "Netzhautschäden",
+      "Polyneuropathie",
+      "Nervenschäden",
+      "DFS",
+      "Diabetischer Fuß",
+      "Angiopathie",
+      "Gefäßschäden",
+      "Nierenversagen",
+      "Nephropathie",
+      "Herzinfarkt",
+      "Schlaganfall"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Folge."
+  },
+  {
+    "q_id": "m7_nl_013",
+    "type": "nennen_liste",
+    "topic": "blutentnahme",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die geeigneten Punktionsstellen für die kapilläre Blutentnahme.",
+    "list_label": "Punktionsstellen",
+    "count": 3,
+    "correct_answers": [
+      "Fingerbeere (seitlich)",
+      "Ohrläppchen",
+      "Ferse (bei Säuglingen)"
+    ],
+    "all_valid_answers": [
+      "Fingerbeere",
+      "Finger",
+      "Ohrläppchen",
+      "Ohr",
+      "Ferse"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Stelle."
+  },
+  {
+    "q_id": "m7_nl_014",
+    "type": "nennen_liste",
+    "topic": "transkulturelle_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie 4 Kommunikationsstrategien bei Sprachbarrieren.",
+    "list_label": "Kommunikationsstrategien",
+    "count": 4,
+    "correct_answers": [
+      "Langsam und deutlich sprechen",
+      "Kurze und einfache Sätze bilden",
+      "Informationen in 'Häppchen' aufteilen",
+      "Visuelle Medien einsetzen (z. B. Bilder)"
+    ],
+    "all_valid_answers": [
+      "Langsam sprechen",
+      "Deutlich sprechen",
+      "Einfache Sätze",
+      "Kurze Sätze",
+      "Häppchen-Taktik",
+      "Informationen begrenzen",
+      "Visuelle Medien",
+      "Bilder nutzen",
+      "Piktogramme",
+      "Dolmetscher einbeziehen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Strategie."
+  },
+  {
+    "q_id": "m7_nl_015",
+    "type": "nennen_liste",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die Unterschiede zwischen Tetraplegie und Paraplegie hinsichtlich der betroffenen Körperbereiche.",
+    "list_label": "Tetraplegie vs. Paraplegie",
+    "count": 2,
+    "correct_answers": [
+      "Tetraplegie: Lähmung aller vier Extremitäten und des Rumpfes",
+      "Paraplegie: Lähmung der unteren Extremitäten (Beine) und ggf. Anteile des Rumpfes"
+    ],
+    "all_valid_answers": [
+      "Tetraplegie",
+      "Tetra",
+      "Alle vier Extremitäten",
+      "Paraplegie",
+      "Para",
+      "Beine",
+      "Untere Extremitäten"
+    ],
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Definition."
+  },
+  {
+    "q_id": "m7_nl_016",
+    "type": "nennen_liste",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die vier Bestandteile des Anforderungs-Ressourcen-Modells nach Peter Becker.",
+    "list_label": "Bestandteile des Modells",
+    "count": 4,
+    "correct_answers": [
+      "Interne Anforderungen (z. B. Erfolgsstreben, Ängste)",
+      "Externe Anforderungen (z. B. Zeitdruck, Schichtarbeit)",
+      "Interne Ressourcen (z. B. Konstitution, Hobbys)",
+      "Externe Ressourcen (z. B. soziales Netzwerk, Wohnraum)"
+    ],
+    "all_valid_answers": [
+      "Interne Anforderungen",
+      "Persönliche Anforderungen",
+      "Externe Anforderungen",
+      "Umweltanforderungen",
+      "Interne Ressourcen",
+      "Persönliche Ressourcen",
+      "Externe Ressourcen",
+      "Umweltressourcen",
+      "Stressoren",
+      "Bewältigungsmöglichkeiten"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benanntem Bestandteil."
+  },
+  {
+    "q_id": "m7_nl_017",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die drei Trägerstrukturen in der deutschen Pflege.",
+    "list_label": "Trägerarten",
+    "count": 3,
+    "correct_answers": [
+      "Staatliche Träger (z. B. Kommunen, Landkreise)",
+      "Freigemeinnützige Träger (z. B. Diakonie, Caritas)",
+      "Private Träger (natürliche oder juristische Personen)"
+    ],
+    "all_valid_answers": [
+      "Staatliche Träger",
+      "Öffentliche Träger",
+      "Freigemeinnützige Träger",
+      "Wohlfahrtsverbände",
+      "Kirchliche Träger",
+      "Private Träger",
+      "Privatgewerbliche Träger"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrektem Träger."
+  },
+  {
+    "q_id": "m7_nl_018",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die drei Pflegestärkungsgesetze (PSG I-III) und skizzieren Sie kurz den jeweiligen Kerninhalt.",
+    "list_label": "Pflegestärkungsgesetze",
+    "count": 3,
+    "correct_answers": [
+      "PSG I: Leistungsverbesserungen und Ausweitung der Angebote für Pflegebedürftige und Angehörige",
+      "PSG II: Einführung des neuen Pflegebedürftigkeitsbegriffs und der fünf Pflegegrade",
+      "PSG III: Stärkung der pflegerischen Beratung und der Rolle der Kommunen"
+    ],
+    "all_valid_answers": [
+      "PSG I",
+      "Erstes Pflegestärkungsgesetz",
+      "PSG II",
+      "Zweites Pflegestärkungsgesetz",
+      "Neuer Pflegebedürftigkeitsbegriff",
+      "PSG III",
+      "Drittes Pflegestärkungsgesetz",
+      "Beratung"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt für die Bezeichnung, 1 Punkt für den korrekten Kerninhalt."
+  },
+  {
+    "q_id": "m7_nl_019",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die sechs Themenfelder der Strukturierten Informationssammlung (SIS).",
+    "list_label": "Themenfelder der SIS",
+    "count": 6,
+    "correct_answers": [
+      "Kognitive und kommunikative Fähigkeiten",
+      "Mobilität und Beweglichkeit",
+      "Krankheitsbezogene Anforderungen und Belastungen",
+      "Selbstversorgung",
+      "Leben in sozialen Beziehungen",
+      "Haushaltsführung (im ambulanten Bereich)"
+    ],
+    "all_valid_answers": [
+      "Kognition",
+      "Kommunikation",
+      "Mobilität",
+      "Beweglichkeit",
+      "Krankheitsbezogene Anforderungen",
+      "Belastungen",
+      "Selbstversorgung",
+      "Soziale Beziehungen",
+      "Haushaltsführung",
+      "Themenfeld 1",
+      "Themenfeld 2",
+      "Themenfeld 3",
+      "Themenfeld 4",
+      "Themenfeld 5",
+      "Themenfeld 6"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt benanntem Themenfeld."
+  },
+  {
+    "q_id": "m7_nl_020",
+    "type": "nennen_liste",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier Auswirkungen einer Querschnittlähmung auf verschiedene Organsysteme oder Körperfunktionen.",
+    "list_label": "Auswirkungen der Lähmung",
+    "count": 4,
+    "correct_answers": [
+      "Beeinträchtigung der Atmung (z. B. durch Lähmung der Atemmuskulatur)",
+      "Einschränkungen bei der Nahrungsaufnahme (Schluckstörungen/Darmtätigkeit)",
+      "Blasen- und Mastdarmentleerungsstörungen (Ausscheidung)",
+      "Einschränkung der Sexualfunktion"
+    ],
+    "all_valid_answers": [
+      "Atmung",
+      "Lungenfunktion",
+      "Nahrungsaufnahme",
+      "Verdauung",
+      "Ausscheidung",
+      "Blasenfunktion",
+      "Darmfunktion",
+      "Sexualfunktion",
+      "Potenz",
+      "Sensibilität",
+      "Motorik"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt benannter Auswirkung."
+  },
+  {
+    "q_id": "m7_nl_021",
+    "type": "nennen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier diagnostische Verfahren zur Feststellung eines Diabetes mellitus.",
+    "list_label": "Diagnostikverfahren",
+    "count": 4,
+    "correct_answers": [
+      "Blutzuckerbestimmung im Blut (aktueller Wert)",
+      "Urinzuckerbestimmung (Glukosurie)",
+      "Oraler Glukosetoleranztest (oGTT)",
+      "Bestimmung des HbA1c-Wertes (Langzeit-Blutzucker)"
+    ],
+    "all_valid_answers": [
+      "BZ-Messung",
+      "Blutzuckertest",
+      "Harnzucker",
+      "Urin-Stix",
+      "oGTT",
+      "Zuckerbelastungstest",
+      "HbA1c",
+      "HBA1C-Bestimmung",
+      "Langzeitzucker"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Verfahren."
+  },
+  {
+    "q_id": "m7_nl_022",
+    "type": "nennen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie drei wesentliche Unterschiede zwischen der konventionellen Insulintherapie (CT) und der intensivierten konventionellen Insulintherapie (ICT).",
+    "list_label": "Unterschiede CT vs. ICT",
+    "count": 3,
+    "correct_answers": [
+      "Flexibilität: ICT erlaubt freie Wahl von Zeit und Menge der Mahlzeiten; CT erfordert festen Zeit- und Diätplan.",
+      "Insulinart: ICT nutzt Basis-Bolus-Prinzip (Depot + Kurzzeit); CT meist starre Gaben von Mischinsulin.",
+      "Anpassung: Bei ICT wird der Bolus an den aktuellen BZ-Wert und die Mahlzeit angepasst; bei CT ist die Dosis starr."
+    ],
+    "all_valid_answers": [
+      "Flexibilität",
+      "Lebensqualität",
+      "Basis-Bolus-Prinzip",
+      "Mischinsulin",
+      "Essenszeiten",
+      "Spritz-Ess-Abstand",
+      "Therapiekonzept"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro fachlich korrektem Unterschied."
+  },
+  {
+    "q_id": "m7_nl_023",
+    "type": "nennen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die drei grundlegenden Insulinarten basierend auf ihrer Wirkdauer.",
+    "list_label": "Insulinarten",
+    "count": 3,
+    "correct_answers": [
+      "Kurzwirksames Insulin (z. B. Normalinsulin)",
+      "Insulinanaloga (sehr schnell wirkend)",
+      "Verzögerungsinsulin (Depotinsulin/Langzeitinsulin)"
+    ],
+    "all_valid_answers": [
+      "Normalinsulin",
+      "Alt-Insulin",
+      "Kurzzeitinsulin",
+      "Analoga",
+      "Schnelles Insulin",
+      "Depotinsulin",
+      "Langzeitinsulin",
+      "NPH-Insulin",
+      "Verzögerungsinsulin"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benannter Art."
+  },
+  {
+    "q_id": "m7_nl_024",
+    "type": "nennen_liste",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier Fehlerquellen, die das Ergebnis einer kapillären Blutzuckermessung verfälschen können.",
+    "list_label": "Fehlerquellen bei BZ-Messung",
+    "count": 4,
+    "correct_answers": [
+      "Hände nicht gewaschen (z. B. Fruchtrückstände an den Fingern)",
+      "Punktionsstelle wurde gequetscht (Gewebswasser tritt aus)",
+      "Haut ist noch feucht vom Desinfektionsmittel",
+      "Der erste Blutstropfen wurde nicht abgewischt"
+    ],
+    "all_valid_answers": [
+      "Verschmutzte Hände",
+      "Zucker an den Händen",
+      "Quetschen",
+      "Drücken",
+      "Gewebswasser",
+      "Nasse Haut",
+      "Alkoholreste",
+      "Erster Tropfen",
+      "Nicht abwischen"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Fehlerquelle."
+  },
+  {
+    "q_id": "m7_nl_025",
+    "type": "nennen_liste",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie sechs verschiedene Arten von modernen, phasengerechten Wundauflagen.",
+    "list_label": "Moderne Wundauflagen",
+    "count": 6,
+    "correct_answers": [
+      "Hydrokolloide",
+      "Polyurethanschaumstoffe (Schaumverband)",
+      "Alginate",
+      "Hydrogele",
+      "Hydrofiber",
+      "Superabsorber"
+    ],
+    "all_valid_answers": [
+      "Hydrokolloid",
+      "Schaumstoff",
+      "PU-Schaum",
+      "Alginat",
+      "Calciumalginat",
+      "Hydrogel",
+      "Gel",
+      "Hydrofaser",
+      "Aquacel",
+      "Superabsorber",
+      "Saugkompressen"
+    ],
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Produkt."
+  },
+  {
+    "q_id": "m7_nl_026",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die acht Beobachtungskriterien zur professionellen Wundbeurteilung und -dokumentation.",
+    "list_label": "Wundbeurteilungskriterien",
+    "count": 8,
+    "correct_answers": [
+      "Lokalisation der Wunde",
+      "Wundtiefe",
+      "Wundgröße",
+      "Wundgrund",
+      "Wundrand",
+      "Wundumgebung",
+      "Wundgeruch",
+      "Exsudat (Menge/Farbe/Konsistenz)"
+    ],
+    "all_valid_answers": [
+      "Lage",
+      "Ort",
+      "Tiefe",
+      "Größe",
+      "Grund",
+      "Beläge",
+      "Rand",
+      "Umgebung",
+      "Hautzustand",
+      "Geruch",
+      "Exsudat",
+      "Wundflüssigkeit"
+    ],
+    "points": 8,
+    "scoring_info": "1 Punkt pro korrektem Kriterium."
+  },
+  {
+    "q_id": "m7_nl_027",
+    "type": "nennen_liste",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier wichtige anatomische Strukturen des menschlichen Auges.",
+    "list_label": "Anatomie des Auges",
+    "count": 4,
+    "correct_answers": [
+      "Sklera (Lederhaut)",
+      "Kornea (Hornhaut)",
+      "Iris (Regenbogenhaut)",
+      "Retina (Netzhaut)"
+    ],
+    "all_valid_answers": [
+      "Lederhaut",
+      "Sklera",
+      "Hornhaut",
+      "Kornea",
+      "Regenbogenhaut",
+      "Iris",
+      "Pupille",
+      "Linse",
+      "Netzhaut",
+      "Retina",
+      "Glaskörper",
+      "Sehnerv"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Struktur."
+  },
+  {
+    "q_id": "m7_nl_028",
+    "type": "nennen_liste",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier Arten von Sehveränderungen oder Fehlsichtigkeiten inklusive ihrer deutschen Bezeichnung.",
+    "list_label": "Sehveränderungen",
+    "count": 4,
+    "correct_answers": [
+      "Myopie (Kurzsichtigkeit)",
+      "Hyperopie (Weitsichtigkeit)",
+      "Presbyopie (Alterssichtigkeit)",
+      "Strabismus (Schielen)"
+    ],
+    "all_valid_answers": [
+      "Kurzsichtigkeit",
+      "Myopie",
+      "Weitsichtigkeit",
+      "Hyperopie",
+      "Alterssichtigkeit",
+      "Presbyopie",
+      "Schielen",
+      "Strabismus",
+      "Doppelbilder"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Nennung (Fachbegriff oder deutsch)."
+  },
+  {
+    "q_id": "m7_nl_029",
+    "type": "nennen_liste",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die drei Gehörknöchelchen im Mittelohr und ihre gemeinsame Hauptfunktion.",
+    "list_label": "Gehörknöchelchen und Funktion",
+    "count": 4,
+    "correct_answers": [
+      "Hammer (Malleus)",
+      "Amboss (Incus)",
+      "Steigbügel (Stapes)",
+      "Funktion: Mechanische Übertragung und Verstärkung von Schallwellen zum Innenohr"
+    ],
+    "all_valid_answers": [
+      "Hammer",
+      "Malleus",
+      "Amboss",
+      "Incus",
+      "Steigbügel",
+      "Stapes",
+      "Schallübertragung",
+      "Weiterleitung von Schall"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro Knöchelchen, 1 Punkt für die korrekte Funktion."
+  },
+  {
+    "q_id": "m7_nl_030",
+    "type": "nennen_liste",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie vier Besonderheiten der ambulanten Pflege im Vergleich zur stationären Versorgung.",
+    "list_label": "Merkmale ambulanter Pflege",
+    "count": 4,
+    "correct_answers": [
+      "Pflegekraft ist Gast im Privathaushalt des Klienten",
+      "Beachtung familiensystemischer Bedingungen ist zwingend erforderlich",
+      "Hoher Bedarf an Anleitung und Beratung der Angehörigen",
+      "Arbeit findet in Begegnungen 'von Haus zu Haus' statt (Tourenplanung)"
+    ],
+    "all_valid_answers": [
+      "Rolle als Gast",
+      "Privatsphäre",
+      "Familiensystem",
+      "Einbezug von Angehörigen",
+      "Anleitungsbedarf",
+      "Beratung",
+      "Tourenplanung",
+      "Integrität der Dokumentation",
+      "Einsamkeitsproblematik"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Besonderheit."
+  },
+  {
+    "q_id": "m7_tab_001",
+    "type": "tabelle_vergleich",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Konzepte Prävention und Gesundheitsförderung anhand ihrer Leitfragen und Zielsetzungen.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Kriterium", "Prävention", "Gesundheitsförderung"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Leitfrage"},
+              {"type": "input", "correct_answer": "Was macht krank?", "keywords": ["krank", "Ursachen"]},
+              {"type": "input", "correct_answer": "Was hält gesund?", "keywords": ["gesund", "Ressourcen"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Zielsetzung"},
+              {"type": "textarea", "correct_answer": "Vermeidung von krankmachenden Einflüssen / Risikominimierung", "keywords": ["Vermeidung", "Risiko"]},
+              {"type": "textarea", "correct_answer": "Stärkung von Schutzfaktoren und persönlichen Ressourcen", "keywords": ["Ressourcen", "Stärkung"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Benennen** Sie die drei Stufen der Prävention und **erläutern** Sie kurz deren Ziel mit einem Beispiel.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Ziel/Beispiel-Feld.",
+    "data": {
+      "table": {
+        "headers": ["Präventionsstufe", "Zielsetzung", "Beispiel"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "input", "correct_answer": "Primärprävention", "keywords": ["Primär"]},
+              {"type": "textarea", "correct_answer": "Risiken für Erkrankungen minimieren", "keywords": ["Risiken", "minimieren"]},
+              {"type": "input", "correct_answer": "Impfung / Sonnenschutz", "keywords": ["Impfung", "Sonnenschutz"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "input", "correct_answer": "Sekundärprävention", "keywords": ["Sekundär"]},
+              {"type": "textarea", "correct_answer": "Krankheiten frühzeitig erkennen", "keywords": ["frühzeitig", "erkennen"]},
+              {"type": "input", "correct_answer": "Screening-Untersuchungen", "keywords": ["Screening", "Vorsorge"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "input", "correct_answer": "Tertiärprävention", "keywords": ["Tertiär"]},
+              {"type": "textarea", "correct_answer": "Verschlechterung bestehender Krankheiten vermeiden", "keywords": ["Verschlechterung", "vermeiden"]},
+              {"type": "input", "correct_answer": "Rehabilitation / gute BZ-Einstellung", "keywords": ["Reha", "Diabetes"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_003",
+    "type": "tabelle_vergleich",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie den Unterschied zwischen Verhaltens- und Verhältnisprävention.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Ansatz", "Fokus der Maßnahme", "Konkretes Beispiel"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Verhaltensprävention"},
+              {"type": "textarea", "correct_answer": "Zielt auf das individuelle Verhalten des Einzelnen ab", "keywords": ["individuell", "Verhalten"]},
+              {"type": "input", "correct_answer": "Ernährungsberatung / Stresskurs", "keywords": ["Ernährung", "Stress"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Verhältnisprävention"},
+              {"type": "textarea", "correct_answer": "Gestaltung gesundheitsförderlicher Umweltbedingungen", "keywords": ["Umwelt", "Bedingungen"]},
+              {"type": "input", "correct_answer": "Ergonomie am Arbeitsplatz", "keywords": ["Ergonomie", "Arbeitsplatz"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_004",
+    "type": "tabelle_3spalten",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die Tabelle zu den Pflegegraden gemäß SGB XI.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Pflegegrad", "Punktebereich", "Beeinträchtigung der Selbstständigkeit"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "PG 1"},
+              {"type": "input", "correct_answer": "12,5 bis < 27", "keywords": ["12,5", "27"]},
+              {"type": "input", "correct_answer": "gering", "keywords": ["gering"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "PG 3"},
+              {"type": "input", "correct_answer": "47,5 bis < 70", "keywords": ["47,5", "70"]},
+              {"type": "input", "correct_answer": "schwer", "keywords": ["schwer"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "PG 5"},
+              {"type": "input", "correct_answer": "90 bis 100", "keywords": ["90", "100"]},
+              {"type": "input", "correct_answer": "schwerste mit besonderen Anforderungen", "keywords": ["schwerste", "Anforderungen"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_005",
+    "type": "tabelle_3spalten",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie drei der sechs Begutachtungsmodule und geben Sie deren Gewichtung an.",
+    "points": 6,
+    "scoring_info": "1 Punkt für Modulname, 1 Punkt für Gewichtung.",
+    "data": {
+      "table": {
+        "headers": ["Modulnummer", "Lebensbereich / Inhalt", "Gewichtung (%)"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Modul 1"},
+              {"type": "input", "correct_answer": "Mobilität", "keywords": ["Mobilität"]},
+              {"type": "input", "correct_answer": "10", "keywords": ["10"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Modul 4"},
+              {"type": "input", "correct_answer": "Selbstversorgung", "keywords": ["Selbstversorgung"]},
+              {"type": "input", "correct_answer": "40", "keywords": ["40"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Modul 5"},
+              {"type": "input", "correct_answer": "Krankheitsbedingte Anforderungen", "keywords": ["Anforderungen", "therapiebedingt"]},
+              {"type": "input", "correct_answer": "20", "keywords": ["20"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_006",
+    "type": "tabelle_vergleich",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Unterscheiden** Sie zwischen Tetraplegie und Paraplegie hinsichtlich Schädigungsort und Auswirkungen.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Lähmungsform", "Ort der Schädigung", "Betroffene Körperbereiche"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Paraplegie"},
+              {"type": "textarea", "correct_answer": "Brust- oder Lendenwirbelsäule", "keywords": ["Brust", "Lende", "Th", "L"]},
+              {"type": "textarea", "correct_answer": "Beine und ggf. Anteile des Rumpfes", "keywords": ["Beine", "untere", "Extremitäten"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Tetraplegie"},
+              {"type": "textarea", "correct_answer": "Halswirbelsäule (oberhalb Th1)", "keywords": ["Hals", "Cervical", "C"]},
+              {"type": "textarea", "correct_answer": "Alle vier Extremitäten und der Rumpf", "keywords": ["vier", "Extremitäten", "Arme", "Beine"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_007",
+    "type": "tabelle_3spalten",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie die endokrinen Zelltypen des Pankreas und deren Aufgaben im Blutzuckerstoffwechsel.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Hormon/Funktion-Feld.",
+    "data": {
+      "table": {
+        "headers": ["Zelltyp", "Hormon", "Hauptfunktion"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Alpha-Zellen"},
+              {"type": "input", "correct_answer": "Glukagon", "keywords": ["Glukagon"]},
+              {"type": "textarea", "correct_answer": "Hebt den Blutzuckerspiegel", "keywords": ["hebt", "BZ", "Steigerung"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Beta-Zellen"},
+              {"type": "input", "correct_answer": "Insulin", "keywords": ["Insulin"]},
+              {"type": "textarea", "correct_answer": "Senkt den Blutzuckerspiegel", "keywords": ["senkt", "BZ", "Senkung"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_008",
+    "type": "tabelle_vergleich",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die konventionelle (CT) mit der intensivierten konventionellen Insulintherapie (ICT).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Therapiemerkmal", "Konventionell (CT)", "Intensiviert (ICT)"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Schema"},
+              {"type": "textarea", "correct_answer": "Zwei Gaben Mischinsulin (starres Schema)", "keywords": ["Mischinsulin", "starr", "Frühstück", "Abend"]},
+              {"type": "textarea", "correct_answer": "Basis-Bolus-Konzept (Depot + Kurzzeit)", "keywords": ["Basis", "Bolus", "flexibel", "Mahlzeit"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Vorteil / Nachteil"},
+              {"type": "textarea", "correct_answer": "Wenige BZ-Kontrollen, aber Patient muss Essenszeiten strikt anpassen", "keywords": ["Essenszeiten", "starr", "Kontrollen"]},
+              {"type": "textarea", "correct_answer": "Hohe Flexibilität, aber häufige BZ-Kontrollen notwendig", "keywords": ["Flexibilität", "häufige", "Kontrollen"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_009",
+    "type": "tabelle_3spalten",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Vervollständigen** Sie die Übersicht zu den Insulinarten.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Insulinart", "Wirkungsbeginn (ca.)", "Besonderheit"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "input", "correct_answer": "Normalinsulin", "keywords": ["Normal", "Alt"]},
+              {"type": "input", "correct_answer": "15-30 Min.", "keywords": ["15", "30"]},
+              {"type": "textarea", "correct_answer": "Wirkmaximum nach 2 Std., Dauer bis 6 Std.", "keywords": ["Gipfel", "6", "Stunden"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "input", "correct_answer": "Insulinanaloga", "keywords": ["Analoga"]},
+              {"type": "input", "correct_answer": "10-15 Min.", "keywords": ["10", "15"]},
+              {"type": "textarea", "correct_answer": "Wirkt sehr schnell, kurze Wirkdauer (2-3 Std.)", "keywords": ["schnell", "kurz"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_010",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Benennen** Sie die drei Phasen der Wundheilung und **erläutern** Sie kurz die Merkmale.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld (Phase/Merkmal).",
+    "data": {
+      "table": {
+        "headers": ["Phase", "Fachbegriff", "Wichtige Merkmale"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "1. Phase"},
+              {"type": "input", "correct_answer": "Reinigungsphase / Exsudationsphase", "keywords": ["Reinigung", "Exsudation"]},
+              {"type": "textarea", "correct_answer": "Ausschwemmung von Bakterien, Blutstillung durch Fibrinbildung", "keywords": ["Bakterien", "Exsudat", "Fibrin"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "2. Phase"},
+              {"type": "input", "correct_answer": "Granulationsphase / Proliferationsphase", "keywords": ["Granulation", "Proliferation"]},
+              {"type": "textarea", "correct_answer": "Auffüllen des Substanzverlusts, Gewebe dunkelrot und gekörnt", "keywords": ["Substanz", "gekörnt", "dunkelrot"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "3. Phase"},
+              {"type": "input", "correct_answer": "Epithelisierungsphase / Regenerationsphase", "keywords": ["Epithelisierung", "Regeneration"]},
+              {"type": "textarea", "correct_answer": "Wundverschluss durch Zellwanderung vom Wundrand aus", "keywords": ["Verschluss", "Zellwanderung", "Wundrand"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_011",
+    "type": "tabelle_3spalten",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Wundprodukten die korrekte Indikation und Besonderheit zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Produkt", "Hauptindikation", "Besonderheit"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Alginate"},
+              {"type": "input", "correct_answer": "Tiefe, blutende, exsudierende Wunden", "keywords": ["tief", "blutend", "Exsudat"]},
+              {"type": "input", "correct_answer": "Zum Austamponieren geeignet", "keywords": ["Tampon", "Wundgrundkontakt"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Hydrogel"},
+              {"type": "input", "correct_answer": "Trockene Wunden mit Belägen", "keywords": ["trocken", "Belag"]},
+              {"type": "input", "correct_answer": "Hält Wunde feucht", "keywords": ["befeuchten", "feucht"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Superabsorber"},
+              {"type": "input", "correct_answer": "Sehr stark exsudierende Wunden", "keywords": ["stark", "Exsudat", "Saugkraft"]},
+              {"type": "input", "correct_answer": "Darf nicht zerschnitten werden", "keywords": ["schneiden"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_012",
+    "type": "tabelle_vergleich",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Unterscheiden** Sie die zwei Formen des Ulcus cruris hinsichtlich ihrer Entstehungsursache.",
+    "points": 2,
+    "scoring_info": "1 Punkt pro korrekter Ursache.",
+    "data": {
+      "table": {
+        "headers": ["Wundart", "Primäre Ursache"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Ulcus cruris venosum"},
+              {"type": "textarea", "correct_answer": "Chronisch-venöse Insuffizienz / Venenklappendefekt", "keywords": ["Venen", "venös", "Insuffizienz"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Ulcus cruris arteriosum"},
+              {"type": "textarea", "correct_answer": "Arterielle Durchblutungsstörung / pAVK", "keywords": ["Arterien", "pAVK", "Durchblutung"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_013",
+    "type": "tabelle_vergleich",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die Formen der Fehlsichtigkeit anhand ihrer Ursache.",
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Ursache.",
+    "data": {
+      "table": {
+        "headers": ["Störung", "Kurze Erläuterung / Ursache"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Myopie (Kurzsichtigkeit)"},
+              {"type": "textarea", "correct_answer": "Nahgegenstände werden scharf, ferne unscharf gesehen", "keywords": ["Nah", "scharf", "fern"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Hyperopie (Weitsichtigkeit)"},
+              {"type": "textarea", "correct_answer": "Ferne Gegenstände werden scharf, nahe unscharf gesehen", "keywords": ["Fern", "scharf", "nah"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Presbyopie (Alterssichtigkeit)"},
+              {"type": "textarea", "correct_answer": "Verlust der Linsenelastizität im Alter", "keywords": ["Elastizität", "Linse", "Alter"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_014",
+    "type": "tabelle_3spalten",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Benennen** Sie Strukturen des Auges und deren Funktion.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Struktur", "Fachbegriff", "Hauptfunktion"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Lederhaut"},
+              {"type": "input", "correct_answer": "Sklera", "keywords": ["Sklera"]},
+              {"type": "textarea", "correct_answer": "Gibt dem Augapfel Form und Stabilität", "keywords": ["Form", "Stabilität"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Netzhaut"},
+              {"type": "input", "correct_answer": "Retina", "keywords": ["Retina"]},
+              {"type": "textarea", "correct_answer": "Beinhaltet Sinneszellen (Stäbchen/Zapfen) zum Sehen", "keywords": ["Sinneszellen", "Zapfen", "Stäbchen"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Hornhaut"},
+              {"type": "input", "correct_answer": "Kornea", "keywords": ["Kornea"]},
+              {"type": "textarea", "correct_answer": "Lichtdurchlässiger Schutz des vorderen Auges", "keywords": ["Schutz", "lichtdurchlässig"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_tab_015",
+    "type": "tabelle_vergleich",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Vergleichen** Sie die gesetzlichen Grundlagen der ambulanten Versorgung.",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekter Antwort.",
+    "data": {
+      "table": {
+        "headers": ["Kriterium", "SGB V", "SGB XI"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Bezeichnung"},
+              {"type": "input", "correct_answer": "Krankenversicherung", "keywords": ["Kranken"]},
+              {"type": "input", "correct_answer": "Pflegeversicherung", "keywords": ["Pflege"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Kernleistung"},
+              {"type": "textarea", "correct_answer": "Häusliche Krankenpflege (Behandlungspflege)", "keywords": ["Häusliche", "Behandlungspflege"]},
+              {"type": "textarea", "correct_answer": "Leistungen bei Pflegebedürftigkeit", "keywords": ["Pflegebedürftigkeit", "Grad"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_ft_001",
+    "type": "freitext_box",
+    "topic": "praevention_gesundheit",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie das Anforderungs-Ressourcen-Modell nach Peter Becker und seine Bedeutung für die Gesundheitsförderung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Korrektheit der Modellkomponenten und des Bezugs zur Gesundheitsförderung.",
+    "data": {
+      "box_label": "Anforderungs-Ressourcen-Modell",
+      "correct_answer": "Das Modell versteht Gesundheit als ein dynamisches Gleichgewicht, das wie eine Waage zwischen Belastungen und Bewältigungsmöglichkeiten funktioniert. Auf der einen Seite stehen Anforderungen, die in interne Stressoren wie Erfolgsstreben und externe Stressoren wie Zeitdruck unterteilt werden. Demgegenüber stehen interne Ressourcen wie die körperliche Konstitution und externe Ressourcen wie ein stabiles soziales Netzwerk. In der Gesundheitsförderung ist dieses Modell zentral, da es den Fokus darauf legt, Ressourcen gezielt zu stärken, damit Anforderungen erfolgreich bewältigt werden können.",
+      "keywords": ["Waage", "interne/externe Anforderungen", "Ressourcenstärkung", "Bewältigung", "Gleichgewicht"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_002",
+    "type": "freitext_box",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den Unterschied zwischen Prävention und Gesundheitsförderung mit je einem Beispiel.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte: 2 Punkte für die Definitionen, 2 Punkte für passende Beispiele.",
+    "data": {
+      "box_label": "Prävention vs. Gesundheitsförderung",
+      "correct_answer": "Prävention konzentriert sich auf die Frage 'Was macht krank?' und zielt darauf ab, spezifische Risiken zu minimieren oder Krankheiten zu vermeiden, wie etwa durch eine Schutzimpfung. Gesundheitsförderung hingegen stellt die Frage 'Was hält gesund?' und möchte die Schutzfaktoren sowie persönlichen Ressourcen eines Menschen stärken. Ein typisches Beispiel für Gesundheitsförderung ist die Durchführung von Kursen zur Stressbewältigung oder die allgemeine Mobilitätsförderung. Während Prävention also Defizite vermeiden will, möchte Gesundheitsförderung Potenziale aufbauen.",
+      "keywords": ["Risikominimierung", "Ressourcenstärkung", "Krankheitsvermeidung", "Schutzfaktoren", "Salutogenese"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_003",
+    "type": "freitext_box",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das Begutachtungsverfahren zur Feststellung der Pflegebedürftigkeit nach SGB XI.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte je nach Vollständigkeit der genannten Module und des Punktesystems.",
+    "data": {
+      "box_label": "MDK-Begutachtungsverfahren",
+      "correct_answer": "Die Begutachtung erfolgt durch den Medizinischen Dienst (MDK) und stellt den Grad der Selbstständigkeit in den Mittelpunkt der Beurteilung. Dabei werden sechs pflegerelevante Lebensbereiche (Module) wie Mobilität, Selbstversorgung und kognitive Fähigkeiten untersucht und unterschiedlich gewichtet. Basierend auf einem Punktesystem von 0 bis 100 Punkten erfolgt die Einstufung in einen der fünf Pflegegrade. Ziel ist es, den tatsächlichen Unterstützungsbedarf individuell festzustellen, wobei geistige und körperliche Einschränkungen seit 2017 gleichberechtigt betrachtet werden.",
+      "keywords": ["Selbstständigkeit", "6 Begutachtungsmodule", "Gewichtung", "Punktesystem", "MDK"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_004",
+    "type": "freitext_box",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie warum das Strukturmodell zur Entbürokratisierung in der ambulanten Pflege eingeführt wurde.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die fachliche Begründung hinsichtlich Zeitersparnis und Fachlichkeit.",
+    "data": {
+      "box_label": "Einführung des Strukturmodells",
+      "correct_answer": "Das Strukturmodell wurde eingeführt, um den enormen Schreibaufwand in der Pflegedokumentation zu reduzieren und mehr Zeit für die direkte Pflege am Klienten zu gewinnen. Es rückt die fachliche Einschätzung der Pflegekraft und die Wünsche des Patienten durch die SIS wieder stärker in das Zentrum des Prozesses. Im Gegensatz zu alten Systemen wird im Berichteblatt nur noch auf Abweichungen vom Maßnahmenplan fokussiert, was Redundanzen vermeidet. Damit wird die Professionalität gestärkt, da Pflegende ihre Handlungen wieder stärker fachlich begründen müssen statt nur Häkchen zu setzen.",
+      "keywords": ["Entbürokratisierung", "Zeitersparnis", "SIS", "Fokus auf Abweichungen", "Professionalisierung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_005",
+    "type": "freitext_box",
+    "topic": "pflegeprozess",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Strukturierte Informationssammlung (SIS) und ihre 4 Elemente.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrekt benanntem und kurz erläutertem Element.",
+    "data": {
+      "box_label": "Elemente der SIS",
+      "correct_answer": "Die SIS ist ein wissenschaftsbasiertes Konzept zur Strukturierung des Pflegeprozesses und besteht aus vier aufeinander aufbauenden Elementen. Element 1 umfasst die eigentliche Informationssammlung mit Eigeneinschätzung, sechs Themenfeldern und der Risikomatrix. Darauf folgt Element 2, die Erstellung eines individuellen Maßnahmenplans basierend auf den Erkenntnissen der SIS. Das dritte Element ist das Berichteblatt zur Dokumentation von Abweichungen, und Element 4 bildet die Evaluation zur Überprüfung der Wirksamkeit der Pflege ab.",
+      "keywords": ["Eigeneinschätzung", "Themenfelder", "Risikomatrix", "Maßnahmenplan", "Evaluation"],
+      "min_rows": 6
+    }
+  },
+  {
+    "q_id": "m7_ft_006",
+    "type": "freitext_box",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die exokrine und endokrine Funktion des Pankreas.",
+    "points": 4,
+    "scoring_info": "2 Punkte für die exokrine, 2 Punkte für die endokrine Funktionsbeschreibung.",
+    "data": {
+      "box_label": "Funktionen des Pankreas",
+      "correct_answer": "Die exokrine Funktion besteht in der Produktion von täglich ca. 1,5 Litern Pankreassaft, der Enzyme wie Lipase und Amylase zur Verdauung in den Dünndarm abgibt. Zudem neutralisiert dieser alkalische Saft den sauren Speisebrei aus dem Magen. Die endokrine Funktion wird durch die Langerhans-Inseln wahrgenommen, die Hormone direkt ins Blut abgeben. Hier produzieren die Beta-Zellen Insulin zur Blutzuckersenkung und die Alpha-Zellen Glukagon zur Blutzuckersteigerung, um den Stoffwechsel zu regulieren.",
+      "keywords": ["Verdauungsenzyme", "Langerhans-Inseln", "Insulin", "Glukagon", "Neutralisierung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_007",
+    "type": "freitext_box",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die Pathophysiologie des Diabetes mellitus Typ 2 und die Rolle der peripheren Insulinresistenz.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die korrekte Herleitung der Insulinresistenz und deren Folgen.",
+    "data": {
+      "box_label": "Pathophysiologie Typ 2",
+      "correct_answer": "Bei Diabetes Typ 2 liegt eine periphere Insulinresistenz vor, was bedeutet, dass die Körperzellen (insbesondere Fett- und Muskelzellen) schlechter auf Insulin ansprechen. Obwohl anfangs noch ausreichend Insulin produziert wird, können die Glukosemoleküle aufgrund der verminderten Rezeptoraktivität nicht mehr effektiv in die Zellen einströmen. Dies führt zu einem chronisch erhöhten Blutzuckerspiegel im Gefäßsystem. Langfristig führt diese Überlastung zur Erschöpfung der insulinproduzierenden Beta-Zellen im Pankreas.",
+      "keywords": ["Insulinresistenz", "Rezeptoraktivität", "Hyperglykämie", "Beta-Zell-Erschöpfung", "Glukoseaufnahme"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_008",
+    "type": "freitext_box",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie warum der HbA1c-Wert als Langzeitblutzucker bezeichnet wird und welche klinische Relevanz er hat.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für den Bezug zur Erythrozyten-Lebensdauer und die Bedeutung für die Therapie.",
+    "data": {
+      "box_label": "Bedeutung des HbA1c",
+      "correct_answer": "Der HbA1c-Wert misst den Anteil des Hämoglobins, an den Glukose dauerhaft gebunden ist. Da rote Blutkörperchen eine mittlere Lebensdauer von etwa 8 bis 12 Wochen haben, spiegelt dieser Wert das durchschnittliche Blutzuckerniveau dieses Zeitraums wider. Klinisch ist er hochrelevant, da er im Gegensatz zur punktuellen BZ-Messung eine objektive Beurteilung der Stoffwechseleinstellung ermöglicht. Er dient somit als 'Blutzuckergedächtnis' und ist entscheidend für die Erfolgskontrolle einer Diabetes-Therapie.",
+      "keywords": ["Hämoglobin", "Erythrozyten-Lebensdauer", "Blutzuckergedächtnis", "Stoffwechseleinstellung", "Therapiekontrolle"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_009",
+    "type": "freitext_box",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie den Unterschied zwischen konventioneller und intensivierter Insulintherapie.",
+    "points": 4,
+    "scoring_info": "2 Punkte für CT-Merkmale, 2 Punkte für ICT-Merkmale (Basis-Bolus).",
+    "data": {
+      "box_label": "Vergleich CT vs. ICT",
+      "correct_answer": "Die konventionelle Therapie (CT) folgt einem starren Schema, bei dem meist zweimal täglich Mischinsulin zu festen Zeiten und Mengen gespritzt wird, was eine strikte Diät erfordert. Im Gegensatz dazu arbeitet die intensivierte Insulintherapie (ICT) nach dem Basis-Bolus-Prinzip. Hierbei deckt ein Langzeitinsulin den Grundbedarf (Basalrate), während zu den Mahlzeiten flexibel ein kurzwirksames Insulin (Bolus) entsprechend der Kohlenhydrate gegeben wird. Die ICT bietet deutlich mehr Lebensqualität und Flexibilität, erfordert aber häufigere Blutzuckerkontrollen durch den Patienten.",
+      "keywords": ["Mischinsulin", "Basis-Bolus-Prinzip", "Basalrate", "Flexibilität", "Mahlzeiten-Bolus"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_010",
+    "type": "freitext_box",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie die Durchführung einer kapillären Blutentnahme mit möglichen Fehlerquellen.",
+    "points": 4,
+    "scoring_info": "2 Punkte für den Ablauf, 2 Punkte für die Benennung der Fehlerquellen.",
+    "data": {
+      "box_label": "Durchführung Kapilläre BE",
+      "correct_answer": "Nach der Händewaschung und Desinfektion wird die seitliche Fingerbeere punktiert und der erste austretende Blutstropfen zwingend mit einem Tupfer abgewischt. Das Kapillarblut wird ohne Quetschen aufgefangen, um Verfälschungen zu vermeiden. Eine häufige Fehlerquelle ist das Austreten von Gewebswasser durch zu starkes Drücken, was den Messwert verdünnt. Auch Rückstände von Obst oder Desinfektionsmitteln an den Fingern sowie eine unzureichende Durchblutung der Punktionsstelle können zu falschen Ergebnissen führen.",
+      "keywords": ["Erster Tropfen abwischen", "Gewebswasser", "nicht quetschen", "Kohlenhydratrückstände", "Punktionsstelle"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_011",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die 3 Wundheilungsphasen und ordnen Sie geeignete Wundversorgungsprodukte zu.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro Phase und 1 Punkt für das jeweils korrekt zugeordnete Produkt.",
+    "data": {
+      "box_label": "Phasengerechte Wundversorgung",
+      "correct_answer": "Die Wundheilung beginnt mit der Reinigungsphase, in der Exsudat Bakterien ausschwemmt; hier sind Hydrogele oder Alginate zur Belagsablösung sinnvoll. In der anschließenden Granulationsphase wird Gewebe neu aufgebaut, wobei Schaumstoffe oder Hydrokolloide das feuchte Milieu aufrechterhalten und die Wunde schützen. Die letzte Phase ist die Epithelisierung, bei der sich die Wunde verschließt und Narbengewebe bildet. In dieser Phase stehen der Schutz des neuen Gewebes und das Verhindern des Austrocknens, beispielsweise durch dünne Hydrokolloide, im Vordergrund.",
+      "keywords": ["Reinigungsphase", "Granulationsphase", "Epithelisierungsphase", "Alginate", "Schaumstoffe"],
+      "min_rows": 6
+    }
+  },
+  {
+    "q_id": "m7_ft_012",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Begründen** Sie warum die Wunddokumentation nicht delegierbar ist und welche Bestandteile sie umfassen muss.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte: Begründung (Haftung/Fachlichkeit) und Aufzählung der Kriterien.",
+    "data": {
+      "box_label": "Prinzipien der Wunddokumentation",
+      "correct_answer": "Die Wunddokumentation ist eine persönliche Fachverantwortung und nicht delegierbar, da die ausführende Pflegekraft die Durchführungsverantwortung trägt und für die Richtigkeit haftet. Eine lückenlose Dokumentation hat Urkundencharakter und dient der rechtlichen Absicherung sowie der Evaluation des Therapieerfolgs. Sie muss wesentliche Kriterien wie Lokalisation, Wundgröße, Wundgrundzustand, Exsudatbeschaffenheit und Infektionszeichen enthalten. Nur durch diese zeitnahe und präzise Erfassung können Veränderungen im Heilungsprozess interdisziplinär nachvollzogen werden.",
+      "keywords": ["Durchführungsverantwortung", "Urkundencharatus", "Lokalisation", "Exsudat", "Wundgrund"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_013",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Auswirkungen einer hohen Querschnittlähmung auf die verschiedenen Organsysteme.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte je nach Anzahl und Korrektheit der beschriebenen Organsysteme.",
+    "data": {
+      "box_label": "Auswirkungen der Lähmung",
+      "correct_answer": "Eine hohe Querschnittlähmung beeinträchtigt lebenswichtige Funktionen wie die Atmung durch die Lähmung der Zwerchfell- oder Zwischenrippenmuskulatur. Das vegetative Nervensystem ist gestört, was zu Blasen- und Mastdarmentleerungsstörungen führt, die eine manuelle Entleerung erforderlich machen. Zudem ist die Sexualfunktion eingeschränkt und es besteht ein hohes Risiko für Herz-Kreislauf-Instabilitäten wie die autonome Dysreflexie. Auch die Psyche ist durch den massiven Verlust an Autonomie und die Abhängigkeit von Hilfsmitteln stark betroffen.",
+      "keywords": ["Atemmuskulatur", "Blasen-Darm-Störung", "Autonome Dysreflexie", "Teilhabeverlust", "Sensibilitätsausfall"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_014",
+    "type": "freitext_box",
+    "topic": "transkulturelle_pflege",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie Strategien für eine kultursensible Kommunikation bei Sprachbarrieren in der ambulanten Pflege.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Nennung und Erläuterung konkreter Kommunikationstechniken.",
+    "data": {
+      "box_label": "Kultursensible Kommunikation",
+      "correct_answer": "Um Sprachbarrieren zu überwinden, sollten Pflegekräfte langsam, deutlich und in kurzen, einfachen Sätzen sprechen. Informationen müssen in kleine 'Häppchen' aufgeteilt werden, wobei der Einsatz visueller Medien wie Bilder oder Piktogramme die Verständigung unterstützt. Als 'Türöffner' dienen biografische Fragen zum Herkunftsland, um eine vertrauensvolle familiäre Ebene aufzubauen. Wichtig ist zudem die regelmäßige Rückversicherung durch Rückfragen, ob die Botschaften beim Gegenüber korrekt verstanden wurden.",
+      "keywords": ["Häppchen-Taktik", "Einfache Sprache", "Visuelle Medien", "Türöffner-Fragen", "Biografiearbeit"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_ft_015",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie das biopsychosoziale Modell der ICF und seine Bedeutung für die Versorgung von Menschen mit Querschnittlähmung.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Erklärung der funktionalen Gesundheit und Teilhabe.",
+    "data": {
+      "box_label": "ICF-Modell in der Pflege",
+      "correct_answer": "Das Modell der ICF ergänzt die rein medizinische Diagnose (ICD) um die Betrachtung der funktionalen Gesundheit und der sozialen Teilhabe. Bei Menschen mit Querschnittlähmung fokussiert es nicht nur auf den Defekt, sondern auf die Wechselwirkungen zwischen Körperfunktionen, Aktivitäten und der Partizipation am Leben. Dabei werden Umweltfaktoren und persönliche Ressourcen einbezogen, um die subjektive Lebensqualität zu verbessern. Ziel ist es, trotz der Lähmung eine höchstmögliche Selbstständigkeit in der gewohnten Lebensumwelt des Patienten zu erreichen.",
+      "keywords": ["Funktionale Gesundheit", "Teilhabe (Partizipation)", "Kontextfaktoren", "ICD-Ergänzung", "Ressourcenfokus"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_zu_001",
+    "type": "zuordnung",
+    "topic": "pankreas_physiologie",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Zelltypen des Inselapparats im Pankreas die jeweils produzierten Hormone zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Alpha-Zellen (α-Zellen)",
+        "B": "Beta-Zellen (β-Zellen)",
+        "C": "Delta-Zellen (δ-Zellen)"
+      },
+      "statements": [
+        {
+          "text": "Dieses Hormon hebt den Blutzuckerspiegel an (Glukagon).",
+          "answer": "A"
+        },
+        {
+          "text": "Dieses Hormon senkt den Blutzuckerspiegel (Insulin).",
+          "answer": "B"
+        },
+        {
+          "text": "Dieses Hormon wird als Somatostatin bezeichnet.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_zu_002",
+    "type": "zuordnung",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den modernen Wundversorgungsprodukten die korrekte Indikation bzw. Eigenschaft zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Hydrokolloid",
+        "B": "Alginat",
+        "C": "Hydrogel",
+        "D": "Superabsorber"
+      },
+      "statements": [
+        {
+          "text": "Indiziert bei leicht exsudierenden Wunden; fördert Granulation und Epithelisierung.",
+          "answer": "A"
+        },
+        {
+          "text": "Geeignet für tiefe, blutende und exsudierende Wunden (zum Austamponieren).",
+          "answer": "B"
+        },
+        {
+          "text": "Einsatz bei trockenen Wunden mit Belägen zur Befeuchtung und Wundreinigung.",
+          "answer": "C"
+        },
+        {
+          "text": "Sehr hohe und schnelle Saugleistung für stark exsudierende Wunden; darf nicht geschnitten werden.",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_zu_003",
+    "type": "zuordnung",
+    "topic": "praevention_gesundheit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den zeitlichen Stufen der Prävention die passenden Beispiele zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Primärprävention",
+        "B": "Sekundärprävention",
+        "C": "Tertiärprävention"
+      },
+      "statements": [
+        {
+          "text": "Maßnahmen zur Risikominimierung wie Impfungen, Sonnenschutz oder Sicherheitsgurte.",
+          "answer": "A"
+        },
+        {
+          "text": "Früherkennung von Krankheiten, z. B. durch Screening-Untersuchungen.",
+          "answer": "B"
+        },
+        {
+          "text": "Vermeidung von Folgeschäden bei bestehender Erkrankung, z. B. Rehabilitation oder gute BZ-Einstellung.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_zu_004",
+    "type": "zuordnung",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Insulinarten das jeweils zutreffende Wirkprofil zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Normalinsulin (kurz wirksam)",
+        "B": "Insulinanaloga (sehr kurz wirksam)",
+        "C": "Depotinsulin (Verzögerungsinsulin)"
+      },
+      "statements": [
+        {
+          "text": "Wirkung setzt nach 15-30 Min. ein, erreicht nach 2 Std. den Gipfel und endet nach ca. 6 Std.",
+          "answer": "A"
+        },
+        {
+          "text": "Wirkung setzt bereits nach 10-15 Min. ein; Maximalwirkung nach ca. 1 Std.",
+          "answer": "B"
+        },
+        {
+          "text": "Mittellang- bis lang wirksame Insuline, die vorwiegend zur Deckung der Basalrate genutzt werden.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_zu_005",
+    "type": "zuordnung",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den medizinischen Fachbegriffen für Sehstörungen die korrekte deutsche Bezeichnung zu.",
+    "points": 4,
+    "data": {
+      "legend": {
+        "A": "Myopie",
+        "B": "Hyperopie",
+        "C": "Presbyopie",
+        "D": "Strabismus"
+      },
+      "statements": [
+        {
+          "text": "Kurzsichtigkeit",
+          "answer": "A"
+        },
+        {
+          "text": "Weitsichtigkeit",
+          "answer": "B"
+        },
+        {
+          "text": "Alterssichtigkeit",
+          "answer": "C"
+        },
+        {
+          "text": "Schielen",
+          "answer": "D"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_erg_001",
+    "type": "ergaenzen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden klassischen Infektionszeichen einer Wunde (lateinische Fachbegriffe).",
+    "points": 2,
+    "data": {
+      "list_label": "Klassische Entzündungszeichen",
+      "given_items": [
+        "Calor (Überwärmung)",
+        "Rubor (Rötung)",
+        "Tumor (Schwellung)"
+      ],
+      "missing_items": [
+        "Dolor",
+        "Functio laesa"
+      ],
+      "all_valid_missing": [
+        "Dolor",
+        "Schmerz",
+        "Functio laesa",
+        "Funktionsverlust",
+        "Funktionseinschränkung"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_erg_002",
+    "type": "ergaenzen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden pflegerelevanten Lebensbereiche (Module), die bei der Begutachtung durch den MDK beurteilt werden.",
+    "points": 3,
+    "data": {
+      "list_label": "Die 6 Begutachtungsmodule",
+      "given_items": [
+        "Modul 1: Mobilität",
+        "Modul 2: Kognitive und kommunikative Fähigkeiten",
+        "Modul 3: Verhaltensweisen und psychische Problemlagen"
+      ],
+      "missing_items": [
+        "Modul 4: Selbstversorgung",
+        "Modul 5: Bewältigung von und selbstständiger Umgang mit krankheits- und therapiebedingten Anforderungen",
+        "Modul 6: Gestaltung des Alltagslebens und sozialer Kontakte"
+      ],
+      "all_valid_missing": [
+        "Selbstversorgung",
+        "Krankheits- und therapiebedingte Anforderungen",
+        "krankheitsbedingte Anforderungen",
+        "Umgang mit krankheitsbedingten Anforderungen",
+        "Alltagsleben und soziale Kontakte",
+        "Gestaltung des Alltagslebens"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_erg_003",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Schritte des Pflegeprozesses nach dem Modell von Fiechter und Meier.",
+    "points": 3,
+    "data": {
+      "list_label": "Schritte nach Fiechter & Meier",
+      "given_items": [
+        "1. Informationssammlung",
+        "2. Erkennen von Problemen und Ressourcen",
+        "3. Festlegen der Pflegeziele"
+      ],
+      "missing_items": [
+        "4. Planung der Pflegemaßnahmen",
+        "5. Durchführung der Pflege",
+        "6. Beurteilung der Wirkung der Pflege (Evaluation)"
+      ],
+      "all_valid_missing": [
+        "Planung",
+        "Maßnahmen planen",
+        "Pflegemaßnahmen planen",
+        "Durchführung",
+        "Umsetzung",
+        "Evaluation",
+        "Wirkung überprüfen",
+        "Beurteilung der Wirkung"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_erg_004",
+    "type": "ergaenzen_liste",
+    "topic": "pankreas_physiologie",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die zwei fehlenden Hauptenzyme des exokrinen Pankreassaftes.",
+    "points": 2,
+    "data": {
+      "list_label": "Exokrine Pankreasenzyme",
+      "given_items": [
+        "Trypsin (Eiweißspaltung)",
+        "Lipase (Fettspaltung)"
+      ],
+      "missing_items": [
+        "Chymotrypsin",
+        "Alpha-Amylase"
+      ],
+      "all_valid_missing": [
+        "Chymotrypsin",
+        "Alpha-Amylase",
+        "Amylase",
+        "Carboxypeptidase"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_erg_005",
+    "type": "ergaenzen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden diagnostischen Verfahren zur Feststellung eines Diabetes Mellitus.",
+    "points": 2,
+    "data": {
+      "list_label": "Diagnostische Verfahren",
+      "given_items": [
+        "Blutzuckerbestimmung im Blut",
+        "Bestimmung des HbA1c-Wertes (Langzeit-BZ)"
+      ],
+      "missing_items": [
+        "Urinzuckerbestimmung (Glukosurie)",
+        "Oraler Glukosetoleranztest (oGTT)"
+      ],
+      "all_valid_missing": [
+        "Urinzucker",
+        "Glukosurie",
+        "Harnzucker",
+        "oGTT",
+        "Zuckerbelastungstest",
+        "Oraler Glukosetoleranztest"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den Begriff 'Pflegebedürftigkeit' nach § 14 SGB XI und **nennen** Sie drei der sechs Begutachtungsmodule.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Pflegebedürftigkeit",
+      "definition_correct": "Pflegebedürftig sind Personen, die gesundheitlich bedingte Beeinträchtigungen der Selbstständigkeit oder der Fähigkeiten aufweisen und deshalb auf Hilfe durch andere angewiesen sind. Die Beeinträchtigung muss dauerhaft, voraussichtlich für mindestens sechs Monate, bestehen.",
+      "definition_keywords": [
+        "Selbstständigkeit",
+        "Fähigkeiten",
+        "Hilfe durch andere",
+        "6 Monate",
+        "gesundheitlich bedingt"
+      ],
+      "definition_points": 3,
+      "examples_label": "Begutachtungsmodule",
+      "examples_count": 3,
+      "correct_examples": [
+        "Mobilität",
+        "Kognitive und kommunikative Fähigkeiten",
+        "Selbstversorgung"
+      ],
+      "all_valid_examples": [
+        "Mobilität",
+        "Kognitive und kommunikative Fähigkeiten",
+        "Verhaltensweisen und psychische Problemlagen",
+        "Selbstversorgung",
+        "Bewältigung von krankheits- und therapiebedingten Anforderungen",
+        "Gestaltung des Alltagslebens und sozialer Kontakte"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_def_002",
+    "type": "definition_plus_beispiele",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie 'Gesundheitsförderung' gemäß der Ottawa-Charta und **nennen** Sie drei Handlungsfelder oder Maßnahmen zur Umsetzung.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition Gesundheitsförderung",
+      "definition_correct": "Gesundheitsförderung zielt auf einen Prozess ab, allen Menschen ein höheres Maß an Selbstbestimmung über ihre Gesundheit zu ermöglichen und sie damit zur Stärkung ihrer Gesundheit zu befähigen.",
+      "definition_keywords": [
+        "Selbstbestimmung",
+        "Stärkung der Gesundheit",
+        "befähigen",
+        "Prozess"
+      ],
+      "definition_points": 3,
+      "examples_label": "Handlungsfelder/Maßnahmen",
+      "examples_count": 3,
+      "correct_examples": [
+        "Mobilitätsförderung",
+        "Stressbewältigung",
+        "Stärkung von Ressourcen"
+      ],
+      "all_valid_examples": [
+        "Mobilitätsförderung",
+        "Stressbewältigung",
+        "Stärkung von persönlichen Ressourcen",
+        "Ernährungsberatung",
+        "Bewegungsangebote",
+        "Schaffung gesundheitsförderlicher Umweltbedingungen"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_def_003",
+    "type": "definition_plus_beispiele",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie die 'Chronische Wunde' und **nennen** Sie drei typische Beispiele.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition chronische Wunde",
+      "definition_correct": "Eine Wunde gilt als chronisch, wenn sie nach 8 Wochen nicht abgeheilt ist oder wenn sie von Beginn an als chronisch anzusehen ist, da ihre Behandlung zwingend eine Therapie der Ursache (Grunderkrankung) erfordert.",
+      "definition_keywords": [
+        "8 Wochen",
+        "Heilungstendenz",
+        "Therapie der Ursache",
+        "Grunderkrankung"
+      ],
+      "definition_points": 3,
+      "examples_label": "Beispiele chronischer Wunden",
+      "examples_count": 3,
+      "correct_examples": [
+        "Dekubitus",
+        "Ulcus cruris (venosum/arteriosum)",
+        "Diabetisches Fußsyndrom (DFS)"
+      ],
+      "all_valid_examples": [
+        "Dekubitus",
+        "Ulcus cruris venosum",
+        "Ulcus cruris arteriosum",
+        "Diabetisches Fußsyndrom",
+        "Wunden bei pAVK"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_def_004",
+    "type": "definition_plus_beispiele",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie den 'HbA1c-Wert' und **nennen** Sie drei Gründe für seine klinische Bedeutung im Diabetesmanagement.",
+    "points": 6,
+    "data": {
+      "definition_label": "Definition HbA1c",
+      "definition_correct": "HbA1c ist der Anteil des roten Blutfarbstoffs Hämoglobin, an den Glukose gebunden ist. Er spiegelt das durchschnittliche Blutzuckerniveau der letzten 8 bis 12 Wochen wider.",
+      "definition_keywords": [
+        "Hämoglobin",
+        "gebundene Glukose",
+        "8-12 Wochen",
+        "Langzeit-Blutzucker"
+      ],
+      "definition_points": 3,
+      "examples_label": "Klinische Relevanz",
+      "examples_count": 3,
+      "correct_examples": [
+        "Beurteilung der Stoffwechseleinstellung",
+        "Therapiekontrolle beim Hausarzt",
+        "Objektives 'Blutzuckergedächtnis'"
+      ],
+      "all_valid_examples": [
+        "Langfristige Beurteilung des BZ",
+        "Kontrolle der Therapieadhärenz",
+        "Blutzuckergedächtnis",
+        "Erythrozyten-Lebensdauer als Basis",
+        "Therapieanpassung"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_def_005",
+    "type": "definition_plus_beispiele",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Definieren** Sie die 'Strukturierte Informationssammlung (SIS)' und **nennen** Sie die vier Elemente des Strukturmodells.",
+    "points": 7,
+    "data": {
+      "definition_label": "Definition SIS",
+      "definition_correct": "Die SIS ist ein wissenschaftsbasiertes Konzept zur Strukturierung des Pflegeprozesses, das mit der Eigeneinschätzung der pflegebedürftigen Person beginnt und eine fachliche Risikoeinschätzung beinhaltet.",
+      "definition_keywords": [
+        "wissenschaftsbasiert",
+        "Strukturmodell",
+        "Eigeneinschätzung",
+        "Pflegeprozess"
+      ],
+      "definition_points": 3,
+      "examples_label": "Elemente des Strukturmodells",
+      "examples_count": 4,
+      "correct_examples": [
+        "Strukturierte Informationssammlung (SIS)",
+        "Individueller Maßnahmenplan",
+        "Berichteblatt",
+        "Evaluation"
+      ],
+      "all_valid_examples": [
+        "SIS",
+        "Maßnahmenplan",
+        "Berichteblatt",
+        "Evaluation",
+        "Strukturierte Informationssammlung"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_ab_001",
+    "type": "ankreuzen_begruenden",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zur Durchführung der kapillären Blutentnahme korrekt sind.",
+    "instruction_justify": "**Begründen** Sie, warum das Quetschen der Punktionsstelle vermieden werden muss.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Der erste Blutstropfen muss zwingend abgewischt werden.",
+          "correct": true
+        },
+        {
+          "label": "Vor der Entnahme sollten die Hände des Klienten mit warmem Wasser gewaschen werden.",
+          "correct": true
+        },
+        {
+          "label": "Starkes Quetschen ist notwendig, um genügend Blut für den Teststreifen zu gewinnen.",
+          "correct": false
+        },
+        {
+          "label": "Die Punktion erfolgt idealerweise mitten in der Fingerbeere.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Starkes Quetschen ist notwendig...",
+          "text": "Das Quetschen muss vermieden werden, da dadurch Gewebswasser austritt, welches das Kapillarblut verdünnt und somit den Messwert verfälscht."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_ab_002",
+    "type": "ankreuzen_begruenden",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Wundauflagen für eine stark exsudierende chronische Wunde geeignet sind.",
+    "instruction_justify": "**Begründen** Sie die Auswahl des Superabsorbers hinsichtlich seiner Handhabung.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Superabsorber",
+          "correct": true
+        },
+        {
+          "label": "Alginate",
+          "correct": true
+        },
+        {
+          "label": "Hydrogel",
+          "correct": false
+        },
+        {
+          "label": "Dünne Hydrokolloide",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Superabsorber",
+          "text": "Superabsorber besitzen eine hohe und schnelle Saugleistung für exsudatreiche Wunden, dürfen jedoch niemals zerschnitten werden, um das Austreten absorbierender Partikel zu verhindern."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_ab_003",
+    "type": "ankreuzen_begruenden",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Merkmale auf die intensivierte konventionelle Insulintherapie (ICT) zutreffen.",
+    "instruction_justify": "**Begründen** Sie den Vorteil der ICT gegenüber der konventionellen Therapie (CT) für den Klienten.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Basiert auf dem Basis-Bolus-Konzept.",
+          "correct": true
+        },
+        {
+          "label": "Erfordert einen starren Zeitplan für Mahlzeiten.",
+          "correct": false
+        },
+        {
+          "label": "Kombiniert ein Depotinsulin mit einem mahlzeitenbezogenen Bolus.",
+          "correct": true
+        },
+        {
+          "label": "Ist die einfachste Form der Therapie für immobile Klienten.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Basiert auf dem Basis-Bolus-Konzept.",
+          "text": "Der Vorteil der ICT liegt in der hohen Flexibilität der Lebensführung, da der Klient Zeitpunkt und Menge seiner Mahlzeiten frei wählen kann, solange er den mahlzeitenbezogenen Bolus anpasst."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_ab_004",
+    "type": "ankreuzen_begruenden",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aussagen zu Lähmungserscheinungen nach Rückenmarksverletzungen fachlich korrekt sind.",
+    "instruction_justify": "**Begründen** Sie den Unterschied zwischen Plegie und Parese.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Eine Plegie beschreibt einen vollständigen Funktionsausfall der Skelettmuskeln.",
+          "correct": true
+        },
+        {
+          "label": "Bei einer Parese sind Restmotorik oder Restsensibilität vorhanden.",
+          "correct": true
+        },
+        {
+          "label": "Eine Tetraplegie betrifft ausschließlich die unteren Extremitäten.",
+          "correct": false
+        },
+        {
+          "label": "Spastische Lähmungen treten nur bei inkompletten Querschnitten auf.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Eine Plegie beschreibt...",
+          "text": "Während die Plegie den totalen Ausfall bedeutet, ist die Parese ein Teilausfall, bei dem noch neurologische Impulse ankommen, was therapeutisch andere Ansätze ermöglicht."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_ab_005",
+    "type": "ankreuzen_begruenden",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction_select": "**Entscheiden** Sie, welche Aspekte die Beziehungsgestaltung in der ambulanten Pflege prägen.",
+    "instruction_justify": "**Begründen** Sie, warum die Berücksichtigung familiensystemischer Bedingungen im häuslichen Umfeld so wichtig ist.",
+    "points": 5,
+    "data": {
+      "options": [
+        {
+          "label": "Die Pflegekraft nimmt im Privathaushalt die Rolle eines Gastes ein.",
+          "correct": true
+        },
+        {
+          "label": "Angehörige mit skeptischer Haltung können den Pflegeerfolg beeinflussen (Fall Urban).",
+          "correct": true
+        },
+        {
+          "label": "In der ambulanten Pflege gibt es keinen Bedarf an Anleitung und Beratung.",
+          "correct": false
+        },
+        {
+          "label": "Die Pflege findet in einem hierarchiefreien Raum ohne Dokumentationspflicht statt.",
+          "correct": false
+        }
+      ],
+      "justify_count": 1,
+      "sample_justifications": [
+        {
+          "option": "Angehörige mit skeptischer Haltung...",
+          "text": "Im häuslichen Umfeld ist der Klient Teil eines Systems. Skeptische Angehörige, die Maßnahmen kontrollieren oder eigenmächtig (z. B. mit Franzbranntwein) intervenieren, erfordern eine hohe Kommunikationskompetenz, um die fachliche Pflegequalität zu sichern."
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_extra_001",
+    "type": "richtig_falsch",
+    "topic": "praevention_gesundheit",
+    "difficulty": 1,
+    "fallabhaengig": false,
+    "statement": "Gemäß der WHO-Definition ist Gesundheit primär als die Abwesenheit von Krankheit oder Gebrechen zu verstehen.",
+    "answer": "falsch",
+    "explanation": "Die WHO definiert Gesundheit als einen Zustand des vollständigen körperlichen, geistigen und sozialen Wohlergehens und ausdrücklich nicht nur als das Fehlen von Krankheit.",
+    "source_hint": "Modul 7.3_Handout"
+  },
+  {
+    "q_id": "m7_extra_002",
+    "type": "nennen_liste",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie das Kernziel der Gesundheitsförderung laut der Ottawa-Charta der WHO.",
+    "list_label": "Ziel der Gesundheitsförderung",
+    "count": 1,
+    "correct_answers": [
+      "Menschen ein höheres Maß an Selbstbestimmung über ihre Gesundheit zu ermöglichen und sie zur Stärkung ihrer Gesundheit zu befähigen"
+    ],
+    "all_valid_answers": [
+      "Selbstbestimmung über Gesundheit",
+      "Stärkung der Gesundheit",
+      "Befähigung zur Gesundheit",
+      "Erhöhung der Kontrolle über die eigene Gesundheit"
+    ],
+    "points": 2,
+    "scoring_info": "2 Punkte für die vollständige Wiedergabe des Kernziels."
+  },
+  {
+    "q_id": "m7_extra_003",
+    "type": "freitext_box",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie den präventiven Auftrag für Pflegefachpersonen gemäß § 5 des Pflegeberufegesetzes (PflBG).",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Nennung der Kernkompetenzen (Bedarfserhebung und Durchführung).",
+    "data": {
+      "box_label": "Präventionsauftrag nach PflBG",
+      "correct_answer": "Die Ausbildung soll dazu befähigen, die Bedarfserhebung und Durchführung präventiver sowie gesundheitsfördernder Maßnahmen selbstständig auszuführen. Dies wird in der PflAPrV dahingehend präzisiert, dass Pflegeprozesse unter dem besonderen Fokus von Prävention geplant, gesteuert und evaluiert werden müssen.",
+      "keywords": [
+        "Bedarfserhebung",
+        "Durchführung",
+        "selbstständig",
+        "Prävention",
+        "Gesundheitsförderung"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_extra_004",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Nennen** Sie Beispiele für 'besondere Bedarfskonstellationen' gemäß § 15 Abs. 4 SGB XI, die zu einer sofortigen Einstufung in Pflegegrad 5 führen.",
+    "list_label": "Bedarfskonstellationen für PG 5",
+    "count": 2,
+    "correct_answers": [
+      "Gebrauchsunfähigkeit beider Arme UND beider Beine",
+      "Menschen im Wachkoma"
+    ],
+    "all_valid_answers": [
+      "Wachkoma",
+      "Tetraplegie",
+      "Lähmung aller Extremitäten",
+      "Vollständiger Greif-, Steh- und Gehverlust",
+      "Hochgradige Kontrakturen",
+      "Athetose"
+    ],
+    "points": 4,
+    "scoring_info": "2 Punkte pro korrektem Beispiel."
+  },
+  {
+    "q_id": "m7_extra_005",
+    "type": "ergaenzen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ergänzen** Sie die fehlenden Subskalen der Braden-Skala zur Dekubitusrisikoeinschätzung.",
+    "points": 3,
+    "data": {
+      "list_label": "Braden-Subskalen",
+      "given_items": [
+        "Sensorisches Empfindungsvermögen",
+        "Feuchtigkeit",
+        "Aktivität"
+      ],
+      "missing_items": [
+        "Mobilität",
+        "Ernährung",
+        "Reibung und Scherkräfte"
+      ],
+      "all_valid_missing": [
+        "Mobilität",
+        "Ernährung",
+        "Nahrungsaufnahme",
+        "Reibung",
+        "Scherkräfte"
+      ]
+    }
+  },
+  {
+    "q_id": "m7_extra_006",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie den klinischen Unterschied zwischen einer kompletten und einer inkompletten Querschnittlähmung.",
+    "points": 4,
+    "scoring_info": "2 Punkte für die Definition 'komplett', 2 Punkte für 'inkomplett' hinsichtlich Restfunktionen.",
+    "data": {
+      "box_label": "Vollständigkeit der Lähmung",
+      "correct_answer": "Bei einer kompletten Lähmung liegt eine vollständige Durchtrennung der Nerven vor, wodurch Muskelkraft und Empfindungsvermögen unterhalb der Schädigungsstelle völlig fehlen. Eine inkomplette Lähmung hingegen bedeutet, dass Restmotorik und/oder Restsensibilität vorhanden sind, da das Rückenmark nicht vollständig unterbrochen wurde.",
+      "keywords": [
+        "Durchtrennung",
+        "Restmotorik",
+        "Restsensibilität",
+        "Vollständiger Ausfall",
+        "Teilausfall"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_extra_007",
+    "type": "zuordnung",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie die Hierarchiestufen eines ambulanten Pflegedienstes den korrekten Verantwortungsbereichen zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Geschäftsführung",
+        "B": "Pflegedienstleitung (PDL)",
+        "C": "Assistenzkräfte (z. B. Pflegehelfer)"
+      },
+      "statements": [
+        {
+          "text": "Trägt die oberste Entscheidungsbefugnis im Organigramm.",
+          "answer": "A"
+        },
+        {
+          "text": "Ist direkt der Geschäftsführung unterstellt und leitet den pflegerischen Bereich.",
+          "answer": "B"
+        },
+        {
+          "text": "Führt delegierte Aufgaben unter Anleitung der Fachkräfte aus.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_extra_008",
+    "type": "freitext_box",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Beschreiben** Sie den Wirkmechanismus von Metformin bei Diabetes Mellitus Typ II.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach fachlicher Korrektheit der Stoffwechselvorgänge.",
+    "data": {
+      "box_label": "Wirkungsweise Metformin",
+      "correct_answer": "Metformin ist das bevorzugte orale Antidiabetikum, das die Neubildung von Glukose in der Leber hemmt. Gleichzeitig verbessert es die Glukoseaufnahme in die Muskelzellen und verzögert die Aufnahme von Zucker aus dem Darm in das Blut. Dadurch senkt es effektiv den Blutzuckerspiegel, ohne eine Hypoglykämie auszulösen.",
+      "keywords": [
+        "Glukoseneubildung",
+        "Leber",
+        "Insulinresistenz",
+        "Zuckeraufnahme",
+        "Darm"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_extra_009",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Die sogenannte Nierenschwelle bezeichnet den Blutzuckerwert von ca. 120 mg/dl, ab dem Glukose im Urin ausgeschieden wird.",
+    "answer": "falsch",
+    "explanation": "Die Nierenschwelle liegt deutlich höher, bei einem Wert von über 180 mg/dl (ca. 10 mmol/l).",
+    "source_hint": "M 7.6_Skript"
+  },
+  {
+    "q_id": "m7_extra_010",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Eine inhaltliche Manipulation der Wunddokumentation wird rechtlich als Urkundenfälschung bewertet.",
+    "answer": "richtig",
+    "explanation": "Da die Dokumentation Urkundencharakter hat, sind Manipulationen strafbar. Sie muss daher persönlich, zeitnah und wahrheitsgemäß erfolgen.",
+    "source_hint": "M 7.10 handout"
+  },
+  {
+    "q_id": "m7_extra_011",
+    "type": "zuordnung",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Wundauflagen ihre spezifischen Vorteile oder Anwendungsregeln zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Hydrofiber",
+        "B": "Superabsorber",
+        "C": "Polyurethanschaumstoff"
+      },
+      "statements": [
+        {
+          "text": "Zeichnet sich durch eine ausschließlich vertikale Flüssigkeitsaufnahme aus.",
+          "answer": "A"
+        },
+        {
+          "text": "Darf unter keinen Umständen zerschnitten werden.",
+          "answer": "B"
+        },
+        {
+          "text": "Besitzt den Vorteil, dass es anatomisch formbar ist (z. B. für die Ferse).",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_extra_012",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erläutern** Sie die Definition von 'Lebensqualität' nach der Weltgesundheitsorganisation (WHO 1993).",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Wiedergabe der subjektiven und kulturellen Komponenten.",
+    "data": {
+      "box_label": "WHO Definition Lebensqualität",
+      "correct_answer": "Lebensqualität ist die subjektive Wahrnehmung einer Person über ihre Stellung im Leben in Relation zur Kultur und den Wertsystemen, in denen sie lebt. Dabei spielen die eigenen Ziele, Erwartungen, Standards und Anliegen eine entscheidende Rolle für das persönliche Empfinden.",
+      "keywords": [
+        "subjektiv",
+        "Wahrnehmung",
+        "Kultur",
+        "Wertsysteme",
+        "Ziele"
+      ],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_extra_013",
+    "type": "zuordnung",
+    "topic": "sinne_einsamkeit",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "instruction": "**Ordnen** Sie den Strukturen des Innenohrs ihre korrekte Funktion zu.",
+    "points": 2,
+    "data": {
+      "legend": {
+        "A": "Cochlea (Schnecke)",
+        "B": "Vestibularapparat"
+      },
+      "statements": [
+        {
+          "text": "Ist für die eigentliche Hörwahrnehmung zuständig.",
+          "answer": "A"
+        },
+        {
+          "text": "Beinhaltet das Gleichgewichtsorgan zur Orientierung im Raum.",
+          "answer": "B"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_extra_014",
+    "type": "richtig_falsch",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": false,
+    "statement": "Pflegerische Leistungen nach dem SGB V sind Teil der medizinischen Behandlung und werden vom Arzt angeordnet.",
+    "answer": "richtig",
+    "explanation": "SGB V regelt die häusliche Krankenpflege als Behandlungspflege (ärztlich angeordnet), während SGB XI Leistungen bei Pflegebedürftigkeit umfasst.",
+    "source_hint": "M 7.10 handout / M 7.4"
+  },
+  {
+    "q_id": "m7_extra_015",
+    "type": "freitext_box",
+    "topic": "praevention_gesundheit",
+    "difficulty": 3,
+    "fallabhaengig": false,
+    "instruction": "**Erklären** Sie die Metapher der 'Waage' im Anforderungs-Ressourcen-Modell nach Peter Becker.",
+    "points": 4,
+    "scoring_info": "2 Punkte für das Gleichgewichtsprinzip, 2 Punkte für die Benennung der Gegenspieler.",
+    "data": {
+      "box_label": "Waage-Metapher",
+      "correct_answer": "Das Modell versteht Gesundheit als eine Waage, bei der auf der einen Seite die Anforderungen (interne und externe Stressoren) und auf der anderen Seite die Ressourcen (interne und externe Bewältigungsmöglichkeiten) stehen. Gesundheit ist das Resultat eines dynamischen Gleichgewichts; Krankheit entsteht, wenn die Anforderungen die Ressourcen dauerhaft überwiegen.",
+      "keywords": [
+        "Gleichgewicht",
+        "Anforderungen",
+        "Ressourcen",
+        "Stressoren",
+        "Bewältigung"
+      ],
+      "min_rows": 5
+    }
+  },
+  {
+    "fall_id": "m7_fall_01",
+    "title": "Diabetes-Management im Privathaushalt",
+    "topics_covered": [
+      "diabetes_mellitus",
+      "blutentnahme",
+      "interaktion_beziehung"
+    ],
+    "patient": {
+      "name": "Herr Gerhard Müller",
+      "alter": 72,
+      "geschlecht": "m",
+      "wohnsituation": "lebt mit seiner Ehefrau in einer Eigentumswohnung",
+      "beruf": "Pensionierter Bauingenieur"
+    },
+    "setting": "Häuslichkeit",
+    "pflegekraft": "Sarah (Pflegefachkraft)",
+    "paragraphs": [
+      "Herr Müller wurde vor kurzem aus dem Krankenhaus entlassen, nachdem ein Diabetes Mellitus Typ II diagnostiziert wurde. Da die Blutzuckerwerte schwanken, hat der Hausarzt eine zweimal tägliche BZ-Kontrolle und die Gabe von Insulin (ICT-Schema) angeordnet. Sarah besucht das Ehepaar heute zum ersten Mal im Rahmen der Tourenplanung, um die Anleitung zur kapillären Blutentnahme und zur Anwendung des Insulinpens zu beginnen.",
+      "Sarah achtet beim Betreten der Wohnung bewusst auf ihre Rolle als Gast im Privathaushalt. Sie führt zunächst ein Informationsgespräch mit Herrn Müller und seiner Frau, um die Lernziele festzulegen. Da Herr Müller anfangs skeptisch ist und die Diagnose verdrängt, nutzt Sarah 'Türöffner-Fragen' zu seinen früheren Hobbys, um eine vertrauensvolle Basis für die Beziehungsgestaltung zu schaffen.",
+      "Bei der Durchführung der kapillären Blutentnahme an der seitlichen Fingerbeere erklärt Sarah die wichtigsten Fehlerquellen. Sie betont, dass Herr Müller vorab die Hände mit warmem Wasser waschen muss, um Fruchtrückstände zu entfernen. Sie zeigt ihm, dass der erste Blutstropfen abgewischt werden muss und das Gewebe keinesfalls gequetscht werden darf, da austretendes Gewebswasser den Messwert verfälschen würde.",
+      "Abschließend besprechen sie die medikamentöse Therapie. Sarah erläutert den Wirkmechanismus von Metformin und bereitet Herrn Müller auf die Injektion des Mahlzeiten-Insulins vor. Sie vereinbaren, dass Herr Müller beim nächsten Besuch unter Aufsicht die BZ-Messung selbstständig durchführt, wobei Sarah die fachgerechte Vorbereitung und Durchführung validiert."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Diabetes Mellitus Typ II, V. a. beginnende Polyneuropathie"
+        },
+        {
+          "label": "Therapie",
+          "value": "Metformin 500mg 1-0-1, ICT-Schema mit Normalinsulin und Depotinsulin"
+        },
+        {
+          "label": "Laborwerte",
+          "value": "HbA1c 8,4%, BZ nüchtern 195 mg/dl"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Müller",
+      "ERKRANKUNG": "Diabetes Mellitus Typ II",
+      "PFLEGEKRAFT": "Sarah"
+    }
+  },
+  {
+    "fall_id": "m7_fall_02",
+    "title": "Phasengerechte Versorgung eines Ulcus cruris",
+    "topics_covered": [
+      "wundmanagement",
+      "wundprodukte",
+      "pflegeprozess"
+    ],
+    "patient": {
+      "name": "Frau Helga Wagner",
+      "alter": 68,
+      "geschlecht": "w",
+      "wohnsituation": "lebt allein in einer Erdgeschosswohnung",
+      "beruf": "ehem. Verkäuferin"
+    },
+    "setting": "Ambulanter Pflegedienst",
+    "pflegekraft": "Michael (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Wagner leidet seit drei Monaten an einem Ulcus cruris venosum am rechten Unterschenkel. Die Wunde zeigt bisher keine Heilungstendenz und gilt daher nach der zeitlichen Definition von 8 Wochen als chronisch. Michael führt heute im Rahmen der Erstvisite eine umfassende Wundbeurteilung anhand der acht Beobachtungskriterien durch, darunter Lokalisation, Wundgrund, Exsudatbeschaffenheit und Wundrandzustand.",
+      "Die Wunde am medialen Knöchel ist ca. 4x5 cm groß, tief und weist im Wundgrund gelbliche Beläge sowie eine starke Exsudation auf. Michael stellt zudem eine Rötung der Wundumgebung (Rubor) und eine lokale Überwärmung (Calor) fest. Er strukturiert den Pflegeprozess nach dem Strukturmodell und beginnt mit der SIS, wobei er Frau Wagners Eigeneinschätzung ('Es nässt so stark durch den Verband') in den Mittelpunkt stellt.",
+      "Für die Behandlung wählt Michael in Absprache mit dem Wundmanagement eine phasengerechte Versorgung. Er entscheidet sich für ein Alginat zum Austamponieren der Tiefe und einen Superabsorber als Sekundärverband, um die hohe Exsudatmenge sicher zu binden. Er weist ausdrücklich darauf hin, dass der Superabsorber nicht zerschnitten werden darf, um das Austreten der Wirkstoffe zu verhindern.",
+      "Michael erstellt eine lückenlose Wunddokumentation, die er als nicht delegierbare Aufgabe persönlich und zeitnah abschließt. Er plant die erste Evaluation der Maßnahmen in einer Woche ein, um die Wirkung der Produkte auf die Reinigungsphase zu überprüfen und ggf. auf eine Granulationsförderung mit Polyurethanschaumstoffen umzustellen."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Ulcus cruris venosum bei CVI Grad III"
+        },
+        {
+          "label": "Wundzustand",
+          "value": "Reinigungsphase, infektionsgefährdet, starke Exsudation"
+        },
+        {
+          "label": "Anordnung",
+          "value": "Wundreinigung mit NaCl 0,9%, phasengerechte Wundauflagen, Kompressionstherapie"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Wagner",
+      "ERKRANKUNG": "Ulcus cruris venosum",
+      "PFLEGEKRAFT": "Michael"
+    }
+  },
+  {
+    "fall_id": "m7_fall_03",
+    "title": "Häusliche Rehabilitation nach hoher Querschnittlähmung",
+    "topics_covered": [
+      "querschnittlaehmung",
+      "organisation_recht",
+      "praevention_gesundheit"
+    ],
+    "patient": {
+      "name": "Herr Lukas Fischer",
+      "alter": 34,
+      "geschlecht": "m",
+      "wohnsituation": "barrierefrei umgebautes Einfamilienhaus",
+      "beruf": "ehem. Software-Entwickler"
+    },
+    "setting": "Häuslichkeit",
+    "pflegekraft": "Thomas (Pflegefachkraft)",
+    "paragraphs": [
+      "Herr Fischer ist nach einem Mountainbike-Unfall mit einer hohen Tetraplegie (Schädigung oberhalb Th1) aus der Reha-Klinik entlassen worden. Er ist praktisch vollständig auf die Hilfe anderer angewiesen. Da er eine 24-Stunden-Betreuungskraft aus Osteuropa beschäftigt, übernimmt Thomas vom ambulanten Dienst die pflegefachliche Anleitung und Koordination der Versorgung.",
+      "Thomas bereitet das Ehepaar Fischer auf die anstehende MDK-Begutachtung vor. Er geht die sechs Begutachtungsmodule durch und erklärt, dass aufgrund der Gebrauchsunfähigkeit aller Extremitäten eine 'besondere Bedarfskonstellation' nach § 15 Abs. 4 SGB XI vorliegen könnte, die direkt zur Einstufung in Pflegegrad 5 führt. Er dokumentiert akribisch die Beeinträchtigungen in der Selbstversorgung (Modul 4) und Mobilität (Modul 1).",
+      "Ein Schwerpunkt des Hausbesuchs ist die Prävention von Sekundärkomplikationen. Thomas leitet die Betreuungskraft in der Durchführung einer Pneumonieprophylaxe (Primärprävention) und in der täglichen Hautkontrolle zur Dekubitus-Früherkennung (Sekundärprävention) an. Er nutzt das Anforderungs-Ressourcen-Modell, um Herrn Fischers interne Ressourcen, wie seinen starken Willen und seine Computerkenntnisse, zur Steigerung der Lebensqualität einzubinden.",
+      "Zudem achtet Thomas auf eine rückenschonende Arbeitsweise beim Transfer vom Bett in den Rollstuhl. Er erläutert die Bedeutung der ICF und der funktionalen Gesundheit, um Herrn Fischer trotz der Lähmung die Teilhabe am sozialen Leben zu ermöglichen. Er klärt die rechtlichen Grenzen der Tätigkeitsbereiche zwischen der Betreuungskraft und dem Fachpersonal, um Grenzüberschreitungen zu vermeiden."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Komplette Tetraplegie sub C5 nach Wirbelsäulenfraktur"
+        },
+        {
+          "label": "Einschränkungen",
+          "value": "Blasen-Mastdarm-Lähmung, eingeschränkte Atemfunktion, totale Immobilität"
+        },
+        {
+          "label": "Hilfsmittel",
+          "value": "Elektrorollstuhl, Antidekubitus-Matratze, Lifter"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Herr Fischer",
+      "ERKRANKUNG": "Tetraplegie",
+      "PFLEGEKRAFT": "Thomas"
+    }
+  },
+  {
+    "fall_id": "m7_fall_04",
+    "title": "Kultursensible Pflege bei Sinneseinschränkungen",
+    "topics_covered": [
+      "transkulturelle_pflege",
+      "sinne_einsamkeit",
+      "interaktion_beziehung"
+    ],
+    "patient": {
+      "name": "Frau Emine Aksoy",
+      "alter": 78,
+      "geschlecht": "w",
+      "wohnsituation": "lebt in einer Wohnung im Haus ihres Sohnes",
+      "beruf": "Hausfrau (Migrationshintergrund Türkei)"
+    },
+    "setting": "Häuslichkeit",
+    "pflegekraft": "Elena (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Aksoy ist vor 30 Jahren aus Izmir nach Deutschland gekommen. Sie spricht nur wenig Deutsch und leidet unter einer ausgeprägten Presbyopie (Alterssichtigkeit) sowie einem zunehmenden beidseitigen Hörverlust. Elena stellt bei ihren Besuchen fest, dass Frau Aksoy sich immer mehr zurückzieht und Anzeichen des Pflegephänomens Einsamkeit zeigt, da die Kommunikation mit der Außenwelt erschwert ist.",
+      "Elena setzt Strategien der kultursensiblen Kommunikation ein, um die Sprachbarrieren zu überwinden. Sie spricht langsam, deutlich und teilt Informationen in kleine 'Häppchen' auf. Zur Verständigung nutzt sie visuelle Medien und Piktogramme. Sie bittet den Sohn als Ressource hinzu, achtet aber darauf, das Gespräch primär mit Frau Aksoy zu führen, um deren Selbstbestimmung zu wahren.",
+      "Um das Hörgeräte-Management zu verbessern, erklärt Elena der Patientin und ihrem Sohn die Handhabung der Geräte. Sie nutzt biografische Fragen zum Herkunftsland als 'Türöffner', um eine familiäre Ebene aufzubauen und das Vertrauen zu stärken. Dabei reflektiert Elena ihre eigene Lebenswelt, um Vorurteile oder stereotype Bilder in der Beziehungsgestaltung zu vermeiden.",
+      "Elena erkennt, dass die Sehstörung das Sturzrisiko erhöht. Sie berät die Familie zur Optimierung der Beleuchtung und zur Beseitigung von Stolperfallen. Durch die Einbindung von Frau Aksoy in kleine Alltagsaktivitäten versucht sie, der sozialen Isolation entgegenzuwirken und die subjektive Lebensqualität im Sinne der WHO-Definition zu fördern."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Presbyakusis (Altersschwerhörigkeit), Presbyopie"
+        },
+        {
+          "label": "Psychosozial",
+          "value": "V. a. soziale Isolation bei Sprachbarriere"
+        },
+        {
+          "label": "Besonderheit",
+          "value": "Kultursensibler Ansatz erforderlich, Einbezug der Angehörigen"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Aksoy",
+      "ERKRANKUNG": "Sinnesbeeinträchtigungen & Einsamkeit",
+      "PFLEGEKRAFT": "Elena"
+    }
+  },
+  {
+    "fall_id": "m7_fall_05",
+    "title": "Sturzprävention und Pflegeprozess nach Fraktur",
+    "topics_covered": [
+      "pflegeprozess",
+      "praevention_gesundheit",
+      "organisation_recht"
+    ],
+    "patient": {
+      "name": "Frau Martha Schmidt",
+      "alter": 81,
+      "geschlecht": "w",
+      "wohnsituation": "lebt allein in einer 3-Zimmer-Wohnung",
+      "beruf": "ehem. Schneiderin"
+    },
+    "setting": "Ambulanter Pflegedienst",
+    "pflegekraft": "Jan (Pflegefachkraft)",
+    "paragraphs": [
+      "Frau Schmidt wurde nach einer Schenkelhals-Fraktur und anschließender Reha nach Hause entlassen. Sie hat nun Pflegegrad 3 (ca. 60 Punkte in der MDK-Begutachtung). Jan führt die Erstanamnese nach dem Strukturmodell zur Entbürokratisierung durch. Er beginnt mit Element 1, der SIS, und erfasst im Feld B die Eigeneinschätzung der Patientin: 'Ich habe solche Angst, wieder zu fallen.'",
+      "Jan wendet die Braden-Skala an, um das Risiko für Folgeschäden durch die verminderte Mobilität einzuschätzen. In der Risikomatrix identifiziert er neben dem Sturzrisiko auch ein moderates Dekubitusrisiko. Er plant die Maßnahmen im individuellen Maßnahmenplan (Element 2), wobei er sich auf die Förderung der vorhandenen Ressourcen (Gesundheitsförderung) konzentriert, wie Frau Schmidts Motivation zur täglichen Gymnastik.",
+      "Die Prävention wird auf drei Ebenen umgesetzt: Als Primärprävention berät Jan zur Beseitigung von Teppichkanten (Verhältnisprävention). Als Sekundärprävention führt er regelmäßige Kraft-Balance-Tests durch. Die Tertiärprävention umfasst die konsequente Fortführung der physiotherapeutischen Übungen, um eine erneute Fraktur oder eine dauerhafte Versteifung des Gelenks zu vermeiden.",
+      "Jan dokumentiert im Berichteblatt (Element 3) nur noch Abweichungen vom Plan, um den Schreibaufwand im Sinne der Entbürokratisierung gering zu halten. Bei der ersten Evaluation (Element 4) nach zwei Wochen stellt er fest, dass Frau Schmidt durch das Training an Sicherheit gewonnen hat. Er passt den Plan an und integriert nun vermehrt Spaziergänge außerhalb der Wohnung, um auch die soziale Teilhabe wieder zu stärken."
+    ],
+    "arztbrief": {
+      "show": true,
+      "fields": [
+        {
+          "label": "Diagnose",
+          "value": "Z. n. Schenkelhals-Fraktur links, Osteoporose"
+        },
+        {
+          "label": "Pflegestatus",
+          "value": "Pflegegrad 3, eingeschränkte Mobilität, Sturzangst"
+        },
+        {
+          "label": "Medikation",
+          "value": "Analgetika bei Bedarf, Vitamin D-Präparat"
+        }
+      ]
+    },
+    "variables": {
+      "PATIENT": "Frau Schmidt",
+      "ERKRANKUNG": "Zustand nach Schenkelhals-Fraktur",
+      "PFLEGEKRAFT": "Jan"
+    }
+  },
+  {
+    "q_id": "m7_fall_ft_001",
+    "type": "freitext_box",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Beschreiben** Sie die korrekte Durchführung der kapillären Blutentnahme bei [PATIENT] durch [PFLEGEKRAFT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte je nach Vollständigkeit der Schritte (Vorbereitung, Punktion, Nachsorge).",
+    "data": {
+      "box_label": "Durchführung Kapilläre BE",
+      "correct_answer": "[PFLEGEKRAFT] lässt [PATIENT] zunächst die Hände waschen und desinfiziert die Punktionsstelle an der seitlichen Fingerbeere. Nach dem Auslösen der Lanzette wird der erste Blutstropfen zwingend abgewischt. Das Blut wird ohne Quetschen aufgefangen, die Einstichstelle komprimiert und die Maßnahme lückenlos dokumentiert.",
+      "keywords": ["Hände waschen", "seitliche Fingerbeere", "ersten Tropfen abwischen", "nicht quetschen", "Dokumentation"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_fall_nl_001",
+    "type": "nennen_liste",
+    "topic": "blutentnahme",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Nennen** Sie vier Fehlerquellen, die [PFLEGEKRAFT] bei der Blutzuckermessung bei [PATIENT] beachten muss.",
+    "list_label": "Fehlerquellen BZ-Messung",
+    "count": 4,
+    "correct_answers": [
+      "Hände nicht gewaschen (Kohlenhydratrückstände)",
+      "Erster Blutstropfen nicht abgewischt",
+      "Haut an der Punktionsstelle noch feucht",
+      "Gewebsquetschung beim Auffangen des Blutes"
+    ],
+    "all_valid_answers": [
+      "Fruchtrückstände",
+      "Zucker an den Händen",
+      "erster Tropfen",
+      "nasse Haut",
+      "Alkoholreste",
+      "Quetschen",
+      "Drücken",
+      "Gewebswasser"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genannter Fehlerquelle."
+  },
+  {
+    "q_id": "m7_fall_rf_001",
+    "type": "richtig_falsch",
+    "topic": "blutentnahme",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "statement": "[PFLEGEKRAFT] handelt korrekt, wenn sie bei [PATIENT] nach dem Einstich das Gewebe kräftig quetscht, um den Blutfluss zu fördern.",
+    "answer": "falsch",
+    "explanation": "Das Gewebe darf nicht gequetscht werden, da sonst Gewebswasser austritt, welches das Kapillarblut verdünnt und den Messwert verfälscht.",
+    "source_hint": "Handout_Kapilläre BE"
+  },
+  {
+    "q_id": "m7_fall_rf_002",
+    "type": "richtig_falsch",
+    "topic": "interaktion_beziehung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "statement": "[PFLEGEKRAFT] nutzt biografische Fragen zum Herkunftsland oder früheren Hobbys als 'Türöffner', um eine vertrauensvolle familiäre Ebene bei [PATIENT] zu schaffen.",
+    "answer": "richtig",
+    "explanation": "Der Einstieg über alltägliche oder biografische Themen hilft laut Material, die anfängliche Skepsis zu überwinden und eine professionelle Beziehung aufzubauen.",
+    "source_hint": "M 7.12_Skript"
+  },
+  {
+    "q_id": "m7_fall_ft_002",
+    "type": "freitext_box",
+    "topic": "blutentnahme",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Erläutern** Sie, warum [PFLEGEKRAFT] den ersten Blutstropfen bei [PATIENT] vor der Messung zwingend abwischen muss.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Begründung hinsichtlich der Messgenauigkeit.",
+    "data": {
+      "box_label": "Abwischen des ersten Tropfens",
+      "correct_answer": "Der erste Blutstropfen nach einer Punktion enthält oft einen hohen Anteil an Gewebsflüssigkeit und ggf. Rückstände von Desinfektionsmitteln. Um ein unverfälschtes Ergebnis der Glukosekonzentration im reinen Kapillarblut zu erhalten, muss dieser Tropfen verworfen werden.",
+      "keywords": ["Gewebsflüssigkeit", "Verdünnung", "Messwertverfälschung", "Desinfektionsmittelrückstände"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_fall_nl_002",
+    "type": "nennen_liste",
+    "topic": "diabetes_mellitus",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Nennen** Sie die drei Säulen der Basistherapie (Stufe 1), die [PATIENT] laut Stufenschema zunächst konsequent umsetzen sollte.",
+    "list_label": "Säulen der Basistherapie",
+    "count": 3,
+    "correct_answers": [
+      "Ernährungsumstellung (kalorienreduziert)",
+      "Steigerung der körperlichen Aktivität / Bewegung",
+      "Gewichtsreduktion (bei Adipositas)"
+    ],
+    "all_valid_answers": [
+      "Ernährung",
+      "Diät",
+      "Bewegung",
+      "Sport",
+      "Abnehmen",
+      "Gewicht senken",
+      "Schulung"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekter Säule."
+  },
+  {
+    "q_id": "m7_fall_tab_001",
+    "type": "tabelle_vergleich",
+    "topic": "diabetes_mellitus",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Vergleichen** Sie für [PATIENT] die Merkmale der konventionellen Therapie (CT) und der intensivierten Therapie (ICT).",
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt ausgefülltem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Kriterium", "Konventionelle Therapie (CT)", "Intensivierte Therapie (ICT)"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Flexibilität"},
+              {"type": "input", "correct_answer": "Gering (starrer Zeitplan)", "keywords": ["starr", "gering"]},
+              {"type": "input", "correct_answer": "Hoch (Basis-Bolus)", "keywords": ["hoch", "flexibel"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Insulingabe"},
+              {"type": "textarea", "correct_answer": "Meist 2x täglich Mischinsulin", "keywords": ["Mischinsulin", "2x"]},
+              {"type": "textarea", "correct_answer": "Depotinsulin plus mahlzeitenbezogener Bolus", "keywords": ["Basis", "Bolus", "Mahlzeit"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_fall_zu_001",
+    "type": "zuordnung",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Ordnen** Sie den Begriffen aus der Behandlung von [PATIENT] die korrekte fachliche Bedeutung zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "HbA1c-Wert",
+        "B": "Metformin",
+        "C": "ICT-Schema"
+      },
+      "statements": [
+        {
+          "text": "Bevorzugtes orales Antidiabetikum, das die Glukoseneubildung hemmt.",
+          "answer": "B"
+        },
+        {
+          "text": "Spiegelt das durchschnittliche Blutzuckerniveau der letzten 8-12 Wochen wider.",
+          "answer": "A"
+        },
+        {
+          "text": "Basis-Bolus-Konzept zur flexiblen Blutzuckersteuerung.",
+          "answer": "C"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_fall_def_001",
+    "type": "definition_plus_beispiele",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "instruction": "**Definieren** Sie den 'HbA1c-Wert' und **nennen** Sie zwei Gründe für seine klinische Bedeutung bei der Versorgung von [PATIENT].",
+    "points": 5,
+    "data": {
+      "definition_label": "Definition HbA1c",
+      "definition_correct": "HbA1c bezeichnet den Anteil des Hämoglobins, an den Glukose gebunden ist. Er gilt als 'Blutzuckergedächtnis' für einen Zeitraum von ca. 8 bis 12 Wochen.",
+      "definition_keywords": ["Hämoglobin", "Glukose gebunden", "8-12 Wochen", "Langzeitwert"],
+      "definition_points": 3,
+      "examples_label": "Klinische Bedeutung",
+      "examples_count": 2,
+      "correct_examples": [
+        "Beurteilung der langfristigen Stoffwechseleinstellung",
+        "Kontrolle der Therapieadhärenz (Erfolgskontrolle)"
+      ],
+      "all_valid_examples": [
+        "Therapiekontrolle",
+        "Blutzuckergedächtnis",
+        "Stoffwechsellage objektivieren"
+      ],
+      "points_per_example": 1
+    }
+  },
+  {
+    "q_id": "m7_fall_rf_003",
+    "type": "richtig_falsch",
+    "topic": "diabetes_mellitus",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_01"],
+    "statement": "Metformin ist für [PATIENT] das Mittel der Wahl, da es die Insulinempfindlichkeit verbessert und gleichzeitig die Glukoseneubildung in der Leber steigert.",
+    "answer": "falsch",
+    "explanation": "Metformin hemmt die Glukoseneubildung in der Leber, es steigert sie nicht.",
+    "source_hint": "Modul 7 Klausur"
+  },
+  {
+    "q_id": "m7_fall_ft_003",
+    "type": "freitext_box",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Beschreiben** Sie die Kriterien der Wundbeurteilung, die [PFLEGEKRAFT] bei [PATIENT] erheben und dokumentieren muss.",
+    "points": 5,
+    "scoring_info": "0-5 Punkte je nach Anzahl der korrekt beschriebenen Kriterien (Lokalisation, Grund, Rand, etc.).",
+    "data": {
+      "box_label": "Wundbeurteilung Wagner",
+      "correct_answer": "[PFLEGEKRAFT] muss die Lokalisation (medialer Knöchel), die Wundgröße und -tiefe sowie den Wundgrund (gelbliche Beläge) beurteilen. Zudem sind der Wundrand, die Umgebung (Rubor/Calor), der Geruch und das Exsudat (Menge/Farbe) wichtige Beobachtungskriterien für eine lückenlose Dokumentation.",
+      "keywords": ["Lokalisation", "Wundgrund", "Exsudat", "Wundumgebung", "Größe/Tiefe"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_fall_nl_003",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Nennen** Sie die fünf klassischen Infektionszeichen, auf die [PFLEGEKRAFT] die Wunde von [PATIENT] untersuchen muss (lateinisch und deutsch).",
+    "list_label": "Infektionszeichen",
+    "count": 5,
+    "correct_answers": [
+      "Calor (Überwärmung)",
+      "Rubor (Rötung)",
+      "Tumor (Schwellung)",
+      "Dolor (Schmerz)",
+      "Functio laesa (Funktionsverlust)"
+    ],
+    "all_valid_answers": [
+      "Calor", "Überwärmung", "Rubor", "Rötung", "Tumor", "Schwellung", "Dolor", "Schmerz", "Functio laesa", "Funktionsverlust"
+    ],
+    "points": 5,
+    "scoring_info": "1 Punkt pro korrektem Paar oder Begriff."
+  },
+  {
+    "q_id": "m7_fall_ft_004",
+    "type": "freitext_box",
+    "topic": "wundprodukte",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Begründen** Sie, warum [PFLEGEKRAFT] für die Wunde von [PATIENT] spezifisch einen Superabsorber als Sekundärverband gewählt hat.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Herleitung aus dem Wundzustand (Exsudationsmenge).",
+    "data": {
+      "box_label": "Begründung Superabsorber",
+      "correct_answer": "Die Wunde von [PATIENT] weist eine sehr starke Exsudation auf, die herkömmliche Verbände schnell durchfeuchten lässt. Ein Superabsorber besitzt eine besonders hohe und schnelle Saugleistung und bindet die Flüssigkeit sicher im Inneren, was das Mazerationsrisiko der Wundumgebung senkt.",
+      "keywords": ["starke Exsudation", "Saugkapazität", "Mazerationsschutz", "Flüssigkeitsbindung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_fall_rf_004",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "statement": "Die Wunde am Knöchel von [PATIENT] gilt fachlich als chronisch, da sie bereits seit drei Monaten (über 8 Wochen) besteht und eine Therapie der Grunderkrankung erfordert.",
+    "answer": "richtig",
+    "explanation": "Wunden, die nach 8 Wochen nicht abgeheilt sind oder ursachenbezogen (z. B. Ulcus cruris venosum) eine Therapie erfordern, gelten als chronisch.",
+    "source_hint": "M 7.10 handout"
+  },
+  {
+    "q_id": "m7_fall_nl_004",
+    "type": "nennen_liste",
+    "topic": "pflegeprozess",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Nennen** Sie die vier Elemente des Strukturmodells (SIS), die [PFLEGEKRAFT] für die Pflegedokumentation bei [PATIENT] anwenden muss.",
+    "list_label": "Elemente des Strukturmodells",
+    "count": 4,
+    "correct_answers": [
+      "Strukturierte Informationssammlung (SIS)",
+      "Individueller Maßnahmenplan",
+      "Berichteblatt",
+      "Evaluation"
+    ],
+    "all_valid_answers": [
+      "SIS", "Maßnahmenplan", "Berichteblatt", "Evaluation", "Strukturierte Informationssammlung"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrektem Element."
+  },
+  {
+    "q_id": "m7_fall_tab_002",
+    "type": "tabelle_3spalten",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Ordnen** Sie den Wundheilungsphasen die entsprechenden Merkmale zu, die [PFLEGEKRAFT] bei [PATIENT] beobachten könnte.",
+    "points": 6,
+    "scoring_info": "1 Punkt pro korrektem Feld.",
+    "data": {
+      "table": {
+        "headers": ["Heilungsphase", "Gewebe / Zustand", "Pflegerisches Ziel"],
+        "rows": [
+          {
+            "cells": [
+              {"type": "text", "text": "Reinigungsphase"},
+              {"type": "input", "correct_answer": "Beläge und hohe Exsudation", "keywords": ["Beläge", "Exsudat"]},
+              {"type": "textarea", "correct_answer": "Wundreinigung und Infektionsbekämpfung", "keywords": ["Reinigung", "Infektion"]}
+            ]
+          },
+          {
+            "cells": [
+              {"type": "text", "text": "Granulationsphase"},
+              {"type": "input", "correct_answer": "dunkelrot, gut durchblutet, gekörnt", "keywords": ["dunkelrot", "gekörnt"]},
+              {"type": "textarea", "correct_answer": "Förderung des Gewebeaufbaus / feuchtes Milieu", "keywords": ["Gewebeaufbau", "feucht"]}
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "q_id": "m7_fall_rf_005",
+    "type": "richtig_falsch",
+    "topic": "wundprodukte",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "statement": "[PFLEGEKRAFT] handelt fachgerecht, wenn sie den Superabsorber bei [PATIENT] passgenau zerschneidet, um ihn unter der Kompressionstherapie anzulegen.",
+    "answer": "falsch",
+    "explanation": "Superabsorber dürfen ausdrücklich nicht zerschnitten werden, da sonst absorbierende Partikel austreten können.",
+    "source_hint": "M 7.10 handout"
+  },
+  {
+    "q_id": "m7_fall_ft_005",
+    "type": "freitext_box",
+    "topic": "pflegeprozess",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Erklären** Sie den Zweck und den Ablauf der 'Eigeneinschätzung' im Rahmen der SIS-Erstellung für [PATIENT].",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Beschreibung des patientenzentrierten Ansatzes und der Leitfrage.",
+    "data": {
+      "box_label": "SIS Eigeneinschätzung",
+      "correct_answer": "Die Eigeneinschätzung steht am Beginn des SIS-Prozesses (Element 1) und rückt die Sichtweise von [PATIENT] ins Zentrum. [PFLEGEKRAFT] stellt die Leitfrage 'Was bewegt Sie im Augenblick?'. Ziel ist es, die individuellen Bedürfnisse und Wünsche von [PATIENT] direkt zu erfassen, bevor die fachliche Einschätzung der Pflegekraft erfolgt.",
+      "keywords": ["Was bewegt Sie", "Sichtweise des Klienten", "Element 1", "Wünsche", "patientenzentriert"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_fall_nl_005",
+    "type": "nennen_liste",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "instruction": "**Nennen** Sie vier pflegerische Beobachtungskriterien (außer Infektionszeichen), die [PFLEGEKRAFT] bei der Wunde von [PATIENT] erheben muss.",
+    "list_label": "Beobachtungskriterien Wunde",
+    "count": 4,
+    "correct_answers": [
+      "Wundgrund (Beläge, Granulation)",
+      "Exsudat (Menge, Farbe, Konsistenz)",
+      "Wundrand (Mazeration, intakt)",
+      "Wundgeruch"
+    ],
+    "all_valid_answers": [
+      "Grund", "Belag", "Nekrose", "Exsudat", "Flüssigkeit", "Rand", "Hautzustand", "Geruch", "Größe", "Tiefe"
+    ],
+    "points": 4,
+    "scoring_info": "1 Punkt pro korrekt genanntem Kriterium."
+  },
+  {
+    "q_id": "m7_fall_rf_006",
+    "type": "richtig_falsch",
+    "topic": "wundmanagement",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_02"],
+    "statement": "Die Wunddokumentation bei [PATIENT] ist eine persönlich zu erbringende Fachverantwortung von [PFLEGEKRAFT] und darf nicht an Assistenzkräfte delegiert werden.",
+    "answer": "richtig",
+    "explanation": "Die Wunddokumentation ist eine nicht delegierbare Fachaufgabe, die zeitnah und persönlich durchgeführt werden muss.",
+    "source_hint": "M 7.10 handout"
+  },
+  {
+    "q_id": "m7_fall_ft_006",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Erläutern** Sie die Auswirkungen der Tetraplegie auf die Organsysteme Atmung und Ausscheidung bei [PATIENT].",
+    "points": 4,
+    "scoring_info": "2 Punkte für Atmung (Atemmuskulatur), 2 Punkte für Ausscheidung (Blase/Darm).",
+    "data": {
+      "box_label": "Organsysteme Tetraplegie",
+      "correct_answer": "Durch die hohe Lähmung ist die Atemmuskulatur (Zwerchfell/Zwischenrippen) von [PATIENT] beeinträchtigt, was zu einer verminderten Lungenbelüftung führt. Im Bereich der Ausscheidung ist die Nervenverbindung zum Miktions- und Defäkationszentrum unterbrochen, weshalb Blase und Darm manuell oder mit Hilfsmitteln entleert werden müssen.",
+      "keywords": ["Atemmuskulatur", "Lungenbelüftung", "manuelle Entleerung", "Blasen-Darm-Lähmung", "Nervenunterbrechung"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_fall_nl_006",
+    "type": "nennen_liste",
+    "topic": "organisation_recht",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Nennen** Sie drei pflegerelevante Lebensbereiche (Module), die bei der anstehenden MDK-Begutachtung von [PATIENT] beurteilt werden.",
+    "list_label": "Begutachtungsmodule",
+    "count": 3,
+    "correct_answers": [
+      "Mobilität",
+      "Selbstversorgung",
+      "Kognitive und kommunikative Fähigkeiten"
+    ],
+    "all_valid_answers": [
+      "Mobilität", "Kognition", "Kommunikation", "Verhaltensweisen", "Selbstversorgung", "krankheitsbedingte Anforderungen", "Alltagsleben", "soziale Kontakte"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt benanntem Modul."
+  },
+  {
+    "q_id": "m7_fall_ft_007",
+    "type": "freitext_box",
+    "topic": "organisation_recht",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Begründen** Sie, warum [PATIENT] aufgrund seiner Lähmungssituation gemäß § 15 Abs. 4 SGB XI direkt dem Pflegegrad 5 zugeordnet werden könnte.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für den Bezug zur 'besonderen Bedarfskonstellation'.",
+    "data": {
+      "box_label": "Bedarfskonstellation PG 5",
+      "correct_answer": "Gemäß SGB XI liegt bei [PATIENT] eine 'besondere Bedarfskonstellation' vor, wenn eine Gebrauchsunfähigkeit beider Arme UND beider Beine besteht. Da [PATIENT] eine komplette Tetraplegie mit Lähmung aller Extremitäten aufweist, kann er unabhängig von der erreichten Punktzahl direkt in den Pflegegrad 5 eingestuft werden.",
+      "keywords": ["§ 15 Abs. 4 SGB XI", "besondere Bedarfskonstellation", "Gebrauchsunfähigkeit", "alle vier Extremitäten", "Pflegegrad 5"],
+      "min_rows": 5
+    }
+  },
+  {
+    "q_id": "m7_fall_rf_007",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 1,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "statement": "Da die Rückenmarksschädigung bei [PATIENT] laut Arztbrief sub C5 (Halswirbelsäule) liegt, ist die Einstufung als Tetraplegie fachlich korrekt.",
+    "answer": "richtig",
+    "explanation": "Schädigungen im Bereich der Halswirbelsäule (oberhalb Th1) führen zu einer Lähmung aller vier Extremitäten (Tetraplegie).",
+    "source_hint": "BZPG PFP Modul 7.5 (1)"
+  },
+  {
+    "q_id": "m7_fall_nl_007",
+    "type": "nennen_liste",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Nennen** Sie drei Aufgaben, die eine 24-Stunden-Betreuungskraft im Haushalt von [PATIENT] übernehmen darf.",
+    "list_label": "Aufgaben Betreuungskraft",
+    "count": 3,
+    "correct_answers": [
+      "Hilfe bei der Haushaltsführung",
+      "Begleitung bei Freizeitaktivitäten",
+      "Unterstützung bei der Alltagsgestaltung (Aktivierung)"
+    ],
+    "all_valid_answers": [
+      "Haushalt", "Kochen", "Einkaufen", "Spaziergänge", "Gesellschaft", "Unterhaltung", "einfache Hilfestellungen"
+    ],
+    "points": 3,
+    "scoring_info": "1 Punkt pro korrekt genanntem Aufgabenbereich."
+  },
+  {
+    "q_id": "m7_fall_rf_008",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "statement": "Der Fachbegriff 'Parese' bezeichnet bei [PATIENT] den vollständigen Funktionsausfall der Skelettmuskulatur unterhalb der Schädigungsstelle.",
+    "answer": "falsch",
+    "explanation": "Parese bezeichnet einen Teilausfall; der vollständige Funktionsausfall wird als Plegie bezeichnet.",
+    "source_hint": "BZPG PFP Modul 7.5 (1)"
+  },
+  {
+    "q_id": "m7_fall_ft_008",
+    "type": "freitext_box",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Beschreiben** Sie eine konkrete Maßnahme der Pneumonieprophylaxe (Primärprävention), die [PFLEGEKRAFT] für [PATIENT] planen muss.",
+    "points": 3,
+    "scoring_info": "0-3 Punkte für die Nennung und kurze Beschreibung der Maßnahme.",
+    "data": {
+      "box_label": "Pneumonieprophylaxe Fischer",
+      "correct_answer": "Aufgrund der eingeschränkten Atemfunktion durch die Tetraplegie muss [PFLEGEKRAFT] Maßnahmen zur Belüftungsförderung planen, wie z.B. atemunterstützende Lagerungen (V-A-T-I) oder Atemübungen, um das Risiko einer Lungenentzündung zu minimieren.",
+      "keywords": ["Primärprävention", "Belüftungsförderung", "Lagerung", "Atemübungen", "Risikominimierung"],
+      "min_rows": 4
+    }
+  },
+  {
+    "q_id": "m7_fall_zu_002",
+    "type": "zuordnung",
+    "topic": "praevention_gesundheit",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Ordnen** Sie den pflegerischen Handlungen bei [PATIENT] die korrekte Präventionsstufe zu.",
+    "points": 3,
+    "data": {
+      "legend": {
+        "A": "Primärprävention",
+        "B": "Sekundärprävention",
+        "C": "Tertiärprävention"
+      },
+      "statements": [
+        {
+          "text": "Tägliche Hautkontrolle zur Früherkennung eines Dekubitus.",
+          "answer": "B"
+        },
+        {
+          "text": "Mobilisation zur Vermeidung von Gelenkversteifungen und Folgeschäden.",
+          "answer": "C"
+        },
+        {
+          "text": "Durchführung der Pneumonieprophylaxe zur Vermeidung einer Infektion.",
+          "answer": "A"
+        }
+      ]
+    }
+  },
+  {
+    "q_id": "m7_fall_rf_009",
+    "type": "richtig_falsch",
+    "topic": "querschnittlaehmung",
+    "difficulty": 2,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "statement": "[PFLEGEKRAFT] muss beim Transfer von [PATIENT] vom Bett in den Rollstuhl zwingend auf eine rückenschonende Arbeitsweise achten, um eigene gesundheitliche Risiken zu vermeiden.",
+    "answer": "richtig",
+    "explanation": "Das Material betont die Anwendung rückenschonender Arbeitsweisen bei der Mobilisation von querschnittgelähmten Menschen.",
+    "source_hint": "BZPG PFP Modul 7.5 (1)"
+  },
+  {
+    "q_id": "m7_fall_ft_009",
+    "type": "freitext_box",
+    "topic": "querschnittlaehmung",
+    "difficulty": 3,
+    "fallabhaengig": true,
+    "compatible_falls": ["m7_fall_03"],
+    "instruction": "**Erklären** Sie, wie das biopsychosoziale Modell der ICF die pflegerische Sichtweise auf die Gesundheit von [PATIENT] erweitert.",
+    "points": 4,
+    "scoring_info": "0-4 Punkte für die Einbeziehung von Teilhabe und Umweltfaktoren.",
+    "data": {
+      "box_label": "ICF-Modell Fischer",
+      "correct_answer": "Die ICF betrachtet nicht nur die Diagnose Tetraplegie, sondern analysiert die Auswirkungen auf die Teilhabe (Partizipation) am sozialen Leben. Es werden Umweltfaktoren (z. B. der barrierefreie Umbau) und persönliche Ressourcen von [PATIENT] einbezogen, um seine funktionale Gesundheit und subjektive Lebensqualität zu fördern.",
+      "keywords": ["Teilhabe", "Umweltfaktoren", "funktionale Gesundheit", "Partizipation", "Ressourcenfokus"],
+      "min_rows": 5
+    }
+  }
+]
+
