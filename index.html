@@ -31,18 +31,174 @@
         @keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.enter{animation:enter .4s ease both}
         .pin-box{width:3.5rem;height:3.5rem;text-align:center;font-size:1.5rem;font-weight:900;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.1);border-radius:1rem;color:white;outline:none;transition:all .2s}
         .pin-box:focus{border-color:#8b5cf6;background:rgba(139,92,246,.08)}
-        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}.pulse{animation:pulse 1.5s ease infinite}
+        @keyframes modalIn{from{opacity:0;transform:scale(.92) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+        .modal-anim{animation:modalIn .5s cubic-bezier(.16,1,.3,1) forwards}
+        @keyframes sparkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+        .sparkle{animation:sparkle 2s ease-in-out infinite}
+        @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        .gradient-bg{background:linear-gradient(135deg,#6366f1,#8b5cf6,#6366f1,#3b82f6);background-size:300% 300%;animation:gradient-shift 6s ease infinite}
     </style>
 </head>
 <body class="min-h-screen text-slate-100 relative">
 <div class="page-bg"></div>
 
 <!-- ═══════════════════════════════════════ -->
+<!--  WELCOME POPUP (one-time)              -->
+<!-- ═══════════════════════════════════════ -->
+<div id="welcome-popup" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.7);backdrop-filter:blur(8px)">
+    <div class="w-full max-w-md modal-anim">
+        <!-- Header with gradient -->
+        <div class="gradient-bg rounded-t-3xl p-8 text-center relative overflow-hidden">
+            <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px"></div>
+            <div class="relative z-10">
+                <div class="text-5xl mb-3 sparkle">🎓</div>
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white">SLM System ist bereit!</h2>
+                <p class="text-indigo-200 text-sm font-medium mt-2">Dein komplettes Examenstraining</p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="bg-[#0c1020] rounded-b-3xl p-6 sm:p-8 space-y-4 border border-white/5 border-t-0">
+            <!-- Feature 1 -->
+            <div class="flex items-start gap-3">
+                <div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-book-open text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">9 Module komplett verfügbar</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Von Kommunikation bis Neuro-Rehabilitation — alle Lerninhalte, Zusammenfassungen und Fragenbanken.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex items-start gap-3">
+                <div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-brain text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">6 Trainingsmethoden in der Arena</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Learn & Quiz, Recall, Absorb, Sprint, Connect und Weakness Destroyer — mit XP-System und Mastery-Rängen.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex items-start gap-3">
+                <div class="w-9 h-9 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-pen-fancy text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">Stylus & S-Pen Integration</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Schreibe direkt in die Klausur — mit Druckerkennung, Farbwahl und Undo. Wie auf echtem Papier.</p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="flex items-start gap-3">
+                <div class="w-9 h-9 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-wand-magic-sparkles text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">SLM Studio — KI-Präsentationen</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Erstelle Präsentationen mit Sprecherskript per KI. Perfekt für Referate und Unterricht.</p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="flex items-start gap-3">
+                <div class="w-9 h-9 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-cloud text-sm"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">Cloud-Login mit Lern-Code</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Dein 4-stelliger Code synchronisiert alles. Handy, Tablet, PC — dein Fortschritt ist überall dabei.</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <button onclick="closeWelcome()" class="w-full gradient-bg text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm mt-4 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20">
+                <i class="fas fa-rocket mr-2"></i>System starten
+            </button>
+
+            <p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v9.0 — Vollständig einsatzbereit</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--  ZWISCHENPRÜFUNG MODAL                 -->
+<!-- ═══════════════════════════════════════ -->
+<div id="zp-modal" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.6);backdrop-filter:blur(6px)">
+    <div class="w-full max-w-md modal-anim">
+        <div class="glass rounded-3xl p-6 sm:p-8 border border-white/10">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-extrabold">Zwischenprüfung</h2>
+                <button onclick="closeZP()" class="text-slate-500 hover:text-white transition-colors"><i class="fas fa-times"></i></button>
+            </div>
+
+            <p class="text-sm text-slate-400 mb-6 leading-relaxed">Die Zwischenprüfung besteht aus zwei Teilen. Trainiere in der Arena und schließe Klausuren ab, um freigeschaltet zu werden.</p>
+
+            <!-- Schriftlich -->
+            <div id="zp-schriftlich" class="glass rounded-2xl p-5 mb-3 relative overflow-hidden">
+                <div id="zp-s-lock" class="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-10 rounded-2xl">
+                    <div class="text-center">
+                        <i class="fas fa-lock text-2xl text-slate-400 mb-2"></i>
+                        <p class="text-xs font-bold text-slate-400">Mind. 80% Bereitschaft</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-file-alt text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white">Schriftlicher Teil</h3>
+                        <p class="text-[11px] text-slate-500">Kombinierte Klausur aus allen Modulen</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mündlich -->
+            <div id="zp-muendlich" class="glass rounded-2xl p-5 mb-5 relative overflow-hidden">
+                <div id="zp-m-lock" class="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-10 rounded-2xl">
+                    <div class="text-center">
+                        <i class="fas fa-lock text-2xl text-slate-400 mb-2"></i>
+                        <p class="text-xs font-bold text-slate-400">Mind. 80% & Arena-Training</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-microphone text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white">Mündlicher Teil</h3>
+                        <p class="text-[11px] text-slate-500">KI-Prüfer stellt Fragen — du antwortest</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress hint -->
+            <div class="bg-indigo-500/8 rounded-xl p-4 border border-indigo-500/15">
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-info-circle text-indigo-400 mt-0.5"></i>
+                    <div>
+                        <p class="text-xs text-indigo-300 font-bold">So schaltest du frei:</p>
+                        <ul class="text-[11px] text-slate-400 mt-1 space-y-0.5">
+                            <li>• Klausuren in mindestens 7 von 9 Modulen schreiben</li>
+                            <li>• Durchschnittlich 70%+ in den Klausuren</li>
+                            <li>• Mindestens 3.000 Arena XP sammeln</li>
+                            <li>• Arena-Training in mindestens 5 Modulen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
 <!--  LOGIN SCREEN                          -->
 <!-- ═══════════════════════════════════════ -->
 <div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center p-5" style="background:#060910">
     <div class="w-full max-w-sm enter">
-        <!-- Logo -->
         <div class="text-center mb-8">
             <div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-500/20">
                 <i class="fas fa-graduation-cap text-white text-xl"></i>
@@ -51,45 +207,34 @@
             <p class="text-slate-500 text-sm mt-1">Gib deinen Lern-Code ein</p>
         </div>
 
-        <!-- Login Form -->
         <div id="login-form" class="glass rounded-3xl p-7 sm:p-8">
-            <div class="flex justify-center gap-3 mb-6" id="pin-area">
+            <div class="flex justify-center gap-3 mb-6">
                 <input type="tel" maxlength="1" class="pin-box" id="p1" inputmode="numeric" oninput="pinNav(1)" onkeydown="pinKey(event,1)" autofocus>
                 <input type="tel" maxlength="1" class="pin-box" id="p2" inputmode="numeric" oninput="pinNav(2)" onkeydown="pinKey(event,2)">
                 <input type="tel" maxlength="1" class="pin-box" id="p3" inputmode="numeric" oninput="pinNav(3)" onkeydown="pinKey(event,3)">
                 <input type="tel" maxlength="1" class="pin-box" id="p4" inputmode="numeric" oninput="pinNav(4)" onkeydown="pinKey(event,4)">
             </div>
-
             <div id="login-msg" class="hidden text-center text-xs font-bold mb-4 px-2"></div>
-
             <button onclick="doLogin()" id="btn-login" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl font-bold text-sm transition-all mb-3 active:scale-95">
                 <i class="fas fa-sign-in-alt mr-2"></i>Einloggen
             </button>
-
-            <div class="relative my-4">
-                <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div>
-                <div class="relative flex justify-center"><span class="bg-[#0d1225] px-3 text-[10px] text-slate-600 font-bold uppercase tracking-widest">oder</span></div>
-            </div>
-
+            <div class="relative my-4"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div><div class="relative flex justify-center"><span class="bg-[#0d1225] px-3 text-[10px] text-slate-600 font-bold uppercase tracking-widest">oder</span></div></div>
             <button onclick="doRegister()" id="btn-register" class="w-full glass text-slate-400 hover:text-white hover:border-white/10 py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
                 <i class="fas fa-user-plus mr-2"></i>Neuen Code erstellen
             </button>
         </div>
 
-        <!-- New PIN Display (shown after registration) -->
         <div id="pin-display" class="hidden glass rounded-3xl p-7 sm:p-8 text-center">
             <div class="text-4xl mb-3">🎉</div>
             <h3 class="text-lg font-extrabold mb-1">Dein neuer Lern-Code</h3>
-            <p class="text-xs text-slate-500 mb-5">Merke dir diesen Code — er synchronisiert alles</p>
+            <p class="text-xs text-slate-500 mb-5">Merke dir diesen Code</p>
             <div class="flex justify-center gap-3 mb-6">
                 <div class="w-14 h-14 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black" id="n1"></div>
                 <div class="w-14 h-14 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black" id="n2"></div>
                 <div class="w-14 h-14 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black" id="n3"></div>
                 <div class="w-14 h-14 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black" id="n4"></div>
             </div>
-            <div class="glass rounded-xl p-3 mb-5">
-                <p class="text-[11px] text-slate-400 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Diesen Code kannst du auf jedem Gerät eingeben um deinen Fortschritt zu laden.</p>
-            </div>
+            <div class="glass rounded-xl p-3 mb-5"><p class="text-[11px] text-slate-400 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Gleicher Code auf jedem Gerät = gleicher Fortschritt.</p></div>
             <button onclick="enterDashboard()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
                 <i class="fas fa-rocket mr-2"></i>Los geht's
             </button>
@@ -102,39 +247,34 @@
 <!-- ═══════════════════════════════════════ -->
 <div id="dashboard" class="hidden relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-12 pb-24">
 
-    <!-- Header -->
     <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
         <div>
             <div class="flex items-center gap-3 mb-4">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                    <i class="fas fa-graduation-cap text-white text-sm"></i>
-                </div>
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
                 <span class="font-black text-2xl tracking-tighter text-white">SLM</span>
             </div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Lern-Management-System</h1>
-            <p class="text-slate-400 mt-2 font-medium flex items-center gap-2">
-                <i class="fas fa-graduation-cap text-indigo-400"></i>
-                Examenstraining für das Staatsexamen 2026
-            </p>
+            <p class="text-slate-400 mt-2 font-medium flex items-center gap-2"><i class="fas fa-graduation-cap text-indigo-400"></i>Examenstraining für das Staatsexamen 2026</p>
         </div>
         <div class="flex items-center gap-2">
             <div class="glass rounded-xl px-4 py-2.5 flex items-center gap-2">
                 <i class="fas fa-key text-violet-400 text-xs"></i>
                 <span id="show-pin" class="text-sm font-extrabold text-violet-400 t-num tracking-widest"></span>
             </div>
-            <button onclick="doLogout()" class="glass rounded-xl px-3 py-2.5 text-slate-500 hover:text-red-400 transition-colors" title="Abmelden">
-                <i class="fas fa-sign-out-alt text-sm"></i>
-            </button>
+            <button onclick="doLogout()" class="glass rounded-xl px-3 py-2.5 text-slate-500 hover:text-red-400 transition-colors" title="Abmelden"><i class="fas fa-sign-out-alt text-sm"></i></button>
         </div>
     </header>
 
-    <!-- Zwischenprüfung Readiness -->
+    <!-- Zwischenprüfung (tappable) -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        <div class="lg:col-span-2 glass rounded-3xl p-8 sm:p-10 relative overflow-hidden anim" style="animation-delay:.1s">
+        <div onclick="openZP()" class="lg:col-span-2 glass rounded-3xl p-8 sm:p-10 relative overflow-hidden anim cursor-pointer hover:border-white/10 transition-all group" style="animation-delay:.1s">
             <div class="absolute -top-20 -right-20 w-60 h-60 bg-indigo-500 rounded-full blur-[80px] opacity-[.04]"></div>
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6 gap-4 relative z-10">
                 <div>
-                    <h2 class="text-white font-black text-xl sm:text-2xl uppercase tracking-tight">Zwischenprüfung</h2>
+                    <div class="flex items-center gap-2">
+                        <h2 class="text-white font-black text-xl sm:text-2xl uppercase tracking-tight">Zwischenprüfung</h2>
+                        <i class="fas fa-chevron-right text-slate-600 group-hover:text-indigo-400 transition-colors text-sm"></i>
+                    </div>
                     <p id="ready-text" class="text-slate-500 text-sm font-medium mt-1"></p>
                 </div>
                 <div class="text-right">
@@ -148,73 +288,36 @@
         </div>
 
         <div class="grid grid-cols-2 gap-3 anim" style="animation-delay:.14s">
-            <div class="glass rounded-2xl p-5 text-center">
-                <div id="s-xp" class="text-2xl font-extrabold text-violet-400 t-num">0</div>
-                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Arena XP</div>
-            </div>
-            <div class="glass rounded-2xl p-5 text-center">
-                <div class="flex items-center justify-center gap-1">
-                    <span class="text-lg">🔥</span>
-                    <span id="s-streak" class="text-2xl font-extrabold text-orange-400 t-num">0</span>
-                </div>
-                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Streak</div>
-            </div>
-            <div class="glass rounded-2xl p-5 text-center">
-                <div id="s-level" class="text-2xl font-extrabold text-indigo-400 t-num">1</div>
-                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Level</div>
-            </div>
-            <div class="glass rounded-2xl p-5 text-center">
-                <div id="s-grade" class="text-2xl font-extrabold text-slate-600 t-num">—</div>
-                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Beste Note</div>
-            </div>
+            <div class="glass rounded-2xl p-5 text-center"><div id="s-xp" class="text-2xl font-extrabold text-violet-400 t-num">0</div><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Arena XP</div></div>
+            <div class="glass rounded-2xl p-5 text-center"><div class="flex items-center justify-center gap-1"><span class="text-lg">🔥</span><span id="s-streak" class="text-2xl font-extrabold text-orange-400 t-num">0</span></div><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Streak</div></div>
+            <div class="glass rounded-2xl p-5 text-center"><div id="s-level" class="text-2xl font-extrabold text-indigo-400 t-num">1</div><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Level</div></div>
+            <div class="glass rounded-2xl p-5 text-center"><div id="s-grade" class="text-2xl font-extrabold text-slate-600 t-num">—</div><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-1">Beste Note</div></div>
         </div>
     </div>
 
     <!-- Tools -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 anim" style="animation-delay:.18s">
-        <!-- Arena -->
         <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.02] transition-all arena-glow">
             <div class="arena-card-bg h-full w-full rounded-[calc(1.5rem-2px)] p-7 flex flex-col justify-between overflow-hidden relative">
-                <div class="flex justify-between items-start z-10">
-                    <div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/30 float-anim"><i class="fas fa-brain text-white text-xl"></i></div>
-                    <span class="shimmer-badge text-white text-[8px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-widest">Arena</span>
-                </div>
-                <div class="z-10 mt-5">
-                    <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1">SLM Arena</h3>
-                    <p class="text-slate-400 text-xs font-medium leading-relaxed mb-3">Learn & Quiz • Recall • Connect • Sprint</p>
-                    <div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div>
-                </div>
+                <div class="flex justify-between items-start z-10"><div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/30 float-anim"><i class="fas fa-brain text-white text-xl"></i></div><span class="shimmer-badge text-white text-[8px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-widest">Arena</span></div>
+                <div class="z-10 mt-5"><h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1">SLM Arena</h3><p class="text-slate-400 text-xs font-medium leading-relaxed mb-3">Learn & Quiz • Recall • Connect • Sprint</p><div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div></div>
             </div>
         </a>
-        <!-- Klausur -->
         <a href="exam-simulator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer border-orange-500/10" style="--accent:#f97316">
             <div class="mod-glow" style="background:#f97316"></div>
-            <div class="flex justify-between items-start mb-5 relative z-10">
-                <div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div>
-                <div class="text-right" id="sim-note"><span class="font-black text-slate-600 text-lg">—</span></div>
-            </div>
-            <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">Klausur-Simulator</h3>
-            <p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">90 Min • Fallbeispiel • Bewertung</p>
-            <div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Starten</span><i class="fas fa-arrow-right text-[8px]"></i></div>
+            <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div><div class="text-right" id="sim-note"><span class="font-black text-slate-600 text-lg">—</span></div></div>
+            <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">Klausur-Simulator</h3><p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">90 Min • Fallbeispiel • Bewertung</p><div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Starten</span><i class="fas fa-arrow-right text-[8px]"></i></div>
         </a>
-        <!-- Studio -->
         <a href="creator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer" style="--accent:#6366f1">
             <div class="mod-glow" style="background:#6366f1"></div>
-            <div class="flex justify-between items-start mb-5 relative z-10">
-                <div class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-wand-magic-sparkles text-xl"></i></div>
-                <span class="text-[9px] font-black text-indigo-400 uppercase tracking-[0.3em] border border-indigo-400/30 px-3 py-1 rounded-full">Pro</span>
-            </div>
-            <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">SLM Studio</h3>
-            <p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">KI-Creator für Präsentationen</p>
-            <div class="flex items-center gap-2 text-indigo-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div>
+            <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-wand-magic-sparkles text-xl"></i></div><span class="text-[9px] font-black text-indigo-400 uppercase tracking-[0.3em] border border-indigo-400/30 px-3 py-1 rounded-full">Pro</span></div>
+            <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">SLM Studio</h3><p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">KI-Präsentationen mit Skript</p><div class="flex items-center gap-2 text-indigo-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div>
         </a>
     </div>
 
-    <!-- Modules -->
     <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4 pl-1 anim" style="animation-delay:.22s">Alle Module</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 anim" style="animation-delay:.24s" id="module-grid"></div>
 
-    <!-- Footer -->
     <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
             <span>SLM System • A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -223,13 +326,9 @@
     </footer>
 </div>
 
-<!-- ═══════════════════════════════════════ -->
-<!--  SCRIPTS                               -->
-<!-- ═══════════════════════════════════════ -->
 <script src="js/cloud-sync.js"></script>
 <script>
-// ═══ MODULE DATA ═══
-const MODULES = [
+const MODULES=[
     {id:1,name:'Kommunikation & Biografie',icon:'fa-book-open',color:'#6366f1',href:'module.html'},
     {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#6366f1',href:'module2.html'},
     {id:3,name:'Krankheitslehre',icon:'fa-viruses',color:'#6366f1',href:'module3.html'},
@@ -241,183 +340,130 @@ const MODULES = [
     {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
 ];
 
-// ═══ PIN INPUT LOGIC ═══
-function pinNav(n) {
-    const el = document.getElementById('p'+n);
-    if (el.value.length >= 1) {
-        el.value = el.value.slice(-1); // only keep last digit
-        if (n < 4) document.getElementById('p'+(n+1)).focus();
-        if (n === 4) doLogin(); // auto-submit on last digit
+let readinessScore=0;
+
+// ═══ WELCOME POPUP ═══
+function showWelcome(){
+    if(!localStorage.getItem('slm_welcome_v9')){
+        document.getElementById('welcome-popup').classList.remove('hidden');
     }
 }
-
-function pinKey(e, n) {
-    if (e.key === 'Backspace' && n > 1 && !document.getElementById('p'+n).value) {
-        document.getElementById('p'+(n-1)).focus();
-    }
+function closeWelcome(){
+    const el=document.getElementById('welcome-popup');
+    el.style.transition='opacity .3s ease';
+    el.style.opacity='0';
+    setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1'},300);
+    localStorage.setItem('slm_welcome_v9','true');
 }
 
-function getPin() {
-    return [1,2,3,4].map(n => document.getElementById('p'+n).value).join('');
+// ═══ ZWISCHENPRÜFUNG MODAL ═══
+function openZP(){document.getElementById('zp-modal').classList.remove('hidden');updateZPLocks()}
+function closeZP(){document.getElementById('zp-modal').classList.add('hidden')}
+function updateZPLocks(){
+    const ready=readinessScore>=80;
+    const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
+    const hasTrained=Object.keys(mastery).length>=5;
+    document.getElementById('zp-s-lock').classList.toggle('hidden',ready);
+    document.getElementById('zp-m-lock').classList.toggle('hidden',ready&&hasTrained);
 }
 
-function showMsg(text, isError) {
-    const el = document.getElementById('login-msg');
-    el.textContent = text;
-    el.className = `text-center text-xs font-bold mb-4 px-2 ${isError ? 'text-red-400' : 'text-violet-400'}`;
-    el.classList.remove('hidden');
-}
+// ═══ PIN INPUT ═══
+function pinNav(n){const el=document.getElementById('p'+n);if(el.value.length>=1){el.value=el.value.slice(-1);if(n<4)document.getElementById('p'+(n+1)).focus();if(n===4)doLogin()}}
+function pinKey(e,n){if(e.key==='Backspace'&&n>1&&!document.getElementById('p'+n).value)document.getElementById('p'+(n-1)).focus()}
+function getPin(){return[1,2,3,4].map(n=>document.getElementById('p'+n).value).join('')}
+function showMsg(t,err){const el=document.getElementById('login-msg');el.textContent=t;el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;el.classList.remove('hidden')}
+function setLoading(on){document.getElementById('btn-login').disabled=on;document.getElementById('btn-register').disabled=on;document.getElementById('btn-login').innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen'}
 
-function setLoading(on) {
-    document.getElementById('btn-login').disabled = on;
-    document.getElementById('btn-register').disabled = on;
-    if (on) {
-        document.getElementById('btn-login').innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Laden...';
-    } else {
-        document.getElementById('btn-login').innerHTML = '<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
-    }
+// ═══ AUTH ═══
+async function doLogin(){
+    const pin=getPin();if(pin.length!==4){showMsg('Bitte 4 Ziffern',true);return}
+    document.getElementById('login-msg').classList.add('hidden');setLoading(true);
+    try{await SLMCloud.login(pin);enterDashboard()}
+    catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus()}
 }
-
-// ═══ AUTH ACTIONS ═══
-async function doLogin() {
-    const pin = getPin();
-    if (pin.length !== 4) { showMsg('Bitte 4 Ziffern eingeben', true); return; }
-    document.getElementById('login-msg').classList.add('hidden');
-    setLoading(true);
-    try {
-        await SLMCloud.login(pin);
-        enterDashboard();
-    } catch(e) {
-        showMsg('Code nicht gefunden. Überprüfe deine Eingabe.', true);
-        setLoading(false);
-        // Clear inputs
-        [1,2,3,4].forEach(n => document.getElementById('p'+n).value = '');
-        document.getElementById('p1').focus();
-    }
+async function doRegister(){
+    document.getElementById('login-msg').classList.add('hidden');setLoading(true);
+    try{const pin=await SLMCloud.register();document.getElementById('login-form').classList.add('hidden');document.getElementById('pin-display').classList.remove('hidden');pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d})}
+    catch(e){showMsg('Fehler: '+e.message,true);setLoading(false)}
 }
+function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload()}
 
-async function doRegister() {
-    document.getElementById('login-msg').classList.add('hidden');
-    setLoading(true);
-    try {
-        const pin = await SLMCloud.register();
-        // Show the new PIN
-        document.getElementById('login-form').classList.add('hidden');
-        document.getElementById('pin-display').classList.remove('hidden');
-        pin.split('').forEach((d, i) => {
-            document.getElementById('n'+(i+1)).textContent = d;
-        });
-    } catch(e) {
-        showMsg('Fehler: ' + e.message, true);
-        setLoading(false);
-    }
-}
-
-function doLogout() {
-    if (!confirm('Abmelden? Dein Code bleibt gespeichert.')) return;
-    SLMCloud.logout();
-    location.reload();
-}
-
-function enterDashboard() {
+function enterDashboard(){
     document.getElementById('login-screen').classList.add('hidden');
     document.getElementById('dashboard').classList.remove('hidden');
-    document.getElementById('show-pin').textContent = SLMCloud.pin;
-    renderModules();
-    loadStats();
+    document.getElementById('show-pin').textContent=SLMCloud.pin;
+    renderModules();loadStats();
+    setTimeout(showWelcome,500);
 }
 
 // ═══ INIT ═══
-document.addEventListener('DOMContentLoaded', async () => {
-    const ok = await SLMCloud.autoLogin();
-    if (ok) enterDashboard();
+document.addEventListener('DOMContentLoaded',async()=>{
+    const ok=await SLMCloud.autoLogin();
+    if(ok)enterDashboard();
 });
 
-// ═══ RENDER MODULES ═══
-function renderModules() {
-    const grid = document.getElementById('module-grid');
-    const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
-
-    grid.innerHTML = MODULES.map(m => {
-        const mH = history.filter(h => h.module === m.id);
-        const best = mH.length ? mH.reduce((a,b) => a.percentage > b.percentage ? a : b) : null;
-        const pct = best ? best.percentage : 0;
-        const chip = best ? `<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>` : '';
-
-        return `
-        <div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
+// ═══ MODULES ═══
+function renderModules(){
+    const grid=document.getElementById('module-grid');
+    const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
+    grid.innerHTML=MODULES.map(m=>{
+        const mH=history.filter(h=>h.module===m.id);const best=mH.length?mH.reduce((a,b)=>a.percentage>b.percentage?a:b):null;const pct=best?best.percentage:0;
+        const chip=best?`<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>`:'';
+        return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
             <div class="mod-glow" style="background:${m.color}"></div>
-            <div class="flex justify-between items-start mb-6 relative z-10">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30">
-                    <i class="fas ${m.icon} text-white text-2xl"></i>
-                </div>
-                <span class="font-black text-slate-600 text-xl t-num">${pct}%</span>
-            </div>
+            <div class="flex justify-between items-start mb-6 relative z-10"><div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30"><i class="fas ${m.icon} text-white text-2xl"></i></div><span class="font-black text-slate-600 text-xl t-num">${pct}%</span></div>
             <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul ${m.id}</h3>
             <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">${m.name}</p>
             <div class="flex items-center gap-2 mb-4 relative z-10">${chip}</div>
-            <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                <div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div>
-            </div>
-        </div>`;
-    }).join('');
+            <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10"><div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div></div>
+        </div>`}).join('');
 }
 
-// ═══ STATS + ZWISCHENPRÜFUNG ═══
-function loadStats() {
-    const xp = parseInt(localStorage.getItem('arena_xp') || '0');
-    const level = Math.floor(xp / 500) + 1;
-    const streak = parseInt(localStorage.getItem('arena_ds') || localStorage.getItem('arena_streak') || '0');
+// ═══ STATS ═══
+function loadStats(){
+    const xp=parseInt(localStorage.getItem('arena_xp')||'0');
+    const level=Math.floor(xp/500)+1;
+    const streak=parseInt(localStorage.getItem('arena_ds')||localStorage.getItem('arena_streak')||'0');
+    document.getElementById('s-xp').textContent=xp.toLocaleString('de-DE');
+    document.getElementById('s-level').textContent=level;
+    document.getElementById('s-streak').textContent=streak;
 
-    document.getElementById('s-xp').textContent = xp.toLocaleString('de-DE');
-    document.getElementById('s-level').textContent = level;
-    document.getElementById('s-streak').textContent = streak;
-
-    const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
-
-    // Best grade
-    if (history.length) {
-        const best = history.reduce((a,b) => parseFloat(a.note) < parseFloat(b.note) ? a : b);
-        const c = parseFloat(best.note) <= 2 ? '#34d399' : parseFloat(best.note) <= 3.3 ? '#fbbf24' : '#f87171';
-        document.getElementById('s-grade').textContent = best.note;
-        document.getElementById('s-grade').style.color = c;
-
-        const last = history[history.length - 1];
-        const nc = parseFloat(last.note) <= 2 ? 'text-green-400' : parseFloat(last.note) <= 3.3 ? 'text-yellow-400' : 'text-red-400';
-        document.getElementById('sim-note').innerHTML = `<span class="font-black ${nc} text-lg">${last.note}</span><span class="block text-[9px] text-slate-500 font-bold">Letzte</span>`;
+    const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
+    if(history.length){
+        const best=history.reduce((a,b)=>parseFloat(a.note)<parseFloat(b.note)?a:b);
+        const c=parseFloat(best.note)<=2?'#34d399':parseFloat(best.note)<=3.3?'#fbbf24':'#f87171';
+        document.getElementById('s-grade').textContent=best.note;document.getElementById('s-grade').style.color=c;
+        const last=history[history.length-1];const nc=parseFloat(last.note)<=2?'text-green-400':parseFloat(last.note)<=3.3?'text-yellow-400':'text-red-400';
+        document.getElementById('sim-note').innerHTML=`<span class="font-black ${nc} text-lg">${last.note}</span><span class="block text-[9px] text-slate-500 font-bold">Letzte</span>`;
     }
 
-    // Zwischenprüfung readiness calculation
-    const mastery = JSON.parse(localStorage.getItem('arena_mastery') || '{}');
-    const modulesExamed = new Set(history.map(h => h.module)).size;
-    const modulesTrained = Object.keys(mastery).length;
-    const avgExam = history.length ? Math.round(history.reduce((s,h) => s + h.percentage, 0) / history.length) : 0;
+    const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
+    const mExamed=new Set(history.map(h=>h.module)).size;
+    const mTrained=Object.keys(mastery).length;
+    const avgExam=history.length?Math.round(history.reduce((s,h)=>s+h.percentage,0)/history.length):0;
 
-    // Score: 0-100
-    let r = 0;
-    r += Math.min(30, (modulesExamed / 9) * 30);    // 30% from exams taken
-    r += Math.min(30, (avgExam / 100) * 30);          // 30% from avg exam score
-    r += Math.min(20, (modulesTrained / 9) * 20);     // 20% from arena modules
-    r += Math.min(20, Math.min(xp, 5000) / 5000 * 20); // 20% from XP
-    r = Math.round(r);
+    let r=0;
+    r+=Math.min(30,(mExamed/9)*30);
+    r+=Math.min(30,(avgExam/100)*30);
+    r+=Math.min(20,(mTrained/9)*20);
+    r+=Math.min(20,Math.min(xp,5000)/5000*20);
+    r=Math.round(r);
+    readinessScore=r;
 
-    let emoji, label, lColor, sub;
-    if (r >= 80)      { emoji='✅'; label='Bereit!';       lColor='#22c55e'; sub=`${r}% — Du bist gut vorbereitet für die Prüfung`; }
-    else if (r >= 60) { emoji='💪'; label='Fast bereit';   lColor='#eab308'; sub=`${r}% — Noch etwas Training und du schaffst es`; }
-    else if (r >= 30) { emoji='📚'; label='In Arbeit';     lColor='#f97316'; sub=`${r}% — Weiter Module durcharbeiten`; }
-    else              { emoji='🚀'; label='Am Anfang';     lColor='#ef4444'; sub=`${r}% — Starte mit Modul 1 und arbeite dich durch`; }
+    let emoji,label,lColor,sub;
+    if(r>=80){emoji='✅';label='Bereit!';lColor='#22c55e';sub=`${r}% — Du bist bereit für die Zwischenprüfung`}
+    else if(r>=60){emoji='💪';label='Fast bereit';lColor='#eab308';sub=`${r}% — Noch etwas Training`}
+    else if(r>=30){emoji='📚';label='In Arbeit';lColor='#f97316';sub=`${r}% — Weiter Module durcharbeiten`}
+    else{emoji='🚀';label='Am Anfang';lColor='#ef4444';sub=`${r}% — Starte mit den Modulen`}
 
-    document.getElementById('ready-emoji').textContent = emoji;
-    document.getElementById('ready-label').textContent = label;
-    document.getElementById('ready-label').style.color = lColor;
-    document.getElementById('ready-text').textContent = sub;
-    document.getElementById('ready-bar').style.width = r + '%';
+    document.getElementById('ready-emoji').textContent=emoji;
+    document.getElementById('ready-label').textContent=label;
+    document.getElementById('ready-label').style.color=lColor;
+    document.getElementById('ready-text').textContent=sub;
+    document.getElementById('ready-bar').style.width=r+'%';
 }
 
-// Cloud sync on page leave
-window.addEventListener('beforeunload', () => {
-    if (SLMCloud.ready) SLMCloud.save();
-});
+window.addEventListener('beforeunload',()=>{if(SLMCloud.ready)SLMCloud.save()});
 </script>
 </body>
 </html>
