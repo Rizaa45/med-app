@@ -225,94 +225,218 @@ const ExamGrader = {
 
     // ═══ RESULTS RENDERER ═══
     renderResults(result, exam, answers, container) {
-        const noteColor = parseFloat(result.note) <= 2.0 ? 'text-green-600' : parseFloat(result.note) <= 3.3 ? 'text-yellow-600' : 'text-red-600';
-        const noteBg = parseFloat(result.note) <= 2.0 ? 'bg-green-50 border-green-200' : parseFloat(result.note) <= 3.3 ? 'bg-yellow-50 border-yellow-200' : 'bg-red-50 border-red-200';
+        const noteColor = parseFloat(result.note) <= 2.0 ? 'text-green-600' :
+                           parseFloat(result.note) <= 3.3 ? 'text-yellow-600' : 'text-red-600';
+        const noteBg = parseFloat(result.note) <= 2.0 ? 'bg-green-50 border-green-200' :
+                        parseFloat(result.note) <= 3.3 ? 'bg-yellow-50 border-yellow-200' : 'bg-red-50 border-red-200';
+        const passed = parseFloat(result.note) <= 4.0;
 
         let html = `
-        <div class="text-center mb-8 pt-8">
-            <h1 class="text-3xl font-black text-slate-800 tracking-tight">Klausur-Ergebnis</h1>
-            <p class="text-slate-500 font-medium mt-1">${exam.exam_title} • ${new Date().toLocaleDateString('de-DE')}</p>
+        <div class="text-center mb-8 pt-6 sm:pt-8">
+            <div class="text-5xl sm:text-6xl mb-3">${passed ? '🎓' : '📚'}</div>
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight">Klausur-Ergebnis</h1>
+            <p class="text-slate-500 font-medium mt-1 text-sm">${exam.exam_title} · ${new Date().toLocaleDateString('de-DE')}</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div class="${noteBg} border rounded-2xl p-6 text-center">
-                <div class="text-5xl font-black ${noteColor}">${result.note}</div>
-                <div class="text-sm font-bold text-slate-500 mt-1">Note</div>
+        <!-- Score Cards -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8">
+            <div class="${noteBg} border rounded-2xl p-4 sm:p-6 text-center">
+                <div class="text-3xl sm:text-5xl font-black ${noteColor}">${result.note}</div>
+                <div class="text-[10px] sm:text-sm font-bold text-slate-500 mt-1">Note</div>
             </div>
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center">
-                <div class="text-5xl font-black text-indigo-600">${result.percentage}%</div>
-                <div class="text-sm font-bold text-slate-500 mt-1">${result.totalEarned} / ${result.totalPossible} Punkte</div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 text-center">
+                <div class="text-3xl sm:text-5xl font-black text-indigo-600">${result.percentage}%</div>
+                <div class="text-[10px] sm:text-sm font-bold text-slate-500 mt-1">${result.totalEarned}/${result.totalPossible} P.</div>
             </div>
-            <div class="bg-white border border-slate-200 rounded-2xl p-6 text-center">
-                <div class="text-5xl font-black text-slate-700">${Math.floor(result.timeUsed/60)}:${(result.timeUsed%60).toString().padStart(2,'0')}</div>
-                <div class="text-sm font-bold text-slate-500 mt-1">Bearbeitungszeit</div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 text-center">
+                <div class="text-3xl sm:text-5xl font-black text-slate-700">${Math.floor(result.timeUsed/60)}<span class="text-lg sm:text-2xl text-slate-400">m</span></div>
+                <div class="text-[10px] sm:text-sm font-bold text-slate-500 mt-1">Zeit</div>
             </div>
         </div>`;
 
-        // Topic breakdown
-        html += `<div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8">
-            <h2 class="text-lg font-black text-slate-800 mb-4 uppercase tracking-tight">Themen-Analyse</h2>`;
-        Object.entries(result.topicScores).forEach(([topic, scores]) => {
+        // ═══ TOPIC ANALYSIS ═══
+        html += `<div class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8">
+            <h2 class="text-base sm:text-lg font-black text-slate-800 mb-4 uppercase tracking-tight">
+                <i class="fas fa-chart-bar text-indigo-500 mr-2"></i>Themen-Analyse
+            </h2>`;
+
+        const sortedTopics = Object.entries(result.topicScores)
+            .sort((a, b) => {
+                const pa = a[1].possible > 0 ? a[1].earned/a[1].possible : 0;
+                const pb = b[1].possible > 0 ? b[1].earned/b[1].possible : 0;
+                return pa - pb; // worst first
+            });
+
+        sortedTopics.forEach(([topic, scores]) => {
             const pct = scores.possible > 0 ? Math.round((scores.earned/scores.possible)*100) : 0;
             const color = pct >= 70 ? 'bg-green-500' : pct >= 50 ? 'bg-yellow-500' : 'bg-red-500';
             const icon = pct >= 70 ? '✅' : pct >= 50 ? '⚠️' : '❌';
+            const label = topic.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
             html += `
             <div class="mb-3">
                 <div class="flex justify-between items-center mb-1">
-                    <span class="text-sm font-bold text-slate-700">${icon} ${topic.replace(/_/g, ' ')}</span>
-                    <span class="text-sm font-bold text-slate-500">${scores.earned}/${scores.possible} (${pct}%)</span>
+                    <span class="text-xs sm:text-sm font-bold text-slate-700">${icon} ${label}</span>
+                    <span class="text-xs sm:text-sm font-bold text-slate-500">${scores.earned}/${scores.possible} (${pct}%)</span>
                 </div>
                 <div class="w-full bg-slate-100 rounded-full h-2">
-                    <div class="${color} h-full rounded-full transition-all" style="width:${pct}%"></div>
+                    <div class="${color} h-full rounded-full" style="width:${pct}%"></div>
                 </div>
             </div>`;
         });
         html += `</div>`;
 
-        // Weak topics coaching
+        // ═══ WEAKNESS COACHING ═══
         if (result.weakTopics.length > 0) {
-            html += `<div class="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8">
-                <h2 class="text-lg font-black text-red-800 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Schwächen identifiziert</h2>
-                <p class="text-sm text-red-700 mb-4">Diese Themen solltest du nochmal wiederholen:</p>
-                <div class="space-y-2">
-                ${result.weakTopics.map(t => `<div class="bg-white/60 rounded-lg p-3 flex items-center gap-3">
-                    <i class="fas fa-book-open text-red-500"></i>
-                    <span class="font-bold text-sm text-red-900">${t.replace(/_/g, ' ')}</span>
-                </div>`).join('')}
+            html += `<div class="bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8">
+                <h2 class="text-base sm:text-lg font-black text-red-800 mb-2">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>Schwächen identifiziert
+                </h2>
+                <p class="text-xs sm:text-sm text-red-700 mb-4">Diese Themen brauchen Nacharbeit. Nutze die Arena im <strong>Weakness Destroyer</strong> Modus:</p>
+                <div class="space-y-2 mb-4">
+                    ${result.weakTopics.map(t => {
+                        const s = result.topicScores[t];
+                        const pct = s ? Math.round((s.earned/s.possible)*100) : 0;
+                        return `<div class="bg-white/60 rounded-lg p-3 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-book-open text-red-500"></i>
+                                <span class="font-bold text-xs sm:text-sm text-red-900">${t.replace(/_/g, ' ')}</span>
+                            </div>
+                            <span class="text-xs font-bold text-red-600">${pct}%</span>
+                        </div>`;
+                    }).join('')}
                 </div>
+                <a href="arena.html" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-colors">
+                    <i class="fas fa-crosshairs"></i> Schwächen in Arena trainieren
+                </a>
             </div>`;
         }
 
-        // Per-question results
-        html += `<div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8">
-            <h2 class="text-lg font-black text-slate-800 mb-4 uppercase tracking-tight">Aufgaben-Detail</h2>`;
+        // ═══ IMPROVEMENT TIPS ═══
+        html += `<div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8">
+            <h2 class="text-base sm:text-lg font-black text-blue-800 mb-3">
+                <i class="fas fa-lightbulb mr-2"></i>Verbesserungstipps
+            </h2>
+            <div class="space-y-3 text-xs sm:text-sm text-blue-800">`;
+
+        if (result.percentage < 50) {
+            html += `<div class="flex gap-2"><span>📌</span><p>Fokussiere dich zunächst auf die <strong>Grundlagen</strong>. Nutze die Lerninhalte-Zusammenfassungen in den Modulseiten bevor du die nächste Klausur schreibst.</p></div>`;
+        }
+        if (result.percentage >= 50 && result.percentage < 70) {
+            html += `<div class="flex gap-2"><span>📌</span><p>Du hast die Grundlagen verstanden. Arbeite gezielt an den rot markierten Themen. <strong>Freitext-Fragen</strong> bringen die meisten Punkte — übe das Formulieren mit Fachbegriffen.</p></div>`;
+        }
+        if (result.percentage >= 70 && result.percentage < 90) {
+            html += `<div class="flex gap-2"><span>📌</span><p>Gute Leistung! Für die nächste Stufe: Achte auf <strong>vollständige Antworten</strong> bei Tabellen und Definitionen. Jedes fehlende Keyword kostet Punkte.</p></div>`;
+        }
+        if (result.percentage >= 90) {
+            html += `<div class="flex gap-2"><span>🏆</span><p>Hervorragend! Du bist examensreif. Halte das Niveau mit regelmäßigem Arena-Training und versuche weitere Module.</p></div>`;
+        }
+
+        // Type-specific tips
+        const typePerf = {};
+        result.questionResults.forEach(qr => {
+            if (!typePerf[qr.type]) typePerf[qr.type] = { earned: 0, possible: 0 };
+            typePerf[qr.type].earned += qr.earned;
+            typePerf[qr.type].possible += qr.possible;
+        });
+
+        Object.entries(typePerf).forEach(([type, s]) => {
+            const pct = s.possible > 0 ? Math.round((s.earned/s.possible)*100) : 100;
+            if (pct < 50) {
+                const typeNames = {
+                    'richtig_falsch': 'Richtig/Falsch — Lies genauer, subtile Formulierungen beachten',
+                    'nennen_liste': 'Nennen-Listen — Lerne Aufzählungen auswendig (Mnemotechniken)',
+                    'freitext_box': 'Freitext — Verwende mehr Fachbegriffe, schreibe strukturiert',
+                    'tabelle_2spalten': 'Tabellen — Übe Vergleiche systematisch',
+                    'tabelle_3spalten': 'Tabellen — Übe Vergleiche systematisch',
+                    'tabelle_vergleich': 'Tabellen — Übe Vergleiche systematisch',
+                    'zuordnung': 'Zuordnung — Definitionen und Begriffe verknüpfen',
+                    'definition_plus_beispiele': 'Definitionen — Kernbegriffe + konkrete Beispiele parat haben',
+                    'ankreuzen_begruenden': 'Ankreuzen + Begründen — Begründungen ausformulieren'
+                };
+                const tip = typeNames[type] || type;
+                html += `<div class="flex gap-2"><span>⚡</span><p><strong>${tip}</strong></p></div>`;
+            }
+        });
+
+        html += `</div></div>`;
+
+        // ═══ PER-QUESTION DETAIL WITH CORRECT ANSWERS ═══
+        html += `<div class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8">
+            <h2 class="text-base sm:text-lg font-black text-slate-800 mb-4 uppercase tracking-tight">
+                <i class="fas fa-list-check text-slate-500 mr-2"></i>Aufgaben-Detail
+            </h2>`;
+
         result.questionResults.forEach((qr, idx) => {
             const q = exam.aufgaben[idx];
-            const statusClass = qr.percentage >= 70 ? 'result-correct' : qr.percentage >= 40 ? 'result-partial' : 'result-wrong';
+            const statusBg = qr.percentage >= 70 ? 'bg-green-50 border-l-green-500' :
+                              qr.percentage >= 40 ? 'bg-yellow-50 border-l-yellow-500' : 'bg-red-50 border-l-red-500';
             const statusIcon = qr.percentage >= 70 ? '✅' : qr.percentage >= 40 ? '⚠️' : '❌';
-            
+
             html += `
-            <div class="p-4 rounded-lg mb-2 ${statusClass}">
-                <div class="flex justify-between items-center">
-                    <span class="font-bold text-sm">${statusIcon} Aufgabe ${qr.aufgabe_nr}: ${q.type.replace(/_/g, ' ')}</span>
-                    <span class="font-black text-sm">${qr.earned}/${qr.possible} Punkte</span>
-                </div>
-                <div class="text-xs text-slate-500 mt-1">${q.topic?.replace(/_/g, ' ') || ''}</div>
-            </div>`;
+            <details class="mb-2 rounded-lg overflow-hidden border border-slate-100">
+                <summary class="p-3 sm:p-4 ${statusBg} border-l-4 cursor-pointer hover:bg-opacity-80 transition-colors">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-xs sm:text-sm">${statusIcon} Aufgabe ${qr.aufgabe_nr}: ${q.type.replace(/_/g, ' ')}</span>
+                        <span class="font-black text-xs sm:text-sm">${qr.earned}/${qr.possible}</span>
+                    </div>
+                    <div class="text-[10px] sm:text-xs text-slate-500 mt-0.5">${(q.topic || '').replace(/_/g, ' ')}</div>
+                </summary>
+                <div class="p-3 sm:p-4 bg-slate-50 text-xs sm:text-sm text-slate-600 space-y-2">
+                    <p class="font-medium">${q.instruction || q.statement || ''}</p>`;
+
+            // Show correct answer based on type
+            if (q.type === 'richtig_falsch') {
+                const stmts = q.statements || [{ text: q.statement, answer: q.answer }];
+                html += `<div class="space-y-1">`;
+                stmts.forEach(s => {
+                    html += `<div class="flex gap-2"><span class="font-bold text-indigo-600">${s.answer}</span><span>${s.text}</span></div>`;
+                });
+                html += `</div>`;
+            } else if (q.type === 'nennen_liste') {
+                const answers = q.correct_answers || q.data?.correct_answers || [];
+                html += `<p class="font-bold text-slate-700">Richtige Antworten:</p><ul class="list-disc pl-5 text-emerald-700">`;
+                answers.forEach(a => html += `<li>${a}</li>`);
+                html += `</ul>`;
+            } else if (q.type === 'freitext_box') {
+                const ca = q.data?.correct_answer || '';
+                const kw = q.data?.keywords || [];
+                html += `<p class="font-bold text-slate-700">Erwartete Antwort:</p><p class="text-emerald-700 italic">${ca}</p>`;
+                if (kw.length) html += `<p class="text-slate-500 mt-1">Keywords: <span class="font-bold">${kw.join(', ')}</span></p>`;
+            } else if (q.type === 'zuordnung') {
+                const stmts = q.data?.statements || [];
+                html += `<p class="font-bold text-slate-700">Richtige Zuordnung:</p>`;
+                stmts.forEach(s => html += `<div>${s.text} → <strong class="text-indigo-600">${s.answer}</strong></div>`);
+            } else if (q.type === 'definition_plus_beispiele') {
+                const d = q.data || {};
+                html += `<p class="font-bold text-slate-700">Definition:</p><p class="text-emerald-700">${d.definition_correct || ''}</p>`;
+                const ex = d.correct_examples || [];
+                if (ex.length) html += `<p class="font-bold text-slate-700 mt-1">Beispiele:</p><ul class="list-disc pl-5 text-emerald-700">${ex.map(e => `<li>${e}</li>`).join('')}</ul>`;
+            }
+
+            if (q.explanation) {
+                html += `<div class="mt-2 p-2 bg-blue-50 rounded text-blue-800 text-xs"><i class="fas fa-info-circle mr-1"></i>${q.explanation}</div>`;
+            }
+
+            html += `</div></details>`;
         });
+
         html += `</div>`;
 
-        // Actions
+        // ═══ ACTION BUTTONS ═══
         html += `
-        <div class="flex gap-4 mb-16">
-            <button onclick="location.reload()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
-                <i class="fas fa-redo mr-2"></i> Neue Klausur
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-16">
+            <button onclick="location.reload()" class="bg-indigo-600 hover:bg-indigo-500 text-white py-3 sm:py-4 rounded-xl font-black uppercase tracking-widest text-xs sm:text-sm transition-all">
+                <i class="fas fa-redo mr-2"></i> Nochmal
             </button>
-            <button onclick="location.href='index.html'" class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-700 py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all">
+            <a href="arena.html" class="bg-violet-600 hover:bg-violet-500 text-white py-3 sm:py-4 rounded-xl font-black uppercase tracking-widest text-xs sm:text-sm transition-all text-center block">
+                <i class="fas fa-brain mr-2"></i> Arena
+            </a>
+            <button onclick="location.href='index.html'" class="bg-slate-200 hover:bg-slate-300 text-slate-700 py-3 sm:py-4 rounded-xl font-black uppercase tracking-widest text-xs sm:text-sm transition-all">
                 <i class="fas fa-home mr-2"></i> Dashboard
             </button>
         </div>`;
 
         container.innerHTML = html;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 };
