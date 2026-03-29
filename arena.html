@@ -8,600 +8,683 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-        body{font-family:'Inter',sans-serif;background:#08090e;color:#cbd5e1;min-height:100vh;overflow-x:hidden}
-
-        /* Background */
-        body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-            background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(99,102,241,.04),transparent 70%),
-            radial-gradient(ellipse 50% 40% at 100% 100%,rgba(139,92,246,.03),transparent)}
-
-        /* Animations */
-        @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-        .up{animation:up .45s ease-out both}
-
-        @keyframes xpFly{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-50px) scale(1.4)}}
-        .xp-pop{position:fixed;z-index:999;pointer-events:none;font-weight:900;color:#818cf8;animation:xpFly .9s ease-out forwards}
-
-        @keyframes okPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.35)}100%{box-shadow:0 0 0 14px rgba(34,197,94,0)}}
-        @keyframes noPulse{0%{box-shadow:0 0 0 0 rgba(239,68,68,.35)}100%{box-shadow:0 0 0 14px rgba(239,68,68,0)}}
-        .ok-pulse{animation:okPulse .5s ease-out}
-        .no-pulse{animation:noPulse .5s ease-out}
-
-        /* Glass surface */
-        .surface{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);border-radius:16px}
-        .surface-lg{border-radius:24px}
-
-        /* Interactive */
-        .tappable{transition:all .25s ease;cursor:pointer}
-        .tappable:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)}
-        .tappable:active{transform:scale(.98)}
-
-        /* Mode card lift */
-        .lift{transition:all .4s cubic-bezier(.22,1,.36,1)}
-        .lift:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.08);box-shadow:0 12px 30px rgba(0,0,0,.25)}
-
-        /* S-Pen inputs */
-        .pen-on .arena-input{font-size:20px!important;padding:18px 16px!important;min-height:60px;
-            border:2px dashed rgba(139,92,246,.25)!important;border-radius:16px!important}
-        .pen-on .arena-textarea{font-size:18px!important;padding:18px 16px!important;min-height:160px;
-            border:2px dashed rgba(139,92,246,.25)!important;border-radius:16px!important;line-height:1.8!important}
-        .pen-on .pen-hint{display:flex!important}
-
-        .arena-input{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
-            border-radius:12px;padding:12px 14px;color:#e2e8f0;font-size:14px;font-weight:500;
-            outline:none;transition:border-color .2s}
-        .arena-input:focus{border-color:rgba(99,102,241,.4)}
-        .arena-input::placeholder{color:rgba(148,163,184,.3)}
-
-        .arena-textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
-            border-radius:12px;padding:14px;color:#e2e8f0;font-size:14px;font-weight:500;
-            outline:none;resize:none;min-height:120px;line-height:1.7;transition:border-color .2s}
-        .arena-textarea:focus{border-color:rgba(99,102,241,.4)}
-        .arena-textarea::placeholder{color:rgba(148,163,184,.3)}
-
-        .pen-hint{display:none;align-items:center;gap:6px;margin-top:6px;color:rgba(139,92,246,.35);font-size:10px;font-weight:700}
-
-        /* Answer buttons */
-        .ans-btn{transition:all .2s ease;cursor:pointer}
-        .ans-btn:active{transform:scale(.97)}
-        .ans-btn.picked{border-color:rgba(99,102,241,.5)!important;background:rgba(99,102,241,.06)!important}
-        .ans-btn.right{border-color:rgba(34,197,94,.4)!important;background:rgba(34,197,94,.04)!important}
-        .ans-btn.wrong{border-color:rgba(239,68,68,.35)!important;background:rgba(239,68,68,.04)!important}
-
-        /* Chat */
-        .chat-bubble{max-width:85%;word-wrap:break-word}
-        .chat-user{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.15);margin-left:auto}
-        .chat-ai{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);margin-right:auto}
-
-        /* Language selector */
-        .lang-opt{transition:all .2s}.lang-opt.active{background:rgba(99,102,241,.1);color:#818cf8;border-color:rgba(99,102,241,.3)}
-
-        /* RTL for Arabic */
-        [dir="rtl"] .arena-input,[dir="rtl"] .arena-textarea{text-align:right;direction:rtl}
-
-        /* Scrollbar */
-        ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}
-        ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06);border-radius:10px}
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #070a10; }
+        .glass { background:rgba(15,23,42,.5); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.06); }
+        .t-num { font-variant-numeric: tabular-nums; }
+        @keyframes enter { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+        .enter { animation: enter .4s ease both; }
+        @keyframes pulse-ring { 0%{box-shadow:0 0 0 0 rgba(139,92,246,.4)} 70%{box-shadow:0 0 0 10px rgba(139,92,246,0)} 100%{box-shadow:0 0 0 0 rgba(139,92,246,0)} }
+        .pulse-ring { animation: pulse-ring 2s infinite; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+        .float { animation: float 3s ease-in-out infinite; }
+        @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
+        .shake { animation: shake .3s ease; }
+        @keyframes confetti { 0%{opacity:1;transform:translateY(0) rotate(0deg)} 100%{opacity:0;transform:translateY(-60px) rotate(360deg)} }
+        .xp-float { animation: confetti .8s ease-out forwards; position:absolute; pointer-events:none; }
+        ::-webkit-scrollbar { width:5px; }
+        ::-webkit-scrollbar-thumb { background:rgba(255,255,255,.08); border-radius:99px; }
+        .rank-glow { text-shadow: 0 0 20px currentColor; }
     </style>
 </head>
-<body>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- HOME                                   -->
-<!-- ═══════════════════════════════════════ -->
-<div id="v-home" class="relative z-10">
-    <div class="max-w-3xl mx-auto px-5 py-8">
-
-        <!-- Nav -->
-        <nav class="flex items-center justify-between mb-10 up">
-            <a href="index.html" class="w-10 h-10 rounded-xl bg-white/[.04] flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/[.08] transition-all">
-                <i class="fas fa-arrow-left text-sm"></i>
-            </a>
-            <div class="text-center">
-                <h1 class="text-lg font-black tracking-tight text-white">Arena</h1>
-                <p class="text-[9px] text-slate-600 font-bold uppercase tracking-[.25em]">Deep Learning</p>
-            </div>
-            <!-- Language + Settings -->
-            <div class="flex items-center gap-2">
-                <button onclick="Arena.openLang()" id="lang-btn" class="w-10 h-10 rounded-xl bg-white/[.04] flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/[.08] transition-all text-sm" title="Sprache">
-                    🇩🇪
-                </button>
-                <button onclick="Arena.openSettings()" class="w-10 h-10 rounded-xl bg-white/[.04] flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/[.08] transition-all">
-                    <i class="fas fa-sliders text-sm"></i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Stats Bar -->
-        <div class="flex items-center gap-3 mb-8 up" style="animation-delay:.06s">
-            <div class="flex-1 surface px-5 py-4 flex items-center justify-between">
-                <div>
-                    <div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Level <span class="text-violet-400" id="h-lv">1</span></div>
-                    <div class="text-2xl font-black text-white mt-0.5"><span id="h-xp">0</span> <span class="text-sm text-slate-600 font-bold">XP</span></div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="text-center">
-                        <div class="text-lg">🔥</div>
-                        <div class="text-[10px] font-black text-slate-500"><span id="h-streak">0</span>d</div>
-                    </div>
-                </div>
-            </div>
-            <!-- XP Progress mini bar -->
-            <div class="w-2 h-16 bg-white/[.04] rounded-full overflow-hidden">
-                <div id="h-xp-bar" class="w-full bg-violet-500 rounded-full transition-all" style="height:0%;margin-top:auto"></div>
-            </div>
-        </div>
-
-        <!-- Mode Grid — RESPONSIVE -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 up" style="animation-delay:.1s">
-
-            <!-- Absorb -->
-            <button onclick="Arena.go('absorb')" class="lift surface p-6 text-left group w-full">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="w-11 h-11 rounded-2xl bg-indigo-500/[.08] flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <i class="fas fa-lightbulb text-indigo-400"></i>
-                    </div>
-                    <i class="fas fa-chevron-right text-[10px] text-slate-700 group-hover:text-indigo-400 transition-colors mt-3"></i>
-                </div>
-                <h3 class="text-white font-black text-base tracking-tight mb-1">Absorb</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">Konzept verstehen, dann aus dem Gedächtnis wiedergeben.</p>
-            </button>
-
-            <!-- Recall -->
-            <button onclick="Arena.go('recall')" class="lift surface p-6 text-left group w-full">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="w-11 h-11 rounded-2xl bg-orange-500/[.08] flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <i class="fas fa-brain text-orange-400"></i>
-                    </div>
-                    <i class="fas fa-chevron-right text-[10px] text-slate-700 group-hover:text-orange-400 transition-colors mt-3"></i>
-                </div>
-                <h3 class="text-white font-black text-base tracking-tight mb-1">Recall</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">Richtig/Falsch, Listen, Zuordnung — alle Typen gemischt.</p>
-            </button>
-
-            <!-- Connect -->
-            <button onclick="Arena.go('connect')" class="lift surface p-6 text-left group w-full">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="w-11 h-11 rounded-2xl bg-emerald-500/[.08] flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <i class="fas fa-link text-emerald-400"></i>
-                    </div>
-                    <i class="fas fa-chevron-right text-[10px] text-slate-700 group-hover:text-emerald-400 transition-colors mt-3"></i>
-                </div>
-                <h3 class="text-white font-black text-base tracking-tight mb-1">Connect</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">Begriffe mit Definitionen als Paare verbinden.</p>
-            </button>
-
-            <!-- Sprint -->
-            <button onclick="Arena.go('sprint')" class="lift surface p-6 text-left group w-full">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="w-11 h-11 rounded-2xl bg-rose-500/[.08] flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <i class="fas fa-bolt text-rose-400"></i>
-                    </div>
-                    <i class="fas fa-chevron-right text-[10px] text-slate-700 group-hover:text-rose-400 transition-colors mt-3"></i>
-                </div>
-                <h3 class="text-white font-black text-base tracking-tight mb-1">Sprint</h3>
-                <p class="text-slate-500 text-xs leading-relaxed">30 Sekunden pro Frage. Unter Zeitdruck lernen.</p>
-            </button>
-        </div>
-
-        <!-- Weakness (conditional) -->
-        <div id="weak-card" class="hidden mb-6 up" style="animation-delay:.13s">
-            <button onclick="Arena.goWeak()" class="lift surface surface-lg w-full p-6 text-left group border-red-500/10">
-                <div class="flex items-center gap-4">
-                    <div class="w-11 h-11 rounded-2xl bg-red-500/[.08] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-crosshairs text-red-400"></i>
-                    </div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2">
-                            <h3 class="text-white font-black text-sm tracking-tight">Schwächen zerstören</h3>
-                            <span id="weak-pill" class="bg-red-500/15 text-red-400 text-[9px] font-black px-2 py-0.5 rounded-full">3</span>
-                        </div>
-                        <p class="text-slate-500 text-[11px]">Gezieltes Training deiner Klausur-Schwächen</p>
-                    </div>
-                    <i class="fas fa-chevron-right text-[10px] text-slate-700 group-hover:text-red-400 transition-colors"></i>
-                </div>
-            </button>
-        </div>
-
-        <!-- Mastery Overview -->
-        <div class="up" style="animation-delay:.16s">
-            <div class="flex items-center justify-between mb-3">
-                <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">Fortschritt</span>
-                <a href="exam-simulator.html" class="text-[10px] font-bold text-indigo-400/60 hover:text-indigo-400 flex items-center gap-1 transition-colors">
-                    Klausur-Simulator <i class="fas fa-arrow-right text-[8px]"></i>
-                </a>
-            </div>
-            <div id="mastery" class="space-y-2"></div>
-        </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- SETTINGS PANEL (slide-over)            -->
-<!-- ═══════════════════════════════════════ -->
-<div id="settings-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] hidden opacity-0 transition-opacity" onclick="Arena.closeSettings()"></div>
-<div id="settings-panel" class="fixed top-0 right-0 h-full w-full max-w-sm bg-[#0d0f16] border-l border-white/[.05] z-[110] translate-x-full transition-transform duration-300 ease-out overflow-y-auto">
-    <div class="p-6">
-        <div class="flex items-center justify-between mb-8">
-            <h2 class="text-white font-black text-base">Einstellungen</h2>
-            <button onclick="Arena.closeSettings()" class="w-9 h-9 rounded-xl bg-white/[.05] flex items-center justify-center text-slate-500 hover:text-white transition-all">
-                <i class="fas fa-times text-sm"></i>
-            </button>
-        </div>
-
-        <!-- Rounds -->
-        <div class="mb-6">
-            <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-2">Fragen pro Runde</label>
-            <div class="flex gap-2">
-                <button onclick="Arena.setN(5)" data-n="5" class="n-btn flex-1 py-2.5 rounded-xl text-sm font-bold bg-white/[.03] text-slate-500 border border-white/[.05] transition-all hover:border-violet-500/30">5</button>
-                <button onclick="Arena.setN(10)" data-n="10" class="n-btn flex-1 py-2.5 rounded-xl text-sm font-bold bg-violet-500/[.1] text-violet-400 border border-violet-500/20 transition-all">10</button>
-                <button onclick="Arena.setN(15)" data-n="15" class="n-btn flex-1 py-2.5 rounded-xl text-sm font-bold bg-white/[.03] text-slate-500 border border-white/[.05] transition-all hover:border-violet-500/30">15</button>
-                <button onclick="Arena.setN(20)" data-n="20" class="n-btn flex-1 py-2.5 rounded-xl text-sm font-bold bg-white/[.03] text-slate-500 border border-white/[.05] transition-all hover:border-violet-500/30">20</button>
-            </div>
-        </div>
-
-        <!-- S-Pen -->
-        <div class="mb-6">
-            <div class="flex items-center justify-between surface px-4 py-3">
-                <div class="flex items-center gap-2.5">
-                    <i class="fas fa-pen-fancy text-violet-400/60 text-sm"></i>
-                    <span class="text-sm font-bold text-white">S-Pen / Stylus</span>
-                </div>
-                <button onclick="Arena.togPen()" id="pen-tog" class="w-11 h-6 rounded-full bg-white/[.08] relative transition-all">
-                    <div id="pen-dot" class="w-4 h-4 rounded-full bg-slate-500 absolute top-1 left-1 transition-all"></div>
-                </button>
-            </div>
-            <p class="text-[10px] text-slate-600 mt-1.5 ml-1">Größere Eingabefelder für Handschrift-Erkennung</p>
-        </div>
-
-        <!-- Topics -->
-        <div class="mb-6">
-            <div class="flex items-center justify-between mb-2">
-                <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Themen filtern</label>
-                <div class="flex gap-2">
-                    <button onclick="Arena.pickAll()" class="text-[10px] font-bold text-violet-400/60 hover:text-violet-400">Alle</button>
-                    <button onclick="Arena.pickNone()" class="text-[10px] font-bold text-slate-600 hover:text-slate-400">Keine</button>
-                </div>
-            </div>
-            <div id="topic-list" class="space-y-1"></div>
-        </div>
-
-        <!-- Reset -->
-        <div>
-            <button onclick="if(confirm('Alle Arena-Daten löschen?')){localStorage.removeItem('arena_xp');localStorage.removeItem('arena_mst');localStorage.removeItem('arena_ds');location.reload()}" class="text-[10px] font-bold text-red-400/40 hover:text-red-400 uppercase tracking-widest transition-colors">
-                <i class="fas fa-trash-alt mr-1"></i> Fortschritt zurücksetzen
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- LANGUAGE PANEL                         -->
-<!-- ═══════════════════════════════════════ -->
-<div id="lang-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] hidden opacity-0 transition-opacity" onclick="Arena.closeLang()"></div>
-<div id="lang-panel" class="fixed bottom-0 left-0 right-0 bg-[#0d0f16] border-t border-white/[.05] z-[110] translate-y-full transition-transform duration-300 ease-out rounded-t-3xl max-h-[70vh] overflow-y-auto">
-    <div class="p-6 max-w-lg mx-auto">
-        <div class="w-10 h-1 bg-white/10 rounded-full mx-auto mb-6"></div>
-        <h2 class="text-white font-black text-base text-center mb-2">Sprache / Language</h2>
-        <p class="text-slate-500 text-xs text-center mb-6">Fragen und Feedback werden in deiner Sprache erklärt</p>
-        <div class="grid grid-cols-2 gap-2 mb-6">
-            <button onclick="Arena.setLang('de')" class="lang-opt surface p-4 rounded-xl text-center transition-all active" data-lang="de">
-                <div class="text-2xl mb-1">🇩🇪</div>
-                <div class="text-xs font-bold text-white">Deutsch</div>
-                <div class="text-[10px] text-slate-500">Standard</div>
-            </button>
-            <button onclick="Arena.setLang('vi')" class="lang-opt surface p-4 rounded-xl text-center transition-all" data-lang="vi">
-                <div class="text-2xl mb-1">🇻🇳</div>
-                <div class="text-xs font-bold text-white">Tiếng Việt</div>
-                <div class="text-[10px] text-slate-500">Vietnamese</div>
-            </button>
-            <button onclick="Arena.setLang('ar')" class="lang-opt surface p-4 rounded-xl text-center transition-all" data-lang="ar">
-                <div class="text-2xl mb-1">🇸🇦</div>
-                <div class="text-xs font-bold text-white">العربية</div>
-                <div class="text-[10px] text-slate-500">Arabic</div>
-            </button>
-            <button onclick="Arena.setLang('fr')" class="lang-opt surface p-4 rounded-xl text-center transition-all" data-lang="fr">
-                <div class="text-2xl mb-1">🇫🇷</div>
-                <div class="text-xs font-bold text-white">Français</div>
-                <div class="text-[10px] text-slate-500">French</div>
-            </button>
-        </div>
-        <div class="surface p-4 rounded-xl">
-            <div class="flex items-start gap-2.5">
-                <i class="fas fa-info-circle text-indigo-400/40 mt-0.5"></i>
-                <p class="text-[11px] text-slate-500 leading-relaxed">Fachbegriffe bleiben auf Deutsch (Prüfungssprache). Erklärungen und Feedback werden in deiner Sprache angezeigt.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- AI CHAT                                -->
-<!-- ═══════════════════════════════════════ -->
-<button onclick="Arena.openChat()" id="chat-fab" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-indigo-600 rounded-2xl shadow-2xl shadow-indigo-500/20 flex items-center justify-center text-white hover:scale-110 active:scale-95 transition-all">
-    <i class="fas fa-robot text-xl"></i>
-</button>
-
-<div id="chat-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] hidden opacity-0 transition-opacity" onclick="Arena.closeChat()"></div>
-<div id="chat-panel" class="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 w-full sm:w-96 h-[85vh] sm:h-[600px] sm:rounded-3xl bg-[#0d0f16] border border-white/[.05] z-[110] translate-y-full sm:translate-y-[calc(100%+24px)] transition-transform duration-300 ease-out flex flex-col overflow-hidden">
-    <!-- Chat header -->
-    <div class="p-4 border-b border-white/[.05] flex items-center justify-between shrink-0">
-        <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 bg-indigo-500/20 rounded-xl flex items-center justify-center">
-                <i class="fas fa-robot text-indigo-400 text-sm"></i>
-            </div>
-            <div>
-                <div class="text-sm font-black text-white">Pflege-Tutor</div>
-                <div class="text-[9px] text-emerald-400 font-bold uppercase tracking-widest">Online</div>
-            </div>
-        </div>
-        <button onclick="Arena.closeChat()" class="w-8 h-8 rounded-xl bg-white/[.05] flex items-center justify-center text-slate-500 hover:text-white transition-all">
-            <i class="fas fa-times text-xs"></i>
-        </button>
-    </div>
-    <!-- Messages -->
-    <div id="chat-msgs" class="flex-1 overflow-y-auto p-4 space-y-3">
-        <div class="chat-bubble chat-ai rounded-2xl rounded-tl-md px-4 py-3">
-            <p class="text-[13px] text-slate-300 leading-relaxed">Hallo! 👋 Ich bin dein Pflege-Tutor. Stelle mir Fragen zu den Lerninhalten — ich erkläre dir alles in deiner Sprache.</p>
-        </div>
-    </div>
-    <!-- Input -->
-    <div class="p-3 border-t border-white/[.05] shrink-0">
-        <div class="flex items-end gap-2">
-            <textarea id="chat-input" rows="1" class="flex-1 arena-textarea" style="min-height:44px;max-height:120px;resize:none;border-radius:16px;padding:12px 14px;font-size:13px" placeholder="Frage stellen..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();Arena.sendChat()}"></textarea>
-            <button onclick="Arena.sendChat()" class="w-11 h-11 bg-indigo-600 rounded-xl flex items-center justify-center text-white shrink-0 hover:bg-indigo-500 active:scale-95 transition-all">
-                <i class="fas fa-paper-plane text-sm"></i>
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- GAME SCREEN                            -->
-<!-- ═══════════════════════════════════════ -->
-<div id="v-game" class="hidden relative z-10 min-h-screen">
-    <div class="fixed top-0 left-0 right-0 z-50 bg-[#08090e]/90 backdrop-blur-xl">
-        <div class="max-w-3xl mx-auto px-5 h-11 flex items-center justify-between">
-            <button onclick="Arena.exit()" class="text-slate-700 hover:text-white transition-colors text-sm"><i class="fas fa-times"></i></button>
-            <div class="flex items-center gap-4">
-                <span class="text-[9px] font-black text-slate-600 uppercase tracking-widest"><span id="g-n">1</span>/<span id="g-t">10</span></span>
-                <div class="flex items-center gap-1"><span class="text-sm">🔥</span><span id="g-s" class="text-white font-black text-sm">0</span></div>
-                <div id="g-combo" class="text-[9px] font-black uppercase tracking-widest text-slate-700"></div>
-            </div>
-            <span class="text-indigo-400/60 text-[10px] font-bold">+<span id="g-xp">0</span> XP</span>
-        </div>
-        <div class="h-[2px] bg-white/[.02]"><div id="g-bar" class="h-full bg-violet-500 transition-all duration-700" style="width:0%"></div></div>
-    </div>
-    <div class="pt-14 pb-16 px-5 max-w-2xl mx-auto" id="g-c"></div>
-</div>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- RESULTS SCREEN                         -->
-<!-- ═══════════════════════════════════════ -->
-<div id="v-results" class="hidden relative z-10 min-h-screen flex items-center justify-center px-5 py-10">
-    <div id="r-c" class="w-full max-w-lg"></div>
-</div>
+<body class="text-white min-h-screen">
+<div id="app" class="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 pb-20 relative"></div>
 
 <script>
-const Arena = {
-    bank:[],qs:[],topics:[],sel:new Set(),rounds:10,penMode:false,lang:'de',
-    mode:null,queue:[],idx:0,streak:0,best:0,xpSess:0,ok:0,tot:0,tRes:{},sprintTmr:null,_weak:null,
+// ═══════════════════════════════════════════════
+//  CONFIG
+// ═══════════════════════════════════════════════
+const MODULES = [
+    {id:1, name:'Kommunikation & Biografie', icon:'fa-comments', color:'#6366f1'},
+    {id:2, name:'Medizinisches Kernwissen', icon:'fa-stethoscope', color:'#3b82f6'},
+    {id:3, name:'Krankheitslehre', icon:'fa-viruses', color:'#06b6d4'},
+    {id:4, name:'Schwangerschaft & Geburt', icon:'fa-baby', color:'#14b8a6'},
+    {id:5, name:'Prä-/Postoperative Pflege', icon:'fa-suitcase-medical', color:'#10b981'},
+    {id:6, name:'Notfall & Reanimation', icon:'fa-heart-pulse', color:'#ef4444'},
+    {id:7, name:'Ambulante Pflege', icon:'fa-house-medical', color:'#a855f7'},
+    {id:8, name:'Innere Medizin', icon:'fa-lungs', color:'#0ea5e9'},
+    {id:9, name:'Neuro-Rehabilitation', icon:'fa-brain', color:'#f59e0b'},
+];
 
-    get xp(){return+(localStorage.arena_xp||0)},set xp(v){localStorage.arena_xp=v},
-    get lv(){return Math.floor(this.xp/500)+1},
-    get mst(){return JSON.parse(localStorage.arena_mst||'{}')},set mst(v){localStorage.arena_mst=JSON.stringify(v)},
-    get ds(){return+(localStorage.arena_ds||0)},
+const MODES = [
+    {id:'recall', name:'Recall', icon:'fa-brain', color:'#f97316', desc:'Standard-Quiz mit sofortigem Feedback'},
+    {id:'absorb', name:'Absorb', icon:'fa-eye', color:'#6366f1', desc:'Antwort lesen → verstecken → aus Gedächtnis schreiben'},
+    {id:'sprint', name:'Sprint', icon:'fa-bolt', color:'#ef4444', desc:'30 Sekunden pro Frage — unter Zeitdruck'},
+    {id:'connect', name:'Connect', icon:'fa-link', color:'#10b981', desc:'Begriffe mit Definitionen verbinden'},
+    {id:'weakness', name:'Weakness Destroyer', icon:'fa-crosshairs', color:'#dc2626', desc:'Nur deine schwächsten Themen'},
+];
 
-    async init(){
-        try{const r=await fetch('data/question-banks/module1_questions.json');this.bank=await r.json()}catch(e){}
-        this.qs=this.bank.filter(i=>i.q_id);
-        this.qs.forEach(q=>{if(q.fallabhaengig===undefined)q.fallabhaengig=false});
-        const s=new Set();this.qs.forEach(q=>{if(q.topic)s.add(q.topic)});
-        this.topics=[...s].sort();this.sel=new Set(this.topics);
-        this.penMode=localStorage.arena_pen==='1';
-        this.lang=localStorage.arena_lang||'de';
-        this.updPenUI();this.updLangUI();this.renderTopics();this.renderHome();this.loadWeak();
-    },
+const RANKS = [
+    {min:0,  label:'Needs Training', emoji:'❌', color:'#ef4444'},
+    {min:20, label:'Basics', emoji:'📕', color:'#f97316'},
+    {min:40, label:'Okay', emoji:'📗', color:'#eab308'},
+    {min:60, label:'Good', emoji:'⭐', color:'#22c55e'},
+    {min:80, label:'Very Good', emoji:'🌟', color:'#10b981'},
+    {min:95, label:'Master', emoji:'👑', color:'#f59e0b'},
+];
 
-    renderHome(){
-        document.getElementById('h-xp').textContent=this.xp;
-        document.getElementById('h-lv').textContent=this.lv;
-        document.getElementById('h-streak').textContent=this.ds;
-        document.getElementById('h-xp-bar').style.height=((this.xp%500)/5)+'%';
-        if(this.penMode)document.body.classList.add('pen-on');else document.body.classList.remove('pen-on');
-        this.renderMastery();
-    },
-
-    renderMastery(){
-        const m=this.mst;
-        const list=[['biografiearbeit','Biografie'],['kommunikation_theorie','Komm. Theorie'],['kommunikation_praxis','Komm. Praxis'],['pflegeprozess_aufnahme','Pflegeprozess'],['emotionspsychologie','Emotionen'],['supervision_beratung','Supervision'],['heimaufnahme','Heimaufnahme']];
-        document.getElementById('mastery').innerHTML=list.map(([k,n])=>{
-            const p=Math.min(m[k]||0,100);const c=p>=75?'bg-emerald-500':p>=45?'bg-amber-500':'bg-white/[.06]';
-            const tc=p>=75?'text-emerald-400':p>=45?'text-amber-400':'text-slate-700';
-            return`<div class="flex items-center gap-3"><span class="text-[11px] font-bold text-slate-400 w-28 truncate">${n}</span><div class="flex-1 h-1 bg-white/[.03] rounded-full"><div class="${c} h-full rounded-full transition-all" style="width:${p}%"></div></div><span class="text-[10px] font-bold ${tc} w-8 text-right">${p}%</span></div>`;
-        }).join('');
-    },
-
-    renderTopics(){
-        const names={'biografiearbeit':'Biografiearbeit','kommunikation_theorie':'Kommunikationstheorie','kommunikation_praxis':'Kommunikation Praxis','pflegeprozess_aufnahme':'Pflegeprozess','pflegeprozess':'Pflegeprozess','emotionspsychologie':'Emotionspsychologie','supervision_beratung':'Supervision','beratung_supervision':'Beratung','heimaufnahme':'Heimaufnahme','interkulturelle_kommunikation':'Interkulturell','burnout_praevention':'Burnout','biografieforschung':'Biografieforschung','reflexion_methodik':'Reflexion','beratung_kollegial':'Kollegiale Beratung','beratungsformate':'Beratungsformate','heimaufnahme_administration':'Admin','heimaufnahme_vorbereitung':'Vorbereitung','heimaufnahme_dokumente':'Dokumente','heimaufnahme_durchfuehrung':'Durchführung','heimaufnahme_information':'Information','pflegeprozess_anamnese':'Anamnese','kommunikation_störer':'Störer'};
-        const el=document.getElementById('topic-list');
-        el.innerHTML=this.topics.map(t=>{
-            const n=names[t]||t.replace(/_/g,' ');const on=this.sel.has(t);
-            return`<button onclick="Arena.togTopic('${t}')" class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-left transition-all ${on?'bg-violet-500/[.06] border border-violet-500/15':'bg-transparent border border-transparent hover:bg-white/[.02]'}">
-                <span class="text-[12px] font-medium ${on?'text-violet-300':'text-slate-500'}">${n}</span>
-                <div class="w-4 h-4 rounded border ${on?'bg-violet-500 border-violet-500':'border-slate-700'} flex items-center justify-center">
-                    ${on?'<i class="fas fa-check text-[8px] text-white"></i>':''}
-                </div>
-            </button>`;
-        }).join('');
-    },
-
-    togTopic(t){if(this.sel.has(t))this.sel.delete(t);else this.sel.add(t);this.renderTopics()},
-    pickAll(){this.sel=new Set(this.topics);this.renderTopics()},
-    pickNone(){this.sel.clear();this.renderTopics()},
-    setN(n){this.rounds=n;document.querySelectorAll('.n-btn').forEach(b=>{const v=+b.dataset.n;b.className=`n-btn flex-1 py-2.5 rounded-xl text-sm font-bold border transition-all ${v===n?'bg-violet-500/[.1] text-violet-400 border-violet-500/20':'bg-white/[.03] text-slate-500 border-white/[.05] hover:border-violet-500/30'}`})},
-
-    // Pen
-    togPen(){this.penMode=!this.penMode;localStorage.arena_pen=this.penMode?'1':'0';this.updPenUI();if(this.penMode)document.body.classList.add('pen-on');else document.body.classList.remove('pen-on')},
-    updPenUI(){const d=document.getElementById('pen-dot'),t=document.getElementById('pen-tog');if(this.penMode){d.style.left='24px';d.className='w-4 h-4 rounded-full bg-violet-400 absolute top-1 transition-all';t.className='w-11 h-6 rounded-full bg-violet-500/30 relative transition-all'}else{d.style.left='4px';d.className='w-4 h-4 rounded-full bg-slate-600 absolute top-1 transition-all';t.className='w-11 h-6 rounded-full bg-white/[.08] relative transition-all'}},
-
-    // Language
-    setLang(l){this.lang=l;localStorage.arena_lang=l;this.updLangUI();this.closeLang();document.getElementById('lang-btn').innerHTML={'de':'🇩🇪','vi':'🇻🇳','ar':'🇸🇦','fr':'🇫🇷'}[l]||'🌐';if(l==='ar')document.body.setAttribute('dir','rtl');else document.body.removeAttribute('dir')},
-    updLangUI(){document.querySelectorAll('.lang-opt').forEach(b=>{b.classList.toggle('active',b.dataset.lang===this.lang)})},
-
-    // Panels
-    openSettings(){document.getElementById('settings-overlay').classList.remove('hidden');setTimeout(()=>{document.getElementById('settings-overlay').style.opacity='1';document.getElementById('settings-panel').style.transform='translateX(0)'},10)},
-    closeSettings(){document.getElementById('settings-overlay').style.opacity='0';document.getElementById('settings-panel').style.transform='translateX(100%)';setTimeout(()=>document.getElementById('settings-overlay').classList.add('hidden'),300)},
-    openLang(){document.getElementById('lang-overlay').classList.remove('hidden');setTimeout(()=>{document.getElementById('lang-overlay').style.opacity='1';document.getElementById('lang-panel').style.transform='translateY(0)'},10)},
-    closeLang(){document.getElementById('lang-overlay').style.opacity='0';document.getElementById('lang-panel').style.transform='translateY(100%)';setTimeout(()=>document.getElementById('lang-overlay').classList.add('hidden'),300)},
-    openChat(){document.getElementById('chat-overlay').classList.remove('hidden');document.getElementById('chat-fab').classList.add('hidden');setTimeout(()=>{document.getElementById('chat-overlay').style.opacity='1';document.getElementById('chat-panel').style.transform='translateY(0) sm:translateY(0)'},10)},
-    closeChat(){document.getElementById('chat-overlay').style.opacity='0';document.getElementById('chat-panel').style.transform='translateY(100%)';document.getElementById('chat-fab').classList.remove('hidden');setTimeout(()=>document.getElementById('chat-overlay').classList.add('hidden'),300)},
-
-    // Chat
-    sendChat(){
-        const inp=document.getElementById('chat-input');const msg=inp.value.trim();if(!msg)return;
-        const msgs=document.getElementById('chat-msgs');
-        msgs.innerHTML+=`<div class="chat-bubble chat-user rounded-2xl rounded-tr-md px-4 py-3"><p class="text-[13px] text-indigo-200">${this.esc(msg)}</p></div>`;
-        inp.value='';msgs.scrollTop=msgs.scrollHeight;
-        // AI response placeholder
-        const langHint={'de':'','vi':' (Bitte auf Vietnamesisch erklären)','ar':' (يرجى الشرح بالعربية)','fr':' (Expliquez en français s\'il vous plaît)'}[this.lang]||'';
-        setTimeout(()=>{
-            msgs.innerHTML+=`<div class="chat-bubble chat-ai rounded-2xl rounded-tl-md px-4 py-3"><p class="text-[13px] text-slate-400 leading-relaxed"><i class="fas fa-circle-notch animate-spin mr-1 text-indigo-400/40"></i> Für vollständige KI-Antworten wird ein API-Schlüssel benötigt. Frage: "${this.esc(msg)}"${langHint}</p></div>`;
-            msgs.scrollTop=msgs.scrollHeight;
-        },600);
-    },
-    esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML},
-
-    // Weakness
-    loadWeak(){
-        const h=JSON.parse(localStorage.slm_exam_history||'[]');const l=h.filter(x=>x.module===1).pop();
-        if(!l||!l.topicScores)return;
-        const w=Object.entries(l.topicScores).filter(([,s])=>s.possible>0&&s.earned/s.possible<.6).map(([t])=>t);
-        if(!w.length)return;this._weak=w;
-        document.getElementById('weak-card').classList.remove('hidden');
-        document.getElementById('weak-pill').textContent=w.length;
-    },
-
-    // ═══════════════════════════
-    // GAME ENGINE
-    // ═══════════════════════════
-    go(mode){
-        if(!this.sel.size){alert('Bitte mindestens ein Thema wählen (⚙️ Einstellungen).');return}
-        this.mode=mode;this.idx=0;this.streak=0;this.best=0;this.xpSess=0;this.ok=0;this.tot=0;this.tRes={};
-        const pool=this.qs.filter(q=>this.sel.has(q.topic));
-        if(!pool.length){alert('Keine Fragen verfügbar.');return}
-        this.queue=this.shuf(pool).slice(0,this.rounds);
-        this.showView('game');document.getElementById('g-t').textContent=this.queue.length;this.play();
-    },
-    goWeak(){if(this._weak){this.sel=new Set(this._weak);this.renderTopics();this.go('recall')}},
-
-    play(){
-        const q=this.queue[this.idx];if(!q){this.end();return}
-        document.getElementById('g-n').textContent=this.idx+1;
-        document.getElementById('g-bar').style.width=(this.idx/this.queue.length*100)+'%';
-        document.getElementById('g-s').textContent=this.streak;
-        document.getElementById('g-xp').textContent=this.xpSess;
-        this.updCombo();
-        const C=document.getElementById('g-c'),tp=(q.topic||'').replace(/_/g,' ');
-        if(this.mode==='absorb')this.vAbsorb(q,C,tp);
-        else if(this.mode==='connect')this.vConnect(q,C,tp);
-        else if(this.mode==='sprint'){this.startSprint();this.vRecall(q,C,tp)}
-        else this.vRecall(q,C,tp);
-        window.scrollTo({top:0,behavior:'smooth'});
-    },
-
-    // Absorb
-    vAbsorb(q,C,tp){
-        const d=q.data||{},ans=d.correct_answer||d.definition_correct||q.correct_answers?.join(', ')||'',kw=d.keywords||d.definition_keywords||[];
-        C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-indigo-400/40 uppercase tracking-[.3em]">${tp}</span></div>
-        <div id="ab1"><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-sm font-semibold text-white leading-relaxed mb-5">${this.fmt(q.instruction||q.statement||'')}</div><div class="bg-indigo-500/[.03] border border-indigo-500/[.08] rounded-2xl p-5"><div class="text-[9px] font-black text-indigo-400/40 uppercase tracking-widest mb-2">Musterantwort</div><div class="text-slate-300 text-[13px] leading-relaxed">${ans}</div></div>${kw.length?`<div class="flex flex-wrap gap-1.5 mt-4">${kw.map(k=>`<span class="text-[10px] font-medium text-violet-300/30 bg-violet-500/[.03] px-2 py-0.5 rounded-lg">${k}</span>`).join('')}</div>`:''}</div><button onclick="Arena.ab2()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-indigo-500/90 hover:bg-indigo-400 text-white transition-all">Verstanden — Abfragen</button></div>
-        <div id="ab2" class="hidden"></div><div id="ab3" class="hidden"></div></div>`;
-    },
-
-    ab2(){document.getElementById('ab1').classList.add('hidden');const q=this.queue[this.idx],el=document.getElementById('ab2');el.classList.remove('hidden');
-        el.innerHTML=`<div class="up"><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-[9px] font-black text-orange-400/50 uppercase tracking-[.2em] mb-3">Aus dem Gedächtnis</div><div class="text-sm font-semibold text-white leading-relaxed mb-4">${this.fmt(q.instruction||'')}</div>${this.inp('ab-a',true)}</div><button onclick="Arena.ab3()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-orange-500/90 hover:bg-orange-400 text-white transition-all">Prüfen</button></div>`;
-        this.foc('ab-a');},
-
-    ab3(){const q=this.queue[this.idx],d=q.data||{},kw=d.keywords||d.definition_keywords||[],ans=d.correct_answer||d.definition_correct||'',u=this.val('ab-a');
-        let h=0;kw.forEach(k=>{if(u.toLowerCase().includes(k.toLowerCase()))h++});const p=kw.length?Math.round(h/kw.length*100):0,xp=Math.round(p/10)*5;
-        this.pts(p>=50,xp,q.topic);document.getElementById('ab2').classList.add('hidden');const el=document.getElementById('ab3');el.classList.remove('hidden');
-        el.innerHTML=`<div class="up"><div class="surface surface-lg p-6 sm:p-8 mb-5 text-center"><div class="text-4xl mb-2">${p>=70?'🔥':p>=40?'💪':'📖'}</div><div class="text-2xl font-black ${p>=70?'text-emerald-400':p>=40?'text-amber-400':'text-red-400'}">${p}%</div><div class="text-[11px] text-slate-600 mb-4">${h}/${kw.length} Keywords · +${xp} XP</div><div class="flex flex-wrap gap-1 justify-center mb-4">${kw.map(k=>`<span class="text-[10px] font-medium px-2 py-0.5 rounded ${u.toLowerCase().includes(k.toLowerCase())?'bg-emerald-500/10 text-emerald-400':'bg-white/[.02] text-slate-700'}">${k}</span>`).join('')}</div><details><summary class="text-[10px] font-bold text-violet-400/40 cursor-pointer uppercase tracking-widest">Antwort zeigen</summary><p class="text-slate-500 text-xs mt-3 text-left leading-relaxed">${ans}</p></details></div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    // Recall
-    vRecall(q,C,tp){if(q.type==='richtig_falsch')this.vRF(q,C,tp);else if(q.type==='nennen_liste')this.vList(q,C,tp);else if(q.type==='zuordnung')this.vZu(q,C,tp);else this.vFrei(q,C,tp)},
-
-    vRF(q,C,tp){const ss=q.statements||(q.data?.statements)||[{text:q.statement,answer:q.answer}];const s=ss[Math.floor(Math.random()*ss.length)];
-        C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-orange-400/40 uppercase tracking-[.3em]">${tp}</span></div><div class="surface surface-lg p-6 sm:p-8 mb-5" id="rf-c"><div class="text-[10px] font-bold text-slate-600 uppercase tracking-widest mb-3">Richtig oder Falsch?</div><div class="text-[15px] font-medium text-white leading-relaxed">${s.text}</div></div><div class="grid grid-cols-2 gap-3" id="rf-b"><button onclick="Arena.cRF(true,'${s.answer}')" class="ans-btn surface py-5 rounded-2xl text-center font-black text-sm text-white hover:border-emerald-500/30"><i class="fas fa-check text-emerald-400 text-lg mb-1 block"></i>Richtig</button><button onclick="Arena.cRF(false,'${s.answer}')" class="ans-btn surface py-5 rounded-2xl text-center font-black text-sm text-white hover:border-red-500/30"><i class="fas fa-times text-red-400 text-lg mb-1 block"></i>Falsch</button></div><div id="rf-fb" class="hidden mt-5"></div></div>`;},
-
-    cRF(isR,cor){const ok=(isR?'richtig':'falsch')===cor,xp=ok?15:0,q=this.queue[this.idx];this.pts(ok,xp,q.topic);
-        document.getElementById('rf-c').classList.add(ok?'ok-pulse':'no-pulse');document.getElementById('rf-b').style.pointerEvents='none';
-        document.getElementById('rf-fb').classList.remove('hidden');document.getElementById('rf-fb').innerHTML=`<div class="up"><div class="surface p-5 ${ok?'border-emerald-500/10':'border-red-500/10'} mb-4 flex items-center gap-3"><span class="text-xl">${ok?'✅':'❌'}</span><div class="flex-1"><div class="font-bold text-white text-sm">${ok?'Richtig!':'Falsch!'}</div><div class="text-[11px] text-slate-500">${q.explanation||'Antwort: '+cor}</div></div>${xp?`<span class="text-indigo-400/60 font-bold text-xs">+${xp}</span>`:''}</div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    vList(q,C,tp){const n=q.count||q.data?.count||3,lab=q.list_label||q.data?.list_label||'';
-        C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-orange-400/40 uppercase tracking-[.3em]">${tp}</span></div><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-sm font-semibold text-white leading-relaxed mb-5">${this.fmt(q.instruction)}</div>${lab?`<div class="text-[10px] font-bold text-slate-600 mb-2">${lab}</div>`:''}<div class="space-y-2">${Array.from({length:n},(_,i)=>`<div class="flex items-center gap-2"><span class="w-6 h-6 rounded-lg bg-white/[.03] flex items-center justify-center text-slate-700 text-[10px] font-black shrink-0">${i+1}</span>${this.inp('li-'+i)}</div>`).join('')}</div></div><button onclick="Arena.cList(${n})" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-orange-500/90 hover:bg-orange-400 text-white transition-all">Prüfen</button><div id="li-fb" class="hidden mt-5"></div></div>`;this.foc('li-0');},
-
-    cList(n){const q=this.queue[this.idx],valid=q.all_valid_answers||q.data?.all_valid_answers||q.correct_answers||q.data?.correct_answers||[],cor=q.correct_answers||q.data?.correct_answers||[];let hit=0;const used=new Set();for(let i=0;i<n;i++){const v=this.val('li-'+i);if(v){const m=valid.find((a,ai)=>!used.has(ai)&&v.toLowerCase().includes(a.toLowerCase().substring(0,Math.min(4,a.length))));if(m){hit++;used.add(valid.indexOf(m))}}}const xp=hit*10;this.pts(hit>=Math.ceil(n/2),xp,q.topic);
-        document.getElementById('li-fb').classList.remove('hidden');document.getElementById('li-fb').innerHTML=`<div class="up"><div class="surface p-5 mb-4 text-center"><div class="text-2xl font-black ${hit>=Math.ceil(n/2)?'text-emerald-400':'text-red-400'}">${hit}/${n}</div><div class="text-xs text-indigo-400/60 font-bold mb-3">+${xp} XP</div><div class="flex flex-wrap gap-1 justify-center">${cor.map(c=>`<span class="text-[10px] font-medium bg-emerald-500/10 text-emerald-400/70 px-2 py-0.5 rounded">${c}</span>`).join('')}</div></div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    vZu(q,C,tp){const d=q.data||{},ss=d.statements||[],leg=d.legend||{},opts=Object.keys(leg),sh=[...ss].sort(()=>Math.random()-.5);
-        C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-orange-400/40 uppercase tracking-[.3em]">${tp}</span></div><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-sm font-semibold text-white leading-relaxed mb-4">${this.fmt(q.instruction)}</div><div class="flex flex-wrap gap-2 mb-5">${Object.entries(leg).map(([k,v])=>`<span class="text-[11px] font-medium text-indigo-300/50"><b class="text-white/70">${k}</b>=${v}</span>`).join('')}</div><div class="space-y-2">${sh.map((s,i)=>`<div class="flex items-center gap-2 bg-white/[.015] rounded-xl p-3 border border-white/[.03]"><select id="zu-${i}" class="w-11 bg-white/[.05] border border-white/[.06] rounded-lg px-1 py-2 text-white font-bold text-center text-sm outline-none focus:border-violet-500 shrink-0 appearance-none cursor-pointer"><option value="">–</option>${opts.map(o=>`<option value="${o}">${o}</option>`).join('')}</select><span class="text-slate-400 text-[12px] flex-1">${s.text}</span></div>`).join('')}</div></div><button onclick="Arena.cZu(${JSON.stringify(sh).replace(/"/g,'&quot;')})" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-orange-500/90 hover:bg-orange-400 text-white transition-all">Prüfen</button><div id="zu-fb" class="hidden mt-5"></div></div>`;},
-
-    cZu(ss){let hit=0;ss.forEach((s,i)=>{if(document.getElementById('zu-'+i).value===s.answer)hit++});const xp=hit*12;this.pts(hit>=Math.ceil(ss.length/2),xp,this.queue[this.idx].topic);
-        document.getElementById('zu-fb').classList.remove('hidden');document.getElementById('zu-fb').innerHTML=`<div class="up"><div class="surface p-5 mb-4 text-center"><div class="text-2xl font-black ${hit>=Math.ceil(ss.length/2)?'text-emerald-400':'text-red-400'}">${hit}/${ss.length}</div><div class="text-xs text-indigo-400/60 font-bold">+${xp} XP</div></div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    vFrei(q,C,tp){C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-orange-400/40 uppercase tracking-[.3em]">${tp}</span></div><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-sm font-semibold text-white leading-relaxed mb-5">${this.fmt(q.instruction||'')}</div>${this.inp('fr-a',true)}</div><button onclick="Arena.cFrei()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-orange-500/90 hover:bg-orange-400 text-white transition-all">Prüfen</button><div id="fr-fb" class="hidden mt-5"></div></div>`;this.foc('fr-a');},
-
-    cFrei(){const q=this.queue[this.idx],d=q.data||{},kw=d.keywords||d.definition_keywords||[],ans=d.correct_answer||d.definition_correct||'',u=this.val('fr-a');let h=0;kw.forEach(k=>{if(u.toLowerCase().includes(k.toLowerCase()))h++});const p=kw.length?Math.round(h/kw.length*100):0,xp=Math.round(p/10)*5;this.pts(p>=50,xp,q.topic);
-        document.getElementById('fr-fb').classList.remove('hidden');document.getElementById('fr-fb').innerHTML=`<div class="up"><div class="surface p-5 mb-4 text-center"><div class="text-2xl font-black ${p>=60?'text-emerald-400':p>=30?'text-amber-400':'text-red-400'}">${p}%</div><div class="text-xs text-indigo-400/60 font-bold mb-3">+${xp} XP</div><div class="flex flex-wrap gap-1 justify-center mb-3">${kw.map(k=>`<span class="text-[10px] font-medium px-2 py-0.5 rounded ${u.toLowerCase().includes(k.toLowerCase())?'bg-emerald-500/10 text-emerald-400':'bg-white/[.02] text-slate-700'}">${k}</span>`).join('')}</div><details><summary class="text-[10px] font-bold text-violet-400/40 cursor-pointer uppercase tracking-widest">Antwort</summary><p class="text-slate-500 text-xs mt-2 text-left leading-relaxed">${ans}</p></details></div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    // Connect
-    vConnect(q,C,tp){let pairs=[];if(q.type==='zuordnung'&&q.data?.legend&&q.data?.statements){pairs=q.data.statements.slice(0,4).map(s=>({a:q.data.legend[s.answer]||s.answer,b:s.text.substring(0,55)}))}else if(q.correct_answers){pairs=q.correct_answers.slice(0,4).map((a,i)=>({a,b:'#'+(i+1)}))}if(pairs.length<2){this.vRecall(q,C,tp);return}
-        this._cp=pairs;this._cm={};this._cs=null;const L=this.shuf([...pairs]),R=this.shuf([...pairs]);
-        C.innerHTML=`<div class="up"><div class="text-center mb-5"><span class="text-[9px] font-black text-emerald-400/40 uppercase tracking-[.3em]">${tp}</span></div><div class="surface surface-lg p-6 sm:p-8 mb-5"><div class="text-[10px] font-bold text-slate-600 uppercase tracking-widest mb-4">Paare verbinden — Links wählen, dann rechts</div><div class="grid grid-cols-2 gap-3"><div class="space-y-2">${L.map((p,i)=>`<button id="cl-${i}" onclick="Arena.cSel('l',${i},'${p.a.replace(/'/g,"\\'")}')" class="ans-btn w-full surface p-3 rounded-xl text-left text-[12px] font-bold text-indigo-300/70 transition-all">${p.a}</button>`).join('')}</div><div class="space-y-2">${R.map((p,i)=>`<button id="cr-${i}" onclick="Arena.cSel('r',${i},'${p.a.replace(/'/g,"\\'")}')" class="ans-btn w-full surface p-3 rounded-xl text-left text-[11px] text-slate-500 transition-all">${p.b}</button>`).join('')}</div></div></div><div id="c-fb" class="hidden"></div></div>`;},
-
-    cSel(side,i,key){if(side==='l'){document.querySelectorAll('[id^="cl-"]').forEach(b=>b.classList.remove('picked'));document.getElementById('cl-'+i).classList.add('picked');this._cs={i,key}}else if(this._cs){const ok=this._cs.key===key;const lb=document.getElementById('cl-'+this._cs.i),rb=document.getElementById('cr-'+i);if(ok){lb.classList.add('right','pointer-events-none','opacity-30');lb.classList.remove('picked');rb.classList.add('right','pointer-events-none','opacity-30');this._cm[key]=1;if(Object.keys(this._cm).length===this._cp.length)setTimeout(()=>this.cDone(),300)}else{lb.classList.add('wrong');rb.classList.add('wrong');setTimeout(()=>{lb.classList.remove('wrong','picked');rb.classList.remove('wrong')},400)}this._cs=null}},
-
-    cDone(){const n=this._cp.length,xp=n*12;this.pts(true,xp,this.queue[this.idx].topic);document.getElementById('c-fb').classList.remove('hidden');document.getElementById('c-fb').innerHTML=`<div class="up"><div class="surface p-5 mb-4 text-center"><div class="text-3xl mb-1">🔗</div><div class="font-black text-white">${n} Paare</div><div class="text-xs text-indigo-400/60 font-bold">+${xp} XP</div></div><button onclick="Arena.nxt()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Weiter</button></div>`;},
-
-    // Sprint timer
-    startSprint(){if(this.sprintTmr)clearInterval(this.sprintTmr);let s=30;const el=document.createElement('div');el.id='sp-t';el.className='fixed top-14 right-5 z-50 bg-rose-500/15 text-rose-400 font-black text-sm px-3 py-1.5 rounded-xl border border-rose-500/15';el.textContent='30s';document.body.appendChild(el);
-        this.sprintTmr=setInterval(()=>{s--;el.textContent=s+'s';if(s<=5)el.classList.add('animate-pulse');if(s<=0){clearInterval(this.sprintTmr);el.remove();this.pts(false,0,this.queue[this.idx]?.topic);this.nxt()}},1000)},
-
-    // Scoring
-    pts(ok,xp,topic){this.tot++;if(ok){this.ok++;this.streak++;if(this.streak>this.best)this.best=this.streak}else this.streak=0;
-        const mul=this.streak>=10?3:this.streak>=7?2.5:this.streak>=5?2:this.streak>=3?1.5:1;const f=Math.round(xp*mul);this.xpSess+=f;this.xp+=f;
-        if(topic){const m=this.mst;m[topic]=Math.round((m[topic]||0)*.7+(ok?100:0)*.3);this.mst=m;if(!this.tRes[topic])this.tRes[topic]={ok:0,tot:0};this.tRes[topic].tot++;if(ok)this.tRes[topic].ok++}
-        if(f>0)this.flyXP(f);document.getElementById('g-s').textContent=this.streak;document.getElementById('g-xp').textContent=this.xpSess;this.updCombo()},
-
-    flyXP(n){const el=document.createElement('div');el.className='xp-pop';el.textContent='+'+n;el.style.left=(30+Math.random()*40)+'%';el.style.top='40%';document.body.appendChild(el);setTimeout(()=>el.remove(),1000)},
-    updCombo(){const el=document.getElementById('g-combo'),s=this.streak;if(s>=10){el.textContent='GODLIKE ×3';el.style.color='#a855f7'}else if(s>=7){el.textContent='ULTRA ×2.5';el.style.color='#ef4444'}else if(s>=5){el.textContent='FIRE ×2';el.style.color='#f97316'}else if(s>=3){el.textContent='×1.5';el.style.color='#a3e635'}else el.textContent=''},
-
-    nxt(){if(this.sprintTmr){clearInterval(this.sprintTmr);document.getElementById('sp-t')?.remove()}this.idx++;this.idx>=this.queue.length?this.end():this.play()},
-    exit(){if(confirm('Beenden?'))this.end()},
-
-    // Results
-    end(){if(this.sprintTmr){clearInterval(this.sprintTmr);document.getElementById('sp-t')?.remove()}
-        const today=new Date().toDateString();if(localStorage.arena_last!==today){localStorage.arena_ds=(this.ds+1).toString();localStorage.arena_last=today}
-        this.showView('results');const p=this.tot?Math.round(this.ok/this.tot*100):0;
-        document.getElementById('r-c').innerHTML=`<div class="text-center up"><div class="text-5xl mb-4">${p>=80?'🏆':p>=60?'🔥':p>=40?'💪':'📖'}</div><div class="text-2xl font-black text-white tracking-tight mb-1">Session beendet</div><div class="text-slate-600 text-sm mb-8">${this.mode?.toUpperCase()} · ${this.tot} Fragen</div>
-        <div class="grid grid-cols-3 gap-3 mb-6"><div class="surface p-4 text-center"><div class="text-xl font-black text-indigo-400">${this.xpSess}</div><div class="text-[9px] text-slate-600 font-bold uppercase">XP</div></div><div class="surface p-4 text-center"><div class="text-xl font-black text-emerald-400">${p}%</div><div class="text-[9px] text-slate-600 font-bold uppercase">Richtig</div></div><div class="surface p-4 text-center"><div class="text-xl font-black text-orange-400">${this.best}</div><div class="text-[9px] text-slate-600 font-bold uppercase">Streak</div></div></div>
-        ${Object.keys(this.tRes).length?`<div class="surface p-5 mb-6 text-left"><div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mb-3">Themen</div>${Object.entries(this.tRes).map(([t,s])=>{const tp=s.tot?Math.round(s.ok/s.tot*100):0;return`<div class="flex justify-between py-1.5 border-b border-white/[.03] last:border-0"><span class="text-[11px] font-medium text-slate-400">${t.replace(/_/g,' ')}</span><span class="text-[11px] font-bold ${tp>=60?'text-emerald-400':'text-red-400'}">${s.ok}/${s.tot}</span></div>`}).join('')}</div>`:''}
-        <div class="space-y-2"><button onclick="Arena.restart()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-violet-500/90 hover:bg-violet-400 text-white transition-all">Nochmal</button><button onclick="Arena.home()" class="w-full py-3.5 rounded-2xl font-bold text-sm bg-white/[.04] hover:bg-white/[.07] text-white transition-all">Zurück</button></div></div>`;},
-
-    restart(){this.go(this.mode)},
-    home(){this.showView('home');this.renderHome()},
-
-    // Helpers
-    showView(v){['home','game','results'].forEach(x=>{const el=document.getElementById('v-'+x);el.classList.toggle('hidden',x!==v)})},
-    inp(id,multi=false){return multi?`<textarea id="${id}" class="arena-textarea" rows="4" placeholder="Antwort..."></textarea><div class="pen-hint"><i class="fas fa-pen-fancy text-[10px]"></i><span>S-Pen aktiv</span></div>`:`<input type="text" id="${id}" class="arena-input" placeholder="...">`},
-    val(id){return(document.getElementById(id)?.value||'').trim()},
-    foc(id){setTimeout(()=>document.getElementById(id)?.focus(),150)},
-    shuf(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b},
-    fmt(t){return(t||'').replace(/\*\*(.*?)\*\*/g,'<strong class="text-indigo-300/70">$1</strong>')}
+// ═══════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════
+let S = {
+    screen: 'home', // home | game | results
+    xp: parseInt(localStorage.getItem('arena_xp')||'0'),
+    streak: 0,
+    dailyStreak: parseInt(localStorage.getItem('arena_ds')||'0'),
+    mastery: JSON.parse(localStorage.getItem('arena_mastery')||'{}'),
+    // Game state
+    module: null,
+    mode: null,
+    bank: [],
+    questions: [],
+    qi: 0,       // question index
+    score: 0,
+    total: 0,
+    combo: 0,
+    maxCombo: 0,
+    sessionXP: 0,
+    answers: [],  // {correct, earned, topic}
+    sprintTimer: null,
+    sprintLeft: 30,
+    roundSize: 10,
 };
 
-document.addEventListener('DOMContentLoaded',()=>Arena.init());
+const $ = id => document.getElementById(id);
+const app = document.getElementById('app');
+
+function save() {
+    localStorage.setItem('arena_xp', S.xp);
+    localStorage.setItem('arena_ds', S.dailyStreak);
+    localStorage.setItem('arena_mastery', JSON.stringify(S.mastery));
+    // Update daily streak
+    const today = new Date().toISOString().slice(0,10);
+    const last = localStorage.getItem('arena_last');
+    if (last !== today) {
+        const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10);
+        S.dailyStreak = (last === yesterday) ? S.dailyStreak + 1 : 1;
+        localStorage.setItem('arena_last', today);
+        localStorage.setItem('arena_ds', S.dailyStreak);
+    }
+}
+
+function getRank(pct) {
+    for (let i = RANKS.length-1; i >= 0; i--) if (pct >= RANKS[i].min) return RANKS[i];
+    return RANKS[0];
+}
+
+function getModuleMastery(moduleId) {
+    const key = `module_${moduleId}`;
+    const topics = S.mastery[key] || {};
+    const vals = Object.values(topics);
+    if (!vals.length) return 0;
+    return Math.round(vals.reduce((a,b)=>a+b,0) / vals.length);
+}
+
+function getLevel() { return Math.floor(S.xp / 500) + 1; }
+function getComboMultiplier() {
+    return S.combo >= 10 ? 3 : S.combo >= 7 ? 2.5 : S.combo >= 5 ? 2 : S.combo >= 3 ? 1.5 : 1;
+}
+
+function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length-1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+    return a;
+}
+
+function matchKW(text, keyword) {
+    if (!text || !keyword) return false;
+    const u = text.toLowerCase().trim(), k = keyword.toLowerCase().trim();
+    if (u.includes(k)) return true;
+    if (k.length >= 4 && u.includes(k.substring(0, Math.min(k.length, 5)))) return true;
+    return false;
+}
+
+// ═══════════════════════════════════════════════
+//  RENDER: HOME
+// ═══════════════════════════════════════════════
+function renderHome() {
+    const level = getLevel();
+    const weaknesses = JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
+    const hasWeakness = weaknesses.length > 0;
+
+    let html = `
+    <div class="enter">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html" class="text-slate-500 hover:text-violet-400 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i><span class="text-sm font-bold">Dashboard</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <div class="glass rounded-xl px-3 py-1.5 flex items-center gap-2">
+                    <span class="text-lg">🔥</span>
+                    <span class="text-orange-400 font-extrabold t-num">${S.dailyStreak}</span>
+                </div>
+                <div class="glass rounded-xl px-3 py-1.5 flex items-center gap-2">
+                    <span class="text-violet-400 font-extrabold t-num">${S.xp.toLocaleString()}</span>
+                    <span class="text-[9px] text-slate-500 font-bold">XP</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <div class="text-center mb-8">
+            <div class="text-4xl mb-2 float">🧠</div>
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight">SLM Arena</h1>
+            <p class="text-slate-500 text-sm mt-1">Level ${level} · Wähle ein Modul zum Trainieren</p>
+        </div>
+
+        <!-- Module Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            ${MODULES.map(m => {
+                const pct = getModuleMastery(m.id);
+                const rank = getRank(pct);
+                return `
+                <div onclick="selectModule(${m.id})" class="glass rounded-2xl p-5 cursor-pointer hover:border-white/10 transition-all group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:${m.color}20; color:${m.color}">
+                            <i class="fas ${m.icon}"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Modul ${m.id}</div>
+                            <div class="text-sm font-bold text-white truncate">${m.name}</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-lg rank-glow" style="color:${rank.color}">${rank.emoji}</div>
+                            <div class="text-[9px] font-bold" style="color:${rank.color}">${rank.label}</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1 bg-white/5 rounded-full h-1.5 overflow-hidden">
+                            <div class="h-full rounded-full transition-all" style="width:${pct}%; background:${m.color}"></div>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-500 t-num">${pct}%</span>
+                    </div>
+                </div>`;
+            }).join('')}
+        </div>
+
+        ${hasWeakness ? `
+        <div class="glass rounded-2xl p-5 mb-6 border-red-500/20">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center pulse-ring">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <div>
+                    <div class="text-sm font-bold text-white">Schwächen aus Klausuren erkannt</div>
+                    <div class="text-xs text-red-400">${weaknesses[weaknesses.length-1].weakTopics?.length || 0} schwache Themen</div>
+                </div>
+            </div>
+            <button onclick="startWeaknessMode()" class="w-full bg-red-600 hover:bg-red-500 text-white py-2.5 rounded-xl font-bold text-sm transition-colors">
+                <i class="fas fa-crosshairs mr-2"></i>Weakness Destroyer starten
+            </button>
+        </div>` : ''}
+    </div>`;
+
+    app.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════
+//  SELECT MODULE → SHOW MODES
+// ═══════════════════════════════════════════════
+function selectModule(id) {
+    S.module = MODULES.find(m => m.id === id);
+    const pct = getModuleMastery(id);
+    const rank = getRank(pct);
+
+    let html = `
+    <div class="enter">
+        <button onclick="renderHome()" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-6 inline-flex items-center gap-2 transition-colors">
+            <i class="fas fa-arrow-left"></i> Zurück
+        </button>
+
+        <div class="glass rounded-2xl p-6 mb-6">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl" style="background:${S.module.color}20; color:${S.module.color}">
+                    <i class="fas ${S.module.icon}"></i>
+                </div>
+                <div>
+                    <h2 class="text-xl font-extrabold">Modul ${id}: ${S.module.name}</h2>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-lg">${rank.emoji}</span>
+                        <span class="text-sm font-bold" style="color:${rank.color}">${rank.label}</span>
+                        <span class="text-xs text-slate-500 t-num">(${pct}%)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 rounded-full h-2 overflow-hidden">
+                <div class="h-full rounded-full" style="width:${pct}%; background:${S.module.color}"></div>
+            </div>
+        </div>
+
+        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Trainingsmodus wählen</h3>
+        <div class="space-y-3 mb-6">
+            ${MODES.filter(m => m.id !== 'weakness').map(m => `
+            <button onclick="startMode('${m.id}')" class="w-full glass rounded-2xl p-5 text-left hover:border-white/10 transition-all group">
+                <div class="flex items-center gap-4">
+                    <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:${m.color}20; color:${m.color}">
+                        <i class="fas ${m.icon} text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-bold text-white text-sm">${m.name}</div>
+                        <div class="text-[11px] text-slate-500">${m.desc}</div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-white transition-colors"></i>
+                </div>
+            </button>`).join('')}
+        </div>
+
+        <div class="glass rounded-2xl p-5 mb-4">
+            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Fragen pro Runde</label>
+            <div class="flex gap-2">
+                ${[5,10,15,20].map(n => `
+                <button onclick="S.roundSize=${n};document.querySelectorAll('.round-btn').forEach(b=>b.className='round-btn glass rounded-lg px-4 py-2 text-sm font-bold text-slate-400 transition-all');this.className='round-btn bg-violet-600 rounded-lg px-4 py-2 text-sm font-bold text-white transition-all'"
+                    class="round-btn ${S.roundSize===n?'bg-violet-600 text-white':'glass text-slate-400'} rounded-lg px-4 py-2 text-sm font-bold transition-all">${n}</button>
+                `).join('')}
+            </div>
+        </div>
+    </div>`;
+
+    app.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════
+//  START GAME
+// ═══════════════════════════════════════════════
+async function startMode(mode) {
+    S.mode = mode;
+    S.qi = 0; S.score = 0; S.total = 0; S.combo = 0; S.maxCombo = 0; S.sessionXP = 0; S.answers = [];
+
+    app.innerHTML = `<div class="text-center py-20"><i class="fas fa-spinner fa-spin text-violet-400 text-2xl mb-4"></i><p class="text-slate-500 font-medium">Fragen laden...</p></div>`;
+
+    try {
+        const r = await fetch(`data/question-banks/module${S.module.id}_questions.json`);
+        if (!r.ok) throw new Error('not found');
+        S.bank = await r.json();
+        const questions = S.bank.filter(q => q.q_id && !q.fallabhaengig);
+        S.questions = shuffle(questions).slice(0, S.roundSize);
+        S.total = S.questions.length;
+        if (!S.total) throw new Error('no questions');
+        renderGame();
+    } catch(e) {
+        app.innerHTML = `
+        <div class="text-center py-20 enter">
+            <div class="text-5xl mb-4">😔</div>
+            <h2 class="text-xl font-bold mb-2">Keine Fragen verfügbar</h2>
+            <p class="text-slate-500 text-sm mb-6">Für Modul ${S.module.id} gibt es noch keine Fragenbank.</p>
+            <button onclick="renderHome()" class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>Zurück
+            </button>
+        </div>`;
+    }
+}
+
+async function startWeaknessMode() {
+    const w = JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
+    if (!w.length) return renderHome();
+    const latest = w[w.length-1];
+    S.module = MODULES.find(m => m.id === latest.module) || MODULES[0];
+    S.mode = 'weakness';
+    S.qi = 0; S.score = 0; S.total = 0; S.combo = 0; S.maxCombo = 0; S.sessionXP = 0; S.answers = [];
+
+    try {
+        const r = await fetch(`data/question-banks/module${S.module.id}_questions.json`);
+        S.bank = await r.json();
+        let pool = S.bank.filter(q => q.q_id && !q.fallabhaengig);
+        // Prioritize weak topics and wrong questions
+        if (latest.weakTopics?.length) {
+            const weakPool = pool.filter(q => latest.weakTopics.includes(q.topic));
+            if (weakPool.length >= 5) pool = weakPool;
+        }
+        S.questions = shuffle(pool).slice(0, S.roundSize);
+        S.total = S.questions.length;
+        renderGame();
+    } catch(e) { renderHome(); }
+}
+
+// ═══════════════════════════════════════════════
+//  RENDER: GAME
+// ═══════════════════════════════════════════════
+function renderGame() {
+    if (S.qi >= S.total) return renderResults();
+    const q = S.questions[S.qi];
+    const mult = getComboMultiplier();
+    const progress = Math.round(((S.qi) / S.total) * 100);
+    const modeInfo = MODES.find(m => m.id === S.mode);
+
+    let html = `
+    <div class="enter" id="game-card">
+        <!-- Top bar -->
+        <div class="flex items-center justify-between mb-4">
+            <button onclick="renderResults()" class="text-slate-500 hover:text-red-400 text-xs font-bold transition-colors">
+                <i class="fas fa-times mr-1"></i>Beenden
+            </button>
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-slate-500 t-num">${S.qi+1}/${S.total}</span>
+                ${S.combo >= 3 ? `<span class="text-xs font-bold text-orange-400">🔥 ×${mult}</span>` : ''}
+                <span class="text-xs font-bold text-violet-400 t-num">+${S.sessionXP} XP</span>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="w-full bg-white/5 rounded-full h-1.5 mb-6 overflow-hidden">
+            <div class="h-full rounded-full bg-violet-500 transition-all duration-300" style="width:${progress}%"></div>
+        </div>
+
+        <!-- Topic badge -->
+        <div class="flex items-center gap-2 mb-3">
+            <span class="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded" style="background:${S.module.color}15; color:${S.module.color}">${(q.topic||'').replace(/_/g,' ')}</span>
+            <span class="text-[9px] font-bold text-slate-600 uppercase tracking-widest">${modeInfo?.name || S.mode}</span>
+        </div>
+
+        <!-- Question -->
+        <div class="glass rounded-2xl p-5 sm:p-6 mb-4">
+            ${renderQuestion(q)}
+        </div>
+
+        <!-- Sprint timer -->
+        ${S.mode === 'sprint' ? `
+        <div class="flex items-center gap-2 mb-4">
+            <div class="flex-1 bg-white/5 rounded-full h-2 overflow-hidden">
+                <div id="sprint-bar" class="h-full rounded-full bg-red-500 transition-all" style="width:100%"></div>
+            </div>
+            <span id="sprint-time" class="text-xs font-bold text-red-400 t-num">30s</span>
+        </div>` : ''}
+
+        <!-- Answer area -->
+        <div id="answer-area">${renderAnswerInput(q)}</div>
+        <div id="feedback-area"></div>
+    </div>`;
+
+    app.innerHTML = html;
+
+    if (S.mode === 'sprint') startSprintTimer();
+    if (S.mode === 'absorb') startAbsorbMode(q);
+}
+
+function renderQuestion(q) {
+    const inst = (q.instruction || q.statement || '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    if (q.type === 'richtig_falsch') {
+        const s = q.statements || [{text: q.statement}];
+        return `<p class="text-sm font-medium text-slate-300 mb-3">${inst || 'Richtig oder falsch?'}</p>
+            <p class="text-white font-bold text-base leading-relaxed">${s[0]?.text || q.statement}</p>`;
+    }
+    return `<p class="text-white font-bold text-base leading-relaxed">${inst}</p>`;
+}
+
+function renderAnswerInput(q) {
+    if (S.mode === 'absorb') return ''; // handled separately
+
+    if (q.type === 'richtig_falsch') {
+        return `
+        <div class="grid grid-cols-2 gap-3">
+            <button onclick="checkAnswer('richtig')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-green-500/10 hover:border-green-500/30 transition-all">
+                <i class="fas fa-check text-green-400 mr-2"></i>Richtig
+            </button>
+            <button onclick="checkAnswer('falsch')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-red-500/10 hover:border-red-500/30 transition-all">
+                <i class="fas fa-times text-red-400 mr-2"></i>Falsch
+            </button>
+        </div>`;
+    }
+
+    if (q.type === 'nennen_liste' || q.type === 'ergaenzen_liste') {
+        const count = q.count || q.data?.count || q.data?.missing_items?.length || 3;
+        let inputs = '';
+        for (let i = 0; i < Math.min(count, 4); i++) {
+            inputs += `<input id="ans-${i}" type="text" class="w-full glass rounded-xl px-4 py-3 text-sm font-medium text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-2" placeholder="Antwort ${i+1}">`;
+        }
+        return inputs + `<button onclick="checkListAnswer(${count})" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-2 transition-colors"><i class="fas fa-check mr-2"></i>Prüfen</button>`;
+    }
+
+    // Default: text input
+    return `
+    <input id="ans-text" type="text" class="w-full glass rounded-xl px-4 py-3 text-sm font-medium text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-3" placeholder="Deine Antwort..." onkeydown="if(event.key==='Enter')checkTextAnswer()">
+    <button onclick="checkTextAnswer()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors"><i class="fas fa-check mr-2"></i>Prüfen</button>`;
+}
+
+// ═══════════════════════════════════════════════
+//  ABSORB MODE
+// ═══════════════════════════════════════════════
+function startAbsorbMode(q) {
+    const correct = getCorrectAnswer(q);
+    const area = $('answer-area');
+    area.innerHTML = `
+    <div class="glass rounded-2xl p-5 mb-3 border-indigo-500/20">
+        <div class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest mb-2"><i class="fas fa-eye mr-1"></i>Merke dir die Antwort</div>
+        <p class="text-white font-medium text-sm leading-relaxed">${correct}</p>
+    </div>
+    <div class="text-center text-xs text-slate-500 font-bold"><span id="absorb-timer">5</span>s verbleibend</div>`;
+
+    let t = 5;
+    const iv = setInterval(() => {
+        t--;
+        const el = $('absorb-timer');
+        if (el) el.textContent = t;
+        if (t <= 0) {
+            clearInterval(iv);
+            area.innerHTML = `
+            <input id="ans-text" type="text" class="w-full glass rounded-xl px-4 py-3 text-sm font-medium text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-3" placeholder="Was war die Antwort?" autofocus>
+            <button onclick="checkTextAnswer()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors"><i class="fas fa-check mr-2"></i>Prüfen</button>`;
+            $('ans-text')?.focus();
+        }
+    }, 1000);
+}
+
+// ═══════════════════════════════════════════════
+//  SPRINT TIMER
+// ═══════════════════════════════════════════════
+function startSprintTimer() {
+    S.sprintLeft = 30;
+    clearInterval(S.sprintTimer);
+    S.sprintTimer = setInterval(() => {
+        S.sprintLeft--;
+        const bar = $('sprint-bar');
+        const time = $('sprint-time');
+        if (bar) bar.style.width = (S.sprintLeft/30*100) + '%';
+        if (time) time.textContent = S.sprintLeft + 's';
+        if (S.sprintLeft <= 0) { clearInterval(S.sprintTimer); showFeedback(false, null); }
+    }, 1000);
+}
+
+// ═══════════════════════════════════════════════
+//  CHECK ANSWERS
+// ═══════════════════════════════════════════════
+function getCorrectAnswer(q) {
+    if (q.type === 'richtig_falsch') {
+        const s = q.statements || [{answer: q.answer}];
+        return s[0]?.answer || q.answer || '';
+    }
+    if (q.type === 'freitext_box') return q.data?.correct_answer || q.data?.keywords?.join(', ') || '';
+    if (q.type === 'nennen_liste') return (q.correct_answers || q.data?.correct_answers || []).join(', ');
+    if (q.type === 'definition_plus_beispiele') return q.data?.definition_correct || '';
+    if (q.type === 'zuordnung') return (q.data?.statements||[]).map(s => `${s.answer}: ${s.text}`).join('; ');
+    if (q.type === 'ergaenzen_liste') return (q.data?.missing_items || []).join(', ');
+    return q.explanation || q.data?.correct_answer || '';
+}
+
+function checkAnswer(val) {
+    const q = S.questions[S.qi];
+    const correct = (q.statements?.[0]?.answer || q.answer || '').toLowerCase();
+    showFeedback(val.toLowerCase() === correct, val);
+}
+
+function checkTextAnswer() {
+    const q = S.questions[S.qi];
+    const text = $('ans-text')?.value?.trim() || '';
+    if (!text) return;
+    const keywords = q.data?.keywords || q.data?.definition_keywords || q.all_valid_answers || q.correct_answers || q.data?.correct_answers || [];
+    let matched = 0;
+    keywords.forEach(k => { if (matchKW(text, k)) matched++; });
+    const isCorrect = keywords.length > 0 ? (matched / keywords.length) >= 0.4 : text.length > 3;
+    showFeedback(isCorrect, text);
+}
+
+function checkListAnswer(count) {
+    const q = S.questions[S.qi];
+    const valid = q.all_valid_answers || q.data?.all_valid_answers || q.correct_answers || q.data?.correct_answers || q.data?.all_valid_missing || q.data?.missing_items || [];
+    let matched = 0;
+    for (let i = 0; i < count; i++) {
+        const val = $(`ans-${i}`)?.value?.trim() || '';
+        if (val && valid.some(v => matchKW(val, v))) matched++;
+    }
+    showFeedback(matched >= Math.ceil(count * 0.4), `${matched}/${count}`);
+}
+
+// ═══════════════════════════════════════════════
+//  FEEDBACK
+// ═══════════════════════════════════════════════
+function showFeedback(correct, userAnswer) {
+    clearInterval(S.sprintTimer);
+    const q = S.questions[S.qi];
+    const correctAnswer = getCorrectAnswer(q);
+    const topic = q.topic || 'sonstige';
+
+    // Update combo
+    if (correct) { S.combo++; S.score++; } else { S.combo = 0; }
+    S.maxCombo = Math.max(S.maxCombo, S.combo);
+
+    // Calculate XP
+    const baseXP = correct ? (q.difficulty === 3 ? 30 : q.difficulty === 2 ? 20 : 15) : 2;
+    const mult = getComboMultiplier();
+    const earned = Math.round(baseXP * mult);
+    S.xp += earned;
+    S.sessionXP += earned;
+
+    // Update mastery (exponential moving average)
+    const mKey = `module_${S.module.id}`;
+    if (!S.mastery[mKey]) S.mastery[mKey] = {};
+    const old = S.mastery[mKey][topic] || 0;
+    S.mastery[mKey][topic] = Math.round(old * 0.7 + (correct ? 100 : 0) * 0.3);
+
+    S.answers.push({ correct, earned, topic });
+    save();
+
+    // Show XP float
+    const card = $('game-card');
+    if (card && correct) {
+        const float = document.createElement('div');
+        float.className = 'xp-float text-violet-400 font-extrabold text-lg';
+        float.textContent = `+${earned} XP`;
+        float.style.right = '20px'; float.style.top = '20px';
+        card.appendChild(float);
+    }
+
+    const fb = $('feedback-area');
+    const ansArea = $('answer-area');
+    if (ansArea) ansArea.style.display = 'none';
+
+    fb.innerHTML = `
+    <div class="glass rounded-2xl p-5 mb-3 ${correct ? 'border-green-500/20' : 'border-red-500/20'} enter">
+        <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center ${correct ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'}">
+                <i class="fas ${correct ? 'fa-check' : 'fa-times'} text-lg"></i>
+            </div>
+            <div>
+                <div class="font-bold text-sm ${correct ? 'text-green-400' : 'text-red-400'}">${correct ? 'Richtig!' : 'Falsch'}</div>
+                <div class="text-xs text-slate-500">+${earned} XP${S.combo >= 3 ? ` (×${mult} Combo)` : ''}</div>
+            </div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-3">
+            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Richtige Antwort</div>
+            <p class="text-sm text-slate-300 leading-relaxed">${correctAnswer}</p>
+        </div>
+        ${q.explanation ? `<p class="text-xs text-slate-500 mt-2 italic">${q.explanation}</p>` : ''}
+    </div>
+    <button onclick="S.qi++;renderGame()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors">
+        ${S.qi + 1 >= S.total ? '<i class="fas fa-flag-checkered mr-2"></i>Ergebnis' : '<i class="fas fa-arrow-right mr-2"></i>Weiter'}
+    </button>`;
+
+    if (!correct) $('game-card')?.classList.add('shake');
+}
+
+// ═══════════════════════════════════════════════
+//  RENDER: RESULTS
+// ═══════════════════════════════════════════════
+function renderResults() {
+    clearInterval(S.sprintTimer);
+    const pct = S.total > 0 ? Math.round((S.score / S.total) * 100) : 0;
+    const moduleMastery = getModuleMastery(S.module?.id || 1);
+    const rank = getRank(moduleMastery);
+    const modeInfo = MODES.find(m => m.id === S.mode);
+
+    // Topic breakdown
+    const topicStats = {};
+    S.answers.forEach(a => {
+        if (!topicStats[a.topic]) topicStats[a.topic] = {correct:0, total:0};
+        topicStats[a.topic].total++;
+        if (a.correct) topicStats[a.topic].correct++;
+    });
+
+    let html = `
+    <div class="enter">
+        <div class="text-center mb-8 pt-4">
+            <div class="text-5xl mb-3">${pct >= 80 ? '🏆' : pct >= 50 ? '💪' : '📚'}</div>
+            <h1 class="text-2xl font-extrabold tracking-tight">Training abgeschlossen</h1>
+            <p class="text-slate-500 text-sm mt-1">${modeInfo?.name || ''} · Modul ${S.module?.id}</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="glass rounded-2xl p-4 text-center">
+                <div class="text-2xl font-extrabold text-white t-num">${pct}%</div>
+                <div class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1">${S.score}/${S.total}</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+                <div class="text-2xl font-extrabold text-violet-400 t-num">+${S.sessionXP}</div>
+                <div class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1">XP</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+                <div class="text-2xl font-extrabold text-orange-400 t-num">${S.maxCombo}×</div>
+                <div class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-1">Max Combo</div>
+            </div>
+        </div>
+
+        <!-- Mastery rank -->
+        <div class="glass rounded-2xl p-5 mb-6 text-center">
+            <div class="text-3xl rank-glow mb-1" style="color:${rank.color}">${rank.emoji}</div>
+            <div class="text-sm font-bold" style="color:${rank.color}">${rank.label}</div>
+            <div class="text-xs text-slate-500 mt-1">Modul ${S.module?.id} Mastery: ${moduleMastery}%</div>
+            <div class="w-full bg-white/5 rounded-full h-2 mt-3 overflow-hidden max-w-xs mx-auto">
+                <div class="h-full rounded-full" style="width:${moduleMastery}%; background:${rank.color}"></div>
+            </div>
+        </div>
+
+        <!-- Topic breakdown -->
+        ${Object.keys(topicStats).length ? `
+        <div class="glass rounded-2xl p-5 mb-6">
+            <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">Themen-Detail</h3>
+            ${Object.entries(topicStats).map(([t, s]) => {
+                const tp = Math.round((s.correct/s.total)*100);
+                const tc = tp >= 70 ? '#22c55e' : tp >= 40 ? '#eab308' : '#ef4444';
+                return `<div class="flex items-center gap-3 mb-2">
+                    <span class="text-xs font-bold text-slate-400 flex-1 truncate">${t.replace(/_/g,' ')}</span>
+                    <span class="text-xs font-bold t-num" style="color:${tc}">${s.correct}/${s.total}</span>
+                </div>`;
+            }).join('')}
+        </div>` : ''}
+
+        <div class="grid grid-cols-2 gap-3">
+            <button onclick="S.qi=0;S.score=0;S.combo=0;S.maxCombo=0;S.sessionXP=0;S.answers=[];S.questions=shuffle(S.questions);renderGame()" class="glass rounded-xl py-3 font-bold text-sm text-violet-400 hover:bg-violet-500/10 transition-all">
+                <i class="fas fa-redo mr-2"></i>Nochmal
+            </button>
+            <button onclick="renderHome()" class="glass rounded-xl py-3 font-bold text-sm text-slate-400 hover:bg-white/5 transition-all">
+                <i class="fas fa-home mr-2"></i>Home
+            </button>
+        </div>
+    </div>`;
+
+    app.innerHTML = html;
+    save();
+}
+
+// ═══════════════════════════════════════════════
+//  CONNECT MODE (pair matching game)
+// ═══════════════════════════════════════════════
+// TODO: implement interactive pair-matching when Connect mode is selected
+// For now, Connect falls back to Recall mode behavior
+
+// ═══════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════
+renderHome();
 </script>
 </body>
 </html>
