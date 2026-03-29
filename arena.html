@@ -573,5 +573,10 @@ function renderResults(){
 // ═══ INIT ═══
 renderHome();
 </script>
+    <script src="js/cloud-sync.js"></script>
+<script>
+SLMCloud.autoLogin();
+window.addEventListener('beforeunload', () => { if(SLMCloud.ready) SLMCloud.save(); });
+</script>
 </body>
 </html>
