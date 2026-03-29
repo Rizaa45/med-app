@@ -13,1177 +13,564 @@
         body{background:#070a10;margin:0}
         .glass{background:rgba(15,23,42,.5);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06)}
         .t-num{font-variant-numeric:tabular-nums}
-        @keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-        .enter{animation:enter .4s ease both}
-        @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
-        .shake{animation:shake .4s ease}
-        @keyframes pop{0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
-        .pop{animation:pop .3s ease}
-        @keyframes float-up{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-50px)}}
-        .float-up{animation:float-up .8s ease-out forwards;position:absolute;pointer-events:none}
-        @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(139,92,246,.4)}70%{box-shadow:0 0 0 12px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}
-        .pulse-ring{animation:pulse-ring 2s infinite}
-        @keyframes glow{0%,100%{text-shadow:0 0 8px currentColor}50%{text-shadow:0 0 20px currentColor}}
-        .rank-glow{animation:glow 3s ease-in-out infinite}
-        ::-webkit-scrollbar{width:5px}
-        ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:99px}
-        .summary-content h3{font-size:1.1rem;font-weight:800;color:#fff;margin:1.2rem 0 .6rem}
-        .summary-content h4{font-size:.95rem;font-weight:700;color:#93c5fd;margin:1rem 0 .4rem}
-        .summary-content p{color:#94a3b8;line-height:1.75;margin-bottom:.6rem;font-size:.85rem}
-        .summary-content ul{list-style:disc;padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
-        .summary-content ol{list-style:decimal;padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
-        .summary-content li{margin-bottom:.25rem;line-height:1.65;font-size:.85rem}
-        .summary-content strong{color:#e2e8f0}
-        .summary-content table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.8rem}
-        .summary-content th{background:rgba(99,102,241,.12);color:#a5b4fc;padding:.5rem .75rem;text-align:left;font-weight:700;font-size:.75rem}
-        .summary-content td{padding:.4rem .75rem;border-bottom:1px solid rgba(255,255,255,.04);color:#94a3b8}
+        @keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.enter{animation:enter .4s ease both}
+        @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}.shake{animation:shake .4s ease}
+        @keyframes pop{0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}.pop{animation:pop .3s ease}
+        @keyframes float-up{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-50px)}}.float-up{animation:float-up .8s ease-out forwards;position:absolute;pointer-events:none}
+        @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(139,92,246,.4)}70%{box-shadow:0 0 0 12px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}.pulse-ring{animation:pulse-ring 2s infinite}
+        @keyframes glow{0%,100%{text-shadow:0 0 8px currentColor}50%{text-shadow:0 0 20px currentColor}}.rank-glow{animation:glow 3s ease-in-out infinite}
+        ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:99px}
+        .sc h3{font-size:1.1rem;font-weight:800;color:#fff;margin:1.2rem 0 .6rem}
+        .sc h4{font-size:.95rem;font-weight:700;color:#93c5fd;margin:1rem 0 .4rem}
+        .sc p{color:#94a3b8;line-height:1.75;margin-bottom:.6rem;font-size:.85rem}
+        .sc ul,.sc ol{padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
+        .sc li{margin-bottom:.25rem;line-height:1.65;font-size:.85rem}
+        .sc strong{color:#e2e8f0}
+        .sc table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.8rem}
+        .sc th{background:rgba(99,102,241,.12);color:#a5b4fc;padding:.5rem .75rem;text-align:left;font-weight:700;font-size:.75rem}
+        .sc td{padding:.4rem .75rem;border-bottom:1px solid rgba(255,255,255,.04);color:#94a3b8}
     </style>
 </head>
 <body class="text-white min-h-screen">
-
 <div id="app" class="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 pb-24 relative"></div>
 
 <script>
 // ═══════════════════════════════════════════════════════════════
-//  MODULE CONFIG
+//  CONFIG — exact file mapping per module
 // ═══════════════════════════════════════════════════════════════
 const MODULES = [
-    {id:1, name:'Kommunikation & Biografie',     icon:'fa-comments',        color:'#6366f1', summaryCount:0},
-    {id:2, name:'Medizinisches Kernwissen',       icon:'fa-stethoscope',     color:'#3b82f6', summaryCount:0},
-    {id:3, name:'Krankheitslehre',                icon:'fa-viruses',         color:'#06b6d4', summaryCount:0},
-    {id:4, name:'Schwangerschaft & Geburt',       icon:'fa-baby',            color:'#14b8a6', summaryCount:0},
-    {id:5, name:'Prä-/Postoperative Pflege',      icon:'fa-suitcase-medical',color:'#10b981', summaryCount:0},
-    {id:6, name:'Notfall & Reanimation',          icon:'fa-heart-pulse',     color:'#ef4444', summaryCount:0},
-    {id:7, name:'Ambulante Pflege',               icon:'fa-house-medical',   color:'#a855f7', summaryCount:12},
-    {id:8, name:'Innere Medizin',                 icon:'fa-lungs',           color:'#0ea5e9', summaryCount:9},
-    {id:9, name:'Neuro-Rehabilitation',           icon:'fa-brain',           color:'#f59e0b', summaryCount:6},
+    {id:1, name:'Kommunikation & Biografie',  icon:'fa-comments',        color:'#6366f1',
+     units:[1,2,3,4,5,6,7,8]},
+    {id:2, name:'Medizinisches Kernwissen',    icon:'fa-stethoscope',     color:'#3b82f6',
+     units:[1,2,3,4,5,6]},
+    {id:3, name:'Krankheitslehre',             icon:'fa-viruses',         color:'#06b6d4',
+     units:[1,2,3,4,5,6,7,8]},
+    {id:4, name:'Schwangerschaft & Geburt',    icon:'fa-baby',            color:'#14b8a6',
+     units:[1,2,3,4,5,6,7,8]},
+    {id:5, name:'Prä-/Postoperative Pflege',   icon:'fa-suitcase-medical',color:'#10b981',
+     units:[1,2,3,4,5,6,7,8,9,10,11]},
+    {id:6, name:'Notfall & Reanimation',       icon:'fa-heart-pulse',     color:'#ef4444',
+     units:[1,2,3,4,5,6]},
+    {id:7, name:'Ambulante Pflege',            icon:'fa-house-medical',   color:'#a855f7',
+     units:[1,2,3,4,5,6,7,8,9]},
+    {id:8, name:'Innere Medizin',              icon:'fa-lungs',           color:'#0ea5e9',
+     units:[1,2,3,4,5,6,7,8,9,10,11,12]},
+    {id:9, name:'Neuro-Rehabilitation',        icon:'fa-brain',           color:'#f59e0b',
+     units:[1,2,3,4,5,6]},
 ];
 
+// Module 9 files have trailing dots — try both variants
+const MOD9_SUFFIXES = {1:'.json', 2:'.json.', 3:'.json.', 4:'.json.', 5:'.json.', 6:'.json.'};
+
 const MODES = [
-    {id:'learn',    name:'Learn & Quiz',       icon:'fa-book-open',   color:'#8b5cf6', desc:'Zusammenfassung lesen → dann Fragen beantworten'},
-    {id:'recall',   name:'Recall',             icon:'fa-brain',       color:'#f97316', desc:'Standard-Quiz mit sofortigem Feedback'},
-    {id:'absorb',   name:'Absorb',             icon:'fa-eye',         color:'#6366f1', desc:'Antwort merken → aus Gedächtnis wiedergeben'},
-    {id:'sprint',   name:'Sprint',             icon:'fa-bolt',        color:'#ef4444', desc:'30 Sekunden pro Frage'},
-    {id:'connect',  name:'Connect',            icon:'fa-link',        color:'#10b981', desc:'Begriffe mit Definitionen verbinden'},
-    {id:'weakness', name:'Weakness Destroyer',  icon:'fa-crosshairs', color:'#dc2626', desc:'Nur schwache Themen aus Klausuren'},
+    {id:'learn',   name:'Learn & Quiz',      icon:'fa-book-open',  color:'#8b5cf6',desc:'Zusammenfassung lesen → dann Quiz'},
+    {id:'recall',  name:'Recall',            icon:'fa-brain',      color:'#f97316',desc:'Standard-Quiz mit Feedback'},
+    {id:'absorb',  name:'Absorb',            icon:'fa-eye',        color:'#6366f1',desc:'Antwort merken → wiedergeben'},
+    {id:'sprint',  name:'Sprint',            icon:'fa-bolt',       color:'#ef4444',desc:'30 Sekunden pro Frage'},
+    {id:'connect', name:'Connect',           icon:'fa-link',       color:'#10b981',desc:'Begriffe verbinden'},
+    {id:'weakness',name:'Weakness Destroyer', icon:'fa-crosshairs',color:'#dc2626',desc:'Schwache Themen zerstören'},
 ];
 
 const RANKS = [
-    {min:0,  label:'Needs Training', emoji:'❌', color:'#ef4444'},
-    {min:20, label:'Basics',         emoji:'📕', color:'#f97316'},
-    {min:40, label:'Okay',           emoji:'📗', color:'#eab308'},
-    {min:60, label:'Good',           emoji:'⭐', color:'#22c55e'},
-    {min:80, label:'Very Good',      emoji:'🌟', color:'#10b981'},
-    {min:95, label:'Master',         emoji:'👑', color:'#f59e0b'},
+    {min:0, label:'Needs Training',emoji:'❌',color:'#ef4444'},
+    {min:20,label:'Basics',        emoji:'📕',color:'#f97316'},
+    {min:40,label:'Okay',          emoji:'📗',color:'#eab308'},
+    {min:60,label:'Good',          emoji:'⭐',color:'#22c55e'},
+    {min:80,label:'Very Good',     emoji:'🌟',color:'#10b981'},
+    {min:95,label:'Master',        emoji:'👑',color:'#f59e0b'},
 ];
 
 // ═══════════════════════════════════════════════════════════════
 //  STATE
 // ═══════════════════════════════════════════════════════════════
 let S = {
-    screen:'home',
-    xp: parseInt(localStorage.getItem('arena_xp')||'0'),
-    dailyStreak: parseInt(localStorage.getItem('arena_ds')||'0'),
-    mastery: JSON.parse(localStorage.getItem('arena_mastery')||'{}'),
-    module: null,
-    mode: null,
-    rawBank: [],
-    normalizedQuestions: [],
-    summaries: [],
-    learnTopics: [],
-    qi: 0,
-    score: 0,
-    total: 0,
-    combo: 0,
-    maxCombo: 0,
-    sessionXP: 0,
-    answers: [],
-    sprintTimer: null,
-    sprintLeft: 30,
-    roundSize: 10,
-    learnSummaryIdx: 0,
-    connectPairs: [],
-    connectSelected: null,
-    connectMatched: new Set(),
+    xp:parseInt(localStorage.getItem('arena_xp')||'0'),
+    dailyStreak:parseInt(localStorage.getItem('arena_ds')||'0'),
+    mastery:JSON.parse(localStorage.getItem('arena_mastery')||'{}'),
+    module:null, mode:null, rawBank:[], normalizedQuestions:[],
+    summaries:[], learnTopics:[], qi:0, score:0, total:0,
+    combo:0, maxCombo:0, sessionXP:0, answers:[],
+    sprintTimer:null, sprintLeft:30, roundSize:10,
+    learnSummaryIdx:0, connectPairs:[], connectSelected:null, connectMatched:new Set(),
 };
 
 const $=id=>document.getElementById(id);
 const app=$('app');
 
 // ═══════════════════════════════════════════════════════════════
-//  QUESTION NORMALIZER
-//  Transforms ANY JSON question type → uniform game format
+//  NORMALIZER
 // ═══════════════════════════════════════════════════════════════
-const Normalizer = {
-    normalize(q) {
-        const base = {
-            id: q.q_id,
-            topic: q.topic || 'allgemein',
-            difficulty: q.difficulty || 1,
-            explanation: q.explanation || q.source_hint || '',
-            raw: q,
-        };
-        try {
-            switch(q.type) {
-                case 'richtig_falsch':          return this.normRF(q, base);
-                case 'nennen_liste':            return this.normList(q, base);
-                case 'freitext_box':            return this.normText(q, base);
-                case 'tabelle_2spalten':
-                case 'tabelle_3spalten':
-                case 'tabelle_vergleich':        return this.normTable(q, base);
-                case 'zuordnung':               return this.normZuordnung(q, base);
-                case 'ergaenzen_liste':          return this.normErgaenzen(q, base);
-                case 'definition_plus_beispiele':return this.normDefinition(q, base);
-                case 'ankreuzen_begruenden':     return this.normAnkreuzen(q, base);
-                default:                        return this.normFallback(q, base);
+const N={
+    clean(t){return(t||'').replace(/\*\*(.*?)\*\*/g,'$1').trim()},
+
+    normalize(q){
+        const b={id:q.q_id,topic:q.topic||'allgemein',difficulty:q.difficulty||1,explanation:q.explanation||q.source_hint||'',raw:q};
+        try{
+            switch(q.type){
+                case'richtig_falsch':return this.nRF(q,b);
+                case'nennen_liste':return this.nList(q,b);
+                case'freitext_box':return this.nText(q,b);
+                case'tabelle_2spalten':case'tabelle_3spalten':case'tabelle_vergleich':return this.nTab(q,b);
+                case'zuordnung':return this.nZu(q,b);
+                case'ergaenzen_liste':return this.nErg(q,b);
+                case'definition_plus_beispiele':return this.nDef(q,b);
+                case'ankreuzen_begruenden':return this.nAnk(q,b);
+                default:return this.nFB(q,b);
             }
-        } catch(e) { return null; }
+        }catch(e){return null}
     },
 
-    clean(text) {
-        return (text||'').replace(/\*\*(.*?)\*\*/g, '$1').trim();
+    nRF(q,b){
+        const st=q.statements||q.data?.statements||[];
+        if(st.length){const s=st[Math.floor(Math.random()*st.length)];return{...b,type:'tf',display:s.text||'?',answer:s.answer||'richtig',keywords:[s.answer||'richtig'],correctFull:`${s.answer}: ${s.text}`}}
+        return{...b,type:'tf',display:q.statement||'?',answer:q.answer||'richtig',keywords:[q.answer||'richtig'],correctFull:`${q.answer}: ${q.statement}`}
     },
 
-    normRF(q, base) {
-        const stmts = q.statements || q.data?.statements || [];
-        if (stmts.length > 0) {
-            const s = stmts[Math.floor(Math.random() * stmts.length)];
-            return {...base, type:'tf', display: s.text || 'Aussage',
-                answer: s.answer || 'richtig', keywords:[s.answer||'richtig'],
-                correctFull: `${s.answer}: ${s.text}`};
+    nList(q,b){
+        const c=q.correct_answers||q.data?.correct_answers||[];
+        const a=q.all_valid_answers||q.data?.all_valid_answers||c;
+        const n=q.count||q.data?.count||c.length||3;
+        return{...b,type:'list',display:this.clean(q.instruction)||'Nennen Sie.',answer:c.join(', '),keywords:a.length?a:c,count:Math.min(n,6),correctFull:c.join(' · ')}
+    },
+
+    nText(q,b){
+        const d=q.data||{};const kw=d.keywords||[];const ca=d.correct_answer||kw.join(', ');
+        return{...b,type:'text',display:this.clean(q.instruction)||'Erläutern Sie.',answer:ca,keywords:kw,correctFull:ca}
+    },
+
+    nTab(q,b){
+        const t=q.data?.table;const pairs=[];const kw=[];
+        if(t?.rows)t.rows.forEach(r=>{let l='';r.cells.forEach(c=>{if(c.type==='text'||c.type==='static')l=c.content||c.value||'';else if(c.type==='input'||c.type==='textarea'){const a=c.correct_answer||'';if(a){kw.push(a);if(l)pairs.push({left:l,right:a})}kw.push(...(c.keywords||[]))}})});
+        const cf=pairs.map(p=>`${p.left}: ${p.right}`).join(' · ')||kw.join(', ');
+        return{...b,type:pairs.length>=3?'connect':'text',display:this.clean(q.instruction)||'Füllen Sie aus.',answer:cf,keywords:kw,pairs,correctFull:cf}
+    },
+
+    nZu(q,b){
+        const d=q.data||{};const lg=d.legend||{};const st=d.statements||[];
+        const pairs=st.map(s=>({left:(s.text||'').length>55?s.text.substring(0,52)+'...':s.text,right:`${s.answer}: ${lg[s.answer]||s.answer}`}));
+        return{...b,type:pairs.length>=3?'connect':'text',display:this.clean(q.instruction)||'Ordnen Sie zu.',answer:st.map(s=>`${s.text}→${s.answer}`).join('; '),keywords:Object.values(lg),pairs,correctFull:st.map(s=>`${lg[s.answer]||s.answer}: ${s.text}`).join(' · ')}
+    },
+
+    nErg(q,b){
+        const d=q.data||{};const m=d.missing_items||[];const a=d.all_valid_missing||m;
+        return{...b,type:'list',display:this.clean(q.instruction)||'Ergänzen Sie.',answer:m.join(', '),keywords:a.length?a:m,count:m.length||3,correctFull:m.join(' · '),givenItems:d.given_items||[]}
+    },
+
+    nDef(q,b){
+        const d=q.data||{};const dc=d.definition_correct||'';const dk=d.definition_keywords||[];
+        const ex=d.correct_examples||d.all_valid_examples||[];const ak=[...dk,...ex];
+        const cf=dc+(ex.length?' | Beispiele: '+ex.join(', '):'');
+        return{...b,type:'text',display:this.clean(q.instruction)||'Definieren Sie.',answer:cf,keywords:ak.length?ak:[dc],correctFull:cf}
+    },
+
+    nAnk(q,b){
+        const opts=q.data?.options||[];const co=opts.filter(o=>o.correct).map(o=>o.label);
+        if(co.length){const p=co[Math.floor(Math.random()*co.length)];return{...b,type:'tf',display:p,answer:'richtig',keywords:['richtig'],correctFull:'Korrekt: '+co.join(', ')}}
+        return this.nFB(q,b)
+    },
+
+    nFB(q,b){
+        return{...b,type:'text',display:this.clean(q.instruction||q.statement||'')||'Frage',answer:q.explanation||'',keywords:[],correctFull:q.explanation||'Siehe Lernmaterial'}
+    },
+
+    prepare(raw,count,mode){
+        const out=[];const seen=new Set();
+        for(const q of shuffle(raw)){
+            if(!q.q_id||q.fallabhaengig)continue;
+            const n=this.normalize(q);if(!n||!n.display||n.display.length<5)continue;
+            const k=n.display.substring(0,40).toLowerCase();if(seen.has(k))continue;seen.add(k);
+            if(mode==='connect'&&(n.type!=='connect'||!n.pairs||n.pairs.length<3))continue;
+            if(!n.answer&&!n.correctFull&&(!n.keywords||!n.keywords.length))continue;
+            out.push(n);
         }
-        return {...base, type:'tf', display: q.statement || 'Aussage',
-            answer: q.answer || 'richtig', keywords:[q.answer||'richtig'],
-            correctFull: `${q.answer}: ${q.statement}`};
+        return out.slice(0,count)
     },
 
-    normList(q, base) {
-        const correct = q.correct_answers || q.data?.correct_answers || [];
-        const allValid = q.all_valid_answers || q.data?.all_valid_answers || correct;
-        const count = q.count || q.data?.count || correct.length || 3;
-        return {...base, type:'list', display: this.clean(q.instruction) || 'Nennen Sie die Antworten.',
-            answer: correct.join(', '), keywords: allValid.length ? allValid : correct,
-            count: Math.min(count, 6), correctFull: correct.join(' · ')};
-    },
-
-    normText(q, base) {
-        const data = q.data || {};
-        const kw = data.keywords || [];
-        const ca = data.correct_answer || kw.join(', ');
-        return {...base, type:'text', display: this.clean(q.instruction) || 'Erläutern Sie.',
-            answer: ca, keywords: kw, correctFull: ca};
-    },
-
-    normTable(q, base) {
-        const table = q.data?.table;
-        const pairs = [];
-        const keywords = [];
-        if (table?.rows) {
-            table.rows.forEach(row => {
-                let label = '';
-                row.cells.forEach(cell => {
-                    if (cell.type === 'text' || cell.type === 'static') {
-                        label = cell.content || cell.value || '';
-                    } else if (cell.type === 'input' || cell.type === 'textarea') {
-                        const ans = cell.correct_answer || '';
-                        const kw = cell.keywords || [];
-                        if (ans) { keywords.push(ans); if (label) pairs.push({left:label, right:ans}); }
-                        keywords.push(...kw);
-                    }
-                });
-            });
-        }
-        const cf = pairs.map(p=>`${p.left}: ${p.right}`).join(' · ') || keywords.join(', ');
-        return {...base, type: pairs.length >= 3 ? 'connect' : 'text',
-            display: this.clean(q.instruction) || 'Füllen Sie aus.',
-            answer: cf, keywords, pairs, correctFull: cf};
-    },
-
-    normZuordnung(q, base) {
-        const data = q.data || {};
-        const legend = data.legend || {};
-        const stmts = data.statements || [];
-        const pairs = stmts.map(s => ({
-            left: (s.text||'').length > 55 ? s.text.substring(0,52)+'...' : s.text,
-            right: `${s.answer}: ${legend[s.answer]||s.answer}`
-        }));
-        return {...base, type: pairs.length >= 3 ? 'connect' : 'text',
-            display: this.clean(q.instruction) || 'Ordnen Sie zu.',
-            answer: stmts.map(s=>`${s.text} → ${s.answer}`).join('; '),
-            keywords: Object.values(legend), pairs,
-            correctFull: stmts.map(s=>`${legend[s.answer]||s.answer}: ${s.text}`).join(' · ')};
-    },
-
-    normErgaenzen(q, base) {
-        const data = q.data || {};
-        const missing = data.missing_items || [];
-        const allValid = data.all_valid_missing || missing;
-        return {...base, type:'list', display: this.clean(q.instruction) || 'Ergänzen Sie.',
-            answer: missing.join(', '), keywords: allValid.length ? allValid : missing,
-            count: missing.length || 3, correctFull: missing.join(' · '),
-            givenItems: data.given_items || []};
-    },
-
-    normDefinition(q, base) {
-        const data = q.data || {};
-        const defC = data.definition_correct || '';
-        const defKW = data.definition_keywords || [];
-        const examples = data.correct_examples || data.all_valid_examples || [];
-        const allKW = [...defKW, ...examples];
-        const cf = defC + (examples.length ? ' | Beispiele: ' + examples.join(', ') : '');
-        return {...base, type:'text', display: this.clean(q.instruction) || 'Definieren Sie.',
-            answer: cf, keywords: allKW.length ? allKW : [defC], correctFull: cf};
-    },
-
-    normAnkreuzen(q, base) {
-        const opts = q.data?.options || [];
-        const correctOpts = opts.filter(o=>o.correct).map(o=>o.label);
-        if (correctOpts.length > 0) {
-            const pick = correctOpts[Math.floor(Math.random()*correctOpts.length)];
-            return {...base, type:'tf', display: pick, answer:'richtig',
-                keywords:['richtig'], correctFull: 'Korrekte Aussagen: ' + correctOpts.join(', ')};
-        }
-        return this.normFallback(q, base);
-    },
-
-    normFallback(q, base) {
-        const display = this.clean(q.instruction || q.statement || '');
-        return {...base, type:'text', display: display || 'Frage',
-            answer: q.explanation || '', keywords: [],
-            correctFull: q.explanation || 'Siehe Lernmaterial'};
-    },
-
-    prepareRound(rawQuestions, count, mode) {
-        const normalized = [];
-        const seen = new Set();
-
-        for (const q of shuffle(rawQuestions)) {
-            if (!q.q_id || q.fallabhaengig) continue;
-            const n = this.normalize(q);
-            if (!n) continue;
-            if (!n.display || n.display.length < 5) continue;
-
-            const key = n.display.substring(0, 40).toLowerCase();
-            if (seen.has(key)) continue;
-            seen.add(key);
-
-            if (mode === 'connect' && n.type !== 'connect') continue;
-            if (mode === 'connect' && (!n.pairs || n.pairs.length < 3)) continue;
-
-            if (!n.answer && !n.correctFull && (!n.keywords || n.keywords.length === 0)) continue;
-
-            normalized.push(n);
-        }
-        return normalized.slice(0, count);
-    },
-
-    prepareRoundForTopics(rawQuestions, count, topics) {
-        const filtered = rawQuestions.filter(q => topics.includes(q.topic));
-        if (filtered.length >= 5) return this.prepareRound(filtered, count, 'recall');
-        return this.prepareRound(rawQuestions, count, 'recall');
+    prepareForTopics(raw,count,topics){
+        const f=raw.filter(q=>topics.some(t=>q.topic&&q.topic.toLowerCase().includes(t.toLowerCase())));
+        if(f.length>=5)return this.prepare(f,count,'recall');
+        return this.prepare(raw,count,'recall')
     }
 };
 
 // ═══════════════════════════════════════════════════════════════
 //  UTILITIES
 // ═══════════════════════════════════════════════════════════════
-function save() {
-    localStorage.setItem('arena_xp', S.xp);
-    localStorage.setItem('arena_ds', S.dailyStreak);
-    localStorage.setItem('arena_mastery', JSON.stringify(S.mastery));
-    const today = new Date().toISOString().slice(0,10);
-    const last = localStorage.getItem('arena_last');
-    if (last !== today) {
-        const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10);
-        S.dailyStreak = (last === yesterday) ? S.dailyStreak + 1 : 1;
-        localStorage.setItem('arena_last', today);
-        localStorage.setItem('arena_ds', S.dailyStreak);
-    }
+function save(){
+    localStorage.setItem('arena_xp',S.xp);localStorage.setItem('arena_ds',S.dailyStreak);
+    localStorage.setItem('arena_mastery',JSON.stringify(S.mastery));
+    const today=new Date().toISOString().slice(0,10);const last=localStorage.getItem('arena_last');
+    if(last!==today){const y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.dailyStreak=(last===y)?S.dailyStreak+1:1;localStorage.setItem('arena_last',today);localStorage.setItem('arena_ds',S.dailyStreak)}
 }
-
-function getRank(pct) {
-    for (let i=RANKS.length-1;i>=0;i--) if(pct>=RANKS[i].min) return RANKS[i];
-    return RANKS[0];
-}
-
-function getModuleMastery(mid) {
-    const t=S.mastery[`module_${mid}`]||{};
-    const v=Object.values(t);
-    return v.length ? Math.round(v.reduce((a,b)=>a+b,0)/v.length) : 0;
-}
-
-function getLevel() { return Math.floor(S.xp/500)+1; }
-
-function getComboMult() {
-    return S.combo>=10?3:S.combo>=7?2.5:S.combo>=5?2:S.combo>=3?1.5:1;
-}
-
-function shuffle(arr) {
-    const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;
-}
-
-function matchKW(text,kw) {
-    if(!text||!kw)return false;
-    const u=text.toLowerCase().trim(),k=kw.toLowerCase().trim();
-    if(u.includes(k))return true;
-    if(k.length>=4&&u.includes(k.substring(0,Math.min(k.length,5))))return true;
-    return false;
-}
-
-function esc(s) { return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-function resetGame() {
-    S.qi=0;S.score=0;S.total=0;S.combo=0;S.maxCombo=0;S.sessionXP=0;S.answers=[];
-    S.summaries=[];S.learnTopics=[];S.learnSummaryIdx=0;
-    clearInterval(S.sprintTimer);
-}
-
-function updateMastery(topic, correct) {
-    const mk=`module_${S.module.id}`;
-    if(!S.mastery[mk])S.mastery[mk]={};
-    const old=S.mastery[mk][topic]||0;
-    S.mastery[mk][topic]=Math.round(old*0.7+(correct?100:0)*0.3);
-}
+function getRank(p){for(let i=RANKS.length-1;i>=0;i--)if(p>=RANKS[i].min)return RANKS[i];return RANKS[0]}
+function getModM(mid){const t=S.mastery[`module_${mid}`]||{};const v=Object.values(t);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
+function getLevel(){return Math.floor(S.xp/500)+1}
+function getCM(){return S.combo>=10?3:S.combo>=7?2.5:S.combo>=5?2:S.combo>=3?1.5:1}
+function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]]}return r}
+function matchKW(t,k){if(!t||!k)return false;const u=t.toLowerCase().trim(),w=k.toLowerCase().trim();if(u.includes(w))return true;if(w.length>=4&&u.includes(w.substring(0,Math.min(w.length,5))))return true;return false}
+function esc(s){return(s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function resetGame(){S.qi=0;S.score=0;S.total=0;S.combo=0;S.maxCombo=0;S.sessionXP=0;S.answers=[];S.summaries=[];S.learnTopics=[];S.learnSummaryIdx=0;clearInterval(S.sprintTimer)}
+function updateM(topic,correct){const mk=`module_${S.module.id}`;if(!S.mastery[mk])S.mastery[mk]={};const o=S.mastery[mk][topic]||0;S.mastery[mk][topic]=Math.round(o*.7+(correct?100:0)*.3)}
 
 // ═══════════════════════════════════════════════════════════════
-//  SCREEN: HOME
+//  LOAD SUMMARIES — handles all modules including quirky filenames
 // ═══════════════════════════════════════════════════════════════
-function renderHome() {
-    S.screen='home';
-    const level=getLevel();
-    const weaknesses=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
-    const hasW=weaknesses.length>0;
-    const avgM=Math.round(MODULES.reduce((s,m)=>s+getModuleMastery(m.id),0)/MODULES.length);
-    const oRank=getRank(avgM);
-
-    app.innerHTML=`
-    <div class="enter">
-        <div class="flex items-center justify-between mb-6">
-            <a href="index.html" class="text-slate-500 hover:text-violet-400 transition-colors text-sm font-bold">
-                <i class="fas fa-arrow-left mr-1.5"></i>Dashboard
-            </a>
-            <div class="flex items-center gap-2">
-                <div class="glass rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-xs">
-                    <span>🔥</span><span class="text-orange-400 font-extrabold t-num">${S.dailyStreak}</span>
-                </div>
-                <div class="glass rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-xs">
-                    <span class="text-violet-400 font-extrabold t-num">${S.xp.toLocaleString()}</span>
-                    <span class="text-slate-600 font-bold">XP</span>
-                </div>
-                <div class="glass rounded-lg px-2.5 py-1.5 text-xs font-bold text-indigo-400">Lv.${level}</div>
-            </div>
-        </div>
-
-        <div class="text-center mb-8">
-            <div class="text-4xl mb-2 rank-glow" style="color:${oRank.color}">${oRank.emoji}</div>
-            <h1 class="text-2xl sm:text-3xl font-black tracking-tight">SLM Arena</h1>
-            <p class="text-slate-500 text-sm mt-1">Gesamt: <span class="font-bold" style="color:${oRank.color}">${avgM}% · ${oRank.label}</span></p>
-        </div>
-
-        ${hasW?`
-        <div class="glass rounded-2xl p-4 sm:p-5 mb-6 border-red-500/20 enter" style="animation-delay:.1s">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center pulse-ring shrink-0">
-                    <i class="fas fa-crosshairs text-lg"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                    <div class="text-sm font-bold text-white">Klausur-Schwächen</div>
-                    <div class="text-[11px] text-red-400 truncate">${(weaknesses[weaknesses.length-1].weakTopics||[]).slice(0,3).map(t=>t.replace(/_/g,' ')).join(', ')}</div>
-                </div>
-                <button onclick="startWeakness()" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors shrink-0">
-                    <i class="fas fa-crosshairs mr-1"></i>Go
-                </button>
-            </div>
-        </div>`:''}
-
-        <h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Modul wählen</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-            ${MODULES.map((m,i)=>{
-                const pct=getModuleMastery(m.id);
-                const rank=getRank(pct);
-                return`
-                <div onclick="selectModule(${m.id})" class="glass rounded-2xl p-4 cursor-pointer hover:border-white/10 transition-all enter" style="animation-delay:${.05+i*.03}s">
-                    <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}">
-                            <i class="fas ${m.icon} text-sm"></i>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-xs font-bold text-white truncate">${m.name}</div>
-                            <div class="flex items-center gap-1.5 mt-1">
-                                <div class="flex-1 bg-white/5 rounded-full h-1 overflow-hidden">
-                                    <div class="h-full rounded-full" style="width:${pct}%;background:${m.color}"></div>
-                                </div>
-                                <span class="text-[9px] font-bold t-num" style="color:${rank.color}">${rank.emoji}${pct}%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-            }).join('')}
-        </div>
-    </div>`;
-}
-
-// ═══════════════════════════════════════════════════════════════
-//  SCREEN: MODULE → MODE PICKER
-// ═══════════════════════════════════════════════════════════════
-function selectModule(id) {
-    S.module=MODULES.find(m=>m.id===id);
-    const pct=getModuleMastery(id);
-    const rank=getRank(pct);
-    const topics=S.mastery[`module_${id}`]||{};
-    const hasSummaries=S.module.summaryCount>0;
-
-    app.innerHTML=`
-    <div class="enter">
-        <button onclick="renderHome()" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors">
-            <i class="fas fa-arrow-left text-xs"></i>Zurück
-        </button>
-
-        <div class="glass rounded-2xl p-5 mb-5">
-            <div class="flex items-center gap-4 mb-3">
-                <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-xl" style="background:${S.module.color}15;color:${S.module.color}">
-                    <i class="fas ${S.module.icon}"></i>
-                </div>
-                <div class="flex-1">
-                    <h2 class="text-lg font-extrabold">Modul ${id}</h2>
-                    <p class="text-sm text-slate-400">${S.module.name}</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-2xl rank-glow" style="color:${rank.color}">${rank.emoji}</div>
-                    <div class="text-[9px] font-bold" style="color:${rank.color}">${rank.label}</div>
-                </div>
-            </div>
-            <div class="bg-white/5 rounded-full h-2 overflow-hidden">
-                <div class="h-full rounded-full" style="width:${pct}%;background:${S.module.color}"></div>
-            </div>
-            ${Object.keys(topics).length?`
-            <div class="mt-3 flex flex-wrap gap-1.5">
-                ${Object.entries(topics).sort((a,b)=>a[1]-b[1]).slice(0,8).map(([t,v])=>{
-                    const c=v>=70?'#22c55e':v>=40?'#eab308':'#ef4444';
-                    return`<span class="text-[9px] font-bold px-2 py-0.5 rounded" style="background:${c}15;color:${c}">${t.replace(/_/g,' ')} ${v}%</span>`;
-                }).join('')}
-            </div>`:''}
-        </div>
-
-        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Trainingsmodus</h3>
-        <div class="space-y-2.5 mb-5">
-            ${MODES.filter(m=>m.id!=='weakness').map(m=>{
-                const disabled=m.id==='learn'&&!hasSummaries;
-                return`
-                <button onclick="${disabled?'':`startMode('${m.id}')`}" class="w-full glass rounded-2xl p-4 text-left hover:border-white/10 transition-all group flex items-center gap-3 ${disabled?'opacity-40 cursor-not-allowed':'cursor-pointer'}">
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}">
-                        <i class="fas ${m.icon}"></i>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <div class="font-bold text-white text-sm">${m.name}</div>
-                        <div class="text-[11px] text-slate-500 truncate">${m.desc}${disabled?' (Keine Zusammenfassungen)':''}</div>
-                    </div>
-                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-slate-400 transition-colors text-xs"></i>
-                </button>`;
-            }).join('')}
-        </div>
-
-        <div class="glass rounded-2xl p-4">
-            <label class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Fragen pro Runde</label>
-            <div class="flex gap-2">
-                ${[5,10,15,20].map(n=>`
-                <button onclick="S.roundSize=${n};document.querySelectorAll('.rs').forEach(b=>{b.className='rs glass rounded-lg px-3 py-2 text-xs font-bold text-slate-500 transition-all flex-1'});this.className='rs bg-violet-600 rounded-lg px-3 py-2 text-xs font-bold text-white transition-all flex-1'"
-                    class="rs ${S.roundSize===n?'bg-violet-600 text-white':'glass text-slate-500'} rounded-lg px-3 py-2 text-xs font-bold transition-all flex-1">${n}</button>
-                `).join('')}
-            </div>
-        </div>
-    </div>`;
-}
-
-// ═══════════════════════════════════════════════════════════════
-//  LOAD QUESTION BANK
-// ═══════════════════════════════════════════════════════════════
-async function loadBank() {
-    const r=await fetch(`data/question-banks/module${S.module.id}_questions.json`);
-    if(!r.ok) throw new Error(`Fragenbank für Modul ${S.module.id} nicht gefunden`);
-    S.rawBank=await r.json();
-    if(!S.rawBank.length) throw new Error('Fragenbank ist leer');
-}
-
-// ═══════════════════════════════════════════════════════════════
-//  LOAD SUMMARIES — works for ALL modules
-// ═══════════════════════════════════════════════════════════════
-async function loadSummaries() {
+async function loadSummaries(){
     S.summaries=[];
-    const maxUnits=S.module.summaryCount||15;
+    const mod=S.module;
+    const units=mod.units||[];
+    if(!units.length)return 0;
 
-    // Try loading each unit file — different modules have different counts
-    const promises=[];
-    for(let i=1;i<=maxUnits;i++){
-        promises.push(
-            fetch(`data/module${S.module.id}summariesunit${i}.json`)
-                .then(r=>r.ok?r.json():null)
-                .catch(()=>null)
-        );
-    }
-
-    const results=await Promise.all(promises);
-    results.forEach((data,idx)=>{
-        if(!data) return;
-        if(Array.isArray(data)){
-            data.forEach(item=>{
-                if(item && (item.topic || item.content)){
-                    S.summaries.push({
-                        topic: item.topic || `Thema ${idx+1}`,
-                        content: item.content || '',
-                        tags: item.tags || [],
-                        unit: idx+1
-                    });
-                }
-            });
+    const fetches=units.map(u=>{
+        // Build file paths — try multiple variants for robustness
+        const paths=[
+            `data/module${mod.id}summariesunit${u}.json`,
+        ];
+        // Module 9 units 2-6 have trailing dot in filename
+        if(mod.id===9&&u>=2){
+            paths.unshift(`data/module${mod.id}summariesunit${u}.json.`);
         }
+
+        return tryFetchMultiple(paths);
+    });
+
+    const results=await Promise.all(fetches);
+
+    results.forEach((data,idx)=>{
+        if(!data)return;
+        const arr=Array.isArray(data)?data:[data];
+        arr.forEach(item=>{
+            if(item&&(item.topic||item.content)){
+                S.summaries.push({
+                    topic:item.topic||`Thema ${units[idx]}`,
+                    content:item.content||'',
+                    tags:item.tags||[],
+                    unit:units[idx]
+                });
+            }
+        });
     });
 
     return S.summaries.length;
 }
 
+async function tryFetchMultiple(paths){
+    for(const path of paths){
+        try{
+            const r=await fetch(path);
+            if(r.ok){
+                const text=await r.text();
+                try{return JSON.parse(text)}catch(e){/* bad json */}
+            }
+        }catch(e){/* network error */}
+    }
+    return null;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LOAD QUESTION BANK
+// ═══════════════════════════════════════════════════════════════
+async function loadBank(){
+    const r=await fetch(`data/question-banks/module${S.module.id}_questions.json`);
+    if(!r.ok)throw new Error(`Fragenbank Modul ${S.module.id} nicht gefunden`);
+    S.rawBank=await r.json();
+    if(!S.rawBank.length)throw new Error('Fragenbank ist leer');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  SCREENS
+// ═══════════════════════════════════════════════════════════════
+function showLoading(msg){app.innerHTML=`<div class="text-center py-20 enter"><div class="text-2xl text-violet-400 mb-3"><i class="fas fa-spinner fa-spin"></i></div><p class="text-slate-500 font-medium text-sm">${esc(msg)}</p></div>`}
+function showError(msg){app.innerHTML=`<div class="text-center py-20 enter"><div class="text-5xl mb-4">😔</div><h2 class="text-lg font-bold mb-2">Nicht verfügbar</h2><p class="text-slate-500 text-sm mb-6">${esc(msg)}</p><button onclick="${S.module?`selectModule(${S.module.id})`:'renderHome()'}" class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors"><i class="fas fa-arrow-left mr-2"></i>Zurück</button></div>`}
+
+// ═══ HOME ═══
+function renderHome(){
+    const level=getLevel();const w=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');const hasW=w.length>0;
+    const avgM=Math.round(MODULES.reduce((s,m)=>s+getModM(m.id),0)/MODULES.length);const oR=getRank(avgM);
+
+    app.innerHTML=`<div class="enter">
+        <div class="flex items-center justify-between mb-6">
+            <a href="index.html" class="text-slate-500 hover:text-violet-400 transition-colors text-sm font-bold"><i class="fas fa-arrow-left mr-1.5"></i>Dashboard</a>
+            <div class="flex items-center gap-2">
+                <div class="glass rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-xs"><span>🔥</span><span class="text-orange-400 font-extrabold t-num">${S.dailyStreak}</span></div>
+                <div class="glass rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 text-xs"><span class="text-violet-400 font-extrabold t-num">${S.xp.toLocaleString()}</span><span class="text-slate-600 font-bold">XP</span></div>
+                <div class="glass rounded-lg px-2.5 py-1.5 text-xs font-bold text-indigo-400">Lv.${level}</div>
+            </div>
+        </div>
+        <div class="text-center mb-8">
+            <div class="text-4xl mb-2 rank-glow" style="color:${oR.color}">${oR.emoji}</div>
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight">SLM Arena</h1>
+            <p class="text-slate-500 text-sm mt-1">Gesamt: <span class="font-bold" style="color:${oR.color}">${avgM}% · ${oR.label}</span></p>
+        </div>
+        ${hasW?`<div class="glass rounded-2xl p-4 sm:p-5 mb-6 border-red-500/20 enter" style="animation-delay:.1s"><div class="flex items-center gap-3"><div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center pulse-ring shrink-0"><i class="fas fa-crosshairs text-lg"></i></div><div class="flex-1 min-w-0"><div class="text-sm font-bold text-white">Klausur-Schwächen</div><div class="text-[11px] text-red-400 truncate">${(w[w.length-1].weakTopics||[]).slice(0,3).map(t=>t.replace(/_/g,' ')).join(', ')}</div></div><button onclick="startWeakness()" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors shrink-0"><i class="fas fa-crosshairs mr-1"></i>Go</button></div></div>`:''}
+        <h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Modul wählen</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
+            ${MODULES.map((m,i)=>{const p=getModM(m.id);const r=getRank(p);const hasSummaries=m.units.length>0;return`
+                <div onclick="selectModule(${m.id})" class="glass rounded-2xl p-4 cursor-pointer hover:border-white/10 transition-all enter" style="animation-delay:${.05+i*.03}s">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}"><i class="fas ${m.icon} text-sm"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-1.5"><span class="text-xs font-bold text-white truncate">${m.name}</span>${hasSummaries?'<span class="text-[7px] font-bold text-violet-400 bg-violet-500/10 px-1 py-0.5 rounded">📖</span>':''}</div>
+                            <div class="flex items-center gap-1.5 mt-1">
+                                <div class="flex-1 bg-white/5 rounded-full h-1 overflow-hidden"><div class="h-full rounded-full" style="width:${p}%;background:${m.color}"></div></div>
+                                <span class="text-[9px] font-bold t-num" style="color:${r.color}">${r.emoji}${p}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`}).join('')}
+        </div>
+    </div>`;
+}
+
+// ═══ MODULE SELECTED ═══
+function selectModule(id){
+    S.module=MODULES.find(m=>m.id===id);const p=getModM(id);const r=getRank(p);const topics=S.mastery[`module_${id}`]||{};
+    const hasSummaries=S.module.units.length>0;
+
+    app.innerHTML=`<div class="enter">
+        <button onclick="renderHome()" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors"><i class="fas fa-arrow-left text-xs"></i>Zurück</button>
+        <div class="glass rounded-2xl p-5 mb-5">
+            <div class="flex items-center gap-4 mb-3">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-xl" style="background:${S.module.color}15;color:${S.module.color}"><i class="fas ${S.module.icon}"></i></div>
+                <div class="flex-1"><h2 class="text-lg font-extrabold">Modul ${id}</h2><p class="text-sm text-slate-400">${S.module.name}</p></div>
+                <div class="text-center"><div class="text-2xl rank-glow" style="color:${r.color}">${r.emoji}</div><div class="text-[9px] font-bold" style="color:${r.color}">${r.label}</div></div>
+            </div>
+            <div class="bg-white/5 rounded-full h-2 overflow-hidden"><div class="h-full rounded-full" style="width:${p}%;background:${S.module.color}"></div></div>
+            ${Object.keys(topics).length?`<div class="mt-3 flex flex-wrap gap-1.5">${Object.entries(topics).sort((a,b)=>a[1]-b[1]).slice(0,8).map(([t,v])=>{const c=v>=70?'#22c55e':v>=40?'#eab308':'#ef4444';return`<span class="text-[9px] font-bold px-2 py-0.5 rounded" style="background:${c}15;color:${c}">${t.replace(/_/g,' ')} ${v}%</span>`}).join('')}</div>`:''}
+        </div>
+        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Trainingsmodus</h3>
+        <div class="space-y-2.5 mb-5">
+            ${MODES.filter(m=>m.id!=='weakness').map(m=>{
+                const disabled=m.id==='learn'&&!hasSummaries;
+                return`<button onclick="${disabled?'':`startMode('${m.id}')`}" class="w-full glass rounded-2xl p-4 text-left hover:border-white/10 transition-all group flex items-center gap-3 ${disabled?'opacity-30 cursor-not-allowed':'cursor-pointer'}">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}"><i class="fas ${m.icon}"></i></div>
+                    <div class="flex-1 min-w-0"><div class="font-bold text-white text-sm">${m.name}</div><div class="text-[11px] text-slate-500 truncate">${m.desc}${disabled?' — keine Zusammenfassungen':''}</div></div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-slate-400 transition-colors text-xs"></i>
+                </button>`}).join('')}
+        </div>
+        <div class="glass rounded-2xl p-4"><label class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Fragen pro Runde</label>
+            <div class="flex gap-2">${[5,10,15,20].map(n=>`<button onclick="S.roundSize=${n};document.querySelectorAll('.rs').forEach(b=>{b.className='rs glass rounded-lg px-3 py-2 text-xs font-bold text-slate-500 transition-all flex-1'});this.className='rs bg-violet-600 rounded-lg px-3 py-2 text-xs font-bold text-white transition-all flex-1'" class="rs ${S.roundSize===n?'bg-violet-600 text-white':'glass text-slate-500'} rounded-lg px-3 py-2 text-xs font-bold transition-all flex-1">${n}</button>`).join('')}</div>
+        </div>
+    </div>`;
+}
+
 // ═══════════════════════════════════════════════════════════════
 //  START MODES
 // ═══════════════════════════════════════════════════════════════
-async function startMode(mode) {
-    S.mode=mode;
-    resetGame();
-    showLoading('Wird vorbereitet...');
-
-    try {
-        await loadBank();
-
-        if(mode==='learn'){
-            const summaryCount=await loadSummaries();
-            if(summaryCount===0){
-                // Fallback: no summaries → switch to recall
-                S.mode='recall';
-                S.normalizedQuestions=Normalizer.prepareRound(S.rawBank,S.roundSize,'recall');
-                S.total=S.normalizedQuestions.length;
-                if(!S.total) throw new Error('Keine Fragen');
-                renderGame();
-                return;
-            }
-            renderLearnPicker();
-            return;
-        }
-
-        S.normalizedQuestions=Normalizer.prepareRound(S.rawBank,S.roundSize,mode);
-        S.total=S.normalizedQuestions.length;
-        if(!S.total) throw new Error('Keine passenden Fragen für diesen Modus');
-
-        if(mode==='connect') renderConnectGame();
-        else renderGame();
-    } catch(e) {
-        showError(e.message);
-    }
-}
-
-async function startWeakness() {
-    const w=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
-    if(!w.length) return renderHome();
-    const latest=w[w.length-1];
-    S.module=MODULES.find(m=>m.id===latest.module)||MODULES[0];
-    S.mode='weakness';
-    resetGame();
-    showLoading('Schwächen laden...');
+async function startMode(mode){
+    S.mode=mode;resetGame();showLoading('Wird vorbereitet...');
     try{
-        await loadBank();
-        let pool=S.rawBank.filter(q=>q.q_id&&!q.fallabhaengig);
-        if(latest.weakTopics?.length){
-            const wp=pool.filter(q=>latest.weakTopics.includes(q.topic));
-            if(wp.length>=3) pool=wp;
+        if(mode==='learn'){
+            const count=await loadSummaries();
+            if(count===0){S.mode='recall';await loadBank();S.normalizedQuestions=N.prepare(S.rawBank,S.roundSize,'recall');S.total=S.normalizedQuestions.length;if(!S.total)throw new Error('Keine Fragen');renderGame();return}
+            renderLearnPicker();return;
         }
-        S.normalizedQuestions=Normalizer.prepareRound(pool,S.roundSize,'recall');
-        S.total=S.normalizedQuestions.length;
-        if(!S.total) throw new Error('Keine schwachen Fragen gefunden');
-        renderGame();
-    }catch(e){ showError(e.message); }
+        await loadBank();
+        S.normalizedQuestions=N.prepare(S.rawBank,S.roundSize,mode);S.total=S.normalizedQuestions.length;
+        if(!S.total)throw new Error('Keine passenden Fragen');
+        if(mode==='connect')renderConnectGame();else renderGame();
+    }catch(e){showError(e.message)}
 }
 
-function showLoading(msg) {
-    app.innerHTML=`<div class="text-center py-20 enter">
-        <div class="text-2xl text-violet-400 mb-3"><i class="fas fa-spinner fa-spin"></i></div>
-        <p class="text-slate-500 font-medium text-sm">${esc(msg)}</p>
-    </div>`;
-}
-
-function showError(msg) {
-    app.innerHTML=`
-    <div class="text-center py-20 enter">
-        <div class="text-5xl mb-4">😔</div>
-        <h2 class="text-lg font-bold mb-2">Nicht verfügbar</h2>
-        <p class="text-slate-500 text-sm mb-6">${esc(msg)}</p>
-        <button onclick="${S.module?`selectModule(${S.module.id})`:'renderHome()'}" class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors">
-            <i class="fas fa-arrow-left mr-2"></i>Zurück
-        </button>
-    </div>`;
+async function startWeakness(){
+    const w=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');if(!w.length)return renderHome();
+    const latest=w[w.length-1];S.module=MODULES.find(m=>m.id===latest.module)||MODULES[0];S.mode='weakness';resetGame();showLoading('Schwächen laden...');
+    try{await loadBank();let pool=S.rawBank.filter(q=>q.q_id&&!q.fallabhaengig);
+        if(latest.weakTopics?.length){const wp=pool.filter(q=>latest.weakTopics.includes(q.topic));if(wp.length>=3)pool=wp}
+        S.normalizedQuestions=N.prepare(pool,S.roundSize,'recall');S.total=S.normalizedQuestions.length;if(!S.total)throw new Error('Keine schwachen Fragen');renderGame()
+    }catch(e){showError(e.message)}
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  LEARN & QUIZ MODE
+//  LEARN & QUIZ
 // ═══════════════════════════════════════════════════════════════
-function renderLearnPicker() {
-    // Group summaries by unit and let user pick which to study
-    const units=[];
-    const unitMap={};
-    S.summaries.forEach(s=>{
-        if(!unitMap[s.unit]){unitMap[s.unit]=[];units.push(s.unit)}
-        unitMap[s.unit].push(s);
-    });
-
-    app.innerHTML=`
-    <div class="enter">
-        <button onclick="selectModule(${S.module.id})" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors">
-            <i class="fas fa-arrow-left text-xs"></i>Zurück
-        </button>
-
+function renderLearnPicker(){
+    app.innerHTML=`<div class="enter">
+        <button onclick="selectModule(${S.module.id})" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors"><i class="fas fa-arrow-left text-xs"></i>Zurück</button>
         <div class="glass rounded-2xl p-5 mb-5 border-violet-500/20">
-            <div class="flex items-center gap-3 mb-2">
-                <div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-book-open text-lg"></i>
-                </div>
-                <div>
-                    <h2 class="text-lg font-extrabold">Learn & Quiz</h2>
-                    <p class="text-xs text-slate-500">Erst lesen, dann Fragen beantworten</p>
-                </div>
-            </div>
-            <p class="text-[11px] text-slate-400 leading-relaxed">
-                Wähle ein Thema zum Lesen. Danach bekommst du Fragen zu genau diesem Thema.
-                Je schneller du antwortest, desto mehr XP!
-            </p>
+            <div class="flex items-center gap-3 mb-2"><div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-lg"></i></div><div><h2 class="text-lg font-extrabold">Learn & Quiz</h2><p class="text-xs text-slate-500">Modul ${S.module.id}: ${S.module.name}</p></div></div>
+            <p class="text-[11px] text-slate-400 leading-relaxed">Wähle ein Thema zum Lesen. Danach kommen Fragen dazu.</p>
         </div>
-
-        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">${S.summaries.length} Themen verfügbar · Modul ${S.module.id}</h3>
+        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">${S.summaries.length} Themen verfügbar</h3>
         <div class="space-y-2">
             ${S.summaries.map((s,i)=>{
-                const topicMastery=S.mastery[`module_${S.module.id}`]?.[s.topic?.toLowerCase().replace(/\s+/g,'_')]||0;
-                const rank=getRank(topicMastery);
-                return`
-                <button onclick="startLearnSession(${i})" class="w-full glass rounded-2xl p-4 text-left hover:border-violet-500/20 transition-all group">
+                const tm=S.mastery[`module_${S.module.id}`]?.[s.topic?.toLowerCase().replace(/[\s\/]+/g,'_')]||0;const tr=getRank(tm);
+                return`<button onclick="startLearnOne(${i})" class="w-full glass rounded-2xl p-4 text-left hover:border-violet-500/20 transition-all group">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm" style="background:${S.module.color}12;color:${S.module.color}">
-                            ${i+1}
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="text-sm font-bold text-white truncate">${esc(s.topic)}</div>
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm font-bold" style="background:${S.module.color}12;color:${S.module.color}">${i+1}</div>
+                        <div class="flex-1 min-w-0"><div class="text-sm font-bold text-white truncate">${esc(s.topic)}</div>
                             ${s.tags.length?`<div class="flex flex-wrap gap-1 mt-1">${s.tags.slice(0,4).map(t=>`<span class="text-[8px] font-bold px-1.5 py-0.5 rounded bg-white/5 text-slate-500">${esc(t)}</span>`).join('')}</div>`:''}
                         </div>
-                        <span class="text-xs rank-glow" style="color:${rank.color}">${rank.emoji}</span>
+                        <span class="text-xs rank-glow" style="color:${tr.color}">${tr.emoji}</span>
                     </div>
-                </button>`;
-            }).join('')}
+                </button>`}).join('')}
         </div>
-
-        <button onclick="startLearnAll()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-4 transition-colors">
-            <i class="fas fa-shuffle mr-2"></i>Zufällige 3 Themen lesen & Quiz
-        </button>
+        <button onclick="startLearnRandom()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-4 transition-colors active:scale-95"><i class="fas fa-shuffle mr-2"></i>Zufällige 3 Themen</button>
     </div>`;
 }
 
-function startLearnSession(summaryIdx) {
-    S.learnSummaryIdx=0;
-    S.learnTopics=[];
-    // Use just this one summary then quiz
-    const picked=[S.summaries[summaryIdx]];
-    S.summaries=picked;
-    showLearnCard();
-}
+function startLearnOne(idx){S.learnSummaryIdx=0;S.learnTopics=[];const picked=[S.summaries[idx]];S.summaries=picked;showLearnCard()}
+function startLearnRandom(){S.learnSummaryIdx=0;S.learnTopics=[];S.summaries=shuffle(S.summaries).slice(0,3);showLearnCard()}
 
-function startLearnAll() {
-    S.learnSummaryIdx=0;
-    S.learnTopics=[];
-    // Pick up to 3 random summaries
-    S.summaries=shuffle(S.summaries).slice(0,3);
-    showLearnCard();
-}
-
-function showLearnCard() {
-    const maxCards=S.summaries.length;
-    if(S.learnSummaryIdx>=maxCards){
-        // Done reading → start quiz on those topics
-        startLearnQuiz();
-        return;
-    }
-
+function showLearnCard(){
+    const max=S.summaries.length;
+    if(S.learnSummaryIdx>=max){startLearnQuiz();return}
     const s=S.summaries[S.learnSummaryIdx];
-    // Track which topics the user has read
-    if(s.topic) S.learnTopics.push(s.topic.toLowerCase().replace(/\s+/g,'_'));
-    // Also add tag-based topics
-    if(s.tags) s.tags.forEach(t=>S.learnTopics.push(t.toLowerCase().replace(/\s+/g,'_')));
+    // Collect topics for quiz filtering
+    if(s.topic){S.learnTopics.push(s.topic);S.learnTopics.push(s.topic.toLowerCase().replace(/[\s\/]+/g,'_'))}
+    if(s.tags)s.tags.forEach(t=>{S.learnTopics.push(t);S.learnTopics.push(t.toLowerCase().replace(/[\s\/]+/g,'_'))});
 
-    app.innerHTML=`
-    <div class="enter">
+    app.innerHTML=`<div class="enter">
         <div class="flex items-center justify-between mb-4">
-            <button onclick="startLearnQuiz()" class="text-slate-500 hover:text-violet-400 text-xs font-bold transition-colors">
-                <i class="fas fa-forward mr-1"></i>Direkt zum Quiz
-            </button>
-            <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold text-slate-500">${S.learnSummaryIdx+1}/${maxCards}</span>
-                <span class="text-[10px] font-bold text-violet-400"><i class="fas fa-book-open mr-1"></i>Lernphase</span>
-            </div>
+            <button onclick="startLearnQuiz()" class="text-slate-500 hover:text-violet-400 text-xs font-bold transition-colors"><i class="fas fa-forward mr-1"></i>Direkt Quiz</button>
+            <div class="flex items-center gap-2"><span class="text-[10px] font-bold text-slate-500">${S.learnSummaryIdx+1}/${max}</span><span class="text-[10px] font-bold text-violet-400"><i class="fas fa-book-open mr-1"></i>Lernphase</span></div>
         </div>
-
-        <!-- Reading progress -->
-        <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden">
-            <div class="h-full bg-violet-500 rounded-full transition-all" style="width:${((S.learnSummaryIdx+1)/maxCards)*100}%"></div>
-        </div>
-
+        <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden"><div class="h-full bg-violet-500 rounded-full transition-all" style="width:${((S.learnSummaryIdx+1)/max)*100}%"></div></div>
         <div class="glass rounded-2xl overflow-hidden mb-4 border-indigo-500/15">
-            <div class="bg-indigo-500/8 px-5 py-3 flex items-center gap-2">
-                <i class="fas fa-book-open text-indigo-400 text-sm"></i>
-                <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Lies aufmerksam — dann kommt das Quiz</span>
-            </div>
+            <div class="bg-indigo-500/8 px-5 py-3 flex items-center gap-2"><i class="fas fa-book-open text-indigo-400 text-sm"></i><span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Lies aufmerksam</span></div>
             <div class="p-5">
                 <h3 class="text-lg font-extrabold text-white mb-2">${esc(s.topic)}</h3>
                 ${s.tags.length?`<div class="flex flex-wrap gap-1.5 mb-4">${s.tags.map(t=>`<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300">${esc(t)}</span>`).join('')}</div>`:''}
-                <div class="summary-content max-h-[55vh] overflow-y-auto pr-1" style="scrollbar-width:thin">
-                    ${s.content || '<p class="text-slate-500">Kein Inhalt verfügbar.</p>'}
-                </div>
+                <div class="sc max-h-[55vh] overflow-y-auto pr-1" style="scrollbar-width:thin">${s.content||'<p class="text-slate-500">Kein Inhalt.</p>'}</div>
             </div>
         </div>
-
         <div class="flex gap-3">
-            ${S.learnSummaryIdx>0?`<button onclick="S.learnSummaryIdx--;showLearnCard()" class="glass rounded-xl py-3 px-5 font-bold text-sm text-slate-400 transition-all">
-                <i class="fas fa-arrow-left mr-1"></i>Zurück
-            </button>`:''}
+            ${S.learnSummaryIdx>0?`<button onclick="S.learnSummaryIdx--;showLearnCard()" class="glass rounded-xl py-3 px-5 font-bold text-sm text-slate-400 transition-all"><i class="fas fa-arrow-left mr-1"></i>Zurück</button>`:''}
             <button onclick="S.learnSummaryIdx++;showLearnCard()" class="flex-1 bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors active:scale-95">
-                ${S.learnSummaryIdx+1>=maxCards?'<i class="fas fa-brain mr-2"></i>Jetzt Quiz starten':'<i class="fas fa-arrow-right mr-2"></i>Weiter lesen'}
+                ${S.learnSummaryIdx+1>=max?'<i class="fas fa-brain mr-2"></i>Quiz starten':'<i class="fas fa-arrow-right mr-2"></i>Weiter lesen'}
             </button>
         </div>
     </div>`;
 }
 
-async function startLearnQuiz() {
-    showLoading('Quiz wird aus gelesenen Themen erstellt...');
-
-    // Try to filter questions by topics the user just read
+async function startLearnQuiz(){
+    showLoading('Quiz wird erstellt...');
     const uniqueTopics=[...new Set(S.learnTopics)];
-
-    if(S.rawBank.length===0){
-        try{ await loadBank(); }catch(e){ showError(e.message); return; }
-    }
-
-    // Try topic-filtered first, fall back to all questions
-    S.normalizedQuestions=Normalizer.prepareRoundForTopics(S.rawBank, S.roundSize, uniqueTopics);
+    if(!S.rawBank.length){try{await loadBank()}catch(e){showError(e.message);return}}
+    S.normalizedQuestions=N.prepareForTopics(S.rawBank,S.roundSize,uniqueTopics);
     S.total=S.normalizedQuestions.length;
-
-    if(S.total===0){
-        // Complete fallback
-        S.normalizedQuestions=Normalizer.prepareRound(S.rawBank, S.roundSize, 'recall');
-        S.total=S.normalizedQuestions.length;
-    }
-
-    if(S.total===0){ showError('Keine Fragen verfügbar'); return; }
-
-    S.mode='recall'; // quiz phase uses recall mechanics
-    renderGame();
+    if(!S.total){S.normalizedQuestions=N.prepare(S.rawBank,S.roundSize,'recall');S.total=S.normalizedQuestions.length}
+    if(!S.total){showError('Keine Fragen verfügbar');return}
+    S.mode='recall';renderGame();
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  GAME SCREEN (Recall, Absorb, Sprint, Weakness)
+//  GAME (Recall, Absorb, Sprint, Weakness)
 // ═══════════════════════════════════════════════════════════════
-function renderGame() {
-    if(S.qi>=S.total) return renderResults();
-    const q=S.normalizedQuestions[S.qi];
-    const mult=getComboMult();
-    const progress=Math.round((S.qi/S.total)*100);
-    const mInfo=MODES.find(m=>m.id===S.mode);
+function renderGame(){
+    if(S.qi>=S.total)return renderResults();
+    const q=S.normalizedQuestions[S.qi];const mult=getCM();const prog=Math.round((S.qi/S.total)*100);
 
-    app.innerHTML=`
-    <div class="enter" id="gw">
+    app.innerHTML=`<div class="enter" id="gw">
         <div class="flex items-center justify-between mb-3">
-            <button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold transition-colors">
-                <i class="fas fa-times mr-1"></i>Ende
-            </button>
+            <button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold transition-colors"><i class="fas fa-times mr-1"></i>Ende</button>
             <div class="flex items-center gap-2">
                 <span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span>
                 ${S.combo>=3?`<span class="text-[10px] font-bold text-orange-400 pop">🔥×${mult.toFixed(1)}</span>`:''}
                 <span class="text-[10px] font-bold text-violet-400 t-num">+${S.sessionXP}</span>
             </div>
         </div>
-
-        <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden">
-            <div class="h-full bg-violet-500 rounded-full transition-all duration-300" style="width:${progress}%"></div>
-        </div>
-
+        <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden"><div class="h-full bg-violet-500 rounded-full transition-all duration-300" style="width:${prog}%"></div></div>
         <div class="flex items-center gap-2 mb-3 flex-wrap">
             <span class="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded" style="background:${S.module.color}12;color:${S.module.color}">${q.topic.replace(/_/g,' ')}</span>
             <span class="text-[9px] font-bold text-slate-700">${q.difficulty===3?'⚡⚡⚡':q.difficulty===2?'⚡⚡':'⚡'}</span>
         </div>
-
         <div class="glass rounded-2xl p-5 sm:p-6 mb-4">
             <p class="text-white font-bold text-base sm:text-lg leading-relaxed">${esc(q.display)}</p>
-            ${q.givenItems?.length?`
-            <div class="mt-3 space-y-1">
-                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Bereits gegeben:</div>
-                ${q.givenItems.map(g=>`<div class="text-xs text-slate-400 flex items-center gap-1.5"><i class="fas fa-check text-slate-600 text-[8px]"></i>${esc(g)}</div>`).join('')}
-            </div>`:''}
+            ${q.givenItems?.length?`<div class="mt-3 space-y-1"><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Gegeben:</div>${q.givenItems.map(g=>`<div class="text-xs text-slate-400 flex items-center gap-1.5"><i class="fas fa-check text-slate-600 text-[8px]"></i>${esc(g)}</div>`).join('')}</div>`:''}
         </div>
-
-        ${S.mode==='sprint'?`
-        <div class="flex items-center gap-2 mb-4">
-            <div class="flex-1 bg-white/5 rounded-full h-1.5 overflow-hidden">
-                <div id="sp-bar" class="h-full rounded-full bg-red-500 transition-all" style="width:100%"></div>
-            </div>
-            <span id="sp-time" class="text-[10px] font-bold text-red-400 t-num w-6 text-right">30</span>
-        </div>`:''}
-
-        <div id="aa">${S.mode==='absorb'?'':renderAnswerUI(q)}</div>
+        ${S.mode==='sprint'?`<div class="flex items-center gap-2 mb-4"><div class="flex-1 bg-white/5 rounded-full h-1.5 overflow-hidden"><div id="sp-bar" class="h-full rounded-full bg-red-500 transition-all" style="width:100%"></div></div><span id="sp-time" class="text-[10px] font-bold text-red-400 t-num w-6 text-right">30</span></div>`:''}
+        <div id="aa">${S.mode==='absorb'?'':answerUI(q)}</div>
         <div id="fb"></div>
     </div>`;
-
-    if(S.mode==='sprint') startSprint();
-    if(S.mode==='absorb') startAbsorb(q);
+    if(S.mode==='sprint')startSprint();
+    if(S.mode==='absorb')startAbsorb(q);
 }
 
-function renderAnswerUI(q) {
-    if(q.type==='tf'){
-        return`
-        <div class="grid grid-cols-2 gap-3">
-            <button onclick="submitTF('richtig')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-green-500/10 hover:border-green-500/30 transition-all active:scale-95">
-                <i class="fas fa-check text-green-400 mr-2"></i>Richtig
-            </button>
-            <button onclick="submitTF('falsch')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-red-500/10 hover:border-red-500/30 transition-all active:scale-95">
-                <i class="fas fa-times text-red-400 mr-2"></i>Falsch
-            </button>
-        </div>`;
-    }
-
-    if(q.type==='list'){
-        const c=Math.min(q.count||3,5);
-        let inputs='';
-        for(let i=0;i<c;i++){
-            inputs+=`<input id="ai-${i}" type="text" class="w-full glass rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-2" placeholder="${i+1}." onkeydown="if(event.key==='Enter'){const n=$('ai-${i+1}');if(n)n.focus();else submitList(${c})}">`;
-        }
-        return inputs+`
-        <button onclick="submitList(${c})" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-1 transition-colors active:scale-95">
-            <i class="fas fa-check mr-2"></i>Prüfen
-        </button>`;
-    }
-
-    // text type — with pen toggle
-    return`
-    <div class="flex gap-2 mb-2">
-        <button onclick="togglePen(false)" id="m-type" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all">⌨️ Tippen</button>
-        <button onclick="togglePen(true)" id="m-pen" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all">✏️ Stift</button>
-    </div>
-    <div id="t-in">
-        <textarea id="ai-text" class="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors resize-none" rows="3" placeholder="Deine Antwort..."></textarea>
-    </div>
-    <div id="p-in" class="hidden"><div id="pen-c"></div></div>
-    <button onclick="submitText()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-2 transition-colors active:scale-95">
-        <i class="fas fa-check mr-2"></i>Prüfen
-    </button>`;
+function answerUI(q){
+    if(q.type==='tf')return`<div class="grid grid-cols-2 gap-3"><button onclick="subTF('richtig')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-green-500/10 hover:border-green-500/30 transition-all active:scale-95"><i class="fas fa-check text-green-400 mr-2"></i>Richtig</button><button onclick="subTF('falsch')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-red-500/10 hover:border-red-500/30 transition-all active:scale-95"><i class="fas fa-times text-red-400 mr-2"></i>Falsch</button></div>`;
+    if(q.type==='list'){const c=Math.min(q.count||3,5);let h='';for(let i=0;i<c;i++)h+=`<input id="ai-${i}" type="text" class="w-full glass rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-2" placeholder="${i+1}." onkeydown="if(event.key==='Enter'){const n=$('ai-${i+1}');if(n)n.focus();else subList(${c})}">`;return h+`<button onclick="subList(${c})" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-1 transition-colors active:scale-95"><i class="fas fa-check mr-2"></i>Prüfen</button>`}
+    return`<div class="flex gap-2 mb-2"><button onclick="togglePen(false)" id="m-t" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all">⌨️ Tippen</button><button onclick="togglePen(true)" id="m-p" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all">✏️ Stift</button></div><div id="t-i"><textarea id="ai-text" class="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors resize-none" rows="3" placeholder="Deine Antwort..."></textarea></div><div id="p-i" class="hidden"><div id="pc"></div></div><button onclick="subText()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-2 transition-colors active:scale-95"><i class="fas fa-check mr-2"></i>Prüfen</button>`;
 }
 
-function togglePen(penMode) {
-    const tD=$('t-in'),pD=$('p-in'),tB=$('m-type'),pB=$('m-pen');
-    if(!tD||!pD) return;
-    if(penMode){
-        tD.classList.add('hidden');pD.classList.remove('hidden');
-        tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
-        pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
-        const c=$('pen-c');
-        if(c&&!c.hasChildNodes()) c.appendChild(CanvasInput.create('arena-pen',600,150));
-    }else{
-        tD.classList.remove('hidden');pD.classList.add('hidden');
-        tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
-        pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
-    }
+function togglePen(pen){
+    const tD=$('t-i'),pD=$('p-i'),tB=$('m-t'),pB=$('m-p');if(!tD||!pD)return;
+    if(pen){tD.classList.add('hidden');pD.classList.remove('hidden');tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';const c=$('pc');if(c&&!c.hasChildNodes())c.appendChild(CanvasInput.create('arena-pen',600,150))}
+    else{tD.classList.remove('hidden');pD.classList.add('hidden');tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all'}
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  ABSORB MODE
-// ═══════════════════════════════════════════════════════════════
-function startAbsorb(q) {
-    const aa=$('aa');
-    aa.innerHTML=`
-    <div class="glass rounded-2xl p-5 mb-3 border-indigo-500/20">
-        <div class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest mb-2"><i class="fas fa-eye mr-1"></i>Merke dir das</div>
-        <p class="text-white font-medium text-sm leading-relaxed">${esc(q.correctFull||q.answer)}</p>
-    </div>
-    <div class="text-center text-xs text-slate-500 font-bold"><span id="at">5</span>s</div>`;
-    let t=5;
-    const iv=setInterval(()=>{
-        t--;const el=$('at');if(el)el.textContent=t;
-        if(t<=0){clearInterval(iv);aa.innerHTML=renderAnswerUI(q);$('ai-text')?.focus();}
-    },1000);
+function startAbsorb(q){const aa=$('aa');aa.innerHTML=`<div class="glass rounded-2xl p-5 mb-3 border-indigo-500/20"><div class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest mb-2"><i class="fas fa-eye mr-1"></i>Merke dir das</div><p class="text-white font-medium text-sm leading-relaxed">${esc(q.correctFull||q.answer)}</p></div><div class="text-center text-xs text-slate-500 font-bold"><span id="at">5</span>s</div>`;let t=5;const iv=setInterval(()=>{t--;const el=$('at');if(el)el.textContent=t;if(t<=0){clearInterval(iv);aa.innerHTML=answerUI(q);$('ai-text')?.focus()}},1000)}
+
+function startSprint(){S.sprintLeft=30;clearInterval(S.sprintTimer);S.sprintTimer=setInterval(()=>{S.sprintLeft--;const b=$('sp-bar'),t=$('sp-time');if(b)b.style.width=(S.sprintLeft/30*100)+'%';if(t)t.textContent=S.sprintLeft;if(S.sprintLeft<=5&&b)b.style.background='#ef4444';if(S.sprintLeft<=0){clearInterval(S.sprintTimer);feedback(false)}},1000)}
+
+// ═══ CONNECT ═══
+function renderConnectGame(){
+    if(S.qi>=S.total)return renderResults();const q=S.normalizedQuestions[S.qi];const pairs=(q.pairs||[]).slice(0,5);if(pairs.length<2){S.qi++;return renderConnectGame()}
+    S.connectPairs=pairs;S.connectSelected=null;S.connectMatched=new Set();
+    const lI=shuffle(pairs.map((p,i)=>({text:p.left,idx:i})));const rI=shuffle(pairs.map((p,i)=>({text:p.right,idx:i})));const prog=Math.round((S.qi/S.total)*100);
+    app.innerHTML=`<div class="enter" id="gw"><div class="flex items-center justify-between mb-3"><button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold"><i class="fas fa-times mr-1"></i>Ende</button><div class="flex items-center gap-2"><span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span><span class="text-[10px] font-bold text-violet-400 t-num">+${S.sessionXP}</span></div></div>
+    <div class="w-full bg-white/5 rounded-full h-1 mb-4 overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width:${prog}%"></div></div>
+    <div class="glass rounded-2xl p-4 mb-4 border-emerald-500/15"><div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-1"><i class="fas fa-link mr-1"></i>Paare verbinden</div><p class="text-sm text-white font-bold">${esc(q.display)}</p></div>
+    <div class="grid grid-cols-2 gap-2.5"><div class="space-y-2">${lI.map(it=>`<div onclick="cC('l',${it.idx})" id="cl-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-white cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}</div><div class="space-y-2">${rI.map(it=>`<div onclick="cC('r',${it.idx})" id="cr-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-slate-400 cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}</div></div>
+    <div id="fb" class="mt-3"></div></div>`;
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  SPRINT TIMER
-// ═══════════════════════════════════════════════════════════════
-function startSprint() {
-    S.sprintLeft=30;
-    clearInterval(S.sprintTimer);
-    S.sprintTimer=setInterval(()=>{
-        S.sprintLeft--;
-        const bar=$('sp-bar'),tm=$('sp-time');
-        if(bar)bar.style.width=(S.sprintLeft/30*100)+'%';
-        if(tm)tm.textContent=S.sprintLeft;
-        if(S.sprintLeft<=5&&bar)bar.style.background='#ef4444';
-        if(S.sprintLeft<=0){clearInterval(S.sprintTimer);showFeedback(false);}
-    },1000);
+function cC(side,idx){
+    if(S.connectMatched.has(idx))return;
+    if(!S.connectSelected){S.connectSelected={side,idx};const el=$(`c${side}-${idx}`);if(el)el.style.borderColor='rgba(16,185,129,.5)';return}
+    const prev=S.connectSelected;S.connectSelected=null;
+    if(prev.side===side){const pe=$(`c${prev.side}-${prev.idx}`);if(pe)pe.style.borderColor='';S.connectSelected={side,idx};const el=$(`c${side}-${idx}`);if(el)el.style.borderColor='rgba(16,185,129,.5)';return}
+    const lI=prev.side==='l'?prev.idx:idx,rI=prev.side==='r'?prev.idx:idx;const lE=$(`cl-${lI}`),rE=$(`cr-${rI}`);
+    if(lI===rI){S.connectMatched.add(lI);if(lE){lE.style.background='rgba(16,185,129,.12)';lE.style.borderColor='rgba(16,185,129,.3)';lE.style.pointerEvents='none'}if(rE){rE.style.background='rgba(16,185,129,.12)';rE.style.borderColor='rgba(16,185,129,.3)';rE.style.pointerEvents='none'}
+        if(S.connectMatched.size>=S.connectPairs.length){S.score++;S.combo++;S.maxCombo=Math.max(S.maxCombo,S.combo);const e=Math.round(25*getCM());S.xp+=e;S.sessionXP+=e;S.answers.push({correct:true,earned:e,topic:S.normalizedQuestions[S.qi].topic});updateM(S.normalizedQuestions[S.qi].topic,true);save();setTimeout(()=>{S.qi++;renderConnectGame()},500)}
+    }else{S.combo=0;if(lE){lE.classList.add('shake');lE.style.borderColor='rgba(239,68,68,.5)'}if(rE){rE.classList.add('shake');rE.style.borderColor='rgba(239,68,68,.5)'}const pe=$(`c${prev.side}-${prev.idx}`);if(pe)pe.style.borderColor='';setTimeout(()=>{if(lE){lE.classList.remove('shake');lE.style.borderColor=''}if(rE){rE.classList.remove('shake');rE.style.borderColor=''}},400)}
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  CONNECT MODE
-// ═══════════════════════════════════════════════════════════════
-function renderConnectGame() {
-    if(S.qi>=S.total) return renderResults();
-    const q=S.normalizedQuestions[S.qi];
-    const pairs=(q.pairs||[]).slice(0,5);
-    if(pairs.length<2){S.qi++;return renderConnectGame();}
+// ═══ SUBMISSIONS ═══
+function subTF(v){clearInterval(S.sprintTimer);const q=S.normalizedQuestions[S.qi];feedback(v.toLowerCase()===(q.answer||'').toLowerCase())}
+function subText(){clearInterval(S.sprintTimer);const q=S.normalizedQuestions[S.qi];const t=$('ai-text')?.value?.trim()||'';if(!t)return;const kw=q.keywords||[];if(!kw.length){feedback(t.length>5);return}let m=0;kw.forEach(k=>{if(matchKW(t,k))m++});feedback(m/kw.length>=.35)}
+function subList(c){clearInterval(S.sprintTimer);const q=S.normalizedQuestions[S.qi];const kw=q.keywords||[];let m=0;const u=new Set();for(let i=0;i<c;i++){const v=$(`ai-${i}`)?.value?.trim()||'';if(!v)continue;const f=kw.find((k,ki)=>!u.has(ki)&&matchKW(v,k));if(f){m++;u.add(kw.indexOf(f))}}feedback(m>=Math.max(1,Math.ceil(c*.35)))}
 
-    S.connectPairs=pairs;
-    S.connectSelected=null;
-    S.connectMatched=new Set();
-    const lItems=shuffle(pairs.map((p,i)=>({text:p.left,idx:i})));
-    const rItems=shuffle(pairs.map((p,i)=>({text:p.right,idx:i})));
-    const progress=Math.round((S.qi/S.total)*100);
-
-    app.innerHTML=`
-    <div class="enter" id="gw">
-        <div class="flex items-center justify-between mb-3">
-            <button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold"><i class="fas fa-times mr-1"></i>Ende</button>
-            <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span>
-                <span class="text-[10px] font-bold text-violet-400 t-num">+${S.sessionXP}</span>
-            </div>
-        </div>
-        <div class="w-full bg-white/5 rounded-full h-1 mb-4 overflow-hidden">
-            <div class="h-full bg-emerald-500 rounded-full" style="width:${progress}%"></div>
-        </div>
-        <div class="glass rounded-2xl p-4 mb-4 border-emerald-500/15">
-            <div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-1"><i class="fas fa-link mr-1"></i>Paare verbinden</div>
-            <p class="text-sm text-white font-bold">${esc(q.display)}</p>
-        </div>
-        <div class="grid grid-cols-2 gap-2.5">
-            <div class="space-y-2">
-                ${lItems.map(it=>`
-                <div onclick="cClick('l',${it.idx})" id="cl-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-white cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}
-            </div>
-            <div class="space-y-2">
-                ${rItems.map(it=>`
-                <div onclick="cClick('r',${it.idx})" id="cr-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-slate-400 cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}
-            </div>
-        </div>
-        <div id="fb" class="mt-3"></div>
-    </div>`;
-}
-
-function cClick(side,idx) {
-    if(S.connectMatched.has(idx)) return;
-    if(S.connectSelected===null){
-        S.connectSelected={side,idx};
-        const el=$(`c${side}-${idx}`);
-        if(el)el.style.borderColor='rgba(16,185,129,.5)';
-    }else{
-        const prev=S.connectSelected;
-        S.connectSelected=null;
-        if(prev.side===side){
-            const pel=$(`c${prev.side}-${prev.idx}`);if(pel)pel.style.borderColor='';
-            S.connectSelected={side,idx};const el=$(`c${side}-${idx}`);if(el)el.style.borderColor='rgba(16,185,129,.5)';
-            return;
-        }
-        const lIdx=prev.side==='l'?prev.idx:idx;
-        const rIdx=prev.side==='r'?prev.idx:idx;
-        const lEl=$(`cl-${lIdx}`),rEl=$(`cr-${rIdx}`);
-        if(lIdx===rIdx){
-            S.connectMatched.add(lIdx);
-            if(lEl){lEl.style.background='rgba(16,185,129,.12)';lEl.style.borderColor='rgba(16,185,129,.3)';lEl.style.pointerEvents='none';}
-            if(rEl){rEl.style.background='rgba(16,185,129,.12)';rEl.style.borderColor='rgba(16,185,129,.3)';rEl.style.pointerEvents='none';}
-            if(S.connectMatched.size>=S.connectPairs.length){
-                S.score++;S.combo++;S.maxCombo=Math.max(S.maxCombo,S.combo);
-                const earned=Math.round(25*getComboMult());
-                S.xp+=earned;S.sessionXP+=earned;
-                S.answers.push({correct:true,earned,topic:S.normalizedQuestions[S.qi].topic});
-                updateMastery(S.normalizedQuestions[S.qi].topic,true);save();
-                setTimeout(()=>{S.qi++;renderConnectGame();},500);
-            }
-        }else{
-            S.combo=0;
-            if(lEl){lEl.classList.add('shake');lEl.style.borderColor='rgba(239,68,68,.5)';}
-            if(rEl){rEl.classList.add('shake');rEl.style.borderColor='rgba(239,68,68,.5)';}
-            const pel=$(`c${prev.side}-${prev.idx}`);if(pel)pel.style.borderColor='';
-            setTimeout(()=>{
-                if(lEl){lEl.classList.remove('shake');lEl.style.borderColor='';}
-                if(rEl){rEl.classList.remove('shake');rEl.style.borderColor='';}
-            },400);
-        }
-    }
-}
-
-// ═══════════════════════════════════════════════════════════════
-//  ANSWER SUBMISSION
-// ═══════════════════════════════════════════════════════════════
-function submitTF(val) {
-    clearInterval(S.sprintTimer);
-    const q=S.normalizedQuestions[S.qi];
-    showFeedback(val.toLowerCase()===(q.answer||'').toLowerCase());
-}
-
-function submitText() {
-    clearInterval(S.sprintTimer);
-    const q=S.normalizedQuestions[S.qi];
-    const text=$('ai-text')?.value?.trim()||'';
-    if(!text) return;
-    const kw=q.keywords||[];
-    if(!kw.length){showFeedback(text.length>5);return;}
-    let matched=0;
-    kw.forEach(k=>{if(matchKW(text,k))matched++;});
-    showFeedback(matched/kw.length>=0.35);
-}
-
-function submitList(count) {
-    clearInterval(S.sprintTimer);
-    const q=S.normalizedQuestions[S.qi];
-    const kw=q.keywords||[];
-    let matched=0;
-    const used=new Set();
-    for(let i=0;i<count;i++){
-        const val=$(`ai-${i}`)?.value?.trim()||'';
-        if(!val)continue;
-        const m=kw.find((k,ki)=>!used.has(ki)&&matchKW(val,k));
-        if(m){matched++;used.add(kw.indexOf(m));}
-    }
-    showFeedback(matched>=Math.max(1,Math.ceil(count*0.35)));
-}
-
-// ═══════════════════════════════════════════════════════════════
-//  FEEDBACK
-// ═══════════════════════════════════════════════════════════════
-function showFeedback(correct) {
-    clearInterval(S.sprintTimer);
-    const q=S.normalizedQuestions[S.qi];
-    if(correct){S.combo++;S.score++;}else{S.combo=0;}
-    S.maxCombo=Math.max(S.maxCombo,S.combo);
-    const baseXP=correct?(q.difficulty===3?30:q.difficulty===2?20:15):2;
-    const mult=getComboMult();
-    const earned=Math.round(baseXP*mult);
-    S.xp+=earned;S.sessionXP+=earned;
-    S.answers.push({correct,earned,topic:q.topic});
-    updateMastery(q.topic,correct);save();
-
-    const wrap=$('gw');
-    if(wrap&&correct){
-        const fl=document.createElement('div');
-        fl.className='float-up text-violet-400 font-extrabold text-sm';
-        fl.textContent=`+${earned} XP`;
-        fl.style.right='16px';fl.style.top='16px';
-        wrap.appendChild(fl);
-    }
-
-    const aa=$('aa');if(aa){aa.style.opacity='.3';aa.style.pointerEvents='none';}
-    const fb=$('fb');
-
-    fb.innerHTML=`
-    <div class="glass rounded-2xl p-4 sm:p-5 ${correct?'border-green-500/20':'border-red-500/20'} enter mt-3">
-        <div class="flex items-center gap-3 mb-3">
-            <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${correct?'bg-green-500/10 text-green-400':'bg-red-500/10 text-red-400'} pop">
-                <i class="fas ${correct?'fa-check':'fa-times'}"></i>
-            </div>
-            <div>
-                <div class="font-bold text-sm ${correct?'text-green-400':'text-red-400'}">${correct?'Richtig!':'Nicht ganz'}</div>
-                <div class="text-[10px] text-slate-500">+${earned} XP${S.combo>=3?` · 🔥×${mult.toFixed(1)}`:''}</div>
-            </div>
-        </div>
-        <div class="bg-white/5 rounded-lg p-3">
-            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Richtige Antwort</div>
-            <p class="text-sm text-slate-300 leading-relaxed">${esc(q.correctFull||q.answer)}</p>
-        </div>
+// ═══ FEEDBACK ═══
+function feedback(correct){
+    clearInterval(S.sprintTimer);const q=S.normalizedQuestions[S.qi];
+    if(correct){S.combo++;S.score++}else S.combo=0;S.maxCombo=Math.max(S.maxCombo,S.combo);
+    const bXP=correct?(q.difficulty===3?30:q.difficulty===2?20:15):2;const mult=getCM();const earned=Math.round(bXP*mult);
+    S.xp+=earned;S.sessionXP+=earned;S.answers.push({correct,earned,topic:q.topic});updateM(q.topic,correct);save();
+    const w=$('gw');if(w&&correct){const f=document.createElement('div');f.className='float-up text-violet-400 font-extrabold text-sm';f.textContent=`+${earned} XP`;f.style.right='16px';f.style.top='16px';w.appendChild(f)}
+    const aa=$('aa');if(aa){aa.style.opacity='.3';aa.style.pointerEvents='none'}
+    $('fb').innerHTML=`<div class="glass rounded-2xl p-4 sm:p-5 ${correct?'border-green-500/20':'border-red-500/20'} enter mt-3">
+        <div class="flex items-center gap-3 mb-3"><div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${correct?'bg-green-500/10 text-green-400':'bg-red-500/10 text-red-400'} pop"><i class="fas ${correct?'fa-check':'fa-times'}"></i></div><div><div class="font-bold text-sm ${correct?'text-green-400':'text-red-400'}">${correct?'Richtig!':'Nicht ganz'}</div><div class="text-[10px] text-slate-500">+${earned} XP${S.combo>=3?` · 🔥×${mult.toFixed(1)}`:''}</div></div></div>
+        <div class="bg-white/5 rounded-lg p-3"><div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Richtige Antwort</div><p class="text-sm text-slate-300 leading-relaxed">${esc(q.correctFull||q.answer)}</p></div>
         ${q.explanation?`<p class="text-[11px] text-slate-500 mt-2 italic leading-relaxed">${esc(q.explanation)}</p>`:''}
     </div>
     <button onclick="S.qi++;${S.mode==='connect'?'renderConnectGame()':'renderGame()'}" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-3 transition-colors active:scale-95">
         ${S.qi+1>=S.total?'<i class="fas fa-flag-checkered mr-2"></i>Ergebnis':'<i class="fas fa-arrow-right mr-2"></i>Weiter'}
     </button>`;
-
-    if(!correct&&wrap) wrap.classList.add('shake');
+    if(!correct&&w)w.classList.add('shake');
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  RESULTS SCREEN
-// ═══════════════════════════════════════════════════════════════
-function renderResults() {
-    clearInterval(S.sprintTimer);
-    const pct=S.total>0?Math.round((S.score/S.total)*100):0;
-    const modM=getModuleMastery(S.module?.id||1);
-    const rank=getRank(modM);
-
-    const ts={};
-    S.answers.forEach(a=>{
-        if(!ts[a.topic])ts[a.topic]={c:0,t:0,xp:0};
-        ts[a.topic].t++;ts[a.topic].xp+=a.earned;
-        if(a.correct)ts[a.topic].c++;
-    });
-
-    app.innerHTML=`
-    <div class="enter">
-        <div class="text-center mb-6 pt-4">
-            <div class="text-5xl mb-3 pop">${pct>=80?'🏆':pct>=50?'💪':'📚'}</div>
-            <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Training abgeschlossen</h1>
-            <p class="text-slate-500 text-sm mt-1">Modul ${S.module?.id} · ${S.module?.name}</p>
-        </div>
-
+// ═══ RESULTS ═══
+function renderResults(){
+    clearInterval(S.sprintTimer);const pct=S.total>0?Math.round((S.score/S.total)*100):0;const modM=getModM(S.module?.id||1);const rank=getRank(modM);
+    const ts={};S.answers.forEach(a=>{if(!ts[a.topic])ts[a.topic]={c:0,t:0,xp:0};ts[a.topic].t++;ts[a.topic].xp+=a.earned;if(a.correct)ts[a.topic].c++});
+    app.innerHTML=`<div class="enter">
+        <div class="text-center mb-6 pt-4"><div class="text-5xl mb-3 pop">${pct>=80?'🏆':pct>=50?'💪':'📚'}</div><h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Training abgeschlossen</h1><p class="text-slate-500 text-sm mt-1">Modul ${S.module?.id} · ${S.module?.name}</p></div>
         <div class="grid grid-cols-3 gap-2.5 mb-5">
-            <div class="glass rounded-2xl p-4 text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-white t-num">${pct}%</div>
-                <div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">${S.score}/${S.total}</div>
-            </div>
-            <div class="glass rounded-2xl p-4 text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-violet-400 t-num">+${S.sessionXP}</div>
-                <div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">XP</div>
-            </div>
-            <div class="glass rounded-2xl p-4 text-center">
-                <div class="text-xl sm:text-2xl font-extrabold text-orange-400 t-num">${S.maxCombo}×</div>
-                <div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">Combo</div>
-            </div>
+            <div class="glass rounded-2xl p-4 text-center"><div class="text-xl sm:text-2xl font-extrabold text-white t-num">${pct}%</div><div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">${S.score}/${S.total}</div></div>
+            <div class="glass rounded-2xl p-4 text-center"><div class="text-xl sm:text-2xl font-extrabold text-violet-400 t-num">+${S.sessionXP}</div><div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">XP</div></div>
+            <div class="glass rounded-2xl p-4 text-center"><div class="text-xl sm:text-2xl font-extrabold text-orange-400 t-num">${S.maxCombo}×</div><div class="text-[8px] text-slate-500 font-bold uppercase tracking-widest mt-0.5">Combo</div></div>
         </div>
-
-        <div class="glass rounded-2xl p-5 mb-5 text-center">
-            <div class="text-3xl rank-glow mb-1" style="color:${rank.color}">${rank.emoji}</div>
-            <div class="text-sm font-bold" style="color:${rank.color}">${rank.label}</div>
-            <div class="text-[11px] text-slate-500 mt-1">Modul ${S.module?.id} Mastery: ${modM}%</div>
-            <div class="w-full bg-white/5 rounded-full h-2 mt-3 overflow-hidden max-w-[200px] mx-auto">
-                <div class="h-full rounded-full" style="width:${modM}%;background:${rank.color}"></div>
-            </div>
-        </div>
-
-        ${Object.keys(ts).length?`
-        <div class="glass rounded-2xl p-5 mb-5">
-            <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-3">Themen-Detail</h3>
-            ${Object.entries(ts).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).map(([t,s])=>{
-                const tp=Math.round((s.c/s.t)*100);
-                const tc=tp>=70?'#22c55e':tp>=40?'#eab308':'#ef4444';
-                const tm=S.mastery[`module_${S.module.id}`]?.[t]||0;
-                const tr=getRank(tm);
-                return`
-                <div class="flex items-center gap-2 mb-2.5">
-                    <span class="text-xs" style="color:${tr.color}">${tr.emoji}</span>
-                    <span class="text-[11px] font-bold text-slate-400 flex-1 truncate">${t.replace(/_/g,' ')}</span>
-                    <span class="text-[10px] font-bold t-num" style="color:${tc}">${s.c}/${s.t}</span>
-                    <span class="text-[9px] font-bold text-slate-600 t-num w-8 text-right">${tm}%</span>
-                </div>`;
-            }).join('')}
-        </div>`:''}
-
+        <div class="glass rounded-2xl p-5 mb-5 text-center"><div class="text-3xl rank-glow mb-1" style="color:${rank.color}">${rank.emoji}</div><div class="text-sm font-bold" style="color:${rank.color}">${rank.label}</div><div class="text-[11px] text-slate-500 mt-1">Modul ${S.module?.id} Mastery: ${modM}%</div><div class="w-full bg-white/5 rounded-full h-2 mt-3 overflow-hidden max-w-[200px] mx-auto"><div class="h-full rounded-full" style="width:${modM}%;background:${rank.color}"></div></div></div>
+        ${Object.keys(ts).length?`<div class="glass rounded-2xl p-5 mb-5"><h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-3">Themen-Detail</h3>${Object.entries(ts).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).map(([t,s])=>{const tp=Math.round((s.c/s.t)*100);const tc=tp>=70?'#22c55e':tp>=40?'#eab308':'#ef4444';const tm=S.mastery[`module_${S.module.id}`]?.[t]||0;const tr=getRank(tm);return`<div class="flex items-center gap-2 mb-2.5"><span class="text-xs" style="color:${tr.color}">${tr.emoji}</span><span class="text-[11px] font-bold text-slate-400 flex-1 truncate">${t.replace(/_/g,' ')}</span><span class="text-[10px] font-bold t-num" style="color:${tc}">${s.c}/${s.t}</span><span class="text-[9px] font-bold text-slate-600 t-num w-8 text-right">${tm}%</span></div>`}).join('')}</div>`:''}
         <div class="grid grid-cols-2 gap-2.5">
-            <button onclick="resetGame();startMode('${S.mode==='weakness'?'recall':S.mode}')"
-                class="glass rounded-xl py-3 font-bold text-sm text-violet-400 hover:bg-violet-500/10 transition-all active:scale-95">
-                <i class="fas fa-redo mr-1.5"></i>Nochmal
-            </button>
-            <button onclick="renderHome()" class="glass rounded-xl py-3 font-bold text-sm text-slate-400 hover:bg-white/5 transition-all active:scale-95">
-                <i class="fas fa-home mr-1.5"></i>Home
-            </button>
+            <button onclick="resetGame();startMode('${S.mode==='weakness'?'recall':S.mode}')" class="glass rounded-xl py-3 font-bold text-sm text-violet-400 hover:bg-violet-500/10 transition-all active:scale-95"><i class="fas fa-redo mr-1.5"></i>Nochmal</button>
+            <button onclick="renderHome()" class="glass rounded-xl py-3 font-bold text-sm text-slate-400 hover:bg-white/5 transition-all active:scale-95"><i class="fas fa-home mr-1.5"></i>Home</button>
         </div>
-    </div>`;
-    save();
+    </div>`;save()
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  INIT
-// ═══════════════════════════════════════════════════════════════
+// ═══ INIT ═══
 renderHome();
 </script>
 </body>
