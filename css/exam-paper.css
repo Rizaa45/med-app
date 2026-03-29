@@ -413,3 +413,23 @@
     .exam-paper { box-shadow: none; }
     #timer-bar, #submit-footer { display: none !important; }
 }
+
+/* ═══ MOBILE RESPONSIVE ═══ */
+@media (max-width: 640px) {
+    .exam-paper {
+        border-radius: 0;
+        font-size: 13px;
+    }
+    .ep-header { padding: 20px 16px 16px; }
+    .ep-fallbeispiel { padding: 20px 16px; }
+    .ep-aufgabe { padding: 20px 16px; }
+    .ep-info-grid { grid-template-columns: 1fr; }
+    .ep-arztbrief-row { grid-template-columns: 1fr; }
+    .ep-arztbrief-label { border-right: none; border-bottom: 1px solid #ddd; }
+    .ep-rf-row { grid-template-columns: 1fr 55px 55px; }
+    .ep-rf-statement { font-size: 12px; padding: 8px; }
+    .ep-table { font-size: 11px; display: block; overflow-x: auto; }
+    .ep-table th, .ep-table td { padding: 6px 8px; }
+    .ep-title h1 { font-size: 20px; }
+    .ep-title h2 { font-size: 16px; }
+}
