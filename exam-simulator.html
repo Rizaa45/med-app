@@ -13,30 +13,40 @@
 </head>
 <body class="min-h-screen bg-slate-100">
 
-    <!-- START SCREEN -->
-    <div id="start-screen" class="min-h-screen flex items-center justify-center p-6">
+    <!-- ═══ START SCREEN ═══ -->
+    <div id="start-screen" class="min-h-screen flex items-center justify-center p-4 sm:p-6">
         <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden">
-            <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 p-10 text-white text-center">
+            <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 p-8 sm:p-10 text-white text-center">
                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-file-alt text-3xl"></i>
                 </div>
-                <h1 class="text-3xl font-black tracking-tight">Klausur-Simulator</h1>
+                <h1 class="text-2xl sm:text-3xl font-black tracking-tight">Klausur-Simulator</h1>
                 <p class="text-indigo-200 mt-2 text-sm font-medium">Leistungsnachweis • 1:1 Papier-Format</p>
             </div>
-            <div class="p-8 space-y-6">
+            <div class="p-6 sm:p-8 space-y-5">
                 <div>
                     <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Modul</label>
-                    <select id="module-select" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                    <select id="module-select" class="w-full p-3 sm:p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none text-sm">
                         <option value="1">Modul 1: Kommunikation & Biografie</option>
+                        <option value="2">Modul 2: Medizinisches Kernwissen</option>
+                        <option value="3">Modul 3: Krankheitslehre</option>
+                        <option value="4">Modul 4: Schwangerschaft & Geburt</option>
+                        <option value="5">Modul 5: Prä- & Postoperative Pflege</option>
+                        <option value="6">Modul 6: Notfall & Reanimation</option>
+                        <option value="7">Modul 7: Ambulante & Chronische Pflege</option>
+                        <option value="8">Modul 8: Innere Medizin & Niere</option>
+                        <option value="9">Modul 9: Neurologische Rehabilitation</option>
                     </select>
                 </div>
                 <div>
                     <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Dein Name</label>
-                    <input id="student-name" type="text" placeholder="Vor- und Nachname" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                    <input id="student-name" type="text" placeholder="Vor- und Nachname"
+                        class="w-full p-3 sm:p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none text-sm">
                 </div>
                 <div>
                     <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Kurs</label>
-                    <input id="student-kurs" type="text" placeholder="z.B. OK 24" class="w-full p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none">
+                    <input id="student-kurs" type="text" placeholder="z.B. OK 24"
+                        class="w-full p-3 sm:p-4 bg-slate-50 border-2 border-slate-200 rounded-xl font-bold text-slate-800 focus:border-indigo-500 outline-none text-sm">
                 </div>
                 <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
                     <div class="flex items-start gap-3">
@@ -52,171 +62,192 @@
                         </div>
                     </div>
                 </div>
-                <button onclick="startExam()" class="w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20">
+                <div id="load-error" class="hidden bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 text-sm font-medium">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    <span id="load-error-text"></span>
+                </div>
+                <button id="start-btn" onclick="startExam()" class="w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white py-4 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20">
                     <i class="fas fa-play mr-2"></i> Klausur starten
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- EXAM SCREEN -->
+    <!-- ═══ EXAM SCREEN ═══ -->
     <div id="exam-screen" class="hidden">
-        <!-- Timer Bar -->
-        <div id="timer-bar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-            <div class="max-w-[850px] mx-auto px-4 h-14 flex items-center justify-between">
-                <button onclick="scrollToTop()" class="text-slate-500 hover:text-indigo-600 font-bold text-xs flex items-center gap-2">
-                    <i class="fas fa-arrow-up"></i> Nach oben
+        <div id="timer-bar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+            <div class="max-w-[850px] mx-auto px-3 sm:px-4 h-12 sm:h-14 flex items-center justify-between">
+                <button onclick="scrollToTop()" class="text-slate-500 hover:text-indigo-600 font-bold text-xs flex items-center gap-1 sm:gap-2">
+                    <i class="fas fa-arrow-up"></i><span class="hidden sm:inline">Nach oben</span>
                 </button>
-                <div class="flex items-center gap-4">
-                    <span id="progress-label" class="text-xs font-bold text-slate-400">Aufgabe 1/16</span>
-                    <div id="timer-display" class="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg">
-                        <i class="fas fa-clock text-indigo-500"></i>
-                        <span id="timer-text" class="font-mono font-black text-slate-800 text-sm">90:00</span>
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <span id="progress-label" class="text-[10px] sm:text-xs font-bold text-slate-400">0/16</span>
+                    <div id="timer-display" class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg">
+                        <i class="fas fa-clock text-indigo-500 text-xs"></i>
+                        <span id="timer-text" class="font-mono font-black text-slate-800 text-xs sm:text-sm">90:00</span>
                     </div>
                 </div>
-                <button onclick="submitExam()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg font-bold text-xs transition-all">
-                    <i class="fas fa-paper-plane mr-1"></i> Abgeben
+                <button onclick="submitExam()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-bold text-[10px] sm:text-xs transition-all">
+                    <i class="fas fa-paper-plane mr-1"></i><span class="hidden sm:inline">Abgeben</span><span class="sm:hidden">✓</span>
                 </button>
             </div>
             <div class="h-1 bg-slate-100">
                 <div id="timer-progress" class="h-full bg-indigo-500 transition-all duration-1000" style="width:100%"></div>
             </div>
         </div>
-
-        <!-- Paper -->
-        <div class="pt-20 pb-32 px-4">
-            <div id="exam-paper" class="exam-paper max-w-[850px] mx-auto">
-                <!-- Content rendered by JS -->
-            </div>
+        <div class="pt-16 sm:pt-20 pb-24 sm:pb-32 px-2 sm:px-4">
+            <div id="exam-paper" class="exam-paper max-w-[850px] mx-auto"></div>
         </div>
-
-        <!-- Submit Footer -->
-        <div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-slate-200 p-4 z-50">
+        <div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 sm:p-4 z-50">
             <div class="max-w-[850px] mx-auto flex items-center justify-between">
-                <span id="answered-count" class="text-sm font-bold text-slate-400">0 von 16 beantwortet</span>
-                <button onclick="submitExam()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white px-8 py-3 rounded-xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-green-500/20">
+                <span id="answered-count" class="text-xs sm:text-sm font-bold text-slate-400">0 beantwortet</span>
+                <button onclick="submitExam()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-sm transition-all shadow-lg shadow-green-500/20">
                     <i class="fas fa-check-circle mr-2"></i> Klausur abgeben
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- RESULT SCREEN -->
-    <div id="result-screen" class="hidden min-h-screen bg-slate-50 p-6">
-        <div id="result-content" class="max-w-[850px] mx-auto">
-            <!-- Rendered by JS -->
-        </div>
+    <!-- ═══ RESULT SCREEN ═══ -->
+    <div id="result-screen" class="hidden min-h-screen bg-slate-50 p-3 sm:p-6">
+        <div id="result-content" class="max-w-[850px] mx-auto"></div>
     </div>
 
-    <script src="js/exam-generator.js"></script>
-    <script src="js/exam-renderer.js"></script>
-    <script src="js/exam-grader.js"></script>
-    <script>
-        let currentExam = null;
-        let timerInterval = null;
-        let timeRemaining = 90 * 60; // 90 min in seconds
+<script src="js/exam-generator.js"></script>
+<script src="js/exam-renderer.js"></script>
+<script src="js/exam-grader.js"></script>
+<script>
+let currentExam = null;
+let timerInterval = null;
+let timeRemaining = 90 * 60;
+let selectedModule = 1;
 
-        async function startExam() {
-            const name = document.getElementById('student-name').value.trim();
-            const kurs = document.getElementById('student-kurs').value.trim();
-            if (!name) { alert('Bitte Name eingeben!'); return; }
+// Read module from URL if present
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const m = parseInt(params.get('module'));
+    if (m >= 1 && m <= 9) {
+        selectedModule = m;
+        document.getElementById('module-select').value = m;
+    }
+});
 
-            // Load question bank
-            try {
-                const resp = await fetch('data/question-banks/module1_questions.json');
-                const bank = await resp.json();
-                
-                // Generate exam
-                currentExam = ExamGenerator.generate(bank, 1);
-                currentExam.studentName = name;
-                currentExam.studentKurs = kurs;
+async function startExam() {
+    const name = document.getElementById('student-name').value.trim();
+    const kurs = document.getElementById('student-kurs').value.trim();
+    selectedModule = parseInt(document.getElementById('module-select').value);
 
-                // Switch screens
-                document.getElementById('start-screen').classList.add('hidden');
-                document.getElementById('exam-screen').classList.remove('hidden');
+    if (!name) { alert('Bitte Name eingeben!'); return; }
 
-                // Render
-                ExamRenderer.render(currentExam, document.getElementById('exam-paper'));
-                
-                // Start timer
-                startTimer();
-                
-                // Track progress
-                trackProgress();
-                
-            } catch(e) {
-                console.error(e);
-                alert('Fehler beim Laden der Fragen. Stelle sicher dass module1_questions.json existiert.');
-            }
+    const btn = document.getElementById('start-btn');
+    const errDiv = document.getElementById('load-error');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Laden...';
+    errDiv.classList.add('hidden');
+
+    try {
+        const bankFile = `data/question-banks/module${selectedModule}_questions.json`;
+        const resp = await fetch(bankFile);
+        if (!resp.ok) throw new Error(`Fragenbank nicht gefunden: ${bankFile}`);
+        const bank = await resp.json();
+
+        if (!bank.length) throw new Error('Fragenbank ist leer.');
+
+        currentExam = ExamGenerator.generate(bank, selectedModule);
+        currentExam.studentName = name;
+        currentExam.studentKurs = kurs;
+
+        document.getElementById('start-screen').classList.add('hidden');
+        document.getElementById('exam-screen').classList.remove('hidden');
+
+        ExamRenderer.render(currentExam, document.getElementById('exam-paper'));
+        startTimer();
+        trackProgress();
+    } catch(e) {
+        console.error(e);
+        errDiv.classList.remove('hidden');
+        document.getElementById('load-error-text').textContent =
+            `Modul ${selectedModule}: ${e.message}. Fragenbank muss erst erstellt werden.`;
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-play mr-2"></i> Klausur starten';
+    }
+}
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timeRemaining--;
+        if (timeRemaining <= 0) { clearInterval(timerInterval); submitExam(); return; }
+        const min = Math.floor(timeRemaining / 60);
+        const sec = timeRemaining % 60;
+        document.getElementById('timer-text').textContent =
+            `${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
+        document.getElementById('timer-progress').style.width =
+            (timeRemaining / (90*60)) * 100 + '%';
+        if (timeRemaining < 300) {
+            document.getElementById('timer-display').classList.add('bg-red-100');
+            document.getElementById('timer-text').classList.add('text-red-600');
         }
+    }, 1000);
+}
 
-        function startTimer() {
-            timerInterval = setInterval(() => {
-                timeRemaining--;
-                if (timeRemaining <= 0) {
-                    clearInterval(timerInterval);
-                    submitExam();
-                    return;
-                }
-                const min = Math.floor(timeRemaining / 60);
-                const sec = timeRemaining % 60;
-                document.getElementById('timer-text').textContent = 
-                    `${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
-                
-                const pct = (timeRemaining / (90*60)) * 100;
-                document.getElementById('timer-progress').style.width = pct + '%';
-                
-                if (timeRemaining < 300) {
-                    document.getElementById('timer-display').classList.add('bg-red-100');
-                    document.getElementById('timer-text').classList.add('text-red-600');
-                }
-            }, 1000);
-        }
+function trackProgress() {
+    setInterval(() => {
+        const answers = ExamRenderer.collectAnswers();
+        let answered = 0;
+        const total = currentExam.aufgaben.length;
+        answers.forEach(a => { if (a.hasAnswer) answered++; });
+        document.getElementById('answered-count').textContent =
+            `${answered} von ${total} beantwortet`;
+        document.getElementById('progress-label').textContent =
+            `${answered}/${total}`;
+    }, 2000);
+}
 
-        function trackProgress() {
-            setInterval(() => {
-                const answers = ExamRenderer.collectAnswers();
-                let answered = 0;
-                const total = currentExam.aufgaben.length;
-                answers.forEach(a => { if (a.hasAnswer) answered++; });
-                document.getElementById('answered-count').textContent = `${answered} von ${total} beantwortet`;
-                document.getElementById('progress-label').textContent = `${answered}/${total} bearbeitet`;
-            }, 2000);
-        }
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+function submitExam() {
+    if (!confirm('Klausur wirklich abgeben?')) return;
+    clearInterval(timerInterval);
 
-        function submitExam() {
-            if (!confirm('Klausur wirklich abgeben? Diese Aktion kann nicht rückgängig gemacht werden.')) return;
-            
-            clearInterval(timerInterval);
-            
-            const answers = ExamRenderer.collectAnswers();
-            const result = ExamGrader.grade(currentExam, answers);
-            result.timeUsed = 90*60 - timeRemaining;
-            
-            // Show results
-            document.getElementById('exam-screen').classList.add('hidden');
-            document.getElementById('result-screen').classList.remove('hidden');
-            
-            ExamGrader.renderResults(result, currentExam, answers, document.getElementById('result-content'));
-            
-            // Save to localStorage
-            const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
-            history.push({
-                date: new Date().toISOString(),
-                module: 1,
-                score: result.totalEarned,
-                maxScore: result.totalPossible,
-                percentage: result.percentage,
-                note: result.note,
-                timeUsed: result.timeUsed,
-                topicScores: result.topicScores
-            });
-            localStorage.setItem('slm_exam_history', JSON.stringify(history));
-        }
-    </script>
+    const answers = ExamRenderer.collectAnswers();
+    const result = ExamGrader.grade(currentExam, answers);
+    result.timeUsed = 90*60 - timeRemaining;
+
+    document.getElementById('exam-screen').classList.add('hidden');
+    document.getElementById('result-screen').classList.remove('hidden');
+    ExamGrader.renderResults(result, currentExam, answers,
+        document.getElementById('result-content'));
+
+    // Save to exam history
+    const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+    history.push({
+        date: new Date().toISOString(),
+        module: selectedModule,
+        score: result.totalEarned,
+        maxScore: result.totalPossible,
+        percentage: result.percentage,
+        note: result.note,
+        timeUsed: result.timeUsed,
+        topicScores: result.topicScores
+    });
+    localStorage.setItem('slm_exam_history', JSON.stringify(history));
+
+    // ═══ SAVE WEAKNESS DATA FOR ARENA ═══
+    const weaknessData = {
+        module: selectedModule,
+        date: new Date().toISOString(),
+        weakTopics: result.weakTopics,
+        wrongQuestionIds: result.questionResults
+            .filter(qr => qr.percentage < 60)
+            .map(qr => qr.q_id),
+        topicScores: result.topicScores
+    };
+    const weaknesses = JSON.parse(localStorage.getItem('slm_exam_weaknesses') || '[]');
+    weaknesses.push(weaknessData);
+    // Keep only last 20 entries
+    while (weaknesses.length > 20) weaknesses.shift();
+    localStorage.setItem('slm_exam_weaknesses', JSON.stringify(weaknesses));
+}
+</script>
 </body>
 </html>
