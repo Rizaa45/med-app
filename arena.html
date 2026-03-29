@@ -10,28 +10,59 @@
     <script src="js/canvas-input.js"></script>
     <style>
         *{font-family:'Inter',system-ui,sans-serif;box-sizing:border-box}
-        body{background:#070a10;margin:0}
-        .glass{background:rgba(15,23,42,.5);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06)}
+        body{background:#f8fafc;margin:0}
+        .glass{background:rgba(255,255,255,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(0,0,0,.07);box-shadow:0 1px 3px rgba(0,0,0,.05)}
+        .glass:hover{border-color:rgba(0,0,0,.12);box-shadow:0 4px 12px rgba(0,0,0,.07)}
         .t-num{font-variant-numeric:tabular-nums}
         @keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.enter{animation:enter .4s ease both}
         @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}.shake{animation:shake .4s ease}
         @keyframes pop{0%{transform:scale(0)}50%{transform:scale(1.2)}100%{transform:scale(1)}}.pop{animation:pop .3s ease}
         @keyframes float-up{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-50px)}}.float-up{animation:float-up .8s ease-out forwards;position:absolute;pointer-events:none}
-        @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(139,92,246,.4)}70%{box-shadow:0 0 0 12px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}.pulse-ring{animation:pulse-ring 2s infinite}
-        @keyframes glow{0%,100%{text-shadow:0 0 8px currentColor}50%{text-shadow:0 0 20px currentColor}}.rank-glow{animation:glow 3s ease-in-out infinite}
-        ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:99px}
-        .sc h3{font-size:1.1rem;font-weight:800;color:#fff;margin:1.2rem 0 .6rem}
-        .sc h4{font-size:.95rem;font-weight:700;color:#93c5fd;margin:1rem 0 .4rem}
-        .sc p{color:#94a3b8;line-height:1.75;margin-bottom:.6rem;font-size:.85rem}
-        .sc ul,.sc ol{padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
+        @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(139,92,246,.3)}70%{box-shadow:0 0 0 12px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}.pulse-ring{animation:pulse-ring 2s infinite}
+        .rank-glow{text-shadow:none}
+        ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.1);border-radius:99px}
+        .sc h3{font-size:1.1rem;font-weight:800;color:#1e293b;margin:1.2rem 0 .6rem}
+        .sc h4{font-size:.95rem;font-weight:700;color:#4f46e5;margin:1rem 0 .4rem}
+        .sc p{color:#475569;line-height:1.75;margin-bottom:.6rem;font-size:.85rem}
+        .sc ul,.sc ol{padding-left:1.25rem;color:#475569;margin-bottom:.8rem}
         .sc li{margin-bottom:.25rem;line-height:1.65;font-size:.85rem}
-        .sc strong{color:#e2e8f0}
+        .sc strong{color:#1e293b}
         .sc table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.8rem}
-        .sc th{background:rgba(99,102,241,.12);color:#a5b4fc;padding:.5rem .75rem;text-align:left;font-weight:700;font-size:.75rem}
-        .sc td{padding:.4rem .75rem;border-bottom:1px solid rgba(255,255,255,.04);color:#94a3b8}
+        .sc th{background:rgba(99,102,241,.06);color:#4f46e5;padding:.5rem .75rem;text-align:left;font-weight:700;font-size:.75rem}
+        .sc td{padding:.4rem .75rem;border-bottom:1px solid rgba(0,0,0,.05);color:#475569}
+        /* Light theme overrides */
+        .text-white{color:#1e293b !important}
+        .text-slate-300{color:#475569 !important}
+        .text-slate-400{color:#64748b !important}
+        .text-slate-500{color:#94a3b8 !important}
+        .text-slate-600{color:#94a3b8 !important}
+        .text-slate-700{color:#94a3b8 !important}
+        [class*="bg-white/5"],[class*="bg-white\/5"]{background:#e2e8f0 !important}
+        [class*="bg-white/10"]{background:#f1f5f9 !important}
+        [class*="bg-indigo-500/8"],[class*="bg-indigo-500/10"]{background:#eef2ff !important}
+        [class*="bg-indigo-500/15"]{background:#e0e7ff !important}
+        [class*="border-white/10"]{border-color:#e2e8f0 !important}
+        [class*="border-indigo-500/15"]{border-color:#c7d2fe !important}
+        [class*="border-violet-500/20"]{border-color:#c4b5fd !important}
+        [class*="border-red-500/20"]{border-color:#fecaca !important}
+        [class*="border-green-500/20"]{border-color:#bbf7d0 !important}
+        [class*="border-emerald-500/15"]{border-color:#a7f3d0 !important}
+        input[type="text"],textarea{background:#f1f5f9 !important;color:#1e293b !important;border-color:rgba(0,0,0,.1) !important}
+        input[type="text"]:focus,textarea:focus{border-color:#8b5cf6 !important;background:#fff !important}
+        input::placeholder,textarea::placeholder{color:#94a3b8 !important}
+        [class*="bg-green-500/10"]{background:#f0fdf4 !important}
+        [class*="bg-red-500/10"]{background:#fef2f2 !important}
+        [class*="bg-orange-500/10"]{background:#fff7ed !important}
+        [class*="bg-violet-500/10"]{background:#f5f3ff !important}
+        [class*="bg-cyan-500/10"]{background:#ecfeff !important}
+        [id^="cl-"],[id^="cr-"]{background:rgba(255,255,255,.9) !important;border:1px solid rgba(0,0,0,.08) !important;color:#334155 !important}
+        .text-green-400{color:#16a34a !important}
+        .text-red-400{color:#dc2626 !important}
+        .hover\:text-red-400:hover{color:#dc2626 !important}
+        .hover\:text-violet-400:hover{color:#7c3aed !important}
     </style>
 </head>
-<body class="text-white min-h-screen">
+<body class="text-slate-800 min-h-screen">
 <div id="app" class="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 pb-24 relative"></div>
 
 <script>
