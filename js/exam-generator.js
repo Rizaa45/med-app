@@ -141,10 +141,12 @@ const ExamGenerator = {
             1: 'Kommunikation, Biografiearbeit und Pflegeprozess',
             2: 'Medizinisches Kernwissen',
             3: 'Krankheitslehre',
-            4: 'Prävention & Chronische Pflege',
-            5: 'Chirurgie & Akutpflege',
-            6: 'Notfall & Reanimation',
-            7: 'Palliative Versorgung'
+            4: 'Schwangerschaft, Geburt und Neugeborene',
+            5: 'Prä- und postoperative Pflege',
+            6: 'Notfall und Reanimation',
+            7: 'Ambulante Pflege und chronische Erkrankungen',
+            8: 'Innere Medizin, Niere und Herz-Kreislauf',
+            9: 'Neurologische Rehabilitation und Schlaganfall'
         };
         return titles[id] || '';
     }
