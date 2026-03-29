@@ -3,547 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Professional Dashboard v7.0</title>
+    <title>SLM System</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } }
+    </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background: #06070a; }
 
-        .page-bg {
-            background: #060910;
-            position: fixed; inset: 0; z-index: 0;
-        }
-        .page-bg::before {
-            content: ''; position: absolute; inset: 0;
+        /* Subtle atmospheric background */
+        .bg-glow {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
             background:
-                radial-gradient(ellipse at 20% 0%, rgba(99,102,241,.07) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 100%, rgba(59,130,246,.05) 0%, transparent 50%);
+                radial-gradient(ellipse 70% 50% at 15% 5%, rgba(99,102,241,.05), transparent 60%),
+                radial-gradient(ellipse 50% 40% at 85% 95%, rgba(59,130,246,.04), transparent 55%);
         }
 
-        .glass { background: rgba(15,23,42,.45); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.06); }
+        /* Glass card base */
+        .glass {
+            background: rgba(255,255,255,.025);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,.06);
+        }
 
-        .module-card {
-            transition: all .4s cubic-bezier(.22,1,.36,1);
-            position: relative; overflow: hidden;
+        /* Lift on hover */
+        .card-lift {
+            transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
         }
-        .module-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-            background: var(--accent, #6366f1); opacity: 0; transition: opacity .3s;
+        .card-lift:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255,255,255,.1);
+            box-shadow: 0 16px 32px -8px rgba(0,0,0,.5);
         }
-        .module-card:hover::before { opacity: 1; }
-        .module-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.1); }
-        .mod-glow {
-            position: absolute; top: -20px; right: -20px; width: 120px; height: 120px;
-            border-radius: 50%; filter: blur(50px); opacity: 0; transition: opacity .4s;
-        }
-        .module-card:hover .mod-glow { opacity: .15; }
 
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: scale(.95) translateY(16px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+        /* Module accent bar on hover */
+        .mod-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: rgb(var(--c)); opacity: 0; transition: opacity .25s ease;
+            border-radius: 999px 999px 0 0;
         }
-        .animate-modal { animation: modalFadeIn .5s cubic-bezier(.16,1,.3,1) forwards; }
+        .mod-card:hover::after { opacity: 1; }
 
-        .prasanth-label {
-            background: linear-gradient(135deg, #818cf8, #f97316);
+        /* Staggered fade-in */
+        @keyframes enter {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .enter { animation: enter .45s ease both; }
+
+        /* Gradient brand text */
+        .brand-grad {
+            background: linear-gradient(135deg, #818cf8, #6366f1);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(99,102,241,.15); }
-            50% { box-shadow: 0 0 30px rgba(99,102,241,.35); }
-            100% { box-shadow: 0 0 15px rgba(99,102,241,.15); }
-        }
-        .ai-glow { animation: pulseGlow 3s infinite; }
+        /* Tabular numbers for stats */
+        .t-num { font-variant-numeric: tabular-nums; }
 
-        @keyframes arenaGlow {
-            0% { box-shadow: 0 0 15px rgba(139,92,246,.15); }
-            50% { box-shadow: 0 0 35px rgba(139,92,246,.4); }
-            100% { box-shadow: 0 0 15px rgba(139,92,246,.15); }
-        }
-        .arena-glow { animation: arenaGlow 3s infinite; }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .anim { animation: fadeUp .6s cubic-bezier(.22,1,.36,1) forwards; opacity: 0; }
-
-        .progress-glow { box-shadow: 0 0 20px rgba(99,102,241,.15); }
-
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
-
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        .shimmer-badge {
-            background: linear-gradient(90deg, #8b5cf6 0%, #c084fc 30%, #8b5cf6 60%, #a78bfa 100%);
-            background-size: 200% auto;
-            animation: shimmer 2.5s linear infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        .float-anim { animation: float 4s ease-in-out infinite; }
-
-        /* Arena card special effect */
-        .arena-card-bg {
-            background: linear-gradient(145deg, rgba(139,92,246,.08), rgba(99,102,241,.04), rgba(15,23,42,.6));
-            backdrop-filter: blur(20px);
-        }
-        .arena-card-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 40%, rgba(139,92,246,.06) 0%, transparent 60%),
-                        radial-gradient(circle at 70% 80%, rgba(99,102,241,.04) 0%, transparent 50%);
-            pointer-events: none;
-        }
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.08); border-radius: 99px; }
     </style>
 </head>
-<body class="min-h-screen text-slate-100 relative">
 
-    <div class="page-bg"></div>
+<body class="text-white antialiased">
+<div class="bg-glow"></div>
 
-    <!-- ═══ UPDATE MODAL ═══ -->
-    <div id="update-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
-        <div class="glass w-full max-w-lg rounded-3xl shadow-2xl relative z-10 overflow-hidden animate-modal">
-            <div class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-blue-800 p-8 text-white relative">
-                <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:20px 20px"></div>
-                <div class="relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fas fa-rocket text-3xl"></i>
-                        <span class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">v7.0 Live</span>
-                    </div>
-                    <h2 class="text-3xl font-black tracking-tight">Mega-Update!</h2>
-                    <p class="text-indigo-200 font-medium text-sm mt-1">Klausur-Simulator & Arena sind da.</p>
-                </div>
+<main class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-8 sm:py-12 pb-20">
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header class="flex items-center justify-between mb-10 enter" style="animation-delay:.05s">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-indigo-600 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-600/20">
+                <i class="fas fa-graduation-cap text-white text-sm"></i>
             </div>
-            <div class="p-8 space-y-5 bg-[#0d1117]">
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-file-alt"></i></div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">Klausur-Simulator</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">1:1 Papier-Klausur mit Fallbeispiel, Timer, 10 Fragetypen & automatischer Bewertung.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-brain"></i></div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">SLM Arena</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">5 kognitive Trainingsmodi: Absorb, Recall, Connect, Brain Map & Weakness Destroyer.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <div class="w-10 h-10 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-pen-fancy"></i></div>
-                    <div>
-                        <h4 class="font-bold text-sm text-white">S-Pen Support</h4>
-                        <p class="text-[11px] text-slate-400 leading-relaxed">Direkt mit Stylus in die Klausur schreiben — wie auf echtem Papier.</p>
-                    </div>
-                </div>
-                <button onclick="closeUpdateModal()" class="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-lg shadow-indigo-500/20 mt-4">
-                    <i class="fas fa-check mr-2"></i> System starten
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-10 pb-24">
-
-        <!-- ═══ HEADER ═══ -->
-        <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
             <div>
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                        <i class="fas fa-microscope text-white text-sm"></i>
-                    </div>
-                    <span class="font-black text-2xl tracking-tighter text-white">SLM</span>
-                    <span class="text-slate-500 text-[9px] tracking-[0.4em] uppercase font-black bg-white/5 px-2.5 py-1 rounded-lg border border-white/5">v7.0</span>
-                </div>
-                <div class="mb-4">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">A Project by <span class="prasanth-label font-black">Prasanth</span></span>
-                </div>
-                <h1 class="text-4xl font-extrabold text-white tracking-tight">Lern-Management-System</h1>
-                <p class="text-slate-400 mt-2 font-medium flex items-center gap-2">
-                    <i class="fas fa-graduation-cap text-indigo-400"></i>
-                    Examenstraining für das Staatsexamen 2026
+                <h1 class="text-lg font-extrabold tracking-tight leading-none">SLM System</h1>
+                <p class="text-[10px] text-slate-500 font-medium mt-0.5">
+                    by <span class="brand-grad font-bold">Prasanth</span> · Staatsexamen 2026
                 </p>
             </div>
-            <div class="glass rounded-2xl flex items-center p-1">
-                <div class="px-5 py-3 text-right">
-                    <span class="text-[9px] text-slate-500 block uppercase tracking-widest font-black mb-1">Ziel-Datum</span>
-                    <span class="text-white text-sm font-bold flex items-center gap-2">
-                        <i class="fas fa-flag-checkered text-orange-400"></i> 27.04.2026
-                    </span>
-                </div>
+        </div>
+        <div class="glass rounded-xl px-4 py-2.5 text-center min-w-[80px]">
+            <div id="countdown" class="text-base font-extrabold text-white t-num leading-none">—</div>
+            <div class="text-[8px] text-slate-500 font-semibold uppercase tracking-widest mt-1">Tage</div>
+        </div>
+    </header>
+
+    <!-- ═══════════ QUICK STATS ═══════════ -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10 enter" style="animation-delay:.1s">
+
+        <div class="glass rounded-2xl p-5">
+            <div class="text-[9px] text-slate-500 font-semibold uppercase tracking-widest mb-2">Fortschritt</div>
+            <div id="s-progress" class="text-2xl font-extrabold t-num brand-grad">0%</div>
+            <div class="w-full bg-white/5 h-1 rounded-full mt-3 overflow-hidden">
+                <div id="s-progress-bar" class="bg-indigo-500 h-full rounded-full transition-all duration-700" style="width:0%"></div>
             </div>
-        </header>
-
-        <!-- ═══ TOP ROW: Progress + Studio + Arena ═══ -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-
-            <!-- Gesamtfortschritt -->
-            <div class="lg:col-span-2 glass rounded-3xl p-10 relative overflow-hidden anim" style="animation-delay:.1s">
-                <div class="absolute -top-20 -right-20 w-60 h-60 bg-indigo-500 rounded-full blur-[80px] opacity-[.04]"></div>
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 relative z-10">
-                    <div>
-                        <h2 class="text-white font-black text-2xl uppercase tracking-tight">Gesamtfortschritt</h2>
-                        <p class="text-slate-500 text-sm font-medium">Alle Module • Klausuren • Arena-Training</p>
-                    </div>
-                    <span id="total-percent" class="text-6xl font-black bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent tracking-tighter">22%</span>
-                </div>
-                <div class="w-full bg-white/5 rounded-full h-4 overflow-hidden p-0.5 relative z-10">
-                    <div id="total-progress-bar" class="bg-gradient-to-r from-indigo-500 via-indigo-600 to-blue-600 h-full rounded-full transition-all duration-1000 progress-glow" style="width: 22%"></div>
-                </div>
-            </div>
-
-            <!-- SLM Studio -->
-            <a href="creator.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-indigo-500 via-indigo-600 to-blue-600 shadow-xl cursor-pointer hover:scale-[1.02] transition-all ai-glow anim" style="animation-delay:.15s">
-                <div class="bg-[#0a0e1a] h-full w-full rounded-[calc(1.5rem-2px)] p-8 flex flex-col justify-between overflow-hidden relative">
-                    <div class="absolute -right-4 -top-4 bg-indigo-500/10 w-32 h-32 rounded-full blur-3xl group-hover:bg-indigo-500/25 transition-all duration-500"></div>
-                    <div class="flex justify-between items-start z-10">
-                        <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                            <i class="fas fa-wand-magic-sparkles text-white text-xl"></i>
-                        </div>
-                        <span class="text-[9px] font-black text-indigo-400 uppercase tracking-[0.3em] border border-indigo-400/30 px-3 py-1 rounded-full">Pro Tool</span>
-                    </div>
-                    <div class="z-10 mt-6">
-                        <h3 class="text-white font-black text-xl uppercase tracking-tight leading-none mb-2">SLM Studio</h3>
-                        <p class="text-slate-400 text-xs font-medium leading-relaxed">KI-Creator für Präsentationen, Handouts & Sprecherskripte.</p>
-                        <div class="mt-4 flex items-center gap-2 text-indigo-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
-                            <span>Öffnen</span>
-                            <i class="fas fa-arrow-right text-[8px]"></i>
-                        </div>
-                    </div>
-                </div>
-            </a>
         </div>
 
-        <!-- ═══ ARENA HERO CARD ═══ -->
-        <div class="mb-8 anim" style="animation-delay:.18s">
-            <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.01] transition-all arena-glow relative overflow-hidden">
-                <div class="arena-card-bg h-full w-full rounded-[calc(1.5rem-2px)] p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8 overflow-hidden relative">
-                    
-                    <!-- Decorative elements -->
-                    <div class="absolute -right-20 -top-20 w-60 h-60 bg-violet-500/5 rounded-full blur-[60px]"></div>
-                    <div class="absolute left-1/2 -bottom-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-[40px]"></div>
-                    
-                    <!-- Left: Icon + Text -->
-                    <div class="flex-1 relative z-10">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-500/30 float-anim">
-                                <i class="fas fa-brain text-white text-2xl"></i>
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <h3 class="text-white font-black text-2xl uppercase tracking-tight">SLM Arena</h3>
-                                    <span class="shimmer-badge text-white text-[8px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-widest">NEU</span>
-                                </div>
-                                <p class="text-violet-300/60 text-[10px] font-bold uppercase tracking-[0.3em]">Deep Learning Engine</p>
-                            </div>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed max-w-lg mb-4">
-                            5 kognitive Trainingsmodi die auf Neurowissenschaft basieren. Absorb → Recall → Connect → Brain Map → Weakness Destroyer. Deine Klausur-Schwächen werden gezielt zerstört.
-                        </p>
-                        
-                        <!-- Mode pills -->
-                        <div class="flex flex-wrap gap-2 mb-5">
-                            <span class="bg-indigo-500/10 text-indigo-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-indigo-500/20">
-                                <i class="fas fa-eye mr-1"></i>Absorb
-                            </span>
-                            <span class="bg-orange-500/10 text-orange-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-orange-500/20">
-                                <i class="fas fa-brain mr-1"></i>Recall
-                            </span>
-                            <span class="bg-emerald-500/10 text-emerald-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-emerald-500/20">
-                                <i class="fas fa-project-diagram mr-1"></i>Connect
-                            </span>
-                            <span class="bg-violet-500/10 text-violet-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-violet-500/20">
-                                <i class="fas fa-map-marked-alt mr-1"></i>Brain Map
-                            </span>
-                            <span class="bg-red-500/10 text-red-300 text-[10px] font-bold px-3 py-1 rounded-lg border border-red-500/20">
-                                <i class="fas fa-crosshairs mr-1"></i>Weakness Destroyer
-                            </span>
-                        </div>
-
-                        <div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
-                            <span>Arena öffnen</span>
-                            <i class="fas fa-arrow-right text-[8px]"></i>
-                        </div>
-                    </div>
-
-                    <!-- Right: Stats -->
-                    <div class="relative z-10 flex flex-row md:flex-col gap-4">
-                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
-                            <div id="arena-xp" class="text-2xl font-black text-violet-400">0</div>
-                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP</div>
-                        </div>
-                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
-                            <div id="arena-level" class="text-2xl font-black text-indigo-400">1</div>
-                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Level</div>
-                        </div>
-                        <div class="glass rounded-xl px-5 py-3 text-center min-w-[90px]">
-                            <div class="flex items-center justify-center gap-1">
-                                <span class="text-lg">🔥</span>
-                                <span id="arena-streak" class="text-2xl font-black text-orange-400">0</span>
-                            </div>
-                            <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Streak</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <div class="glass rounded-2xl p-5">
+            <div class="text-[9px] text-slate-500 font-semibold uppercase tracking-widest mb-2">Arena XP</div>
+            <div id="s-xp" class="text-2xl font-extrabold t-num text-violet-400">0</div>
+            <div class="text-[11px] text-slate-600 font-medium mt-1">Level <span id="s-level" class="text-slate-400">1</span></div>
         </div>
 
-        <!-- ═══ MODULE GRID ═══ -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 anim" style="animation-delay:.22s" id="module-grid">
-
-            <!-- Modul 1 -->
-            <div onclick="location.href='module.html?id=1'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
-                <div class="mod-glow" style="background:#6366f1"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center">
-                        <i class="fas fa-book-open text-2xl"></i>
-                    </div>
-                    <span class="font-black text-slate-600 text-xl" id="m1-pct">0%</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 1</h3>
-                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">Kommunikation & Biografie</p>
-                <!-- Klausur mini-badge -->
-                <div class="flex items-center gap-2 mb-4 relative z-10" id="m1-exam-badge">
-                </div>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-indigo-600 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
-                </div>
+        <div class="glass rounded-2xl p-5">
+            <div class="text-[9px] text-slate-500 font-semibold uppercase tracking-widest mb-2">Streak</div>
+            <div class="flex items-baseline gap-1">
+                <span id="s-streak" class="text-2xl font-extrabold t-num text-orange-400">0</span>
+                <span class="text-base">🔥</span>
             </div>
-
-            <!-- Modul 2 -->
-            <div onclick="location.href='module2.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
-                <div class="mod-glow" style="background:#6366f1"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                        <i class="fas fa-stethoscope text-2xl"></i>
-                    </div>
-                    <span class="font-black text-indigo-400 text-sm bg-indigo-500/10 px-3 py-1 rounded-lg">LIVE</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 2</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Medizinisches Kernwissen</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 10%"></div>
-                </div>
-            </div>
-
-            <!-- Modul 3 -->
-            <div onclick="location.href='module3.html'" class="module-card glass rounded-2xl p-8 cursor-pointer" style="--accent:#6366f1">
-                <div class="mod-glow" style="background:#6366f1"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                        <i class="fas fa-viruses text-2xl"></i>
-                    </div>
-                    <span class="font-black text-indigo-400 text-sm bg-indigo-500/10 px-3 py-1 rounded-lg">LIVE</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 3</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Krankheitslehre</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 5%"></div>
-                </div>
-            </div>
-
-            <!-- Modul 4 -->
-            <div onclick="location.href='module4.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-teal-500/10" style="--accent:#14b8a6">
-                <div class="mod-glow" style="background:#14b8a6"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-teal-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-teal-500/20">
-                        <i class="fas fa-shield-heart text-2xl"></i>
-                    </div>
-                    <span class="font-black text-teal-400 text-sm bg-teal-500/10 px-3 py-1 rounded-lg">NEU</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 4</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Prävention & Chronische Pflege</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-teal-500 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <!-- Modul 5 -->
-            <div onclick="location.href='module5.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-emerald-500/10" style="--accent:#22c55e">
-                <div class="mod-glow" style="background:#22c55e"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-emerald-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
-                        <i class="fas fa-hand-holding-medical text-2xl"></i>
-                    </div>
-                    <span class="font-black text-emerald-400 text-sm bg-emerald-500/10 px-3 py-1 rounded-lg">NEU</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 5</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Chirurgie & Akutpflege</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <!-- Modul 6 -->
-            <div onclick="location.href='module6.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-red-500/10" style="--accent:#ef4444">
-                <div class="mod-glow" style="background:#ef4444"></div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/20">
-                        <i class="fas fa-heart-pulse text-2xl"></i>
-                    </div>
-                    <span class="font-black text-red-400 text-sm bg-red-500/10 px-3 py-1 rounded-lg">NEU</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 6</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Notfall & Reanimation</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-red-500 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <!-- Modul 7 -->
-            <div onclick="location.href='module7.html'" class="module-card glass rounded-2xl p-8 cursor-pointer border-purple-500/10 relative" style="--accent:#a855f7">
-                <div class="mod-glow" style="background:#a855f7"></div>
-                <div class="absolute right-5 top-5 z-20">
-                    <span class="flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
-                    </span>
-                </div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-purple-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20">
-                        <i class="fas fa-dove text-2xl"></i>
-                    </div>
-                    <span class="font-black text-purple-400 text-sm bg-purple-500/10 px-3 py-1 rounded-lg">NEU</span>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul 7</h3>
-                <p class="text-sm text-slate-400 mb-8 font-medium relative z-10">Palliative Versorgung</p>
-                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-purple-500 h-full rounded-full transition-all duration-1000" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <!-- Klausur-Simulator -->
-            <a href="exam-simulator.html" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-orange-500/20" style="--accent:#f97316;background:linear-gradient(145deg,rgba(15,10,0,.6),rgba(20,14,5,.6));backdrop-filter:blur(20px)">
-                <div class="mod-glow" style="background:#f97316"></div>
-                <div class="absolute -right-8 -top-1 bg-orange-500 text-white text-[8px] font-black px-10 py-1 rotate-45 uppercase tracking-widest z-20">Simulator</div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,.3)]">
-                        <i class="fas fa-file-alt text-2xl"></i>
-                    </div>
-                    <div class="text-right" id="sim-last-note">
-                        <span class="font-black text-slate-600 text-xl">—</span>
-                    </div>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Klausur</h3>
-                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">1:1 Papier-Simulation + S-Pen</p>
-                <div class="flex flex-wrap gap-1.5 relative z-10 mb-4">
-                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">90 Min</span>
-                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">Fallbeispiel</span>
-                    <span class="bg-orange-500/10 text-orange-300 text-[9px] font-bold px-2 py-0.5 rounded">Bewertung</span>
-                </div>
-                <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden relative z-10">
-                    <div id="sim-progress" class="bg-orange-500 h-full rounded-full transition-all duration-1000 shadow-[0_0_8px_#f97316]" style="width: 0%"></div>
-                </div>
-            </a>
-
-            <!-- SLM Arena Card (in grid) -->
-            <a href="arena.html" class="module-card rounded-2xl p-8 cursor-pointer relative overflow-hidden border border-violet-500/20" style="--accent:#8b5cf6;background:linear-gradient(145deg,rgba(10,5,20,.6),rgba(15,10,30,.6));backdrop-filter:blur(20px)">
-                <div class="mod-glow" style="background:#8b5cf6"></div>
-                <div class="absolute -right-8 -top-1 shimmer-badge text-white text-[8px] font-black px-10 py-1 rotate-45 uppercase tracking-widest z-20">Arena</div>
-                <div class="flex justify-between items-start mb-8 relative z-10">
-                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 text-white rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(139,92,246,.3)]">
-                        <i class="fas fa-brain text-2xl"></i>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-violet-400 font-black text-sm" id="arena-grid-xp">0 XP</span>
-                    </div>
-                </div>
-                <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">SLM Arena</h3>
-                <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">Deep Learning Engine</p>
-                <div class="flex flex-wrap gap-1.5 relative z-10 mb-4">
-                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">5 Modi</span>
-                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">XP System</span>
-                    <span class="bg-violet-500/10 text-violet-300 text-[9px] font-bold px-2 py-0.5 rounded">Streaks</span>
-                </div>
-                <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden relative z-10">
-                    <div class="bg-violet-500 h-full rounded-full transition-all duration-1000 shadow-[0_0_8px_#8b5cf6]" style="width: 0%"></div>
-                </div>
-            </a>
+            <div class="text-[11px] text-slate-600 font-medium mt-1">Tage in Folge</div>
         </div>
 
-        <!-- ═══ FOOTER ═══ -->
-        <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
-                <span>SLM System v7.0 • A Project by <span class="prasanth-label">Prasanth</span></span>
-                <span>Staatsexamen 2026 • &copy; 2025</span>
-            </div>
-        </footer>
+        <div class="glass rounded-2xl p-5">
+            <div class="text-[9px] text-slate-500 font-semibold uppercase tracking-widest mb-2">Beste Note</div>
+            <div id="s-grade" class="text-2xl font-extrabold t-num text-slate-600">—</div>
+            <div id="s-grade-sub" class="text-[11px] text-slate-600 font-medium mt-1">Noch keine Klausur</div>
+        </div>
     </div>
 
-    <!-- FAB: Studio -->
-    <a href="creator.html" class="fixed bottom-8 right-8 w-14 h-14 bg-indigo-600 text-white rounded-2xl shadow-2xl shadow-indigo-500/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 ai-glow" title="SLM Studio öffnen">
-        <i class="fas fa-wand-magic-sparkles text-lg"></i>
-    </a>
+    <!-- ═══════════ TOOLS ═══════════ -->
+    <section class="mb-10 enter" style="animation-delay:.15s">
+        <h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 pl-1">Werkzeuge</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
-    <script>
-        // ═══ UPDATE MODAL ═══
-        window.addEventListener('DOMContentLoaded', () => {
-            const hasSeenUpdate = localStorage.getItem('v7.0_update_seen');
-            if (!hasSeenUpdate) {
-                document.getElementById('update-modal').classList.remove('hidden');
-            }
-            loadDashboardStats();
-        });
+            <!-- Arena -->
+            <a href="arena.html" class="glass card-lift rounded-2xl p-6 block group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-gamepad text-lg"></i>
+                        </div>
+                        <span class="text-[8px] font-bold text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded-full uppercase tracking-widest">5 Modi</span>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">SLM Arena</h3>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">Kognitives Training mit XP, Streaks & Schwächen-Analyse.</p>
+                </div>
+            </a>
 
-        function closeUpdateModal() {
-            const modal = document.getElementById('update-modal');
-            modal.style.transition = 'opacity 0.4s ease';
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                localStorage.setItem('v7.0_update_seen', 'true');
-            }, 400);
-        }
+            <!-- Klausur -->
+            <a href="exam-simulator.html" class="glass card-lift rounded-2xl p-6 block group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-file-lines text-lg"></i>
+                        </div>
+                        <span class="text-[8px] font-bold text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded-full uppercase tracking-widest">90 Min</span>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">Klausur-Simulator</h3>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">1:1 Papier-Klausur mit Fallbeispiel & Bewertung.</p>
+                </div>
+            </a>
 
-        // ═══ DASHBOARD STATS ═══
-        function loadDashboardStats() {
-            // Arena stats
-            const arenaXP = parseInt(localStorage.getItem('arena_xp') || '0');
-            const arenaLevel = Math.floor(arenaXP / 500) + 1;
-            const arenaStreak = parseInt(localStorage.getItem('arena_streak') || '0');
-            
-            document.getElementById('arena-xp').textContent = arenaXP;
-            document.getElementById('arena-level').textContent = arenaLevel;
-            document.getElementById('arena-streak').textContent = arenaStreak;
-            document.getElementById('arena-grid-xp').textContent = arenaXP + ' XP';
+            <!-- Studio -->
+            <a href="creator.html" class="glass card-lift rounded-2xl p-6 block group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-wand-magic-sparkles text-lg"></i>
+                        </div>
+                        <span class="text-[8px] font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded-full uppercase tracking-widest">KI</span>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">SLM Studio</h3>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">KI-Creator für Präsentationen & Handouts.</p>
+                </div>
+            </a>
+        </div>
+    </section>
 
-            // Last exam result
-            const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
-            if (history.length > 0) {
-                const last = history[history.length - 1];
-                const noteColor = parseFloat(last.note) <= 2.0 ? 'text-green-400' : parseFloat(last.note) <= 3.3 ? 'text-yellow-400' : 'text-red-400';
-                document.getElementById('sim-last-note').innerHTML = `
-                    <span class="font-black ${noteColor} text-xl">${last.note}</span>
-                    <span class="block text-[9px] text-slate-500 font-bold">Letzte Note</span>`;
-                document.getElementById('sim-progress').style.width = last.percentage + '%';
-            }
+    <!-- ═══════════ MODULES ═══════════ -->
+    <section class="mb-10 enter" style="animation-delay:.2s">
+        <h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 pl-1">Module</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="module-grid"></div>
+    </section>
 
-            // Modul 1 exam badge
-            const m1History = history.filter(h => h.module === 1);
-            if (m1History.length > 0) {
-                const best = m1History.reduce((a, b) => a.percentage > b.percentage ? a : b);
-                const badgeColor = parseFloat(best.note) <= 2.0 ? 'bg-green-500/10 text-green-400 border-green-500/20' : parseFloat(best.note) <= 3.3 ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' : 'bg-red-500/10 text-red-400 border-red-500/20';
-                document.getElementById('m1-exam-badge').innerHTML = `
-                    <span class="${badgeColor} text-[10px] font-bold px-2.5 py-1 rounded-lg border">
-                        <i class="fas fa-file-alt mr-1"></i>Klausur: ${best.note} (${best.percentage}%)
-                    </span>`;
-                document.getElementById('m1-pct').textContent = best.percentage + '%';
-            }
-        }
-    </script>
-    <script src="app.js"></script>
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="pt-8 border-t border-white/5 enter" style="animation-delay:.3s">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[9px] text-slate-600 font-semibold uppercase tracking-widest">
+            <span>SLM System · A Project by <span class="brand-grad font-bold">Prasanth</span></span>
+            <span>Staatsexamen 27.04.2026 · © 2025</span>
+        </div>
+    </footer>
+
+</main>
+
+<script>
+// ═══════════════════════════════════════
+//  MODULE DATA
+// ═══════════════════════════════════════
+const MODULES = [
+    { id: 1, name: 'Kommunikation & Biografie',    icon: 'fa-comments',          c: '99,102,241'  },
+    { id: 2, name: 'Medizinisches Kernwissen',      icon: 'fa-stethoscope',       c: '59,130,246'  },
+    { id: 3, name: 'Krankheitslehre',               icon: 'fa-viruses',           c: '6,182,212'   },
+    { id: 4, name: 'Schwangerschaft & Geburt',      icon: 'fa-baby',              c: '20,184,166'  },
+    { id: 5, name: 'Prä- & Postoperative Pflege',   icon: 'fa-suitcase-medical',  c: '16,185,129'  },
+    { id: 6, name: 'Notfall & Reanimation',         icon: 'fa-heart-pulse',       c: '239,68,68'   },
+    { id: 7, name: 'Ambulante & Chronische Pflege', icon: 'fa-house-medical',     c: '168,85,247'  },
+    { id: 8, name: 'Innere Medizin',                icon: 'fa-lungs',             c: '14,165,233'  },
+    { id: 9, name: 'Neurologische Rehabilitation',  icon: 'fa-brain',             c: '245,158,11'  },
+];
+
+// ═══════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+    renderCountdown();
+    renderModules();
+    loadStats();
+    setInterval(renderCountdown, 60000);
+});
+
+// ═══════════════════════════════════════
+//  COUNTDOWN
+// ═══════════════════════════════════════
+function renderCountdown() {
+    const days = Math.ceil((new Date('2026-04-27') - new Date()) / 86400000);
+    document.getElementById('countdown').textContent = days > 0 ? days : '0';
+}
+
+// ═══════════════════════════════════════
+//  RENDER MODULE CARDS
+// ═══════════════════════════════════════
+function renderModules() {
+    const grid = document.getElementById('module-grid');
+    const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+
+    grid.innerHTML = MODULES.map((m, i) => {
+        const mHist = history.filter(h => h.module === m.id);
+        const best  = mHist.length ? mHist.reduce((a, b) => a.percentage > b.percentage ? a : b) : null;
+        const pct   = best ? best.percentage : 0;
+
+        const gradeChip = best
+            ? `<span class="text-[9px] font-bold px-2 py-0.5 rounded-md"
+                     style="background:rgba(${m.c},.12);color:rgb(${m.c})">
+                   ${best.note}
+               </span>`
+            : '';
+
+        return `
+        <a href="module.html?id=${m.id}"
+           class="mod-card glass card-lift rounded-2xl p-6 block relative overflow-hidden enter"
+           style="--c:${m.c}; animation-delay:${.22 + i * .04}s">
+
+            <div class="flex items-start justify-between mb-5 relative z-10">
+                <div class="w-11 h-11 rounded-xl flex items-center justify-center"
+                     style="background:rgba(${m.c},.1); color:rgb(${m.c})">
+                    <i class="fas ${m.icon} text-lg"></i>
+                </div>
+                <div class="flex items-center gap-2">
+                    ${gradeChip}
+                    <span class="text-xs font-bold text-slate-600 t-num">${pct}%</span>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-0.5">Modul ${m.id}</div>
+                <h3 class="text-[13px] font-bold text-white leading-snug mb-4">${m.name}</h3>
+                <div class="w-full bg-white/5 h-1 rounded-full overflow-hidden">
+                    <div class="h-full rounded-full transition-all duration-700"
+                         style="width:${pct}%; background:rgb(${m.c})"></div>
+                </div>
+            </div>
+        </a>`;
+    }).join('');
+}
+
+// ═══════════════════════════════════════
+//  LOAD STATS
+// ═══════════════════════════════════════
+function loadStats() {
+    // Arena
+    const xp     = parseInt(localStorage.getItem('arena_xp') || '0');
+    const level  = Math.floor(xp / 500) + 1;
+    const streak = parseInt(localStorage.getItem('arena_ds') || localStorage.getItem('arena_streak') || '0');
+
+    document.getElementById('s-xp').textContent     = xp.toLocaleString('de-DE');
+    document.getElementById('s-level').textContent   = level;
+    document.getElementById('s-streak').textContent  = streak;
+
+    // Exam history
+    const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+
+    if (history.length) {
+        // Best grade (lowest number = best in German grading)
+        const best = history.reduce((a, b) => parseFloat(a.note) < parseFloat(b.note) ? a : b);
+        const color = parseFloat(best.note) <= 2.0 ? '#34d399'
+                    : parseFloat(best.note) <= 3.3 ? '#fbbf24'
+                    : '#f87171';
+        document.getElementById('s-grade').textContent = best.note;
+        document.getElementById('s-grade').style.color = color;
+        document.getElementById('s-grade-sub').textContent = `${best.percentage}% · Modul ${best.module}`;
+    }
+
+    // Overall progress — percentage of modules that have at least 1 exam taken
+    const started = new Set(history.map(h => h.module)).size;
+    const pct = Math.round((started / MODULES.length) * 100);
+    document.getElementById('s-progress').textContent = pct + '%';
+    document.getElementById('s-progress-bar').style.width = pct + '%';
+}
+</script>
 </body>
 </html>
