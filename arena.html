@@ -27,7 +27,16 @@
         .rank-glow{animation:glow 3s ease-in-out infinite}
         ::-webkit-scrollbar{width:5px}
         ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:99px}
-        .pen-input{touch-action:none}
+        .summary-content h3{font-size:1.1rem;font-weight:800;color:#fff;margin:1.2rem 0 .6rem}
+        .summary-content h4{font-size:.95rem;font-weight:700;color:#93c5fd;margin:1rem 0 .4rem}
+        .summary-content p{color:#94a3b8;line-height:1.75;margin-bottom:.6rem;font-size:.85rem}
+        .summary-content ul{list-style:disc;padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
+        .summary-content ol{list-style:decimal;padding-left:1.25rem;color:#94a3b8;margin-bottom:.8rem}
+        .summary-content li{margin-bottom:.25rem;line-height:1.65;font-size:.85rem}
+        .summary-content strong{color:#e2e8f0}
+        .summary-content table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.8rem}
+        .summary-content th{background:rgba(99,102,241,.12);color:#a5b4fc;padding:.5rem .75rem;text-align:left;font-weight:700;font-size:.75rem}
+        .summary-content td{padding:.4rem .75rem;border-bottom:1px solid rgba(255,255,255,.04);color:#94a3b8}
     </style>
 </head>
 <body class="text-white min-h-screen">
@@ -36,36 +45,36 @@
 
 <script>
 // ═══════════════════════════════════════════════════════════════
-//  CONFIGURATION
+//  MODULE CONFIG
 // ═══════════════════════════════════════════════════════════════
 const MODULES = [
-    {id:1,name:'Kommunikation & Biografie',icon:'fa-comments',color:'#6366f1'},
-    {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#3b82f6'},
-    {id:3,name:'Krankheitslehre',icon:'fa-viruses',color:'#06b6d4'},
-    {id:4,name:'Schwangerschaft & Geburt',icon:'fa-baby',color:'#14b8a6'},
-    {id:5,name:'Prä-/Postoperative Pflege',icon:'fa-suitcase-medical',color:'#10b981'},
-    {id:6,name:'Notfall & Reanimation',icon:'fa-heart-pulse',color:'#ef4444'},
-    {id:7,name:'Ambulante Pflege',icon:'fa-house-medical',color:'#a855f7'},
-    {id:8,name:'Innere Medizin',icon:'fa-lungs',color:'#0ea5e9'},
-    {id:9,name:'Neuro-Rehabilitation',icon:'fa-brain',color:'#f59e0b'},
+    {id:1, name:'Kommunikation & Biografie',     icon:'fa-comments',        color:'#6366f1', summaryCount:0},
+    {id:2, name:'Medizinisches Kernwissen',       icon:'fa-stethoscope',     color:'#3b82f6', summaryCount:0},
+    {id:3, name:'Krankheitslehre',                icon:'fa-viruses',         color:'#06b6d4', summaryCount:0},
+    {id:4, name:'Schwangerschaft & Geburt',       icon:'fa-baby',            color:'#14b8a6', summaryCount:0},
+    {id:5, name:'Prä-/Postoperative Pflege',      icon:'fa-suitcase-medical',color:'#10b981', summaryCount:0},
+    {id:6, name:'Notfall & Reanimation',          icon:'fa-heart-pulse',     color:'#ef4444', summaryCount:0},
+    {id:7, name:'Ambulante Pflege',               icon:'fa-house-medical',   color:'#a855f7', summaryCount:12},
+    {id:8, name:'Innere Medizin',                 icon:'fa-lungs',           color:'#0ea5e9', summaryCount:9},
+    {id:9, name:'Neuro-Rehabilitation',           icon:'fa-brain',           color:'#f59e0b', summaryCount:6},
 ];
 
 const MODES = [
-    {id:'learn',name:'Learn & Quiz',icon:'fa-book-open',color:'#8b5cf6',desc:'Zusammenfassung lesen → dann Fragen beantworten'},
-    {id:'recall',name:'Recall',icon:'fa-brain',color:'#f97316',desc:'Standard-Quiz mit sofortigem Feedback'},
-    {id:'absorb',name:'Absorb',icon:'fa-eye',color:'#6366f1',desc:'Antwort merken → aus Gedächtnis wiedergeben'},
-    {id:'sprint',name:'Sprint',icon:'fa-bolt',color:'#ef4444',desc:'30 Sekunden pro Frage'},
-    {id:'connect',name:'Connect',icon:'fa-link',color:'#10b981',desc:'Begriffe mit Definitionen verbinden'},
-    {id:'weakness',name:'Weakness Destroyer',icon:'fa-crosshairs',color:'#dc2626',desc:'Nur schwache Themen aus Klausuren'},
+    {id:'learn',    name:'Learn & Quiz',       icon:'fa-book-open',   color:'#8b5cf6', desc:'Zusammenfassung lesen → dann Fragen beantworten'},
+    {id:'recall',   name:'Recall',             icon:'fa-brain',       color:'#f97316', desc:'Standard-Quiz mit sofortigem Feedback'},
+    {id:'absorb',   name:'Absorb',             icon:'fa-eye',         color:'#6366f1', desc:'Antwort merken → aus Gedächtnis wiedergeben'},
+    {id:'sprint',   name:'Sprint',             icon:'fa-bolt',        color:'#ef4444', desc:'30 Sekunden pro Frage'},
+    {id:'connect',  name:'Connect',            icon:'fa-link',        color:'#10b981', desc:'Begriffe mit Definitionen verbinden'},
+    {id:'weakness', name:'Weakness Destroyer',  icon:'fa-crosshairs', color:'#dc2626', desc:'Nur schwache Themen aus Klausuren'},
 ];
 
 const RANKS = [
-    {min:0,label:'Needs Training',emoji:'❌',color:'#ef4444',bg:'bg-red-500/10'},
-    {min:20,label:'Basics',emoji:'📕',color:'#f97316',bg:'bg-orange-500/10'},
-    {min:40,label:'Okay',emoji:'📗',color:'#eab308',bg:'bg-yellow-500/10'},
-    {min:60,label:'Good',emoji:'⭐',color:'#22c55e',bg:'bg-green-500/10'},
-    {min:80,label:'Very Good',emoji:'🌟',color:'#10b981',bg:'bg-emerald-500/10'},
-    {min:95,label:'Master',emoji:'👑',color:'#f59e0b',bg:'bg-amber-500/10'},
+    {min:0,  label:'Needs Training', emoji:'❌', color:'#ef4444'},
+    {min:20, label:'Basics',         emoji:'📕', color:'#f97316'},
+    {min:40, label:'Okay',           emoji:'📗', color:'#eab308'},
+    {min:60, label:'Good',           emoji:'⭐', color:'#22c55e'},
+    {min:80, label:'Very Good',      emoji:'🌟', color:'#10b981'},
+    {min:95, label:'Master',         emoji:'👑', color:'#f59e0b'},
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -79,8 +88,9 @@ let S = {
     module: null,
     mode: null,
     rawBank: [],
-    normalizedQuestions: [], // ← THE KEY: all questions pre-processed into uniform format
-    summaries: [],           // ← loaded from summary JSONs for Learn mode
+    normalizedQuestions: [],
+    summaries: [],
+    learnTopics: [],
     qi: 0,
     score: 0,
     total: 0,
@@ -91,7 +101,6 @@ let S = {
     sprintTimer: null,
     sprintLeft: 30,
     roundSize: 10,
-    learnPhase: true,        // for learn mode: true = reading, false = quiz
     learnSummaryIdx: 0,
     connectPairs: [],
     connectSelected: null,
@@ -102,13 +111,11 @@ const $=id=>document.getElementById(id);
 const app=$('app');
 
 // ═══════════════════════════════════════════════════════════════
-//  QUESTION NORMALIZER — THE CORE INNOVATION
-//  Transforms ANY question type into a uniform game-ready format
+//  QUESTION NORMALIZER
+//  Transforms ANY JSON question type → uniform game format
 // ═══════════════════════════════════════════════════════════════
 const Normalizer = {
     normalize(q) {
-        // Returns: { id, topic, difficulty, display, type, answer, keywords, explanation, pairs, options }
-        // type: 'tf' | 'text' | 'list' | 'connect'
         const base = {
             id: q.q_id,
             topic: q.topic || 'allgemein',
@@ -116,185 +123,169 @@ const Normalizer = {
             explanation: q.explanation || q.source_hint || '',
             raw: q,
         };
+        try {
+            switch(q.type) {
+                case 'richtig_falsch':          return this.normRF(q, base);
+                case 'nennen_liste':            return this.normList(q, base);
+                case 'freitext_box':            return this.normText(q, base);
+                case 'tabelle_2spalten':
+                case 'tabelle_3spalten':
+                case 'tabelle_vergleich':        return this.normTable(q, base);
+                case 'zuordnung':               return this.normZuordnung(q, base);
+                case 'ergaenzen_liste':          return this.normErgaenzen(q, base);
+                case 'definition_plus_beispiele':return this.normDefinition(q, base);
+                case 'ankreuzen_begruenden':     return this.normAnkreuzen(q, base);
+                default:                        return this.normFallback(q, base);
+            }
+        } catch(e) { return null; }
+    },
 
-        switch(q.type) {
-            case 'richtig_falsch': return this.normRF(q, base);
-            case 'nennen_liste': return this.normList(q, base);
-            case 'freitext_box': return this.normText(q, base);
-            case 'tabelle_2spalten':
-            case 'tabelle_3spalten':
-            case 'tabelle_vergleich': return this.normTable(q, base);
-            case 'zuordnung': return this.normZuordnung(q, base);
-            case 'ergaenzen_liste': return this.normErgaenzen(q, base);
-            case 'definition_plus_beispiele': return this.normDefinition(q, base);
-            case 'ankreuzen_begruenden': return this.normAnkreuzen(q, base);
-            default: return this.normFallback(q, base);
-        }
+    clean(text) {
+        return (text||'').replace(/\*\*(.*?)\*\*/g, '$1').trim();
     },
 
     normRF(q, base) {
-        // Can be single statement or array
-        const stmts = q.statements || (q.data?.statements) || [];
+        const stmts = q.statements || q.data?.statements || [];
         if (stmts.length > 0) {
-            // Pick one random statement for the game
             const s = stmts[Math.floor(Math.random() * stmts.length)];
-            return {...base, type:'tf', display: s.text, answer: s.answer,
-                keywords: [s.answer], correctFull: `${s.answer} — ${s.text}`};
+            return {...base, type:'tf', display: s.text || 'Aussage',
+                answer: s.answer || 'richtig', keywords:[s.answer||'richtig'],
+                correctFull: `${s.answer}: ${s.text}`};
         }
-        // Single statement format
-        return {...base, type:'tf', display: q.statement || 'Aussage fehlt',
-            answer: q.answer || 'richtig', keywords: [q.answer || 'richtig'],
-            correctFull: `${q.answer} — ${q.statement}`};
+        return {...base, type:'tf', display: q.statement || 'Aussage',
+            answer: q.answer || 'richtig', keywords:[q.answer||'richtig'],
+            correctFull: `${q.answer}: ${q.statement}`};
     },
 
     normList(q, base) {
         const correct = q.correct_answers || q.data?.correct_answers || [];
         const allValid = q.all_valid_answers || q.data?.all_valid_answers || correct;
         const count = q.count || q.data?.count || correct.length || 3;
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-        return {...base, type:'list', display: inst || 'Nennen Sie die Antworten.',
-            answer: correct.join(', '), keywords: allValid, count: Math.min(count, 6),
-            correctFull: correct.join(' · ')};
+        return {...base, type:'list', display: this.clean(q.instruction) || 'Nennen Sie die Antworten.',
+            answer: correct.join(', '), keywords: allValid.length ? allValid : correct,
+            count: Math.min(count, 6), correctFull: correct.join(' · ')};
     },
 
     normText(q, base) {
         const data = q.data || {};
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-        const keywords = data.keywords || [];
-        const correctAnswer = data.correct_answer || keywords.join(', ');
-        return {...base, type:'text', display: inst || 'Erläutern Sie.',
-            answer: correctAnswer, keywords: keywords,
-            correctFull: correctAnswer};
+        const kw = data.keywords || [];
+        const ca = data.correct_answer || kw.join(', ');
+        return {...base, type:'text', display: this.clean(q.instruction) || 'Erläutern Sie.',
+            answer: ca, keywords: kw, correctFull: ca};
     },
 
     normTable(q, base) {
-        // Extract input cells as individual facts for Connect mode
         const table = q.data?.table;
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
         const pairs = [];
         const keywords = [];
-
-        if (table && table.rows) {
+        if (table?.rows) {
             table.rows.forEach(row => {
                 let label = '';
-                let values = [];
-                row.cells.forEach((cell, ci) => {
+                row.cells.forEach(cell => {
                     if (cell.type === 'text' || cell.type === 'static') {
                         label = cell.content || cell.value || '';
                     } else if (cell.type === 'input' || cell.type === 'textarea') {
                         const ans = cell.correct_answer || '';
                         const kw = cell.keywords || [];
-                        if (ans) values.push(ans);
+                        if (ans) { keywords.push(ans); if (label) pairs.push({left:label, right:ans}); }
                         keywords.push(...kw);
-                        if (label && ans) pairs.push({left: label, right: ans});
                     }
                 });
             });
         }
-
-        const correctFull = pairs.map(p => `${p.left}: ${p.right}`).join(' · ') || keywords.join(', ');
-
-        return {...base, type: pairs.length >= 2 ? 'connect' : 'text',
-            display: inst || 'Füllen Sie die Tabelle aus.',
-            answer: correctFull, keywords: keywords, pairs: pairs,
-            correctFull: correctFull};
+        const cf = pairs.map(p=>`${p.left}: ${p.right}`).join(' · ') || keywords.join(', ');
+        return {...base, type: pairs.length >= 3 ? 'connect' : 'text',
+            display: this.clean(q.instruction) || 'Füllen Sie aus.',
+            answer: cf, keywords, pairs, correctFull: cf};
     },
 
     normZuordnung(q, base) {
         const data = q.data || {};
         const legend = data.legend || {};
         const stmts = data.statements || [];
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-
         const pairs = stmts.map(s => ({
-            left: s.text.length > 60 ? s.text.substring(0, 57) + '...' : s.text,
-            right: `${s.answer}: ${legend[s.answer] || s.answer}`
+            left: (s.text||'').length > 55 ? s.text.substring(0,52)+'...' : s.text,
+            right: `${s.answer}: ${legend[s.answer]||s.answer}`
         }));
-
-        return {...base, type:'connect', display: inst || 'Ordnen Sie zu.',
-            answer: stmts.map(s => `${s.answer}`).join(', '),
-            keywords: Object.values(legend), pairs: pairs,
-            correctFull: stmts.map(s => `${s.text} → ${s.answer} (${legend[s.answer]})`).join(' · ')};
+        return {...base, type: pairs.length >= 3 ? 'connect' : 'text',
+            display: this.clean(q.instruction) || 'Ordnen Sie zu.',
+            answer: stmts.map(s=>`${s.text} → ${s.answer}`).join('; '),
+            keywords: Object.values(legend), pairs,
+            correctFull: stmts.map(s=>`${legend[s.answer]||s.answer}: ${s.text}`).join(' · ')};
     },
 
     normErgaenzen(q, base) {
         const data = q.data || {};
         const missing = data.missing_items || [];
         const allValid = data.all_valid_missing || missing;
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-        return {...base, type:'list', display: inst || 'Ergänzen Sie die fehlenden Punkte.',
-            answer: missing.join(', '), keywords: allValid,
-            count: missing.length, correctFull: missing.join(' · '),
+        return {...base, type:'list', display: this.clean(q.instruction) || 'Ergänzen Sie.',
+            answer: missing.join(', '), keywords: allValid.length ? allValid : missing,
+            count: missing.length || 3, correctFull: missing.join(' · '),
             givenItems: data.given_items || []};
     },
 
     normDefinition(q, base) {
         const data = q.data || {};
-        const inst = (q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-        const defCorrect = data.definition_correct || '';
+        const defC = data.definition_correct || '';
         const defKW = data.definition_keywords || [];
         const examples = data.correct_examples || data.all_valid_examples || [];
         const allKW = [...defKW, ...examples];
-        return {...base, type:'text', display: inst || 'Definieren Sie und nennen Sie Beispiele.',
-            answer: defCorrect + (examples.length ? ' Beispiele: ' + examples.join(', ') : ''),
-            keywords: allKW, correctFull: defCorrect + ' | Beispiele: ' + examples.join(', ')};
+        const cf = defC + (examples.length ? ' | Beispiele: ' + examples.join(', ') : '');
+        return {...base, type:'text', display: this.clean(q.instruction) || 'Definieren Sie.',
+            answer: cf, keywords: allKW.length ? allKW : [defC], correctFull: cf};
     },
 
     normAnkreuzen(q, base) {
-        const data = q.data || {};
-        const opts = data.options || [];
-        const inst = (q.instruction_select || q.instruction || '').replace(/\*\*(.*?)\*\*/g, '$1');
-        const correctOpts = opts.filter(o => o.correct).map(o => o.label);
-        const wrongOpts = opts.filter(o => !o.correct).map(o => o.label);
-        // Turn into a true/false for one random correct statement
+        const opts = q.data?.options || [];
+        const correctOpts = opts.filter(o=>o.correct).map(o=>o.label);
         if (correctOpts.length > 0) {
-            const pick = correctOpts[Math.floor(Math.random() * correctOpts.length)];
+            const pick = correctOpts[Math.floor(Math.random()*correctOpts.length)];
             return {...base, type:'tf', display: pick, answer:'richtig',
-                keywords:['richtig'], correctFull: 'Richtig: ' + correctOpts.join(', ')};
+                keywords:['richtig'], correctFull: 'Korrekte Aussagen: ' + correctOpts.join(', ')};
         }
-        return {...base, type:'text', display: inst, answer: correctOpts.join(', '),
-            keywords: correctOpts, correctFull: correctOpts.join(', ')};
+        return this.normFallback(q, base);
     },
 
     normFallback(q, base) {
-        const inst = (q.instruction || q.statement || 'Frage').replace(/\*\*(.*?)\*\*/g, '$1');
-        return {...base, type:'text', display: inst, answer: q.explanation || 'Keine Antwort verfügbar',
-            keywords: [], correctFull: q.explanation || ''};
+        const display = this.clean(q.instruction || q.statement || '');
+        return {...base, type:'text', display: display || 'Frage',
+            answer: q.explanation || '', keywords: [],
+            correctFull: q.explanation || 'Siehe Lernmaterial'};
     },
 
-    // Prepare full round: normalize + deduplicate + validate
     prepareRound(rawQuestions, count, mode) {
         const normalized = [];
-        const seenDisplays = new Set();
+        const seen = new Set();
 
-        for (const q of rawQuestions) {
+        for (const q of shuffle(rawQuestions)) {
             if (!q.q_id || q.fallabhaengig) continue;
-            try {
-                const n = this.normalize(q);
-                // Skip if display is empty or duplicate
-                if (!n.display || n.display.length < 5) continue;
-                const displayKey = n.display.substring(0, 50).toLowerCase();
-                if (seenDisplays.has(displayKey)) continue;
-                seenDisplays.add(displayKey);
+            const n = this.normalize(q);
+            if (!n) continue;
+            if (!n.display || n.display.length < 5) continue;
 
-                // For connect mode, only include questions with pairs
-                if (mode === 'connect' && n.type !== 'connect') continue;
-                // For connect mode, ensure at least 3 pairs
-                if (mode === 'connect' && (!n.pairs || n.pairs.length < 3)) continue;
+            const key = n.display.substring(0, 40).toLowerCase();
+            if (seen.has(key)) continue;
+            seen.add(key);
 
-                // Validate answer exists
-                if (!n.answer && !n.correctFull && n.keywords.length === 0) continue;
+            if (mode === 'connect' && n.type !== 'connect') continue;
+            if (mode === 'connect' && (!n.pairs || n.pairs.length < 3)) continue;
 
-                normalized.push(n);
-            } catch(e) { /* skip broken questions */ }
+            if (!n.answer && !n.correctFull && (!n.keywords || n.keywords.length === 0)) continue;
+
+            normalized.push(n);
         }
+        return normalized.slice(0, count);
+    },
 
-        return shuffle(normalized).slice(0, count);
+    prepareRoundForTopics(rawQuestions, count, topics) {
+        const filtered = rawQuestions.filter(q => topics.includes(q.topic));
+        if (filtered.length >= 5) return this.prepareRound(filtered, count, 'recall');
+        return this.prepareRound(rawQuestions, count, 'recall');
     }
 };
 
 // ═══════════════════════════════════════════════════════════════
-//  UTILITY FUNCTIONS
+//  UTILITIES
 // ═══════════════════════════════════════════════════════════════
 function save() {
     localStorage.setItem('arena_xp', S.xp);
@@ -311,51 +302,62 @@ function save() {
 }
 
 function getRank(pct) {
-    for (let i = RANKS.length-1; i >= 0; i--) if (pct >= RANKS[i].min) return RANKS[i];
+    for (let i=RANKS.length-1;i>=0;i--) if(pct>=RANKS[i].min) return RANKS[i];
     return RANKS[0];
 }
 
 function getModuleMastery(mid) {
-    const t = S.mastery[`module_${mid}`] || {};
-    const v = Object.values(t);
+    const t=S.mastery[`module_${mid}`]||{};
+    const v=Object.values(t);
     return v.length ? Math.round(v.reduce((a,b)=>a+b,0)/v.length) : 0;
 }
 
-function getLevel() { return Math.floor(S.xp / 500) + 1; }
+function getLevel() { return Math.floor(S.xp/500)+1; }
 
 function getComboMult() {
-    return S.combo >= 10 ? 3 : S.combo >= 7 ? 2.5 : S.combo >= 5 ? 2 : S.combo >= 3 ? 1.5 : 1;
+    return S.combo>=10?3:S.combo>=7?2.5:S.combo>=5?2:S.combo>=3?1.5:1;
 }
 
 function shuffle(arr) {
-    const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]} return a;
+    const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;
 }
 
-function matchKW(text, kw) {
+function matchKW(text,kw) {
     if(!text||!kw)return false;
-    const u=text.toLowerCase().trim(), k=kw.toLowerCase().trim();
+    const u=text.toLowerCase().trim(),k=kw.toLowerCase().trim();
     if(u.includes(k))return true;
     if(k.length>=4&&u.includes(k.substring(0,Math.min(k.length,5))))return true;
     return false;
 }
 
-function escHtml(s) { return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function esc(s) { return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function resetGame() {
+    S.qi=0;S.score=0;S.total=0;S.combo=0;S.maxCombo=0;S.sessionXP=0;S.answers=[];
+    S.summaries=[];S.learnTopics=[];S.learnSummaryIdx=0;
+    clearInterval(S.sprintTimer);
+}
+
+function updateMastery(topic, correct) {
+    const mk=`module_${S.module.id}`;
+    if(!S.mastery[mk])S.mastery[mk]={};
+    const old=S.mastery[mk][topic]||0;
+    S.mastery[mk][topic]=Math.round(old*0.7+(correct?100:0)*0.3);
+}
 
 // ═══════════════════════════════════════════════════════════════
 //  SCREEN: HOME
 // ═══════════════════════════════════════════════════════════════
 function renderHome() {
-    S.screen = 'home';
-    const level = getLevel();
-    const weaknesses = JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
-    const hasW = weaknesses.length > 0;
-    const totalMastery = MODULES.reduce((sum,m)=>sum+getModuleMastery(m.id),0);
-    const avgMastery = Math.round(totalMastery / MODULES.length);
-    const overallRank = getRank(avgMastery);
+    S.screen='home';
+    const level=getLevel();
+    const weaknesses=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
+    const hasW=weaknesses.length>0;
+    const avgM=Math.round(MODULES.reduce((s,m)=>s+getModuleMastery(m.id),0)/MODULES.length);
+    const oRank=getRank(avgM);
 
-    app.innerHTML = `
+    app.innerHTML=`
     <div class="enter">
-        <!-- Nav -->
         <div class="flex items-center justify-between mb-6">
             <a href="index.html" class="text-slate-500 hover:text-violet-400 transition-colors text-sm font-bold">
                 <i class="fas fa-arrow-left mr-1.5"></i>Dashboard
@@ -368,43 +370,38 @@ function renderHome() {
                     <span class="text-violet-400 font-extrabold t-num">${S.xp.toLocaleString()}</span>
                     <span class="text-slate-600 font-bold">XP</span>
                 </div>
-                <div class="glass rounded-lg px-2.5 py-1.5 text-xs font-bold text-indigo-400">
-                    Lv.${level}
-                </div>
+                <div class="glass rounded-lg px-2.5 py-1.5 text-xs font-bold text-indigo-400">Lv.${level}</div>
             </div>
         </div>
 
-        <!-- Hero -->
         <div class="text-center mb-8">
-            <div class="text-4xl mb-2 rank-glow" style="color:${overallRank.color}">${overallRank.emoji}</div>
+            <div class="text-4xl mb-2 rank-glow" style="color:${oRank.color}">${oRank.emoji}</div>
             <h1 class="text-2xl sm:text-3xl font-black tracking-tight">SLM Arena</h1>
-            <p class="text-slate-500 text-sm mt-1">Gesamt-Mastery: <span class="font-bold" style="color:${overallRank.color}">${avgMastery}%</span> · ${overallRank.label}</p>
+            <p class="text-slate-500 text-sm mt-1">Gesamt: <span class="font-bold" style="color:${oRank.color}">${avgM}% · ${oRank.label}</span></p>
         </div>
 
-        ${hasW ? `
-        <!-- Weakness Alert -->
+        ${hasW?`
         <div class="glass rounded-2xl p-4 sm:p-5 mb-6 border-red-500/20 enter" style="animation-delay:.1s">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-red-500/10 text-red-400 rounded-xl flex items-center justify-center pulse-ring shrink-0">
                     <i class="fas fa-crosshairs text-lg"></i>
                 </div>
                 <div class="flex-1 min-w-0">
-                    <div class="text-sm font-bold text-white">Klausur-Schwächen erkannt</div>
-                    <div class="text-[11px] text-red-400 truncate">${(weaknesses[weaknesses.length-1].weakTopics||[]).map(t=>t.replace(/_/g,' ')).join(', ')}</div>
+                    <div class="text-sm font-bold text-white">Klausur-Schwächen</div>
+                    <div class="text-[11px] text-red-400 truncate">${(weaknesses[weaknesses.length-1].weakTopics||[]).slice(0,3).map(t=>t.replace(/_/g,' ')).join(', ')}</div>
                 </div>
                 <button onclick="startWeakness()" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors shrink-0">
-                    Zerstören
+                    <i class="fas fa-crosshairs mr-1"></i>Go
                 </button>
             </div>
-        </div>` : ''}
+        </div>`:''}
 
-        <!-- Module Grid -->
         <h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Modul wählen</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-            ${MODULES.map((m,i) => {
-                const pct = getModuleMastery(m.id);
-                const rank = getRank(pct);
-                return `
+            ${MODULES.map((m,i)=>{
+                const pct=getModuleMastery(m.id);
+                const rank=getRank(pct);
+                return`
                 <div onclick="selectModule(${m.id})" class="glass rounded-2xl p-4 cursor-pointer hover:border-white/10 transition-all enter" style="animation-delay:${.05+i*.03}s">
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}">
@@ -416,7 +413,7 @@ function renderHome() {
                                 <div class="flex-1 bg-white/5 rounded-full h-1 overflow-hidden">
                                     <div class="h-full rounded-full" style="width:${pct}%;background:${m.color}"></div>
                                 </div>
-                                <span class="text-[9px] font-bold t-num" style="color:${rank.color}">${rank.emoji} ${pct}%</span>
+                                <span class="text-[9px] font-bold t-num" style="color:${rank.color}">${rank.emoji}${pct}%</span>
                             </div>
                         </div>
                     </div>
@@ -427,22 +424,21 @@ function renderHome() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  SCREEN: MODULE SELECTED → MODE PICKER
+//  SCREEN: MODULE → MODE PICKER
 // ═══════════════════════════════════════════════════════════════
 function selectModule(id) {
-    S.module = MODULES.find(m=>m.id===id);
-    const pct = getModuleMastery(id);
-    const rank = getRank(pct);
-    const mKey = `module_${id}`;
-    const topics = S.mastery[mKey] || {};
+    S.module=MODULES.find(m=>m.id===id);
+    const pct=getModuleMastery(id);
+    const rank=getRank(pct);
+    const topics=S.mastery[`module_${id}`]||{};
+    const hasSummaries=S.module.summaryCount>0;
 
-    app.innerHTML = `
+    app.innerHTML=`
     <div class="enter">
         <button onclick="renderHome()" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors">
             <i class="fas fa-arrow-left text-xs"></i>Zurück
         </button>
 
-        <!-- Module header -->
         <div class="glass rounded-2xl p-5 mb-5">
             <div class="flex items-center gap-4 mb-3">
                 <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-xl" style="background:${S.module.color}15;color:${S.module.color}">
@@ -458,38 +454,39 @@ function selectModule(id) {
                 </div>
             </div>
             <div class="bg-white/5 rounded-full h-2 overflow-hidden">
-                <div class="h-full rounded-full transition-all" style="width:${pct}%;background:${S.module.color}"></div>
+                <div class="h-full rounded-full" style="width:${pct}%;background:${S.module.color}"></div>
             </div>
-            ${Object.keys(topics).length ? `
+            ${Object.keys(topics).length?`
             <div class="mt-3 flex flex-wrap gap-1.5">
-                ${Object.entries(topics).sort((a,b)=>a[1]-b[1]).slice(0,6).map(([t,v]) => {
-                    const c = v >= 70 ? '#22c55e' : v >= 40 ? '#eab308' : '#ef4444';
-                    return `<span class="text-[9px] font-bold px-2 py-0.5 rounded" style="background:${c}15;color:${c}">${t.replace(/_/g,' ')} ${v}%</span>`;
+                ${Object.entries(topics).sort((a,b)=>a[1]-b[1]).slice(0,8).map(([t,v])=>{
+                    const c=v>=70?'#22c55e':v>=40?'#eab308':'#ef4444';
+                    return`<span class="text-[9px] font-bold px-2 py-0.5 rounded" style="background:${c}15;color:${c}">${t.replace(/_/g,' ')} ${v}%</span>`;
                 }).join('')}
-            </div>` : ''}
+            </div>`:''}
         </div>
 
-        <!-- Mode selection -->
         <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">Trainingsmodus</h3>
         <div class="space-y-2.5 mb-5">
-            ${MODES.filter(m=>m.id!=='weakness').map(m => `
-            <button onclick="startMode('${m.id}')" class="w-full glass rounded-2xl p-4 text-left hover:border-white/10 transition-all group flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}">
-                    <i class="fas ${m.icon}"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                    <div class="font-bold text-white text-sm">${m.name}</div>
-                    <div class="text-[11px] text-slate-500 truncate">${m.desc}</div>
-                </div>
-                <i class="fas fa-chevron-right text-slate-700 group-hover:text-slate-400 transition-colors text-xs"></i>
-            </button>`).join('')}
+            ${MODES.filter(m=>m.id!=='weakness').map(m=>{
+                const disabled=m.id==='learn'&&!hasSummaries;
+                return`
+                <button onclick="${disabled?'':`startMode('${m.id}')`}" class="w-full glass rounded-2xl p-4 text-left hover:border-white/10 transition-all group flex items-center gap-3 ${disabled?'opacity-40 cursor-not-allowed':'cursor-pointer'}">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background:${m.color}15;color:${m.color}">
+                        <i class="fas ${m.icon}"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="font-bold text-white text-sm">${m.name}</div>
+                        <div class="text-[11px] text-slate-500 truncate">${m.desc}${disabled?' (Keine Zusammenfassungen)':''}</div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-slate-400 transition-colors text-xs"></i>
+                </button>`;
+            }).join('')}
         </div>
 
-        <!-- Round size -->
         <div class="glass rounded-2xl p-4">
             <label class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Fragen pro Runde</label>
             <div class="flex gap-2">
-                ${[5,10,15,20].map(n => `
+                ${[5,10,15,20].map(n=>`
                 <button onclick="S.roundSize=${n};document.querySelectorAll('.rs').forEach(b=>{b.className='rs glass rounded-lg px-3 py-2 text-xs font-bold text-slate-500 transition-all flex-1'});this.className='rs bg-violet-600 rounded-lg px-3 py-2 text-xs font-bold text-white transition-all flex-1'"
                     class="rs ${S.roundSize===n?'bg-violet-600 text-white':'glass text-slate-500'} rounded-lg px-3 py-2 text-xs font-bold transition-all flex-1">${n}</button>
                 `).join('')}
@@ -499,277 +496,400 @@ function selectModule(id) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  START GAME
+//  LOAD QUESTION BANK
+// ═══════════════════════════════════════════════════════════════
+async function loadBank() {
+    const r=await fetch(`data/question-banks/module${S.module.id}_questions.json`);
+    if(!r.ok) throw new Error(`Fragenbank für Modul ${S.module.id} nicht gefunden`);
+    S.rawBank=await r.json();
+    if(!S.rawBank.length) throw new Error('Fragenbank ist leer');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LOAD SUMMARIES — works for ALL modules
+// ═══════════════════════════════════════════════════════════════
+async function loadSummaries() {
+    S.summaries=[];
+    const maxUnits=S.module.summaryCount||15;
+
+    // Try loading each unit file — different modules have different counts
+    const promises=[];
+    for(let i=1;i<=maxUnits;i++){
+        promises.push(
+            fetch(`data/module${S.module.id}summariesunit${i}.json`)
+                .then(r=>r.ok?r.json():null)
+                .catch(()=>null)
+        );
+    }
+
+    const results=await Promise.all(promises);
+    results.forEach((data,idx)=>{
+        if(!data) return;
+        if(Array.isArray(data)){
+            data.forEach(item=>{
+                if(item && (item.topic || item.content)){
+                    S.summaries.push({
+                        topic: item.topic || `Thema ${idx+1}`,
+                        content: item.content || '',
+                        tags: item.tags || [],
+                        unit: idx+1
+                    });
+                }
+            });
+        }
+    });
+
+    return S.summaries.length;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  START MODES
 // ═══════════════════════════════════════════════════════════════
 async function startMode(mode) {
-    S.mode = mode;
-    resetGameState();
-
-    app.innerHTML = `<div class="text-center py-20 enter">
-        <div class="text-2xl text-violet-400 mb-3"><i class="fas fa-spinner fa-spin"></i></div>
-        <p class="text-slate-500 font-medium text-sm">Fragen werden vorbereitet...</p>
-    </div>`;
+    S.mode=mode;
+    resetGame();
+    showLoading('Wird vorbereitet...');
 
     try {
-        const r = await fetch(`data/question-banks/module${S.module.id}_questions.json`);
-        if (!r.ok) throw new Error('Bank nicht gefunden');
-        S.rawBank = await r.json();
+        await loadBank();
 
-        S.normalizedQuestions = Normalizer.prepareRound(S.rawBank, S.roundSize, mode);
-        S.total = S.normalizedQuestions.length;
-
-        if (S.total === 0) throw new Error('Keine passenden Fragen');
-
-        if (mode === 'learn') {
-            await loadSummaries();
-            renderLearnPhase();
-        } else if (mode === 'connect') {
-            renderConnectGame();
-        } else {
-            renderGame();
+        if(mode==='learn'){
+            const summaryCount=await loadSummaries();
+            if(summaryCount===0){
+                // Fallback: no summaries → switch to recall
+                S.mode='recall';
+                S.normalizedQuestions=Normalizer.prepareRound(S.rawBank,S.roundSize,'recall');
+                S.total=S.normalizedQuestions.length;
+                if(!S.total) throw new Error('Keine Fragen');
+                renderGame();
+                return;
+            }
+            renderLearnPicker();
+            return;
         }
+
+        S.normalizedQuestions=Normalizer.prepareRound(S.rawBank,S.roundSize,mode);
+        S.total=S.normalizedQuestions.length;
+        if(!S.total) throw new Error('Keine passenden Fragen für diesen Modus');
+
+        if(mode==='connect') renderConnectGame();
+        else renderGame();
     } catch(e) {
-        app.innerHTML = `
-        <div class="text-center py-20 enter">
-            <div class="text-5xl mb-4">😔</div>
-            <h2 class="text-lg font-bold mb-2">Nicht verfügbar</h2>
-            <p class="text-slate-500 text-sm mb-6">${escHtml(e.message)}</p>
-            <button onclick="selectModule(${S.module.id})" class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors">
-                <i class="fas fa-arrow-left mr-2"></i>Zurück
-            </button>
-        </div>`;
+        showError(e.message);
     }
 }
 
 async function startWeakness() {
-    const w = JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
-    if (!w.length) return renderHome();
-    const latest = w[w.length-1];
-    S.module = MODULES.find(m=>m.id===latest.module) || MODULES[0];
-    S.mode = 'weakness';
-    resetGameState();
-
-    try {
-        const r = await fetch(`data/question-banks/module${S.module.id}_questions.json`);
-        S.rawBank = await r.json();
-        let pool = S.rawBank.filter(q=>q.q_id && !q.fallabhaengig);
-        if (latest.weakTopics?.length) {
-            const wp = pool.filter(q=>latest.weakTopics.includes(q.topic));
-            if (wp.length >= 3) pool = wp;
+    const w=JSON.parse(localStorage.getItem('slm_exam_weaknesses')||'[]');
+    if(!w.length) return renderHome();
+    const latest=w[w.length-1];
+    S.module=MODULES.find(m=>m.id===latest.module)||MODULES[0];
+    S.mode='weakness';
+    resetGame();
+    showLoading('Schwächen laden...');
+    try{
+        await loadBank();
+        let pool=S.rawBank.filter(q=>q.q_id&&!q.fallabhaengig);
+        if(latest.weakTopics?.length){
+            const wp=pool.filter(q=>latest.weakTopics.includes(q.topic));
+            if(wp.length>=3) pool=wp;
         }
-        S.normalizedQuestions = Normalizer.prepareRound(pool, S.roundSize, 'recall');
-        S.total = S.normalizedQuestions.length;
-        if (!S.total) throw new Error('Keine schwachen Fragen');
+        S.normalizedQuestions=Normalizer.prepareRound(pool,S.roundSize,'recall');
+        S.total=S.normalizedQuestions.length;
+        if(!S.total) throw new Error('Keine schwachen Fragen gefunden');
         renderGame();
-    } catch(e) { renderHome(); }
+    }catch(e){ showError(e.message); }
 }
 
-function resetGameState() {
-    S.qi=0; S.score=0; S.total=0; S.combo=0; S.maxCombo=0; S.sessionXP=0; S.answers=[];
-    clearInterval(S.sprintTimer);
+function showLoading(msg) {
+    app.innerHTML=`<div class="text-center py-20 enter">
+        <div class="text-2xl text-violet-400 mb-3"><i class="fas fa-spinner fa-spin"></i></div>
+        <p class="text-slate-500 font-medium text-sm">${esc(msg)}</p>
+    </div>`;
+}
+
+function showError(msg) {
+    app.innerHTML=`
+    <div class="text-center py-20 enter">
+        <div class="text-5xl mb-4">😔</div>
+        <h2 class="text-lg font-bold mb-2">Nicht verfügbar</h2>
+        <p class="text-slate-500 text-sm mb-6">${esc(msg)}</p>
+        <button onclick="${S.module?`selectModule(${S.module.id})`:'renderHome()'}" class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors">
+            <i class="fas fa-arrow-left mr-2"></i>Zurück
+        </button>
+    </div>`;
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  LEARN MODE: Summary → then Quiz
+//  LEARN & QUIZ MODE
 // ═══════════════════════════════════════════════════════════════
-async function loadSummaries() {
-    S.summaries = [];
-    // Try to load summary files for this module
-    for (let i = 1; i <= 12; i++) {
-        try {
-            const r = await fetch(`data/module${S.module.id}summariesunit${i}.json`);
-            if (r.ok) {
-                const data = await r.json();
-                if (Array.isArray(data)) {
-                    data.forEach(item => {
-                        if (item.topic && item.content) {
-                            S.summaries.push({topic: item.topic, content: item.content, tags: item.tags || []});
-                        }
-                    });
-                }
-            }
-        } catch(e) { /* skip */ }
-    }
+function renderLearnPicker() {
+    // Group summaries by unit and let user pick which to study
+    const units=[];
+    const unitMap={};
+    S.summaries.forEach(s=>{
+        if(!unitMap[s.unit]){unitMap[s.unit]=[];units.push(s.unit)}
+        unitMap[s.unit].push(s);
+    });
+
+    app.innerHTML=`
+    <div class="enter">
+        <button onclick="selectModule(${S.module.id})" class="text-slate-500 hover:text-violet-400 text-sm font-bold mb-5 inline-flex items-center gap-1.5 transition-colors">
+            <i class="fas fa-arrow-left text-xs"></i>Zurück
+        </button>
+
+        <div class="glass rounded-2xl p-5 mb-5 border-violet-500/20">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-book-open text-lg"></i>
+                </div>
+                <div>
+                    <h2 class="text-lg font-extrabold">Learn & Quiz</h2>
+                    <p class="text-xs text-slate-500">Erst lesen, dann Fragen beantworten</p>
+                </div>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-relaxed">
+                Wähle ein Thema zum Lesen. Danach bekommst du Fragen zu genau diesem Thema.
+                Je schneller du antwortest, desto mehr XP!
+            </p>
+        </div>
+
+        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 pl-1">${S.summaries.length} Themen verfügbar · Modul ${S.module.id}</h3>
+        <div class="space-y-2">
+            ${S.summaries.map((s,i)=>{
+                const topicMastery=S.mastery[`module_${S.module.id}`]?.[s.topic?.toLowerCase().replace(/\s+/g,'_')]||0;
+                const rank=getRank(topicMastery);
+                return`
+                <button onclick="startLearnSession(${i})" class="w-full glass rounded-2xl p-4 text-left hover:border-violet-500/20 transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-sm" style="background:${S.module.color}12;color:${S.module.color}">
+                            ${i+1}
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="text-sm font-bold text-white truncate">${esc(s.topic)}</div>
+                            ${s.tags.length?`<div class="flex flex-wrap gap-1 mt-1">${s.tags.slice(0,4).map(t=>`<span class="text-[8px] font-bold px-1.5 py-0.5 rounded bg-white/5 text-slate-500">${esc(t)}</span>`).join('')}</div>`:''}
+                        </div>
+                        <span class="text-xs rank-glow" style="color:${rank.color}">${rank.emoji}</span>
+                    </div>
+                </button>`;
+            }).join('')}
+        </div>
+
+        <button onclick="startLearnAll()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-4 transition-colors">
+            <i class="fas fa-shuffle mr-2"></i>Zufällige 3 Themen lesen & Quiz
+        </button>
+    </div>`;
 }
 
-function renderLearnPhase() {
-    S.learnPhase = true;
-    S.learnSummaryIdx = 0;
+function startLearnSession(summaryIdx) {
+    S.learnSummaryIdx=0;
+    S.learnTopics=[];
+    // Use just this one summary then quiz
+    const picked=[S.summaries[summaryIdx]];
+    S.summaries=picked;
+    showLearnCard();
+}
 
-    if (S.summaries.length === 0) {
-        // No summaries available, skip to quiz
-        S.mode = 'recall';
-        renderGame();
-        return;
-    }
-
+function startLearnAll() {
+    S.learnSummaryIdx=0;
+    S.learnTopics=[];
+    // Pick up to 3 random summaries
+    S.summaries=shuffle(S.summaries).slice(0,3);
     showLearnCard();
 }
 
 function showLearnCard() {
-    if (S.learnSummaryIdx >= S.summaries.length || S.learnSummaryIdx >= 3) {
-        // After reading 3 summaries, start quiz
-        S.learnPhase = false;
-        renderGame();
+    const maxCards=S.summaries.length;
+    if(S.learnSummaryIdx>=maxCards){
+        // Done reading → start quiz on those topics
+        startLearnQuiz();
         return;
     }
 
-    const s = S.summaries[S.learnSummaryIdx];
+    const s=S.summaries[S.learnSummaryIdx];
+    // Track which topics the user has read
+    if(s.topic) S.learnTopics.push(s.topic.toLowerCase().replace(/\s+/g,'_'));
+    // Also add tag-based topics
+    if(s.tags) s.tags.forEach(t=>S.learnTopics.push(t.toLowerCase().replace(/\s+/g,'_')));
 
-    app.innerHTML = `
+    app.innerHTML=`
     <div class="enter">
         <div class="flex items-center justify-between mb-4">
-            <button onclick="S.learnPhase=false;renderGame()" class="text-slate-500 hover:text-violet-400 text-xs font-bold transition-colors">
-                <i class="fas fa-forward mr-1"></i>Quiz starten
+            <button onclick="startLearnQuiz()" class="text-slate-500 hover:text-violet-400 text-xs font-bold transition-colors">
+                <i class="fas fa-forward mr-1"></i>Direkt zum Quiz
             </button>
-            <span class="text-xs font-bold text-slate-500">${S.learnSummaryIdx+1}/${Math.min(S.summaries.length, 3)} Themen</span>
-        </div>
-
-        <div class="glass rounded-2xl p-4 mb-4 border-indigo-500/20">
-            <div class="flex items-center gap-2 mb-3">
-                <i class="fas fa-book-open text-indigo-400"></i>
-                <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Lernphase — Lies aufmerksam</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-3">${escHtml(s.topic)}</h3>
-            ${s.tags.length ? `<div class="flex flex-wrap gap-1 mb-3">${s.tags.map(t=>`<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300">${escHtml(t)}</span>`).join('')}</div>` : ''}
-            <div class="text-sm text-slate-300 leading-relaxed max-h-[50vh] overflow-y-auto pr-2 summary-content" style="scrollbar-width:thin">
-                ${s.content}
+            <div class="flex items-center gap-2">
+                <span class="text-[10px] font-bold text-slate-500">${S.learnSummaryIdx+1}/${maxCards}</span>
+                <span class="text-[10px] font-bold text-violet-400"><i class="fas fa-book-open mr-1"></i>Lernphase</span>
             </div>
         </div>
 
-        <button onclick="S.learnSummaryIdx++;showLearnCard()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors">
-            ${S.learnSummaryIdx + 1 >= Math.min(S.summaries.length, 3) ? '<i class="fas fa-brain mr-2"></i>Jetzt Quiz starten' : '<i class="fas fa-arrow-right mr-2"></i>Nächstes Thema'}
-        </button>
+        <!-- Reading progress -->
+        <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden">
+            <div class="h-full bg-violet-500 rounded-full transition-all" style="width:${((S.learnSummaryIdx+1)/maxCards)*100}%"></div>
+        </div>
+
+        <div class="glass rounded-2xl overflow-hidden mb-4 border-indigo-500/15">
+            <div class="bg-indigo-500/8 px-5 py-3 flex items-center gap-2">
+                <i class="fas fa-book-open text-indigo-400 text-sm"></i>
+                <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Lies aufmerksam — dann kommt das Quiz</span>
+            </div>
+            <div class="p-5">
+                <h3 class="text-lg font-extrabold text-white mb-2">${esc(s.topic)}</h3>
+                ${s.tags.length?`<div class="flex flex-wrap gap-1.5 mb-4">${s.tags.map(t=>`<span class="text-[9px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300">${esc(t)}</span>`).join('')}</div>`:''}
+                <div class="summary-content max-h-[55vh] overflow-y-auto pr-1" style="scrollbar-width:thin">
+                    ${s.content || '<p class="text-slate-500">Kein Inhalt verfügbar.</p>'}
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-3">
+            ${S.learnSummaryIdx>0?`<button onclick="S.learnSummaryIdx--;showLearnCard()" class="glass rounded-xl py-3 px-5 font-bold text-sm text-slate-400 transition-all">
+                <i class="fas fa-arrow-left mr-1"></i>Zurück
+            </button>`:''}
+            <button onclick="S.learnSummaryIdx++;showLearnCard()" class="flex-1 bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm transition-colors active:scale-95">
+                ${S.learnSummaryIdx+1>=maxCards?'<i class="fas fa-brain mr-2"></i>Jetzt Quiz starten':'<i class="fas fa-arrow-right mr-2"></i>Weiter lesen'}
+            </button>
+        </div>
     </div>`;
+}
+
+async function startLearnQuiz() {
+    showLoading('Quiz wird aus gelesenen Themen erstellt...');
+
+    // Try to filter questions by topics the user just read
+    const uniqueTopics=[...new Set(S.learnTopics)];
+
+    if(S.rawBank.length===0){
+        try{ await loadBank(); }catch(e){ showError(e.message); return; }
+    }
+
+    // Try topic-filtered first, fall back to all questions
+    S.normalizedQuestions=Normalizer.prepareRoundForTopics(S.rawBank, S.roundSize, uniqueTopics);
+    S.total=S.normalizedQuestions.length;
+
+    if(S.total===0){
+        // Complete fallback
+        S.normalizedQuestions=Normalizer.prepareRound(S.rawBank, S.roundSize, 'recall');
+        S.total=S.normalizedQuestions.length;
+    }
+
+    if(S.total===0){ showError('Keine Fragen verfügbar'); return; }
+
+    S.mode='recall'; // quiz phase uses recall mechanics
+    renderGame();
 }
 
 // ═══════════════════════════════════════════════════════════════
 //  GAME SCREEN (Recall, Absorb, Sprint, Weakness)
 // ═══════════════════════════════════════════════════════════════
 function renderGame() {
-    if (S.qi >= S.total) return renderResults();
+    if(S.qi>=S.total) return renderResults();
+    const q=S.normalizedQuestions[S.qi];
+    const mult=getComboMult();
+    const progress=Math.round((S.qi/S.total)*100);
+    const mInfo=MODES.find(m=>m.id===S.mode);
 
-    const q = S.normalizedQuestions[S.qi];
-    const mult = getComboMult();
-    const progress = Math.round((S.qi / S.total) * 100);
-    const mInfo = MODES.find(m=>m.id===S.mode);
-
-    app.innerHTML = `
-    <div class="enter" id="game-wrap">
-        <!-- Top bar -->
+    app.innerHTML=`
+    <div class="enter" id="gw">
         <div class="flex items-center justify-between mb-3">
             <button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold transition-colors">
                 <i class="fas fa-times mr-1"></i>Ende
             </button>
             <div class="flex items-center gap-2">
                 <span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span>
-                ${S.combo >= 3 ? `<span class="text-[10px] font-bold text-orange-400 pop">🔥×${mult.toFixed(1)}</span>` : ''}
+                ${S.combo>=3?`<span class="text-[10px] font-bold text-orange-400 pop">🔥×${mult.toFixed(1)}</span>`:''}
                 <span class="text-[10px] font-bold text-violet-400 t-num">+${S.sessionXP}</span>
             </div>
         </div>
 
-        <!-- Progress -->
         <div class="w-full bg-white/5 rounded-full h-1 mb-5 overflow-hidden">
             <div class="h-full bg-violet-500 rounded-full transition-all duration-300" style="width:${progress}%"></div>
         </div>
 
-        <!-- Topic + mode -->
         <div class="flex items-center gap-2 mb-3 flex-wrap">
             <span class="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded" style="background:${S.module.color}12;color:${S.module.color}">${q.topic.replace(/_/g,' ')}</span>
-            <span class="text-[9px] font-bold text-slate-600 uppercase tracking-widest">${mInfo?.name||S.mode}</span>
-            <span class="text-[9px] font-bold text-slate-700">·  ${q.difficulty === 3 ? '⚡⚡⚡' : q.difficulty === 2 ? '⚡⚡' : '⚡'}</span>
+            <span class="text-[9px] font-bold text-slate-700">${q.difficulty===3?'⚡⚡⚡':q.difficulty===2?'⚡⚡':'⚡'}</span>
         </div>
 
-        <!-- Question card -->
         <div class="glass rounded-2xl p-5 sm:p-6 mb-4">
-            <p class="text-white font-bold text-base sm:text-lg leading-relaxed">${escHtml(q.display)}</p>
-            ${q.givenItems?.length ? `
+            <p class="text-white font-bold text-base sm:text-lg leading-relaxed">${esc(q.display)}</p>
+            ${q.givenItems?.length?`
             <div class="mt-3 space-y-1">
                 <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Bereits gegeben:</div>
-                ${q.givenItems.map(g=>`<div class="text-xs text-slate-400 flex items-center gap-1.5"><i class="fas fa-check text-slate-600 text-[8px]"></i>${escHtml(g)}</div>`).join('')}
-            </div>` : ''}
+                ${q.givenItems.map(g=>`<div class="text-xs text-slate-400 flex items-center gap-1.5"><i class="fas fa-check text-slate-600 text-[8px]"></i>${esc(g)}</div>`).join('')}
+            </div>`:''}
         </div>
 
-        ${S.mode === 'sprint' ? `
+        ${S.mode==='sprint'?`
         <div class="flex items-center gap-2 mb-4">
             <div class="flex-1 bg-white/5 rounded-full h-1.5 overflow-hidden">
-                <div id="sprint-bar" class="h-full rounded-full bg-red-500 transition-all" style="width:100%"></div>
+                <div id="sp-bar" class="h-full rounded-full bg-red-500 transition-all" style="width:100%"></div>
             </div>
-            <span id="sprint-time" class="text-[10px] font-bold text-red-400 t-num w-6 text-right">30</span>
-        </div>` : ''}
+            <span id="sp-time" class="text-[10px] font-bold text-red-400 t-num w-6 text-right">30</span>
+        </div>`:''}
 
-        <!-- Answer area -->
-        <div id="answer-area">${S.mode === 'absorb' ? '' : renderAnswerUI(q)}</div>
-        <div id="feedback-area"></div>
+        <div id="aa">${S.mode==='absorb'?'':renderAnswerUI(q)}</div>
+        <div id="fb"></div>
     </div>`;
 
-    if (S.mode === 'sprint') startSprint();
-    if (S.mode === 'absorb') startAbsorb(q);
+    if(S.mode==='sprint') startSprint();
+    if(S.mode==='absorb') startAbsorb(q);
 }
 
 function renderAnswerUI(q) {
-    if (q.type === 'tf') {
-        return `
+    if(q.type==='tf'){
+        return`
         <div class="grid grid-cols-2 gap-3">
-            <button onclick="submitAnswer('richtig')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-green-500/10 hover:border-green-500/30 transition-all active:scale-95">
+            <button onclick="submitTF('richtig')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-green-500/10 hover:border-green-500/30 transition-all active:scale-95">
                 <i class="fas fa-check text-green-400 mr-2"></i>Richtig
             </button>
-            <button onclick="submitAnswer('falsch')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-red-500/10 hover:border-red-500/30 transition-all active:scale-95">
+            <button onclick="submitTF('falsch')" class="glass rounded-xl py-4 font-bold text-sm hover:bg-red-500/10 hover:border-red-500/30 transition-all active:scale-95">
                 <i class="fas fa-times text-red-400 mr-2"></i>Falsch
             </button>
         </div>`;
     }
 
-    if (q.type === 'list') {
-        const c = Math.min(q.count || 3, 5);
-        let inputs = '';
-        for (let i = 0; i < c; i++) {
-            inputs += `<input id="ai-${i}" type="text" class="w-full glass rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-2" placeholder="${i+1}." onkeydown="if(event.key==='Enter'){const n=$('ai-${i+1}');if(n)n.focus();else submitListAnswer(${c})}">`;
+    if(q.type==='list'){
+        const c=Math.min(q.count||3,5);
+        let inputs='';
+        for(let i=0;i<c;i++){
+            inputs+=`<input id="ai-${i}" type="text" class="w-full glass rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors mb-2" placeholder="${i+1}." onkeydown="if(event.key==='Enter'){const n=$('ai-${i+1}');if(n)n.focus();else submitList(${c})}">`;
         }
-        return inputs + `
-        <button onclick="submitListAnswer(${c})" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-1 transition-colors active:scale-95">
+        return inputs+`
+        <button onclick="submitList(${c})" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-1 transition-colors active:scale-95">
             <i class="fas fa-check mr-2"></i>Prüfen
         </button>`;
     }
 
-    // Default: text input with optional pen
-    return `
+    // text type — with pen toggle
+    return`
     <div class="flex gap-2 mb-2">
-        <button onclick="togglePen(false)" id="mode-type" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all">⌨️ Tippen</button>
-        <button onclick="togglePen(true)" id="mode-pen" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all">✏️ Stift</button>
+        <button onclick="togglePen(false)" id="m-type" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all">⌨️ Tippen</button>
+        <button onclick="togglePen(true)" id="m-pen" class="flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all">✏️ Stift</button>
     </div>
-    <div id="type-input">
+    <div id="t-in">
         <textarea id="ai-text" class="w-full glass rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 outline-none focus:border-violet-500/50 transition-colors resize-none" rows="3" placeholder="Deine Antwort..."></textarea>
     </div>
-    <div id="pen-input" class="hidden">
-        <div id="pen-container"></div>
-    </div>
-    <button onclick="submitTextAnswer()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-2 transition-colors active:scale-95">
+    <div id="p-in" class="hidden"><div id="pen-c"></div></div>
+    <button onclick="submitText()" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-2 transition-colors active:scale-95">
         <i class="fas fa-check mr-2"></i>Prüfen
     </button>`;
 }
 
 function togglePen(penMode) {
-    const typeDiv = $('type-input');
-    const penDiv = $('pen-input');
-    const typeBtn = $('mode-type');
-    const penBtn = $('mode-pen');
-    if (!typeDiv || !penDiv) return;
-
-    if (penMode) {
-        typeDiv.classList.add('hidden');
-        penDiv.classList.remove('hidden');
-        typeBtn.className = 'flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
-        penBtn.className = 'flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
-        const container = $('pen-container');
-        if (container && !container.hasChildNodes()) {
-            container.appendChild(CanvasInput.create('arena-pen', 600, 150));
-        }
-    } else {
-        typeDiv.classList.remove('hidden');
-        penDiv.classList.add('hidden');
-        typeBtn.className = 'flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
-        penBtn.className = 'flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
+    const tD=$('t-in'),pD=$('p-in'),tB=$('m-type'),pB=$('m-pen');
+    if(!tD||!pD) return;
+    if(penMode){
+        tD.classList.add('hidden');pD.classList.remove('hidden');
+        tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
+        pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
+        const c=$('pen-c');
+        if(c&&!c.hasChildNodes()) c.appendChild(CanvasInput.create('arena-pen',600,150));
+    }else{
+        tD.classList.remove('hidden');pD.classList.add('hidden');
+        tB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-white bg-violet-600 transition-all';
+        pB.className='flex-1 glass rounded-lg py-2 text-xs font-bold text-slate-500 transition-all';
     }
 }
 
@@ -777,161 +897,120 @@ function togglePen(penMode) {
 //  ABSORB MODE
 // ═══════════════════════════════════════════════════════════════
 function startAbsorb(q) {
-    const area = $('answer-area');
-    area.innerHTML = `
+    const aa=$('aa');
+    aa.innerHTML=`
     <div class="glass rounded-2xl p-5 mb-3 border-indigo-500/20">
         <div class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest mb-2"><i class="fas fa-eye mr-1"></i>Merke dir das</div>
-        <p class="text-white font-medium text-sm leading-relaxed">${escHtml(q.correctFull || q.answer)}</p>
+        <p class="text-white font-medium text-sm leading-relaxed">${esc(q.correctFull||q.answer)}</p>
     </div>
-    <div class="text-center text-xs text-slate-500 font-bold"><span id="abs-t">5</span>s</div>`;
-
-    let t = 5;
-    const iv = setInterval(() => {
-        t--;
-        const el = $('abs-t');
-        if (el) el.textContent = t;
-        if (t <= 0) {
-            clearInterval(iv);
-            area.innerHTML = renderAnswerUI(q);
-            $('ai-text')?.focus();
-        }
-    }, 1000);
+    <div class="text-center text-xs text-slate-500 font-bold"><span id="at">5</span>s</div>`;
+    let t=5;
+    const iv=setInterval(()=>{
+        t--;const el=$('at');if(el)el.textContent=t;
+        if(t<=0){clearInterval(iv);aa.innerHTML=renderAnswerUI(q);$('ai-text')?.focus();}
+    },1000);
 }
 
 // ═══════════════════════════════════════════════════════════════
 //  SPRINT TIMER
 // ═══════════════════════════════════════════════════════════════
 function startSprint() {
-    S.sprintLeft = 30;
+    S.sprintLeft=30;
     clearInterval(S.sprintTimer);
-    S.sprintTimer = setInterval(() => {
+    S.sprintTimer=setInterval(()=>{
         S.sprintLeft--;
-        const bar = $('sprint-bar');
-        const tm = $('sprint-time');
-        if (bar) bar.style.width = (S.sprintLeft/30*100)+'%';
-        if (tm) tm.textContent = S.sprintLeft;
-        if (S.sprintLeft <= 5 && bar) bar.style.background = '#ef4444';
-        if (S.sprintLeft <= 0) { clearInterval(S.sprintTimer); showFeedback(false); }
-    }, 1000);
+        const bar=$('sp-bar'),tm=$('sp-time');
+        if(bar)bar.style.width=(S.sprintLeft/30*100)+'%';
+        if(tm)tm.textContent=S.sprintLeft;
+        if(S.sprintLeft<=5&&bar)bar.style.background='#ef4444';
+        if(S.sprintLeft<=0){clearInterval(S.sprintTimer);showFeedback(false);}
+    },1000);
 }
 
 // ═══════════════════════════════════════════════════════════════
-//  CONNECT MODE (pair matching game)
+//  CONNECT MODE
 // ═══════════════════════════════════════════════════════════════
 function renderConnectGame() {
-    if (S.qi >= S.total) return renderResults();
+    if(S.qi>=S.total) return renderResults();
+    const q=S.normalizedQuestions[S.qi];
+    const pairs=(q.pairs||[]).slice(0,5);
+    if(pairs.length<2){S.qi++;return renderConnectGame();}
 
-    const q = S.normalizedQuestions[S.qi];
-    const pairs = (q.pairs || []).slice(0, 5);
-    if (pairs.length < 2) { S.qi++; return renderConnectGame(); }
+    S.connectPairs=pairs;
+    S.connectSelected=null;
+    S.connectMatched=new Set();
+    const lItems=shuffle(pairs.map((p,i)=>({text:p.left,idx:i})));
+    const rItems=shuffle(pairs.map((p,i)=>({text:p.right,idx:i})));
+    const progress=Math.round((S.qi/S.total)*100);
 
-    S.connectPairs = pairs;
-    S.connectSelected = null;
-    S.connectMatched = new Set();
-
-    const leftItems = shuffle(pairs.map((p,i) => ({text: p.left, idx: i, side:'left'})));
-    const rightItems = shuffle(pairs.map((p,i) => ({text: p.right, idx: i, side:'right'})));
-
-    const progress = Math.round((S.qi / S.total) * 100);
-
-    app.innerHTML = `
-    <div class="enter" id="game-wrap">
+    app.innerHTML=`
+    <div class="enter" id="gw">
         <div class="flex items-center justify-between mb-3">
             <button onclick="renderResults()" class="text-slate-600 hover:text-red-400 text-xs font-bold"><i class="fas fa-times mr-1"></i>Ende</button>
-            <span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span>
+            <div class="flex items-center gap-2">
+                <span class="text-[10px] font-bold text-slate-600 t-num">${S.qi+1}/${S.total}</span>
+                <span class="text-[10px] font-bold text-violet-400 t-num">+${S.sessionXP}</span>
+            </div>
         </div>
         <div class="w-full bg-white/5 rounded-full h-1 mb-4 overflow-hidden">
             <div class="h-full bg-emerald-500 rounded-full" style="width:${progress}%"></div>
         </div>
-
-        <div class="glass rounded-2xl p-4 mb-4 border-emerald-500/20">
-            <div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-1"><i class="fas fa-link mr-1"></i>Connect — Paare verbinden</div>
-            <p class="text-sm text-white font-bold">${escHtml(q.display)}</p>
+        <div class="glass rounded-2xl p-4 mb-4 border-emerald-500/15">
+            <div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-1"><i class="fas fa-link mr-1"></i>Paare verbinden</div>
+            <p class="text-sm text-white font-bold">${esc(q.display)}</p>
         </div>
-
-        <div class="grid grid-cols-2 gap-3" id="connect-grid">
-            <div class="space-y-2" id="left-col">
-                ${leftItems.map(it => `
-                <div onclick="connectClick('left',${it.idx})" id="cl-${it.idx}"
-                     class="glass rounded-xl p-3 text-xs font-bold text-white cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">
-                    ${escHtml(it.text)}
-                </div>`).join('')}
+        <div class="grid grid-cols-2 gap-2.5">
+            <div class="space-y-2">
+                ${lItems.map(it=>`
+                <div onclick="cClick('l',${it.idx})" id="cl-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-white cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}
             </div>
-            <div class="space-y-2" id="right-col">
-                ${rightItems.map(it => `
-                <div onclick="connectClick('right',${it.idx})" id="cr-${it.idx}"
-                     class="glass rounded-xl p-3 text-xs font-bold text-slate-400 cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">
-                    ${escHtml(it.text)}
-                </div>`).join('')}
+            <div class="space-y-2">
+                ${rItems.map(it=>`
+                <div onclick="cClick('r',${it.idx})" id="cr-${it.idx}" class="glass rounded-xl p-3 text-xs font-bold text-slate-400 cursor-pointer hover:border-emerald-500/30 transition-all leading-snug">${esc(it.text)}</div>`).join('')}
             </div>
         </div>
-        <div id="feedback-area" class="mt-4"></div>
+        <div id="fb" class="mt-3"></div>
     </div>`;
 }
 
-function connectClick(side, idx) {
-    if (S.connectMatched.has(idx)) return;
-
-    if (S.connectSelected === null) {
-        S.connectSelected = {side, idx};
-        const el = $(`c${side[0]}-${idx}`);
-        if (el) el.style.borderColor = 'rgba(16,185,129,.5)';
-    } else {
-        const prev = S.connectSelected;
-        S.connectSelected = null;
-
-        // Must be different sides
-        if (prev.side === side) {
-            // Reset previous
-            const pel = $(`c${prev.side[0]}-${prev.idx}`);
-            if (pel) pel.style.borderColor = '';
-            // Select new
-            S.connectSelected = {side, idx};
-            const el = $(`c${side[0]}-${idx}`);
-            if (el) el.style.borderColor = 'rgba(16,185,129,.5)';
+function cClick(side,idx) {
+    if(S.connectMatched.has(idx)) return;
+    if(S.connectSelected===null){
+        S.connectSelected={side,idx};
+        const el=$(`c${side}-${idx}`);
+        if(el)el.style.borderColor='rgba(16,185,129,.5)';
+    }else{
+        const prev=S.connectSelected;
+        S.connectSelected=null;
+        if(prev.side===side){
+            const pel=$(`c${prev.side}-${prev.idx}`);if(pel)pel.style.borderColor='';
+            S.connectSelected={side,idx};const el=$(`c${side}-${idx}`);if(el)el.style.borderColor='rgba(16,185,129,.5)';
             return;
         }
-
-        const leftIdx = prev.side === 'left' ? prev.idx : idx;
-        const rightIdx = prev.side === 'right' ? prev.idx : idx;
-
-        const isMatch = leftIdx === rightIdx;
-
-        const lEl = $(`cl-${leftIdx}`);
-        const rEl = $(`cr-${rightIdx}`);
-
-        if (isMatch) {
-            S.connectMatched.add(leftIdx);
-            if (lEl) { lEl.style.background = 'rgba(16,185,129,.15)'; lEl.style.borderColor = 'rgba(16,185,129,.3)'; lEl.style.pointerEvents = 'none'; }
-            if (rEl) { rEl.style.background = 'rgba(16,185,129,.15)'; rEl.style.borderColor = 'rgba(16,185,129,.3)'; rEl.style.pointerEvents = 'none'; }
-
-            // Check if all matched
-            if (S.connectMatched.size >= S.connectPairs.length) {
-                // All correct — award XP
-                S.score++;
-                S.combo++;
-                S.maxCombo = Math.max(S.maxCombo, S.combo);
-                const earned = Math.round(25 * getComboMult());
-                S.xp += earned;
-                S.sessionXP += earned;
-                S.answers.push({correct:true, earned, topic: S.normalizedQuestions[S.qi].topic});
-                updateMastery(S.normalizedQuestions[S.qi].topic, true);
-                save();
-
-                setTimeout(() => { S.qi++; renderConnectGame(); }, 600);
+        const lIdx=prev.side==='l'?prev.idx:idx;
+        const rIdx=prev.side==='r'?prev.idx:idx;
+        const lEl=$(`cl-${lIdx}`),rEl=$(`cr-${rIdx}`);
+        if(lIdx===rIdx){
+            S.connectMatched.add(lIdx);
+            if(lEl){lEl.style.background='rgba(16,185,129,.12)';lEl.style.borderColor='rgba(16,185,129,.3)';lEl.style.pointerEvents='none';}
+            if(rEl){rEl.style.background='rgba(16,185,129,.12)';rEl.style.borderColor='rgba(16,185,129,.3)';rEl.style.pointerEvents='none';}
+            if(S.connectMatched.size>=S.connectPairs.length){
+                S.score++;S.combo++;S.maxCombo=Math.max(S.maxCombo,S.combo);
+                const earned=Math.round(25*getComboMult());
+                S.xp+=earned;S.sessionXP+=earned;
+                S.answers.push({correct:true,earned,topic:S.normalizedQuestions[S.qi].topic});
+                updateMastery(S.normalizedQuestions[S.qi].topic,true);save();
+                setTimeout(()=>{S.qi++;renderConnectGame();},500);
             }
-        } else {
-            // Wrong match
-            S.combo = 0;
-            if (lEl) { lEl.classList.add('shake'); lEl.style.borderColor = 'rgba(239,68,68,.5)'; }
-            if (rEl) { rEl.classList.add('shake'); rEl.style.borderColor = 'rgba(239,68,68,.5)'; }
-            const pel = $(`c${prev.side[0]}-${prev.idx}`);
-            if (pel) pel.style.borderColor = '';
-
-            setTimeout(() => {
-                if (lEl) { lEl.classList.remove('shake'); lEl.style.borderColor = ''; }
-                if (rEl) { rEl.classList.remove('shake'); rEl.style.borderColor = ''; }
-            }, 400);
+        }else{
+            S.combo=0;
+            if(lEl){lEl.classList.add('shake');lEl.style.borderColor='rgba(239,68,68,.5)';}
+            if(rEl){rEl.classList.add('shake');rEl.style.borderColor='rgba(239,68,68,.5)';}
+            const pel=$(`c${prev.side}-${prev.idx}`);if(pel)pel.style.borderColor='';
+            setTimeout(()=>{
+                if(lEl){lEl.classList.remove('shake');lEl.style.borderColor='';}
+                if(rEl){rEl.classList.remove('shake');rEl.style.borderColor='';}
+            },400);
         }
     }
 }
@@ -939,106 +1018,88 @@ function connectClick(side, idx) {
 // ═══════════════════════════════════════════════════════════════
 //  ANSWER SUBMISSION
 // ═══════════════════════════════════════════════════════════════
-function submitAnswer(val) {
+function submitTF(val) {
     clearInterval(S.sprintTimer);
-    const q = S.normalizedQuestions[S.qi];
-    const correct = val.toLowerCase() === (q.answer||'').toLowerCase();
-    showFeedback(correct);
+    const q=S.normalizedQuestions[S.qi];
+    showFeedback(val.toLowerCase()===(q.answer||'').toLowerCase());
 }
 
-function submitTextAnswer() {
+function submitText() {
     clearInterval(S.sprintTimer);
-    const q = S.normalizedQuestions[S.qi];
-    const text = $('ai-text')?.value?.trim() || '';
-    if (!text) return;
-
-    const kw = q.keywords || [];
-    if (kw.length === 0) {
-        showFeedback(text.length > 5);
-        return;
-    }
-    let matched = 0;
-    kw.forEach(k => { if (matchKW(text, k)) matched++; });
-    showFeedback(matched / kw.length >= 0.35);
+    const q=S.normalizedQuestions[S.qi];
+    const text=$('ai-text')?.value?.trim()||'';
+    if(!text) return;
+    const kw=q.keywords||[];
+    if(!kw.length){showFeedback(text.length>5);return;}
+    let matched=0;
+    kw.forEach(k=>{if(matchKW(text,k))matched++;});
+    showFeedback(matched/kw.length>=0.35);
 }
 
-function submitListAnswer(count) {
+function submitList(count) {
     clearInterval(S.sprintTimer);
-    const q = S.normalizedQuestions[S.qi];
-    const kw = q.keywords || [];
-    let matched = 0;
-    const used = new Set();
-    for (let i = 0; i < count; i++) {
-        const val = $(`ai-${i}`)?.value?.trim() || '';
-        if (!val) continue;
-        const m = kw.find((k,ki) => !used.has(ki) && matchKW(val, k));
-        if (m) { matched++; used.add(kw.indexOf(m)); }
+    const q=S.normalizedQuestions[S.qi];
+    const kw=q.keywords||[];
+    let matched=0;
+    const used=new Set();
+    for(let i=0;i<count;i++){
+        const val=$(`ai-${i}`)?.value?.trim()||'';
+        if(!val)continue;
+        const m=kw.find((k,ki)=>!used.has(ki)&&matchKW(val,k));
+        if(m){matched++;used.add(kw.indexOf(m));}
     }
-    showFeedback(matched >= Math.max(1, Math.ceil(count * 0.35)));
+    showFeedback(matched>=Math.max(1,Math.ceil(count*0.35)));
 }
 
 // ═══════════════════════════════════════════════════════════════
 //  FEEDBACK
 // ═══════════════════════════════════════════════════════════════
-function updateMastery(topic, correct) {
-    const mKey = `module_${S.module.id}`;
-    if (!S.mastery[mKey]) S.mastery[mKey] = {};
-    const old = S.mastery[mKey][topic] || 0;
-    S.mastery[mKey][topic] = Math.round(old * 0.7 + (correct ? 100 : 0) * 0.3);
-}
-
 function showFeedback(correct) {
-    const q = S.normalizedQuestions[S.qi];
+    clearInterval(S.sprintTimer);
+    const q=S.normalizedQuestions[S.qi];
+    if(correct){S.combo++;S.score++;}else{S.combo=0;}
+    S.maxCombo=Math.max(S.maxCombo,S.combo);
+    const baseXP=correct?(q.difficulty===3?30:q.difficulty===2?20:15):2;
+    const mult=getComboMult();
+    const earned=Math.round(baseXP*mult);
+    S.xp+=earned;S.sessionXP+=earned;
+    S.answers.push({correct,earned,topic:q.topic});
+    updateMastery(q.topic,correct);save();
 
-    if (correct) { S.combo++; S.score++; } else { S.combo = 0; }
-    S.maxCombo = Math.max(S.maxCombo, S.combo);
-
-    const baseXP = correct ? (q.difficulty === 3 ? 30 : q.difficulty === 2 ? 20 : 15) : 2;
-    const mult = getComboMult();
-    const earned = Math.round(baseXP * mult);
-    S.xp += earned;
-    S.sessionXP += earned;
-    S.answers.push({correct, earned, topic: q.topic});
-    updateMastery(q.topic, correct);
-    save();
-
-    // Float XP
-    const wrap = $('game-wrap');
-    if (wrap && correct) {
-        const fl = document.createElement('div');
-        fl.className = 'float-up text-violet-400 font-extrabold text-sm';
-        fl.textContent = `+${earned} XP`;
-        fl.style.right = '16px'; fl.style.top = '16px';
+    const wrap=$('gw');
+    if(wrap&&correct){
+        const fl=document.createElement('div');
+        fl.className='float-up text-violet-400 font-extrabold text-sm';
+        fl.textContent=`+${earned} XP`;
+        fl.style.right='16px';fl.style.top='16px';
         wrap.appendChild(fl);
     }
 
-    // Disable answer area
-    const aa = $('answer-area');
-    if (aa) aa.style.opacity = '.3'; aa.style.pointerEvents = 'none';
+    const aa=$('aa');if(aa){aa.style.opacity='.3';aa.style.pointerEvents='none';}
+    const fb=$('fb');
 
-    const fb = $('feedback-area');
-    fb.innerHTML = `
-    <div class="glass rounded-2xl p-4 sm:p-5 ${correct ? 'border-green-500/20' : 'border-red-500/20'} enter mt-4">
+    fb.innerHTML=`
+    <div class="glass rounded-2xl p-4 sm:p-5 ${correct?'border-green-500/20':'border-red-500/20'} enter mt-3">
         <div class="flex items-center gap-3 mb-3">
-            <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${correct ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'} pop">
-                <i class="fas ${correct ? 'fa-check' : 'fa-times'}"></i>
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${correct?'bg-green-500/10 text-green-400':'bg-red-500/10 text-red-400'} pop">
+                <i class="fas ${correct?'fa-check':'fa-times'}"></i>
             </div>
             <div>
-                <div class="font-bold text-sm ${correct ? 'text-green-400' : 'text-red-400'}">${correct ? 'Richtig!' : 'Nicht ganz'}</div>
-                <div class="text-[10px] text-slate-500">+${earned} XP${S.combo >= 3 ? ` · 🔥×${mult.toFixed(1)}` : ''}</div>
+                <div class="font-bold text-sm ${correct?'text-green-400':'text-red-400'}">${correct?'Richtig!':'Nicht ganz'}</div>
+                <div class="text-[10px] text-slate-500">+${earned} XP${S.combo>=3?` · 🔥×${mult.toFixed(1)}`:''}</div>
             </div>
         </div>
         <div class="bg-white/5 rounded-lg p-3">
             <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Richtige Antwort</div>
-            <p class="text-sm text-slate-300 leading-relaxed">${escHtml(q.correctFull || q.answer)}</p>
+            <p class="text-sm text-slate-300 leading-relaxed">${esc(q.correctFull||q.answer)}</p>
         </div>
-        ${q.explanation ? `<p class="text-[11px] text-slate-500 mt-2 italic leading-relaxed">${escHtml(q.explanation)}</p>` : ''}
+        ${q.explanation?`<p class="text-[11px] text-slate-500 mt-2 italic leading-relaxed">${esc(q.explanation)}</p>`:''}
     </div>
     <button onclick="S.qi++;${S.mode==='connect'?'renderConnectGame()':'renderGame()'}" class="w-full bg-violet-600 hover:bg-violet-500 text-white py-3 rounded-xl font-bold text-sm mt-3 transition-colors active:scale-95">
-        ${S.qi + 1 >= S.total ? '<i class="fas fa-flag-checkered mr-2"></i>Ergebnis' : '<i class="fas fa-arrow-right mr-2"></i>Weiter'}
+        ${S.qi+1>=S.total?'<i class="fas fa-flag-checkered mr-2"></i>Ergebnis':'<i class="fas fa-arrow-right mr-2"></i>Weiter'}
     </button>`;
 
-    if (!correct && wrap) wrap.classList.add('shake');
+    if(!correct&&wrap) wrap.classList.add('shake');
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -1046,29 +1107,25 @@ function showFeedback(correct) {
 // ═══════════════════════════════════════════════════════════════
 function renderResults() {
     clearInterval(S.sprintTimer);
-    const pct = S.total > 0 ? Math.round((S.score / S.total) * 100) : 0;
-    const modM = getModuleMastery(S.module?.id || 1);
-    const rank = getRank(modM);
-    const mInfo = MODES.find(m=>m.id===S.mode);
+    const pct=S.total>0?Math.round((S.score/S.total)*100):0;
+    const modM=getModuleMastery(S.module?.id||1);
+    const rank=getRank(modM);
 
-    // Topic breakdown
-    const ts = {};
-    S.answers.forEach(a => {
-        if (!ts[a.topic]) ts[a.topic] = {c:0, t:0, xp:0};
-        ts[a.topic].t++;
-        ts[a.topic].xp += a.earned;
-        if (a.correct) ts[a.topic].c++;
+    const ts={};
+    S.answers.forEach(a=>{
+        if(!ts[a.topic])ts[a.topic]={c:0,t:0,xp:0};
+        ts[a.topic].t++;ts[a.topic].xp+=a.earned;
+        if(a.correct)ts[a.topic].c++;
     });
 
-    app.innerHTML = `
+    app.innerHTML=`
     <div class="enter">
         <div class="text-center mb-6 pt-4">
-            <div class="text-5xl mb-3 pop">${pct >= 80 ? '🏆' : pct >= 50 ? '💪' : '📚'}</div>
+            <div class="text-5xl mb-3 pop">${pct>=80?'🏆':pct>=50?'💪':'📚'}</div>
             <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Training abgeschlossen</h1>
-            <p class="text-slate-500 text-sm mt-1">${mInfo?.name||''} · Modul ${S.module?.id}</p>
+            <p class="text-slate-500 text-sm mt-1">Modul ${S.module?.id} · ${S.module?.name}</p>
         </div>
 
-        <!-- Score cards -->
         <div class="grid grid-cols-3 gap-2.5 mb-5">
             <div class="glass rounded-2xl p-4 text-center">
                 <div class="text-xl sm:text-2xl font-extrabold text-white t-num">${pct}%</div>
@@ -1084,38 +1141,35 @@ function renderResults() {
             </div>
         </div>
 
-        <!-- Rank display -->
         <div class="glass rounded-2xl p-5 mb-5 text-center">
             <div class="text-3xl rank-glow mb-1" style="color:${rank.color}">${rank.emoji}</div>
             <div class="text-sm font-bold" style="color:${rank.color}">${rank.label}</div>
             <div class="text-[11px] text-slate-500 mt-1">Modul ${S.module?.id} Mastery: ${modM}%</div>
             <div class="w-full bg-white/5 rounded-full h-2 mt-3 overflow-hidden max-w-[200px] mx-auto">
-                <div class="h-full rounded-full transition-all" style="width:${modM}%;background:${rank.color}"></div>
+                <div class="h-full rounded-full" style="width:${modM}%;background:${rank.color}"></div>
             </div>
         </div>
 
-        <!-- Topic breakdown -->
-        ${Object.keys(ts).length ? `
+        ${Object.keys(ts).length?`
         <div class="glass rounded-2xl p-5 mb-5">
             <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-3">Themen-Detail</h3>
-            ${Object.entries(ts).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).map(([t,s]) => {
-                const tp = Math.round((s.c/s.t)*100);
-                const tc = tp >= 70 ? '#22c55e' : tp >= 40 ? '#eab308' : '#ef4444';
-                const topicMastery = S.mastery[`module_${S.module.id}`]?.[t] || 0;
-                const tr = getRank(topicMastery);
-                return `
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-xs rank-glow" style="color:${tr.color}">${tr.emoji}</span>
+            ${Object.entries(ts).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).map(([t,s])=>{
+                const tp=Math.round((s.c/s.t)*100);
+                const tc=tp>=70?'#22c55e':tp>=40?'#eab308':'#ef4444';
+                const tm=S.mastery[`module_${S.module.id}`]?.[t]||0;
+                const tr=getRank(tm);
+                return`
+                <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs" style="color:${tr.color}">${tr.emoji}</span>
                     <span class="text-[11px] font-bold text-slate-400 flex-1 truncate">${t.replace(/_/g,' ')}</span>
                     <span class="text-[10px] font-bold t-num" style="color:${tc}">${s.c}/${s.t}</span>
-                    <span class="text-[9px] font-bold text-slate-600 t-num w-8 text-right">${topicMastery}%</span>
+                    <span class="text-[9px] font-bold text-slate-600 t-num w-8 text-right">${tm}%</span>
                 </div>`;
             }).join('')}
-        </div>` : ''}
+        </div>`:''}
 
-        <!-- Actions -->
         <div class="grid grid-cols-2 gap-2.5">
-            <button onclick="resetGameState();S.normalizedQuestions=Normalizer.prepareRound(S.rawBank,S.roundSize,S.mode==='connect'?'connect':'recall');S.total=S.normalizedQuestions.length;${S.mode==='connect'?'renderConnectGame()':'renderGame()'}"
+            <button onclick="resetGame();startMode('${S.mode==='weakness'?'recall':S.mode}')"
                 class="glass rounded-xl py-3 font-bold text-sm text-violet-400 hover:bg-violet-500/10 transition-all active:scale-95">
                 <i class="fas fa-redo mr-1.5"></i>Nochmal
             </button>
@@ -1124,7 +1178,6 @@ function renderResults() {
             </button>
         </div>
     </div>`;
-
     save();
 }
 
