@@ -60,6 +60,88 @@
         .text-red-400{color:#dc2626 !important}
         .hover\:text-red-400:hover{color:#dc2626 !important}
         .hover\:text-violet-400:hover{color:#7c3aed !important}
+                /* ═══ BUTTON TEXT FIXES ═══ */
+        /* Violet primary buttons — white text */
+        .bg-violet-600, 
+        [class*="bg-violet-600"],
+        [class*="bg-red-600"],
+        [class*="bg-emerald-600"],
+        [class*="bg-indigo-600"] {
+            color: white !important;
+        }
+
+        /* Glass buttons (secondary) — darker text */
+        button.glass, a.glass {
+            color: #475569 !important;
+        }
+        button.glass:hover, a.glass:hover {
+            color: #1e293b !important;
+        }
+
+        /* Mode selection buttons — fix text */
+        button[class*="glass"][class*="rounded-2xl"] .font-bold.text-sm,
+        button[class*="glass"][class*="rounded-2xl"] .text-white {
+            color: #1e293b !important;
+        }
+        button[class*="glass"][class*="rounded-2xl"] .text-slate-500,
+        button[class*="glass"][class*="rounded-2xl"] .truncate {
+            color: #64748b !important;
+        }
+
+        /* TF buttons (Richtig/Falsch) */
+        button[onclick*="subTF"],
+        button[onclick*="richtig"],
+        button[onclick*="falsch"] {
+            color: #334155 !important;
+        }
+
+        /* Round size selector — unselected readable */
+        .rs {
+            color: #475569 !important;
+        }
+        .rs.bg-violet-600,
+        button.rs[class*="bg-violet-600"] {
+            color: white !important;
+        }
+
+        /* Submit/check buttons — always white text */
+        button[onclick*="subText"],
+        button[onclick*="subList"],
+        button[onclick*="subTF"],
+        button[onclick*="startLearn"],
+        button[onclick*="startMode"],
+        button[onclick*="startWeakness"],
+        button[onclick*="renderGame"],
+        button[onclick*="renderConnectGame"],
+        button[onclick*="showLearnCard"] {
+            color: white !important;
+        }
+        /* But only when they have violet/colored bg */
+        button.bg-violet-600,
+        button[class*="bg-violet-600"],
+        button[class*="bg-red-600"] {
+            color: white !important;
+        }
+
+        /* Chevron icons in mode list */
+        .fa-chevron-right {
+            color: #cbd5e1 !important;
+        }
+
+        /* "Weiter" and "Ergebnis" next buttons */
+        button[onclick*="S.qi++"] {
+            color: white !important;
+        }
+
+        /* Results action buttons */
+        .text-violet-400 {
+            color: #7c3aed !important;
+        }
+
+        /* Nav links */
+        a[href="index.html"] {
+            color: #7c3aed !important;
+        }
     </style>
 </head>
 <body class="text-slate-800 min-h-screen">
