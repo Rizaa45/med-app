@@ -16,6 +16,9 @@ body{background:linear-gradient(135deg,#f0f4ff 0%,#faf5ff 50%,#f0fdf4 100%);marg
 .module-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.1);border-color:rgba(139,92,246,.3)}
 .mode-card{background:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.7);border-radius:18px;padding:20px 24px;cursor:pointer;transition:all .2s ease;width:100%;text-align:left;display:flex;align-items:center;gap:16px}
 .mode-card:hover{transform:translateX(4px);box-shadow:0 6px 20px rgba(0,0,0,.1);border-color:rgba(139,92,246,.3)}
+.diff-card{border-radius:20px;padding:20px;cursor:pointer;transition:all .25s cubic-bezier(.4,0,.2,1);border:2.5px solid transparent;text-align:center;position:relative;overflow:hidden}
+.diff-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.diff-card.selected{transform:translateY(-3px)}
 .prog-track{background:rgba(0,0,0,.06);border-radius:99px;overflow:hidden}
 .prog-fill{height:100%;border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1)}
 .arena-input{width:100%;background:rgba(255,255,255,.9)!important;border:1.5px solid rgba(200,200,230,.7)!important;border-radius:14px;padding:12px 16px;font-size:.875rem;color:#1e293b!important;outline:none;transition:all .2s ease;font-family:inherit}
@@ -43,9 +46,9 @@ textarea.arena-input{resize:none}
 .btn-green:hover{transform:translateY(-1px)}
 .btn-orange{background:linear-gradient(135deg,#f97316,#ea580c);color:white!important;border:none;border-radius:16px;padding:12px 20px;font-weight:800;font-size:.85rem;cursor:pointer;transition:all .2s ease;box-shadow:0 4px 12px rgba(249,115,22,.3)}
 .btn-orange:hover{transform:translateY(-1px)}
-.btn-star{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:white!important;border:none;border-radius:14px;padding:10px 16px;font-weight:800;font-size:.82rem;cursor:pointer;transition:all .2s ease;box-shadow:0 3px 10px rgba(251,191,36,.35)}
-.btn-star:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(251,191,36,.45)}
-.btn-star.starred{background:linear-gradient(135deg,#f59e0b,#d97706)!important;box-shadow:0 3px 10px rgba(245,158,11,.5)}
+.btn-star{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:white!important;border:none;border-radius:14px;padding:8px 14px;font-weight:800;font-size:.82rem;cursor:pointer;transition:all .2s ease;box-shadow:0 3px 10px rgba(251,191,36,.35)}
+.btn-star:hover{transform:translateY(-1px)}
+.btn-star.starred{background:linear-gradient(135deg,#f59e0b,#d97706)!important}
 .rs{border-radius:12px;padding:10px;font-size:.8rem;font-weight:700;flex:1;transition:all .2s ease;border:1.5px solid rgba(200,200,230,.6);background:rgba(255,255,255,.8);color:#475569;cursor:pointer}
 .rs.active{background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:white!important;border-color:transparent;box-shadow:0 3px 10px rgba(139,92,246,.35)}
 .marked-card{background:rgba(255,255,255,.9);border:1.5px solid rgba(251,191,36,.4);border-radius:16px;padding:14px;margin-bottom:10px;transition:all .2s ease}
@@ -65,6 +68,12 @@ textarea.arena-input{resize:none}
 .pulse-yellow{animation:pulse-yellow 2s ease infinite}
 @keyframes star-pop{0%{transform:scale(1)}50%{transform:scale(1.3) rotate(10deg)}100%{transform:scale(1)}}
 .star-pop{animation:star-pop .3s ease}
+@keyframes diff-glow-easy{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.3)}50%{box-shadow:0 0 20px 4px rgba(34,197,94,.15)}}
+@keyframes diff-glow-mid{0%,100%{box-shadow:0 0 0 0 rgba(234,179,8,.3)}50%{box-shadow:0 0 20px 4px rgba(234,179,8,.15)}}
+@keyframes diff-glow-hard{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.3)}50%{box-shadow:0 0 20px 4px rgba(239,68,68,.15)}}
+.glow-easy{animation:diff-glow-easy 2s ease infinite}
+.glow-mid{animation:diff-glow-mid 2s ease infinite}
+.glow-hard{animation:diff-glow-hard 2s ease infinite}
 .hero-header{background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);background-size:200% 200%;animation:gradient-shift 6s ease infinite;border-radius:24px;padding:28px;color:white;box-shadow:0 8px 32px rgba(102,126,234,.35);margin-bottom:24px}
 .stat-card{background:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.7);border-radius:18px;padding:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .xp-pill{display:inline-flex;align-items:center;gap:5px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:99px;padding:3px 10px;font-size:.7rem;font-weight:800;color:#7c3aed}
@@ -106,6 +115,52 @@ const MODES = [
   {id:'connect',name:'Connect',icon:'fa-link',color:'#10b981',desc:'Paare verbinden — Begriffe richtig zuordnen'},
 ];
 
+// Schwierigkeitsstufen für Absorb
+const DIFFICULTIES = [
+  {
+    id:1,
+    name:'Einfach',
+    emoji:'🟢',
+    icon:'fa-seedling',
+    color:'#22c55e',
+    bg:'linear-gradient(135deg,#f0fdf4,#dcfce7)',
+    border:'#86efac',
+    textColor:'#15803d',
+    memoTime:45,
+    desc:'45 Sekunden zum Einprägen',
+    detail:'Mehr Zeit, Schritt für Schritt lernen. Ideal zum Einstieg oder Auffrischen.',
+    diffNums:[1],
+  },
+  {
+    id:2,
+    name:'Mittel',
+    emoji:'🟡',
+    icon:'fa-fire',
+    color:'#eab308',
+    bg:'linear-gradient(135deg,#fefce8,#fef9c3)',
+    border:'#fde047',
+    textColor:'#854d0e',
+    memoTime:30,
+    desc:'30 Sekunden zum Einprägen',
+    detail:'Normales Lerntempo. Mischung aus einfachen und mittleren Fragen.',
+    diffNums:[1,2],
+  },
+  {
+    id:3,
+    name:'Schwierig',
+    emoji:'🔴',
+    icon:'fa-skull',
+    color:'#ef4444',
+    bg:'linear-gradient(135deg,#fef2f2,#fee2e2)',
+    border:'#fca5a5',
+    textColor:'#dc2626',
+    memoTime:20,
+    desc:'20 Sekunden zum Einprägen',
+    detail:'Weniger Zeit, komplexe Fragen. Nur für Fortgeschrittene!',
+    diffNums:[2,3],
+  },
+];
+
 const RANKS = [
   {min:0,label:'Needs Training',emoji:'❌',color:'#ef4444'},
   {min:20,label:'Basics',emoji:'📕',color:'#f97316'},
@@ -115,24 +170,18 @@ const RANKS = [
   {min:95,label:'Master',emoji:'👑',color:'#f59e0b'},
 ];
 
-// ═══════════════════════════════════════════════════
-// FILTER-KEYWORDS — Schlechte Fragen aussortieren
-// ═══════════════════════════════════════════════════
+// Schlechte Fragen-Muster
 const BAD_PATTERNS = [
-  /arbeitsblatt/i, /arbeitsbogen/i, /lernkarte/i, /aufgabe\s*\d/i,
-  /übung\s*\d/i, /station\s*\d/i, /modul\s*\d+\.\d+/i,
-  /siehe\s+abbildung/i, /siehe\s+tabelle/i, /vgl\.\s/i,
-  /lückentext/i, /kreuze\s+an/i, /markiere\s+die/i,
-  /notiere\s+hier/i, /schreibe\s+in\s+das/i,
-  /fülle\s+aus/i, /ergänze\s+die\s+tabelle/i,
+  /arbeitsblatt/i,/arbeitsbogen/i,/lernkarte/i,/aufgabe\s*\d/i,
+  /übung\s*\d/i,/station\s*\d/i,/modul\s*\d+\.\d+/i,
+  /siehe\s+abbildung/i,/siehe\s+tabelle/i,
+  /lückentext/i,/kreuze\s+an/i,/markiere\s+die/i,
+  /notiere\s+hier/i,/schreibe\s+in\s+das/i,
+  /fülle\s+aus/i,/ergänze\s+die\s+tabelle/i,
   /^was\s+ist\s+die\s+antwort/i,
-  /^trage\s+ein/i, /^notiere\s+die/i,
-  /lernziel/i, /kompetenz/i,
-  /seite\s+\d+/i, /kapitel\s+\d+/i,
+  /^trage\s+ein/i,/^notiere\s+die/i,
+  /lernziel/i,/seite\s+\d+/i,/kapitel\s+\d+/i,
 ];
-
-const MIN_ANSWER_LEN = 3;
-const MIN_QUESTION_LEN = 15;
 
 // ═══════════════════════════════════════════════════
 // STATE
@@ -142,7 +191,7 @@ let S = {
   dailyStreak: parseInt(localStorage.getItem('arena_ds')||'0'),
   mastery: JSON.parse(localStorage.getItem('arena_mastery')||'{}'),
   markedQuestions: JSON.parse(localStorage.getItem('arena_marked')||'[]'),
-  module:null, mode:null, rawBank:[], normalizedQuestions:[],
+  module:null, mode:null, difficulty:null, rawBank:[], normalizedQuestions:[],
   summaries:[], learnTopics:[], learnSummaryIdx:0,
   qi:0, score:0, total:0, combo:0, maxCombo:0, sessionXP:0, answers:[],
   roundSize:10,
@@ -156,101 +205,65 @@ const app = $('app');
 // ═══════════════════════════════════════════════════
 // QUALITY FILTER
 // ═══════════════════════════════════════════════════
-function isGoodQuestion(display, answer, correctFull, keywords) {
-  // Zu kurze Frage
-  if(!display || display.length < MIN_QUESTION_LEN) return false;
-
-  // Schlechte Muster in der Frage
-  for(const p of BAD_PATTERNS) {
-    if(p.test(display)) return false;
-  }
-
-  // Antwort muss sinnvoll sein
-  const ans = (correctFull || answer || '');
-  if(ans.length < MIN_ANSWER_LEN) return false;
-  if(/^(ja|nein|richtig|falsch)$/i.test(ans.trim()) === false) {
-    // OK, hat echten Inhalt
-  }
-
-  // Antwort darf nicht nur "Siehe Lernmaterial" o.ä. sein
-  if(/^(siehe\s+lernmaterial|keine\s+angabe|n\/a|nicht\s+verfügbar)$/i.test(ans.trim())) return false;
-
-  // Frage darf nicht mit "was ist die antwort" o.ä. anfangen
+function isGoodQuestion(display, answer, correctFull, keywords){
+  if(!display||display.length<15) return false;
+  for(const p of BAD_PATTERNS){if(p.test(display)) return false}
+  const ans=(correctFull||answer||'').trim();
+  if(ans.length<3) return false;
+  if(/^(siehe\s+lernmaterial|keine\s+angabe|n\/a|nicht\s+verfügbar)$/i.test(ans)) return false;
   if(/^(was ist die antwort|wie lautet die antwort|trage ein|notiere)/i.test(display.trim())) return false;
-
-  // Keywords müssen fachlich sinnvoll sein
-  if(keywords && keywords.length > 0) {
-    const hasRealKeyword = keywords.some(k => k && k.length >= 3 && !/^\d+$/.test(k.trim()));
-    if(!hasRealKeyword) return false;
-  }
-
   return true;
 }
 
 // ═══════════════════════════════════════════════════
-// NORMALIZER (verbessert)
+// NORMALIZER
 // ═══════════════════════════════════════════════════
 const N = {
   clean(t){return(t||'').replace(/\*\*(.*?)\*\*/g,'$1').replace(/_{2,}/g,'___').trim()},
 
   normalize(q){
     if(!q||!q.q_id||q.fallabhaengig) return null;
-    const b={
-      id:q.q_id,
-      topic:q.topic||'allgemein',
-      difficulty:q.difficulty||1,
-      explanation:q.explanation||'',
-      raw:q
-    };
+    const b={id:q.q_id,topic:q.topic||'allgemein',difficulty:q.difficulty||1,explanation:q.explanation||'',raw:q};
     try{
-      let result;
+      let r;
       switch(q.type){
-        case'richtig_falsch':            result=this.nRF(q,b); break;
-        case'nennen_liste':              result=this.nList(q,b); break;
-        case'freitext_box':              result=this.nText(q,b); break;
-        case'tabelle_2spalten':
-        case'tabelle_3spalten':
-        case'tabelle_vergleich':         result=this.nTab(q,b); break;
-        case'zuordnung':                 result=this.nZu(q,b); break;
-        case'ergaenzen_liste':           result=this.nErg(q,b); break;
-        case'definition_plus_beispiele': result=this.nDef(q,b); break;
-        case'ankreuzen_begruenden':      result=this.nAnk(q,b); break;
-        default:                         result=this.nFB(q,b); break;
+        case'richtig_falsch': r=this.nRF(q,b);break;
+        case'nennen_liste': r=this.nList(q,b);break;
+        case'freitext_box': r=this.nText(q,b);break;
+        case'tabelle_2spalten':case'tabelle_3spalten':case'tabelle_vergleich': r=this.nTab(q,b);break;
+        case'zuordnung': r=this.nZu(q,b);break;
+        case'ergaenzen_liste': r=this.nErg(q,b);break;
+        case'definition_plus_beispiele': r=this.nDef(q,b);break;
+        case'ankreuzen_begruenden': r=this.nAnk(q,b);break;
+        default: r=this.nFB(q,b);break;
       }
-      if(!result) return null;
-      // Qualitäts-Check
-      if(!isGoodQuestion(result.display, result.answer, result.correctFull, result.keywords)) return null;
-      return result;
+      if(!r) return null;
+      if(!isGoodQuestion(r.display,r.answer,r.correctFull,r.keywords)) return null;
+      return r;
     }catch(e){return null}
   },
 
   nRF(q,b){
     const st=q.statements||q.data?.statements||[];
     if(st.length){
-      // Wähle einen zufälligen Statement
       const s=st[Math.floor(Math.random()*st.length)];
       if(!s.text||s.text.length<10) return null;
-      return{...b,type:'tf',display:s.text,answer:s.answer||'richtig',
-        keywords:[s.answer||'richtig'],correctFull:`${s.answer}: ${s.text}`};
+      return{...b,type:'tf',display:s.text,answer:s.answer||'richtig',keywords:[s.answer||'richtig'],correctFull:`${s.answer}: ${s.text}`};
     }
     if(!q.statement||q.statement.length<10) return null;
-    return{...b,type:'tf',display:q.statement,answer:q.answer||'richtig',
-      keywords:[q.answer||'richtig'],correctFull:`${q.answer}: ${q.statement}`};
+    return{...b,type:'tf',display:q.statement,answer:q.answer||'richtig',keywords:[q.answer||'richtig'],correctFull:`${q.answer}: ${q.statement}`};
   },
 
   nList(q,b){
     const c=q.correct_answers||q.data?.correct_answers||[];
-    if(c.length===0) return null;
+    if(!c.length) return null;
     const a=q.all_valid_answers||q.data?.all_valid_answers||c;
-    const n=Math.min(q.count||q.data?.count||c.length||3, 6);
+    const n=Math.min(q.count||q.data?.count||c.length||3,6);
     const display=this.clean(q.instruction)||'';
     if(!display||display.length<10) return null;
-    // Filter leere Antworten
     const cleanC=c.filter(x=>x&&x.trim().length>=2);
-    if(cleanC.length===0) return null;
-    return{...b,type:'list',display,answer:cleanC.join(', '),
-      keywords:a.filter(x=>x&&x.trim().length>=2),count:Math.min(n,cleanC.length),
-      correctFull:cleanC.join(' · ')};
+    if(!cleanC.length) return null;
+    return{...b,type:'list',display,answer:cleanC.join(', '),keywords:a.filter(x=>x&&x.trim().length>=2),count:Math.min(n,cleanC.length),correctFull:cleanC.join(' · ')};
   },
 
   nText(q,b){
@@ -277,7 +290,7 @@ const N = {
         });
       });
     }
-    if(kw.length===0) return null;
+    if(!kw.length) return null;
     const cf=pairs.length>0?pairs.map(p=>`${p.left}: ${p.right}`).join(' · '):kw.join(', ');
     const display=this.clean(q.instruction)||'';
     if(!display||display.length<8) return null;
@@ -286,13 +299,11 @@ const N = {
 
   nZu(q,b){
     const d=q.data||{};const lg=d.legend||{};const st=d.statements||[];
-    if(st.length===0||Object.keys(lg).length===0) return null;
-    const pairs=st
-      .filter(s=>s.text&&s.text.trim().length>=5)
-      .map(s=>({
-        left:s.text.length>55?s.text.substring(0,52)+'...':s.text,
-        right:`${s.answer}: ${lg[s.answer]||s.answer}`
-      }));
+    if(!st.length||!Object.keys(lg).length) return null;
+    const pairs=st.filter(s=>s.text&&s.text.trim().length>=5).map(s=>({
+      left:s.text.length>55?s.text.substring(0,52)+'...':s.text,
+      right:`${s.answer}: ${lg[s.answer]||s.answer}`
+    }));
     if(pairs.length<2) return null;
     const display=this.clean(q.instruction)||'';
     if(!display||display.length<8) return null;
@@ -306,11 +317,10 @@ const N = {
     const d=q.data||{};
     const m=(d.missing_items||[]).filter(x=>x&&x.trim().length>=2);
     const a=(d.all_valid_missing||m).filter(x=>x&&x.trim().length>=2);
-    if(m.length===0) return null;
+    if(!m.length) return null;
     const display=this.clean(q.instruction)||'';
     if(!display||display.length<8) return null;
-    return{...b,type:'list',display,answer:m.join(', '),keywords:a,
-      count:Math.min(m.length,5),correctFull:m.join(' · '),givenItems:d.given_items||[]};
+    return{...b,type:'list',display,answer:m.join(', '),keywords:a,count:Math.min(m.length,5),correctFull:m.join(' · '),givenItems:d.given_items||[]};
   },
 
   nDef(q,b){
@@ -318,7 +328,7 @@ const N = {
     const dc=(d.definition_correct||'').trim();
     const dk=(d.definition_keywords||[]).filter(k=>k&&k.length>=3);
     const ex=(d.correct_examples||d.all_valid_examples||[]).filter(e=>e&&e.length>=2);
-    if(dc.length<5&&dk.length===0) return null;
+    if(dc.length<5&&!dk.length) return null;
     const display=this.clean(q.instruction)||'';
     if(!display||display.length<8) return null;
     const cf=dc+(ex.length?' | Beispiele: '+ex.join(', '):'');
@@ -328,11 +338,10 @@ const N = {
   nAnk(q,b){
     const opts=q.data?.options||[];
     const co=opts.filter(o=>o.correct&&o.label&&o.label.trim().length>=3).map(o=>o.label);
-    if(co.length===0) return this.nFB(q,b);
+    if(!co.length) return this.nFB(q,b);
     const p=co[Math.floor(Math.random()*co.length)];
     if(p.length<5) return null;
-    return{...b,type:'tf',display:p,answer:'richtig',
-      keywords:['richtig'],correctFull:'Korrekt: '+co.join(', ')};
+    return{...b,type:'tf',display:p,answer:'richtig',keywords:['richtig'],correctFull:'Korrekt: '+co.join(', ')};
   },
 
   nFB(q,b){
@@ -343,10 +352,13 @@ const N = {
     return{...b,type:'text',display,answer,keywords:[],correctFull:answer};
   },
 
-  prepareAbsorb(raw, count){
+  // Für Absorb: nach Schwierigkeit filtern
+  prepareAbsorb(raw, count, diffNums){
     const out=[];const seen=new Set();
-    const shuffled=shuffle(raw);
-    for(const q of shuffled){
+    // Erst nach Schwierigkeit filtern, dann Fallback auf alle
+    let pool=raw.filter(q=>diffNums.includes(q.difficulty||1));
+    if(pool.length<5) pool=raw; // Fallback wenn zu wenig
+    for(const q of shuffle(pool)){
       if(out.length>=count) break;
       const n=this.normalize(q);
       if(!n) continue;
@@ -360,13 +372,11 @@ const N = {
 
   prepareConnect(raw, count){
     const out=[];const seen=new Set();
-    const shuffled=shuffle(raw);
-    for(const q of shuffled){
+    for(const q of shuffle(raw)){
       if(out.length>=count) break;
       const n=this.normalize(q);
       if(!n) continue;
       if(n.type!=='connect'||!n.pairs||n.pairs.length<3) continue;
-      // Extra-Check: pairs müssen echten Text haben
       const validPairs=n.pairs.filter(p=>p.left&&p.right&&p.left.length>=3&&p.right.length>=3);
       if(validPairs.length<3) continue;
       n.pairs=validPairs;
@@ -378,12 +388,10 @@ const N = {
     return out;
   },
 
-  prepareForTopics(raw, count, topics){
-    const f=raw.filter(q=>topics.some(t=>
-      q.topic&&q.topic.toLowerCase().includes(t.toLowerCase())
-    ));
-    if(f.length>=5) return this.prepareAbsorb(f,count);
-    return this.prepareAbsorb(raw,count);
+  prepareForTopics(raw, count, topics, diffNums){
+    const f=raw.filter(q=>topics.some(t=>q.topic&&q.topic.toLowerCase().includes(t.toLowerCase())));
+    if(f.length>=5) return this.prepareAbsorb(f,count,diffNums||[1,2,3]);
+    return this.prepareAbsorb(raw,count,diffNums||[1,2,3]);
   }
 };
 
@@ -404,17 +412,14 @@ function saveState(){
     localStorage.setItem('arena_ds',S.dailyStreak);
   }
 }
-
 function getRank(p){for(let i=RANKS.length-1;i>=0;i--)if(p>=RANKS[i].min)return RANKS[i];return RANKS[0]}
 function getModM(mid){const t=S.mastery[`module_${mid}`]||{};const v=Object.values(t);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
 function getLevel(){return Math.floor(S.xp/500)+1}
 function getCM(){return S.combo>=10?3:S.combo>=7?2.5:S.combo>=5?2:S.combo>=3?1.5:1}
 function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]]}return r}
-
 function matchKW(t,k){
   if(!t||!k) return false;
-  const u=t.toLowerCase().trim();
-  const w=k.toLowerCase().trim();
+  const u=t.toLowerCase().trim(),w=k.toLowerCase().trim();
   if(u.includes(w)) return true;
   if(w.length>=4&&u.includes(w.substring(0,Math.min(w.length,6)))) return true;
   return false;
@@ -435,29 +440,18 @@ function updateM(topic,correct){
   S.mastery[mk][topic]=Math.round(o*.7+(correct?100:0)*.3);
 }
 
-// ── MARK SYSTEM ──
-function isMarked(qId){
-  return S.markedQuestions.some(m=>m.id===qId);
-}
+function isMarked(qId){return S.markedQuestions.some(m=>m.id===qId)}
 
 function toggleMark(q){
   const idx=S.markedQuestions.findIndex(m=>m.id===q.id);
-  if(idx>=0){
-    S.markedQuestions.splice(idx,1);
-  } else {
-    S.markedQuestions.push({
-      id:q.id,
-      topic:q.topic,
-      display:q.display,
-      correctFull:q.correctFull||q.answer,
-      difficulty:q.difficulty,
-      moduleId:S.module?.id,
-      moduleName:S.module?.name,
-      markedAt:new Date().toISOString()
-    });
-  }
+  if(idx>=0) S.markedQuestions.splice(idx,1);
+  else S.markedQuestions.push({
+    id:q.id,topic:q.topic,display:q.display,
+    correctFull:q.correctFull||q.answer,difficulty:q.difficulty,
+    moduleId:S.module?.id,moduleName:S.module?.name,
+    markedAt:new Date().toISOString()
+  });
   saveState();
-  return !isMarked(q.id); // war vorher marked → jetzt removed
 }
 
 // ═══════════════════════════════════════════════════
@@ -473,10 +467,7 @@ async function loadSummaries(){
     const arr=Array.isArray(data)?data:[data];
     arr.forEach(item=>{
       if(item&&(item.topic||item.content)){
-        S.summaries.push({
-          topic:item.topic||`Thema ${units[idx]}`,
-          content:item.content||'',tags:item.tags||[],unit:units[idx]
-        });
+        S.summaries.push({topic:item.topic||`Thema ${units[idx]}`,content:item.content||'',tags:item.tags||[],unit:units[idx]});
       }
     });
   });
@@ -484,8 +475,8 @@ async function loadSummaries(){
 }
 
 async function tryFetch(path){
-  try{const r=await fetch(path);if(r.ok){const t=await r.text();try{return JSON.parse(t)}catch(e){}}
-  }catch(e){}return null;
+  try{const r=await fetch(path);if(r.ok){const t=await r.text();try{return JSON.parse(t)}catch(e){}}}catch(e){}
+  return null;
 }
 
 async function loadBank(){
@@ -540,7 +531,7 @@ function renderHome(){
         </div>
         ${markedCount>0?`
         <button onclick="renderMarkedList()" class="btn-star" style="padding:6px 12px;border-radius:12px;font-size:.75rem">
-          ⭐ ${markedCount} Markiert
+          ⭐ ${markedCount}
         </button>`:''}
         <div class="glass" style="border-radius:12px;padding:6px 12px;font-size:.75rem;font-weight:800;display:flex;align-items:center;gap:5px">
           <span style="color:#8b5cf6">${S.xp.toLocaleString()}</span><span style="color:#94a3b8">XP</span>
@@ -564,16 +555,13 @@ function renderHome(){
       </div>
     </div>
 
-    <!-- INFO -->
     <div class="glass" style="border-radius:20px;padding:16px;margin-bottom:20px;border-color:rgba(99,102,241,.2)">
-      <div style="font-size:.78rem;font-weight:800;color:#4f46e5;margin-bottom:10px">
-        <i class="fas fa-info-circle" style="margin-right:6px"></i>Wie es funktioniert
-      </div>
+      <div style="font-size:.78rem;font-weight:800;color:#4f46e5;margin-bottom:10px"><i class="fas fa-info-circle" style="margin-right:6px"></i>Wie es funktioniert</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
         <div style="background:#eef2ff;border-radius:14px;padding:12px">
           <div style="font-size:1.3rem;margin-bottom:4px">👁️</div>
           <div style="font-size:.8rem;font-weight:800;color:#4338ca">Absorb</div>
-          <div style="font-size:.72rem;color:#4f46e5;margin-top:4px;line-height:1.5">Inhalt lesen → Frage + Antwort 30s einprägen → selbst antworten</div>
+          <div style="font-size:.72rem;color:#4f46e5;margin-top:4px;line-height:1.5">Inhalt lesen → Schwierigkeit wählen → Frage + Antwort einprägen</div>
         </div>
         <div style="background:#f0fdf4;border-radius:14px;padding:12px">
           <div style="font-size:1.3rem;margin-bottom:4px">🔗</div>
@@ -625,13 +613,11 @@ function renderHome(){
 }
 
 // ═══════════════════════════════════════════════════
-// MARKED QUESTIONS LIST
+// MARKED QUESTIONS
 // ═══════════════════════════════════════════════════
 function renderMarkedList(){
   const marked=S.markedQuestions;
-  if(marked.length===0){renderHome();return}
-
-  // Gruppiere nach Modul
+  if(!marked.length){renderHome();return}
   const byModule={};
   marked.forEach(q=>{
     const key=q.moduleId||'?';
@@ -644,28 +630,21 @@ function renderMarkedList(){
     <button onclick="renderHome()" style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;margin-bottom:20px;padding:0">
       <i class="fas fa-arrow-left"></i>Zurück
     </button>
-
     <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #fde047;border-radius:22px;padding:18px;margin-bottom:20px">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
         <div style="font-size:1.8rem">⭐</div>
-        <div>
+        <div style="flex:1">
           <h2 style="font-size:1rem;font-weight:900;color:#1e293b;margin:0">Markierte Fragen</h2>
           <p style="font-size:.75rem;color:#92400e;margin:2px 0 0;font-weight:700">${marked.length} schwierige Fragen zum Wiederholen</p>
         </div>
-        <button onclick="clearAllMarked()" style="margin-left:auto;font-size:.72rem;font-weight:700;color:#dc2626;background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:6px 12px;cursor:pointer">
+        <button onclick="clearAllMarked()" style="font-size:.72rem;font-weight:700;color:#dc2626;background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;padding:6px 12px;cursor:pointer">
           <i class="fas fa-trash" style="margin-right:4px"></i>Alle löschen
         </button>
       </div>
-      <p style="font-size:.78rem;color:#92400e;margin:0;line-height:1.5">
-        Klicke auf ⭐ um eine Markierung zu entfernen. Diese Fragen waren schwierig für dich — übe sie durch!
-      </p>
     </div>
-
     ${Object.entries(byModule).map(([mid,group])=>`
     <div style="margin-bottom:20px">
-      <div style="font-size:.72rem;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;padding-left:4px">
-        ${esc(group.name)} (${group.questions.length})
-      </div>
+      <div style="font-size:.72rem;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;padding-left:4px">${esc(group.name)} (${group.questions.length})</div>
       ${group.questions.map(q=>`
       <div class="marked-card" id="mc-${q.id}">
         <div style="display:flex;align-items:flex-start;gap:10px">
@@ -676,25 +655,16 @@ function renderMarkedList(){
             </div>
             <p style="font-size:.85rem;font-weight:700;color:#1e293b;margin:0 0 8px;line-height:1.5">${esc(q.display)}</p>
             <div style="background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:10px;padding:10px">
-              <div style="font-size:.65rem;font-weight:800;color:#92400e;text-transform:uppercase;margin-bottom:4px">
-                <i class="fas fa-lightbulb" style="margin-right:4px;color:#fbbf24"></i>Richtige Antwort
-              </div>
+              <div style="font-size:.65rem;font-weight:800;color:#92400e;text-transform:uppercase;margin-bottom:4px"><i class="fas fa-lightbulb" style="margin-right:4px;color:#fbbf24"></i>Richtige Antwort</div>
               <p style="font-size:.82rem;color:#1e293b;font-weight:600;margin:0;line-height:1.6">${esc(q.correctFull)}</p>
             </div>
           </div>
-          <button onclick="removeMarked('${q.id}')" class="btn-star" style="flex-shrink:0;padding:8px 10px;border-radius:10px;font-size:.8rem" title="Markierung entfernen">
-            ⭐
-          </button>
+          <button onclick="removeMarked('${q.id}')" class="btn-star" style="flex-shrink:0;padding:8px 10px;border-radius:10px;font-size:.8rem">⭐</button>
         </div>
-        <div style="font-size:.65rem;color:#94a3b8;margin-top:8px;text-align:right">
-          Markiert: ${new Date(q.markedAt).toLocaleDateString('de-DE')}
-        </div>
+        <div style="font-size:.65rem;color:#94a3b8;margin-top:8px;text-align:right">Markiert: ${new Date(q.markedAt).toLocaleDateString('de-DE')}</div>
       </div>`).join('')}
     </div>`).join('')}
-
-    <button onclick="renderHome()" class="btn-secondary" style="margin-top:8px">
-      <i class="fas fa-home" style="margin-right:8px"></i>Home
-    </button>
+    <button onclick="renderHome()" class="btn-secondary" style="margin-top:8px"><i class="fas fa-home" style="margin-right:8px"></i>Home</button>
   </div>`;
 }
 
@@ -702,9 +672,8 @@ function removeMarked(id){
   const idx=S.markedQuestions.findIndex(m=>m.id===id);
   if(idx>=0){S.markedQuestions.splice(idx,1);saveState()}
   const el=$(`mc-${id}`);
-  if(el){el.style.transition='all .3s ease';el.style.opacity='0';el.style.transform='scale(.95)';setTimeout(()=>{el.remove();if(S.markedQuestions.length===0)renderHome()},300)}
+  if(el){el.style.transition='all .3s ease';el.style.opacity='0';el.style.transform='scale(.95)';setTimeout(()=>{el.remove();if(!S.markedQuestions.length)renderHome()},300)}
 }
-
 function clearAllMarked(){
   if(!confirm('Alle Markierungen löschen?')) return;
   S.markedQuestions=[];saveState();renderHome();
@@ -724,7 +693,6 @@ function selectModule(id){
     <button onclick="renderHome()" style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;margin-bottom:20px;padding:0">
       <i class="fas fa-arrow-left"></i>Zurück
     </button>
-
     <div class="glass" style="border-radius:22px;padding:20px;margin-bottom:20px">
       <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
         <div style="width:52px;height:52px;border-radius:16px;background:${S.module.color}18;color:${S.module.color};display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">
@@ -760,7 +728,7 @@ function selectModule(id){
       <div style="display:flex;align-items:center;gap:10px">
         <span style="font-size:1.2rem">⭐</span>
         <div style="flex:1">
-          <div style="font-size:.82rem;font-weight:800;color:#1e293b">${mc} markierte Fragen in diesem Modul</div>
+          <div style="font-size:.82rem;font-weight:800;color:#1e293b">${mc} markierte Fragen</div>
           <div style="font-size:.72rem;color:#92400e">Zum Anzeigen tippen</div>
         </div>
         <i class="fas fa-chevron-right" style="color:#fbbf24"></i>
@@ -787,9 +755,7 @@ function selectModule(id){
         <i class="fas fa-list-ol" style="margin-right:6px"></i>Fragen pro Runde
       </div>
       <div style="display:flex;gap:8px">
-        ${[5,10,15,20].map(n=>`
-        <button onclick="setRoundSize(${n})" id="rs-${n}" class="rs ${S.roundSize===n?'active':''}">${n}</button>
-        `).join('')}
+        ${[5,10,15,20].map(n=>`<button onclick="setRoundSize(${n})" id="rs-${n}" class="rs ${S.roundSize===n?'active':''}">${n}</button>`).join('')}
       </div>
     </div>
   </div>`;
@@ -804,22 +770,163 @@ function setRoundSize(n){
 // START MODE
 // ═══════════════════════════════════════════════════
 async function startMode(mode){
-  S.mode=mode;resetGame();showLoading('Wird vorbereitet...');
-  try{
-    await loadBank();
-    if(mode==='absorb'){
-      await loadSummaries();
-      S.normalizedQuestions=N.prepareAbsorb(S.rawBank,S.roundSize);
-      S.total=S.normalizedQuestions.length;
-      if(!S.total) throw new Error('Keine geeigneten Fragen gefunden. Bitte anderes Modul versuchen.');
-      if(S.summaries.length>0) renderAbsorbLearnPicker();
-      else renderAbsorbQuestion();
-    } else {
+  S.mode=mode;
+  if(mode==='absorb'){
+    // Schwierigkeit wählen
+    renderDifficultyPicker();
+  } else {
+    resetGame();
+    showLoading('Connect wird vorbereitet...');
+    try{
+      await loadBank();
       S.normalizedQuestions=N.prepareConnect(S.rawBank,S.roundSize);
       S.total=S.normalizedQuestions.length;
       if(!S.total) throw new Error('Keine Connect-Fragen gefunden. Dieses Modul hat zu wenig Zuordnungsfragen.');
       renderConnectGame();
+    }catch(e){showError(e.message)}
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// SCHWIERIGKEITS-AUSWAHL (NUR FÜR ABSORB)
+// ═══════════════════════════════════════════════════
+function renderDifficultyPicker(){
+  // Aktuell ausgewählte Schwierigkeit (default: Mittel)
+  let selectedDiff=S.difficulty?.id||2;
+
+  app.innerHTML=`
+  <div class="enter">
+    <button onclick="selectModule(${S.module.id})" style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;margin-bottom:20px;padding:0">
+      <i class="fas fa-arrow-left"></i>Zurück
+    </button>
+
+    <!-- HEADER -->
+    <div style="background:linear-gradient(135deg,#eef2ff,#e0e7ff);border:1.5px solid #c7d2fe;border-radius:22px;padding:20px;margin-bottom:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+        <div style="width:46px;height:46px;background:#4f46e5;color:white;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">
+          <i class="fas fa-sliders"></i>
+        </div>
+        <div>
+          <h2 style="font-size:1rem;font-weight:900;color:#1e293b;margin:0">Schwierigkeitsstufe wählen</h2>
+          <p style="font-size:.75rem;color:#6366f1;margin:2px 0 0;font-weight:700">Absorb · ${S.module.name}</p>
+        </div>
+      </div>
+      <p style="font-size:.8rem;color:#3730a3;margin:0;line-height:1.6;font-weight:600">
+        Die Schwierigkeit bestimmt <strong>welche Fragen</strong> kommen und <strong>wie viel Zeit</strong> du zum Einprägen der Antwort hast.
+      </p>
+    </div>
+
+    <div style="font-size:.7rem;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;padding-left:4px">
+      Wähle dein Level
+    </div>
+
+    <!-- DIFFICULTY CARDS -->
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px" id="diff-container">
+      ${DIFFICULTIES.map(d=>`
+      <div class="diff-card ${selectedDiff===d.id?`selected glow-${d.id===1?'easy':d.id===2?'mid':'hard'}`:''}"
+        id="diff-card-${d.id}"
+        onclick="selectDifficulty(${d.id})"
+        style="background:${d.bg};border-color:${selectedDiff===d.id?d.border:'rgba(220,220,240,.5)'};padding:18px 20px;text-align:left">
+
+        <!-- SELECTED INDICATOR -->
+        <div style="position:absolute;top:12px;right:14px;width:22px;height:22px;border-radius:50%;background:${selectedDiff===d.id?d.color:'rgba(200,200,220,.3)'};display:flex;align-items:center;justify-content:center;transition:all .2s ease">
+          ${selectedDiff===d.id?`<i class="fas fa-check" style="color:white;font-size:.65rem"></i>`:''}
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px">
+          <!-- EMOJI + ICON -->
+          <div style="width:52px;height:52px;border-radius:16px;background:${d.color}20;color:${d.color};display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem">
+            ${d.emoji}
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <span style="font-size:1rem;font-weight:900;color:#1e293b">${d.name}</span>
+              <span style="font-size:.7rem;font-weight:800;color:${d.textColor};background:${d.color}15;padding:2px 10px;border-radius:99px;border:1px solid ${d.color}30">${d.desc}</span>
+            </div>
+            <p style="font-size:.78rem;color:#64748b;margin:0;line-height:1.5">${d.detail}</p>
+            <!-- FRAGEN-INFO -->
+            <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+              <div style="display:flex;align-items:center;gap:5px">
+                <i class="fas fa-clock" style="color:${d.color};font-size:.7rem"></i>
+                <span style="font-size:.72rem;font-weight:800;color:${d.textColor}">${d.memoTime}s Einprägezeit</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px">
+                <i class="fas fa-bolt" style="color:${d.color};font-size:.7rem"></i>
+                <span style="font-size:.72rem;font-weight:800;color:${d.textColor}">${d.diffNums.map(n=>n===1?'Leicht':n===2?'Mittel':'Schwer').join(' + ')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`).join('')}
+    </div>
+
+    <!-- START BUTTON -->
+    <button onclick="confirmDifficultyAndStart()" id="start-diff-btn" class="btn-primary" style="background:${DIFFICULTIES.find(d=>d.id===selectedDiff)?.color||'#8b5cf6'};background:linear-gradient(135deg,${DIFFICULTIES.find(d=>d.id===selectedDiff)?.color||'#8b5cf6'},${DIFFICULTIES.find(d=>d.id===selectedDiff)?.color||'#7c3aed'})">
+      <i class="fas fa-play" style="margin-right:10px"></i>
+      Absorb starten — ${DIFFICULTIES.find(d=>d.id===selectedDiff)?.name||'Mittel'}
+      <span style="opacity:.8;font-size:.82rem;margin-left:8px">(${DIFFICULTIES.find(d=>d.id===selectedDiff)?.memoTime||30}s)</span>
+    </button>
+  </div>`;
+
+  // Speichere aktuelle Auswahl im State
+  S.difficulty=DIFFICULTIES.find(d=>d.id===selectedDiff);
+}
+
+function selectDifficulty(diffId){
+  S.difficulty=DIFFICULTIES.find(d=>d.id===diffId);
+
+  // Alle Karten resetten
+  DIFFICULTIES.forEach(d=>{
+    const card=$(`diff-card-${d.id}`);
+    if(!card) return;
+    card.style.borderColor='rgba(220,220,240,.5)';
+    card.style.transform='';
+    card.style.boxShadow='';
+    card.classList.remove('selected',`glow-${d.id===1?'easy':d.id===2?'mid':'hard'}`);
+
+    // Indikator resetten
+    const indicator=card.querySelector('div[style*="position:absolute"]');
+    if(indicator){
+      indicator.style.background='rgba(200,200,220,.3)';
+      indicator.innerHTML='';
     }
+  });
+
+  // Gewählte Karte highlighten
+  const sel=$(`diff-card-${diffId}`);
+  const diff=S.difficulty;
+  if(sel&&diff){
+    sel.style.borderColor=diff.border;
+    sel.style.transform='translateY(-3px)';
+    sel.classList.add('selected',`glow-${diffId===1?'easy':diffId===2?'mid':'hard'}`);
+
+    const indicator=sel.querySelector('div[style*="position:absolute"]');
+    if(indicator){
+      indicator.style.background=diff.color;
+      indicator.innerHTML=`<i class="fas fa-check" style="color:white;font-size:.65rem"></i>`;
+    }
+  }
+
+  // Start-Button aktualisieren
+  const btn=$('start-diff-btn');
+  if(btn&&diff){
+    btn.style.background=`linear-gradient(135deg,${diff.color},${diff.color}dd)`;
+    btn.innerHTML=`<i class="fas fa-play" style="margin-right:10px"></i>Absorb starten — ${diff.name} <span style="opacity:.8;font-size:.82rem;margin-left:8px">(${diff.memoTime}s)</span>`;
+  }
+}
+
+async function confirmDifficultyAndStart(){
+  if(!S.difficulty) S.difficulty=DIFFICULTIES[1]; // Default: Mittel
+  resetGame();
+  showLoading('Absorb wird vorbereitet...');
+  try{
+    await loadBank();
+    await loadSummaries();
+    S.normalizedQuestions=N.prepareAbsorb(S.rawBank,S.roundSize,S.difficulty.diffNums);
+    S.total=S.normalizedQuestions.length;
+    if(!S.total) throw new Error('Keine geeigneten Fragen gefunden. Bitte anderes Modul versuchen.');
+    if(S.summaries.length>0) renderAbsorbLearnPicker();
+    else renderAbsorbQuestion();
   }catch(e){showError(e.message)}
 }
 
@@ -827,9 +934,11 @@ async function startMode(mode){
 // ABSORB — LERNPHASE
 // ═══════════════════════════════════════════════════
 function renderAbsorbLearnPicker(){
+  const diff=S.difficulty||DIFFICULTIES[1];
+
   app.innerHTML=`
   <div class="enter">
-    <button onclick="selectModule(${S.module.id})" style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;margin-bottom:20px;padding:0">
+    <button onclick="renderDifficultyPicker()" style="display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;margin-bottom:20px;padding:0">
       <i class="fas fa-arrow-left"></i>Zurück
     </button>
 
@@ -838,24 +947,25 @@ function renderAbsorbLearnPicker(){
         <div style="width:44px;height:44px;background:#4f46e5;color:white;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">
           <i class="fas fa-eye"></i>
         </div>
-        <div>
+        <div style="flex:1">
           <h2 style="font-size:1rem;font-weight:900;color:#1e293b;margin:0">Absorb — Schritt 1: Lesen</h2>
-          <p style="font-size:.75rem;color:#6366f1;margin:2px 0 0;font-weight:700">${S.module.name}</p>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:3px">
+            <span style="font-size:.75rem;color:#6366f1;font-weight:700">${S.module.name}</span>
+            <span style="font-size:.72rem;font-weight:800;color:${diff.textColor};background:${diff.color}15;padding:2px 10px;border-radius:99px;border:1px solid ${diff.color}30">${diff.emoji} ${diff.name} · ${diff.memoTime}s</span>
+          </div>
         </div>
       </div>
       <div style="background:rgba(255,255,255,.7);border-radius:12px;padding:10px 14px">
         <p style="font-size:.8rem;color:#3730a3;margin:0;line-height:1.65;font-weight:600">
           📖 <strong>Schritt 1:</strong> Lies den Inhalt aufmerksam<br>
-          💡 <strong>Schritt 2:</strong> Frage + Antwort werden 30s angezeigt<br>
-          ⭐ <strong>Schritt 3:</strong> Markiere schwierige Fragen zum Wiederholen<br>
+          💡 <strong>Schritt 2:</strong> Frage + Antwort werden <strong>${diff.memoTime}s</strong> angezeigt<br>
+          ⭐ <strong>Schritt 3:</strong> Schwierige Fragen markieren<br>
           ✍️ <strong>Schritt 4:</strong> Antworte aus dem Gedächtnis
         </p>
       </div>
     </div>
 
-    <div style="font-size:.7rem;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;padding-left:4px">
-      ${S.summaries.length} Themen
-    </div>
+    <div style="font-size:.7rem;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;padding-left:4px">${S.summaries.length} Themen</div>
 
     <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
       ${S.summaries.map((s,i)=>{
@@ -898,7 +1008,7 @@ function showAbsorbReadCard(){
   const max=S.summaries.length;
   if(S.learnSummaryIdx>=max){
     if(S.learnTopics.length>0){
-      const filtered=N.prepareForTopics(S.rawBank,S.roundSize,S.learnTopics);
+      const filtered=N.prepareForTopics(S.rawBank,S.roundSize,S.learnTopics,S.difficulty?.diffNums);
       if(filtered.length>0){S.normalizedQuestions=filtered;S.total=filtered.length}
     }
     renderAbsorbQuestion();return;
@@ -923,7 +1033,7 @@ function showAbsorbReadCard(){
     </div>
     <div style="background:linear-gradient(135deg,#fef3c7,#fde68a);border:1.5px solid #fbbf24;border-radius:12px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px">
       <span style="font-size:1.1rem">💡</span>
-      <p style="font-size:.78rem;color:#92400e;font-weight:700;margin:0">Lies aufmerksam! Danach siehst du Fragen aus diesem Inhalt mit der richtigen Antwort.</p>
+      <p style="font-size:.78rem;color:#92400e;font-weight:700;margin:0">Lies aufmerksam! Danach siehst du Fragen mit der Antwort (${S.difficulty?.memoTime||30}s zum Einprägen).</p>
     </div>
     <div class="glass" style="border-radius:22px;overflow:hidden;margin-bottom:16px;border-color:rgba(99,102,241,.2)">
       <div style="background:linear-gradient(135deg,#eef2ff,#e0e7ff);padding:12px 20px;display:flex;align-items:center;gap:8px">
@@ -951,8 +1061,9 @@ function renderAbsorbQuestion(){
   const q=S.normalizedQuestions[S.qi];
   if(!q) return renderResults();
 
+  const diff=S.difficulty||DIFFICULTIES[1];
   clearInterval(S.absorbMemoTimer);
-  S.absorbMemoLeft=30;
+  S.absorbMemoLeft=diff.memoTime;
   const prog=Math.round((S.qi/S.total)*100);
   const marked=isMarked(q.id);
 
@@ -967,6 +1078,7 @@ function renderAbsorbQuestion(){
       </button>
       <div style="display:flex;align-items:center;gap:8px">
         <span style="font-size:.78rem;font-weight:700;color:#64748b">${S.qi+1} / ${S.total}</span>
+        <span style="font-size:.7rem;font-weight:800;color:${diff.textColor};background:${diff.color}15;padding:3px 10px;border-radius:99px;border:1px solid ${diff.color}30">${diff.emoji} ${diff.name}</span>
         <span class="phase-badge phase-memorize" id="phase-badge"><i class="fas fa-eye"></i>Einprägen</span>
         <div class="xp-pill">+${S.sessionXP} XP</div>
       </div>
@@ -977,7 +1089,7 @@ function renderAbsorbQuestion(){
       <div class="prog-fill" style="width:${prog}%;background:linear-gradient(90deg,#6366f1,#818cf8)"></div>
     </div>
 
-    <!-- TOPIC + MARK BUTTON -->
+    <!-- TOPIC + MARK -->
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
       <span class="badge" style="background:${S.module.color}14;color:${S.module.color}">${q.topic.replace(/_/g,' ')}</span>
       <span style="font-size:.75rem;color:#94a3b8;font-weight:700">${q.difficulty===3?'⚡⚡⚡':q.difficulty===2?'⚡⚡':'⚡'}</span>
@@ -999,31 +1111,31 @@ function renderAbsorbQuestion(){
       </div>`:''}
     </div>
 
-    <!-- ANTWORT-BOX (30s) -->
-    <div class="absorb-answer-box pulse-yellow" id="answer-box">
+    <!-- ANTWORT-BOX -->
+    <div class="absorb-answer-box pulse-yellow" id="answer-box" style="border-color:${diff.border};background:${diff.bg}">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
         <div style="display:flex;align-items:center;gap:8px">
-          <i class="fas fa-lightbulb" style="color:#ca8a04;font-size:1rem"></i>
-          <span style="font-size:.72rem;font-weight:800;color:#854d0e;text-transform:uppercase;letter-spacing:.06em">Richtige Antwort — Merke dir das!</span>
+          <i class="fas fa-lightbulb" style="color:${diff.color};font-size:1rem"></i>
+          <span style="font-size:.72rem;font-weight:800;color:${diff.textColor};text-transform:uppercase;letter-spacing:.06em">Richtige Antwort — Merke dir das!</span>
         </div>
-        <div style="display:flex;align-items:center;gap:5px;background:rgba(202,138,4,.15);border-radius:99px;padding:4px 10px">
-          <i class="fas fa-clock" style="color:#ca8a04;font-size:.65rem"></i>
-          <span id="memo-time" style="font-size:.78rem;font-weight:900;color:#ca8a04">30</span>
-          <span style="font-size:.68rem;color:#a16207;font-weight:700">s</span>
+        <div style="display:flex;align-items:center;gap:5px;background:${diff.color}20;border-radius:99px;padding:4px 10px">
+          <i class="fas fa-clock" style="color:${diff.color};font-size:.65rem"></i>
+          <span id="memo-time" style="font-size:.78rem;font-weight:900;color:${diff.textColor}">${diff.memoTime}</span>
+          <span style="font-size:.68rem;color:${diff.textColor};font-weight:700">s</span>
         </div>
       </div>
 
-      <!-- DIE ANTWORT -->
-      <div style="background:rgba(255,255,255,.6);border-radius:12px;padding:14px;margin-bottom:12px">
+      <!-- ANTWORT TEXT -->
+      <div style="background:rgba(255,255,255,.65);border-radius:12px;padding:14px;margin-bottom:12px">
         <p style="font-size:.95rem;color:#1e293b;font-weight:700;line-height:1.7;margin:0">${esc(q.correctFull||q.answer)}</p>
       </div>
 
       <!-- TIMER BAR -->
       <div class="prog-track" style="height:6px;margin-bottom:12px">
-        <div id="memo-bar" class="prog-fill" style="width:100%;background:linear-gradient(90deg,#fbbf24,#f59e0b)"></div>
+        <div id="memo-bar" class="prog-fill" style="width:100%;background:linear-gradient(90deg,${diff.color},${diff.color}aa)"></div>
       </div>
 
-      <!-- AKTIONS-BUTTONS -->
+      <!-- BUTTONS -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
         <button onclick="addExtraTime()" id="btn-extra" class="btn-orange">
           <i class="fas fa-plus" style="margin-right:6px"></i>+10 Sekunden
@@ -1039,83 +1151,54 @@ function renderAbsorbQuestion(){
     <div id="fb"></div>
   </div>`;
 
-  startMemoTimer(q);
+  startMemoTimer(q,diff);
 }
 
 function handleMarkBtn(){
-  const q=S.normalizedQuestions[S.qi];
-  if(!q) return;
+  const q=S.normalizedQuestions[S.qi];if(!q) return;
   const wasMarked=isMarked(q.id);
   toggleMark(q);
   const btn=$('mark-btn');
-  if(btn){
-    btn.className=`btn-star ${!wasMarked?'starred':''} star-pop`;
-    btn.textContent=!wasMarked?'⭐ Markiert':'☆ Markieren';
-    setTimeout(()=>{btn.classList.remove('star-pop')},300);
-  }
+  if(btn){btn.className=`btn-star ${!wasMarked?'starred':''} star-pop`;btn.textContent=!wasMarked?'⭐ Markiert':'☆ Markieren';setTimeout(()=>btn.classList.remove('star-pop'),300)}
 }
 
-function startMemoTimer(q){
-  const getTotal=()=>S.absorbMemoLeft; // dynamisch
-  let startLeft=S.absorbMemoLeft;
-
+function startMemoTimer(q,diff){
+  S.absorbMemoLeft=diff.memoTime;
   S.absorbMemoTimer=setInterval(()=>{
     S.absorbMemoLeft--;
-    const bar=$('memo-bar');
-    const time=$('memo-time');
+    const bar=$('memo-bar');const time=$('memo-time');
     if(time) time.textContent=S.absorbMemoLeft;
     if(bar){
-      // Bar basiert auf aktuellem Stand (kann durch +10s variieren)
-      const pct=Math.max(0,Math.min(100,(S.absorbMemoLeft/40)*100));
+      const pct=Math.max(0,Math.min(100,(S.absorbMemoLeft/diff.memoTime)*100));
       bar.style.width=pct+'%';
     }
-    if(S.absorbMemoLeft<=10&&bar) bar.style.background='linear-gradient(90deg,#ef4444,#f97316)';
-    if(S.absorbMemoLeft<=5&&time) time.style.color='#dc2626';
-    if(S.absorbMemoLeft<=0){
-      clearInterval(S.absorbMemoTimer);
-      goToRecallPhase(q);
-    }
+    if(S.absorbMemoLeft<=8&&bar) bar.style.background='linear-gradient(90deg,#ef4444,#f97316)';
+    if(S.absorbMemoLeft<=5&&time){time.style.color='#dc2626';time.style.fontWeight='900'}
+    if(S.absorbMemoLeft<=0){clearInterval(S.absorbMemoTimer);goToRecallPhase(q)}
   },1000);
 }
 
 function addExtraTime(){
-  // UNBEGRENZT — kann immer wieder gedrückt werden
+  // UNBEGRENZT — immer +10s
   S.absorbMemoLeft+=10;
-  const time=$('memo-time');
-  const bar=$('memo-bar');
-  const btn=$('btn-extra');
-  if(time){
-    time.textContent=S.absorbMemoLeft;
-    time.style.color='#16a34a'; // grün aufblitzen
-    setTimeout(()=>{time.style.color='#ca8a04'},600);
-  }
-  if(bar) bar.style.background='linear-gradient(90deg,#fbbf24,#f59e0b)'; // Reset Farbe
-  // Button-Feedback
-  if(btn){
-    btn.innerHTML='<i class="fas fa-check" style="margin-right:6px"></i>+10s!';
-    setTimeout(()=>{btn.innerHTML='<i class="fas fa-plus" style="margin-right:6px"></i>+10 Sekunden'},800);
-  }
+  const time=$('memo-time');const bar=$('memo-bar');const btn=$('btn-extra');
+  if(time){time.textContent=S.absorbMemoLeft;time.style.color='#16a34a';setTimeout(()=>{time.style.color=S.difficulty?.textColor||'#854d0e'},700)}
+  if(bar){bar.style.background=`linear-gradient(90deg,${S.difficulty?.color||'#fbbf24'},${S.difficulty?.color||'#f59e0b'}aa)`}
+  if(btn){btn.innerHTML='<i class="fas fa-check" style="margin-right:6px"></i>+10s!';setTimeout(()=>{btn.innerHTML='<i class="fas fa-plus" style="margin-right:6px"></i>+10 Sekunden'},800)}
 }
 
 function skipMemoPhase(){
   clearInterval(S.absorbMemoTimer);
-  const q=S.normalizedQuestions[S.qi];
-  goToRecallPhase(q);
+  goToRecallPhase(S.normalizedQuestions[S.qi]);
 }
 
 function goToRecallPhase(q){
   const ab=$('answer-box');
-  if(ab){
-    ab.style.transition='all .4s ease';
-    ab.style.opacity='0';ab.style.transform='scale(.95)';
-    setTimeout(()=>{ab.style.display='none'},400);
-  }
+  if(ab){ab.style.transition='all .4s ease';ab.style.opacity='0';ab.style.transform='scale(.95)';setTimeout(()=>{ab.style.display='none'},400)}
   const pb=$('phase-badge');
   if(pb){pb.className='phase-badge phase-recall';pb.innerHTML='<i class="fas fa-brain"></i>Antworten'}
-
   setTimeout(()=>{
-    const ra=$('recall-area');
-    if(!ra) return;
+    const ra=$('recall-area');if(!ra) return;
     ra.style.display='block';
     ra.innerHTML=`
     <div style="background:#f5f3ff;border:1.5px solid #c4b5fd;border-radius:14px;padding:12px 16px;margin-bottom:12px" class="reveal-in">
@@ -1142,43 +1225,32 @@ function buildRecallUI(q){
     </div>`;
   }
   if(q.type==='list'){
-    const c=Math.min(q.count||3,5);
-    let h='';
+    const c=Math.min(q.count||3,5);let h='';
     for(let i=0;i<c;i++){
       h+=`<input id="ai-${i}" type="text" class="arena-input" style="margin-bottom:8px" placeholder="${i+1}."
         onkeydown="if(event.key==='Enter'){const n=$('ai-${i+1}');if(n)n.focus();else absorbSubmitList(${c})}">`;
     }
-    return h+`<button onclick="absorbSubmitList(${c})" class="btn-primary" style="margin-top:4px">
-      <i class="fas fa-check" style="margin-right:8px"></i>Prüfen
-    </button>`;
+    return h+`<button onclick="absorbSubmitList(${c})" class="btn-primary" style="margin-top:4px"><i class="fas fa-check" style="margin-right:8px"></i>Prüfen</button>`;
   }
   return`
   <textarea id="ai-text" class="arena-input" rows="3" placeholder="Schreibe die Antwort aus dem Gedächtnis..."></textarea>
-  <button onclick="absorbSubmitText()" class="btn-primary" style="margin-top:8px">
-    <i class="fas fa-check" style="margin-right:8px"></i>Prüfen
-  </button>`;
+  <button onclick="absorbSubmitText()" class="btn-primary" style="margin-top:8px"><i class="fas fa-check" style="margin-right:8px"></i>Prüfen</button>`;
 }
 
-function absorbSubmitTF(v){
-  const q=S.normalizedQuestions[S.qi];
-  absorbFeedback(v.toLowerCase()===(q.answer||'').toLowerCase(),q);
-}
+function absorbSubmitTF(v){const q=S.normalizedQuestions[S.qi];absorbFeedback(v.toLowerCase()===(q.answer||'').toLowerCase(),q)}
 function absorbSubmitText(){
   const q=S.normalizedQuestions[S.qi];
-  const t=$('ai-text')?.value?.trim()||'';
-  if(!t) return;
+  const t=$('ai-text')?.value?.trim()||'';if(!t) return;
   const kw=q.keywords||[];
   if(!kw.length){absorbFeedback(t.length>5,q);return}
   let m=0;kw.forEach(k=>{if(matchKW(t,k))m++});
   absorbFeedback(m/kw.length>=.35,q);
 }
 function absorbSubmitList(c){
-  const q=S.normalizedQuestions[S.qi];
-  const kw=q.keywords||[];
+  const q=S.normalizedQuestions[S.qi];const kw=q.keywords||[];
   let m=0;const u=new Set();
   for(let i=0;i<c;i++){
-    const v=$(`ai-${i}`)?.value?.trim()||'';
-    if(!v) continue;
+    const v=$(`ai-${i}`)?.value?.trim()||'';if(!v) continue;
     const f=kw.find((k,ki)=>!u.has(ki)&&matchKW(v,k));
     if(f){m++;u.add(kw.indexOf(f))}
   }
@@ -1190,24 +1262,18 @@ function absorbFeedback(correct,q){
   if(correct){S.combo++;S.score++}else S.combo=0;
   S.maxCombo=Math.max(S.maxCombo,S.combo);
   const bXP=correct?(q.difficulty===3?30:q.difficulty===2?20:15):2;
-  const mult=getCM();
-  const earned=Math.round(bXP*mult);
+  const mult=getCM();const earned=Math.round(bXP*mult);
   S.xp+=earned;S.sessionXP+=earned;
   S.answers.push({correct,earned,topic:q.topic});
   updateM(q.topic,correct);saveState();
 
   const w=$('gw');
   if(w&&correct){
-    const f=document.createElement('div');
-    f.className='float-up';
+    const f=document.createElement('div');f.className='float-up';
     f.style.cssText='color:#6366f1;font-size:.9rem;right:20px;top:20px';
-    f.textContent=`+${earned} XP`;
-    w.appendChild(f);
+    f.textContent=`+${earned} XP`;w.appendChild(f);
   }
-
-  const ra=$('recall-area');
-  if(ra){ra.style.opacity='.3';ra.style.pointerEvents='none'}
-
+  const ra=$('recall-area');if(ra){ra.style.opacity='.3';ra.style.pointerEvents='none'}
   const marked=isMarked(q.id);
 
   $('fb').innerHTML=`
@@ -1220,15 +1286,11 @@ function absorbFeedback(correct,q){
         <div style="font-weight:800;font-size:.92rem;color:${correct?'#15803d':'#dc2626'}">${correct?'Gut gemerkt! ✓':'Nochmal üben ✗'}</div>
         <div style="font-size:.75rem;color:#64748b">+${earned} XP${S.combo>=3?` · 🔥×${mult.toFixed(1)}`:''}</div>
       </div>
-      <button onclick="handleMarkBtnFeedback()" id="mark-btn-fb" class="btn-star ${marked?'starred':''}" style="padding:6px 10px;border-radius:10px;font-size:.78rem;flex-shrink:0">
-        ${marked?'⭐':'☆'}
-      </button>
+      <button onclick="handleMarkBtnFeedback()" id="mark-btn-fb" class="btn-star ${marked?'starred':''}" style="padding:6px 10px;border-radius:10px;font-size:.78rem;flex-shrink:0">${marked?'⭐':'☆'}</button>
     </div>
     ${!correct?`
     <div style="background:rgba(255,255,255,.8);border-radius:12px;padding:12px">
-      <div style="font-size:.65rem;font-weight:800;color:#94a3b8;text-transform:uppercase;margin-bottom:4px">
-        <i class="fas fa-lightbulb" style="color:#f59e0b;margin-right:4px"></i>Richtige Antwort
-      </div>
+      <div style="font-size:.65rem;font-weight:800;color:#94a3b8;text-transform:uppercase;margin-bottom:4px"><i class="fas fa-lightbulb" style="color:#f59e0b;margin-right:4px"></i>Richtige Antwort</div>
       <p style="font-size:.85rem;color:#1e293b;line-height:1.7;font-weight:600;margin:0">${esc(q.correctFull||q.answer)}</p>
     </div>`:''}
   </div>
@@ -1240,22 +1302,12 @@ function absorbFeedback(correct,q){
 }
 
 function handleMarkBtnFeedback(){
-  const q=S.normalizedQuestions[S.qi];
-  if(!q) return;
-  const wasMarked=isMarked(q.id);
-  toggleMark(q);
+  const q=S.normalizedQuestions[S.qi];if(!q) return;
+  const wasMarked=isMarked(q.id);toggleMark(q);
   const btn=$('mark-btn-fb');
-  if(btn){
-    btn.className=`btn-star ${!wasMarked?'starred':''} star-pop`;
-    btn.textContent=!wasMarked?'⭐':'☆';
-    setTimeout(()=>{btn.classList.remove('star-pop')},300);
-  }
-  // Auch den Haupt-Mark-Button aktualisieren falls sichtbar
+  if(btn){btn.className=`btn-star ${!wasMarked?'starred':''} star-pop`;btn.textContent=!wasMarked?'⭐':'☆';setTimeout(()=>btn.classList.remove('star-pop'),300)}
   const mb=$('mark-btn');
-  if(mb){
-    mb.className=`btn-star ${!wasMarked?'starred':''}`;
-    mb.textContent=!wasMarked?'⭐ Markiert':'☆ Markieren';
-  }
+  if(mb){mb.className=`btn-star ${!wasMarked?'starred':''}`;mb.textContent=!wasMarked?'⭐ Markiert':'☆ Markieren'}
 }
 
 // ═══════════════════════════════════════════════════
@@ -1264,16 +1316,12 @@ function handleMarkBtnFeedback(){
 function renderConnectGame(){
   if(S.qi>=S.total) return renderResults();
 
-  // Überspringe ungültige Fragen
   let safetyCounter=0;
   while(S.qi<S.total){
     const q=S.normalizedQuestions[S.qi];
     if(q&&q.type==='connect'&&q.pairs&&q.pairs.length>=3){
-      const validP=q.pairs.filter(p=>p.left&&p.right&&p.left.trim().length>=2&&p.right.trim().length>=2);
-      if(validP.length>=3){
-        S.normalizedQuestions[S.qi]={...q,pairs:validP};
-        break;
-      }
+      const vp=q.pairs.filter(p=>p.left&&p.right&&p.left.trim().length>=2&&p.right.trim().length>=2);
+      if(vp.length>=3){S.normalizedQuestions[S.qi]={...q,pairs:vp};break}
     }
     S.qi++;safetyCounter++;
     if(safetyCounter>50) break;
@@ -1282,10 +1330,7 @@ function renderConnectGame(){
 
   const q=S.normalizedQuestions[S.qi];
   const pairs=q.pairs.slice(0,5);
-  S.connectPairs=pairs;
-  S.connectSelected=null;
-  S.connectMatched=new Set();
-
+  S.connectPairs=pairs;S.connectSelected=null;S.connectMatched=new Set();
   const leftItems=shuffle(pairs.map((p,i)=>({text:p.left,idx:i})));
   const rightItems=shuffle(pairs.map((p,i)=>({text:p.right,idx:i})));
   const prog=Math.round((S.qi/S.total)*100);
@@ -1304,136 +1349,82 @@ function renderConnectGame(){
         <div class="xp-pill">+${S.sessionXP} XP</div>
       </div>
     </div>
-
     <div class="prog-track" style="height:6px;margin-bottom:14px">
       <div class="prog-fill" style="width:${prog}%;background:linear-gradient(90deg,#10b981,#34d399)"></div>
     </div>
-
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
       <span class="badge" style="background:${S.module.color}14;color:${S.module.color}">${q.topic.replace(/_/g,' ')}</span>
       <span style="font-size:.75rem;color:#94a3b8;font-weight:700">${q.difficulty===3?'⚡⚡⚡':q.difficulty===2?'⚡⚡':'⚡'}</span>
     </div>
-
     <div class="glass" style="border-radius:20px;padding:14px 16px;margin-bottom:12px;border-color:rgba(16,185,129,.2)">
-      <div style="font-size:.68rem;font-weight:800;color:#059669;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px">
-        <i class="fas fa-link" style="margin-right:5px"></i>Paare verbinden
-      </div>
+      <div style="font-size:.68rem;font-weight:800;color:#059669;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px"><i class="fas fa-link" style="margin-right:5px"></i>Paare verbinden</div>
       <p style="font-size:.88rem;font-weight:700;color:#1e293b;margin:0;line-height:1.5">${esc(q.display)}</p>
     </div>
-
-    <!-- FORTSCHRITT DER PAARE -->
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-      ${pairs.map((_,i)=>`
-      <div id="pair-dot-${i}" style="flex:1;height:6px;border-radius:99px;background:rgba(16,185,129,.15);transition:all .3s ease"></div>
-      `).join('')}
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+      ${pairs.map((_,i)=>`<div id="pair-dot-${i}" style="flex:1;height:6px;border-radius:99px;background:rgba(16,185,129,.15);transition:all .3s ease"></div>`).join('')}
     </div>
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-      <div style="display:flex;flex-direction:column;gap:8px" id="left-col">
-        ${leftItems.map(it=>`
-        <div onclick="connectClick('l',${it.idx})" id="cl-${it.idx}" class="conn-item">
-          ${esc(it.text)}
-        </div>`).join('')}
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${leftItems.map(it=>`<div onclick="connectClick('l',${it.idx})" id="cl-${it.idx}" class="conn-item">${esc(it.text)}</div>`).join('')}
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px" id="right-col">
-        ${rightItems.map(it=>`
-        <div onclick="connectClick('r',${it.idx})" id="cr-${it.idx}" class="conn-item" style="color:#475569">
-          ${esc(it.text)}
-        </div>`).join('')}
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${rightItems.map(it=>`<div onclick="connectClick('r',${it.idx})" id="cr-${it.idx}" class="conn-item" style="color:#475569">${esc(it.text)}</div>`).join('')}
       </div>
     </div>
-
     <div style="margin-top:10px;padding:8px 14px;background:rgba(16,185,129,.06);border-radius:10px;border:1px solid rgba(16,185,129,.15)">
-      <p style="font-size:.72rem;color:#059669;font-weight:600;margin:0;text-align:center">
-        <i class="fas fa-hand-pointer" style="margin-right:5px"></i>Links klicken → rechts das passende wählen
-      </p>
+      <p style="font-size:.72rem;color:#059669;font-weight:600;margin:0;text-align:center"><i class="fas fa-hand-pointer" style="margin-right:5px"></i>Links klicken → rechts das passende wählen</p>
     </div>
-
-    <div id="connect-progress-text" style="text-align:center;margin-top:8px;font-size:.75rem;font-weight:700;color:#94a3b8">
-      0 / ${pairs.length} Paare gefunden
-    </div>
-
+    <div id="connect-progress-text" style="text-align:center;margin-top:8px;font-size:.75rem;font-weight:700;color:#94a3b8">0 / ${pairs.length} Paare gefunden</div>
     <div id="fb" style="margin-top:10px"></div>
   </div>`;
 }
 
-function connectClick(side, idx){
+function connectClick(side,idx){
   if(S.connectMatched.has(idx)) return;
-
   if(!S.connectSelected){
     S.connectSelected={side,idx};
-    const el=$(`c${side}-${idx}`);
-    if(el) el.classList.add('selected');
+    const el=$(`c${side}-${idx}`);if(el) el.classList.add('selected');
     return;
   }
-
-  const prev=S.connectSelected;
-  S.connectSelected=null;
-
-  // Gleiche Seite
+  const prev=S.connectSelected;S.connectSelected=null;
   if(prev.side===side){
-    const pe=$(`c${prev.side}-${prev.idx}`);
-    if(pe) pe.classList.remove('selected');
+    const pe=$(`c${prev.side}-${prev.idx}`);if(pe) pe.classList.remove('selected');
     S.connectSelected={side,idx};
-    const el=$(`c${side}-${idx}`);
-    if(el) el.classList.add('selected');
+    const el=$(`c${side}-${idx}`);if(el) el.classList.add('selected');
     return;
   }
-
   const lIdx=prev.side==='l'?prev.idx:idx;
   const rIdx=prev.side==='r'?prev.idx:idx;
-  const lEl=$(`cl-${lIdx}`);
-  const rEl=$(`cr-${rIdx}`);
+  const lEl=$(`cl-${lIdx}`);const rEl=$(`cr-${rIdx}`);
 
   if(lIdx===rIdx){
-    // RICHTIG
     S.connectMatched.add(lIdx);
     if(lEl){lEl.classList.remove('selected');lEl.classList.add('matched')}
     if(rEl){rEl.classList.remove('selected');rEl.classList.add('matched')}
-
-    // Punkt-Indikator
-    const dot=$(`pair-dot-${lIdx}`);
-    if(dot) dot.style.background='#10b981';
-
-    // Fortschrittstext
-    const pt=$('connect-progress-text');
-    if(pt) pt.textContent=`${S.connectMatched.size} / ${S.connectPairs.length} Paare gefunden`;
+    const dot=$(`pair-dot-${lIdx}`);if(dot) dot.style.background='#10b981';
+    const pt=$('connect-progress-text');if(pt) pt.textContent=`${S.connectMatched.size} / ${S.connectPairs.length} Paare gefunden`;
 
     if(S.connectMatched.size>=S.connectPairs.length){
-      // ALLE RICHTIG
       const e=Math.round(25*getCM());
       S.xp+=e;S.sessionXP+=e;S.score++;S.combo++;
       S.maxCombo=Math.max(S.maxCombo,S.combo);
       S.answers.push({correct:true,earned:e,topic:S.normalizedQuestions[S.qi].topic});
       updateM(S.normalizedQuestions[S.qi].topic,true);saveState();
-
       const w=$('gw');
-      if(w){
-        const f=document.createElement('div');
-        f.className='float-up';
-        f.style.cssText='color:#10b981;font-size:.9rem;right:20px;top:20px';
-        f.textContent=`+${e} XP`;
-        w.appendChild(f);
-      }
-
+      if(w){const f=document.createElement('div');f.className='float-up';f.style.cssText='color:#10b981;font-size:.9rem;right:20px;top:20px';f.textContent=`+${e} XP`;w.appendChild(f)}
       $('fb').innerHTML=`
       <div class="fb-correct reveal-in" style="border-radius:16px;padding:14px;text-align:center">
         <div style="font-size:1.8rem;margin-bottom:4px" class="pop">🎉</div>
         <div style="font-weight:800;color:#15803d;font-size:.9rem">Alle ${S.connectPairs.length} Paare richtig! +${e} XP</div>
         ${S.combo>=3?`<div style="font-size:.78rem;color:#f97316;font-weight:700;margin-top:4px">🔥 Combo ×${getCM().toFixed(1)}</div>`:''}
       </div>`;
-
       setTimeout(()=>{S.qi++;renderConnectGame()},1400);
     }
   } else {
-    // FALSCH
     S.combo=0;
     if(lEl){lEl.classList.remove('selected');lEl.classList.add('wrong-flash')}
     if(rEl){rEl.classList.remove('selected');rEl.classList.add('wrong-flash')}
-    setTimeout(()=>{
-      if(lEl) lEl.classList.remove('wrong-flash');
-      if(rEl) rEl.classList.remove('wrong-flash');
-    },700);
+    setTimeout(()=>{if(lEl)lEl.classList.remove('wrong-flash');if(rEl)rEl.classList.remove('wrong-flash')},700);
   }
 }
 
@@ -1451,16 +1442,16 @@ function renderResults(){
     ts[a.topic].t++;ts[a.topic].xp+=a.earned;
     if(a.correct)ts[a.topic].c++;
   });
-
-  // Neue Markierungen aus dieser Session
-  const newMarked=S.answers.filter(a=>!a.correct).length;
+  const diff=S.difficulty;
 
   app.innerHTML=`
   <div class="enter">
     <div class="hero-header" style="text-align:center;margin-bottom:20px">
       <div style="font-size:3.5rem;margin-bottom:8px" class="pop">${pct>=80?'🏆':pct>=50?'💪':'📚'}</div>
       <h1 style="font-size:1.4rem;font-weight:900;color:white;margin:0 0 4px">Training abgeschlossen</h1>
-      <p style="font-size:.85rem;color:rgba(255,255,255,.8);margin:0">${S.mode==='absorb'?'👁️ Absorb':'🔗 Connect'} · ${S.module?.name}</p>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.8);margin:0">
+        ${S.mode==='absorb'?`👁️ Absorb ${diff?`· ${diff.emoji} ${diff.name}`:''}`:' 🔗 Connect'} · ${S.module?.name}
+      </p>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px">
@@ -1519,16 +1510,14 @@ function renderResults(){
     </div>`:''}
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
-      <button onclick="resetGame();startMode('${S.mode}')" class="btn-primary">
+      <button onclick="resetGame();${S.mode==='absorb'?'renderDifficultyPicker()':'startMode(\'connect\')'}" class="btn-primary">
         <i class="fas fa-redo" style="margin-right:8px"></i>Nochmal
       </button>
       <button onclick="selectModule(${S.module?.id||1})" class="btn-secondary">
         <i class="fas fa-exchange-alt" style="margin-right:8px"></i>Modus wechseln
       </button>
     </div>
-    <button onclick="renderHome()" class="btn-secondary">
-      <i class="fas fa-home" style="margin-right:8px"></i>Home
-    </button>
+    <button onclick="renderHome()" class="btn-secondary"><i class="fas fa-home" style="margin-right:8px"></i>Home</button>
   </div>`;
   saveState();
 }
