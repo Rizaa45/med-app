@@ -35,7 +35,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 @keyframes sparkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}.sparkle{animation:sparkle 2s ease-in-out infinite}
 @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .gradient-bg{background:linear-gradient(135deg,#6366f1,#8b5cf6,#6366f1,#3b82f6);background-size:300% 300%;animation:gradient-shift 6s ease infinite}
-@keyframes pulseRing{0%{transform:scale(1);opacity:.4}100%{transform:scale(1.6);opacity:0}}.pulse-ring{animation:pulseRing 2s ease-out infinite}
 .zp-tab-btn{transition:all .3s cubic-bezier(.22,1,.36,1)}
 .zp-tab-btn.active{background:rgba(99,102,241,.15);border-color:rgba(99,102,241,.4);color:#a5b4fc}
 .recall-card{transition:all .3s cubic-bezier(.22,1,.36,1)}
@@ -68,7 +67,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       </div>
       <div class="flex items-start gap-3">
         <div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div>
-        <div><h4 class="font-bold text-sm text-white">6 Trainingsmethoden in der Arena</h4><p class="text-[11px] text-slate-500 leading-relaxed">Learn & Quiz, Recall, Absorb, Sprint, Connect und Weakness Destroyer — mit XP-System und Mastery-Rängen.</p></div>
+        <div><h4 class="font-bold text-sm text-white">6 Trainingsmethoden in der Arena</h4><p class="text-[11px] text-slate-500 leading-relaxed">Learn & Quiz, Recall, Absorb, Sprint, Connect und Weakness Destroyer.</p></div>
       </div>
       <div class="flex items-start gap-3">
         <div class="w-9 h-9 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-pen-fancy text-sm"></i></div>
@@ -80,7 +79,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       </div>
       <div class="flex items-start gap-3">
         <div class="w-9 h-9 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-cloud text-sm"></i></div>
-        <div><h4 class="font-bold text-sm text-white">Cloud-Login mit Lern-Code</h4><p class="text-[11px] text-slate-500 leading-relaxed">Dein 4-stelliger Code synchronisiert alles. Handy, Tablet, PC.</p></div>
+        <div><h4 class="font-bold text-sm text-white">Cloud-Login mit Lern-Code</h4><p class="text-[11px] text-slate-500 leading-relaxed">Dein 4-stelliger Code synchronisiert alles.</p></div>
       </div>
       <button onclick="closeWelcome()" class="w-full gradient-bg text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm mt-4 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20">
         <i class="fas fa-rocket mr-2"></i>System starten
@@ -91,7 +90,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- ZP HUB MODAL (REDESIGNED) -->
+<!-- ZP HUB MODAL -->
 <!-- ═══════════════════════════════════════ -->
 <div id="zp-hub-modal" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.8);backdrop-filter:blur(12px)">
   <div class="w-full max-w-lg modal-anim">
@@ -119,7 +118,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             <i class="fas fa-times text-sm"></i>
           </button>
         </div>
-
         <!-- Readiness mini bar -->
         <div class="mt-5 p-3 rounded-2xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
           <div class="flex justify-between items-center mb-2">
@@ -160,7 +158,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             Präge die Musterantwort 120 Sekunden ein, dann rufe sie aus dem Gedächtnis ab. Die KI erstellt ein persönliches Lernheft.
           </p>
           <div class="space-y-3">
-            <!-- Schnell -->
             <div onclick="startRecall('schnell')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.15)">
               <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-2xl" style="background:rgba(99,102,241,.12)">⚡</div>
@@ -176,7 +173,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
                 </div>
               </div>
             </div>
-            <!-- Mittel -->
             <div onclick="startRecall('mittel')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.15)">
               <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-2xl" style="background:rgba(139,92,246,.12)">🎯</div>
@@ -192,7 +188,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
                 </div>
               </div>
             </div>
-            <!-- Intensiv -->
             <div onclick="startRecall('intensiv')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.15)">
               <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-2xl" style="background:rgba(59,130,246,.12)">🔥</div>
@@ -217,8 +212,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             <i class="fas fa-info-circle text-orange-400 mr-1"></i>
             Originalgetreue Prüfungsatmosphäre mit Countdown-Timer. KI bewertet deine Antworten nach Prüfungsstandard.
           </p>
-
-          <!-- Klausur Option -->
           <div onclick="startProbeklausur()" class="recall-card rounded-2xl p-5 cursor-pointer border mb-3" style="background:linear-gradient(135deg,rgba(249,115,22,.07),rgba(245,158,11,.04));border-color:rgba(249,115,22,.2)">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(245,158,11,.15))">
@@ -247,8 +240,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
               <i class="fas fa-play text-xs"></i>Klausur starten
             </div>
           </div>
-
-          <!-- Info Box -->
           <div class="rounded-xl p-3 flex items-start gap-2.5" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)">
             <i class="fas fa-lightbulb text-amber-400 text-xs mt-0.5 shrink-0"></i>
             <p class="text-[11px] text-slate-500 leading-relaxed">Schwerpunkte: 1. & 2. Ausbildungsdrittel. Fragen aus allen 9 Modulen, balanciert nach Prüfungsrelevanz.</p>
@@ -263,15 +254,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
               <i class="fas fa-trash mr-1"></i>Alle löschen
             </button>
           </div>
-          <div id="zp-lernhefte-list" class="space-y-2 max-h-64 overflow-y-auto pr-1">
-            <!-- dynamisch -->
-          </div>
+          <div id="zp-lernhefte-list" class="space-y-2 max-h-64 overflow-y-auto pr-1"></div>
         </div>
 
         <!-- TAB: STATUS -->
         <div id="zpTab-info" class="zp-tab-content hidden">
           <div class="space-y-3">
-            <!-- Freischalt-Bedingungen -->
             <div class="rounded-2xl p-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
               <h3 class="text-white font-black text-xs uppercase tracking-widest mb-3 flex items-center gap-2">
                 <i class="fas fa-unlock text-indigo-400"></i>Freischalt-Bedingungen
@@ -299,10 +287,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
                 </div>
               </div>
             </div>
-
-            <!-- Prüfungsteile -->
             <div class="grid grid-cols-2 gap-2">
-              <div id="zp-s-card" class="rounded-2xl p-4 relative overflow-hidden" style="background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.12)">
+              <div class="rounded-2xl p-4 relative overflow-hidden" style="background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.12)">
                 <div id="zp-s-lock-overlay" class="absolute inset-0 flex items-center justify-center rounded-2xl" style="background:rgba(0,0,0,.5);backdrop-filter:blur(4px)">
                   <div class="text-center"><i class="fas fa-lock text-slate-500 text-lg mb-1 block"></i><p class="text-[9px] text-slate-600 font-bold">Gesperrt</p></div>
                 </div>
@@ -310,7 +296,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
                 <p class="text-white font-black text-xs">Schriftlicher Teil</p>
                 <p class="text-slate-600 text-[10px] mt-0.5">Kombinierte Klausur</p>
               </div>
-              <div id="zp-m-card" class="rounded-2xl p-4 relative overflow-hidden" style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.12)">
+              <div class="rounded-2xl p-4 relative overflow-hidden" style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.12)">
                 <div id="zp-m-lock-overlay" class="absolute inset-0 flex items-center justify-center rounded-2xl" style="background:rgba(0,0,0,.5);backdrop-filter:blur(4px)">
                   <div class="text-center"><i class="fas fa-lock text-slate-500 text-lg mb-1 block"></i><p class="text-[9px] text-slate-600 font-bold">Gesperrt</p></div>
                 </div>
@@ -346,7 +332,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       </div>
       <div id="recall-content" class="p-6">
         <div class="flex items-center justify-center py-16">
-          <div class="w-10 h-10 border-3 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" style="border-width:3px"></div>
+          <div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
         </div>
       </div>
     </div>
@@ -359,7 +345,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div id="pk-modal" class="fixed inset-0 z-[160] flex items-center justify-center p-3 hidden" style="background:rgba(0,0,0,.9);backdrop-filter:blur(14px)">
   <div class="w-full max-w-2xl modal-anim" style="max-height:95vh;display:flex;flex-direction:column">
     <div class="rounded-3xl overflow-hidden flex flex-col" style="background:rgba(8,12,28,.97);border:1px solid rgba(249,115,22,.15);box-shadow:0 0 80px rgba(249,115,22,.08);max-height:95vh">
-      <!-- Header fixed -->
       <div class="flex items-center justify-between p-5 shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.08),transparent);border-bottom:1px solid rgba(255,255,255,.05)">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background:rgba(249,115,22,.15)">
@@ -380,16 +365,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
           </button>
         </div>
       </div>
-      <!-- Scrollable content -->
       <div id="pk-content" class="overflow-y-auto flex-1 p-6" style="-webkit-overflow-scrolling:touch">
         <div class="flex items-center justify-center py-16">
           <div class="text-center">
-            <div class="w-12 h-12 border-3 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mx-auto mb-4" style="border-width:3px"></div>
+            <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(249,115,22,.2);border-top-color:#f97316"></div>
             <p class="text-slate-500 text-sm">Klausur wird vorbereitet...</p>
           </div>
         </div>
       </div>
-      <!-- Footer fixed -->
       <div id="pk-footer" class="p-5 shrink-0 border-t hidden" style="border-color:rgba(255,255,255,.05)">
         <div class="flex gap-3">
           <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500 hover:text-red-400 transition-all" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
@@ -449,8 +432,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       <button onclick="doLogin()" id="btn-login" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl font-bold text-sm transition-all mb-3 active:scale-95">
         <i class="fas fa-sign-in-alt mr-2"></i>Einloggen
       </button>
-      <div class="relative my-4"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div><div class="relative flex justify-center"><span class="bg-[#0d1225] px-3 text-[10px] text-slate-600 font-bold uppercase tracking-widest">oder</span></div></div>
-      <button onclick="doRegister()" id="btn-register" class="w-full glass text-slate-400 hover:text-white hover:border-white/10 py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
+      <div class="relative my-4">
+        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div>
+        <div class="relative flex justify-center"><span class="bg-[#0d1225] px-3 text-[10px] text-slate-600 font-bold uppercase tracking-widest">oder</span></div>
+      </div>
+      <button onclick="doRegister()" id="btn-register" class="w-full glass text-slate-400 hover:text-white py-3 rounded-xl font-bold text-sm transition-all active:scale-95">
         <i class="fas fa-user-plus mr-2"></i>Neuen Code erstellen
       </button>
     </div>
@@ -495,24 +481,19 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
     </div>
   </header>
 
-  <!-- ══ ZWISCHENPRÜFUNG MEGA WIDGET ══════════════════════════ -->
+  <!-- ══ ZWISCHENPRÜFUNG MEGA WIDGET ══ -->
   <div class="mb-8 anim" style="animation-delay:.08s">
     <div class="rounded-3xl overflow-hidden relative" style="background:linear-gradient(135deg,rgba(8,12,28,.9),rgba(12,16,36,.95));border:1px solid rgba(99,102,241,.15);box-shadow:0 0 40px rgba(99,102,241,.06)">
-
-      <!-- Top glow line -->
       <div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,.4),rgba(139,92,246,.4),transparent)"></div>
-
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
 
-        <!-- LEFT: Main Info (3 cols) -->
+        <!-- Left -->
         <div class="lg:col-span-3 p-7 sm:p-8">
           <div class="flex items-start justify-between mb-6">
             <div>
               <div class="flex items-center gap-3 mb-2">
-                <div class="relative">
-                  <div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.35)">
-                    <i class="fas fa-graduation-cap text-white"></i>
-                  </div>
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.35)">
+                  <i class="fas fa-graduation-cap text-white"></i>
                 </div>
                 <div>
                   <h2 class="text-white font-black text-xl uppercase tracking-tight">Zwischenprüfung</h2>
@@ -526,8 +507,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
               <div id="ready-label" class="text-xs font-black mt-1.5 uppercase tracking-wider"></div>
             </div>
           </div>
-
-          <!-- Progress bar -->
+          <!-- Progress -->
           <div class="mb-6">
             <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5">
               <span>Gesamtfortschritt</span>
@@ -537,25 +517,23 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
               <div id="ready-bar" class="h-full rounded-full transition-all duration-1000" style="width:0%;background:linear-gradient(90deg,#6366f1,#8b5cf6,#3b82f6);box-shadow:0 0 12px rgba(99,102,241,.4)"></div>
             </div>
           </div>
-
-          <!-- Action Buttons -->
+          <!-- Buttons -->
           <div class="flex flex-wrap gap-2.5">
             <button onclick="openZPHub()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)">
               <i class="fas fa-play text-xs"></i>Training starten
             </button>
-            <button onclick="openZPHub(); setTimeout(()=>zpSetTab('klausur'),100)" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95 hover:bg-orange-500/10" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)">
+            <button onclick="openZPHub();setTimeout(()=>zpSetTab('klausur'),120)" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)">
               <i class="fas fa-file-contract text-xs"></i>Probeklausur
             </button>
-            <button onclick="openZPHub(); setTimeout(()=>zpSetTab('hefte'),100)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+            <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
               <i class="fas fa-book-open text-xs"></i>
               <span id="dash-hefte-count">0 Hefte</span>
             </button>
           </div>
         </div>
 
-        <!-- RIGHT: Stats (2 cols) -->
+        <!-- Right -->
         <div class="lg:col-span-2 p-6 sm:p-7 flex flex-col justify-between gap-4" style="border-left:1px solid rgba(255,255,255,.04)">
-          <!-- Stats Grid -->
           <div class="grid grid-cols-2 gap-3">
             <div class="rounded-2xl p-4 text-center" style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.1)">
               <div id="s-xp" class="text-2xl font-extrabold text-violet-400 t-num">0</div>
@@ -563,8 +541,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             </div>
             <div class="rounded-2xl p-4 text-center" style="background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.1)">
               <div class="flex items-center justify-center gap-1">
-                <span class="text-lg">🔥</span>
-                <span id="s-streak" class="text-2xl font-extrabold text-orange-400 t-num">0</span>
+                <span class="text-lg">🔥</span><span id="s-streak" class="text-2xl font-extrabold text-orange-400 t-num">0</span>
               </div>
               <div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Streak</div>
             </div>
@@ -577,12 +554,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
               <div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Beste Note</div>
             </div>
           </div>
-
-          <!-- Recent Lernhefte preview -->
+          <!-- Recent hefte -->
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-[9px] font-black text-slate-600 uppercase tracking-widest">Letzte Lernhefte</span>
-              <button onclick="openZPHub(); setTimeout(()=>zpSetTab('hefte'),100)" class="text-[9px] text-indigo-500 hover:text-indigo-400 font-bold transition-colors">Alle →</button>
+              <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="text-[9px] text-indigo-500 hover:text-indigo-400 font-bold transition-colors">Alle →</button>
             </div>
             <div id="dash-lernhefte-preview" class="space-y-1.5">
               <div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div>
@@ -645,167 +621,161 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <script src="js/cloud-sync.js"></script>
 <script>
 // ════════════════════════════════════════════════════════════════
-// CONFIG & STATE
+// CONFIG
 // ════════════════════════════════════════════════════════════════
-const MODULES=[
-  {id:1,name:'Kommunikation & Biografie',icon:'fa-book-open',color:'#6366f1',href:'module.html'},
-  {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#6366f1',href:'module2.html'},
-  {id:3,name:'Krankheitslehre',icon:'fa-viruses',color:'#6366f1',href:'module3.html'},
-  {id:4,name:'Schwangerschaft & Geburt',icon:'fa-baby',color:'#14b8a6',href:'module4.html'},
-  {id:5,name:'Prä- & Postoperative Pflege',icon:'fa-suitcase-medical',color:'#22c55e',href:'module5.html'},
-  {id:6,name:'Notfall & Reanimation',icon:'fa-heart-pulse',color:'#ef4444',href:'module6.html'},
-  {id:7,name:'Ambulante & Chronische Pflege',icon:'fa-house-medical',color:'#a855f7',href:'module7.html'},
-  {id:8,name:'Innere Medizin & Niere',icon:'fa-lungs',color:'#0ea5e9',href:'module8.html'},
-  {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
+const MODULES = [
+  {id:1, name:'Kommunikation & Biografie',    icon:'fa-book-open',        color:'#6366f1', href:'module.html'},
+  {id:2, name:'Medizinisches Kernwissen',      icon:'fa-stethoscope',      color:'#6366f1', href:'module2.html'},
+  {id:3, name:'Krankheitslehre',               icon:'fa-viruses',          color:'#6366f1', href:'module3.html'},
+  {id:4, name:'Schwangerschaft & Geburt',      icon:'fa-baby',             color:'#14b8a6', href:'module4.html'},
+  {id:5, name:'Prä- & Postoperative Pflege',   icon:'fa-suitcase-medical', color:'#22c55e', href:'module5.html'},
+  {id:6, name:'Notfall & Reanimation',         icon:'fa-heart-pulse',      color:'#ef4444', href:'module6.html'},
+  {id:7, name:'Ambulante & Chronische Pflege', icon:'fa-house-medical',    color:'#a855f7', href:'module7.html'},
+  {id:8, name:'Innere Medizin & Niere',        icon:'fa-lungs',            color:'#0ea5e9', href:'module8.html'},
+  {id:9, name:'Neurologische Rehabilitation',  icon:'fa-brain',            color:'#f59e0b', href:'module9.html'},
 ];
 
-const EXAM_FOCUS=[
+const EXAM_FOCUS = [
   'pflegeprozess','kommunikation','körperpflege','vitalzeichen','medikament',
   'dokumentation','rechtlich','wund','mobilisation','ernährung','ausscheidung',
-  'prävention','hygiene','schmerz','demenz','assessment','biografie','pflegediagnose'
+  'prävention','hygiene','schmerz','demenz','assessment','biografie',
+  'pflegediagnose','biografiearbeit','kommunikation_theorie','kommunikation_praxis',
+  'normalbiografie','statuspassage','watzlawick','schulz von thun',
 ];
 
-let readinessScore=0;
-let zpState={
-  mode:null, questions:[], currentIndex:0, phase:'spickzettel',
-  userAnswers:[], timerInterval:null, timerSeconds:120,
-  examInterval:null, examSecondsLeft:7200, pkAnswers:[]
+// ════════════════════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════════════════════
+let readinessScore = 0;
+let moduleCache    = {};
+let zpState = {
+  mode: null, questions: [], currentIndex: 0, phase: 'spickzettel',
+  userAnswers: [], timerInterval: null, timerSeconds: 120,
+  examInterval: null, examSecondsLeft: 7200, pkAnswers: [],
 };
-let moduleCache={};
 
 // ════════════════════════════════════════════════════════════════
 // WELCOME
 // ════════════════════════════════════════════════════════════════
-function showWelcome(){
-  if(!localStorage.getItem('slm_welcome_v9')){
+function showWelcome() {
+  if (!localStorage.getItem('slm_welcome_v9')) {
     document.getElementById('welcome-popup').classList.remove('hidden');
   }
 }
-function closeWelcome(){
-  const el=document.getElementById('welcome-popup');
-  el.style.transition='opacity .3s ease';el.style.opacity='0';
-  setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1'},300);
-  localStorage.setItem('slm_welcome_v9','true');
+function closeWelcome() {
+  const el = document.getElementById('welcome-popup');
+  el.style.transition = 'opacity .3s ease'; el.style.opacity = '0';
+  setTimeout(() => { el.classList.add('hidden'); el.style.opacity = '1'; }, 300);
+  localStorage.setItem('slm_welcome_v9', 'true');
 }
 
 // ════════════════════════════════════════════════════════════════
-// ZP HUB MODAL
+// ZP HUB
 // ════════════════════════════════════════════════════════════════
-function openZPHub(){
+function openZPHub() {
   document.getElementById('zp-hub-modal').classList.remove('hidden');
   zpSetTab('lernen');
   updateStatusTab();
   renderZPLernhefte();
-  // sync readiness bar in hub
-  const pct=readinessScore;
-  const bar=document.getElementById('hub-ready-bar');
-  const txt=document.getElementById('hub-ready-pct');
-  if(bar)bar.style.width=pct+'%';
-  if(txt)txt.textContent=pct+'%';
+  const pct = readinessScore;
+  const bar = document.getElementById('hub-ready-bar');
+  const txt = document.getElementById('hub-ready-pct');
+  if (bar) bar.style.width = pct + '%';
+  if (txt) txt.textContent = pct + '%';
 }
-function closeZPHub(){
+function closeZPHub() {
   document.getElementById('zp-hub-modal').classList.add('hidden');
 }
-
-function zpSetTab(tab){
-  ['lernen','klausur','hefte','info'].forEach(t=>{
-    const btn=document.getElementById('tab-'+t);
-    const content=document.getElementById('zpTab-'+t);
-    if(!btn||!content)return;
-    if(t===tab){
-      btn.classList.add('active');
-      content.classList.remove('hidden');
-    } else {
-      btn.classList.remove('active');
-      content.classList.add('hidden');
-    }
+function zpSetTab(tab) {
+  ['lernen','klausur','hefte','info'].forEach(t => {
+    const btn     = document.getElementById('tab-' + t);
+    const content = document.getElementById('zpTab-' + t);
+    if (!btn || !content) return;
+    if (t === tab) { btn.classList.add('active');    content.classList.remove('hidden'); }
+    else           { btn.classList.remove('active'); content.classList.add('hidden'); }
   });
-  if(tab==='hefte') renderZPLernhefte();
-  if(tab==='info') updateStatusTab();
+  if (tab === 'hefte') renderZPLernhefte();
+  if (tab === 'info')  updateStatusTab();
 }
+function updateStatusTab() {
+  const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+  const mastery = JSON.parse(localStorage.getItem('arena_mastery')    || '{}');
+  const xp      = parseInt(localStorage.getItem('arena_xp') || '0');
+  const mExamed = new Set(history.map(h => h.module)).size;
+  const mTrained= Object.keys(mastery).length;
+  const avgExam = history.length
+    ? Math.round(history.reduce((s,h) => s + h.percentage, 0) / history.length)
+    : 0;
 
-function updateStatusTab(){
-  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-  const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
-  const xp=parseInt(localStorage.getItem('arena_xp')||'0');
-  const mExamed=new Set(history.map(h=>h.module)).size;
-  const mTrained=Object.keys(mastery).length;
-  const avgExam=history.length?Math.round(history.reduce((s,h)=>s+h.percentage,0)/history.length):0;
+  function setCond(id, ok, val) {
+    const el    = document.getElementById('cond-' + id);
+    const valEl = document.getElementById('cond-' + id + '-val');
+    if (!el) return;
+    const icon = el.querySelector('div');
+    if (ok) { icon.style.background = 'rgba(34,197,94,.15)'; icon.innerHTML = '<i class="fas fa-check text-[8px] text-emerald-400"></i>'; }
+    else    { icon.style.background = 'rgba(255,255,255,.04)'; icon.innerHTML = '<i class="fas fa-times text-[8px] text-slate-600"></i>'; }
+    if (valEl) { valEl.textContent = val; valEl.style.color = ok ? '#34d399' : '#475569'; }
+  }
+  setCond('exams', mExamed  >= 7,    `${mExamed}/9`);
+  setCond('avg',   avgExam  >= 70,   `${avgExam}%`);
+  setCond('xp',    xp       >= 3000, xp.toLocaleString('de-DE'));
+  setCond('arena', mTrained >= 5,    `${mTrained}/5`);
 
-  const setCond=(id,ok,val)=>{
-    const el=document.getElementById('cond-'+id);
-    const valEl=document.getElementById('cond-'+id+'-val');
-    if(!el)return;
-    const icon=el.querySelector('div');
-    if(ok){
-      icon.style.background='rgba(34,197,94,.15)';
-      icon.innerHTML='<i class="fas fa-check text-[8px] text-emerald-400"></i>';
-    } else {
-      icon.style.background='rgba(255,255,255,.04)';
-      icon.innerHTML='<i class="fas fa-times text-[8px] text-slate-600"></i>';
-    }
-    if(valEl){valEl.textContent=val;valEl.style.color=ok?'#34d399':'#475569';}
-  };
-
-  setCond('exams', mExamed>=7, `${mExamed}/9`);
-  setCond('avg', avgExam>=70, `${avgExam}%`);
-  setCond('xp', xp>=3000, xp.toLocaleString('de-DE'));
-  setCond('arena', mTrained>=5, `${mTrained}/5`);
-
-  const ready=readinessScore>=80;
-  const hasTrained=mTrained>=5;
-  const sLock=document.getElementById('zp-s-lock-overlay');
-  const mLock=document.getElementById('zp-m-lock-overlay');
-  if(sLock)sLock.style.display=ready?'none':'flex';
-  if(mLock)mLock.style.display=(ready&&hasTrained)?'none':'flex';
+  const ready    = readinessScore >= 80;
+  const hasTrained = mTrained >= 5;
+  const sLock = document.getElementById('zp-s-lock-overlay');
+  const mLock = document.getElementById('zp-m-lock-overlay');
+  if (sLock) sLock.style.display = ready ? 'none' : 'flex';
+  if (mLock) mLock.style.display = (ready && hasTrained) ? 'none' : 'flex';
 }
 
 // ════════════════════════════════════════════════════════════════
 // LERNHEFTE
 // ════════════════════════════════════════════════════════════════
-function getLernbuecher(){
-  return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');
+function getLernbuecher() {
+  return JSON.parse(localStorage.getItem('slm_lernbuecher') || '[]');
 }
-function saveLernbuch(title,html){
-  const books=getLernbuecher();
-  books.unshift({id:Date.now(),date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),title,html});
-  if(books.length>25)books.splice(25);
-  localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
+function saveLernbuch(title, html) {
+  const books = getLernbuecher();
+  books.unshift({
+    id:    Date.now(),
+    date:  new Date().toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),
+    title, html,
+  });
+  if (books.length > 25) books.splice(25);
+  localStorage.setItem('slm_lernbuecher', JSON.stringify(books));
   renderDashLernhefte();
   renderZPLernhefte();
 }
-function viewLernbuch(id){
-  const b=getLernbuecher().find(x=>x.id===id);
-  if(!b)return;
-  document.getElementById('lb-view-title').textContent=b.title;
-  document.getElementById('lb-view-content').innerHTML=b.html;
+function viewLernbuch(id) {
+  const b = getLernbuecher().find(x => x.id === id);
+  if (!b) return;
+  document.getElementById('lb-view-title').textContent   = b.title;
+  document.getElementById('lb-view-content').innerHTML   = b.html;
   document.getElementById('lb-view-modal').classList.remove('hidden');
 }
-function deleteLernbuch(id){
-  if(!confirm('Lernheft löschen?'))return;
-  const books=getLernbuecher().filter(b=>b.id!==id);
-  localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
-  renderDashLernhefte();
-  renderZPLernhefte();
+function deleteLernbuch(id) {
+  if (!confirm('Lernheft löschen?')) return;
+  const books = getLernbuecher().filter(b => b.id !== id);
+  localStorage.setItem('slm_lernbuecher', JSON.stringify(books));
+  renderDashLernhefte(); renderZPLernhefte();
 }
-function clearAllLernbuecher(){
-  if(!confirm('Alle Lernhefte löschen?'))return;
+function clearAllLernbuecher() {
+  if (!confirm('Alle Lernhefte löschen?')) return;
   localStorage.removeItem('slm_lernbuecher');
-  renderDashLernhefte();
-  renderZPLernhefte();
+  renderDashLernhefte(); renderZPLernhefte();
 }
-
-function renderDashLernhefte(){
-  const el=document.getElementById('dash-lernhefte-preview');
-  const countEl=document.getElementById('dash-hefte-count');
-  const books=getLernbuecher();
-  if(countEl)countEl.textContent=`${books.length} Heft${books.length!==1?'e':''}`;
-  if(!el)return;
-  if(books.length===0){
-    el.innerHTML='<div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div>';
+function renderDashLernhefte() {
+  const el      = document.getElementById('dash-lernhefte-preview');
+  const countEl = document.getElementById('dash-hefte-count');
+  const books   = getLernbuecher();
+  if (countEl) countEl.textContent = `${books.length} Heft${books.length !== 1 ? 'e' : ''}`;
+  if (!el) return;
+  if (books.length === 0) {
+    el.innerHTML = '<div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div>';
     return;
   }
-  el.innerHTML=books.slice(0,3).map(b=>`
+  el.innerHTML = books.slice(0, 3).map(b => `
     <div onclick="viewLernbuch(${b.id})" class="lernheft-card flex items-center gap-2 p-2 rounded-xl" style="border:1px solid rgba(255,255,255,.04)">
       <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.12)">
         <i class="fas fa-book-open text-indigo-400" style="font-size:8px"></i>
@@ -814,24 +784,21 @@ function renderDashLernhefte(){
         <p class="text-white text-[10px] font-bold truncate">${b.title}</p>
         <p class="text-slate-700 text-[9px]">${b.date}</p>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
-
-function renderZPLernhefte(){
-  const el=document.getElementById('zp-lernhefte-list');
-  if(!el)return;
-  const books=getLernbuecher();
-  if(books.length===0){
-    el.innerHTML=`
-      <div class="text-center py-8">
-        <div class="text-4xl mb-3">📚</div>
-        <p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p>
-        <p class="text-slate-700 text-xs mt-1">Starte eine Recall-Session oder Probeklausur</p>
-      </div>`;
+function renderZPLernhefte() {
+  const el    = document.getElementById('zp-lernhefte-list');
+  if (!el) return;
+  const books = getLernbuecher();
+  if (books.length === 0) {
+    el.innerHTML = `<div class="text-center py-8">
+      <div class="text-4xl mb-3">📚</div>
+      <p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p>
+      <p class="text-slate-700 text-xs mt-1">Starte eine Recall-Session oder Probeklausur</p>
+    </div>`;
     return;
   }
-  el.innerHTML=books.map(b=>`
+  el.innerHTML = books.map(b => `
     <div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
       <div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
         <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.1)">
@@ -842,100 +809,175 @@ function renderZPLernhefte(){
           <p class="text-slate-600 text-[10px]">${b.date}</p>
         </div>
       </div>
-      <button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 hover:bg-red-500/8 transition-all opacity-0 group-hover:opacity-100 shrink-0">
+      <button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100 shrink-0">
         <i class="fas fa-trash text-[10px]"></i>
       </button>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 // ════════════════════════════════════════════════════════════════
-// DATA LOADING
+// DATA LOADING — correct path: data/question-banks/moduleX_questions.json
 // ════════════════════════════════════════════════════════════════
-async function loadModuleQ(id){
-  if(moduleCache[id])return moduleCache[id];
-  try{
-    const r=await fetch(`question-banks/module${id}_questions.json`);
-    if(!r.ok)throw new Error(r.status);
-    const d=await r.json();
-    moduleCache[id]=(d.questions||d).map(q=>({...q,moduleId:id,moduleName:MODULES.find(m=>m.id===id)?.name||`Modul ${id}`}));
-    return moduleCache[id];
-  }catch(e){console.warn(`Modul ${id}:`,e);return[];}
-}
-async function loadAllQ(){
-  const all=await Promise.all(MODULES.map(m=>loadModuleQ(m.id)));
-  return all.flat();
-}
-function shuffle(a){return[...a].sort(()=>Math.random()-.5)}
-function smartFilter(qs,n){
-  const focused=qs.filter(q=>{
-    const t=`${q.question||q.frage||''} ${(q.keywords||[]).join(' ')}`.toLowerCase();
-    return EXAM_FOCUS.some(f=>t.includes(f));
-  });
-  const rest=qs.filter(q=>!focused.includes(q));
-  return shuffle([...shuffle(focused),...shuffle(rest)]).slice(0,n);
-}
-function buildBalancedExam(qs,n){
-  const perMod=Math.ceil(n/9);
-  const sel=[];
-  for(let i=1;i<=9;i++){
-    const mq=shuffle(qs.filter(q=>q.moduleId===i));
-    sel.push(...mq.slice(0,perMod));
+
+// Normalize BOTH JSON formats into one consistent shape
+function normalizeQ(raw, modId, modName) {
+  // Format B: already has question + sampleAnswer (old style)
+  if (raw.question && (raw.sampleAnswer || raw.musterantwort)) {
+    return {
+      question:    String(raw.question),
+      sampleAnswer:String(raw.sampleAnswer || raw.musterantwort || ''),
+      keywords:    Array.isArray(raw.keywords) ? raw.keywords : [],
+      points:      Number(raw.points || raw.punkte) || 10,
+      difficulty:  String(raw.difficulty || 'mittel'),
+      topic:       String(raw.topic || ''),
+      moduleId:    modId, moduleName: modName,
+      type:        raw.type || 'freitext',
+    };
   }
-  return shuffle(sel).slice(0,n);
+  // Format A: question-banks format → { statement, answer, explanation, type }
+  if (raw.statement) {
+    const isRF  = raw.type === 'richtig_falsch';
+    const ans   = String(raw.answer || '');
+    let sample  = '';
+    if (isRF) {
+      const label = ans.toLowerCase() === 'richtig' ? 'RICHTIG ✓' : 'FALSCH ✗';
+      sample = `Die Aussage ist ${label}. ${raw.explanation || ''}`.trim();
+    } else {
+      sample = raw.explanation || ans || 'Keine Musterlösung hinterlegt.';
+    }
+    const kws = [];
+    if (raw.topic) kws.push(raw.topic.replace(/_/g, ' '));
+    if (Array.isArray(raw.tags)) kws.push(...raw.tags);
+    return {
+      question:    String(raw.statement),
+      sampleAnswer:sample,
+      keywords:    kws.slice(0, 5),
+      points:      raw.difficulty === 3 ? 15 : raw.difficulty === 2 ? 10 : 5,
+      difficulty:  raw.difficulty === 3 ? 'schwer' : raw.difficulty === 2 ? 'mittel' : 'leicht',
+      topic:       String(raw.topic || ''),
+      moduleId:    modId, moduleName: modName,
+      type:        raw.type || 'richtig_falsch',
+      source_hint: raw.source_hint || '',
+    };
+  }
+  // Fallback
+  return {
+    question:    String(raw.question || raw.frage || '(Frage fehlt)'),
+    sampleAnswer:String(raw.sampleAnswer || raw.musterantwort || raw.answer || ''),
+    keywords:    Array.isArray(raw.keywords) ? raw.keywords : [],
+    points:      10, difficulty: 'mittel', topic: '',
+    moduleId: modId, moduleName: modName, type: 'freitext',
+  };
+}
+
+async function loadModuleQ(id) {
+  if (moduleCache[id]) return moduleCache[id];
+  const modName = MODULES.find(m => m.id === id)?.name || `Modul ${id}`;
+  // Try paths in order — data/question-banks/ is the correct location
+  const paths = [
+    `data/question-banks/module${id}_questions.json`,
+    `/data/question-banks/module${id}_questions.json`,
+    `./data/question-banks/module${id}_questions.json`,
+  ];
+  for (const path of paths) {
+    try {
+      const r = await fetch(path);
+      if (!r.ok) continue;
+      const raw = await r.json();
+      const arr = Array.isArray(raw) ? raw : (raw.questions || []);
+      if (arr.length === 0) continue;
+      moduleCache[id] = arr.map(q => normalizeQ(q, id, modName));
+      console.log(`✅ Modul ${id}: ${moduleCache[id].length} Fragen geladen (${path})`);
+      return moduleCache[id];
+    } catch (e) {
+      console.warn(`⚠️ ${path}:`, e.message);
+    }
+  }
+  console.error(`❌ Modul ${id}: Keine Fragen gefunden. Prüfe data/question-banks/module${id}_questions.json`);
+  return [];
+}
+
+async function loadAllQ() {
+  const results = await Promise.allSettled(MODULES.map(m => loadModuleQ(m.id)));
+  const all     = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+  console.log(`📚 Gesamt: ${all.length} Fragen aus allen Modulen`);
+  return all;
+}
+
+function shuffle(a) { return [...a].sort(() => Math.random() - .5); }
+
+function smartFilter(qs, n) {
+  if (qs.length === 0) return [];
+  const focused = qs.filter(q => {
+    const t = `${q.question} ${q.sampleAnswer} ${q.topic} ${q.keywords.join(' ')}`.toLowerCase();
+    return EXAM_FOCUS.some(f => t.includes(f));
+  });
+  const rest = qs.filter(q => !focused.includes(q));
+  return shuffle([...shuffle(focused), ...shuffle(rest)]).slice(0, n);
+}
+
+function buildBalancedExam(qs, n) {
+  if (qs.length === 0) return [];
+  const perMod = Math.max(1, Math.ceil(n / 9));
+  const sel    = [];
+  for (let i = 1; i <= 9; i++) {
+    const mq = shuffle(qs.filter(q => q.moduleId === i));
+    sel.push(...mq.slice(0, perMod));
+  }
+  return shuffle(sel).slice(0, n);
 }
 
 // ════════════════════════════════════════════════════════════════
-// KI API
+// KI API CALL
 // ════════════════════════════════════════════════════════════════
-async function callKI(pairs,sessionType){
-  const prompt=`Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen.
+async function callKI(pairs, sessionType) {
+  const prompt = `Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen.
 
-Analysiere die folgenden Antworten und erstelle ein detailliertes Lernheft als REINES HTML (nur HTML-Tags, kein Markdown, keine Codeblöcke).
+Analysiere die folgenden Antworten und erstelle ein detailliertes Lernheft als REINES HTML.
+WICHTIG: Nur HTML-Tags, kein Markdown, keine Backticks, kein Text außerhalb des HTMLs.
 
-SESSION-TYP: ${sessionType}
+SESSION-TYP: ${sessionType || 'Lerneinheit'}
 
-ANFORDERUNGEN:
-- Struktur: <h2> für Hauptabschnitte, <h3> für Fragen, <ul><li> für Listen
-- Für korrekte Aspekte: ✅ mit grüner Erklärung
-- Für Lücken: ❌ mit konkreter Erklärung was fehlt und warum es wichtig ist
-- Am Ende: Abschnitt "💡 Lernempfehlungen" mit konkreten Themen
-- Ton: ermutigend, klar, medizinisch präzise
-- Sprache: Deutsch
-- Verwende KEINE inline styles außer für Farben
+HTML-ANFORDERUNGEN:
+- <h2> für Hauptabschnitte, <h3> für Fragen, <p><ul><li> für Inhalte
+- Korrekte Aspekte: <span style="color:#4ade80">✅ ...</span>
+- Lücken: <span style="color:#f87171">❌ ...</span> mit Erklärung
+- Abschnitt "📊 Zusammenfassung" ganz oben (2-3 Sätze Gesamtbewertung)
+- Abschnitt "💡 Lernempfehlungen" am Ende mit konkreten Themen
 
-FRAGEN UND ANTWORTEN:
-${pairs.map((p,i)=>`
-FRAGE ${i+1} [${p.moduleName}]:
-Q: ${p.question}
-Muster: ${p.sampleAnswer}
-Nutzer: ${p.userAnswer||'(keine Antwort gegeben)'}
-Keywords: ${(p.keywords||[]).join(', ')||'keine'}
-`).join('\n---\n')}
+FRAGEN & ANTWORTEN:
+${pairs.map((p, i) => `
+--- Frage ${i+1} [${p.moduleName || 'Allgemein'}] ---
+Typ: ${p.type || 'freitext'}
+Frage: ${p.question}
+Musterantwort: ${p.sampleAnswer || 'nicht angegeben'}
+Nutzerantwort: ${p.userAnswer   || '(keine Antwort gegeben)'}
+Keywords: ${(p.keywords || []).join(', ') || 'keine'}
+`).join('\n')}
 
-Erstelle jetzt das HTML-Lernheft:`;
+Erstelle jetzt das vollständige HTML-Lernheft:`;
 
-  try{
-    const r=await fetch('/api/grade',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({mode:'lernheft',prompt,model:'gemini-2.5-flash'})
+  try {
+    const r = await fetch('/api/grade', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ mode: 'lernheft', prompt, model: 'gemini-2.5-flash' }),
     });
-    if(!r.ok)throw new Error(r.status);
-    const d=await r.json();
-    return d.html||d.feedback||d.text||buildFallbackFeedback(pairs);
-  }catch(e){
-    console.error('KI Fehler:',e);
+    if (!r.ok) throw new Error(`API ${r.status}`);
+    const d = await r.json();
+    return d.html || d.text || buildFallbackFeedback(pairs);
+  } catch (e) {
+    console.error('KI Fehler:', e);
     return buildFallbackFeedback(pairs);
   }
 }
 
-function buildFallbackFeedback(pairs){
-  const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
-  return`<div style="color:#e2e8f0">
+function buildFallbackFeedback(pairs) {
+  const answered = pairs.filter(p => p.userAnswer?.trim()).length;
+  return `<div style="color:#e2e8f0">
     <h2 style="color:#818cf8;font-size:1.3rem;font-weight:900;margin-bottom:1rem">📋 Dein Lernheft</h2>
     <p style="color:#94a3b8;margin-bottom:1.5rem">${answered} von ${pairs.length} Fragen beantwortet.</p>
-    ${pairs.map((p,i)=>`
+    ${pairs.map((p,i) => `
       <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem;margin-bottom:1rem">
         <h3 style="color:#c4b5fd;font-size:.85rem;font-weight:700;margin-bottom:.5rem">Frage ${i+1}: ${p.moduleName}</h3>
         <p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#e2e8f0">Frage:</strong> ${p.question}</p>
@@ -952,45 +994,57 @@ function buildFallbackFeedback(pairs){
 // ════════════════════════════════════════════════════════════════
 // RECALL MODE
 // ════════════════════════════════════════════════════════════════
-async function startRecall(size){
+async function startRecall(size) {
   closeZPHub();
   document.getElementById('recall-modal').classList.remove('hidden');
-  document.getElementById('recall-content').innerHTML=`
+  document.getElementById('recall-content').innerHTML = `
     <div class="flex flex-col items-center justify-center py-14 gap-4">
       <div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
       <p class="text-slate-500 text-sm">Fragen werden geladen...</p>
+      <p class="text-slate-700 text-xs">Aus: data/question-banks/</p>
     </div>`;
 
-  const counts={schnell:5,mittel:10,intensiv:15};
-  const n=counts[size]||10;
-  const all=await loadAllQ();
-  zpState.questions=smartFilter(all,n);
-  zpState.currentIndex=0;
-  zpState.userAnswers=[];
-  zpState.phase='spickzettel';
+  const counts = { schnell: 5, mittel: 10, intensiv: 15 };
+  const n      = counts[size] || 10;
+  const all    = await loadAllQ();
 
-  if(zpState.questions.length===0){
-    document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><p class="text-red-400 font-bold">Keine Fragen gefunden.</p><p class="text-slate-600 text-xs mt-1">Überprüfe die JSON-Dateien.</p></div>`;
+  if (all.length === 0) {
+    document.getElementById('recall-content').innerHTML = `
+      <div class="text-center py-10">
+        <div class="text-4xl mb-3">❌</div>
+        <p class="text-red-400 font-bold text-sm">Keine Fragen gefunden</p>
+        <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+          Stelle sicher, dass die Dateien unter<br>
+          <code class="text-indigo-400">data/question-banks/module1_questions.json</code><br>
+          bis module9 vorhanden sind.
+        </p>
+        <button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all" style="background:rgba(255,255,255,.05)">Schließen</button>
+      </div>`;
     return;
   }
+
+  zpState.questions    = smartFilter(all, n);
+  zpState.currentIndex = 0;
+  zpState.userAnswers  = [];
+  zpState.phase        = 'spickzettel';
   renderRecallQ();
 }
 
-function renderRecallQ(){
-  const q=zpState.questions[zpState.currentIndex];
-  if(!q){finishRecall();return;}
-  const total=zpState.questions.length;
-  const cur=zpState.currentIndex+1;
-  const pct=Math.round((zpState.currentIndex/total)*100);
-  const isSpick=zpState.phase==='spickzettel';
-  const question=q.question||q.frage||'';
-  const sample=q.sampleAnswer||q.musterantwort||q.answer||'';
+function renderRecallQ() {
+  const q = zpState.questions[zpState.currentIndex];
+  if (!q) { finishRecall(); return; }
 
-  document.getElementById('recall-content').innerHTML=`
+  const total = zpState.questions.length;
+  const cur   = zpState.currentIndex + 1;
+  const pct   = Math.round((zpState.currentIndex / total) * 100);
+  const isSpick = zpState.phase === 'spickzettel';
+  const mColor  = MODULES.find(m => m.id === q.moduleId)?.color || '#6366f1';
+
+  document.getElementById('recall-content').innerHTML = `
     <div class="mb-5">
       <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5">
         <span>Frage ${cur} / ${total}</span>
-        <span style="color:${MODULES.find(m=>m.id===q.moduleId)?.color||'#6366f1'}">${q.moduleName||''}</span>
+        <span style="color:${mColor}">${q.moduleName || ''}</span>
       </div>
       <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)">
         <div class="h-full rounded-full transition-all duration-500" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
@@ -998,97 +1052,111 @@ function renderRecallQ(){
     </div>
 
     <div class="flex items-center gap-2 mb-4">
-      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
-        ${isSpick?'📖 Phase 1 — Einprägen':'✍️ Phase 2 — Abruf'}
+      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+        style="${isSpick
+          ? 'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)'
+          : 'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
+        ${isSpick ? '📖 Phase 1 — Einprägen' : '✍️ Phase 2 — Abruf'}
       </span>
-      ${isSpick?`<span id="recall-timer-disp" class="text-xs font-black ml-auto t-num" style="color:#94a3b8">120s</span>`:''}
+      ${isSpick ? `<span id="recall-timer-disp" class="text-xs font-black ml-auto t-num" style="color:#94a3b8">120s</span>` : ''}
     </div>
 
     <div class="rounded-2xl p-5 mb-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)">
-      <p class="text-white font-bold text-sm leading-relaxed">${question}</p>
+      <p class="text-white font-bold text-sm leading-relaxed">${q.question}</p>
     </div>
 
-    ${isSpick?`
+    ${isSpick ? `
       <div class="rounded-2xl p-4 mb-5" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
         <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">Musterantwort</p>
-        <p class="text-slate-300 text-sm leading-relaxed">${sample}</p>
-        ${q.keywords?.length?`<div class="flex flex-wrap gap-1.5 mt-3">${q.keywords.map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${k}</span>`).join('')}</div>`:''}
+        <p class="text-slate-300 text-sm leading-relaxed">${q.sampleAnswer}</p>
+        ${q.keywords?.length ? `
+          <div class="flex flex-wrap gap-1.5 mt-3">
+            ${q.keywords.map(k => `<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${k}</span>`).join('')}
+          </div>` : ''}
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">
+        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95"
+          style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">
           <i class="fas fa-plus mr-1"></i>+30s
         </button>
-        <button onclick="recallSkipToAbfrage()" class="flex-2 flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+        <button onclick="recallSkipToAbfrage()" class="flex-2 flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95"
+          style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
           Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i>
         </button>
       </div>
-    `:`
+    ` : `
       <div class="mb-4">
         <textarea id="recall-answer-input" placeholder="Schreibe deine Antwort aus dem Gedächtnis..." rows="5"
           class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none transition-all placeholder:text-slate-700"
-          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0"
+          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit"
           onfocus="this.style.borderColor='rgba(99,102,241,.4)'"
           onblur="this.style.borderColor='rgba(255,255,255,.08)'"
           autofocus></textarea>
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">
+        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95"
+          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">
           Überspringen
         </button>
-        <button onclick="recallSubmit()" class="flex-2 flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)">
+        <button onclick="recallSubmit()" class="flex-2 flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95"
+          style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)">
           <i class="fas fa-check mr-2"></i>Weiter
         </button>
       </div>
     `}
   `;
 
-  if(isSpick){
+  if (isSpick) {
     clearInterval(zpState.timerInterval);
-    zpState.timerSeconds=120;
+    zpState.timerSeconds = 120;
     updateRecallTimer();
-    zpState.timerInterval=setInterval(()=>{
+    zpState.timerInterval = setInterval(() => {
       zpState.timerSeconds--;
       updateRecallTimer();
-      if(zpState.timerSeconds<=0){clearInterval(zpState.timerInterval);recallSkipToAbfrage();}
-    },1000);
+      if (zpState.timerSeconds <= 0) { clearInterval(zpState.timerInterval); recallSkipToAbfrage(); }
+    }, 1000);
   }
 }
 
-function updateRecallTimer(){
-  const el=document.getElementById('recall-timer-disp');
-  if(!el)return;
-  const s=zpState.timerSeconds;
-  const color=s<=10?'#f87171':s<=30?'#fbbf24':'#94a3b8';
-  el.style.color=color;
-  el.textContent=`${s}s`;
-  if(s<=10)el.classList.add('timer-urgent');else el.classList.remove('timer-urgent');
+function updateRecallTimer() {
+  const el = document.getElementById('recall-timer-disp');
+  if (!el) return;
+  const s     = zpState.timerSeconds;
+  const color = s <= 10 ? '#f87171' : s <= 30 ? '#fbbf24' : '#94a3b8';
+  el.style.color = color;
+  el.textContent = `${s}s`;
+  if (s <= 10) el.classList.add('timer-urgent'); else el.classList.remove('timer-urgent');
 }
 
-function recallAddTime(s){zpState.timerSeconds+=s;updateRecallTimer();}
-function recallSkipToAbfrage(){clearInterval(zpState.timerInterval);zpState.phase='abfrage';renderRecallQ();}
-function recallSubmit(){
-  const v=document.getElementById('recall-answer-input')?.value?.trim()||'';
-  pushRecallAnswer(v);
-}
-function recallSkip(){pushRecallAnswer('');}
-function pushRecallAnswer(ans){
-  const q=zpState.questions[zpState.currentIndex];
+function recallAddTime(s)     { zpState.timerSeconds += s; updateRecallTimer(); }
+function recallSkipToAbfrage(){ clearInterval(zpState.timerInterval); zpState.phase = 'abfrage'; renderRecallQ(); }
+function recallSubmit()       { pushRecallAnswer(document.getElementById('recall-answer-input')?.value?.trim() || ''); }
+function recallSkip()         { pushRecallAnswer(''); }
+
+function pushRecallAnswer(ans) {
+  const q = zpState.questions[zpState.currentIndex];
   zpState.userAnswers.push({
-    question:q.question||q.frage,
-    sampleAnswer:q.sampleAnswer||q.musterantwort||'',
-    userAnswer:ans,keywords:q.keywords||[],
-    moduleName:q.moduleName||`Modul ${q.moduleId}`,moduleId:q.moduleId
+    question:    q.question,
+    sampleAnswer:q.sampleAnswer,
+    userAnswer:  ans,
+    keywords:    q.keywords || [],
+    moduleName:  q.moduleName || `Modul ${q.moduleId}`,
+    moduleId:    q.moduleId,
+    type:        q.type || 'freitext',
   });
-  zpState.currentIndex++;zpState.phase='spickzettel';renderRecallQ();
+  zpState.currentIndex++;
+  zpState.phase = 'spickzettel';
+  renderRecallQ();
 }
-function closeRecall(){
+
+function closeRecall() {
   clearInterval(zpState.timerInterval);
   document.getElementById('recall-modal').classList.add('hidden');
 }
 
-async function finishRecall(){
+async function finishRecall() {
   clearInterval(zpState.timerInterval);
-  document.getElementById('recall-content').innerHTML=`
+  document.getElementById('recall-content').innerHTML = `
     <div class="flex flex-col items-center justify-center py-14 gap-5 text-center">
       <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))">
         <i class="fas fa-robot text-indigo-400 text-2xl"></i>
@@ -1098,276 +1166,371 @@ async function finishRecall(){
         <p class="text-slate-500 text-sm">Analyse läuft...</p>
       </div>
       <div class="flex gap-1.5">
-        ${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}
+        ${[0,1,2].map(i => `<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}
       </div>
     </div>`;
 
-  const html=await callKI(zpState.userAnswers,'Active Recall Session');
-  const ans=zpState.userAnswers.filter(a=>a.userAnswer).length;
-  saveLernbuch(`Recall · ${ans}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`,html);
+  const html    = await callKI(zpState.userAnswers, 'Active Recall Session');
+  const ans     = zpState.userAnswers.filter(a => a.userAnswer).length;
+  const total   = zpState.userAnswers.length;
+  saveLernbuch(`Recall · ${ans}/${total} Antworten · ${new Date().toLocaleDateString('de-DE')}`, html);
 
-  document.getElementById('recall-content').innerHTML=`
+  document.getElementById('recall-content').innerHTML = `
     <div class="flex items-center gap-3 p-3 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
       <i class="fas fa-check-circle text-emerald-400"></i>
-      <div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${zpState.userAnswers.length} Antworten gegeben.</p></div>
+      <div>
+        <p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p>
+        <p class="text-slate-600 text-xs">${ans} von ${total} Antworten gegeben.</p>
+      </div>
     </div>
-    <div class="rounded-2xl p-5 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:45vh">${html}</div>
+    <div class="rounded-2xl p-5 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:45vh">
+      ${html}
+    </div>
     <div class="flex gap-2.5">
-      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
+      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all"
+        style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">
+        Schließen
+      </button>
+      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all"
+        style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+        <i class="fas fa-redo mr-2"></i>Neu starten
+      </button>
     </div>`;
 }
 
 // ════════════════════════════════════════════════════════════════
 // PROBEKLAUSUR MODE
 // ════════════════════════════════════════════════════════════════
-async function startProbeklausur(){
+async function startProbeklausur() {
   closeZPHub();
   document.getElementById('pk-modal').classList.remove('hidden');
   document.getElementById('pk-footer').classList.add('hidden');
+  document.getElementById('pk-content').innerHTML = `
+    <div class="flex items-center justify-center py-16 text-center">
+      <div>
+        <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(249,115,22,.2);border-top-color:#f97316"></div>
+        <p class="text-slate-500 text-sm">Klausur wird vorbereitet...</p>
+        <p class="text-slate-700 text-xs mt-1">Lade Fragen aus data/question-banks/</p>
+      </div>
+    </div>`;
 
-  const all=await loadAllQ();
-  zpState.questions=buildBalancedExam(all,15);
-  zpState.pkAnswers=new Array(zpState.questions.length).fill('');
-  zpState.examSecondsLeft=120*60;
+  const all = await loadAllQ();
+
+  if (all.length === 0) {
+    document.getElementById('pk-content').innerHTML = `
+      <div class="text-center py-10">
+        <div class="text-4xl mb-3">❌</div>
+        <p class="text-red-400 font-bold text-sm">Keine Fragen gefunden</p>
+        <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+          Prüfe ob die Dateien unter<br>
+          <code class="text-orange-400">data/question-banks/moduleX_questions.json</code><br>
+          vorhanden und öffentlich zugänglich sind.
+        </p>
+      </div>`;
+    document.getElementById('pk-footer').innerHTML = `
+      <div class="flex gap-3">
+        <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500"
+          style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">Schließen</button>
+      </div>`;
+    document.getElementById('pk-footer').classList.remove('hidden');
+    return;
+  }
+
+  zpState.questions        = buildBalancedExam(all, 15);
+  zpState.pkAnswers        = new Array(zpState.questions.length).fill('');
+  zpState.examSecondsLeft  = 120 * 60;
 
   renderPK();
   document.getElementById('pk-footer').classList.remove('hidden');
   startExamTimer();
 }
 
-function renderPK(){
-  const total=zpState.questions.reduce((s,q)=>s+(q.points||q.punkte||10),0);
-  document.getElementById('pk-content').innerHTML=`
+function renderPK() {
+  const totalPts = zpState.questions.reduce((s, q) => s + (q.points || 10), 0);
+  document.getElementById('pk-content').innerHTML = `
     <div class="rounded-2xl p-4 mb-6" style="background:rgba(249,115,22,.05);border:1px solid rgba(249,115,22,.12)">
       <div class="grid grid-cols-3 gap-3 text-center">
         <div><div class="text-orange-400 font-black text-lg t-num">120</div><div class="text-slate-600 text-[9px] font-bold uppercase">Minuten</div></div>
         <div><div class="text-orange-400 font-black text-lg t-num">${zpState.questions.length}</div><div class="text-slate-600 text-[9px] font-bold uppercase">Fragen</div></div>
-        <div><div class="text-orange-400 font-black text-lg t-num">${total}</div><div class="text-slate-600 text-[9px] font-bold uppercase">Punkte</div></div>
+        <div><div class="text-orange-400 font-black text-lg t-num">${totalPts}</div><div class="text-slate-600 text-[9px] font-bold uppercase">Punkte</div></div>
       </div>
     </div>
-    ${zpState.questions.map((q,i)=>{
-      const question=q.question||q.frage||'';
-      const pts=q.points||q.punkte||10;
-      const mColor=MODULES.find(m=>m.id===q.moduleId)?.color||'#6366f1';
-      return`<div class="mb-6 pb-6" style="border-bottom:1px solid rgba(255,255,255,.04)">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-2">
-            <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black text-white shrink-0" style="background:${mColor}22;color:${mColor}">${i+1}</span>
-            <span class="text-[9px] font-bold uppercase tracking-widest" style="color:${mColor}">${q.moduleName||''}</span>
+    ${zpState.questions.map((q, i) => {
+      const pts    = q.points || 10;
+      const mColor = MODULES.find(m => m.id === q.moduleId)?.color || '#6366f1';
+      return `
+        <div class="mb-6 pb-6" style="border-bottom:1px solid rgba(255,255,255,.04)">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black"
+                style="background:${mColor}22;color:${mColor}">${i+1}</span>
+              <span class="text-[9px] font-bold uppercase tracking-widest" style="color:${mColor}">${q.moduleName||''}</span>
+            </div>
+            <span class="text-[10px] font-black px-2 py-0.5 rounded-lg" style="background:rgba(255,255,255,.04);color:#64748b">${pts} Pkt.</span>
           </div>
-          <span class="text-[10px] font-black px-2 py-0.5 rounded-lg" style="background:rgba(255,255,255,.04);color:#64748b">${pts} Pkt.</span>
-        </div>
-        <p class="text-white font-semibold text-sm leading-relaxed mb-3">${question}</p>
-        <textarea data-pk-idx="${i}" rows="4" placeholder="Deine Antwort..."
-          class="w-full rounded-xl p-3.5 text-sm leading-relaxed resize-y outline-none transition-all placeholder:text-slate-700"
-          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);color:#cbd5e1;font-family:inherit"
-          oninput="zpState.pkAnswers[${i}]=this.value"
-          onfocus="this.style.borderColor='rgba(249,115,22,.35)'"
-          onblur="this.style.borderColor='rgba(255,255,255,.07)'"
-        ></textarea>
-      </div>`;
+          <p class="text-white font-semibold text-sm leading-relaxed mb-3">${q.question}</p>
+          <textarea rows="4" placeholder="Deine Antwort..."
+            class="w-full rounded-xl p-3.5 text-sm leading-relaxed resize-y outline-none transition-all placeholder:text-slate-700"
+            style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);color:#cbd5e1;font-family:inherit"
+            oninput="zpState.pkAnswers[${i}]=this.value"
+            onfocus="this.style.borderColor='rgba(249,115,22,.35)'"
+            onblur="this.style.borderColor='rgba(255,255,255,.07)'"
+          ></textarea>
+        </div>`;
     }).join('')}`;
 }
 
-function startExamTimer(){
+function startExamTimer() {
   clearInterval(zpState.examInterval);
   updateExamTimer();
-  zpState.examInterval=setInterval(()=>{
+  zpState.examInterval = setInterval(() => {
     zpState.examSecondsLeft--;
     updateExamTimer();
-    if(zpState.examSecondsLeft<=0){clearInterval(zpState.examInterval);submitPK(true);}
-  },1000);
+    if (zpState.examSecondsLeft <= 0) { clearInterval(zpState.examInterval); submitPK(true); }
+  }, 1000);
 }
-function updateExamTimer(){
-  const el=document.getElementById('pk-timer-display');
-  if(!el)return;
-  const m=Math.floor(zpState.examSecondsLeft/60);
-  const s=zpState.examSecondsLeft%60;
-  el.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-  if(zpState.examSecondsLeft<=300)el.style.color='#f87171';
-  else if(zpState.examSecondsLeft<=900)el.style.color='#fbbf24';
-  else el.style.color='#fb923c';
+function updateExamTimer() {
+  const el = document.getElementById('pk-timer-display');
+  if (!el) return;
+  const m = Math.floor(zpState.examSecondsLeft / 60);
+  const s = zpState.examSecondsLeft % 60;
+  el.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  if      (zpState.examSecondsLeft <= 300)  el.style.color = '#f87171';
+  else if (zpState.examSecondsLeft <= 900)  el.style.color = '#fbbf24';
+  else                                       el.style.color = '#fb923c';
 }
-function closePK(){
+function closePK() {
   clearInterval(zpState.examInterval);
   document.getElementById('pk-modal').classList.add('hidden');
 }
-async function submitPK(timeout=false){
+async function submitPK(timeout = false) {
   clearInterval(zpState.examInterval);
-
-  const pairs=zpState.questions.map((q,i)=>({
-    question:q.question||q.frage,
-    sampleAnswer:q.sampleAnswer||q.musterantwort||'',
-    userAnswer:zpState.pkAnswers[i]||'',
-    keywords:q.keywords||[],
-    moduleName:q.moduleName||`Modul ${q.moduleId}`,
-    moduleId:q.moduleId,points:q.points||10
+  const pairs = zpState.questions.map((q, i) => ({
+    question:    q.question,
+    sampleAnswer:q.sampleAnswer,
+    userAnswer:  zpState.pkAnswers[i] || '',
+    keywords:    q.keywords || [],
+    moduleName:  q.moduleName || `Modul ${q.moduleId}`,
+    moduleId:    q.moduleId,
+    points:      q.points || 10,
+    type:        q.type || 'freitext',
   }));
 
   document.getElementById('pk-footer').classList.add('hidden');
-  document.getElementById('pk-content').innerHTML=`
+  document.getElementById('pk-content').innerHTML = `
     <div class="flex flex-col items-center justify-center py-16 gap-5 text-center">
       <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(245,158,11,.15))">
         <i class="fas fa-robot text-orange-400 text-2xl"></i>
       </div>
       <div>
-        <h3 class="text-white font-black text-lg mb-1">${timeout?'Zeit abgelaufen! ':''}KI bewertet deine Klausur</h3>
+        <h3 class="text-white font-black text-lg mb-1">${timeout ? 'Zeit abgelaufen! ' : ''}KI bewertet deine Klausur</h3>
         <p class="text-slate-500 text-sm">Bitte warten...</p>
       </div>
       <div class="flex gap-1.5">
-        ${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#f97316;animation-delay:${i*.15}s"></div>`).join('')}
+        ${[0,1,2].map(i => `<div class="w-2 h-2 rounded-full animate-bounce" style="background:#f97316;animation-delay:${i*.15}s"></div>`).join('')}
       </div>
     </div>`;
 
-  const html=await callKI(pairs,'Probeklausur (120 Minuten)');
-  const elapsed=120*60-zpState.examSecondsLeft;
-  const elMin=Math.floor(elapsed/60);
-  const ans=pairs.filter(p=>p.userAnswer).length;
-  saveLernbuch(`Probeklausur · ${ans}/${pairs.length} · ${elMin} Min. · ${new Date().toLocaleDateString('de-DE')}`,html);
+  const html    = await callKI(pairs, 'Probeklausur (120 Minuten)');
+  const elapsed = 120 * 60 - zpState.examSecondsLeft;
+  const elMin   = Math.floor(elapsed / 60);
+  const ans     = pairs.filter(p => p.userAnswer).length;
+  saveLernbuch(`Probeklausur · ${ans}/${pairs.length} · ${elMin} Min. · ${new Date().toLocaleDateString('de-DE')}`, html);
 
-  document.getElementById('pk-content').innerHTML=`
+  document.getElementById('pk-content').innerHTML = `
     <div class="flex items-center gap-3 p-3 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
       <i class="fas fa-check-circle text-emerald-400"></i>
-      <div><p class="text-emerald-400 font-bold text-sm">Bewertung gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${pairs.length} Fragen beantwortet · ${elMin} Min.</p></div>
+      <div>
+        <p class="text-emerald-400 font-bold text-sm">Bewertung gespeichert!</p>
+        <p class="text-slate-600 text-xs">${ans} von ${pairs.length} Fragen beantwortet · ${elMin} Min.</p>
+      </div>
     </div>
-    <div class="rounded-2xl p-5 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:40vh">${html}</div>`;
-
-  document.getElementById('pk-footer').classList.remove('hidden');
-  document.getElementById('pk-footer').innerHTML=`
-    <div class="flex gap-3">
-      <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-      <button onclick="closePK();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-redo mr-2"></i>Neue Klausur</button>
+    <div class="rounded-2xl p-5 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:40vh">
+      ${html}
     </div>`;
+
+  document.getElementById('pk-footer').innerHTML = `
+    <div class="flex gap-3">
+      <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all"
+        style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">
+        Schließen
+      </button>
+      <button onclick="closePK();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all"
+        style="background:linear-gradient(135deg,#f97316,#f59e0b)">
+        <i class="fas fa-redo mr-2"></i>Neue Klausur
+      </button>
+    </div>`;
+  document.getElementById('pk-footer').classList.remove('hidden');
 }
 
 // ════════════════════════════════════════════════════════════════
 // PIN / AUTH
 // ════════════════════════════════════════════════════════════════
-function pinNav(n){
-  const el=document.getElementById('p'+n);
-  if(el.value.length>=1){el.value=el.value.slice(-1);if(n<4)document.getElementById('p'+(n+1)).focus();if(n===4)doLogin();}
+function pinNav(n) {
+  const el = document.getElementById('p' + n);
+  if (el.value.length >= 1) {
+    el.value = el.value.slice(-1);
+    if (n < 4) document.getElementById('p' + (n+1)).focus();
+    if (n === 4) doLogin();
+  }
 }
-function pinKey(e,n){if(e.key==='Backspace'&&n>1&&!document.getElementById('p'+n).value)document.getElementById('p'+(n-1)).focus();}
-function getPin(){return[1,2,3,4].map(n=>document.getElementById('p'+n).value).join('');}
-function showMsg(t,err){
-  const el=document.getElementById('login-msg');
-  el.textContent=t;el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;
+function pinKey(e, n) {
+  if (e.key === 'Backspace' && n > 1 && !document.getElementById('p' + n).value)
+    document.getElementById('p' + (n-1)).focus();
+}
+function getPin() { return [1,2,3,4].map(n => document.getElementById('p'+n).value).join(''); }
+function showMsg(t, err) {
+  const el = document.getElementById('login-msg');
+  el.textContent = t;
+  el.className = `text-center text-xs font-bold mb-4 px-2 ${err ? 'text-red-400' : 'text-violet-400'}`;
   el.classList.remove('hidden');
 }
-function setLoading(on){
-  document.getElementById('btn-login').disabled=on;
-  document.getElementById('btn-register').disabled=on;
-  document.getElementById('btn-login').innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
+function setLoading(on) {
+  document.getElementById('btn-login').disabled    = on;
+  document.getElementById('btn-register').disabled = on;
+  document.getElementById('btn-login').innerHTML   = on
+    ? '<i class="fas fa-spinner fa-spin mr-2"></i>Laden...'
+    : '<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
 }
-async function doLogin(){
-  const pin=getPin();if(pin.length!==4){showMsg('Bitte 4 Ziffern',true);return;}
-  document.getElementById('login-msg').classList.add('hidden');setLoading(true);
-  try{await SLMCloud.login(pin);enterDashboard();}
-  catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}
+async function doLogin() {
+  const pin = getPin();
+  if (pin.length !== 4) { showMsg('Bitte 4 Ziffern eingeben', true); return; }
+  document.getElementById('login-msg').classList.add('hidden');
+  setLoading(true);
+  try {
+    await SLMCloud.login(pin);
+    enterDashboard();
+  } catch (e) {
+    showMsg('Code nicht gefunden.', true);
+    setLoading(false);
+    [1,2,3,4].forEach(n => document.getElementById('p'+n).value = '');
+    document.getElementById('p1').focus();
+  }
 }
-async function doRegister(){
-  document.getElementById('login-msg').classList.add('hidden');setLoading(true);
-  try{
-    const pin=await SLMCloud.register();
+async function doRegister() {
+  document.getElementById('login-msg').classList.add('hidden');
+  setLoading(true);
+  try {
+    const pin = await SLMCloud.register();
     document.getElementById('login-form').classList.add('hidden');
     document.getElementById('pin-display').classList.remove('hidden');
-    pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d;});
-  }catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
+    pin.split('').forEach((d, i) => { document.getElementById('n'+(i+1)).textContent = d; });
+  } catch (e) {
+    showMsg('Fehler: ' + e.message, true);
+    setLoading(false);
+  }
 }
-function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload();}
-
-function enterDashboard(){
+function doLogout() {
+  if (!confirm('Abmelden?')) return;
+  SLMCloud.logout();
+  location.reload();
+}
+function enterDashboard() {
   document.getElementById('login-screen').classList.add('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
-  document.getElementById('show-pin').textContent=SLMCloud.pin;
-  renderModules();loadStats();renderDashLernhefte();
-  setTimeout(showWelcome,500);
+  document.getElementById('show-pin').textContent = SLMCloud.pin;
+  renderModules();
+  loadStats();
+  renderDashLernhefte();
+  setTimeout(showWelcome, 500);
 }
-
-document.addEventListener('DOMContentLoaded',async()=>{
-  const ok=await SLMCloud.autoLogin();
-  if(ok)enterDashboard();
+document.addEventListener('DOMContentLoaded', async () => {
+  const ok = await SLMCloud.autoLogin();
+  if (ok) enterDashboard();
 });
 
 // ════════════════════════════════════════════════════════════════
-// MODULES
+// MODULES GRID
 // ════════════════════════════════════════════════════════════════
-function renderModules(){
-  const grid=document.getElementById('module-grid');
-  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-  grid.innerHTML=MODULES.map(m=>{
-    const mH=history.filter(h=>h.module===m.id);
-    const best=mH.length?mH.reduce((a,b)=>a.percentage>b.percentage?a:b):null;
-    const pct=best?best.percentage:0;
-    const chip=best?`<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>`:'';
-    return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
-      <div class="mod-glow" style="background:${m.color}"></div>
-      <div class="flex justify-between items-start mb-6 relative z-10">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30"><i class="fas ${m.icon} text-white text-2xl"></i></div>
-        <span class="font-black text-slate-600 text-xl t-num">${pct}%</span>
-      </div>
-      <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul ${m.id}</h3>
-      <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">${m.name}</p>
-      <div class="flex items-center gap-2 mb-4 relative z-10">${chip}</div>
-      <div class="w-full h-2 rounded-full overflow-hidden relative z-10" style="background:rgba(255,255,255,.05)">
-        <div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div>
-      </div>
-    </div>`;
+function renderModules() {
+  const grid    = document.getElementById('module-grid');
+  const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+  grid.innerHTML = MODULES.map(m => {
+    const mH   = history.filter(h => h.module === m.id);
+    const best = mH.length ? mH.reduce((a,b) => a.percentage > b.percentage ? a : b) : null;
+    const pct  = best ? best.percentage : 0;
+    const chip = best
+      ? `<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border"
+           style="background:${m.color}15;color:${m.color};border-color:${m.color}30">
+           <i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)
+         </span>`
+      : '';
+    return `
+      <div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
+        <div class="mod-glow" style="background:${m.color}"></div>
+        <div class="flex justify-between items-start mb-6 relative z-10">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
+            style="background:${m.color};box-shadow:0 8px 20px ${m.color}30">
+            <i class="fas ${m.icon} text-white text-2xl"></i>
+          </div>
+          <span class="font-black text-slate-600 text-xl t-num">${pct}%</span>
+        </div>
+        <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul ${m.id}</h3>
+        <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">${m.name}</p>
+        <div class="flex items-center gap-2 mb-4 relative z-10">${chip}</div>
+        <div class="w-full h-2 rounded-full overflow-hidden relative z-10" style="background:rgba(255,255,255,.05)">
+          <div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div>
+        </div>
+      </div>`;
   }).join('');
 }
 
 // ════════════════════════════════════════════════════════════════
-// STATS
+// STATS & READINESS
 // ════════════════════════════════════════════════════════════════
-function loadStats(){
-  const xp=parseInt(localStorage.getItem('arena_xp')||'0');
-  const level=Math.floor(xp/500)+1;
-  const streak=parseInt(localStorage.getItem('arena_ds')||localStorage.getItem('arena_streak')||'0');
-  document.getElementById('s-xp').textContent=xp.toLocaleString('de-DE');
-  document.getElementById('s-level').textContent=level;
-  document.getElementById('s-streak').textContent=streak;
+function loadStats() {
+  const xp      = parseInt(localStorage.getItem('arena_xp') || '0');
+  const level   = Math.floor(xp / 500) + 1;
+  const streak  = parseInt(localStorage.getItem('arena_ds') || localStorage.getItem('arena_streak') || '0');
 
-  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-  if(history.length){
-    const best=history.reduce((a,b)=>parseFloat(a.note)<parseFloat(b.note)?a:b);
-    const c=parseFloat(best.note)<=2?'#34d399':parseFloat(best.note)<=3.3?'#fbbf24':'#f87171';
-    document.getElementById('s-grade').textContent=best.note;
-    document.getElementById('s-grade').style.color=c;
-    const last=history[history.length-1];
-    const nc=parseFloat(last.note)<=2?'text-green-400':parseFloat(last.note)<=3.3?'text-yellow-400':'text-red-400';
-    document.getElementById('sim-note').innerHTML=`<span class="font-black ${nc} text-lg">${last.note}</span><span class="block text-[9px] text-slate-500 font-bold">Letzte</span>`;
+  document.getElementById('s-xp').textContent    = xp.toLocaleString('de-DE');
+  document.getElementById('s-level').textContent  = level;
+  document.getElementById('s-streak').textContent = streak;
+
+  const history = JSON.parse(localStorage.getItem('slm_exam_history') || '[]');
+  if (history.length) {
+    const best = history.reduce((a,b) => parseFloat(a.note) < parseFloat(b.note) ? a : b);
+    const c    = parseFloat(best.note) <= 2 ? '#34d399' : parseFloat(best.note) <= 3.3 ? '#fbbf24' : '#f87171';
+    document.getElementById('s-grade').textContent  = best.note;
+    document.getElementById('s-grade').style.color  = c;
+    const last = history[history.length - 1];
+    const nc   = parseFloat(last.note) <= 2 ? 'text-green-400' : parseFloat(last.note) <= 3.3 ? 'text-yellow-400' : 'text-red-400';
+    document.getElementById('sim-note').innerHTML =
+      `<span class="font-black ${nc} text-lg">${last.note}</span>
+       <span class="block text-[9px] text-slate-500 font-bold">Letzte</span>`;
   }
 
-  const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
-  const mExamed=new Set(history.map(h=>h.module)).size;
-  const mTrained=Object.keys(mastery).length;
-  const avgExam=history.length?Math.round(history.reduce((s,h)=>s+h.percentage,0)/history.length):0;
+  const mastery = JSON.parse(localStorage.getItem('arena_mastery') || '{}');
+  const mExamed = new Set(history.map(h => h.module)).size;
+  const mTrained= Object.keys(mastery).length;
+  const avgExam = history.length
+    ? Math.round(history.reduce((s,h) => s + h.percentage, 0) / history.length)
+    : 0;
 
-  let r=0;
-  r+=Math.min(30,(mExamed/9)*30);
-  r+=Math.min(30,(avgExam/100)*30);
-  r+=Math.min(20,(mTrained/9)*20);
-  r+=Math.min(20,Math.min(xp,5000)/5000*20);
-  r=Math.round(r);
-  readinessScore=r;
+  let r = 0;
+  r += Math.min(30, (mExamed  / 9)    * 30);
+  r += Math.min(30, (avgExam  / 100)  * 30);
+  r += Math.min(20, (mTrained / 9)    * 20);
+  r += Math.min(20, Math.min(xp, 5000) / 5000 * 20);
+  r  = Math.round(r);
+  readinessScore = r;
 
-  let emoji,label,lColor,sub;
-  if(r>=80){emoji='✅';label='Bereit!';lColor='#22c55e';sub=`${r}% — Du bist bereit für die Zwischenprüfung`;}
-  else if(r>=60){emoji='💪';label='Fast bereit';lColor='#eab308';sub=`${r}% — Noch etwas Training`;}
-  else if(r>=30){emoji='📚';label='In Arbeit';lColor='#f97316';sub=`${r}% — Weiter Module durcharbeiten`;}
-  else{emoji='🚀';label='Am Anfang';lColor='#ef4444';sub=`${r}% — Starte mit den Modulen`;}
+  let emoji, label, lColor, sub;
+  if      (r >= 80) { emoji='✅'; label='Bereit!';     lColor='#22c55e'; sub=`${r}% — Du bist bereit für die Zwischenprüfung`; }
+  else if (r >= 60) { emoji='💪'; label='Fast bereit'; lColor='#eab308'; sub=`${r}% — Noch etwas Training`; }
+  else if (r >= 30) { emoji='📚'; label='In Arbeit';   lColor='#f97316'; sub=`${r}% — Weiter Module durcharbeiten`; }
+  else              { emoji='🚀'; label='Am Anfang';   lColor='#ef4444'; sub=`${r}% — Starte mit den Modulen`; }
 
-  document.getElementById('ready-emoji').textContent=emoji;
-  document.getElementById('ready-label').textContent=label;
-  document.getElementById('ready-label').style.color=lColor;
-  document.getElementById('ready-text').textContent=sub;
-  document.getElementById('ready-bar').style.width=r+'%';
-  const pctEl=document.getElementById('ready-pct-text');
-  if(pctEl)pctEl.textContent=r+'%';
+  document.getElementById('ready-emoji').textContent  = emoji;
+  document.getElementById('ready-label').textContent  = label;
+  document.getElementById('ready-label').style.color  = lColor;
+  document.getElementById('ready-text').textContent   = sub;
+  document.getElementById('ready-bar').style.width    = r + '%';
+  const pctEl = document.getElementById('ready-pct-text');
+  if (pctEl) pctEl.textContent = r + '%';
 }
 
-window.addEventListener('beforeunload',()=>{if(SLMCloud.ready)SLMCloud.save();});
+window.addEventListener('beforeunload', () => { if (SLMCloud.ready) SLMCloud.save(); });
 </script>
 </body>
 </html>
