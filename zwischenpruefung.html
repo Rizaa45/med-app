@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zwischenprüfung – Pflegefachkraft</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ════════════════════════════════════
+   SHELL — dark app chrome
+════════════════════════════════════ */
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;background:#060910;color:#e2e8f0;min-height:100vh}
+.shell-bar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:52px;background:rgba(6,9,16,.92);border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(16px)}
+.shell-bar-left{display:flex;align-items:center;gap:12px}
+.shell-logo{width:28px;height:28px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.shell-title{font-size:13px;font-weight:800;color:#fff;letter-spacing:-.2px}
+.shell-sub{font-size:10px;color:#475569;font-weight:600;display:none}
+@media(min-width:480px){.shell-sub{display:block}}
+.timer-box{display:flex;align-items:center;gap:8px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2);border-radius:10px;padding:6px 14px}
+.timer-label{font-size:9px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em}
+.timer-val{font-size:18px;font-weight:900;color:#fb923c;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.timer-urgent .timer-val{color:#f87171;animation:tpulse .8s ease-in-out infinite}
+@keyframes tpulse{0%,100%{opacity:1}50%{opacity:.4}}
+.btn-submit{background:linear-gradient(135deg,#f97316,#f59e0b);color:#fff;font-size:11px;font-weight:800;padding:7px 16px;border:none;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:opacity .2s;text-transform:uppercase;letter-spacing:.04em}
+.btn-submit:hover{opacity:.9}
+.btn-submit:disabled{opacity:.4;cursor:not-allowed}
+
+/* ════════════════════════════════════
+   LOADING
+════════════════════════════════════ */
+#loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 52px);gap:20px;text-align:center;padding:24px}
+.loading-spinner{width:44px;height:44px;border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-step{font-size:13px;color:#64748b;font-weight:600}
+.loading-steps-list{display:flex;flex-direction:column;gap:6px;text-align:left;margin-top:8px}
+.loading-step-item{display:flex;align-items:center;gap:8px;font-size:11px;color:#475569;font-weight:600}
+.loading-step-item.done{color:#4ade80}
+.loading-step-item.active{color:#a5b4fc}
+
+/* ════════════════════════════════════
+   PAPER CONTAINER
+════════════════════════════════════ */
+#paper-container{max-width:860px;margin:0 auto;padding:20px 16px 80px}
+@media(min-width:640px){#paper-container{padding:28px 24px 80px}}
+
+/* ════════════════════════════════════
+   EXAM PAPER — looks like real paper
+════════════════════════════════════ */
+.exam-paper{background:#fffef9;box-shadow:0 8px 60px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.15);border-radius:3px;font-family:'Crimson Pro','Times New Roman',Georgia,serif;color:#1a1a1a;font-size:15.5px;line-height:1.65;position:relative}
+.exam-paper::before{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(0,0,0,.03) 27px,rgba(0,0,0,.03) 28px);border-radius:3px}
+
+/* Header */
+.ep-header{border-bottom:3px double #2a2a2a;padding:28px 44px 20px;position:relative;z-index:1}
+@media(max-width:639px){.ep-header{padding:16px 16px 14px}}
+.ep-school-bar{font-size:10px;font-weight:700;color:#333;line-height:1.5;border-bottom:1px solid #888;padding-bottom:10px;margin-bottom:16px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.025em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:4px}
+.ep-school-bar span:last-child{color:#666;font-weight:600;font-size:9px}
+.ep-title{text-align:center;padding:14px 0 8px}
+.ep-title h1{font-size:23px;font-weight:700;letter-spacing:-.4px;margin:0 0 3px}
+.ep-title h2{font-size:17px;font-weight:600;margin:0 0 4px;color:#222}
+.ep-title-sub{font-size:11px;color:#888;font-family:'Plus Jakarta Sans',sans-serif;font-style:italic}
+.ep-ki-note{margin:10px 0 0;padding:5px 12px;background:#fff8e1;border:1px solid #f59e0b;border-radius:2px;font-size:10.5px;color:#78350f;font-family:'Plus Jakarta Sans',sans-serif;font-style:italic;text-align:center}
+
+/* Info grid */
+.ep-info-grid{display:grid;grid-template-columns:1fr 1fr;border:2px solid #1a1a1a;margin-top:16px}
+@media(max-width:480px){.ep-info-grid{grid-template-columns:1fr}}
+.ep-info-cell{padding:9px 14px;border:1px solid #bbb;font-family:'Plus Jakarta Sans',sans-serif;font-size:12.5px}
+.ep-info-cell label{font-weight:700;color:#444;font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:4px}
+.ep-info-cell input{border:none;border-bottom:1px solid #999;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;padding:2px 4px;width:80%;outline:none;background:transparent;color:#111}
+.ep-info-cell input:focus{border-bottom-color:#4f46e5}
+.ep-info-cell .ep-info-val{font-weight:700;font-size:13.5px;color:#111;font-family:'Plus Jakarta Sans',sans-serif}
+
+/* Hinweis bar */
+.ep-hinweis{margin:14px 44px 0;padding:10px 16px;background:#fefce8;border:1px solid #ca8a04;border-radius:2px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;color:#713f12;line-height:1.65}
+@media(max-width:639px){.ep-hinweis{margin:10px 16px 0}}
+.ep-hinweis strong{font-weight:800}
+
+/* Lesezeit notice */
+.ep-lesezeit{margin:10px 44px 0;padding:8px 14px;background:#f0fdf4;border:1px solid #22c55e;border-radius:2px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:#14532d;display:flex;align-items:center;gap:8px}
+@media(max-width:639px){.ep-lesezeit{margin:8px 16px 0}}
+
+/* Fall */
+.ep-fall{padding:24px 44px;border-top:2px solid #1a1a1a;border-bottom:2px solid #1a1a1a;background:#fafaf7;position:relative;z-index:1}
+@media(max-width:639px){.ep-fall{padding:16px 16px}}
+.ep-fall-title{font-weight:700;font-size:16.5px;margin-bottom:14px;font-family:'Plus Jakarta Sans',sans-serif;color:#111;display:flex;align-items:center;gap:8px;border-bottom:1px solid #ddd;padding-bottom:10px}
+.ep-fall-badge{font-size:9px;font-weight:800;padding:3px 10px;border-radius:10px;background:#e8edff;color:#3730a3;border:1px solid #c7d2fe;font-family:'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+.ep-fall p{text-align:justify;margin:0 0 10px;font-size:15px;line-height:1.75}
+.ep-fall p:last-child{margin-bottom:0}
+
+/* Arztbrief style info table */
+.ep-arztbrief{border:1.5px solid #555;margin-top:16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12.5px}
+.ep-arztbrief-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid #ccc}
+@media(max-width:480px){.ep-arztbrief-row{grid-template-columns:120px 1fr}}
+.ep-arztbrief-row:last-child{border-bottom:none}
+.ep-arztbrief-key{padding:7px 11px;background:#f0f0f0;border-right:1px solid #ccc;font-weight:700;color:#333;font-size:11.5px}
+.ep-arztbrief-val{padding:7px 11px;color:#444;line-height:1.5}
+
+/* Aufgabe blocks */
+.ep-aufgabe{padding:22px 44px;border-bottom:1.5px solid #c8c8c8;position:relative;z-index:1}
+.ep-aufgabe:last-child{border-bottom:none;padding-bottom:36px}
+@media(max-width:639px){.ep-aufgabe{padding:16px 16px}}
+.ep-aufgabe-header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#e4e4e4,#ebebeb);padding:8px 14px;margin:-2px -2px 18px;border:1px solid #bbb;border-radius:2px;font-family:'Plus Jakarta Sans',sans-serif;flex-wrap:wrap;gap:6px}
+.ep-aufgabe-left{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ep-aufgabe-nr{font-weight:900;font-size:13.5px;color:#111}
+.ep-aufgabe-tag{font-size:11px;font-weight:600;color:#555;font-style:italic}
+.ep-kb-badge{font-size:9.5px;font-weight:800;color:#4338ca;background:#eef2ff;border:1px solid #c7d2fe;padding:2px 8px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-aufgabe-pts{font-size:12px;font-weight:800;color:#111;border:2px solid #777;padding:2px 11px;border-radius:2px;background:#fff;white-space:nowrap;font-family:'Plus Jakarta Sans',sans-serif}
+
+.ep-instruction{font-size:14.5px;line-height:1.75;margin-bottom:14px;color:#1a1a1a}
+.ep-instruction strong{font-weight:700}
+
+/* Sub-task */
+.ep-subtask{margin-bottom:20px;padding-left:0}
+.ep-subtask-header{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.ep-subtask-letter{font-weight:800;font-size:14px;color:#1a1a1a;min-width:20px}
+.ep-subtask-text{font-size:14.5px;line-height:1.7;color:#1a1a1a;flex:1}
+.ep-subtask-pts{font-size:11px;color:#666;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;border:1px solid #ccc;padding:1px 8px;border-radius:2px;background:#f8f8f8;margin-left:auto}
+
+/* Answer areas */
+.ep-textarea{width:100%;border:1.5px solid #bbb;padding:10px 12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fefdf5;outline:none;resize:vertical;min-height:90px;transition:border-color .2s;border-radius:2px;line-height:1.7;display:block}
+.ep-textarea:focus{border-color:#4f46e5;background:#fff}
+.ep-textarea-lg{min-height:160px}
+.ep-textarea-xl{min-height:200px}
+
+/* Point tracker line */
+.ep-pts-line{text-align:right;font-family:'Plus Jakarta Sans',sans-serif;font-size:10.5px;color:#888;margin-top:5px;font-style:italic}
+
+/* Table answer */
+.ep-answer-table{width:100%;border-collapse:collapse;border:1.5px solid #777;font-family:'Plus Jakarta Sans',sans-serif;margin:6px 0 8px}
+.ep-answer-table th{background:#e0e0e0;padding:7px 10px;font-weight:800;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #999;color:#222}
+.ep-answer-table th:first-child{text-align:left}
+.ep-answer-table td{border:1px solid #ccc;padding:8px 10px;font-size:13.5px;vertical-align:top;min-height:36px}
+.ep-answer-table td:first-child{background:#fafafa;font-weight:600;font-size:12.5px;color:#333;width:42%}
+.ep-answer-table td.ep-td-input{background:#fff;min-width:120px}
+.ep-answer-table td textarea{width:100%;border:none;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;resize:none;outline:none;min-height:32px;line-height:1.5}
+
+/* R/F Table */
+.ep-rf-table{width:100%;border-collapse:collapse;border:1.5px solid #777;font-family:'Plus Jakarta Sans',sans-serif;margin:6px 0}
+.ep-rf-table thead th{background:#e0e0e0;padding:7px 10px;font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #999;text-align:center}
+.ep-rf-table thead th:first-child{text-align:left;width:72%}
+.ep-rf-row td{border:1px solid #ccc;padding:9px 11px;font-size:13.5px;vertical-align:middle}
+.ep-rf-row:nth-child(even) td{background:#f8f8f5}
+.ep-rf-opt{text-align:center;width:14%;cursor:pointer;user-select:none}
+.ep-rf-opt:hover{background:#eff0ff}
+.ep-rf-circle{width:22px;height:22px;border:2px solid #888;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer}
+.ep-rf-circle.sel{border-color:#3730a3;background:#3730a3}
+.ep-rf-circle.sel::after{content:'✓';color:#fff;font-size:11px;font-weight:900}
+
+/* MC */
+.ep-mc-block{margin-bottom:20px}
+.ep-mc-q{font-size:14px;margin-bottom:8px;line-height:1.7;color:#1a1a1a}
+.ep-mc-options{list-style:none;padding:0;margin:0}
+.ep-mc-options li{display:flex;align-items:flex-start;gap:9px;padding:7px 11px;margin-bottom:3px;border:1px solid #ddd;border-radius:2px;font-size:13.5px;cursor:pointer;transition:background .12s;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.5}
+.ep-mc-options li:hover{background:#f3f4ff}
+.ep-mc-options li.mc-sel{background:#eef2ff;border-color:#6366f1}
+.ep-mc-circle{width:17px;height:17px;border:2px solid #999;border-radius:50%;flex-shrink:0;margin-top:1px;display:inline-flex;align-items:center;justify-content:center;transition:all .12s}
+.ep-mc-options li.mc-sel .ep-mc-circle{background:#6366f1;border-color:#6366f1}
+.ep-mc-options li.mc-sel .ep-mc-circle::after{content:'✓';color:#fff;font-size:9px;font-weight:900}
+
+/* Nennen-Felder */
+.ep-nennen-list{list-style:none;padding:0;margin:0}
+.ep-nennen-list li{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px solid #e8e8e8}
+.ep-nennen-list li:last-child{border-bottom:none}
+.ep-nennen-num{width:22px;height:22px;border:1.5px solid #aaa;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#555;flex-shrink:0;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-nennen-list li input{flex:1;border:none;border-bottom:1px solid #aaa;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;outline:none;padding:2px 4px;color:#111}
+.ep-nennen-list li input:focus{border-bottom-color:#4f46e5}
+
+/* Scoring footer */
+.ep-footer{padding:14px 44px;border-top:2px solid #1a1a1a;background:#f5f3ee;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-family:'Plus Jakarta Sans',sans-serif}
+@media(max-width:639px){.ep-footer{padding:12px 16px}}
+.ep-footer-note{font-size:11px;color:#666;font-style:italic}
+.ep-footer-pts{font-size:14px;font-weight:900;color:#111;border:2px solid #1a1a1a;padding:4px 16px;border-radius:2px}
+
+/* Scoring table */
+.ep-scoring-table{width:100%;border-collapse:collapse;border:1.5px solid #777;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;margin-top:20px}
+.ep-scoring-table th{background:#e8e8e8;padding:6px 10px;border:1px solid #aaa;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:10px}
+.ep-scoring-table td{border:1px solid #ccc;padding:6px 10px;text-align:center}
+.ep-scoring-table td:first-child{text-align:left;background:#f8f8f8;font-weight:700;font-size:11.5px}
+
+/* Result overlay */
+#result-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(2,4,16,.96);backdrop-filter:blur(16px);overflow-y:auto;padding:20px}
+.result-card{max-width:780px;margin:0 auto;background:rgba(8,12,28,.98);border:1px solid rgba(99,102,241,.2);border-radius:24px;overflow:hidden}
+.result-header{padding:28px 32px;background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.06));border-bottom:1px solid rgba(255,255,255,.06)}
+.result-body{padding:28px 32px;overflow-y:auto;max-height:60vh}
+@media(max-width:639px){.result-header,.result-body{padding:20px 18px}}
+.result-grade-box{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.result-score{text-align:center}
+.result-score .big{font-size:52px;font-weight:900;color:#a5b4fc;line-height:1}
+.result-score .small{font-size:13px;color:#64748b;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;margin-top:4px}
+.result-divider{width:1px;height:60px;background:rgba(255,255,255,.1)}
+
+@media(max-width:639px){.ep-aufgabe-header{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<!-- Shell bar -->
+<div class="shell-bar">
+  <div class="shell-bar-left">
+    <div class="shell-logo"><i class="fas fa-graduation-cap" style="color:#fff;font-size:12px"></i></div>
+    <div>
+      <div class="shell-title">Schriftliche Zwischenprüfung</div>
+      <div class="shell-sub">Pflegefachkraft · Generalistische Ausbildung</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div id="timer-wrap" class="timer-box">
+      <div>
+        <div class="timer-label">Verbleibend</div>
+        <div class="timer-val" id="timer-display">120:00</div>
+      </div>
+    </div>
+    <button class="btn-submit" id="btn-submit" onclick="submitExam()" disabled>
+      <i class="fas fa-paper-plane"></i><span class="hidden sm:inline">Abgeben</span>
+    </button>
+  </div>
+</div>
+
+<!-- Loading screen -->
+<div id="loading-screen">
+  <div class="loading-spinner"></div>
+  <div>
+    <div class="loading-step" id="loading-msg">Lade Lernmaterialien...</div>
+    <div class="loading-steps-list" id="loading-steps">
+      <div class="loading-step-item active" id="ls1"><i class="fas fa-circle-notch fa-spin" style="font-size:10px;width:14px"></i> Lernmaterialien laden</div>
+      <div class="loading-step-item" id="ls2"><i class="fas fa-circle" style="font-size:6px;width:14px;margin-left:4px"></i> Fallbeispiel generieren</div>
+      <div class="loading-step-item" id="ls3"><i class="fas fa-circle" style="font-size:6px;width:14px;margin-left:4px"></i> Aufgaben 1–5 erstellen</div>
+      <div class="loading-step-item" id="ls4"><i class="fas fa-circle" style="font-size:6px;width:14px;margin-left:4px"></i> Aufgaben 6–9 erstellen</div>
+      <div class="loading-step-item" id="ls5"><i class="fas fa-circle" style="font-size:6px;width:14px;margin-left:4px"></i> Prüfungsbogen zusammenstellen</div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:#334155;max-width:280px;text-align:center;line-height:1.6">KI generiert einen realistischen Prüfungsbogen basierend auf deinen Lernmaterialien</div>
+</div>
+
+<!-- Paper container -->
+<div id="paper-container" style="display:none">
+  <div class="exam-paper" id="exam-paper"></div>
+</div>
+
+<!-- Result overlay -->
+<div id="result-overlay">
+  <div class="result-card">
+    <div class="result-header">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:12px;display:flex;align-items:center;justify-content:center"><i class="fas fa-robot" style="color:#fff;font-size:16px"></i></div>
+          <div>
+            <div style="font-size:16px;font-weight:900;color:#fff">KI-Bewertung</div>
+            <div style="font-size:10px;color:#475569;font-weight:600">Kompetenzbasierte Analyse nach PflAPrV</div>
+          </div>
+        </div>
+        <button onclick="closeResult()" style="width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#64748b;cursor:pointer;font-size:14px" class="hover:text-white">✕</button>
+      </div>
+      <div class="result-grade-box" id="result-grade-box">
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(99,102,241,.15);display:flex;align-items:center;justify-content:center"><div class="loading-spinner"></div></div>
+          <div style="color:#64748b;font-size:13px;font-weight:600">KI bewertet...</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-body" id="result-body">
+      <div style="color:#475569;font-size:13px;text-align:center;padding:20px 0">Bitte warten...</div>
+    </div>
+    <div style="padding:20px 32px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:12px;flex-wrap:wrap">
+      <button onclick="closeResult()" style="flex:1;min-width:120px;padding:12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#94a3b8;font-size:13px;font-weight:700;cursor:pointer">Schließen</button>
+      <button onclick="location.reload()" style="flex:2;min-width:160px;padding:12px;border-radius:12px;background:linear-gradient(135deg,#f97316,#f59e0b);border:none;color:#fff;font-size:13px;font-weight:800;cursor:pointer"><i class="fas fa-redo" style="margin-right:6px"></i>Neue Klausur</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// GLOBALS
+// ═══════════════════════════════════════════
+const KB_LABELS={
+  I:'KB I · Pflegeprozess & Pflegediagnostik',
+  II:'KB II · Kommunikation & Beratung',
+  III:'KB III · Interprofessionelles Handeln',
+  IV:'KB IV · Recht, Ethik & Qualität',
+  V:'KB V · Wissenschaft & Berufsethos'
+};
+
+let examSecondsLeft = 130 * 60; // 120 min + 10 min Lesezeit
+let timerInterval = null;
+let examContent = null;
+let rawQuestionCache = {};
+
+const MODULES = [
+  {id:1,name:'Kommunikation & Biografie'},
+  {id:2,name:'Medizinisches Kernwissen'},
+  {id:3,name:'Krankheitslehre'},
+  {id:4,name:'Schwangerschaft & Geburt'},
+  {id:5,name:'Prä- & Postoperative Pflege'},
+  {id:6,name:'Notfall & Reanimation'},
+  {id:7,name:'Ambulante & Chronische Pflege'},
+  {id:8,name:'Innere Medizin & Niere'},
+  {id:9,name:'Neurologische Rehabilitation'},
+];
+
+// ═══════════════════════════════════════════
+// LOADING STEPS UI
+// ═══════════════════════════════════════════
+function setStep(n, done=false) {
+  for(let i=1;i<=5;i++){
+    const el=document.getElementById('ls'+i);
+    if(!el)continue;
+    if(i<n){el.className='loading-step-item done';el.innerHTML=`<i class="fas fa-check-circle" style="color:#4ade80;font-size:11px;width:14px"></i> ${el.textContent.trim()}`;}
+    else if(i===n){el.className='loading-step-item active';el.innerHTML=`<i class="fas fa-circle-notch fa-spin" style="font-size:10px;width:14px"></i> ${el.textContent.trim()}`;}
+    else{el.className='loading-step-item';}
+  }
+  if(done){
+    const el=document.getElementById('ls'+n);
+    if(el){el.className='loading-step-item done';el.innerHTML=`<i class="fas fa-check-circle" style="color:#4ade80;font-size:11px;width:14px"></i> ${el.textContent.trim()}`;}
+  }
+}
+
+// ═══════════════════════════════════════════
+// DATA LOADING
+// ═══════════════════════════════════════════
+async function loadRawModule(id){
+  if(rawQuestionCache[id])return rawQuestionCache[id];
+  const paths=[`data/question-banks/module${id}_questions.json`,`/data/question-banks/module${id}_questions.json`];
+  for(const path of paths){
+    try{const r=await fetch(path,{cache:'no-cache'});if(!r.ok)continue;const raw=await r.json();const arr=Array.isArray(raw)?raw:(raw.questions||[]);if(arr.length){rawQuestionCache[id]=arr;return arr;}}catch(e){}
+  }
+  return null;
+}
+async function loadRawSummary(id){
+  for(let unit=1;unit<=12;unit++){
+    for(const p of[`data/module${id}summariesunit${unit}.json`,`/data/module${id}summariesunit${unit}.json`]){
+      try{const r=await fetch(p,{cache:'no-cache'});if(!r.ok)continue;const raw=await r.json();const arr=Array.isArray(raw)?raw:[];if(arr.length)return arr;}catch(e){}
+    }
+  }
+  return null;
+}
+function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
+async function gatherContext(n=18){
+  const results=await Promise.allSettled(MODULES.map(m=>loadRawModule(m.id)));
+  const all=[];
+  for(let i=0;i<MODULES.length;i++){
+    const m=MODULES[i];let data=results[i].status==='fulfilled'?results[i].value:null;
+    if(!data?.length){data=await loadRawSummary(m.id);}
+    if(data?.length)all.push({mod:m,data});
+  }
+  const picked=[];
+  for(const {mod,data} of shuffle(all)){
+    shuffle(data).slice(0,Math.max(1,Math.ceil(n/all.length))).forEach(item=>picked.push({...item,_mod:mod.name}));
+  }
+  return shuffle(picked).slice(0,n).map((item,i)=>{
+    const txt=item.statement||item.question||item.frage||item.title||item.content||Object.values(item).filter(v=>typeof v==='string'&&v.length>8).join(' ');
+    return `[${i+1}] ${item._mod}: ${String(txt).slice(0,160)}`;
+  }).join('\n');
+}
+
+// ═══════════════════════════════════════════
+// KI API
+// ═══════════════════════════════════════════
+async function callKI(prompt, maxTokens=2800){
+  try{
+    const r=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'text',prompt,max_tokens:maxTokens})});
+    if(!r.ok)throw new Error(`${r.status}`);
+    const d=await r.json();
+    return d.html||d.text||null;
+  }catch(e){console.error('KI error:',e);return null;}
+}
+function parseJSON(raw){
+  if(!raw)return null;
+  try{
+    const c=raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
+    const s=c.indexOf('{'),e=c.lastIndexOf('}');
+    if(s<0||e<0)return null;
+    return JSON.parse(c.slice(s,e+1));
+  }catch(e){return null;}
+}
+
+// ═══════════════════════════════════════════
+// GENERATE EXAM
+// ═══════════════════════════════════════════
+async function generateExam(){
+  setStep(1);
+  const context = await gatherContext(18);
+  setStep(2);
+
+  // PART 1: Fallbeispiel + Aufgaben 1-5
+  const prompt1 = `Du bist erfahrene Pflegelehrerin und erstellst eine schriftliche Zwischenprüfung für Pflegefachkräfte (§ 6 Abs. 5 PflBG, PflAPrV Anlage 1). Ende des 2. Ausbildungsdrittels.
+
+LERNMATERIALIEN DER SCHÜLER:
+${context}
+
+Erstelle einen REALISTISCHEN Prüfungsbogen. Antworte NUR mit validem JSON (keine Backticks, kein Text davor/danach):
+
+{
+  "fallbeispiel": {
+    "patient": "Vollständiger Name, Alter, Diagnose(n)",
+    "situation": "3-4 Sätze: aktuelle Aufnahme-/Pflegesituation mit konkreten Vitalwerten, Symptomen und aktuellem Problem",
+    "biografie": "3-4 Sätze: Biografie, Wohnverhältnis, Beruf, Familie, soziale Situation, kulturelle Aspekte",
+    "medizin": "Aktuelle Medikamente, Vorerkrankungen, Pflegegrad falls vorhanden",
+    "hauptproblem": "1-2 Sätze: Hauptpflegeproblem aus pflegerischer Sicht"
+  },
+  "aufgabe1": {
+    "rf_aussagen": [
+      {"nr":"1","text":"Aussage zu Pflegeprozess/AEDL/SIS® (KB I)","richtig":true},
+      {"nr":"2","text":"Aussage mit Fehler zu Pflegedokumentation (KB I)","richtig":false},
+      {"nr":"3","text":"Aussage zur therapeutischen Kommunikation (KB II)","richtig":true},
+      {"nr":"4","text":"Aussage mit Fehler zur Patientenautonomie (KB IV)","richtig":false},
+      {"nr":"5","text":"Aussage zu interprofessioneller Zusammenarbeit (KB III)","richtig":true},
+      {"nr":"6","text":"Aussage zur Händehygiene/Infektionsschutz (KB I)","richtig":true},
+      {"nr":"7","text":"Aussage mit Fehler zu ethischen Prinzipien (KB IV)","richtig":false},
+      {"nr":"8","text":"Aussage zur evidenzbasierten Pflege (KB V)","richtig":true},
+      {"nr":"9","text":"Aussage zu Assessmentinstrument/Skala (KB I)","richtig":true},
+      {"nr":"10","text":"Aussage mit Fehler zu Pflegestandards (KB V)","richtig":false}
+    ]
+  },
+  "aufgabe2": {
+    "intro": "Führen Sie eine strukturierte Informationssammlung nach SIS® für den Patienten durch.",
+    "themenbereiche_aufgabe": "a) Nennen Sie fünf der sechs Themenbereiche der SIS® (je 1 P.) und leiten Sie für jeden Bereich ein konkretes Problem aus dem Fall ab (je 1 P.).",
+    "ressourcen_aufgabe": "b) Benennen Sie drei Ressourcen des Patienten (je 1 P.) und erläutern Sie, warum diese für den Pflegeprozess bedeutsam sind (3 P.).",
+    "infos_aufgabe": "c) Welche zwei weiteren Informationen möchten Sie zur Gesamteinschätzung erheben (je 1 P.)? Begründen Sie deren Bedeutung für Ihr pflegerisches Handeln (je 1 P.)."
+  },
+  "aufgabe3": {
+    "intro": "Analysieren Sie den möglichen weiteren Verlauf der Erkrankung(en) des Patienten.",
+    "komplikationen_aufgabe": "a) Benennen Sie drei mögliche Komplikationen oder Folgeerkrankungen (je 1 P.), erläutern Sie deren Ursachen (je 2 P.) und leiten Sie je eine pflegerische Maßnahme ab (je 2 P.).",
+    "pflegeplanung_aufgabe": "b) Formulieren Sie zwei SMART-Pflegeziele für den Patienten bezogen auf das Hauptpflegeproblem (je 3 P.). Begründen Sie Ihre Zielformulierung fachlich."
+  },
+  "aufgabe4": {
+    "intro": "Beschreiben Sie die pflegerische Versorgung des Patienten in den ersten 24 Stunden.",
+    "massnahmen": ["AEDL/ATL-Bereich: Vitalzeichenkontrolle, Beobachtung, Monitoring (konkrete Parameter nennen)","Körperpflege und Grundpflege unter Ressourcenorientierung und Förderung der Selbstpflegekompetenz","Mobilisation, Lagerung und Bewegungsförderung (Leitlinien-konform, Komplikationsprophylaxe)","Ernährung, Flüssigkeitsmanagement, Ein-/Ausfuhrkontrolle, Ausscheidung","Medikamentöse Versorgung, Wundversorgung oder fallspezifische Maßnahmen (auf Fallbeispiel bezogen)","Dokumentation nach MDK-Richtlinie/Strukturmodell (SIS®)"]
+  },
+  "aufgabe5": {
+    "mc": [
+      {"nr":"1","frage":"Welche der folgenden Aussagen zur Pflegediagnostik nach NANDA-I ist korrekt?","optionen":["A) Pflegediagnosen werden nur vom Arzt gestellt","B) Pflegediagnosen beschreiben nur körperliche Probleme","C) Eine Pflegediagnose umfasst Problem, Ätiologie und Symptome (PÄS-Struktur)","D) NANDA-I-Diagnosen ersetzen die ärztliche Diagnose"],"richtig":"C","kb":"I"},
+      {"nr":"2","frage":"Das Vier-Ohren-Modell nach Schulz von Thun unterscheidet folgende Ebenen:","optionen":["A) Sender, Empfänger, Kanal, Rückmeldung","B) Sachinhalt, Selbstkundgabe, Beziehung, Appell","C) Verbal, paraverbal, nonverbal, metaverbal","D) Kognitiv, emotional, behavioral, sozial"],"richtig":"B","kb":"II"},
+      {"nr":"3","frage":"Welches Assessmentinstrument wird standardmäßig zur Dekubitusrisiko-Einschätzung eingesetzt?","optionen":["A) Morse Fall Scale","B) Glasgow Coma Scale","C) Braden-Skala","D) MMST"],"richtig":"C","kb":"I"},
+      {"nr":"4","frage":"Was versteht man unter dem ethischen Prinzip der Benefizienz in der Pflege?","optionen":["A) Schaden vom Patienten abwenden","B) Dem Patienten Gutes tun und sein Wohlergehen fördern","C) Gerechte Ressourcenverteilung sicherstellen","D) Die Selbstbestimmung des Patienten respektieren"],"richtig":"B","kb":"IV"}
+    ]
+  }
+}`;
+
+  const res1 = await callKI(prompt1, 3000);
+  setStep(2, true);
+  setStep(3);
+  const part1 = parseJSON(res1);
+
+  // PART 2: Aufgaben 6-9
+  const fallText = part1?.fallbeispiel ? `Patient: ${part1.fallbeispiel.patient}. ${part1.fallbeispiel.situation}` : 'Patient mit komplexem Pflegebedarf.';
+  
+  const prompt2 = `Du erstellst den zweiten Teil einer schriftlichen Zwischenprüfung Pflegefachkraft (PflAPrV Anlage 1, Ende 2. Ausbildungsdrittel).
+
+FALLBEISPIEL: ${fallText}
+
+Antworte NUR mit validem JSON (keine Backticks):
+
+{
+  "aufgabe6": {
+    "intro": "Beschreiben Sie, wie Sie das Erstgespräch (biographisches Interview/SIS®-Erhebung) mit dem Patienten professionell gestalten.",
+    "teilaufgaben": [
+      "a) Nennen Sie vier konkrete Kommunikationstechniken (z.B. aktives Zuhören, offene Fragen, Verbalisierung, Empathie) und erläutern Sie deren Bedeutung im Gespräch mit diesem Patienten (je 2 P.).",
+      "b) Wie beziehen Sie Angehörige professionell in das Erstgespräch ein? Beachten Sie dabei die Schweigepflicht (§ 203 StGB) und Patientenautonomie (4 P.).",
+      "c) Beschreiben Sie den professionellen Umgang mit einer emotionalen Reaktion (z.B. Weinen, Ablehnung) des Patienten (3 P.)."
+    ]
+  },
+  "aufgabe7": {
+    "situation": "Der Patient äußert Schmerzen und möchte nicht mobilisiert werden.",
+    "teilaufgaben": [
+      "a) Nennen Sie zwei validierte Schmerzassessment-Instrumente und erläutern Sie, welches Sie bei diesem Patienten einsetzen würden und warum (4 P.).",
+      "b) Welche Maßnahmen ergreifen Sie bei akuten Schmerzen — pflegerisch und interprofessionell (6 P.)? Nennen Sie mindestens drei konkrete Schritte.",
+      "c) Wie begründen Sie dem Patienten die Notwendigkeit der Mobilisation trotz Schmerzen? Berücksichtigen Sie Komplikationsprophylaxe und Patientenautonomie (4 P.)."
+    ]
+  },
+  "aufgabe8": {
+    "intro": "Interprofessionelle Zusammenarbeit und Dokumentation",
+    "teilaufgaben": [
+      "a) An welche Berufsgruppen delegieren oder übergeben Sie Informationen über den Patienten? Nennen Sie drei Berufsgruppen und deren Aufgaben im interprofessionellen Team (je 2 P.).",
+      "b) Beschreiben Sie, was eine vollständige und rechtssichere Pflegedokumentation nach dem Strukturmodell (SIS®) umfasst. Nennen Sie mindestens fünf Bestandteile (5 P.).",
+      "c) Was verstehen Sie unter dem ISBAR-Schema? Erläutern Sie es anhand einer Situation im Fallbeispiel (4 P.)."
+    ]
+  },
+  "aufgabe9": {
+    "intro": "Ethik und Reflexion der eigenen Berufsrolle",
+    "ethik_situation": "Der Patient lehnt trotz ärztlicher Empfehlung eine lebensnotwendige Maßnahme ab. Er ist einwilligungsfähig.",
+    "teilaufgaben": [
+      "a) Welche vier ethischen Prinzipien nach Beauchamp & Childress sind in dieser Situation berührt? Erläutern Sie jeden Konflikt kurz (je 2 P.).",
+      "b) Welche rechtlichen Grundlagen gelten? Nennen Sie mindestens zwei relevante Gesetze/Regelungen (z.B. Patientenrechtegesetz, §§ 630a ff. BGB, Behandlungsvertrag) mit kurzer Erläuterung (4 P.).",
+      "c) Wie gehen Sie als Pflegefachkraft konkret vor? Beschreiben Sie Ihr professionelles Handeln Schritt für Schritt (6 P.)."
+    ]
+  }
+}`;
+
+  const res2 = await callKI(prompt2, 2500);
+  setStep(3, true);
+  setStep(4);
+  const part2 = parseJSON(res2);
+  setStep(4, true);
+  setStep(5);
+
+  return {part1, part2};
+}
+
+// ═══════════════════════════════════════════
+// FALLBACKS
+// ═══════════════════════════════════════════
+function getFallback(){
+  return {
+    part1: {
+      fallbeispiel: {
+        patient: 'Herr Karl Zimmermann, 74 Jahre, Diagnosen: Herzinsuffizienz NYHA III, Diabetes mellitus Typ 2, arterielle Hypertonie, Zustand nach Myokardinfarkt (vor 3 Jahren)',
+        situation: 'Herr Zimmermann wurde heute Morgen über die Notaufnahme stationär aufgenommen. Er klagt über zunehmende Atemnot bei leichter Belastung (Dyspnoe), beidseits ausgeprägte Knöchelödeme bis zur Wade sowie allgemeine Schwäche und Müdigkeit. Bei der Aufnahme: RR 172/96 mmHg, Puls 98/min, AF 24/min, SpO₂ 89% (Raumluft), Temp. 37,1°C, Gewicht 84 kg (Gewichtszunahme von 5 kg in 10 Tagen laut Aussage des Patienten).',
+        biografie: 'Herr Zimmermann ist Witwer und lebt allein in seiner Eigentumswohnung im 2. Obergeschoss (kein Aufzug). Er hat eine Tochter (45 Jahre), die 60 km entfernt wohnt und berufstätig ist. Früher war er als Schreiner tätig. Er legt großen Wert auf seine Selbstständigkeit. Sein Hobby ist die Gartenarbeit, die er seit dem letzten Winter nicht mehr ausüben konnte.',
+        medizin: 'Medikamente: Furosemid 40 mg/d, Ramipril 5 mg/d, Metformin 1000 mg/d, ASS 100 mg/d, Bisoprolol 5 mg/d. Pflegegrad: noch nicht beantragt. Bekannte Penicillin-Allergie (Exanthem). Non-Compliance bei der Flüssigkeitsbeschränkung nach eigener Aussage.',
+        hauptproblem: 'Aufgrund der dekompensierten Herzinsuffizienz mit Ödembildung, Dyspnoe und eingeschränkter Belastbarkeit besteht ein komplexer Pflegebedarf. Besonders kritisch ist die Medikamenten- und Diät-Non-Compliance sowie die soziale Isolation des Patienten.'
+      },
+      aufgabe1: {
+        rf_aussagen: [
+          {nr:'1',text:'Das Strukturmodell EinSTEP mit der SIS® bildet den Ausgangspunkt des Pflegeprozesses und erfasst die subjektive Sichtweise des Pflegebedürftigen.',richtig:true},
+          {nr:'2',text:'Eine lückenhafte Pflegedokumentation ist für Pflegefachkräfte rechtlich unerheblich, da die Verantwortung beim Arzt liegt.',richtig:false},
+          {nr:'3',text:'Aktives Zuhören als Kommunikationstechnik umfasst Verbalisierung, Paraphrasieren und nonverbale Bestätigungssignale.',richtig:true},
+          {nr:'4',text:'Einwilligungsfähige Patienten können eine empfohlene Behandlung nur dann ablehnen, wenn ein gesetzlicher Betreuer dieser Ablehnung zustimmt.',richtig:false},
+          {nr:'5',text:'Im interprofessionellen Team koordiniert die Pflegefachkraft die pflegerischen Maßnahmen und gibt Informationen an Arzt, Physiotherapeut und Sozialdienst weiter.',richtig:true},
+          {nr:'6',text:'Die WHO-Händehygiene-Richtlinie "My 5 Moments" schreibt die Händedesinfektion u.a. vor und nach jedem Patientenkontakt vor.',richtig:true},
+          {nr:'7',text:'Das ethische Prinzip der Non-Malefizienz bedeutet, dem Patienten aktiv Gutes zu tun und sein Wohlergehen zu fördern.',richtig:false},
+          {nr:'8',text:'Evidenzbasierte Pflege (EbN) integriert wissenschaftliche Forschungsergebnisse, klinische Expertise und Patientenpräferenzen.',richtig:true},
+          {nr:'9',text:'Die Braden-Skala ist ein validiertes Assessmentinstrument zur Einschätzung des Dekubitusrisikos.',richtig:true},
+          {nr:'10',text:'Aktivierende Pflege bedeutet, alle pflegerischen Tätigkeiten für den Patienten zu übernehmen, um ihn zu entlasten.',richtig:false}
+        ]
+      },
+      aufgabe2: {
+        intro:'Führen Sie eine strukturierte Informationssammlung nach SIS® für Herrn Zimmermann durch.',
+        themenbereiche_aufgabe:'a) Nennen Sie fünf der sechs Themenbereiche der SIS® (je 1 P.) und leiten Sie für jeden genannten Bereich ein konkretes Problem aus dem Fall ab (je 1 P.).',
+        ressourcen_aufgabe:'b) Benennen Sie drei Ressourcen von Herrn Zimmermann (je 1 P.) und erläutern Sie, warum diese für den Pflegeprozess bedeutsam sind (3 P.).',
+        infos_aufgabe:'c) Welche zwei weiteren Informationen möchten Sie zur Gesamteinschätzung erheben (je 1 P.)? Begründen Sie deren Bedeutung für Ihr pflegerisches Handeln (je 1 P.).'
+      },
+      aufgabe3: {
+        intro:'Analysieren Sie den möglichen weiteren Verlauf der Erkrankungen von Herrn Zimmermann.',
+        komplikationen_aufgabe:'a) Benennen Sie drei mögliche Komplikationen oder Folgeerkrankungen seiner Herzinsuffizienz und/oder seines Diabetes mellitus (je 1 P.), erläutern Sie deren Ursachen (je 2 P.) und leiten Sie je eine konkrete pflegerische Maßnahme ab (je 2 P.).',
+        pflegeplanung_aufgabe:'b) Formulieren Sie zwei SMART-Pflegeziele für Herrn Zimmermann bezogen auf sein Hauptpflegeproblem (je 3 P.). Begründen Sie Ihre Zielformulierung mit dem Pflegeprozess.'
+      },
+      aufgabe4: {
+        intro:'',
+        massnahmen:['AEDL-Bereich Atmen: SpO₂-Monitoring (engmaschig, alle 2h), Sauerstoffgabe nach ärztlicher AO, Oberkörperhochlagerung (30–45°), Atemübungen','Körperpflege unter Ressourcenorientierung: nur unterstützen, was Herr Z. nicht selbst kann; Intimsphäre wahren; Hautinspektion Ödembereiche','Mobilisation: Schrittweise nach Belastbarkeit, Kompressionsstrümpfe, Dekubitusprophylaxe (regelmäßige Lagerunserwechsel alle 2h)','Flüssigkeitsbilanzierung: Ein-/Ausfuhr dokumentieren, Tagesgewicht (gleiche Bedingungen), Ödemkontrolle','Medikamentöse Versorgung: Furosemid-Gabe überwachen, Nierenwerte beachten, Elektrolyte, Penicillin-Allergie dokumentieren','Dokumentation: SIS® aktualisieren, Pflegebericht, Vitalzeichendokumentation, Übergabe an Spätdienst (ISBAR)']
+      },
+      aufgabe5: {
+        mc:[
+          {nr:'1',frage:'Welche der folgenden Aussagen zur Pflegediagnostik nach NANDA-I ist korrekt?',optionen:['A) Pflegediagnosen werden nur vom Arzt gestellt','B) Pflegediagnosen beschreiben nur körperliche Probleme','C) Eine Pflegediagnose umfasst Problem, Ätiologie und Symptome (PÄS-Struktur)','D) NANDA-I-Diagnosen ersetzen die ärztliche Diagnose'],richtig:'C',kb:'I'},
+          {nr:'2',frage:'Das Vier-Ohren-Modell nach Schulz von Thun unterscheidet folgende vier Ebenen:',optionen:['A) Sender, Empfänger, Kanal, Rückmeldung','B) Sachinhalt, Selbstkundgabe, Beziehung, Appell','C) Verbal, paraverbal, nonverbal, metaverbal','D) Kognitiv, emotional, behavioral, sozial'],richtig:'B',kb:'II'},
+          {nr:'3',frage:'Welches Assessmentinstrument wird standardmäßig zur Dekubitusrisiko-Einschätzung eingesetzt?',optionen:['A) Morse Fall Scale','B) Glasgow Coma Scale','C) Braden-Skala','D) Mini-Mental-Status-Test (MMST)'],richtig:'C',kb:'I'},
+          {nr:'4',frage:'Was versteht man unter dem ethischen Prinzip der Benefizienz?',optionen:['A) Schaden vom Patienten abwenden','B) Dem Patienten Gutes tun und sein Wohlergehen aktiv fördern','C) Gerechte Ressourcenverteilung zwischen allen Patienten','D) Die Selbstbestimmung des Patienten in allen Belangen respektieren'],richtig:'B',kb:'IV'}
+        ]
+      }
+    },
+    part2: {
+      aufgabe6: {
+        intro:'Beschreiben Sie, wie Sie das biographische Erstgespräch / die SIS®-Ersterhebung mit Herrn Zimmermann professionell gestalten.',
+        teilaufgaben:[
+          'a) Nennen Sie vier konkrete Kommunikationstechniken (z.B. aktives Zuhören, offene Fragen, Verbalisierung, Paraphrasieren) und erläutern Sie deren Bedeutung für das Gespräch mit Herrn Zimmermann (je 2 P.).',
+          'b) Wie beziehen Sie die Tochter professionell in das Gespräch ein? Berücksichtigen Sie Schweigepflicht (§ 203 StGB) und Patientenautonomie (4 P.).',
+          'c) Herr Zimmermann beginnt zu weinen und sagt: "Ich will nicht zum Pflegefall werden." Beschreiben Sie Ihr professionelles Vorgehen (3 P.).'
+        ]
+      },
+      aufgabe7: {
+        situation:'Herr Zimmermann klagt über Schmerzen (7/10 auf der NRS) und verweigert die geplante Mobilisation.',
+        teilaufgaben:[
+          'a) Nennen Sie zwei validierte Schmerzassessment-Instrumente (je 1 P.) und begründen Sie, welches Sie bei Herrn Zimmermann einsetzen würden (2 P.).',
+          'b) Welche Maßnahmen ergreifen Sie bei seinen akuten Schmerzen? Nennen Sie mindestens drei konkrete pflegerische und interprofessionelle Schritte mit Begründung (6 P.).',
+          'c) Wie begründen Sie Herrn Zimmermann die Notwendigkeit der Mobilisation trotz Schmerzen? Beziehen Sie Komplikationsprophylaxe und sein Recht auf Selbstbestimmung ein (4 P.).'
+        ]
+      },
+      aufgabe8: {
+        intro:'Interprofessionelle Zusammenarbeit und Pflegedokumentation',
+        teilaufgaben:[
+          'a) Nennen Sie drei Berufsgruppen, an die Sie im Verlauf der Versorgung von Herrn Zimmermann Informationen weitergeben oder delegieren (je 1 P.). Beschreiben Sie deren jeweilige Aufgabe (je 1 P.).',
+          'b) Beschreiben Sie die Bestandteile einer vollständigen, rechtssicheren Pflegedokumentation nach dem Strukturmodell (SIS®). Nennen Sie mindestens fünf Elemente (5 P.).',
+          'c) Erläutern Sie das ISBAR-Schema und wenden Sie es auf eine konkrete Übergabesituation mit Herrn Zimmermann an (4 P.).'
+        ]
+      },
+      aufgabe9: {
+        intro:'Ethik und Reflexion der Berufsrolle',
+        ethik_situation:'Herr Zimmermann lehnt eine notwendige Blutentnahme zur Elektrolyt- und Nierenwert-Kontrolle trotz ärztlicher Dringlichkeitsempfehlung ab: "Ich will keine Nadeln mehr." Er ist nach ärztlicher Beurteilung voll einwilligungsfähig.',
+        teilaufgaben:[
+          'a) Welche vier ethischen Prinzipien nach Beauchamp & Childress sind in dieser Situation berührt? Erläutern Sie jeweils den ethischen Konflikt (je 2 P.).',
+          'b) Welche rechtlichen Grundlagen gelten? Nennen Sie mindestens zwei relevante Normen (z.B. Patientenrechtegesetz, §§ 630a ff. BGB, Grundgesetz Art. 2) mit kurzer Erläuterung (4 P.).',
+          'c) Beschreiben Sie Ihr professionelles Handeln als Pflegefachkraft Schritt für Schritt. Wie dokumentieren Sie die Situation rechtssicher (6 P.)?'
+        ]
+      }
+    }
+  };
+}
+
+// ═══════════════════════════════════════════
+// BUILD HTML
+// ═══════════════════════════════════════════
+function buildExamHTML(data){
+  const {part1, part2} = data;
+  const c = {
+    fall: part1?.fallbeispiel || getFallback().part1.fallbeispiel,
+    a1: part1?.aufgabe1 || getFallback().part1.aufgabe1,
+    a2: part1?.aufgabe2 || getFallback().part1.aufgabe2,
+    a3: part1?.aufgabe3 || getFallback().part1.aufgabe3,
+    a4: part1?.aufgabe4 || getFallback().part1.aufgabe4,
+    a5: part1?.aufgabe5 || getFallback().part1.aufgabe5,
+    a6: part2?.aufgabe6 || getFallback().part2.aufgabe6,
+    a7: part2?.aufgabe7 || getFallback().part2.aufgabe7,
+    a8: part2?.aufgabe8 || getFallback().part2.aufgabe8,
+    a9: part2?.aufgabe9 || getFallback().part2.aufgabe9,
+  };
+  const today = new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
+  const rfRows = (c.a1.rf_aussagen||[]).map((a,i)=>`
+    <tr class="ep-rf-row">
+      <td>${i+1}. ${a.text||a}</td>
+      <td class="ep-rf-opt"><div class="ep-rf-circle" onclick="selectRF(this,'R',${i})"></div></td>
+      <td class="ep-rf-opt"><div class="ep-rf-circle" onclick="selectRF(this,'F',${i})"></div></td>
+    </tr>`).join('');
+  const mcBlocks = (c.a5.mc||[]).map((q,i)=>`
+    <div class="ep-mc-block">
+      <p class="ep-mc-q"><strong>${q.nr||i+1}.</strong> ${q.frage||q} <span style="font-size:11px;color:#888;font-family:'Plus Jakarta Sans',sans-serif">(${q.kb?KB_LABELS[q.kb]:''||''})</span></p>
+      <ul class="ep-mc-options" id="mc-${i}">
+        ${(q.optionen||[]).map((opt,j)=>`<li onclick="selectMC(${i},${j},this)"><span class="ep-mc-circle"></span><span>${opt}</span></li>`).join('')}
+      </ul>
+      <div class="ep-pts-line">/ 4 Punkte</div>
+    </div>`).join('');
+  const a4Points = (c.a4.massnahmen||[]).map((m,i)=>`
+    <li>
+      <div class="ep-nennen-num">${i+1}</div>
+      <textarea class="ep-textarea" style="min-height:60px;font-size:13px" placeholder="${m||'Maßnahme beschreiben...'} — Begründung ergänzen..."></textarea>
+    </li>`).join('');
+
+  return `
+<!-- ══ HEADER ══ -->
+<div class="ep-header">
+  <div class="ep-school-bar">
+    <span>Schriftliche Zwischenprüfung · Generalistische Pflegeausbildung · Ende 2. Ausbildungsdrittel · § 6 Abs. 5 PflBG · § 7 PflAPrV</span>
+    <span>Schuljahr 2024/2025</span>
+  </div>
+  <div class="ep-title">
+    <h1>Schriftliche Zwischenprüfung</h1>
+    <h2>Pflegefachkraft — Generalistische Ausbildung</h2>
+    <div class="ep-title-sub">Anlage 1 PflAPrV · Kompetenzbereiche I–V</div>
+    <div class="ep-ki-note">⚠ KI-generierter Prüfungsbogen zur Übungszwecken — kein offizielles Prüfungsdokument</div>
+  </div>
+  <div class="ep-info-grid">
+    <div class="ep-info-cell"><label>Name, Vorname</label><input type="text" placeholder="______________________________"></div>
+    <div class="ep-info-cell"><label>Klasse / Kurs</label><input type="text" placeholder="_______________"></div>
+    <div class="ep-info-cell"><label>Datum der Prüfung</label><span class="ep-info-val">${today}</span></div>
+    <div class="ep-info-cell"><label>Erzielte Punkte / Gesamtpunkte</label><span class="ep-info-val">_______ / 100 Punkte</span></div>
+  </div>
+</div>
+
+<div class="ep-lesezeit"><i class="fas fa-clock" style="color:#22c55e;font-size:12px"></i> <strong>10 Minuten Lesezeit:</strong> Lesen Sie zunächst das gesamte Fallbeispiel und alle Aufgaben aufmerksam durch, bevor Sie mit der Bearbeitung beginnen.</div>
+
+<div class="ep-hinweis">
+  <strong>⏱ Bearbeitungszeit:</strong> 120 Minuten (zzgl. 10 Min. Lesezeit) &nbsp;|&nbsp;
+  <strong>Hilfsmittel:</strong> Keine &nbsp;|&nbsp;
+  <strong>Gesamtpunkte:</strong> 100 Punkte &nbsp;|&nbsp;
+  <strong>Hinweis:</strong> Alle Aufgaben beziehen sich auf das nachfolgende Fallbeispiel, sofern nicht gesondert angegeben. Begründen Sie Ihre Antworten fachlich und schreiben Sie in ganzen Sätzen, wo nicht anders angegeben.
+</div>
+
+<!-- ══ FALLBEISPIEL ══ -->
+<div class="ep-fall">
+  <div class="ep-fall-title"><span>📋</span> Fallbeispiel <span class="ep-fall-badge">Bitte vollständig lesen</span></div>
+  <p><strong>Patient / Patientin:</strong> ${c.fall.patient}</p>
+  <p>${c.fall.situation}</p>
+  <p>${c.fall.biografie}</p>
+  <div class="ep-arztbrief">
+    <div class="ep-arztbrief-row"><div class="ep-arztbrief-key">Vorerkrankungen / Medikamente</div><div class="ep-arztbrief-val">${c.fall.medizin}</div></div>
+    <div class="ep-arztbrief-row"><div class="ep-arztbrief-key">Aktuelles Hauptproblem</div><div class="ep-arztbrief-val">${c.fall.hauptproblem}</div></div>
+  </div>
+</div>
+
+<!-- ══ AUFGABE 1: RICHTIG/FALSCH ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 1 — Richtig oder Falsch</span>
+      <span class="ep-aufgabe-tag">KB I · II · III · IV · V</span>
+      <span class="ep-kb-badge">Pflegewissen</span>
+    </div>
+    <span class="ep-aufgabe-pts">20 Punkte</span>
+  </div>
+  <p class="ep-instruction">Kreuzen Sie an, ob die folgenden Aussagen <strong>Richtig (R)</strong> oder <strong>Falsch (F)</strong> sind. Jede richtige Antwort gibt <strong>2 Punkte</strong>. Es gibt keine Minuspunkte für falsche Antworten.</p>
+  <table class="ep-rf-table">
+    <thead><tr><th style="text-align:left;width:72%">Aussage</th><th>R</th><th>F</th></tr></thead>
+    <tbody>${rfRows}</tbody>
+  </table>
+  <div class="ep-pts-line">/ 20 Punkte</div>
+</div>
+
+<!-- ══ AUFGABE 2: SIS / INFOSSAMMLUNG ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 2 — Strukturierte Informationssammlung (SIS®)</span>
+      <span class="ep-aufgabe-tag">KB I · II</span>
+      <span class="ep-kb-badge">Pflegeprozess</span>
+    </div>
+    <span class="ep-aufgabe-pts">18 Punkte</span>
+  </div>
+  <p class="ep-instruction">${c.a2.intro}</p>
+
+  <!-- 2a: Themenbereiche -->
+  <div class="ep-subtask">
+    <div class="ep-subtask-header">
+      <span class="ep-subtask-letter">a)</span>
+      <span class="ep-subtask-text">${c.a2.themenbereiche_aufgabe} <em style="font-size:12px;color:#888">(10 Punkte)</em></span>
+    </div>
+    <table class="ep-answer-table">
+      <thead><tr><th>Themenbereich der SIS® (je 1 P.)</th><th>Konkretes Problem aus dem Fall (je 1 P.)</th></tr></thead>
+      <tbody>
+        ${[1,2,3,4,5].map(n=>`<tr><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:30px" placeholder="Themenbereich ${n}..."></textarea></td><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:30px" placeholder="Problem aus dem Fall..."></textarea></td></tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="ep-pts-line">/ 10 Punkte</div>
+  </div>
+
+  <!-- 2b: Ressourcen -->
+  <div class="ep-subtask">
+    <div class="ep-subtask-header">
+      <span class="ep-subtask-letter">b)</span>
+      <span class="ep-subtask-text">${c.a2.ressourcen_aufgabe} <em style="font-size:12px;color:#888">(6 Punkte)</em></span>
+    </div>
+    <table class="ep-answer-table">
+      <thead><tr><th>Ressource (je 1 P.)</th><th>Bedeutung für den Pflegeprozess (je 1 P.)</th></tr></thead>
+      <tbody>
+        ${[1,2,3].map(n=>`<tr><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:30px" placeholder="Ressource ${n}..."></textarea></td><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:30px" placeholder="Bedeutung..."></textarea></td></tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="ep-pts-line">/ 6 Punkte</div>
+  </div>
+
+  <!-- 2c: Weitere Infos -->
+  <div class="ep-subtask">
+    <div class="ep-subtask-header">
+      <span class="ep-subtask-letter">c)</span>
+      <span class="ep-subtask-text">${c.a2.infos_aufgabe} <em style="font-size:12px;color:#888">(4 Punkte)</em></span>
+    </div>
+    <table class="ep-answer-table">
+      <thead><tr><th>Benötigte Information (je 1 P.)</th><th>Bedeutung für das pflegerische Handeln (je 1 P.)</th></tr></thead>
+      <tbody>
+        ${[1,2].map(n=>`<tr><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:36px" placeholder="Information ${n}..."></textarea></td><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:36px" placeholder="Bedeutung..."></textarea></td></tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="ep-pts-line">/ 4 Punkte</div>
+  </div>
+</div>
+
+<!-- ══ AUFGABE 3: KOMPLIKATIONEN + PFLEGEPLANUNG ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 3 — Pflegediagnostik & Pflegeplanung</span>
+      <span class="ep-aufgabe-tag">KB I · V</span>
+      <span class="ep-kb-badge">Pflegeprozess</span>
+    </div>
+    <span class="ep-aufgabe-pts">21 Punkte</span>
+  </div>
+  <p class="ep-instruction">${c.a3.intro}</p>
+
+  <!-- 3a -->
+  <div class="ep-subtask">
+    <div class="ep-subtask-header">
+      <span class="ep-subtask-letter">a)</span>
+      <span class="ep-subtask-text">${c.a3.komplikationen_aufgabe} <em style="font-size:12px;color:#888">(15 Punkte)</em></span>
+    </div>
+    <table class="ep-answer-table">
+      <thead><tr><th>Mögliche Komplikation (1 P.)</th><th>Ursachen (2 P.)</th><th>Pflegerische Maßnahme (2 P.)</th></tr></thead>
+      <tbody>
+        ${[1,2,3].map(n=>`<tr><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:40px" placeholder="Komplikation ${n}..."></textarea></td><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:40px" placeholder="Ursachen..."></textarea></td><td class="ep-td-input"><textarea class="ep-textarea" style="min-height:40px" placeholder="Maßnahme mit Begründung..."></textarea></td></tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="ep-pts-line">/ 15 Punkte</div>
+  </div>
+
+  <!-- 3b -->
+  <div class="ep-subtask">
+    <div class="ep-subtask-header">
+      <span class="ep-subtask-letter">b)</span>
+      <span class="ep-subtask-text">${c.a3.pflegeplanung_aufgabe} <em style="font-size:12px;color:#888">(6 Punkte)</em></span>
+    </div>
+    <p style="font-size:12px;color:#666;font-family:'Plus Jakarta Sans',sans-serif;margin:0 0 8px"><em>SMART = Spezifisch · Messbar · Attraktiv/Akzeptiert · Realistisch · Terminiert</em></p>
+    <div style="margin-bottom:10px">
+      <p style="font-size:13px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px">Pflegeziel 1: (3 P.)</p>
+      <textarea class="ep-textarea" style="min-height:70px" placeholder="SMART-Pflegeziel 1 mit Begründung..."></textarea>
+    </div>
+    <div>
+      <p style="font-size:13px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px">Pflegeziel 2: (3 P.)</p>
+      <textarea class="ep-textarea" style="min-height:70px" placeholder="SMART-Pflegeziel 2 mit Begründung..."></textarea>
+    </div>
+    <div class="ep-pts-line">/ 6 Punkte</div>
+  </div>
+</div>
+
+<!-- ══ AUFGABE 4: PFLEGERISCHE VERSORGUNG ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 4 — Pflegerische Versorgung (erste 24 Stunden)</span>
+      <span class="ep-aufgabe-tag">KB I · III · V</span>
+      <span class="ep-kb-badge">Pflegepraxis</span>
+    </div>
+    <span class="ep-aufgabe-pts">18 Punkte</span>
+  </div>
+  <p class="ep-instruction">Beschreiben Sie die pflegerische Versorgung des Patienten in den <strong>ersten 24 Stunden nach Aufnahme</strong>. Erläutern Sie für jeden der folgenden Bereiche konkrete Maßnahmen mit fachlicher Begründung. Beziehen Sie aktuelle Pflegestandards und Leitlinien ein. <em style="font-size:12px;color:#888">(je 3 Punkte pro Bereich = 18 Punkte)</em></p>
+  <ul class="ep-nennen-list">${a4Points}</ul>
+  <div class="ep-pts-line">/ 18 Punkte</div>
+</div>
+
+<!-- ══ AUFGABE 5: MULTIPLE CHOICE ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 5 — Fachwissen Multiple Choice</span>
+      <span class="ep-aufgabe-tag">KB I · II · IV</span>
+      <span class="ep-kb-badge">Fachwissen</span>
+    </div>
+    <span class="ep-aufgabe-pts">16 Punkte</span>
+  </div>
+  <p class="ep-instruction">Kreuzen Sie jeweils die <strong>eine richtige Antwort</strong> an. Jede richtige Antwort gibt <strong>4 Punkte</strong>. Keine Minuspunkte.</p>
+  ${mcBlocks}
+</div>
+
+<!-- ══ AUFGABE 6: KOMMUNIKATION ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 6 — Kommunikation & Beratung</span>
+      <span class="ep-aufgabe-tag">KB II</span>
+      <span class="ep-kb-badge">Kommunikation</span>
+    </div>
+    <span class="ep-aufgabe-pts">11 Punkte</span>
+  </div>
+  <p class="ep-instruction">${c.a6.intro}</p>
+  ${(c.a6.teilaufgaben||[]).map((t,i)=>`
+  <div class="ep-subtask">
+    <div class="ep-subtask-header"><span class="ep-subtask-letter">${['a)','b)','c)'][i]||i+')'}</span><span class="ep-subtask-text">${t}</span></div>
+    <textarea class="ep-textarea ep-textarea-lg" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-pts-line">/ ${[8,4,3][i]||4} Punkte</div>
+  </div>`).join('')}
+</div>
+
+<!-- ══ AUFGABE 7: SCHMERZ & MOBILISATION ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 7 — Schmerzmanagement & Mobilisation</span>
+      <span class="ep-aufgabe-tag">KB I · II · III</span>
+      <span class="ep-kb-badge">Pflegepraxis</span>
+    </div>
+    <span class="ep-aufgabe-pts">14 Punkte</span>
+  </div>
+  <p class="ep-instruction" style="background:#fefce8;border-left:3px solid #ca8a04;padding:8px 12px;font-size:13.5px"><strong>Situation:</strong> ${c.a7.situation||'Der Patient klagt über Schmerzen und verweigert die Mobilisation.'}</p>
+  ${(c.a7.teilaufgaben||[]).map((t,i)=>`
+  <div class="ep-subtask">
+    <div class="ep-subtask-header"><span class="ep-subtask-letter">${['a)','b)','c)'][i]||i+')'}</span><span class="ep-subtask-text">${t}</span></div>
+    <textarea class="ep-textarea ep-textarea-lg" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-pts-line">/ ${[4,6,4][i]||4} Punkte</div>
+  </div>`).join('')}
+</div>
+
+<!-- ══ AUFGABE 8: INTERPROFESSIONELL & DOKU ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 8 — Interprofessionelle Zusammenarbeit & Dokumentation</span>
+      <span class="ep-aufgabe-tag">KB III · IV</span>
+      <span class="ep-kb-badge">Team & Doku</span>
+    </div>
+    <span class="ep-aufgabe-pts">15 Punkte</span>
+  </div>
+  <p class="ep-instruction">${c.a8.intro}</p>
+  ${(c.a8.teilaufgaben||[]).map((t,i)=>`
+  <div class="ep-subtask">
+    <div class="ep-subtask-header"><span class="ep-subtask-letter">${['a)','b)','c)'][i]||i+')'}</span><span class="ep-subtask-text">${t}</span></div>
+    <textarea class="ep-textarea ep-textarea-lg" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-pts-line">/ ${[6,5,4][i]||5} Punkte</div>
+  </div>`).join('')}
+</div>
+
+<!-- ══ AUFGABE 9: ETHIK & RECHT ══ -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <div class="ep-aufgabe-left">
+      <span class="ep-aufgabe-nr">Aufgabe 9 — Ethik, Recht & Reflexion der Berufsrolle</span>
+      <span class="ep-aufgabe-tag">KB IV · V</span>
+      <span class="ep-kb-badge">Berufsethos</span>
+    </div>
+    <span class="ep-aufgabe-pts">17 Punkte</span>
+  </div>
+  <p class="ep-instruction">${c.a9.intro}</p>
+  <p class="ep-instruction" style="background:#fef2f2;border-left:3px solid #ef4444;padding:8px 12px;font-size:13.5px"><strong>Situation:</strong> ${c.a9.ethik_situation||'Der Patient lehnt eine notwendige Maßnahme ab.'}</p>
+  ${(c.a9.teilaufgaben||[]).map((t,i)=>`
+  <div class="ep-subtask">
+    <div class="ep-subtask-header"><span class="ep-subtask-letter">${['a)','b)','c)'][i]||i+')'}</span><span class="ep-subtask-text">${t}</span></div>
+    <textarea class="ep-textarea ep-textarea-xl" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-pts-line">/ ${[8,4,6][i]||5} Punkte — Schreiben Sie in ganzen Sätzen und begründen Sie fachlich.</div>
+  </div>`).join('')}
+</div>
+
+<!-- ══ FOOTER / SCORING ══ -->
+<div class="ep-footer">
+  <span class="ep-footer-note">✏ Viel Erfolg! · Die Ausbildung wird unabhängig vom Ergebnis der Zwischenprüfung fortgesetzt (§ 6 Abs. 5 PflBG).</span>
+  <span class="ep-footer-pts">Gesamt: 150 P. (Übungsklausur) — Gewichtet: 100 P.</span>
+</div>
+
+<table class="ep-scoring-table">
+  <thead><tr><th>Aufgabe</th><th>Thema</th><th>KB</th><th>Max. Punkte</th><th>Erreichte Punkte</th></tr></thead>
+  <tbody>
+    <tr><td>1 — Richtig/Falsch</td><td>Pflege-Grundwissen</td><td>I–V</td><td>20</td><td></td></tr>
+    <tr><td>2 — SIS® / Info-Sammlung</td><td>Pflegeprozess Schritt 1</td><td>I, II</td><td>18</td><td></td></tr>
+    <tr><td>3 — Pflegeplanung</td><td>Komplikationen & Pflegeziele</td><td>I, V</td><td>21</td><td></td></tr>
+    <tr><td>4 — Pflegerische Versorgung</td><td>Maßnahmen 1–24h</td><td>I, III, V</td><td>18</td><td></td></tr>
+    <tr><td>5 — Multiple Choice</td><td>Fachwissen</td><td>I, II, IV</td><td>16</td><td></td></tr>
+    <tr><td>6 — Kommunikation</td><td>Erstgespräch & Beratung</td><td>II</td><td>11</td><td></td></tr>
+    <tr><td>7 — Schmerzmanagement</td><td>Assessment & Mobilisation</td><td>I, II, III</td><td>14</td><td></td></tr>
+    <tr><td>8 — Interprofessionell</td><td>Team & Dokumentation</td><td>III, IV</td><td>15</td><td></td></tr>
+    <tr><td>9 — Ethik & Recht</td><td>Berufsrolle & Reflexion</td><td>IV, V</td><td>17</td><td></td></tr>
+    <tr style="font-weight:900;background:#e8e8e8"><td colspan="3"><strong>Gesamt</strong></td><td><strong>150 P.</strong></td><td><strong>/ 150 P.</strong></td></tr>
+  </tbody>
+</table>
+`;
+}
+
+// ═══════════════════════════════════════════
+// INTERACTIVITY
+// ═══════════════════════════════════════════
+function selectRF(el, val, rowIdx){
+  const row = el.closest('tr');
+  row.querySelectorAll('.ep-rf-circle').forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+}
+function selectMC(groupIdx, optIdx, el){
+  const group = document.getElementById('mc-'+groupIdx);
+  if(!group)return;
+  group.querySelectorAll('li').forEach(li=>li.classList.remove('mc-sel'));
+  el.classList.add('mc-sel');
+}
+
+// ═══════════════════════════════════════════
+// TIMER
+// ═══════════════════════════════════════════
+function startTimer(){
+  updateTimerDisplay();
+  timerInterval = setInterval(()=>{
+    examSecondsLeft--;
+    updateTimerDisplay();
+    if(examSecondsLeft<=0){clearInterval(timerInterval);submitExam(true);}
+  },1000);
+}
+function updateTimerDisplay(){
+  const m=Math.floor(examSecondsLeft/60),s=examSecondsLeft%60;
+  const el=document.getElementById('timer-display');
+  const wrap=document.getElementById('timer-wrap');
+  el.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  if(examSecondsLeft<=300){wrap.classList.add('timer-urgent');el.style.color='#f87171';}
+  else if(examSecondsLeft<=900){el.style.color='#fbbf24';}
+  else{el.style.color='#fb923c';}
+}
+
+// ═══════════════════════════════════════════
+// SUBMIT
+// ═══════════════════════════════════════════
+async function submitExam(timeout=false){
+  clearInterval(timerInterval);
+  document.getElementById('btn-submit').disabled=true;
+  document.getElementById('result-overlay').style.display='block';
+
+  // Collect answers
+  const answers=[];
+  document.querySelectorAll('#exam-paper .ep-textarea').forEach((ta,i)=>{if(ta.value.trim())answers.push({field:`Freitext ${i+1}`,val:ta.value.trim().slice(0,300)});});
+  document.querySelectorAll('#exam-paper .ep-rf-row').forEach((row,i)=>{
+    const sel=row.querySelector('.ep-rf-circle.sel');
+    const stmt=row.querySelector('td')?.textContent?.trim().replace(/^\d+\.\s*/,'').slice(0,60)||`Aussage ${i+1}`;
+    answers.push({field:`R/F ${i+1}: "${stmt}"`,val:sel?sel.closest('td').previousElementSibling?'F':'R':'Keine Antwort'});
+  });
+  document.querySelectorAll('#exam-paper [id^="mc-"]').forEach((g,i)=>{
+    const sel=g.querySelector('li.mc-sel span:last-child');
+    answers.push({field:`MC ${i+1}`,val:sel?sel.textContent:'Keine Antwort'});
+  });
+
+  const answered=answers.filter(a=>a.val&&a.val!=='Keine Antwort'&&a.val.length>2).length;
+  const elapsed = 130*60 - examSecondsLeft;
+
+  const prompt=`Du bist Pflegelehrerin und bewertest diese Zwischenprüfungs-Abgabe eines Pflegeazubis (Ende 2. Ausbildungsdrittel, PflAPrV Anlage 1).
+
+ABGABE: ${answered} von ${answers.length} Feldern beantwortet${timeout?' (Zeit abgelaufen)':''}.
+AUSSCHNITTE: ${answers.filter(a=>a.val&&a.val!=='Keine Antwort'&&a.val.length>5).slice(0,12).map(a=>`• ${a.field}: "${a.val.slice(0,200)}"`).join('\n')}
+
+Erstelle eine aufmunternde, konstruktive Bewertung als HTML mit inline-CSS:
+1. Ergebnis-Box (blau, border:2px solid #3b82f6, bg:#eff6ff, border-radius:8px, padding:16px): Geschätzte Gesamtpunktzahl /100, Einschätzung (z.B. "gut / ausreichend / noch nicht ausreichend"), kurze Einordnung
+2. KB-Tabelle: KB I–V | Einschätzung (gut/ausreichend/schwach) | kurzer Kommentar je KB
+3. Stärken-Box (border-left:4px solid #22c55e, bg:#f0fdf4, padding:12px): Was erkennbar gut bearbeitet wurde
+4. Entwicklungsfelder-Box (border-left:4px solid #f97316, bg:#fff7ed, padding:12px): 3-4 konkrete Tipps zur Verbesserung
+5. Top-5-Lernempfehlungen für die nächste Klausur (nummeriert, spezifisch auf PflAPrV KB bezogen)
+6. Ermutigender Abschluss: Hinweis dass Zwischenprüfung nicht bestanden/nicht bestanden werden kann
+
+Nur HTML zurückgeben.`;
+
+  const html = await callKI(prompt, 2000)||`<div style="font-family:'Plus Jakarta Sans',sans-serif;color:#e2e8f0"><div style="background:#1e3a5f;border:2px solid #3b82f6;border-radius:8px;padding:16px;margin-bottom:16px"><h3 style="color:#93c5fd;margin:0 0 6px;font-size:15px">📋 Deine Abgabe</h3><p style="color:#94a3b8;font-size:13px">${answered} von ${answers.length} Feldern beantwortet. KI-Bewertung nicht verfügbar — API-Verbindung prüfen.</p></div></div>`;
+
+  document.getElementById('result-grade-box').innerHTML=`<div style="font-size:13px;color:#a5b4fc;font-weight:700">${answered} Felder beantwortet · ${Math.floor(elapsed/60)} Min. Bearbeitungszeit</div>`;
+  document.getElementById('result-body').innerHTML=`<div style="font-family:'Plus Jakarta Sans',sans-serif">${html}</div>`;
+}
+function closeResult(){document.getElementById('result-overlay').style.display='none';}
+
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', async ()=>{
+  try{
+    const data = await generateExam();
+    setStep(5);
+    const fb = (data.part1 && data.part2) ? data : getFallback();
+    const html = buildExamHTML(fb);
+    setStep(5, true);
+
+    document.getElementById('loading-screen').style.display='none';
+    document.getElementById('paper-container').style.display='block';
+    document.getElementById('exam-paper').innerHTML = html;
+    document.getElementById('btn-submit').disabled = false;
+    startTimer();
+  }catch(err){
+    console.error('Init error:',err);
+    const fb = getFallback();
+    const html = buildExamHTML(fb);
+    document.getElementById('loading-screen').style.display='none';
+    document.getElementById('paper-container').style.display='block';
+    document.getElementById('exam-paper').innerHTML = html;
+    document.getElementById('btn-submit').disabled = false;
+    startTimer();
+  }
+});
+</script>
+</body>
+</html>
