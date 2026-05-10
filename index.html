@@ -43,149 +43,123 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 .lernheft-card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)!important}
 
 /* ═══ EXAM PAPER STYLES ═══ */
-.exam-paper{background:white;box-shadow:0 4px 40px rgba(0,0,0,.15),0 1px 3px rgba(0,0,0,.08);border-radius:4px;font-family:'Crimson Pro','Times New Roman',serif;color:#1a1a1a;font-size:15px;line-height:1.6}
+.exam-paper{background:white;box-shadow:0 4px 40px rgba(0,0,0,.15);border-radius:4px;font-family:'Crimson Pro','Times New Roman',serif;color:#1a1a1a;font-size:15px;line-height:1.6}
 .ep-header{border-bottom:3px double #333;padding:32px 48px 24px}
-.ep-header-top{font-size:11px;font-weight:600;color:#444;line-height:1.4;border-bottom:1px solid #999;padding-bottom:12px;margin-bottom:20px;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-header-top{font-size:11px;font-weight:600;color:#444;line-height:1.4;border-bottom:1px solid #999;padding-bottom:12px;margin-bottom:20px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.02em}
 .ep-title{text-align:center;padding:20px 0}
 .ep-title h1{font-size:26px;font-weight:700;letter-spacing:-.5px}
 .ep-title h2{font-size:20px;font-weight:600;margin-top:4px}
+.ep-title p{font-size:13px;color:#555;margin-top:6px;font-family:'Plus Jakarta Sans',sans-serif}
 .ep-info-grid{display:grid;grid-template-columns:1fr 1fr;border:2px solid #333;margin-top:16px}
 .ep-info-cell{padding:10px 16px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px}
 .ep-info-cell label{font-weight:700;color:#555;font-size:11px;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:2px}
 .ep-info-cell input{border:none;border-bottom:1px solid #999;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;padding:2px 4px;width:80%;outline:none;background:transparent}
-.ep-fallbeispiel{padding:28px 48px;border-bottom:2px solid #333}
-.ep-fallbeispiel-title{font-weight:700;font-size:17px;margin-bottom:16px}
-.ep-fallbeispiel p{text-align:justify;margin-bottom:12px;font-size:14.5px;line-height:1.7}
-.ep-aufgabe{padding:24px 48px;border-bottom:1.5px solid #ddd;page-break-inside:avoid}
-.ep-aufgabe:last-child{border-bottom:none}
-.ep-aufgabe-header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#e8e8e8,#f0f0f0);padding:8px 16px;margin:-4px -4px 16px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif}
-.ep-aufgabe-nr{font-weight:800;font-size:14px;color:#222}
-.ep-aufgabe-pts{font-size:12px;font-weight:700;color:#555;border:1.5px solid #999;padding:3px 10px;border-radius:2px}
+.ep-hinweis{margin:16px 48px;padding:12px 16px;background:#fffbeb;border:1px solid #f59e0b;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#78350f}
+.ep-fallbeispiel{padding:28px 48px;border-bottom:2px solid #333;background:#fafafa}
+.ep-fallbeispiel-title{font-weight:700;font-size:17px;margin-bottom:16px;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-fallbeispiel p{text-align:justify;margin-bottom:12px;font-size:14.5px;line-height:1.75}
+.ep-aufgabe{padding:24px 48px;border-bottom:1.5px solid #e0e0e0}
+.ep-aufgabe:last-child{border-bottom:none;padding-bottom:40px}
+.ep-aufgabe-header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#e8e8e8,#f0f0f0);padding:10px 16px;margin:-4px -4px 18px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;border-radius:2px}
+.ep-aufgabe-nr{font-weight:800;font-size:14px;color:#111}
+.ep-aufgabe-pts{font-size:12px;font-weight:700;color:#444;border:1.5px solid #888;padding:3px 12px;border-radius:2px;background:white}
 .ep-aufgabe-tag{font-size:11px;font-weight:600;color:#666;font-style:italic}
-.ep-instruction{font-size:14.5px;line-height:1.7;margin-bottom:14px}
+.ep-instruction{font-size:14.5px;line-height:1.75;margin-bottom:16px;color:#222}
 .ep-instruction strong{font-weight:700}
-.ep-rf-table{width:100%;border-collapse:collapse;border:1.5px solid #555;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px}
-.ep-rf-table th{background:#e8e8e8;padding:8px 12px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.03em;border:1px solid #999;text-align:center}
-.ep-rf-table th:first-child{text-align:left}
-.ep-rf-row td{border:1px solid #bbb;padding:10px 12px;font-size:13.5px;vertical-align:middle}
-.ep-rf-row td:first-child{line-height:1.5}
-.ep-rf-option{text-align:center;width:70px;cursor:pointer}
+.ep-sub{font-size:13.5px;color:#333;margin-bottom:10px;padding-left:4px;border-left:3px solid #ddd;padding-left:8px}
+/* RF Table */
+.ep-rf-table{width:100%;border-collapse:collapse;border:1.5px solid #555;font-family:'Plus Jakarta Sans',sans-serif;margin:8px 0 12px}
+.ep-rf-table th{background:#e0e0e0;padding:9px 14px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #999;text-align:center}
+.ep-rf-table th:first-child{text-align:left;width:70%}
+.ep-rf-row td{border:1px solid #ccc;padding:11px 14px;font-size:13.5px;vertical-align:middle}
+.ep-rf-row:nth-child(even) td{background:#fafafa}
+.ep-rf-option{text-align:center;width:15%;cursor:pointer}
 .ep-rf-option:hover{background:#f0f0ff}
-.ep-rf-radio{width:20px;height:20px;border:2px solid #888;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer}
+.ep-rf-radio{width:22px;height:22px;border:2px solid #999;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer}
 .ep-rf-radio.selected{border-color:#4f46e5;background:#4f46e5}
 .ep-rf-radio.selected::after{content:'✕';color:white;font-size:10px;font-weight:800}
-.ep-textarea{width:100%;border:1.5px solid #ccc;padding:10px 12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fafafa;outline:none;resize:vertical;min-height:90px;transition:border-color .2s;border-radius:2px;line-height:1.6}
+/* Textarea */
+.ep-textarea{width:100%;border:1.5px solid #bbb;padding:10px 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fefefe;outline:none;resize:vertical;min-height:100px;transition:border-color .2s;border-radius:2px;line-height:1.7;box-sizing:border-box}
 .ep-textarea:focus{border-color:#4f46e5;background:white}
-.ep-points{text-align:right;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:#888;margin-top:8px;font-style:italic}
-.ep-loesung-lines{margin:8px 0}
-.ep-loesung-line{border-bottom:1px solid #bbb;height:28px;margin-bottom:6px}
-.result-correct{background:#f0fdf4!important;border-left:4px solid #22c55e!important}
-.result-partial{background:#fffbeb!important;border-left:4px solid #f59e0b!important}
-.result-wrong{background:#fef2f2!important;border-left:4px solid #ef4444!important}
-
-/* Probeklausur Warning Modal */
-.pk-warning-modal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(0,0,0,.8);backdrop-filter:blur(12px)}
+/* Writing lines */
+.ep-lines{margin:8px 0 4px}
+.ep-line{border-bottom:1px solid #bbb;height:30px;margin-bottom:2px;width:100%}
+.ep-points{text-align:right;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:#888;margin-top:6px;font-style:italic}
+/* Scoring box */
+.ep-scoring{margin:12px 0;padding:10px 14px;border:1.5px solid #ccc;background:#f8f8f8;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#555;border-radius:2px;display:flex;justify-content:space-between;align-items:center}
+/* MC options */
+.ep-mc-list{list-style:none;padding:0;margin:8px 0}
+.ep-mc-list li{display:flex;align-items:flex-start;gap:10px;padding:7px 10px;margin-bottom:4px;border:1px solid #ddd;border-radius:2px;font-size:13.5px;cursor:pointer;transition:background .15s}
+.ep-mc-list li:hover{background:#f0f0ff}
+.ep-mc-list li.selected{background:#eef2ff;border-color:#6366f1}
+.ep-mc-box{width:18px;height:18px;border:2px solid #888;border-radius:3px;shrink:0;display:inline-block;margin-top:1px}
+.ep-mc-list li.selected .ep-mc-box{background:#6366f1;border-color:#6366f1}
+/* Zuordnung */
+.ep-zuord-table{width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;margin:8px 0}
+.ep-zuord-table td{padding:8px 12px;border:1px solid #ccc;vertical-align:middle}
+.ep-zuord-table td:first-child{font-weight:700;width:40%;background:#f5f5f5}
+.ep-zuord-input{border:none;border-bottom:2px solid #999;width:100%;outline:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;padding:2px 4px;background:transparent}
 
 @media(max-width:640px){
   .exam-paper{font-size:13px;border-radius:0}
   .ep-header,.ep-fallbeispiel,.ep-aufgabe{padding:16px}
   .ep-info-grid{grid-template-columns:1fr}
   .ep-title h1{font-size:18px}.ep-title h2{font-size:15px}
+  .ep-hinweis{margin:8px 16px}
 }
-
-/* Lernheft content styles */
-.lernheft-content h2{font-size:1.1rem;font-weight:800;color:#818cf8;margin:1.2rem 0 .5rem;border-bottom:1px solid rgba(129,140,248,.2);padding-bottom:.3rem}
-.lernheft-content h3{font-size:.95rem;font-weight:700;color:#c4b5fd;margin:.8rem 0 .3rem}
-.lernheft-content p{font-size:.85rem;color:#94a3b8;margin-bottom:.5rem;line-height:1.6}
-.lernheft-content ul{padding-left:1.2rem;margin-bottom:.5rem}
-.lernheft-content li{font-size:.85rem;color:#94a3b8;margin-bottom:.2rem}
-.lernheft-content table{width:100%;border-collapse:collapse;margin:.5rem 0;font-size:.8rem}
-.lernheft-content th{background:rgba(99,102,241,.15);color:#a5b4fc;padding:.4rem .6rem;border:1px solid rgba(255,255,255,.1);font-weight:700}
-.lernheft-content td{padding:.4rem .6rem;border:1px solid rgba(255,255,255,.07);color:#94a3b8}
-.lernheft-content .bg-green-50{background:rgba(34,197,94,.08)!important;border-left:4px solid #22c55e;padding:.6rem .8rem;border-radius:0 6px 6px 0;margin:.5rem 0}
-.lernheft-content .bg-indigo-50,.lernheft-content .bg-red-50{background:rgba(99,102,241,.08)!important;border-left:4px solid #6366f1;padding:.6rem .8rem;border-radius:0 6px 6px 0;margin:.5rem 0}
-.lernheft-content .text-indigo-900,.lernheft-content .text-green-800{color:#a5b4fc!important}
-.lernheft-content .text-slate-700,.lernheft-content .text-slate-600,.lernheft-content .text-slate-800{color:#94a3b8!important}
-.lernheft-content strong{color:#e2e8f0}
-.lernheft-content .overflow-x-auto{overflow-x:auto}
-.lernheft-content .min-w-full{min-width:100%}
-.lernheft-content .bg-indigo-900{background:rgba(99,102,241,.3)!important}
-.lernheft-content .text-white{color:#f1f5f9!important}
-.lernheft-content .border{border-color:rgba(255,255,255,.1)!important}
-.lernheft-content .shadow-sm{box-shadow:none!important}
-.lernheft-content .bg-white{background:rgba(255,255,255,.04)!important;border-radius:6px;padding:.5rem!important}
 </style>
 </head>
 <body class="min-h-screen text-slate-100 relative">
 <div class="page-bg"></div>
 
 <!-- ═══ PROBEKLAUSUR WARNING MODAL ═══ -->
-<div id="pk-warning-modal" class="pk-warning-modal hidden">
+<div id="pk-warning-modal" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(12px)">
   <div class="w-full max-w-lg modal-anim">
-    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.3);box-shadow:0 0 60px rgba(249,115,22,.15)">
-      <!-- Header -->
-      <div class="p-6 pb-4" style="background:linear-gradient(135deg,rgba(249,115,22,.15),rgba(245,158,11,.08))">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.3),rgba(245,158,11,.2));border:2px solid rgba(249,115,22,.4)">
+    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.35);box-shadow:0 0 80px rgba(249,115,22,.15)">
+      <div class="p-6 pb-5" style="background:linear-gradient(135deg,rgba(249,115,22,.18),rgba(245,158,11,.08))">
+        <div class="flex items-center gap-4 mb-2">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.3),rgba(245,158,11,.2));border:2px solid rgba(249,115,22,.5)">
             <i class="fas fa-exclamation-triangle text-orange-400 text-2xl"></i>
           </div>
           <div>
-            <h2 class="text-white font-black text-xl tracking-tight">Wichtiger Hinweis</h2>
-            <p class="text-orange-400 text-xs font-bold mt-0.5 uppercase tracking-widest">Vor dem Start lesen</p>
+            <h2 class="text-white font-black text-xl">Wichtiger Hinweis</h2>
+            <p class="text-orange-400 text-xs font-bold uppercase tracking-widest mt-0.5">Bitte vor dem Start lesen</p>
           </div>
         </div>
       </div>
-      <!-- Content -->
-      <div class="px-6 pb-6 space-y-4">
+      <div class="px-6 py-5 space-y-3">
         <div class="rounded-2xl p-4" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)">
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(249,115,22,.15)">
-              <i class="fas fa-robot text-orange-400 text-sm"></i>
-            </div>
+            <i class="fas fa-robot text-orange-400 text-sm mt-0.5 shrink-0"></i>
             <div>
-              <h4 class="font-black text-white text-sm mb-1">KI-generiertes Modell</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Diese Probeklausur wird von einer KI auf Basis deiner Lernmaterialien und vergangener Prüfungsversuche generiert. Sie dient der Vorbereitung und Übung.</p>
+              <h4 class="font-black text-white text-sm mb-1">KI-Modell auf Basis früherer Prüfungsversuche</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">Diese Probeklausur wird von einer KI generiert, die auf deinen bisherigen Lernmaterialien und typischen Prüfungsmustern basiert. Sie ist ein Übungsmodell und kein offizielles Prüfungsdokument.</p>
             </div>
           </div>
         </div>
-
-        <div class="rounded-2xl p-4" style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2)">
+        <div class="rounded-2xl p-4" style="background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2)">
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(239,68,68,.15)">
-              <i class="fas fa-info-circle text-red-400 text-sm"></i>
-            </div>
+            <i class="fas fa-info-circle text-red-400 text-sm mt-0.5 shrink-0"></i>
             <div>
-              <h4 class="font-black text-white text-sm mb-1">Kein Ersatz für die echte Prüfung</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Die echte Zwischenprüfung kann inhaltlich und formal abweichen. Fragen, Aufgabentypen und Schwerpunkte werden vom Prüfungsamt festgelegt.</p>
+              <h4 class="font-black text-white text-sm mb-1">Abweichungen zur echten Prüfung möglich</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">Die echte Zwischenprüfung kann inhaltlich, formal und in der Schwierigkeit abweichen. Fragen und Schwerpunkte werden vom offiziellen Prüfungsamt festgelegt.</p>
             </div>
           </div>
         </div>
-
-        <div class="rounded-2xl p-4" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.2)">
+        <div class="rounded-2xl p-4" style="background:rgba(99,102,241,.07);border:1px solid rgba(99,102,241,.2)">
           <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(99,102,241,.15)">
-              <i class="fas fa-graduation-cap text-indigo-400 text-sm"></i>
-            </div>
+            <i class="fas fa-graduation-cap text-indigo-400 text-sm mt-0.5 shrink-0"></i>
             <div>
-              <h4 class="font-black text-white text-sm mb-1">Deutsches Kompetenz-Prüfungsformat</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Die Klausur folgt den deutschen Pflegeausbildungs-Richtlinien (PflBG) mit Fallbeispielen, Richtig/Falsch-Aufgaben und Freitextaufgaben — insgesamt <strong class="text-orange-400">100 Punkte</strong>.</p>
+              <h4 class="font-black text-white text-sm mb-1">Deutsches Kompetenz-Prüfungsformat (PflBG)</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">Die Klausur folgt den deutschen Pflegeausbildungs-Richtlinien mit Fallbeispiel, Richtig/Falsch, Freitext und Reflexionsaufgaben — <strong class="text-orange-400">100 Punkte gesamt</strong>, 120 Minuten.</p>
             </div>
           </div>
         </div>
-
-        <div class="rounded-2xl p-3 flex items-center gap-3" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
-          <i class="fas fa-clock text-slate-500 text-sm"></i>
-          <div>
-            <p class="text-white text-xs font-bold">120 Minuten · 100 Punkte · Mehrere Aufgaben</p>
-            <p class="text-slate-600 text-[10px]">Basiert auf deinen Lernmaterialien aus allen Modulen</p>
-          </div>
-        </div>
-
         <div class="flex gap-3 pt-2">
-          <button onclick="closePKWarning()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500 hover:text-white transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)">
+          <button onclick="closePKWarning()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500 hover:text-white transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
             <i class="fas fa-times mr-2"></i>Abbrechen
           </button>
-          <button onclick="confirmStartProbeklausur()" class="flex-2 flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 20px rgba(249,115,22,.3)">
+          <button onclick="confirmStartProbeklausur()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 24px rgba(249,115,22,.35)">
             <i class="fas fa-play mr-2"></i>Verstanden — Jetzt starten
           </button>
         </div>
@@ -240,16 +214,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       </div>
       <!-- Tabs -->
       <div class="px-5 pt-3">
-        <div class="flex gap-1.5 p-1 rounded-xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
-          <button onclick="zpSetTab('lernen')" id="tab-lernen" class="zp-tab-btn active flex-1 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-brain mr-1"></i>Lernen</button>
-          <button onclick="zpSetTab('klausur')" id="tab-klausur" class="zp-tab-btn flex-1 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-file-contract mr-1"></i>Klausur</button>
-          <button onclick="zpSetTab('muendlich')" id="tab-muendlich" class="zp-tab-btn flex-1 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-microphone mr-1"></i>Mündlich</button>
-          <button onclick="zpSetTab('hefte')" id="tab-hefte" class="zp-tab-btn flex-1 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book-open mr-1"></i>Hefte</button>
-          <button onclick="zpSetTab('info')" id="tab-info" class="zp-tab-btn flex-1 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-chart-bar mr-1"></i>Status</button>
+        <div class="flex gap-1 p-1 rounded-xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
+          <button onclick="zpSetTab('lernen')" id="tab-lernen" class="zp-tab-btn active flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-brain mr-1"></i>Lernen</button>
+          <button onclick="zpSetTab('klausur')" id="tab-klausur" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-file-contract mr-1"></i>Klausur</button>
+          <button onclick="zpSetTab('muendlich')" id="tab-muendlich" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-microphone mr-1"></i>Mündlich</button>
+          <button onclick="zpSetTab('hefte')" id="tab-hefte" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book-open mr-1"></i>Hefte</button>
         </div>
       </div>
-      <!-- Tab Content -->
-      <div class="p-5 pt-3" style="min-height:300px">
+      <div class="p-5 pt-3" style="min-height:280px">
+
         <!-- TAB: LERNEN -->
         <div id="zpTab-lernen" class="zp-tab-content">
           <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>120s einprägen → aus dem Gedächtnis abrufen → KI-Lernheft.</p>
@@ -280,32 +253,39 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 
         <!-- TAB: KLAUSUR -->
         <div id="zpTab-klausur" class="zp-tab-content hidden">
-          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-orange-400 mr-1"></i>Echter Prüfungsbogen-Look mit 120-Minuten-Timer. KI generiert Fragen aus deinen Lernmaterialien.</p>
+          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-orange-400 mr-1"></i>Originalgetreuer Prüfungsbogen · 100 Punkte · 120 Minuten · KI-Bewertung.</p>
           <div onclick="showPKWarning()" class="recall-card rounded-2xl p-5 cursor-pointer border mb-3" style="background:linear-gradient(135deg,rgba(249,115,22,.07),rgba(245,158,11,.04));border-color:rgba(249,115,22,.2)">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(245,158,11,.15))"><i class="fas fa-file-contract text-orange-400 text-xl"></i></div>
-              <div><h3 class="text-white font-black text-base">1:1 Probeklausur</h3><p class="text-slate-500 text-xs mt-0.5">Originalgetreuer Prüfungsbogen · 100 Punkte</p></div>
+              <div><h3 class="text-white font-black text-base">1:1 Probeklausur</h3><p class="text-slate-500 text-xs mt-0.5">Originalgetreuer Prüfungsbogen · PflBG-Standard</p></div>
             </div>
             <div class="grid grid-cols-3 gap-2 mb-4">
               <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg t-num">120</div><div class="text-slate-600 text-[9px] font-bold uppercase">Minuten</div></div>
               <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">100</div><div class="text-slate-600 text-[9px] font-bold uppercase">Punkte</div></div>
-              <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">KI</div><div class="text-slate-600 text-[9px] font-bold uppercase">Bewertung</div></div>
+              <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">6+</div><div class="text-slate-600 text-[9px] font-bold uppercase">Aufgaben</div></div>
             </div>
             <div class="flex items-center justify-center gap-2 py-2.5 rounded-xl font-black text-sm text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-play text-xs"></i>Jetzt starten</div>
           </div>
-          <div class="rounded-xl p-3 flex items-start gap-2" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)"><i class="fas fa-lightbulb text-amber-400 text-xs mt-0.5 shrink-0"></i><p class="text-[11px] text-slate-500 leading-relaxed">Die KI liest deine echten Lernmaterialien und erstellt prüfungsrelevante Aufgaben nach deutschem Pflegeausbildungsstandard (PflBG).</p></div>
         </div>
 
         <!-- TAB: MÜNDLICH -->
         <div id="zpTab-muendlich" class="zp-tab-content hidden">
-          <div class="flex flex-col items-center justify-center py-10 text-center">
+          <div class="flex flex-col items-center justify-center py-8 text-center">
             <div class="w-20 h-20 rounded-3xl flex items-center justify-center mb-5 relative" style="background:rgba(139,92,246,.08);border:2px solid rgba(139,92,246,.15)">
               <i class="fas fa-microphone text-violet-500 text-2xl"></i>
-              <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)"><i class="fas fa-lock text-violet-400 text-xs"></i></div>
+              <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)">
+                <i class="fas fa-wrench text-violet-400 text-xs"></i>
+              </div>
             </div>
             <h3 class="text-white font-black text-lg mb-2">Mündlicher Teil</h3>
-            <p class="text-slate-500 text-sm mb-4 leading-relaxed max-w-xs">KI-Prüfer stellt Fragen in Echtzeit.</p>
-            <div class="px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-widest" style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);color:#a78bfa">🚧 In Entwicklung</div>
+            <p class="text-slate-500 text-sm mb-2 leading-relaxed max-w-xs">KI-Prüfer stellt Fragen in Echtzeit — du antwortest per Text. Bewertung nach offiziellen Kriterien.</p>
+            <div class="px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-widest mb-3" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:#a78bfa">
+              🚧 In Entwicklung
+            </div>
+            <p class="text-slate-700 text-[10px] font-bold">Verfügbar in einem zukünftigen Update</p>
+            <div class="mt-4 p-3 rounded-xl w-full" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)">
+              <p class="text-[11px] text-slate-600 leading-relaxed"><i class="fas fa-lightbulb text-amber-500 mr-1"></i>Der mündliche Teil der Zwischenprüfung umfasst typischerweise ein 15-minütiges Patientengespräch mit anschließender Reflexion.</p>
+            </div>
           </div>
         </div>
 
@@ -315,23 +295,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             <p class="text-slate-500 text-xs">Gespeicherte KI-Lernhefte</p>
             <button onclick="clearAllLernbuecher()" class="text-[10px] text-slate-700 hover:text-red-400 transition-colors font-bold"><i class="fas fa-trash mr-1"></i>Alle löschen</button>
           </div>
-          <div id="zp-lernhefte-list" class="space-y-2 max-h-60 overflow-y-auto pr-1"></div>
+          <div id="zp-lernhefte-list" class="space-y-2 max-h-56 overflow-y-auto pr-1"></div>
         </div>
 
-        <!-- TAB: STATUS -->
-        <div id="zpTab-info" class="zp-tab-content hidden">
-          <div class="space-y-3">
-            <div class="rounded-2xl p-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
-              <h3 class="text-white font-black text-xs uppercase tracking-widest mb-3 flex items-center gap-2"><i class="fas fa-unlock text-indigo-400"></i>Freischalt-Bedingungen</h3>
-              <div class="space-y-2.5" id="cond-list">
-                <div id="cond-exams" class="flex items-center gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 bg-slate-800"><i class="fas fa-times text-[8px] text-slate-600"></i></div><div class="flex-1"><p class="text-slate-400 text-xs">Klausuren in mind. 7 von 9 Modulen</p></div><span id="cond-exams-val" class="text-xs font-black text-slate-600 t-num">0/9</span></div>
-                <div id="cond-avg" class="flex items-center gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 bg-slate-800"><i class="fas fa-times text-[8px] text-slate-600"></i></div><div class="flex-1"><p class="text-slate-400 text-xs">Durchschnittlich 70%+ in Klausuren</p></div><span id="cond-avg-val" class="text-xs font-black text-slate-600 t-num">0%</span></div>
-                <div id="cond-xp" class="flex items-center gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 bg-slate-800"><i class="fas fa-times text-[8px] text-slate-600"></i></div><div class="flex-1"><p class="text-slate-400 text-xs">Mindestens 3.000 Arena XP</p></div><span id="cond-xp-val" class="text-xs font-black text-slate-600 t-num">0</span></div>
-                <div id="cond-arena" class="flex items-center gap-3"><div class="w-5 h-5 rounded-full flex items-center justify-center shrink-0 bg-slate-800"><i class="fas fa-times text-[8px] text-slate-600"></i></div><div class="flex-1"><p class="text-slate-400 text-xs">Arena-Training in mind. 5 Modulen</p></div><span id="cond-arena-val" class="text-xs font-black text-slate-600 t-num">0/5</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -352,45 +318,46 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
   </div>
 </div>
 
-<!-- ═══ PROBEKLAUSUR MODAL (Paper Look) ═══ -->
+<!-- ═══ PROBEKLAUSUR MODAL ═══ -->
 <div id="pk-modal" class="fixed inset-0 z-[160] flex items-center justify-center p-3 hidden" style="background:rgba(2,4,16,.95);backdrop-filter:blur(14px)">
   <div class="w-full max-w-3xl modal-anim flex flex-col" style="max-height:96vh">
-    <div id="pk-topbar" class="flex items-center justify-between px-5 py-3 rounded-t-2xl shrink-0" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.15);border-bottom:none">
+    <div class="flex items-center justify-between px-5 py-3 rounded-t-2xl shrink-0" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.15);border-bottom:none">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(249,115,22,.15)"><i class="fas fa-file-contract text-orange-400 text-sm"></i></div>
         <div><span class="font-black text-white text-sm">Probeklausur</span><span class="text-slate-600 text-[10px] ml-2">BZPG Würselen · Pflegefachkraft</span></div>
       </div>
       <div class="flex items-center gap-4">
         <div class="text-right"><div id="pk-timer-display" class="text-xl font-black text-orange-400 t-num leading-none">120:00</div><div class="text-[9px] text-slate-600 font-bold uppercase">Verbleibend</div></div>
-        <button onclick="closePK()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:text-red-400 hover:bg-red-500/5 transition-all"><i class="fas fa-times text-sm"></i></button>
+        <button onclick="closePK()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:text-red-400 transition-all"><i class="fas fa-times text-sm"></i></button>
       </div>
     </div>
-    <div id="pk-content" class="overflow-y-auto flex-1 rounded-b-2xl" style="border:1px solid rgba(249,115,22,.15);border-top:none;-webkit-overflow-scrolling:touch;background:#f5f4f0">
-      <div class="flex items-center justify-center py-16" style="background:#f5f4f0">
+    <div id="pk-content" class="overflow-y-auto flex-1 rounded-b-2xl" style="border:1px solid rgba(249,115,22,.15);border-top:none;background:#f5f4f0">
+      <div class="flex items-center justify-center py-20" style="background:#f5f4f0">
         <div class="text-center">
           <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
-          <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px">KI erstellt Prüfungsbogen...</p>
+          <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">KI erstellt Prüfungsbogen...</p>
+          <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;margin-top:6px">100 Punkte · 6 Aufgaben · Bitte warten</p>
         </div>
       </div>
     </div>
     <div id="pk-footer" class="hidden shrink-0 mt-2">
       <div class="flex gap-3">
         <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500 hover:text-red-400 transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)"><i class="fas fa-times mr-2"></i>Abbrechen</button>
-        <button onclick="submitPK()" class="flex-2 flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 20px rgba(249,115,22,.25)"><i class="fas fa-paper-plane mr-2"></i>Klausur abgeben</button>
+        <button onclick="submitPK()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 20px rgba(249,115,22,.25)"><i class="fas fa-paper-plane mr-2"></i>Klausur abgeben</button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- ═══ LERNBUCH VIEWER ═══ -->
-<div id="lb-view-modal" class="fixed inset-0 z-[170] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,.88);backdrop-filter:blur(14px)">
+<div id="lb-view-modal" class="fixed inset-0 z-[170] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(14px)">
   <div class="w-full max-w-2xl modal-anim flex flex-col" style="max-height:90vh">
     <div class="rounded-3xl overflow-hidden flex flex-col" style="background:rgba(8,12,28,.97);border:1px solid rgba(99,102,241,.15);max-height:90vh">
       <div class="flex items-center justify-between p-5 shrink-0" style="border-bottom:1px solid rgba(255,255,255,.05)">
         <div class="flex items-center gap-3 min-w-0"><div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div><span id="lb-view-title" class="font-black text-white text-sm truncate"></span></div>
         <button onclick="document.getElementById('lb-view-modal').classList.add('hidden')" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all shrink-0"><i class="fas fa-times text-sm"></i></button>
       </div>
-      <div id="lb-view-content" class="overflow-y-auto flex-1 p-6 text-sm leading-relaxed lernheft-content" style="-webkit-overflow-scrolling:touch"></div>
+      <div id="lb-view-content" class="overflow-y-auto flex-1 p-6 text-sm leading-relaxed" style="-webkit-overflow-scrolling:touch"></div>
     </div>
   </div>
 </div>
@@ -445,43 +412,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
     </div>
   </header>
 
-  <!-- ZP MEGA WIDGET -->
+  <!-- ZP WIDGET -->
   <div class="mb-8 anim" style="animation-delay:.08s">
     <div class="rounded-3xl overflow-hidden relative" style="background:linear-gradient(135deg,rgba(8,12,28,.9),rgba(12,16,36,.95));border:1px solid rgba(99,102,241,.15)">
       <div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,.4),rgba(139,92,246,.4),transparent)"></div>
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
-        <div class="lg:col-span-3 p-7 sm:p-8">
-          <div class="flex items-start justify-between mb-5">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-11 h-11 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.35)"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
-                <div><h2 class="text-white font-black text-xl uppercase tracking-tight">Zwischenprüfung</h2><p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Ende 2. Ausbildungsjahr</p></div>
-              </div>
-              <p id="ready-text" class="text-slate-500 text-sm font-medium mt-1"></p>
-            </div>
-            <div class="text-right shrink-0"><div id="ready-emoji" class="text-4xl leading-none"></div><div id="ready-label" class="text-xs font-black mt-1.5 uppercase tracking-wider"></div></div>
-          </div>
-          <div class="mb-5">
-            <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5"><span>Gesamtfortschritt</span><span id="ready-pct-text" class="text-indigo-400 t-num">0%</span></div>
-            <div class="w-full rounded-full h-3 overflow-hidden p-0.5" style="background:rgba(255,255,255,.04)"><div id="ready-bar" class="h-full rounded-full transition-all duration-1000" style="width:0%;background:linear-gradient(90deg,#6366f1,#8b5cf6,#3b82f6)"></div></div>
-          </div>
-          <div class="flex flex-wrap gap-2.5">
-            <button onclick="openZPHub()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-play text-xs"></i>Training starten</button>
-            <button onclick="showPKWarning()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)"><i class="fas fa-file-contract text-xs"></i>Probeklausur</button>
-            <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)"><i class="fas fa-book-open text-xs"></i><span id="dash-hefte-count">0 Hefte</span></button>
+      <div class="p-7 sm:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.35)"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
+            <div><h2 class="text-white font-black text-xl uppercase tracking-tight">Zwischenprüfung</h2><p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Ende 2. Ausbildungsjahr · BZPG Würselen</p></div>
           </div>
         </div>
-        <div class="lg:col-span-2 p-6 sm:p-7 flex flex-col justify-between gap-4" style="border-left:1px solid rgba(255,255,255,.04)">
-          <div class="grid grid-cols-2 gap-3">
-            <div class="rounded-2xl p-4 text-center" style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.1)"><div id="s-xp" class="text-2xl font-extrabold text-violet-400 t-num">0</div><div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Arena XP</div></div>
-            <div class="rounded-2xl p-4 text-center" style="background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.1)"><div class="flex items-center justify-center gap-1"><span class="text-lg">🔥</span><span id="s-streak" class="text-2xl font-extrabold text-orange-400 t-num">0</span></div><div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Streak</div></div>
-            <div class="rounded-2xl p-4 text-center" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.1)"><div id="s-level" class="text-2xl font-extrabold text-indigo-400 t-num">1</div><div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Level</div></div>
-            <div class="rounded-2xl p-4 text-center" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)"><div id="s-grade" class="text-2xl font-extrabold text-slate-600 t-num">—</div><div class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1">Beste Note</div></div>
-          </div>
-          <div>
-            <div class="flex items-center justify-between mb-2"><span class="text-[9px] font-black text-slate-600 uppercase tracking-widest">Letzte Lernhefte</span><button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="text-[9px] text-indigo-500 hover:text-indigo-400 font-bold transition-colors">Alle →</button></div>
-            <div id="dash-lernhefte-preview" class="space-y-1.5"><div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div></div>
-          </div>
+        <div class="flex flex-wrap gap-2.5">
+          <button onclick="openZPHub()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-brain text-xs"></i>Active Recall</button>
+          <button onclick="showPKWarning()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)"><i class="fas fa-file-contract text-xs"></i>Probeklausur</button>
+          <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)"><i class="fas fa-book-open text-xs"></i><span id="dash-hefte-count">0 Hefte</span></button>
         </div>
       </div>
     </div>
@@ -497,7 +442,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
     </a>
     <a href="exam-simulator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer border-orange-500/10" style="--accent:#f97316">
       <div class="mod-glow" style="background:#f97316"></div>
-      <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div><div class="text-right" id="sim-note"><span class="font-black text-slate-600 text-lg">—</span></div></div>
+      <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div></div>
       <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">Klausur-Simulator</h3>
       <p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">90 Min • Fallbeispiel • Bewertung</p>
       <div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Starten</span><i class="fas fa-arrow-right text-[8px]"></i></div>
@@ -524,9 +469,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 
 <script src="js/cloud-sync.js"></script>
 <script>
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // CONFIG
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 const MODULES=[
   {id:1,name:'Kommunikation & Biografie',icon:'fa-book-open',color:'#6366f1',href:'module.html'},
   {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#6366f1',href:'module2.html'},
@@ -539,22 +484,20 @@ const MODULES=[
   {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
 ];
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // STATE
-// ═══════════════════════════════════════════════════════════════
-let readinessScore=0;
+// ═══════════════════════════════════════════════════════
 let rawQuestionCache={};
 let zpState={
-  mode:null,rawQuestions:[],currentIndex:0,phase:'spickzettel',
+  rawQuestions:[],currentIndex:0,phase:'spickzettel',
   userAnswers:[],timerInterval:null,timerSeconds:120,
-  examInterval:null,examSecondsLeft:7200,pkAnswers:[],pkQuestions:[],pkExamHTML:'',
+  examInterval:null,examSecondsLeft:7200,pkExamHTML:'',
 };
 
-// ═══════════════════════════════════════════════════════════════
-// PROBEKLAUSUR WARNING
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+// WARNING MODAL
+// ═══════════════════════════════════════════════════════
 function showPKWarning(){
-  // Close ZP Hub if open
   document.getElementById('zp-hub-modal').classList.add('hidden');
   document.getElementById('pk-warning-modal').classList.remove('hidden');
 }
@@ -566,58 +509,51 @@ function confirmStartProbeklausur(){
   startProbeklausur();
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // WELCOME
-// ═══════════════════════════════════════════════════════════════
-function showWelcome(){if(!localStorage.getItem('slm_welcome_v92')){document.getElementById('welcome-popup').classList.remove('hidden');}}
-function closeWelcome(){const el=document.getElementById('welcome-popup');el.style.transition='opacity .3s ease';el.style.opacity='0';setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1';},300);localStorage.setItem('slm_welcome_v92','true');}
+// ═══════════════════════════════════════════════════════
+function showWelcome(){
+  if(!localStorage.getItem('slm_welcome_v92')){
+    document.getElementById('welcome-popup').classList.remove('hidden');
+  }
+}
+function closeWelcome(){
+  const el=document.getElementById('welcome-popup');
+  el.style.transition='opacity .3s ease';el.style.opacity='0';
+  setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1';},300);
+  localStorage.setItem('slm_welcome_v92','true');
+}
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // ZP HUB
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 function openZPHub(){
   document.getElementById('zp-hub-modal').classList.remove('hidden');
-  zpSetTab('lernen');updateStatusTab();renderZPLernhefte();
-  const pct=readinessScore;
-  const bar=document.getElementById('hub-ready-bar');const txt=document.getElementById('hub-ready-pct');
-  if(bar)bar.style.width=pct+'%';if(txt)txt.textContent=pct+'%';
+  zpSetTab('lernen');renderZPLernhefte();
 }
 function closeZPHub(){document.getElementById('zp-hub-modal').classList.add('hidden');}
 function zpSetTab(tab){
-  ['lernen','klausur','muendlich','hefte','info'].forEach(t=>{
-    const btn=document.getElementById('tab-'+t);const content=document.getElementById('zpTab-'+t);
+  ['lernen','klausur','muendlich','hefte'].forEach(t=>{
+    const btn=document.getElementById('tab-'+t);
+    const content=document.getElementById('zpTab-'+t);
     if(!btn||!content)return;
     if(t===tab){btn.classList.add('active');content.classList.remove('hidden');}
     else{btn.classList.remove('active');content.classList.add('hidden');}
   });
   if(tab==='hefte')renderZPLernhefte();
-  if(tab==='info')updateStatusTab();
-}
-function updateStatusTab(){
-  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-  const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
-  const xp=parseInt(localStorage.getItem('arena_xp')||'0');
-  const mExamed=new Set(history.map(h=>h.module)).size;
-  const mTrained=Object.keys(mastery).length;
-  const avgExam=history.length?Math.round(history.reduce((s,h)=>s+h.percentage,0)/history.length):0;
-  function setCond(id,ok,val){
-    const el=document.getElementById('cond-'+id);const valEl=document.getElementById('cond-'+id+'-val');
-    if(!el)return;const icon=el.querySelector('div');
-    if(ok){icon.style.background='rgba(34,197,94,.15)';icon.innerHTML='<i class="fas fa-check text-[8px] text-emerald-400"></i>';}
-    else{icon.style.background='rgba(255,255,255,.04)';icon.innerHTML='<i class="fas fa-times text-[8px] text-slate-600"></i>';}
-    if(valEl){valEl.textContent=val;valEl.style.color=ok?'#34d399':'#475569';}
-  }
-  setCond('exams',mExamed>=7,`${mExamed}/9`);setCond('avg',avgExam>=70,`${avgExam}%`);
-  setCond('xp',xp>=3000,xp.toLocaleString('de-DE'));setCond('arena',mTrained>=5,`${mTrained}/5`);
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // LERNHEFTE
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 function getLernbuecher(){return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');}
 function saveLernbuch(title,html){
   const books=getLernbuecher();
-  books.unshift({id:Date.now(),date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),title,html});
+  books.unshift({
+    id:Date.now(),
+    date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),
+    title,html
+  });
   if(books.length>25)books.splice(25);
   localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
   renderDashLernhefte();renderZPLernhefte();
@@ -628,26 +564,46 @@ function viewLernbuch(id){
   document.getElementById('lb-view-content').innerHTML=b.html;
   document.getElementById('lb-view-modal').classList.remove('hidden');
 }
-function deleteLernbuch(id){if(!confirm('Lernheft löschen?'))return;const books=getLernbuecher().filter(b=>b.id!==id);localStorage.setItem('slm_lernbuecher',JSON.stringify(books));renderDashLernhefte();renderZPLernhefte();}
-function clearAllLernbuecher(){if(!confirm('Alle Lernhefte löschen?'))return;localStorage.removeItem('slm_lernbuecher');renderDashLernhefte();renderZPLernhefte();}
+function deleteLernbuch(id){
+  if(!confirm('Lernheft löschen?'))return;
+  localStorage.setItem('slm_lernbuecher',JSON.stringify(getLernbuecher().filter(b=>b.id!==id)));
+  renderDashLernhefte();renderZPLernhefte();
+}
+function clearAllLernbuecher(){
+  if(!confirm('Alle Lernhefte löschen?'))return;
+  localStorage.removeItem('slm_lernbuecher');
+  renderDashLernhefte();renderZPLernhefte();
+}
 function renderDashLernhefte(){
-  const el=document.getElementById('dash-lernhefte-preview');const countEl=document.getElementById('dash-hefte-count');
+  const el=document.getElementById('dash-lernhefte-preview');
+  const countEl=document.getElementById('dash-hefte-count');
   const books=getLernbuecher();
   if(countEl)countEl.textContent=`${books.length} Heft${books.length!==1?'e':''}`;
   if(!el)return;
-  if(books.length===0){el.innerHTML='<div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div>';return;}
-  el.innerHTML=books.slice(0,3).map(b=>`<div onclick="viewLernbuch(${b.id})" class="lernheft-card flex items-center gap-2 p-2 rounded-xl" style="border:1px solid rgba(255,255,255,.04)"><div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.12)"><i class="fas fa-book-open text-indigo-400" style="font-size:8px"></i></div><div class="flex-1 min-w-0"><p class="text-white text-[10px] font-bold truncate">${b.title}</p><p class="text-slate-700 text-[9px]">${b.date}</p></div></div>`).join('');
+  if(!books.length){el.innerHTML='<div class="text-[11px] text-slate-700 text-center py-3">Noch keine Lernhefte</div>';return;}
+  el.innerHTML=books.slice(0,3).map(b=>`
+    <div onclick="viewLernbuch(${b.id})" class="lernheft-card flex items-center gap-2 p-2 rounded-xl" style="border:1px solid rgba(255,255,255,.04)">
+      <div class="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.12)"><i class="fas fa-book-open text-indigo-400" style="font-size:8px"></i></div>
+      <div class="flex-1 min-w-0"><p class="text-white text-[10px] font-bold truncate">${b.title}</p><p class="text-slate-700 text-[9px]">${b.date}</p></div>
+    </div>`).join('');
 }
 function renderZPLernhefte(){
   const el=document.getElementById('zp-lernhefte-list');if(!el)return;
   const books=getLernbuecher();
-  if(books.length===0){el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p><p class="text-slate-700 text-xs mt-1">Starte eine Recall-Session oder Probeklausur</p></div>`;return;}
-  el.innerHTML=books.map(b=>`<div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)"><div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0"><div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.1)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div><div class="min-w-0"><p class="text-white text-xs font-bold truncate">${b.title}</p><p class="text-slate-600 text-[10px]">${b.date}</p></div></div><button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100 shrink-0"><i class="fas fa-trash text-[10px]"></i></button></div>`).join('');
+  if(!books.length){el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p><p class="text-slate-700 text-xs mt-1">Starte eine Recall-Session oder Probeklausur</p></div>`;return;}
+  el.innerHTML=books.map(b=>`
+    <div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
+      <div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.1)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div>
+        <div class="min-w-0"><p class="text-white text-xs font-bold truncate">${b.title}</p><p class="text-slate-600 text-[10px]">${b.date}</p></div>
+      </div>
+      <button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100 shrink-0"><i class="fas fa-trash text-[10px]"></i></button>
+    </div>`).join('');
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // DATA LOADING
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 async function loadRawModule(id){
   if(rawQuestionCache[id])return rawQuestionCache[id];
   const paths=[
@@ -661,37 +617,32 @@ async function loadRawModule(id){
       if(!r.ok)continue;
       const raw=await r.json();
       const arr=Array.isArray(raw)?raw:(raw.questions||[]);
-      if(arr.length===0)continue;
-      rawQuestionCache[id]=arr;
-      return arr;
-    }catch(e){console.warn(`⚠️ ${path}:`,e.message);}
+      if(arr.length){rawQuestionCache[id]=arr;return arr;}
+    }catch(e){}
   }
   return null;
 }
-
 async function loadRawSummary(id){
   for(let unit=1;unit<=12;unit++){
-    const paths=[`data/module${id}summariesunit${unit}.json`,`/data/module${id}summariesunit${unit}.json`];
-    for(const path of paths){
+    for(const path of [`data/module${id}summariesunit${unit}.json`,`/data/module${id}summariesunit${unit}.json`]){
       try{
         const r=await fetch(path,{cache:'no-cache'});
         if(!r.ok)continue;
         const raw=await r.json();
         const arr=Array.isArray(raw)?raw:[];
-        if(arr.length>0)return arr;
+        if(arr.length)return arr;
       }catch(e){}
     }
   }
   return null;
 }
-
 async function loadAllRaw(){
   const results=await Promise.allSettled(MODULES.map(m=>loadRawModule(m.id)));
   const all=[];
   for(let i=0;i<MODULES.length;i++){
-    const m=MODULES[i];const r=results[i];
-    const data=r.status==='fulfilled'?r.value:null;
-    if(data&&data.length>0){all.push({moduleId:m.id,moduleName:m.name,source:'questions',data});}
+    const m=MODULES[i];
+    const data=results[i].status==='fulfilled'?results[i].value:null;
+    if(data&&data.length){all.push({moduleId:m.id,moduleName:m.name,source:'questions',data});}
     else{
       const summary=await loadRawSummary(m.id);
       if(summary){all.push({moduleId:m.id,moduleName:m.name,source:'summaries',data:summary});}
@@ -700,23 +651,22 @@ async function loadAllRaw(){
   }
   return all;
 }
-
 function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
-function pickRawQuestions(allModuleData,n){
-  const active=allModuleData.filter(m=>m.data.length>0);
-  const perMod=Math.max(1,Math.ceil(n/Math.max(1,active.length)));
+function pickRawQuestions(allData,n){
+  const active=allData.filter(m=>m.data.length>0);
+  if(!active.length)return[];
+  const perMod=Math.max(1,Math.ceil(n/active.length));
   const picked=[];
-  for(const mod of shuffle(allModuleData)){
-    if(mod.data.length===0)continue;
-    const items=shuffle(mod.data).slice(0,perMod);
-    items.forEach(item=>picked.push({...item,_moduleId:mod.moduleId,_moduleName:mod.moduleName,_source:mod.source}));
+  for(const mod of shuffle(allData)){
+    if(!mod.data.length)continue;
+    shuffle(mod.data).slice(0,perMod).forEach(item=>picked.push({...item,_moduleId:mod.moduleId,_moduleName:mod.moduleName,_source:mod.source}));
   }
   return shuffle(picked).slice(0,n);
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // KI API
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 async function callKI(payload){
   try{
     const r=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
@@ -726,61 +676,56 @@ async function callKI(payload){
   }catch(e){console.error('KI Fehler:',e);return null;}
 }
 
-async function formatQuestionViaKI(rawItem){
-  const prompt=`Du bist ein Pflegetutor. Forme diesen Rohdatensatz in eine klare Prüfungsfrage um.
-ROHDATEN (JSON):
-${JSON.stringify(rawItem,null,2)}
-Antworte NUR mit validem JSON:
-{"question":"<klare Frage>","sampleAnswer":"<Musterantwort 2-4 Sätze>","type":"richtig_falsch|freitext|multiple_choice","keywords":["kw1","kw2"]}`;
-  const result=await callKI({mode:'text',prompt});
-  if(!result)return null;
-  try{const cleaned=result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();return JSON.parse(cleaned);}
-  catch(e){return null;}
-}
-
-// ═══════════════════════════════════════════════════════════════
-// RECALL MODE
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+// RECALL
+// ═══════════════════════════════════════════════════════
 async function startRecall(size){
   closeZPHub();
   document.getElementById('recall-modal').classList.remove('hidden');
   showRecallLoading('Lade Lernmaterialien...');
   const counts={schnell:5,mittel:10,intensiv:15};
   const n=counts[size]||10;
-  const allModuleData=await loadAllRaw();
-  const rawPicked=pickRawQuestions(allModuleData,n);
-  if(rawPicked.length===0){
-    document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><div class="text-4xl mb-3">❌</div><p class="text-red-400 font-bold text-sm">Keine Materialien gefunden</p><p class="text-slate-600 text-xs mt-2">Prüfe den Ordner: data/question-banks/</p><button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button></div>`;
+  const allData=await loadAllRaw();
+  const rawPicked=pickRawQuestions(allData,n);
+  if(!rawPicked.length){
+    document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><div class="text-4xl mb-3">❌</div><p class="text-red-400 font-bold text-sm">Keine Materialien gefunden</p><button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button></div>`;
     return;
   }
   showRecallLoading(`KI bereitet ${rawPicked.length} Fragen auf...`);
-  const formatted=await Promise.all(rawPicked.map(async(raw)=>{
-    const ki=await formatQuestionViaKI(raw);
-    if(ki&&ki.question){return{question:ki.question,sampleAnswer:ki.sampleAnswer||'',type:ki.type||'freitext',keywords:ki.keywords||[],moduleId:raw._moduleId,moduleName:raw._moduleName};}
-    const q=raw.statement||raw.question||raw.frage||JSON.stringify(raw).slice(0,100);
-    const ans=raw.explanation?`${raw.answer?raw.answer.toUpperCase()+'. ':''}${raw.explanation}`:raw.answer||raw.sampleAnswer||'';
-    return{question:q,sampleAnswer:ans,type:raw.type||'freitext',keywords:[],moduleId:raw._moduleId,moduleName:raw._moduleName};
+  const formatted=await Promise.all(rawPicked.map(async raw=>{
+    const prompt=`Forme diesen Pflegeausbildungs-Datensatz in eine klare Prüfungsfrage um. Antworte NUR mit validem JSON:
+{"question":"<Deutsche Prüfungsfrage>","sampleAnswer":"<Musterantwort 2-3 Sätze>","keywords":["kw1","kw2","kw3"]}
+DATEN: ${JSON.stringify(raw).slice(0,500)}`;
+    const result=await callKI({mode:'text',prompt});
+    if(result){
+      try{
+        const c=result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
+        const parsed=JSON.parse(c);
+        if(parsed.question)return{question:parsed.question,sampleAnswer:parsed.sampleAnswer||'',keywords:parsed.keywords||[],moduleId:raw._moduleId,moduleName:raw._moduleName};
+      }catch(e){}
+    }
+    const q=raw.statement||raw.question||raw.frage||raw.title||String(Object.values(raw)[0]||'').slice(0,150);
+    const ans=raw.explanation||raw.answer||raw.sampleAnswer||'';
+    return{question:q,sampleAnswer:ans,keywords:[],moduleId:raw._moduleId,moduleName:raw._moduleName};
   }));
-  zpState.rawQuestions=formatted.filter(q=>q.question);
+  zpState.rawQuestions=formatted.filter(q=>q&&q.question&&q.question.length>5);
   zpState.currentIndex=0;zpState.userAnswers=[];zpState.phase='spickzettel';
   renderRecallQ();
 }
-
 function showRecallLoading(msg){
   document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-4"><div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div><p class="text-slate-500 text-sm">${msg}</p></div>`;
 }
-
 function renderRecallQ(){
   const q=zpState.rawQuestions[zpState.currentIndex];
   if(!q){finishRecall();return;}
-  const total=zpState.rawQuestions.length;const cur=zpState.currentIndex+1;
+  const total=zpState.rawQuestions.length,cur=zpState.currentIndex+1;
   const pct=Math.round((zpState.currentIndex/total)*100);
   const isSpick=zpState.phase==='spickzettel';
   const mColor=MODULES.find(m=>m.id===q.moduleId)?.color||'#6366f1';
   document.getElementById('recall-content').innerHTML=`
     <div class="mb-4">
       <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5"><span>Frage ${cur} / ${total}</span><span style="color:${mColor}">${q.moduleName||''}</span></div>
-      <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)"><div class="h-full rounded-full transition-all duration-500" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div></div>
+      <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)"><div class="h-full rounded-full" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div></div>
     </div>
     <div class="flex items-center gap-2 mb-4">
       <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
@@ -798,31 +743,32 @@ function renderRecallQ(){
         ${q.keywords?.length?`<div class="flex flex-wrap gap-1.5 mt-3">${q.keywords.map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${k}</span>`).join('')}</div>`:''}
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
-        <button onclick="recallSkipToAbfrage()" class="flex-2 flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
-      </div>
-    `:`
-      <div class="mb-4">
+        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
+        <button onclick="recallSkipToAbfrage()" class="flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
+      </div>`
+    :`<div class="mb-4">
         <textarea id="recall-answer-input" placeholder="Schreibe deine Antwort aus dem Gedächtnis..." rows="5"
-          class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none transition-all placeholder:text-slate-700"
-          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit"
+          class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none placeholder:text-slate-700"
+          style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s"
           onfocus="this.style.borderColor='rgba(99,102,241,.4)'" onblur="this.style.borderColor='rgba(255,255,255,.08)'" autofocus></textarea>
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all active:scale-95" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
-        <button onclick="recallSubmit()" class="flex-2 flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-check mr-2"></i>Weiter</button>
-      </div>
-    `}`;
+        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
+        <button onclick="recallSubmit()" class="flex-grow py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-check mr-2"></i>Weiter</button>
+      </div>`}`;
   if(isSpick){
     clearInterval(zpState.timerInterval);zpState.timerSeconds=120;updateRecallTimer();
-    zpState.timerInterval=setInterval(()=>{zpState.timerSeconds--;updateRecallTimer();if(zpState.timerSeconds<=0){clearInterval(zpState.timerInterval);recallSkipToAbfrage();}},1000);
+    zpState.timerInterval=setInterval(()=>{
+      zpState.timerSeconds--;updateRecallTimer();
+      if(zpState.timerSeconds<=0){clearInterval(zpState.timerInterval);recallSkipToAbfrage();}
+    },1000);
   }
 }
-
 function updateRecallTimer(){
   const el=document.getElementById('recall-timer-disp');if(!el)return;
-  const s=zpState.timerSeconds;const color=s<=10?'#f87171':s<=30?'#fbbf24':'#94a3b8';
-  el.style.color=color;el.textContent=`${s}s`;
+  const s=zpState.timerSeconds;
+  el.style.color=s<=10?'#f87171':s<=30?'#fbbf24':'#94a3b8';
+  el.textContent=`${s}s`;
   if(s<=10)el.classList.add('timer-urgent');else el.classList.remove('timer-urgent');
 }
 function recallAddTime(s){zpState.timerSeconds+=s;updateRecallTimer();}
@@ -831,15 +777,14 @@ function recallSubmit(){pushRecallAnswer(document.getElementById('recall-answer-
 function recallSkip(){pushRecallAnswer('');}
 function pushRecallAnswer(ans){
   const q=zpState.rawQuestions[zpState.currentIndex];
-  zpState.userAnswers.push({question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId,type:q.type});
+  zpState.userAnswers.push({question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId});
   zpState.currentIndex++;zpState.phase='spickzettel';renderRecallQ();
 }
 function closeRecall(){clearInterval(zpState.timerInterval);document.getElementById('recall-modal').classList.add('hidden');}
-
 async function finishRecall(){
   clearInterval(zpState.timerInterval);
-  document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-5 text-center"><div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))"><i class="fas fa-robot text-indigo-400 text-2xl"></i></div><div><h3 class="text-white font-black text-lg mb-1">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Analyse läuft...</p></div><div class="flex gap-1.5">${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}</div></div>`;
-  const prompt=buildLernheftPrompt(zpState.userAnswers,'Active Recall Session');
+  document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-5 text-center"><div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))"><i class="fas fa-robot text-indigo-400 text-2xl"></i></div><h3 class="text-white font-black text-lg">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Analyse läuft...</p></div>`;
+  const prompt=buildLernheftPrompt(zpState.userAnswers);
   const html=await callKI({mode:'lernheft',prompt})||buildFallbackFeedback(zpState.userAnswers);
   const ans=zpState.userAnswers.filter(a=>a.userAnswer).length;
   saveLernbuch(`Recall · ${ans}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`,html);
@@ -848,83 +793,349 @@ async function finishRecall(){
       <i class="fas fa-check-circle text-emerald-400"></i>
       <div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${zpState.userAnswers.length} Antworten.</p></div>
     </div>
-    <div class="rounded-2xl p-5 mb-4 overflow-y-auto lernheft-content" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:40vh">${html}</div>
+    <div class="rounded-2xl p-4 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:35vh;font-size:12px;color:#94a3b8;line-height:1.6">${html}</div>
     <div class="flex gap-2.5">
-      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
+      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
+      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
     </div>`;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// PROBEKLAUSUR — Full 100-point exam with proper structure
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
+// PROBEKLAUSUR — builds static skeleton + KI fills content
+// ═══════════════════════════════════════════════════════
 async function startProbeklausur(){
   document.getElementById('pk-modal').classList.remove('hidden');
   document.getElementById('pk-footer').classList.add('hidden');
-  document.getElementById('pk-content').innerHTML=`<div class="flex items-center justify-center py-16" style="background:#f5f4f0"><div class="text-center"><div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div><p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px">KI erstellt vollständigen Prüfungsbogen...</p><p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;margin-top:8px">Generiere 100-Punkte-Klausur nach PflBG-Standard · Bitte warten</p></div></div>`;
+  showPKLoading('Lade Lernmaterialien...');
 
-  const allModuleData=await loadAllRaw();
-  const sampledRaw=pickRawQuestions(allModuleData,25);
-  const examPrompt=buildExamPrompt(sampledRaw);
-  const examHTML=await callKI({mode:'lernheft',prompt:examPrompt});
+  const allData=await loadAllRaw();
+  const sampledRaw=pickRawQuestions(allData,20);
 
-  if(!examHTML){
-    document.getElementById('pk-content').innerHTML=`<div class="flex items-center justify-center py-16" style="background:#f5f4f0"><div class="text-center"><p style="color:#e11d48;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700">KI-Verbindung fehlgeschlagen</p><p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;margin-top:8px">Prüfe deine Internetverbindung und API-Key</p></div></div>`;
-    document.getElementById('pk-footer').innerHTML=`<div class="flex gap-3"><button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)">Schließen</button><button onclick="startProbeklausur()" class="flex-1 py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)">Erneut versuchen</button></div>`;
-    document.getElementById('pk-footer').classList.remove('hidden');
-    return;
-  }
+  showPKLoading('KI generiert Prüfungsinhalt... (kann 15–20 Sek. dauern)');
+
+  // Build the content via KI
+  const contentJSON=await generateExamContentViaKI(sampledRaw);
+
+  // Now inject into static HTML skeleton (this ALWAYS works regardless of KI output format)
+  const examHTML=buildExamHTML(contentJSON,sampledRaw);
 
   zpState.pkExamHTML=examHTML;
   zpState.examSecondsLeft=120*60;
+
   document.getElementById('pk-content').innerHTML=`<div class="exam-paper">${examHTML}</div>`;
   initRFInteractivity();
   document.getElementById('pk-footer').classList.remove('hidden');
   startExamTimer();
 }
 
-function buildExamPrompt(rawItems){
-  return `Du bist ein professioneller Pflegeprüfer am BZPG Würselen (Deutschland). Erstelle einen VOLLSTÄNDIGEN schriftlichen Prüfungsbogen für Pflegefachkraft-Auszubildende nach dem deutschen PflBG-Standard.
+function showPKLoading(msg){
+  document.getElementById('pk-content').innerHTML=`
+    <div class="flex items-center justify-center py-20" style="background:#f5f4f0">
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
+        <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">${msg}</p>
+        <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;margin-top:6px">100 Punkte · 6 Aufgaben · PflBG-Standard</p>
+      </div>
+    </div>`;
+}
 
-LERNMATERIALIEN (${rawItems.length} Einträge aus verschiedenen Modulen):
-${rawItems.map((item,i)=>`[${i+1}] Modul: ${item._moduleName}
-${JSON.stringify(item,null,1).slice(0,300)}`).join('\n\n')}
+// Ask KI to generate exam content as structured JSON
+async function generateExamContentViaKI(rawItems){
+  const context=rawItems.slice(0,15).map((item,i)=>{
+    const text=item.statement||item.question||item.frage||item.title||item.content||Object.values(item).filter(v=>typeof v==='string').join(' ');
+    return `[${i+1}] ${item._moduleName}: ${String(text).slice(0,200)}`;
+  }).join('\n');
 
-PFLICHT-ANFORDERUNGEN — GENAU SO UMSETZEN:
+  const prompt=`Du bist ein Pflegeprüfer am BZPG Würselen. Erstelle Prüfungsinhalte für eine Pflegefachkraft-Klausur.
 
-1. PRÜFUNGSKOPF mit ep-header, ep-header-top, ep-title, ep-info-grid (Name, Klasse, Datum, Punkte)
-2. FALLBEISPIEL (ep-fallbeispiel) — Realistische Pflegesituation mit Patient/Patientin, Diagnose, Pflegesituation (mind. 3 Absätze)
-3. AUFGABE 1 — Richtig/Falsch (ep-rf-table) — mind. 8 Aussagen zum Fallbeispiel — 16 Punkte
-4. AUFGABE 2 — Kurzantworten/Ergänzung (ep-textarea, 3 Zeilen) — Pflegeplanung — 14 Punkte  
-5. AUFGABE 3 — Freitext Pflegemaßnahmen (ep-textarea, 5 Zeilen) — 20 Punkte
-6. AUFGABE 4 — Multiple Choice oder Zuordnung (Liste mit Checkboxen oder Nummerierung) — 15 Punkte
-7. AUFGABE 5 — Freitext Kommunikation/Biografie ODER Medizinisches Wissen — 20 Punkte
-8. AUFGABE 6 — Fallbezogene Reflexion/Ethik (ep-textarea, 4 Zeilen) — 15 Punkte
-9. GESAMTPUNKTE: 100 Punkte
+LERNMATERIALIEN:
+${context}
 
-CSS-KLASSEN (bereits vorhanden, GENAU verwenden):
-- ep-header, ep-header-top, ep-title, ep-info-grid, ep-info-cell
-- ep-fallbeispiel, ep-fallbeispiel-title  
-- ep-aufgabe, ep-aufgabe-header, ep-aufgabe-nr, ep-aufgabe-pts, ep-aufgabe-tag
-- ep-instruction, ep-rf-table, ep-rf-row, ep-rf-option, ep-rf-radio
-- ep-textarea, ep-points, ep-loesung-lines, ep-loesung-line
+Erstelle NUR valides JSON (kein Text davor/danach, keine Backticks):
+{
+  "fallbeispiel": {
+    "patient": "Name, Alter, Diagnose",
+    "situation": "Beschreibung der Pflegesituation (3-4 Sätze)",
+    "hintergrund": "Anamnese und Vorgeschichte (2-3 Sätze)",
+    "aktuellesProblem": "Aktuelles pflegerisches Problem (2 Sätze)"
+  },
+  "aufgabe1_rf": {
+    "titel": "Richtig oder Falsch",
+    "punkte": 16,
+    "aussagen": [
+      {"text": "Aussage 1 zum Fallbeispiel", "antwort": "R"},
+      {"text": "Aussage 2 zum Thema Pflege", "antwort": "F"},
+      {"text": "Aussage 3 zum Thema Medizin", "antwort": "R"},
+      {"text": "Aussage 4 zur Kommunikation", "antwort": "F"},
+      {"text": "Aussage 5 zur Biografie", "antwort": "R"},
+      {"text": "Aussage 6 zur Dokumentation", "antwort": "F"},
+      {"text": "Aussage 7 zum Pflegeprozess", "antwort": "R"},
+      {"text": "Aussage 8 zur Hygiene", "antwort": "F"}
+    ]
+  },
+  "aufgabe2_kurz": {
+    "titel": "Pflegeplanung",
+    "punkte": 14,
+    "fragen": [
+      "Nennen Sie 3 Pflegeziele für den Patienten im Fallbeispiel.",
+      "Welche Pflegemaßnahmen würden Sie prioritär einleiten? Begründen Sie.",
+      "Wie dokumentieren Sie die durchgeführten Maßnahmen fachgerecht?"
+    ]
+  },
+  "aufgabe3_freitext": {
+    "titel": "Pflegemaßnahmen und Interventionen",
+    "punkte": 20,
+    "aufgabenstellung": "Beschreiben Sie ausführlich die pflegerischen Interventionen für den Patienten aus dem Fallbeispiel. Berücksichtigen Sie dabei Grundpflege, Mobilisation, Ernährung und psychosoziale Begleitung."
+  },
+  "aufgabe4_mc": {
+    "titel": "Fachwissen Multiple Choice",
+    "punkte": 15,
+    "fragen": [
+      {
+        "frage": "Welche Maßnahme hat bei der Wundversorgung höchste Priorität?",
+        "optionen": ["A) Wundverband wechseln", "B) Händedesinfektion durchführen", "C) Wunde inspizieren", "D) Arzt informieren"],
+        "richtig": "B"
+      },
+      {
+        "frage": "Was gehört zur professionellen Pflegedokumentation?",
+        "optionen": ["A) Nur positive Verläufe", "B) Lückenlose chronologische Erfassung", "C) Nur ärztliche Anordnungen", "D) Subjektive Meinungen"],
+        "richtig": "B"
+      },
+      {
+        "frage": "Welches Prinzip steht im Mittelpunkt der Biografiearbeit?",
+        "optionen": ["A) Diagnose stellen", "B) Medikamente verwalten", "C) Individuelle Lebensgeschichte verstehen", "D) Pflegekräfte entlasten"],
+        "richtig": "C"
+      }
+    ]
+  },
+  "aufgabe5_kommunikation": {
+    "titel": "Kommunikation und Beziehungsgestaltung",
+    "punkte": 20,
+    "aufgabenstellung": "Beschreiben Sie, wie Sie das Erstgespräch mit dem Patienten aus dem Fallbeispiel gestalten würden. Welche Kommunikationstechniken setzen Sie ein? Wie gehen Sie mit emotionalen Reaktionen des Patienten um? Berücksichtigen Sie dabei die Grundsätze der professionellen Pflegekommunikation."
+  },
+  "aufgabe6_reflexion": {
+    "titel": "Ethik und Reflexion",
+    "punkte": 15,
+    "aufgabenstellung": "Reflektieren Sie eine ethische Herausforderung, die im Pflegealltag auftreten kann (z.B. Patientenautonomie vs. Fürsorge, Ressourcenmangel, kulturelle Unterschiede). Welche ethischen Prinzipien leiten Ihr Handeln? Wie würden Sie in einem Konfliktfall vorgehen?"
+  }
+}`;
 
-STIL-VORGABEN:
-- Sprache: Professionelles Deutsch, Prüfungsstil
-- Inhalte: Direkt aus den Lernmaterialien oben abgeleitet
-- Jede Aufgabe mit klarer ep-aufgabe-header (Aufgabe X, Punkte, Themenbereich)
-- Richtig/Falsch: Immer ep-rf-table mit Spalten "Aussage | Richtig | Falsch"
-- Freitextfelder: ep-textarea mit sinnvoller min-height
+  const result=await callKI({mode:'text',prompt});
+  if(!result)return null;
+  try{
+    const cleaned=result.trim()
+      .replace(/^```(?:json)?\s*/i,'')
+      .replace(/```\s*$/i,'')
+      .replace(/[\u0000-\u001F\u007F-\u009F]/g,' ')
+      .trim();
+    // Find JSON boundaries
+    const start=cleaned.indexOf('{');
+    const end=cleaned.lastIndexOf('}');
+    if(start===-1||end===-1)return null;
+    return JSON.parse(cleaned.slice(start,end+1));
+  }catch(e){
+    console.error('JSON parse error:',e);
+    return null;
+  }
+}
 
-WICHTIG: Gib NUR HTML zurück (KEIN Markdown, KEINE Backticks, KEIN erklärender Text).
-Beginne DIREKT mit: <div class="ep-header">`;
+// Build exam HTML from structured content (with fallback if KI fails)
+function buildExamHTML(content,rawItems){
+  const today=new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
+
+  // Fallback content if KI returned null
+  const fb=content?.fallbeispiel||{
+    patient:'Herr Klaus Müller, 72 Jahre, Diabetes mellitus Typ 2, Hypertonie, beginnende Herzinsuffizienz',
+    situation:'Herr Müller wurde vor 3 Tagen mit einer dekompensierter Herzinsuffizienz stationär aufgenommen. Er zeigt Dyspnoe bei Belastung, beidseits Knöchelödeme und klagt über ausgeprägte Müdigkeit. Die Sauerstoffsättigung liegt bei 92%.',
+    hintergrund:'Der Patient lebt alleine seit dem Tod seiner Frau vor 2 Jahren. Er ist gelernter Handwerker und war bis vor 5 Jahren noch berufstätig. Seine Tochter wohnt 50 km entfernt und besucht ihn wöchentlich. Er nimmt täglich 6 verschiedene Medikamente ein.',
+    aktuellesProblem:'Trotz Therapie zeigt Herr Müller Zeichen der mangelnden Compliance bei der Medikamenteneinnahme und der empfohlenen Flüssigkeitsrestriktion auf 1,5 Liter täglich.'
+  };
+
+  const rf=content?.aufgabe1_rf||{punkte:16,aussagen:[
+    {text:'Bei Herzinsuffizienz ist eine Flüssigkeitsrestriktion oft notwendig, um die Ödembildung zu reduzieren.',antwort:'R'},
+    {text:'Die Sauerstoffsättigung von 92% liegt im vollständig normalen Bereich und erfordert keine weiteren Maßnahmen.',antwort:'F'},
+    {text:'Pflegedokumentation muss lückenlos, chronologisch und nachvollziehbar erfolgen.',antwort:'R'},
+    {text:'Bei einem Patienten mit Hypertonie sollte der Blutdruck nur einmal täglich gemessen werden.',antwort:'F'},
+    {text:'Biografiearbeit kann zur Verbesserung der therapeutischen Beziehung beitragen.',antwort:'R'},
+    {text:'Compliance-Probleme bei der Medikamenteneinnahme sind für die Pflege nicht relevant.',antwort:'F'},
+    {text:'Knöchelödeme können ein Zeichen einer dekompensierter Herzinsuffizienz sein.',antwort:'R'},
+    {text:'Kommunikation in der Pflege beschränkt sich ausschließlich auf die Weitergabe medizinischer Informationen.',antwort:'F'}
+  ]};
+
+  const k2=content?.aufgabe2_kurz||{punkte:14,fragen:[
+    'Nennen Sie 3 konkrete Pflegeziele für Herrn Müller. Formulieren Sie diese SMART (spezifisch, messbar, erreichbar, realistisch, terminiert).',
+    'Welche 4 Pflegemaßnahmen haben bei Herrn Müller höchste Priorität? Begründen Sie Ihre Auswahl.',
+    'Wie würden Sie die Medikamentencompliance von Herrn Müller verbessern? Nennen Sie 3 konkrete Maßnahmen.'
+  ]};
+
+  const a3=content?.aufgabe3_freitext||{punkte:20,aufgabenstellung:'Beschreiben Sie ausführlich die pflegerischen Interventionen für Herrn Müller. Berücksichtigen Sie dabei: (1) Grundpflege und Körperpflege, (2) Mobilisation und Lagerung, (3) Ernährung und Flüssigkeitsmanagement, (4) psychosoziale Begleitung. Begründen Sie Ihre Maßnahmen fachlich.'};
+
+  const mc=content?.aufgabe4_mc||{punkte:15,fragen:[
+    {frage:'Welche Maßnahme hat bei der Grundpflege Vorrang?',optionen:['A) Sofort mit der Körperpflege beginnen','B) Patientenwünsche und -ressourcen erfassen','C) Pflegebericht schreiben','D) Arzt informieren'],richtig:'B'},
+    {frage:'Was kennzeichnet eine professionelle Pflegedokumentation?',optionen:['A) Nur Auffälligkeiten dokumentieren','B) Subjektive Bewertungen einbeziehen','C) Lückenlose, objektive und zeitnahe Erfassung','D) Nur Vitalwerte notieren'],richtig:'C'},
+    {frage:'Welches Prinzip beschreibt die Handlungsfähigkeit trotz Einschränkungen?',optionen:['A) Compliance','B) Autonomie','C) Adhärenz','D) Resilienz'],richtig:'B'}
+  ]};
+
+  const a5=content?.aufgabe5_kommunikation||{punkte:20,aufgabenstellung:'Beschreiben Sie, wie Sie das Erstgespräch mit Herrn Müller gestalten würden. Berücksichtigen Sie: (1) Gesprächseinstieg und Atmosphäre, (2) eingesetzte Kommunikationstechniken (aktives Zuhören, offene Fragen, Spiegeln), (3) Umgang mit emotionalen Reaktionen, (4) Informationsvermittlung zur Erkrankung und Therapie.'};
+
+  const a6=content?.aufgabe6_reflexion||{punkte:15,aufgabenstellung:'Herr Müller lehnt eine weitere Blutentnahme ab und besteht darauf, das Krankenhaus verlassen zu wollen, obwohl er medizinisch noch nicht entlassen werden kann. Beschreiben Sie: (1) Welches ethische Prinzip steht im Vordergrund? (2) Wie gehen Sie in diesem Konflikt vor? (3) Welche Berufsgruppen beziehen Sie ein? (4) Wie dokumentieren Sie die Situation?'};
+
+  return `
+<div class="ep-header">
+  <div class="ep-header-top">
+    BERUFSKOLLEG FÜR PFLEGE UND GESUNDHEIT · BZPG WÜRSELEN &nbsp;|&nbsp; Ausbildung zur Pflegefachkraft (Generalistik) &nbsp;|&nbsp; Zwischenprüfung Ende 2. Ausbildungsjahr &nbsp;|&nbsp; Schuljahr 2024/2025
+  </div>
+  <div class="ep-title">
+    <h1>Schriftliche Zwischenprüfung</h1>
+    <h2>Pflegefachkraft — Generalistik</h2>
+    <p>⚠️ KI-Modell · Basiert auf früheren Prüfungsversuchen · Abweichungen zur echten Prüfung möglich</p>
+  </div>
+  <div class="ep-info-grid">
+    <div class="ep-info-cell"><label>Name, Vorname</label><input type="text" placeholder="______________________________"></div>
+    <div class="ep-info-cell"><label>Klasse / Kurs</label><input type="text" placeholder="______________"></div>
+    <div class="ep-info-cell"><label>Datum</label><input type="text" value="${today}"></div>
+    <div class="ep-info-cell"><label>Gesamtpunktzahl / Erreichte Punkte</label><span style="font-weight:700;font-size:15px">100 Punkte &nbsp;/&nbsp; _______</span></div>
+  </div>
+</div>
+<div class="ep-hinweis">
+  <strong>⏱ Bearbeitungszeit:</strong> 120 Minuten &nbsp;|&nbsp; <strong>Hilfsmittel:</strong> Keine &nbsp;|&nbsp; <strong>Hinweis:</strong> Lesen Sie alle Aufgaben vollständig durch, bevor Sie mit der Bearbeitung beginnen. Beantworten Sie alle Aufgaben auf Basis des Fallbeispiels, sofern nicht anders angegeben.
+</div>
+
+<!-- FALLBEISPIEL -->
+<div class="ep-fallbeispiel">
+  <div class="ep-fallbeispiel-title">📋 Fallbeispiel — Bitte aufmerksam lesen</div>
+  <p><strong>Patient:</strong> ${fb.patient}</p>
+  <p>${fb.situation}</p>
+  <p>${fb.hintergrund}</p>
+  <p>${fb.aktuellesProblem}</p>
+</div>
+
+<!-- AUFGABE 1: RICHTIG / FALSCH -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 1 — ${rf.titel||'Richtig oder Falsch'}</span>
+    <span class="ep-aufgabe-tag">Fallbezogenes Wissen</span>
+    <span class="ep-aufgabe-pts">${rf.punkte||16} Punkte</span>
+  </div>
+  <p class="ep-instruction">Kreuzen Sie an, ob die folgenden Aussagen <strong>Richtig (R)</strong> oder <strong>Falsch (F)</strong> sind. Jede richtige Antwort ergibt ${Math.round((rf.punkte||16)/(rf.aussagen?.length||8) * 10)/10} Punkt(e). Es gibt keine Minuspunkte für falsche Antworten.</p>
+  <table class="ep-rf-table">
+    <thead>
+      <tr>
+        <th style="text-align:left;width:70%">Aussage</th>
+        <th>Richtig</th>
+        <th>Falsch</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${(rf.aussagen||[]).map((a,i)=>`
+      <tr class="ep-rf-row">
+        <td>${i+1}. ${a.text||a}</td>
+        <td class="ep-rf-option"><div class="ep-rf-radio"></div></td>
+        <td class="ep-rf-option"><div class="ep-rf-radio"></div></td>
+      </tr>`).join('')}
+    </tbody>
+  </table>
+  <div class="ep-points">/ ${rf.punkte||16} Punkte</div>
+</div>
+
+<!-- AUFGABE 2: KURZANTWORTEN -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 2 — ${k2.titel||'Pflegeplanung'}</span>
+    <span class="ep-aufgabe-tag">Pflegeprozess &amp; Planung</span>
+    <span class="ep-aufgabe-pts">${k2.punkte||14} Punkte</span>
+  </div>
+  <p class="ep-instruction">Beantworten Sie die folgenden Fragen bezogen auf das Fallbeispiel. Schreiben Sie Ihre Antworten in die vorgesehenen Felder.</p>
+  ${(k2.fragen||[]).map((frage,i)=>`
+  <div style="margin-bottom:20px">
+    <p class="ep-sub"><strong>${i+1}.</strong> ${frage}</p>
+    <textarea class="ep-textarea" style="min-height:80px" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-points">/ ${Math.round((k2.punkte||14)/(k2.fragen?.length||3))} Punkte</div>
+  </div>`).join('')}
+</div>
+
+<!-- AUFGABE 3: FREITEXT PFLEGE -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 3 — ${a3.titel||'Pflegemaßnahmen'}</span>
+    <span class="ep-aufgabe-tag">Pflegerische Praxis</span>
+    <span class="ep-aufgabe-pts">${a3.punkte||20} Punkte</span>
+  </div>
+  <p class="ep-instruction">${a3.aufgabenstellung}</p>
+  <textarea class="ep-textarea" style="min-height:160px" placeholder="Ihre ausführliche Antwort..."></textarea>
+  <div class="ep-points">/ ${a3.punkte||20} Punkte</div>
+</div>
+
+<!-- AUFGABE 4: MULTIPLE CHOICE -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 4 — ${mc.titel||'Fachwissen'}</span>
+    <span class="ep-aufgabe-tag">Multiple Choice — Eine Antwort richtig</span>
+    <span class="ep-aufgabe-pts">${mc.punkte||15} Punkte</span>
+  </div>
+  <p class="ep-instruction">Kreuzen Sie jeweils die <strong>eine richtige Antwort</strong> an. Jede richtige Antwort gibt ${Math.round((mc.punkte||15)/(mc.fragen?.length||3) * 10)/10} Punkte.</p>
+  ${(mc.fragen||[]).map((f,i)=>`
+  <div style="margin-bottom:18px">
+    <p class="ep-sub"><strong>${i+1}.</strong> ${f.frage||f}</p>
+    <ul class="ep-mc-list" id="mc-group-${i}">
+      ${(f.optionen||['A) Option A','B) Option B','C) Option C','D) Option D']).map((opt,j)=>`
+      <li onclick="selectMC(${i},${j})">
+        <span class="ep-mc-box" id="mc-box-${i}-${j}"></span>
+        <span>${opt}</span>
+      </li>`).join('')}
+    </ul>
+    <div class="ep-points">/ ${Math.round((mc.punkte||15)/(mc.fragen?.length||3) * 10)/10} Punkte</div>
+  </div>`).join('')}
+</div>
+
+<!-- AUFGABE 5: KOMMUNIKATION -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 5 — ${a5.titel||'Kommunikation'}</span>
+    <span class="ep-aufgabe-tag">Kommunikation &amp; Beziehungsgestaltung</span>
+    <span class="ep-aufgabe-pts">${a5.punkte||20} Punkte</span>
+  </div>
+  <p class="ep-instruction">${a5.aufgabenstellung}</p>
+  <textarea class="ep-textarea" style="min-height:180px" placeholder="Ihre ausführliche Antwort..."></textarea>
+  <div class="ep-points">/ ${a5.punkte||20} Punkte</div>
+</div>
+
+<!-- AUFGABE 6: ETHIK / REFLEXION -->
+<div class="ep-aufgabe">
+  <div class="ep-aufgabe-header">
+    <span class="ep-aufgabe-nr">Aufgabe 6 — ${a6.titel||'Ethik &amp; Reflexion'}</span>
+    <span class="ep-aufgabe-tag">Ethisches Handeln &amp; Berufsrolle</span>
+    <span class="ep-aufgabe-pts">${a6.punkte||15} Punkte</span>
+  </div>
+  <p class="ep-instruction">${a6.aufgabenstellung}</p>
+  <textarea class="ep-textarea" style="min-height:150px" placeholder="Ihre Reflexion..."></textarea>
+  <div class="ep-scoring">
+    <span>✏️ Viel Erfolg bei der Bearbeitung!</span>
+    <span><strong>Gesamtpunkte: 100</strong></span>
+  </div>
+</div>`;
+}
+
+function selectMC(groupIdx,optIdx){
+  const group=document.getElementById(`mc-group-${groupIdx}`);
+  if(!group)return;
+  group.querySelectorAll('li').forEach((li,i)=>{
+    li.classList.remove('selected');
+    const box=document.getElementById(`mc-box-${groupIdx}-${i}`);
+    if(box)box.style.background='';
+  });
+  const li=group.querySelectorAll('li')[optIdx];
+  if(li){
+    li.classList.add('selected');
+    const box=document.getElementById(`mc-box-${groupIdx}-${optIdx}`);
+    if(box){box.style.background='#6366f1';box.style.borderColor='#6366f1';}
+  }
 }
 
 function initRFInteractivity(){
   document.querySelectorAll('.ep-rf-option').forEach(opt=>{
     opt.addEventListener('click',function(){
-      const row=this.closest('.ep-rf-row');
-      if(!row)return;
+      const row=this.closest('.ep-rf-row');if(!row)return;
       row.querySelectorAll('.ep-rf-radio').forEach(r=>r.classList.remove('selected'));
       const radio=this.querySelector('.ep-rf-radio');
       if(radio)radio.classList.add('selected');
@@ -934,153 +1145,199 @@ function initRFInteractivity(){
 
 function startExamTimer(){
   clearInterval(zpState.examInterval);updateExamTimer();
-  zpState.examInterval=setInterval(()=>{zpState.examSecondsLeft--;updateExamTimer();if(zpState.examSecondsLeft<=0){clearInterval(zpState.examInterval);submitPK(true);}},1000);
+  zpState.examInterval=setInterval(()=>{
+    zpState.examSecondsLeft--;updateExamTimer();
+    if(zpState.examSecondsLeft<=0){clearInterval(zpState.examInterval);submitPK(true);}
+  },1000);
 }
-
 function updateExamTimer(){
   const el=document.getElementById('pk-timer-display');if(!el)return;
-  const m=Math.floor(zpState.examSecondsLeft/60);const s=zpState.examSecondsLeft%60;
+  const m=Math.floor(zpState.examSecondsLeft/60),s=zpState.examSecondsLeft%60;
   el.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
   if(zpState.examSecondsLeft<=300)el.style.color='#f87171';
   else if(zpState.examSecondsLeft<=900)el.style.color='#fbbf24';
   else el.style.color='#fb923c';
 }
-
 function closePK(){clearInterval(zpState.examInterval);document.getElementById('pk-modal').classList.add('hidden');}
 
 async function submitPK(timeout=false){
   clearInterval(zpState.examInterval);
   const answers=[];
   document.querySelectorAll('#pk-content .ep-textarea').forEach((ta,i)=>{
-    answers.push({field:`Freitext-Aufgabe ${i+1}`,value:ta.value||''});
+    answers.push({field:`Aufgabe ${i+1} (Freitext)`,value:ta.value||''});
   });
   document.querySelectorAll('#pk-content .ep-rf-row').forEach((row,i)=>{
-    const selected=row.querySelector('.ep-rf-radio.selected');
-    const stmt=row.querySelector('td')?.textContent?.trim()||`Aussage ${i+1}`;
-    answers.push({field:`R/F ${i+1}: ${stmt.slice(0,60)}`,value:selected?'Markiert':'Nicht beantwortet'});
+    const radios=row.querySelectorAll('.ep-rf-radio');
+    const options=row.querySelectorAll('.ep-rf-option');
+    let chosen='Keine Antwort';
+    options.forEach((opt,j)=>{
+      if(opt.querySelector('.ep-rf-radio.selected')){chosen=j===0?'Richtig':'Falsch';}
+    });
+    const stmt=row.querySelector('td')?.textContent?.trim().replace(/^\d+\.\s*/,'').slice(0,60)||`Aussage ${i+1}`;
+    answers.push({field:`R/F ${i+1}: "${stmt}"`,value:chosen});
   });
+  document.querySelectorAll('#pk-content [id^="mc-group-"]').forEach((group,i)=>{
+    const selected=group.querySelector('li.selected span:last-child');
+    answers.push({field:`MC Frage ${i+1}`,value:selected?selected.textContent:'Keine Antwort'});
+  });
+
   document.getElementById('pk-footer').classList.add('hidden');
-  document.getElementById('pk-content').innerHTML=`<div class="flex items-center justify-center py-16" style="background:#f5f4f0"><div class="text-center"><div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div><p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif">${timeout?'Zeit abgelaufen! ':''}KI bewertet deine Antworten...</p></div></div>`;
+  document.getElementById('pk-content').innerHTML=`
+    <div class="flex items-center justify-center py-20" style="background:#f5f4f0">
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
+        <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">${timeout?'⏰ Zeit abgelaufen! ':''}KI bewertet deine Antworten...</p>
+      </div>
+    </div>`;
 
-  const prompt=`Du bist ein professioneller Pflegeprüfer. Bewerte die folgende abgegebene Prüfung nach deutschem PflBG-Standard.
+  const answeredCount=answers.filter(a=>a.value&&a.value!=='Keine Antwort').length;
+  const prompt=`Du bist ein Pflegeprüfer. Bewerte diese Prüfungsabgabe eines Pflegefachkraft-Auszubildenden.
 
-PRÜFUNGSBOGEN (Auszug):
-${(zpState.pkExamHTML||'').slice(0,2000)}
+ABGEGEBENE ANTWORTEN (${answers.length} Felder, ${answeredCount} beantwortet):
+${answers.map(a=>`• ${a.field}: "${a.value.slice(0,200)}"`).join('\n')}
 
-ABGEGEBENE ANTWORTEN:
-${answers.map(a=>`${a.field}: "${a.value}"`).join('\n')}
+Erstelle eine strukturierte Bewertung als HTML mit:
+1. Großer Übersichtsbox: geschätzte Gesamtpunkte von 100 und Note (1=sehr gut bis 6=ungenügend)
+2. Tabelle mit allen Aufgaben: Aufgabe | Mögliche Punkte | Einschätzung
+3. "Was gut war" (grün, border-left:4px solid #22c55e)
+4. "Was verbessert werden sollte" (rot, border-left:4px solid #ef4444)  
+5. "Top 5 Lernempfehlungen" (nummeriert)
+6. Ermutigender Abschluss
 
-AUFGABE: Erstelle eine strukturierte Bewertung als REINES HTML mit:
-- Übersichtsbox: Gesamtpunkte und Note (1-6) mit farblicher Hervorhebung
-- Tabelle: Pro Aufgabe — Thema, Erreichte/Mögliche Punkte, Kurzes Feedback
-- Abschnitt "Was gut war" (grün hervorgehoben)
-- Abschnitt "Was gefehlt hat / Verbesserungen" (rot hervorgehoben)  
-- Abschnitt "Konkrete Lernempfehlungen" mit nummerierten Punkten
-- Ermutigender Abschluss
-Nutze inline-styles für Farben. Gib NUR HTML zurück.`;
+Nutze nur inline-CSS. Gib NUR HTML zurück.`;
 
-  const feedbackHTML=await callKI({mode:'lernheft',prompt})||buildSimpleFeedback(answers);
+  const feedbackHTML=await callKI({mode:'lernheft',prompt})||buildSimpleFeedback(answers,answeredCount);
   const elapsed=120*60-zpState.examSecondsLeft;const elMin=Math.floor(elapsed/60);
-  saveLernbuch(`Probeklausur · ${elMin} Min. · ${new Date().toLocaleDateString('de-DE')}`,feedbackHTML);
+  saveLernbuch(`Probeklausur · ${answeredCount}/${answers.length} Felder · ${new Date().toLocaleDateString('de-DE')}`,feedbackHTML);
 
-  document.getElementById('pk-content').innerHTML=`<div style="background:#f5f4f0;padding:24px">
-    <div style="background:#f0fdf4;border:1.5px solid #22c55e;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:10px">
-      <i class="fas fa-check-circle" style="color:#22c55e;font-size:16px"></i>
-      <div><p style="color:#15803d;font-weight:700;font-size:13px">Bewertung gespeichert!</p><p style="color:#64748b;font-size:11px">${elMin} Minuten · Unter "Hefte" abrufbar</p></div>
-    </div>
-    <div style="font-family:'Plus Jakarta Sans',sans-serif">${feedbackHTML}</div>
-  </div>`;
+  document.getElementById('pk-content').innerHTML=`
+    <div style="background:#f5f4f0;padding:24px 32px;min-height:100%">
+      <div style="background:#f0fdf4;border:1.5px solid #22c55e;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:12px">
+        <i class="fas fa-check-circle" style="color:#22c55e;font-size:18px"></i>
+        <div>
+          <p style="color:#15803d;font-weight:700;font-size:13px">Bewertung abgeschlossen &amp; gespeichert!</p>
+          <p style="color:#64748b;font-size:11px">${elMin} Minuten Bearbeitungszeit · ${answeredCount} von ${answers.length} Feldern beantwortet · Unter "Hefte" abrufbar</p>
+        </div>
+      </div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif">${feedbackHTML}</div>
+    </div>`;
 
-  document.getElementById('pk-footer').innerHTML=`<div class="flex gap-3"><button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button><button onclick="closePK();showPKWarning()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-redo mr-2"></i>Neue Klausur</button></div>`;
+  document.getElementById('pk-footer').innerHTML=`
+    <div class="flex gap-3">
+      <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
+      <button onclick="closePK();showPKWarning()" class="flex-1 py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-redo mr-2"></i>Neue Klausur</button>
+    </div>`;
   document.getElementById('pk-footer').classList.remove('hidden');
 }
 
-function buildSimpleFeedback(answers){
-  const filled=answers.filter(a=>a.value&&a.value!=='Nicht beantwortet').length;
-  return`<div style="font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a"><h2 style="font-size:18px;font-weight:900;margin-bottom:12px">📋 Deine Abgabe</h2><p style="color:#555;margin-bottom:16px">${filled} von ${answers.length} Felder ausgefüllt.</p>${answers.map(a=>`<div style="border:1px solid #e2e8f0;border-radius:6px;padding:10px 14px;margin-bottom:8px"><p style="font-weight:700;font-size:12px;color:#555;margin-bottom:4px">${a.field}</p><p style="font-size:13px;color:#374151">${a.value||'<em style="color:#9ca3af">Nicht beantwortet</em>'}</p></div>`).join('')}</div>`;
+function buildSimpleFeedback(answers,answeredCount){
+  return`<div style="font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a">
+    <div style="background:#eff6ff;border:2px solid #3b82f6;border-radius:8px;padding:16px;margin-bottom:16px">
+      <h2 style="font-size:18px;font-weight:900;color:#1e3a8a;margin-bottom:4px">📋 Deine Abgabe</h2>
+      <p style="color:#374151">${answeredCount} von ${answers.length} Feldern beantwortet.</p>
+    </div>
+    ${answers.map(a=>`
+    <div style="border:1px solid #e2e8f0;border-radius:6px;padding:12px 16px;margin-bottom:8px">
+      <p style="font-weight:700;font-size:11px;color:#64748b;margin-bottom:4px;text-transform:uppercase">${a.field}</p>
+      <p style="font-size:13px;color:#374151">${a.value||'<em style="color:#9ca3af">Nicht beantwortet</em>'}</p>
+    </div>`).join('')}
+    <div style="background:#fffbeb;border:1px solid #f59e0b;border-radius:6px;padding:12px;margin-top:16px">
+      <p style="font-weight:700;color:#92400e;margin-bottom:4px">💡 Hinweis</p>
+      <p style="color:#374151;font-size:13px">KI-Bewertung war nicht verfügbar. Überprüfe deine API-Verbindung für eine detaillierte Auswertung.</p>
+    </div>
+  </div>`;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// LERNHEFT PROMPT BUILDER — produces rich HTML like the example
-// ═══════════════════════════════════════════════════════════════
-function buildLernheftPrompt(pairs,sessionType){
-  return`Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen.
+// ═══════════════════════════════════════════════════════
+// LERNHEFT PROMPT BUILDER
+// ═══════════════════════════════════════════════════════
+function buildLernheftPrompt(pairs){
+  return`Du bist ein Pflegetutor für Auszubildende (Generalistik) am BZPG Würselen. Erstelle ein detailliertes Lernheft als HTML.
 
-Erstelle ein DETAILLIERTES, REICHHALTIGES Lernheft als REINES HTML. 
+STRUKTUR (mit inline-styles):
+- Übersicht-Box oben (blau): <div style="background:#eff6ff;border-left:4px solid #3b82f6;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
+- Korrekt (grün): <div style="background:#f0fdf4;border-left:4px solid #22c55e;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
+- Verbesserung (rot): <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
+- Info-Box (indigo): <div style="background:#eef2ff;border-left:4px solid #6366f1;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
+- h2: <h2 style="font-size:1.1rem;font-weight:800;color:#1e1b4b;margin:16px 0 8px;border-bottom:2px solid #e0e7ff;padding-bottom:4px">
+- h3: <h3 style="font-size:.95rem;font-weight:700;color:#3730a3;margin:12px 0 6px">
+- Tabellen, Listen, Merksätze nutzen
 
-WICHTIG — STRUKTUR UND STIL:
-- Nutze dieselbe reiche HTML-Struktur wie ein Schulbuch
-- Verwende Tailwind-ähnliche inline-styles: Hintergrundboxen, Tabellen, Aufzählungen
-- Grüne Info-Box für wichtige Definitionen: <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;margin:12px 0;border-radius:0 6px 6px 0">
-- Indigo-Box für Konzepte: <div style="background:#eef2ff;border-left:4px solid #6366f1;padding:12px 16px;margin:12px 0;border-radius:0 6px 6px 0">
-- Rote Box für Warnung/Fehler: <div style="background:#fef2f2;border-left:4px solid #dc2626;padding:12px 16px;margin:12px 0;border-radius:0 6px 6px 0">
-- Tabellen mit: <table style="width:100%;border-collapse:collapse;margin:12px 0">
-- Korrekte Aspekte: <span style="color:#16a34a;font-weight:700">✅ ...</span>
-- Lücken: <span style="color:#dc2626;font-weight:700">❌ ...</span>
-- h2 Überschriften: <h2 style="font-size:1.1rem;font-weight:800;color:#312e81;margin:16px 0 8px;border-bottom:2px solid #e0e7ff;padding-bottom:4px">
-- h3 Überschriften: <h3 style="font-size:.95rem;font-weight:700;color:#4338ca;margin:12px 0 6px">
+SESSION: Active Recall
+PFLICHT: 1) Übersicht, 2) Pro Frage Analyse, 3) Wissenserklärung, 4) Lernempfehlungen, 5) Merksätze
 
-PFLICHT-ABSCHNITTE:
-1. 📊 Zusammenfassung (Übersichtsbox mit Gesamt-Performance)
-2. Pro Frage: Analyse mit Musterantwort-Vergleich, was richtig/falsch war
-3. 📚 Wissenslücken (detaillierte Erklärungen zu den Themenbereichen)
-4. 💡 Lernempfehlungen (nummerierte, konkrete Tipps)
-5. 🎯 Merksätze / Eselsbrücken für die wichtigsten Konzepte
-
-SESSION: ${sessionType}
-
-FRAGEN & ANTWORTEN:
-${pairs.map((p,i)=>`[Frage ${i+1}] ${p.moduleName}
+FRAGEN:
+${pairs.map((p,i)=>`[${i+1}] ${p.moduleName}
 Frage: ${p.question}
-Musterantwort: ${p.sampleAnswer||'nicht angegeben'}
-Nutzerantwort: ${p.userAnswer||'(keine Antwort)'}
-Keywords: ${(p.keywords||[]).join(', ')||'keine'}`).join('\n\n')}
+Muster: ${p.sampleAnswer||'–'}
+Antwort: ${p.userAnswer||'(keine)'}
+Keywords: ${(p.keywords||[]).join(', ')||'–'}`).join('\n\n')}
 
-Erstelle jetzt das VOLLSTÄNDIGE HTML (beginne direkt mit <div>):`;
+Erstelle das HTML:`;
 }
-
 function buildFallbackFeedback(pairs){
   const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
-  return`<div style="color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif"><h2 style="color:#818cf8;font-size:1.2rem;font-weight:900;margin-bottom:1rem">📋 Dein Lernheft</h2><p style="color:#94a3b8;margin-bottom:1.5rem">${answered} von ${pairs.length} Fragen beantwortet.</p>${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem;margin-bottom:1rem"><h3 style="color:#c4b5fd;font-size:.85rem;font-weight:700;margin-bottom:.5rem">Frage ${i+1}: ${p.moduleName}</h3><p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#e2e8f0">Frage:</strong> ${p.question}</p><p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#86efac">✅ Muster:</strong> ${p.sampleAnswer}</p><p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝 Deine Antwort:':'❌ Keine Antwort:'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p></div>`).join('')}</div>`;
+  return`<div style="color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif">
+    <h2 style="color:#818cf8;font-size:1.2rem;font-weight:900;margin-bottom:1rem">📋 Dein Lernheft</h2>
+    <p style="color:#94a3b8;margin-bottom:1.5rem">${answered} von ${pairs.length} Fragen beantwortet.</p>
+    ${pairs.map((p,i)=>`
+    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem;margin-bottom:1rem">
+      <h3 style="color:#c4b5fd;font-size:.85rem;font-weight:700;margin-bottom:.5rem">Frage ${i+1} · ${p.moduleName}</h3>
+      <p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#e2e8f0">Frage:</strong> ${p.question}</p>
+      <p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#86efac">✅ Muster:</strong> ${p.sampleAnswer||'–'}</p>
+      <p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝 Antwort:':'❌ Keine Antwort:'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
+    </div>`).join('')}
+  </div>`;
 }
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // PIN / AUTH
-// ═══════════════════════════════════════════════════════════════
-function pinNav(n){const el=document.getElementById('p'+n);if(el.value.length>=1){el.value=el.value.slice(-1);if(n<4)document.getElementById('p'+(n+1)).focus();if(n===4)doLogin();}}
+// ═══════════════════════════════════════════════════════
+function pinNav(n){
+  const el=document.getElementById('p'+n);
+  if(el.value.length>=1){el.value=el.value.slice(-1);if(n<4)document.getElementById('p'+(n+1)).focus();if(n===4)doLogin();}
+}
 function pinKey(e,n){if(e.key==='Backspace'&&n>1&&!document.getElementById('p'+n).value)document.getElementById('p'+(n-1)).focus();}
 function getPin(){return[1,2,3,4].map(n=>document.getElementById('p'+n).value).join('');}
-function showMsg(t,err){const el=document.getElementById('login-msg');el.textContent=t;el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;el.classList.remove('hidden');}
-function setLoading(on){document.getElementById('btn-login').disabled=on;document.getElementById('btn-register').disabled=on;document.getElementById('btn-login').innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';}
-
+function showMsg(t,err){
+  const el=document.getElementById('login-msg');
+  el.textContent=t;
+  el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;
+  el.classList.remove('hidden');
+}
+function setLoading(on){
+  document.getElementById('btn-login').disabled=on;
+  document.getElementById('btn-register').disabled=on;
+  document.getElementById('btn-login').innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
+}
 async function doLogin(){
   const pin=getPin();if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}
   document.getElementById('login-msg').classList.add('hidden');setLoading(true);
   try{await SLMCloud.login(pin);enterDashboard();}
   catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}
 }
-
 async function doRegister(){
   document.getElementById('login-msg').classList.add('hidden');setLoading(true);
-  try{const pin=await SLMCloud.register();document.getElementById('login-form').classList.add('hidden');document.getElementById('pin-display').classList.remove('hidden');pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d;});}
-  catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
+  try{
+    const pin=await SLMCloud.register();
+    document.getElementById('login-form').classList.add('hidden');
+    document.getElementById('pin-display').classList.remove('hidden');
+    pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d;});
+  }catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
 }
-
 function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload();}
-
 function enterDashboard(){
   document.getElementById('login-screen').classList.add('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
   document.getElementById('show-pin').textContent=SLMCloud.pin;
-  renderModules();loadStats();renderDashLernhefte();
+  renderModules();renderDashLernhefte();
   setTimeout(showWelcome,500);
 }
-
 document.addEventListener('DOMContentLoaded',async()=>{const ok=await SLMCloud.autoLogin();if(ok)enterDashboard();});
 
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 // MODULES GRID
-// ═══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════
 function renderModules(){
   const grid=document.getElementById('module-grid');
   const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
@@ -1089,48 +1346,23 @@ function renderModules(){
     const best=mH.length?mH.reduce((a,b)=>a.percentage>b.percentage?a:b):null;
     const pct=best?best.percentage:0;
     const chip=best?`<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>`:'';
-    return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}"><div class="mod-glow" style="background:${m.color}"></div><div class="flex justify-between items-start mb-6 relative z-10"><div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30"><i class="fas ${m.icon} text-white text-2xl"></i></div><span class="font-black text-slate-600 text-xl t-num">${pct}%</span></div><h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul ${m.id}</h3><p class="text-sm text-slate-400 mb-4 font-medium relative z-10">${m.name}</p><div class="flex items-center gap-2 mb-4 relative z-10">${chip}</div><div class="w-full h-2 rounded-full overflow-hidden relative z-10" style="background:rgba(255,255,255,.05)"><div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div></div></div>`;
+    return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
+      <div class="mod-glow" style="background:${m.color}"></div>
+      <div class="flex justify-between items-start mb-6 relative z-10">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30"><i class="fas ${m.icon} text-white text-2xl"></i></div>
+        <span class="font-black text-slate-600 text-xl t-num">${pct}%</span>
+      </div>
+      <h3 class="text-xl font-black text-white mb-1 uppercase tracking-tight relative z-10">Modul ${m.id}</h3>
+      <p class="text-sm text-slate-400 mb-4 font-medium relative z-10">${m.name}</p>
+      <div class="flex items-center gap-2 mb-4 relative z-10">${chip}</div>
+      <div class="w-full h-2 rounded-full overflow-hidden relative z-10" style="background:rgba(255,255,255,.05)">
+        <div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div>
+      </div>
+    </div>`;
   }).join('');
 }
 
-// ═══════════════════════════════════════════════════════════════
-// STATS & READINESS
-// ═══════════════════════════════════════════════════════════════
-function loadStats(){
-  const xp=parseInt(localStorage.getItem('arena_xp')||'0');
-  const level=Math.floor(xp/500)+1;
-  const streak=parseInt(localStorage.getItem('arena_ds')||localStorage.getItem('arena_streak')||'0');
-  document.getElementById('s-xp').textContent=xp.toLocaleString('de-DE');
-  document.getElementById('s-level').textContent=level;
-  document.getElementById('s-streak').textContent=streak;
-  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-  if(history.length){
-    const best=history.reduce((a,b)=>parseFloat(a.note)<parseFloat(b.note)?a:b);
-    const c=parseFloat(best.note)<=2?'#34d399':parseFloat(best.note)<=3.3?'#fbbf24':'#f87171';
-    document.getElementById('s-grade').textContent=best.note;document.getElementById('s-grade').style.color=c;
-    const last=history[history.length-1];const nc=parseFloat(last.note)<=2?'text-green-400':parseFloat(last.note)<=3.3?'text-yellow-400':'text-red-400';
-    document.getElementById('sim-note').innerHTML=`<span class="font-black ${nc} text-lg">${last.note}</span><span class="block text-[9px] text-slate-500 font-bold">Letzte</span>`;
-  }
-  const mastery=JSON.parse(localStorage.getItem('arena_mastery')||'{}');
-  const mExamed=new Set(history.map(h=>h.module)).size;
-  const mTrained=Object.keys(mastery).length;
-  const avgExam=history.length?Math.round(history.reduce((s,h)=>s+h.percentage,0)/history.length):0;
-  let r=0;
-  r+=Math.min(30,(mExamed/9)*30);r+=Math.min(30,(avgExam/100)*30);
-  r+=Math.min(20,(mTrained/9)*20);r+=Math.min(20,Math.min(xp,5000)/5000*20);
-  r=Math.round(r);readinessScore=r;
-  let emoji,label,lColor,sub;
-  if(r>=80){emoji='✅';label='Bereit!';lColor='#22c55e';sub=`${r}% — Du bist bereit für die Zwischenprüfung`;}
-  else if(r>=60){emoji='💪';label='Fast bereit';lColor='#eab308';sub=`${r}% — Noch etwas Training`;}
-  else if(r>=30){emoji='📚';label='In Arbeit';lColor='#f97316';sub=`${r}% — Weiter Module durcharbeiten`;}
-  else{emoji='🚀';label='Am Anfang';lColor='#ef4444';sub=`${r}% — Starte mit den Modulen`;}
-  document.getElementById('ready-emoji').textContent=emoji;
-  document.getElementById('ready-label').textContent=label;document.getElementById('ready-label').style.color=lColor;
-  document.getElementById('ready-text').textContent=sub;document.getElementById('ready-bar').style.width=r+'%';
-  const pctEl=document.getElementById('ready-pct-text');if(pctEl)pctEl.textContent=r+'%';
-}
-
-window.addEventListener('beforeunload',()=>{if(SLMCloud.ready)SLMCloud.save();});
+window.addEventListener('beforeunload',()=>{if(SLMCloud?.ready)SLMCloud.save();});
 </script>
 </body>
 </html>
