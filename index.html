@@ -3,403 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLM System | Dashboard</title>
+    <title>SLM System - Wartungsmodus</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .page-bg { background: #060910; position: fixed; inset: 0; z-index: 0; }
-        .page-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 0%, rgba(99,102,241,.07) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(59,130,246,.05) 0%, transparent 50%); }
-        .glass { background: rgba(15,23,42, .45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.06); }
-        .module-card { transition: all .4s cubic-bezier(.22,1,.36,1); position: relative; overflow: hidden; }
-        .module-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent,#6366f1); opacity: 0; transition: opacity .3s; }
-        .module-card:hover::before { opacity: 1; }
-        .module-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.1); }
-        .mod-glow { position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; border-radius: 50%; filter: blur(50px); opacity: 0; transition: opacity .4s; }
-        .module-card:hover .mod-glow { opacity: .15; }
-        @keyframes arenaGlow { 0% { box-shadow: 0 0 15px rgba(139,92,246,.15) } 50% { box-shadow: 0 0 35px rgba(139,92,246,.4) } 100% { box-shadow: 0 0 15px rgba(139,92,246,.15) } }
-        .arena-glow { animation: arenaGlow 3s infinite; }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
-        .anim { animation: fadeUp .6s cubic-bezier(.22, 1,.36, 1) forwards; opacity: 0; }
-        .progress-glow { box-shadow: 0 0 20px rgba(99,102,241,.15); }
-        @keyframes modalln { from { opacity: 0; transform: scale(.92) translateY(20px) } to { opacity: 1; transform: scale(1) translateY(0) } }
-        .modal-anim { animation: modalln .5s cubic-bezier(.16,1,.3,1) forwards; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #060910;
+            color: #f1f5f9;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .glow-icon {
+            animation: pulse-glow 3s infinite ease-in-out;
+            color: #6366f1;
+        }
     </style>
 </head>
-<body class="min-h-screen text-slate-100 relative">
+<body>
     <div class="page-bg"></div>
 
-    <div id="dashboard" class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-12 pb-24">
-        
-        <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
-                    <span class="font-black text-2xl tracking-tighter text-white">SLM</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Lern-Management-System</h1>
-                <p class="text-slate-400 mt-2 font-medium flex items-center gap-2"><i class="fas fa-graduation-cap text-indigo-400"></i>Examenstraining für das Staatsexamen 2026</p>
-            </div>
-        </header>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div onclick="openZPModal()" class="lg:col-span-2 glass rounded-3xl p-8 sm:p-10 relative overflow-hidden anim cursor-pointer hover:border-white/10 transition-all group" style="animation-delay:.1s">
-                <div class="absolute -top-20 -right-20 w-60 h-60 bg-indigo-500 rounded-full blur-[80px] opacity-[.04]"></div>
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6 gap-4 relative z-10">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <h2 class="text-white font-black text-xl sm:text-2xl uppercase tracking-tight">Zwischenprüfung</h2>
-                            <i class="fas fa-chevron-right text-slate-600 group-hover:text-indigo-400 transition-colors text-sm"></i>
-                        </div>
-                        <p class="text-slate-500 text-sm font-medium mt-1">Lernen & Probeklausur</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-4xl sm:text-5xl">🎯</span>
-                    </div>
-                </div>
+    <div class="max-w-md w-full px-6">
+        <div class="glass rounded-3xl p-8 sm:p-10 text-center shadow-2xl">
+            <div class="w-20 h-20 bg-indigo-600/10 rounded-2xl flex items-center justify-center mx-auto mb-8 border border-indigo-500/20">
+                <i class="fas fa-tools text-4xl glow-icon"></i>
             </div>
 
-            <div class="glass rounded-3xl p-6 anim flex flex-col" style="animation-delay:.12s">
-                <div class="flex items-center gap-3 mb-4">
-                    <i class="fas fa-book-bookmark text-violet-400 text-xl"></i>
-                    <h3 class="font-bold text-white uppercase tracking-wider text-sm">Meine Lernhefte</h3>
-                </div>
-                <div id="lernhefte-list" class="flex-1 overflow-y-auto space-y-3 pr-2">
-                    </div>
+            <h1 class="text-3xl font-extrabold tracking-tight mb-4 text-white">
+                System-Update
+            </h1>
+
+            <p class="text-slate-400 text-base leading-relaxed mb-8">
+                Wir bereiten das SLM System auf den nächsten großen Schritt vor. Das Dashboard wird in Kürze inklusive der <span class="text-indigo-400 font-bold">Zwischenprüfung-Vorbereitung</span> wieder verfügbar sein.
+            </p>
+
+            <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-300">Wartungsarbeiten aktiv</span>
             </div>
-        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 anim" style="animation-delay:.18s">
-            <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.02] transition-all arena-glow">
-                <div class="glass h-full w-full rounded-[calc(1.5rem-2px)] p-7 flex flex-col justify-between overflow-hidden relative">
-                    <div class="flex justify-between items-start z-10"><div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center"><i class="fas fa-brain text-white text-xl"></i></div></div>
-                    <div class="z-10 mt-5"><h3 class="text-white font-black text-lg uppercase tracking-tight mb-1">SLM Arena</h3><p class="text-slate-400 text-xs font-medium">Gamified Learning</p></div>
-                </div>
-            </a>
-            
-            <a href="exam-simulator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer border-orange-500/10" style="--accent:#f97316">
-                <div class="mod-glow" style="background:#f97316"></div>
-                <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center"><i class="fas fa-file-alt text-xl"></i></div></div>
-                <h3 class="text-white font-black text-lg uppercase tracking-tight mb-1 relative z-10">Klausur-Simulator</h3><p class="text-slate-400 text-xs font-medium relative z-10">1:1 Papier Format</p>
-            </a>
-            
-            <a href="creator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer border-indigo-500/10" style="--accent:#6366f1">
-                <div class="mod-glow" style="background:#6366f1"></div>
-                <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center"><i class="fas fa-wand-magic-sparkles text-xl"></i></div></div>
-                <h3 class="text-white font-black text-lg uppercase tracking-tight mb-1 relative z-10">SLM Studio</h3><p class="text-slate-400 text-xs font-medium relative z-10">KI Präsentationen</p>
-            </a>
-        </div>
-    </div>
-
-    <div id="zp-hub-modal" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.8); backdrop-filter:blur(10px)">
-        <div class="w-full max-w-2xl modal-anim">
-            <div class="glass rounded-3xl p-6 sm:p-8 border border-white/10">
-                <div class="flex items-center justify-between mb-8">
-                    <h2 class="text-2xl font-black text-white uppercase tracking-widest">Zwischenprüfung <span class="text-indigo-400">Hub</span></h2>
-                    <button onclick="closeZPModal()" class="text-slate-500 hover:text-white text-xl"><i class="fas fa-times"></i></button>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-2xl p-6 relative">
-                        <div class="absolute top-4 right-4 text-indigo-400 text-2xl opacity-20"><i class="fas fa-brain"></i></div>
-                        <h3 class="text-white font-bold text-lg mb-2">Geführtes Lernen</h3>
-                        <p class="text-xs text-slate-400 mb-6">KI generiert Fragen. Lerne mit dem 120s Timer & erhalte danach dein persönliches Lernheft.</p>
-                        
-                        <div class="space-y-3">
-                            <button onclick="startActiveRecall(5)" class="w-full flex items-center justify-between glass hover:bg-white/5 p-4 rounded-xl transition-all">
-                                <div class="text-left"><span class="block text-emerald-400 font-bold text-sm">Schnell lernen</span><span class="text-[10px] text-slate-500">5 Fragen</span></div>
-                                <i class="fas fa-play text-emerald-400"></i>
-                            </button>
-                            <button onclick="startActiveRecall(10)" class="w-full flex items-center justify-between glass hover:bg-white/5 p-4 rounded-xl transition-all">
-                                <div class="text-left"><span class="block text-yellow-400 font-bold text-sm">Mittelmäßig</span><span class="text-[10px] text-slate-500">10 Fragen</span></div>
-                                <i class="fas fa-play text-yellow-400"></i>
-                            </button>
-                            <button onclick="startActiveRecall(15)" class="w-full flex items-center justify-between glass hover:bg-white/5 p-4 rounded-xl transition-all">
-                                <div class="text-left"><span class="block text-orange-400 font-bold text-sm">Intensiv</span><span class="text-[10px] text-slate-500">15 Fragen</span></div>
-                                <i class="fas fa-play text-orange-400"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-800/40 border border-slate-600/50 rounded-2xl p-6 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-white font-bold text-lg mb-2">1:1 Probeklausur</h3>
-                            <p class="text-xs text-slate-400 mb-4">Echte Simulation. 120 Minuten harter Timer. Ausführliches KI-Gutachten am Ende.</p>
-                            <ul class="text-[11px] text-slate-500 space-y-2 mb-6">
-                                <li><i class="fas fa-check text-green-400 mr-2"></i>Alle relevanten BZPG Schwerpunkte</li>
-                                <li><i class="fas fa-check text-green-400 mr-2"></i>120 Minuten Zeitlimit</li>
-                                <li><i class="fas fa-check text-green-400 mr-2"></i>100 Punkte System</li>
-                            </ul>
-                        </div>
-                        <button onclick="location.href='exam-simulator.html?mode=zwischenpruefung'" class="w-full bg-slate-100 text-slate-900 font-black py-4 rounded-xl uppercase tracking-widest text-sm hover:bg-white transition-all">
-                            Simulation Starten
-                        </button>
-                    </div>
-                </div>
+            <div class="text-[11px] text-slate-500 font-bold uppercase tracking-[0.2em] pt-6 border-t border-white/5">
+                Examenstraining 2026 • v9.1
             </div>
         </div>
     </div>
-
-    <div id="recall-engine" class="fixed inset-0 z-[200] hidden bg-[#060910] flex flex-col">
-        <div class="h-16 border-b border-white/10 flex items-center justify-between px-6 bg-slate-900/50">
-            <span class="text-indigo-400 font-black tracking-widest uppercase text-sm">Active Recall</span>
-            <div class="text-slate-400 font-bold text-sm" id="recall-progress">Frage 1 / 5</div>
-            <button onclick="abortRecall()" class="text-red-400 hover:text-red-300 text-sm font-bold"><i class="fas fa-times mr-2"></i>Abbrechen</button>
-        </div>
-
-        <div class="flex-1 flex flex-col items-center justify-center p-6 max-w-3xl mx-auto w-full">
-            
-            <div class="w-full text-center mb-8">
-                <span class="text-[10px] text-indigo-400 font-black uppercase tracking-widest border border-indigo-500/30 rounded-full px-3 py-1 mb-4 inline-block">Aktuelle Frage</span>
-                <h2 id="recall-question" class="text-2xl md:text-3xl font-bold text-white leading-relaxed">Lädt Frage...</h2>
-            </div>
-
-            <div id="phase-spickzettel" class="w-full glass rounded-3xl p-8 border-indigo-500/30 relative overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 h-1 bg-slate-800">
-                    <div id="recall-timer-bar" class="h-full bg-indigo-500 w-full" style="transition: width 1s linear;"></div>
-                </div>
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-emerald-400 font-bold text-sm"><i class="fas fa-eye mr-2"></i>Einprägen!</span>
-                    <span id="recall-time-text" class="text-indigo-400 font-black text-2xl font-mono">120</span>
-                </div>
-                <div id="recall-answer-hint" class="text-lg text-slate-300 bg-slate-800/50 p-6 rounded-2xl mb-6">
-                    </div>
-                <div class="flex gap-4">
-                    <button onclick="addTime()" class="flex-1 glass py-3 rounded-xl text-slate-300 hover:text-white font-bold text-sm transition-all"><i class="fas fa-plus mr-2"></i>30s</button>
-                    <button onclick="skipToInput()" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-xl font-bold text-sm transition-all"><i class="fas fa-forward mr-2"></i>Verstanden (Überspringen)</button>
-                </div>
-            </div>
-
-            <div id="phase-input" class="w-full hidden">
-                <div class="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-xl mb-4 text-center">
-                    <span class="text-indigo-300 font-bold text-sm"><i class="fas fa-brain mr-2"></i>Schreibe die Antwort aus dem Gedächtnis</span>
-                </div>
-                <textarea id="recall-user-input" class="w-full h-40 glass rounded-2xl p-6 text-white outline-none focus:border-indigo-500 transition-all resize-none mb-6" placeholder="Deine Antwort hier..."></textarea>
-                <button onclick="submitRecallAnswer()" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-black py-4 rounded-2xl uppercase tracking-widest transition-all">
-                    Antwort einloggen <i class="fas fa-check ml-2"></i>
-                </button>
-            </div>
-
-            <div id="phase-generating" class="w-full hidden text-center py-20">
-                <i class="fas fa-wand-magic-sparkles text-5xl text-indigo-400 mb-6 animate-pulse"></i>
-                <h3 class="text-2xl font-bold text-white mb-2">KI erstellt dein Lernheft...</h3>
-                <p class="text-slate-400">Deine Antworten werden analysiert. Gleich erfährst du, was du noch lernen musst.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="lernheft-modal" class="fixed inset-0 z-[250] hidden bg-[#060910] flex flex-col">
-        <div class="h-16 border-b border-white/10 flex items-center justify-between px-6 bg-slate-900">
-            <span class="text-emerald-400 font-black tracking-widest uppercase text-sm"><i class="fas fa-book-open mr-2"></i>Dein KI-Lernheft</span>
-            <button onclick="closeLernheft()" class="text-slate-400 hover:text-white text-xl"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="flex-1 overflow-y-auto p-6 md:p-12">
-            <div class="max-w-4xl mx-auto glass rounded-3xl p-8 md:p-12 bg-white text-slate-900 shadow-2xl">
-                <div id="lernheft-content" class="prose max-w-none"></div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // --- UI Steuerung ---
-        function openZPModal() { document.getElementById('zp-hub-modal').classList.remove('hidden'); }
-        function closeZPModal() { document.getElementById('zp-hub-modal').classList.add('hidden'); }
-        function closeLernheft() { document.getElementById('lernheft-modal').classList.add('hidden'); }
-
-        // --- Active Recall State ---
-        let recallState = {
-            total: 0,
-            currentIdx: 0,
-            questions: [], // Mock array für die generierten Fragen
-            userAnswers: [],
-            timeLeft: 120,
-            timerInterval: null
-        };
-
-        // --- Start Active Recall Flow ---
-        async function startActiveRecall(count) {
-            closeZPModal();
-            document.getElementById('recall-engine').classList.remove('hidden');
-            
-            recallState.total = count;
-            recallState.currentIdx = 0;
-            recallState.userAnswers = [];
-            
-            // Simuliere das Laden von passenden Zwischenprüfungs-Fragen (Normalerweise API/JSON)
-            // Hier nutzen wir Dummy-Daten für die UI-Logik.
-            recallState.questions = Array.from({length: count}).map((_, i) => ({
-                question: `Beschreibe den ${i+1}. Schritt im Pflegeprozess nach Fiechter/Meier und nenne ein Beispiel.`,
-                hint: `Der Schritt umfasst die Informationssammlung (Anamnese). Wichtig: Objektive und subjektive Daten unterscheiden. Beispiel: Vitalzeichen messen (objektiv) vs. Schmerzäußerung (subjektiv).`
-            }));
-
-            loadQuestionUI();
-        }
-
-        function loadQuestionUI() {
-            if(recallState.currentIdx >= recallState.total) {
-                finishRecallAndGenerate();
-                return;
-            }
-
-            const q = recallState.questions[recallState.currentIdx];
-            document.getElementById('recall-progress').innerText = `Frage ${recallState.currentIdx + 1} / ${recallState.total}`;
-            document.getElementById('recall-question').innerText = q.question;
-            document.getElementById('recall-answer-hint').innerText = q.hint;
-            document.getElementById('recall-user-input').value = "";
-
-            // Zeige Spickzettel, verstecke Input
-            document.getElementById('phase-spickzettel').classList.remove('hidden');
-            document.getElementById('phase-input').classList.add('hidden');
-
-            // Timer starten
-            recallState.timeLeft = 120;
-            updateTimerUI();
-            clearInterval(recallState.timerInterval);
-            recallState.timerInterval = setInterval(() => {
-                recallState.timeLeft--;
-                updateTimerUI();
-                if(recallState.timeLeft <= 0) {
-                    skipToInput();
-                }
-            }, 1000);
-        }
-
-        function updateTimerUI() {
-            document.getElementById('recall-time-text').innerText = recallState.timeLeft;
-            const pct = (recallState.timeLeft / 120) * 100;
-            document.getElementById('recall-timer-bar').style.width = `${Math.max(0, pct)}%`;
-            if(recallState.timeLeft < 15) {
-                document.getElementById('recall-timer-bar').style.background = '#ef4444'; // Rot
-            } else {
-                document.getElementById('recall-timer-bar').style.background = '#6366f1'; // Indigo
-            }
-        }
-
-        function addTime() {
-            recallState.timeLeft += 30;
-            updateTimerUI();
-        }
-
-        function skipToInput() {
-            clearInterval(recallState.timerInterval);
-            document.getElementById('phase-spickzettel').classList.add('hidden');
-            document.getElementById('phase-input').classList.remove('hidden');
-            document.getElementById('recall-user-input').focus();
-        }
-
-        function submitRecallAnswer() {
-            const answer = document.getElementById('recall-user-input').value;
-            recallState.userAnswers.push({
-                question: recallState.questions[recallState.currentIdx].question,
-                userAnswer: answer
-            });
-            recallState.currentIdx++;
-            loadQuestionUI();
-        }
-
-        function abortRecall() {
-            clearInterval(recallState.timerInterval);
-            document.getElementById('recall-engine').classList.add('hidden');
-        }
-
-        // --- KI Lernheft Generierung (API Call an grade.js) ---
-        async function finishRecallAndGenerate() {
-            document.getElementById('phase-spickzettel').classList.add('hidden');
-            document.getElementById('phase-input').classList.add('hidden');
-            document.getElementById('phase-generating').classList.remove('hidden');
-
-            // Baue den Prompt für deine grade.js
-            const promptStr = `
-            Du bist ein Pflege-Tutor. Bewerte diese Antworten eines Schülers für die Zwischenprüfung.
-            Erstelle ein sehr detailliertes HTML-Lernheft als Feedback. Nutze <h2>, <h3>, <ul>, <p>. 
-            Zeige auf, was gut war und erkläre genau die Wissenslücken, die er noch lernen muss.
-            
-            Antworten des Schülers:
-            ${JSON.stringify(recallState.userAnswers)}
-            `;
-
-            try {
-                // Ruf deine bestehende API auf
-                const response = await fetch('/api/grade', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: promptStr })
-                });
-                
-                const data = await response.json();
-                const aiHTML = data.text || "<p>Fehler bei der KI-Generierung.</p>";
-
-                // Speichern im LocalStorage
-                saveLernheft(aiHTML);
-                
-                // UI Aufräumen und Lernheft zeigen
-                document.getElementById('recall-engine').classList.add('hidden');
-                document.getElementById('phase-generating').classList.add('hidden');
-                renderLernhefteDashboard();
-                openLernheft(aiHTML);
-
-            } catch (e) {
-                alert("Fehler bei der KI-Analyse. Bitte überprüfe deine grade.js Anbindung.");
-                abortRecall();
-            }
-        }
-
-        // --- LocalStorage für Lernhefte ---
-        function saveLernheft(htmlContent) {
-            let hefte = JSON.parse(localStorage.getItem('slm_lernbuecher') || '[]');
-            const newHeft = {
-                id: Date.now(),
-                date: new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute:'2-digit' }),
-                title: `Zwischenprüfung Fokus (${recallState.total} Fragen)`,
-                content: htmlContent
-            };
-            hefte.unshift(newHeft); // Neues nach oben
-            localStorage.setItem('slm_lernbuecher', JSON.stringify(hefte));
-        }
-
-        function renderLernhefteDashboard() {
-            const listContainer = document.getElementById('lernhefte-list');
-            let hefte = JSON.parse(localStorage.getItem('slm_lernbuecher') || '[]');
-
-            if(hefte.length === 0) {
-                listContainer.innerHTML = `<div class="text-center p-4 bg-white/5 rounded-xl border border-white/5"><i class="fas fa-ghost text-slate-500 text-2xl mb-2"></i><p class="text-xs text-slate-400">Noch keine Lernhefte generiert. Starte das "Geführte Lernen"!</p></div>`;
-                return;
-            }
-
-            listContainer.innerHTML = hefte.map(h => `
-                <div onclick="openLernheftById(${h.id})" class="glass hover:bg-white/10 p-4 rounded-xl cursor-pointer transition-colors border-l-4 border-l-emerald-500 flex justify-between items-center group">
-                    <div>
-                        <h4 class="text-white font-bold text-sm truncate">${h.title}</h4>
-                        <span class="text-[10px] text-slate-400"><i class="fas fa-calendar-alt mr-1"></i>${h.date}</span>
-                    </div>
-                    <i class="fas fa-chevron-right text-slate-600 group-hover:text-emerald-400 transition-colors"></i>
-                </div>
-            `).join('');
-        }
-
-        function openLernheftById(id) {
-            let hefte = JSON.parse(localStorage.getItem('slm_lernbuecher') || '[]');
-            const heft = hefte.find(h => h.id === id);
-            if(heft) openLernheft(heft.content);
-        }
-
-        function openLernheft(htmlContent) {
-            // Bereinige Markdown Artefakte falls die KI ```html mitliefert
-            let cleanHTML = htmlContent.replace(/```html/g, '').replace(/```/g, '');
-            document.getElementById('lernheft-content').innerHTML = cleanHTML;
-            document.getElementById('lernheft-modal').classList.remove('hidden');
-        }
-
-        // Init beim Laden
-        document.addEventListener('DOMContentLoaded', () => {
-            renderLernhefteDashboard();
-        });
-
-    </script>
 </body>
 </html>
