@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLM System</title>
+<title>SLM System – BZPG Würselen</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -44,68 +44,57 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 
 /* ═══ EXAM PAPER STYLES ═══ */
 .exam-paper{background:white;box-shadow:0 4px 40px rgba(0,0,0,.15);border-radius:4px;font-family:'Crimson Pro','Times New Roman',serif;color:#1a1a1a;font-size:15px;line-height:1.6}
-.ep-header{border-bottom:3px double #333;padding:32px 48px 24px}
-.ep-header-top{font-size:11px;font-weight:600;color:#444;line-height:1.4;border-bottom:1px solid #999;padding-bottom:12px;margin-bottom:20px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.02em}
-.ep-title{text-align:center;padding:20px 0}
-.ep-title h1{font-size:26px;font-weight:700;letter-spacing:-.5px}
-.ep-title h2{font-size:20px;font-weight:600;margin-top:4px}
-.ep-title p{font-size:13px;color:#555;margin-top:6px;font-family:'Plus Jakarta Sans',sans-serif}
-.ep-info-grid{display:grid;grid-template-columns:1fr 1fr;border:2px solid #333;margin-top:16px}
-.ep-info-cell{padding:10px 16px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px}
-.ep-info-cell label{font-weight:700;color:#555;font-size:11px;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:2px}
-.ep-info-cell input{border:none;border-bottom:1px solid #999;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;padding:2px 4px;width:80%;outline:none;background:transparent}
-.ep-hinweis{margin:16px 48px;padding:12px 16px;background:#fffbeb;border:1px solid #f59e0b;border-radius:4px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#78350f}
-.ep-fallbeispiel{padding:28px 48px;border-bottom:2px solid #333;background:#fafafa}
-.ep-fallbeispiel-title{font-weight:700;font-size:17px;margin-bottom:16px;color:#1a1a1a;font-family:'Plus Jakarta Sans',sans-serif}
-.ep-fallbeispiel p{text-align:justify;margin-bottom:12px;font-size:14.5px;line-height:1.75}
-.ep-aufgabe{padding:24px 48px;border-bottom:1.5px solid #e0e0e0}
-.ep-aufgabe:last-child{border-bottom:none;padding-bottom:40px}
-.ep-aufgabe-header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#e8e8e8,#f0f0f0);padding:10px 16px;margin:-4px -4px 18px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;border-radius:2px}
-.ep-aufgabe-nr{font-weight:800;font-size:14px;color:#111}
-.ep-aufgabe-pts{font-size:12px;font-weight:700;color:#444;border:1.5px solid #888;padding:3px 12px;border-radius:2px;background:white}
-.ep-aufgabe-tag{font-size:11px;font-weight:600;color:#666;font-style:italic}
-.ep-instruction{font-size:14.5px;line-height:1.75;margin-bottom:16px;color:#222}
+.ep-header{border-bottom:3px double #333;padding:28px 44px 20px}
+.ep-header-top{font-size:10.5px;font-weight:600;color:#444;line-height:1.5;border-bottom:1px solid #999;padding-bottom:10px;margin-bottom:16px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase}
+.ep-title{text-align:center;padding:16px 0}
+.ep-title h1{font-size:24px;font-weight:700;letter-spacing:-.5px}
+.ep-title h2{font-size:18px;font-weight:600;margin-top:4px;color:#333}
+.ep-title p{font-size:12px;color:#666;margin-top:6px;font-family:'Plus Jakarta Sans',sans-serif;font-style:italic}
+.ep-info-grid{display:grid;grid-template-columns:1fr 1fr;border:2px solid #333;margin-top:14px}
+.ep-info-cell{padding:9px 14px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px}
+.ep-info-cell label{font-weight:700;color:#555;font-size:10px;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px}
+.ep-info-cell input{border:none;border-bottom:1px solid #aaa;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;padding:2px 4px;width:85%;outline:none;background:transparent}
+.ep-hinweis{margin:14px 44px;padding:10px 14px;background:#fffbeb;border:1px solid #f59e0b;border-radius:3px;font-family:'Plus Jakarta Sans',sans-serif;font-size:11.5px;color:#78350f;line-height:1.6}
+.ep-fallbeispiel{padding:24px 44px;border-bottom:2px solid #333;background:#fafafa}
+.ep-fallbeispiel-title{font-weight:700;font-size:16px;margin-bottom:14px;font-family:'Plus Jakarta Sans',sans-serif;color:#111;display:flex;align-items:center;gap:8px}
+.ep-fallbeispiel p{text-align:justify;margin-bottom:10px;font-size:14.5px;line-height:1.75}
+.ep-aufgabe{padding:22px 44px;border-bottom:1.5px solid #ddd}
+.ep-aufgabe:last-child{border-bottom:none;padding-bottom:36px}
+.ep-aufgabe-header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#e6e6e6,#efefef);padding:9px 14px;margin:-2px -2px 16px;border:1px solid #ccc;font-family:'Plus Jakarta Sans',sans-serif;border-radius:2px}
+.ep-aufgabe-nr{font-weight:800;font-size:13.5px;color:#111}
+.ep-aufgabe-pts{font-size:12px;font-weight:700;color:#333;border:1.5px solid #888;padding:2px 10px;border-radius:2px;background:white}
+.ep-aufgabe-tag{font-size:11px;font-weight:600;color:#555;font-style:italic}
+.ep-kb-badge{font-size:10px;font-weight:700;color:#4f46e5;background:#eef2ff;border:1px solid #c7d2fe;padding:2px 8px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-instruction{font-size:14px;line-height:1.75;margin-bottom:14px;color:#222}
 .ep-instruction strong{font-weight:700}
-.ep-sub{font-size:13.5px;color:#333;margin-bottom:10px;padding-left:4px;border-left:3px solid #ddd;padding-left:8px}
-/* RF Table */
-.ep-rf-table{width:100%;border-collapse:collapse;border:1.5px solid #555;font-family:'Plus Jakarta Sans',sans-serif;margin:8px 0 12px}
-.ep-rf-table th{background:#e0e0e0;padding:9px 14px;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #999;text-align:center}
+.ep-sub{font-size:13.5px;color:#333;margin-bottom:10px;padding-left:10px;border-left:3px solid #ddd}
+.ep-rf-table{width:100%;border-collapse:collapse;border:1.5px solid #555;font-family:'Plus Jakarta Sans',sans-serif;margin:8px 0 10px}
+.ep-rf-table th{background:#e0e0e0;padding:8px 12px;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #999;text-align:center}
 .ep-rf-table th:first-child{text-align:left;width:70%}
-.ep-rf-row td{border:1px solid #ccc;padding:11px 14px;font-size:13.5px;vertical-align:middle}
+.ep-rf-row td{border:1px solid #ccc;padding:10px 12px;font-size:13.5px;vertical-align:middle}
 .ep-rf-row:nth-child(even) td{background:#fafafa}
 .ep-rf-option{text-align:center;width:15%;cursor:pointer}
 .ep-rf-option:hover{background:#f0f0ff}
-.ep-rf-radio{width:22px;height:22px;border:2px solid #999;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer}
+.ep-rf-radio{width:21px;height:21px;border:2px solid #999;border-radius:50%;margin:0 auto;display:flex;align-items:center;justify-content:center;transition:all .15s;cursor:pointer}
 .ep-rf-radio.selected{border-color:#4f46e5;background:#4f46e5}
-.ep-rf-radio.selected::after{content:'✕';color:white;font-size:10px;font-weight:800}
-/* Textarea */
-.ep-textarea{width:100%;border:1.5px solid #bbb;padding:10px 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fefefe;outline:none;resize:vertical;min-height:100px;transition:border-color .2s;border-radius:2px;line-height:1.7;box-sizing:border-box}
+.ep-rf-radio.selected::after{content:'✓';color:white;font-size:11px;font-weight:800}
+.ep-textarea{width:100%;border:1.5px solid #bbb;padding:10px 12px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:#fefefe;outline:none;resize:vertical;min-height:90px;transition:border-color .2s;border-radius:2px;line-height:1.7;box-sizing:border-box}
 .ep-textarea:focus{border-color:#4f46e5;background:white}
-/* Writing lines */
-.ep-lines{margin:8px 0 4px}
-.ep-line{border-bottom:1px solid #bbb;height:30px;margin-bottom:2px;width:100%}
-.ep-points{text-align:right;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:#888;margin-top:6px;font-style:italic}
-/* Scoring box */
-.ep-scoring{margin:12px 0;padding:10px 14px;border:1.5px solid #ccc;background:#f8f8f8;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#555;border-radius:2px;display:flex;justify-content:space-between;align-items:center}
-/* MC options */
+.ep-points{text-align:right;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;color:#888;margin-top:5px;font-style:italic}
+.ep-scoring{margin:14px 0 0;padding:10px 14px;border:1.5px solid #ccc;background:#f8f8f8;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;color:#555;border-radius:2px;display:flex;justify-content:space-between;align-items:center}
 .ep-mc-list{list-style:none;padding:0;margin:8px 0}
-.ep-mc-list li{display:flex;align-items:flex-start;gap:10px;padding:7px 10px;margin-bottom:4px;border:1px solid #ddd;border-radius:2px;font-size:13.5px;cursor:pointer;transition:background .15s}
-.ep-mc-list li:hover{background:#f0f0ff}
-.ep-mc-list li.selected{background:#eef2ff;border-color:#6366f1}
-.ep-mc-box{width:18px;height:18px;border:2px solid #888;border-radius:3px;shrink:0;display:inline-block;margin-top:1px}
-.ep-mc-list li.selected .ep-mc-box{background:#6366f1;border-color:#6366f1}
-/* Zuordnung */
-.ep-zuord-table{width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;margin:8px 0}
-.ep-zuord-table td{padding:8px 12px;border:1px solid #ccc;vertical-align:middle}
-.ep-zuord-table td:first-child{font-weight:700;width:40%;background:#f5f5f5}
-.ep-zuord-input{border:none;border-bottom:2px solid #999;width:100%;outline:none;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;padding:2px 4px;background:transparent}
-
+.ep-mc-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;margin-bottom:4px;border:1px solid #ddd;border-radius:2px;font-size:13.5px;cursor:pointer;transition:background .15s;font-family:'Plus Jakarta Sans',sans-serif}
+.ep-mc-list li:hover{background:#f5f5ff}
+.ep-mc-list li.mc-selected{background:#eef2ff;border-color:#6366f1}
+.ep-mc-circle{width:18px;height:18px;border:2px solid #999;border-radius:50%;shrink:0;display:inline-flex;align-items:center;justify-content:center;margin-top:1px;flex-shrink:0;transition:all .15s}
+.ep-mc-list li.mc-selected .ep-mc-circle{background:#6366f1;border-color:#6366f1}
+.ep-mc-list li.mc-selected .ep-mc-circle::after{content:'✓';color:white;font-size:10px;font-weight:800}
 @media(max-width:640px){
   .exam-paper{font-size:13px;border-radius:0}
-  .ep-header,.ep-fallbeispiel,.ep-aufgabe{padding:16px}
+  .ep-header,.ep-fallbeispiel,.ep-aufgabe{padding:14px}
   .ep-info-grid{grid-template-columns:1fr}
-  .ep-title h1{font-size:18px}.ep-title h2{font-size:15px}
-  .ep-hinweis{margin:8px 16px}
+  .ep-title h1{font-size:17px}.ep-title h2{font-size:14px}
+  .ep-hinweis{margin:8px 14px}
 }
 </style>
 </head>
@@ -113,16 +102,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div class="page-bg"></div>
 
 <!-- ═══ PROBEKLAUSUR WARNING MODAL ═══ -->
-<div id="pk-warning-modal" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(12px)">
+<div id="pk-warning-modal" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(14px)">
   <div class="w-full max-w-lg modal-anim">
-    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.35);box-shadow:0 0 80px rgba(249,115,22,.15)">
-      <div class="p-6 pb-5" style="background:linear-gradient(135deg,rgba(249,115,22,.18),rgba(245,158,11,.08))">
-        <div class="flex items-center gap-4 mb-2">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.3),rgba(245,158,11,.2));border:2px solid rgba(249,115,22,.5)">
+    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.4);box-shadow:0 0 80px rgba(249,115,22,.12)">
+      <div class="p-6 pb-5" style="background:linear-gradient(135deg,rgba(249,115,22,.16),rgba(245,158,11,.06))">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.28),rgba(245,158,11,.18));border:2px solid rgba(249,115,22,.45)">
             <i class="fas fa-exclamation-triangle text-orange-400 text-2xl"></i>
           </div>
           <div>
-            <h2 class="text-white font-black text-xl">Wichtiger Hinweis</h2>
+            <h2 class="text-white font-black text-xl tracking-tight">Wichtiger Hinweis</h2>
             <p class="text-orange-400 text-xs font-bold uppercase tracking-widest mt-0.5">Bitte vor dem Start lesen</p>
           </div>
         </div>
@@ -133,7 +122,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             <i class="fas fa-robot text-orange-400 text-sm mt-0.5 shrink-0"></i>
             <div>
               <h4 class="font-black text-white text-sm mb-1">KI-Modell auf Basis früherer Prüfungsversuche</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Diese Probeklausur wird von einer KI generiert, die auf deinen bisherigen Lernmaterialien und typischen Prüfungsmustern basiert. Sie ist ein Übungsmodell und kein offizielles Prüfungsdokument.</p>
+              <p class="text-slate-400 text-xs leading-relaxed">Diese Probeklausur wird von einer KI generiert und basiert auf typischen Prüfungsmustern der Zwischenprüfung nach <strong class="text-orange-300">§ 6 Abs. 5 PflBG / § 7 PflAPrV</strong>. Sie ist ein Übungsmodell und kein offizielles Prüfungsdokument des BZPG Würselen.</p>
             </div>
           </div>
         </div>
@@ -142,7 +131,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
             <i class="fas fa-info-circle text-red-400 text-sm mt-0.5 shrink-0"></i>
             <div>
               <h4 class="font-black text-white text-sm mb-1">Abweichungen zur echten Prüfung möglich</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Die echte Zwischenprüfung kann inhaltlich, formal und in der Schwierigkeit abweichen. Fragen und Schwerpunkte werden vom offiziellen Prüfungsamt festgelegt.</p>
+              <p class="text-slate-400 text-xs leading-relaxed">Das BZPG Würselen gestaltet die Zwischenprüfung eigenverantwortlich (NRW-Regelung). Konkrete Aufgaben, Bewertungskriterien und Format können abweichen. Frage deine Lehrkräfte nach dem schulinternen Format.</p>
             </div>
           </div>
         </div>
@@ -150,16 +139,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
           <div class="flex items-start gap-3">
             <i class="fas fa-graduation-cap text-indigo-400 text-sm mt-0.5 shrink-0"></i>
             <div>
-              <h4 class="font-black text-white text-sm mb-1">Deutsches Kompetenz-Prüfungsformat (PflBG)</h4>
-              <p class="text-slate-400 text-xs leading-relaxed">Die Klausur folgt den deutschen Pflegeausbildungs-Richtlinien mit Fallbeispiel, Richtig/Falsch, Freitext und Reflexionsaufgaben — <strong class="text-orange-400">100 Punkte gesamt</strong>, 120 Minuten.</p>
+              <h4 class="font-black text-white text-sm mb-1">Prüfungsformat nach PflAPrV – 5 Kompetenzbereiche</h4>
+              <p class="text-slate-400 text-xs leading-relaxed">Die Klausur prüft alle <strong class="text-indigo-300">5 Kompetenzbereiche (I–V)</strong> der Anlage 1 PflAPrV: Pflegeprozess · Kommunikation · Zusammenarbeit · Recht & Qualität · Wissenschaft & Berufsethos. <strong class="text-orange-400">100 Punkte · 120 Minuten · Fallbasiert.</strong></p>
             </div>
           </div>
         </div>
-        <div class="flex gap-3 pt-2">
+        <div class="rounded-2xl p-3 flex items-center gap-3" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+          <i class="fas fa-shield-alt text-emerald-400 text-sm shrink-0"></i>
+          <p class="text-[11px] text-slate-500 leading-relaxed"><strong class="text-slate-400">Gut zu wissen:</strong> Die Zwischenprüfung kann nicht "durchgefallen" werden — die Ausbildung wird unabhängig vom Ergebnis fortgesetzt (§ 6 Abs. 5 PflBG). Bei schlechtem Ergebnis werden gemeinsame Fördermaßnahmen eingeleitet.</p>
+        </div>
+        <div class="flex gap-3 pt-1">
           <button onclick="closePKWarning()" class="flex-1 py-3 rounded-xl text-sm font-bold text-slate-500 hover:text-white transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
             <i class="fas fa-times mr-2"></i>Abbrechen
           </button>
-          <button onclick="confirmStartProbeklausur()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 24px rgba(249,115,22,.35)">
+          <button onclick="confirmStartProbeklausur()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#f97316,#f59e0b);box-shadow:0 8px 24px rgba(249,115,22,.3)">
             <i class="fas fa-play mr-2"></i>Verstanden — Jetzt starten
           </button>
         </div>
@@ -176,15 +169,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
       <div class="relative z-10">
         <div class="text-5xl mb-3 sparkle">🎓</div>
         <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white">SLM System ist bereit!</h2>
-        <p class="text-indigo-200 text-sm font-medium mt-2">Dein komplettes Examenstraining</p>
+        <p class="text-indigo-200 text-sm font-medium mt-2">Zwischenprüfungs-Training · BZPG Würselen</p>
       </div>
     </div>
     <div class="bg-[#0c1020] rounded-b-3xl p-6 sm:p-8 space-y-4 border border-white/5 border-t-0">
-      <div class="flex items-start gap-3"><div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-book-open text-sm"></i></div><div><h4 class="font-bold text-sm text-white">9 Module komplett</h4><p class="text-[11px] text-slate-500 leading-relaxed">Von Kommunikation bis Neuro-Rehabilitation.</p></div></div>
-      <div class="flex items-start gap-3"><div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div><div><h4 class="font-bold text-sm text-white">KI-gestütztes Lernen</h4><p class="text-[11px] text-slate-500 leading-relaxed">Active Recall, Probeklausur mit Paper-Look, KI-Lernhefte.</p></div></div>
+      <div class="flex items-start gap-3"><div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-book-open text-sm"></i></div><div><h4 class="font-bold text-sm text-white">9 Module · 5 Kompetenzbereiche</h4><p class="text-[11px] text-slate-500 leading-relaxed">Komplette Vorbereitung nach PflAPrV Anlage 1.</p></div></div>
+      <div class="flex items-start gap-3"><div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div><div><h4 class="font-bold text-sm text-white">KI-gestütztes Lernen</h4><p class="text-[11px] text-slate-500 leading-relaxed">Kompetenzbasierte Lernhefte, Probeklausur mit Paper-Look.</p></div></div>
       <div class="flex items-start gap-3"><div class="w-9 h-9 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-cloud text-sm"></i></div><div><h4 class="font-bold text-sm text-white">Cloud-Sync</h4><p class="text-[11px] text-slate-500 leading-relaxed">4-stelliger Code synchronisiert alles über alle Geräte.</p></div></div>
       <button onclick="closeWelcome()" class="w-full gradient-bg text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm mt-4 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20"><i class="fas fa-rocket mr-2"></i>System starten</button>
-      <p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v9.2 — Vollständig einsatzbereit</p>
+      <p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v9.3 · PflBG/PflAPrV konform</p>
     </div>
   </div>
 </div>
@@ -192,59 +185,73 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <!-- ═══ ZP HUB MODAL ═══ -->
 <div id="zp-hub-modal" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.8);backdrop-filter:blur(12px)">
   <div class="w-full max-w-lg modal-anim">
-    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.97);border:1px solid rgba(99,102,241,.2);box-shadow:0 0 60px rgba(99,102,241,.12)">
+    <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.97);border:1px solid rgba(99,102,241,.2);box-shadow:0 0 60px rgba(99,102,241,.1)">
       <div class="relative p-6 pb-4" style="background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.06))">
         <div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,.5),transparent)"></div>
         <div class="flex items-start justify-between mb-4">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.4)"><i class="fas fa-graduation-cap text-white text-lg"></i></div>
-            <div><h2 class="text-white font-black text-lg tracking-tight">Zwischenprüfung</h2><p class="text-slate-500 text-xs mt-0.5">Ende 2. Ausbildungsjahr · BZPG Würselen</p></div>
+            <div>
+              <h2 class="text-white font-black text-lg tracking-tight">Zwischenprüfung</h2>
+              <p class="text-slate-500 text-xs mt-0.5">Ende 2. Ausbildungsdrittel · BZPG Würselen</p>
+            </div>
           </div>
           <button onclick="closeZPHub()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all"><i class="fas fa-times text-sm"></i></button>
         </div>
+        <!-- KB Info Bar -->
         <div class="p-3 rounded-xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
-          <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Prüfungsbereitschaft</span>
-            <span id="hub-ready-pct" class="text-xs font-black text-indigo-400 t-num">0%</span>
-          </div>
-          <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
-            <div id="hub-ready-bar" class="h-full rounded-full transition-all duration-1000" style="width:0%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+          <p class="text-[9px] font-black text-slate-600 uppercase tracking-widest mb-1.5">Kompetenzbereiche (PflAPrV Anlage 1)</p>
+          <div class="flex flex-wrap gap-1">
+            <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(99,102,241,.15);color:#a5b4fc;border:1px solid rgba(99,102,241,.25)">I · Pflegeprozess</span>
+            <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(139,92,246,.15);color:#c4b5fd;border:1px solid rgba(139,92,246,.25)">II · Kommunikation</span>
+            <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(59,130,246,.15);color:#93c5fd;border:1px solid rgba(59,130,246,.25)">III · Zusammenarbeit</span>
+            <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(20,184,166,.15);color:#5eead4;border:1px solid rgba(20,184,166,.25)">IV · Recht & Qualität</span>
+            <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(245,158,11,.15);color:#fcd34d;border:1px solid rgba(245,158,11,.25)">V · Berufsethos</span>
           </div>
         </div>
       </div>
       <!-- Tabs -->
       <div class="px-5 pt-3">
         <div class="flex gap-1 p-1 rounded-xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
-          <button onclick="zpSetTab('lernen')" id="tab-lernen" class="zp-tab-btn active flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-brain mr-1"></i>Lernen</button>
+          <button onclick="zpSetTab('lernen')" id="tab-lernen" class="zp-tab-btn active flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book-open mr-1"></i>Lernen</button>
           <button onclick="zpSetTab('klausur')" id="tab-klausur" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-file-contract mr-1"></i>Klausur</button>
           <button onclick="zpSetTab('muendlich')" id="tab-muendlich" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-microphone mr-1"></i>Mündlich</button>
           <button onclick="zpSetTab('hefte')" id="tab-hefte" class="zp-tab-btn flex-1 py-2 rounded-lg text-[10px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book-open mr-1"></i>Hefte</button>
         </div>
       </div>
-      <div class="p-5 pt-3" style="min-height:280px">
+      <div class="p-5 pt-3" style="min-height:290px">
 
         <!-- TAB: LERNEN -->
         <div id="zpTab-lernen" class="zp-tab-content">
-          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>120s einprägen → aus dem Gedächtnis abrufen → KI-Lernheft.</p>
+          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Kompetenzbasiertes Lernen nach PflAPrV · 120s einprägen → abrufen → KI-Lernheft erstellen.</p>
           <div class="space-y-2.5">
             <div onclick="startRecall('schnell')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.15)">
               <div class="flex items-center gap-3">
                 <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xl" style="background:rgba(99,102,241,.12)">⚡</div>
-                <div class="flex-1"><div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Schnell-Session</h3><span class="text-[9px] font-black bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full">5 FRAGEN</span></div><p class="text-slate-500 text-[11px]">~15 Min · Perfekt für zwischendurch</p></div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Schnell-Session</h3><span class="text-[9px] font-black bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full">5 FRAGEN</span></div>
+                  <p class="text-slate-500 text-[11px]">~15 Min · Fallbasiert · KB I–V</p>
+                </div>
                 <i class="fas fa-arrow-right text-indigo-400 text-xs"></i>
               </div>
             </div>
             <div onclick="startRecall('mittel')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.15)">
               <div class="flex items-center gap-3">
                 <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xl" style="background:rgba(139,92,246,.12)">🎯</div>
-                <div class="flex-1"><div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Standard-Session</h3><span class="text-[9px] font-black bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded-full">10 FRAGEN</span></div><p class="text-slate-500 text-[11px]">~30 Min · Tägliches Lernen</p></div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Standard-Session</h3><span class="text-[9px] font-black bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded-full">10 FRAGEN</span></div>
+                  <p class="text-slate-500 text-[11px]">~30 Min · Tägliches Lernen · Alle KB</p>
+                </div>
                 <i class="fas fa-arrow-right text-violet-400 text-xs"></i>
               </div>
             </div>
             <div onclick="startRecall('intensiv')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.15)">
               <div class="flex items-center gap-3">
                 <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xl" style="background:rgba(59,130,246,.12)">🔥</div>
-                <div class="flex-1"><div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Intensiv-Session</h3><span class="text-[9px] font-black bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">15 FRAGEN</span></div><p class="text-slate-500 text-[11px]">~45 Min · Maximale Vorbereitung</p></div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Intensiv-Session</h3><span class="text-[9px] font-black bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">15 FRAGEN</span></div>
+                  <p class="text-slate-500 text-[11px]">~45 Min · Maximale Prüfungsvorbereitung</p>
+                </div>
                 <i class="fas fa-arrow-right text-blue-400 text-xs"></i>
               </div>
             </div>
@@ -253,16 +260,19 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 
         <!-- TAB: KLAUSUR -->
         <div id="zpTab-klausur" class="zp-tab-content hidden">
-          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-orange-400 mr-1"></i>Originalgetreuer Prüfungsbogen · 100 Punkte · 120 Minuten · KI-Bewertung.</p>
+          <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-orange-400 mr-1"></i>Fallbasierter Prüfungsbogen · 100 Punkte · 120 Min · Alle 5 KB · KI-Bewertung.</p>
           <div onclick="showPKWarning()" class="recall-card rounded-2xl p-5 cursor-pointer border mb-3" style="background:linear-gradient(135deg,rgba(249,115,22,.07),rgba(245,158,11,.04));border-color:rgba(249,115,22,.2)">
             <div class="flex items-center gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(245,158,11,.15))"><i class="fas fa-file-contract text-orange-400 text-xl"></i></div>
-              <div><h3 class="text-white font-black text-base">1:1 Probeklausur</h3><p class="text-slate-500 text-xs mt-0.5">Originalgetreuer Prüfungsbogen · PflBG-Standard</p></div>
+              <div>
+                <h3 class="text-white font-black text-base">Schriftliche Zwischenprüfung</h3>
+                <p class="text-slate-500 text-xs mt-0.5">Originalgetreuer Prüfungsbogen · PflAPrV-Standard</p>
+              </div>
             </div>
             <div class="grid grid-cols-3 gap-2 mb-4">
               <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg t-num">120</div><div class="text-slate-600 text-[9px] font-bold uppercase">Minuten</div></div>
               <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">100</div><div class="text-slate-600 text-[9px] font-bold uppercase">Punkte</div></div>
-              <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">6+</div><div class="text-slate-600 text-[9px] font-bold uppercase">Aufgaben</div></div>
+              <div class="rounded-xl p-2.5 text-center" style="background:rgba(255,255,255,.04)"><div class="text-orange-400 font-black text-lg">6</div><div class="text-slate-600 text-[9px] font-bold uppercase">Aufgaben</div></div>
             </div>
             <div class="flex items-center justify-center gap-2 py-2.5 rounded-xl font-black text-sm text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-play text-xs"></i>Jetzt starten</div>
           </div>
@@ -270,21 +280,22 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 
         <!-- TAB: MÜNDLICH -->
         <div id="zpTab-muendlich" class="zp-tab-content hidden">
-          <div class="flex flex-col items-center justify-center py-8 text-center">
-            <div class="w-20 h-20 rounded-3xl flex items-center justify-center mb-5 relative" style="background:rgba(139,92,246,.08);border:2px solid rgba(139,92,246,.15)">
+          <div class="flex flex-col items-center justify-center py-6 text-center">
+            <div class="w-20 h-20 rounded-3xl flex items-center justify-center mb-4 relative" style="background:rgba(139,92,246,.08);border:2px solid rgba(139,92,246,.15)">
               <i class="fas fa-microphone text-violet-500 text-2xl"></i>
               <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)">
                 <i class="fas fa-wrench text-violet-400 text-xs"></i>
               </div>
             </div>
-            <h3 class="text-white font-black text-lg mb-2">Mündlicher Teil</h3>
-            <p class="text-slate-500 text-sm mb-2 leading-relaxed max-w-xs">KI-Prüfer stellt Fragen in Echtzeit — du antwortest per Text. Bewertung nach offiziellen Kriterien.</p>
-            <div class="px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-widest mb-3" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:#a78bfa">
+            <h3 class="text-white font-black text-lg mb-1">Mündlicher Teil</h3>
+            <p class="text-slate-500 text-xs mb-3 leading-relaxed max-w-xs">KI-Prüfer stellt kompetenzbasierte Fragen in Echtzeit nach dem Format der Zwischenprüfung (bis zu 30 Min.).</p>
+            <div class="px-5 py-2 rounded-full font-black text-xs uppercase tracking-widest mb-3" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:#a78bfa">
               🚧 In Entwicklung
             </div>
-            <p class="text-slate-700 text-[10px] font-bold">Verfügbar in einem zukünftigen Update</p>
-            <div class="mt-4 p-3 rounded-xl w-full" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)">
-              <p class="text-[11px] text-slate-600 leading-relaxed"><i class="fas fa-lightbulb text-amber-500 mr-1"></i>Der mündliche Teil der Zwischenprüfung umfasst typischerweise ein 15-minütiges Patientengespräch mit anschließender Reflexion.</p>
+            <p class="text-slate-700 text-[10px] font-bold mb-3">Verfügbar in einem zukünftigen Update</p>
+            <div class="w-full p-3 rounded-xl text-left" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)">
+              <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest mb-1.5">Was dich erwartet:</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed">Der mündliche Teil der Zwischenprüfung dauert bis zu <strong class="text-slate-500">30 Minuten</strong> und prüft Fach- und Personalkompetenz anhand von Fallsituationen — direkte Kommunikation, Reflexion und Begründung pflegerischer Entscheidungen.</p>
             </div>
           </div>
         </div>
@@ -308,7 +319,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
   <div class="w-full max-w-lg modal-anim">
     <div class="rounded-3xl overflow-hidden" style="background:rgba(8,12,28,.97);border:1px solid rgba(139,92,246,.2)">
       <div class="flex items-center justify-between p-5 border-b" style="border-color:rgba(255,255,255,.05)">
-        <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-xl flex items-center justify-center" style="background:rgba(99,102,241,.15)"><i class="fas fa-brain text-indigo-400 text-sm"></i></div><span class="font-black text-white text-sm uppercase tracking-wider">Active Recall</span></div>
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl flex items-center justify-center" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-sm"></i></div>
+          <span class="font-black text-white text-sm uppercase tracking-wider">Lernen · Active Recall</span>
+        </div>
         <button onclick="closeRecall()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all"><i class="fas fa-times text-sm"></i></button>
       </div>
       <div id="recall-content" class="p-6">
@@ -324,7 +338,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
     <div class="flex items-center justify-between px-5 py-3 rounded-t-2xl shrink-0" style="background:rgba(8,12,28,.98);border:1px solid rgba(249,115,22,.15);border-bottom:none">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(249,115,22,.15)"><i class="fas fa-file-contract text-orange-400 text-sm"></i></div>
-        <div><span class="font-black text-white text-sm">Probeklausur</span><span class="text-slate-600 text-[10px] ml-2">BZPG Würselen · Pflegefachkraft</span></div>
+        <div>
+          <span class="font-black text-white text-sm">Schriftliche Zwischenprüfung</span>
+          <span class="text-slate-600 text-[10px] ml-2">BZPG Würselen · PflBG/PflAPrV</span>
+        </div>
       </div>
       <div class="flex items-center gap-4">
         <div class="text-right"><div id="pk-timer-display" class="text-xl font-black text-orange-400 t-num leading-none">120:00</div><div class="text-[9px] text-slate-600 font-bold uppercase">Verbleibend</div></div>
@@ -336,7 +353,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
         <div class="text-center">
           <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
           <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">KI erstellt Prüfungsbogen...</p>
-          <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;margin-top:6px">100 Punkte · 6 Aufgaben · Bitte warten</p>
+          <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;margin-top:6px">100 Punkte · 6 Aufgaben · KB I–V · Bitte warten</p>
         </div>
       </div>
     </div>
@@ -354,7 +371,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
   <div class="w-full max-w-2xl modal-anim flex flex-col" style="max-height:90vh">
     <div class="rounded-3xl overflow-hidden flex flex-col" style="background:rgba(8,12,28,.97);border:1px solid rgba(99,102,241,.15);max-height:90vh">
       <div class="flex items-center justify-between p-5 shrink-0" style="border-bottom:1px solid rgba(255,255,255,.05)">
-        <div class="flex items-center gap-3 min-w-0"><div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div><span id="lb-view-title" class="font-black text-white text-sm truncate"></span></div>
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div>
+          <span id="lb-view-title" class="font-black text-white text-sm truncate"></span>
+        </div>
         <button onclick="document.getElementById('lb-view-modal').classList.add('hidden')" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all shrink-0"><i class="fas fa-times text-sm"></i></button>
       </div>
       <div id="lb-view-content" class="overflow-y-auto flex-1 p-6 text-sm leading-relaxed" style="-webkit-overflow-scrolling:touch"></div>
@@ -402,9 +422,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div id="dashboard" class="hidden relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-12 pb-24">
   <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
     <div>
-      <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-sm"></i></div><span class="font-black text-2xl tracking-tighter text-white">SLM</span></div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
+        <span class="font-black text-2xl tracking-tighter text-white">SLM</span>
+      </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Lern-Management-System</h1>
-      <p class="text-slate-400 mt-2 font-medium flex items-center gap-2"><i class="fas fa-graduation-cap text-indigo-400"></i>Examenstraining für das Staatsexamen 2026</p>
+      <p class="text-slate-400 mt-2 font-medium flex items-center gap-2"><i class="fas fa-graduation-cap text-indigo-400"></i>Zwischenprüfungs-Training · BZPG Würselen · PflBG/PflAPrV</p>
     </div>
     <div class="flex items-center gap-2">
       <div class="glass rounded-xl px-4 py-2.5 flex items-center gap-2"><i class="fas fa-key text-violet-400 text-xs"></i><span id="show-pin" class="text-sm font-extrabold text-violet-400 t-num tracking-widest"></span></div>
@@ -417,16 +440,32 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
     <div class="rounded-3xl overflow-hidden relative" style="background:linear-gradient(135deg,rgba(8,12,28,.9),rgba(12,16,36,.95));border:1px solid rgba(99,102,241,.15)">
       <div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,.4),rgba(139,92,246,.4),transparent)"></div>
       <div class="p-7 sm:p-8">
-        <div class="flex items-start justify-between mb-5">
+        <div class="flex items-start justify-between mb-4">
           <div class="flex items-center gap-3">
             <div class="w-11 h-11 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 8px 24px rgba(99,102,241,.35)"><i class="fas fa-graduation-cap text-white text-sm"></i></div>
-            <div><h2 class="text-white font-black text-xl uppercase tracking-tight">Zwischenprüfung</h2><p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Ende 2. Ausbildungsjahr · BZPG Würselen</p></div>
+            <div>
+              <h2 class="text-white font-black text-xl uppercase tracking-tight">Zwischenprüfung</h2>
+              <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">§ 6 Abs. 5 PflBG · § 7 PflAPrV · BZPG Würselen</p>
+            </div>
+          </div>
+          <div class="hidden sm:flex flex-wrap gap-1 justify-end max-w-xs">
+            <span class="text-[8px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(99,102,241,.15);color:#a5b4fc">KB I</span>
+            <span class="text-[8px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(139,92,246,.15);color:#c4b5fd">KB II</span>
+            <span class="text-[8px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(59,130,246,.15);color:#93c5fd">KB III</span>
+            <span class="text-[8px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(20,184,166,.15);color:#5eead4">KB IV</span>
+            <span class="text-[8px] font-bold px-1.5 py-0.5 rounded" style="background:rgba(245,158,11,.15);color:#fcd34d">KB V</span>
           </div>
         </div>
         <div class="flex flex-wrap gap-2.5">
-          <button onclick="openZPHub()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-brain text-xs"></i>Active Recall</button>
-          <button onclick="showPKWarning()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)"><i class="fas fa-file-contract text-xs"></i>Probeklausur</button>
-          <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),120)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)"><i class="fas fa-book-open text-xs"></i><span id="dash-hefte-count">0 Hefte</span></button>
+          <button onclick="openZPHub()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)">
+            <i class="fas fa-book-open text-xs"></i>Lernen
+          </button>
+          <button onclick="showPKWarning()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)">
+            <i class="fas fa-file-contract text-xs"></i>Probeklausur
+          </button>
+          <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),100)" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+            <i class="fas fa-book-open text-xs"></i><span id="dash-hefte-count">0 Hefte</span>
+          </button>
         </div>
       </div>
     </div>
@@ -440,9 +479,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
         <div class="z-10 mt-5"><h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1">SLM Arena</h3><p class="text-slate-400 text-xs font-medium leading-relaxed mb-3">Learn & Quiz • Recall • Connect • Sprint</p><div class="flex items-center gap-2 text-violet-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div></div>
       </div>
     </a>
-    <a href="exam-simulator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer border-orange-500/10" style="--accent:#f97316">
+    <a href="exam-simulator.html" class="group module-card glass rounded-3xl p-7 block cursor-pointer" style="--accent:#f97316">
       <div class="mod-glow" style="background:#f97316"></div>
-      <div class="flex justify-between items-start mb-5 relative z-10"><div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div></div>
+      <div class="flex justify-between items-start mb-5 relative z-10">
+        <div class="w-12 h-12 bg-orange-500 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20"><i class="fas fa-file-alt text-xl"></i></div>
+      </div>
       <h3 class="text-white font-black text-lg uppercase tracking-tight leading-none mb-1 relative z-10">Klausur-Simulator</h3>
       <p class="text-slate-400 text-xs font-medium leading-relaxed mb-3 relative z-10">90 Min • Fallbeispiel • Bewertung</p>
       <div class="flex items-center gap-2 text-orange-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Starten</span><i class="fas fa-arrow-right text-[8px]"></i></div>
@@ -462,7 +503,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
   <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
       <span>SLM System • A Project by <span class="prasanth-label">Prasanth</span></span>
-      <span>Staatsexamen 2026 • © 2025</span>
+      <span>Staatsexamen 2026 · BZPG Würselen · © 2025</span>
     </div>
   </footer>
 </div>
@@ -483,6 +524,15 @@ const MODULES=[
   {id:8,name:'Innere Medizin & Niere',icon:'fa-lungs',color:'#0ea5e9',href:'module8.html'},
   {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
 ];
+
+// PflAPrV Kompetenzbereiche — used for question tagging
+const KB_LABELS={
+  I:'KB I · Pflegeprozess & Diagnostik',
+  II:'KB II · Kommunikation & Beratung',
+  III:'KB III · Intra-/Interprofessionelles Handeln',
+  IV:'KB IV · Recht, Ethik & Qualität',
+  V:'KB V · Wissenschaft & Berufsethos'
+};
 
 // ═══════════════════════════════════════════════════════
 // STATE
@@ -513,7 +563,7 @@ function confirmStartProbeklausur(){
 // WELCOME
 // ═══════════════════════════════════════════════════════
 function showWelcome(){
-  if(!localStorage.getItem('slm_welcome_v92')){
+  if(!localStorage.getItem('slm_welcome_v93')){
     document.getElementById('welcome-popup').classList.remove('hidden');
   }
 }
@@ -521,7 +571,7 @@ function closeWelcome(){
   const el=document.getElementById('welcome-popup');
   el.style.transition='opacity .3s ease';el.style.opacity='0';
   setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1';},300);
-  localStorage.setItem('slm_welcome_v92','true');
+  localStorage.setItem('slm_welcome_v93','true');
 }
 
 // ═══════════════════════════════════════════════════════
@@ -590,7 +640,10 @@ function renderDashLernhefte(){
 function renderZPLernhefte(){
   const el=document.getElementById('zp-lernhefte-list');if(!el)return;
   const books=getLernbuecher();
-  if(!books.length){el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p><p class="text-slate-700 text-xs mt-1">Starte eine Recall-Session oder Probeklausur</p></div>`;return;}
+  if(!books.length){
+    el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p><p class="text-slate-700 text-xs mt-1">Starte eine Lern-Session oder Probeklausur</p></div>`;
+    return;
+  }
   el.innerHTML=books.map(b=>`
     <div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
       <div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
@@ -659,7 +712,9 @@ function pickRawQuestions(allData,n){
   const picked=[];
   for(const mod of shuffle(allData)){
     if(!mod.data.length)continue;
-    shuffle(mod.data).slice(0,perMod).forEach(item=>picked.push({...item,_moduleId:mod.moduleId,_moduleName:mod.moduleName,_source:mod.source}));
+    shuffle(mod.data).slice(0,perMod).forEach(item=>picked.push({
+      ...item,_moduleId:mod.moduleId,_moduleName:mod.moduleName,_source:mod.source
+    }));
   }
   return shuffle(picked).slice(0,n);
 }
@@ -677,7 +732,7 @@ async function callKI(payload){
 }
 
 // ═══════════════════════════════════════════════════════
-// RECALL
+// RECALL / LERNEN
 // ═══════════════════════════════════════════════════════
 async function startRecall(size){
   closeZPHub();
@@ -688,47 +743,88 @@ async function startRecall(size){
   const allData=await loadAllRaw();
   const rawPicked=pickRawQuestions(allData,n);
   if(!rawPicked.length){
-    document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><div class="text-4xl mb-3">❌</div><p class="text-red-400 font-bold text-sm">Keine Materialien gefunden</p><button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button></div>`;
+    document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><div class="text-4xl mb-3">❌</div><p class="text-red-400 font-bold text-sm">Keine Materialien gefunden</p><p class="text-slate-600 text-xs mt-2">Prüfe den Ordner: data/question-banks/</p><button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button></div>`;
     return;
   }
-  showRecallLoading(`KI bereitet ${rawPicked.length} Fragen auf...`);
-  const formatted=await Promise.all(rawPicked.map(async raw=>{
-    const prompt=`Forme diesen Pflegeausbildungs-Datensatz in eine klare Prüfungsfrage um. Antworte NUR mit validem JSON:
-{"question":"<Deutsche Prüfungsfrage>","sampleAnswer":"<Musterantwort 2-3 Sätze>","keywords":["kw1","kw2","kw3"]}
-DATEN: ${JSON.stringify(raw).slice(0,500)}`;
+  showRecallLoading(`KI formuliert ${rawPicked.length} Prüfungsfragen nach PflAPrV...`);
+
+  // Build competency-aligned questions via KI
+  const formatted=await Promise.all(rawPicked.map(async(raw,idx)=>{
+    // Assign KB cyclically to ensure all 5 are covered
+    const kbKeys=['I','II','III','IV','V'];
+    const kb=kbKeys[idx%5];
+    const prompt=`Du bist Prüfer für die Zwischenprüfung Pflegefachkraft (§ 6 Abs. 5 PflBG, PflAPrV Anlage 1).
+Kompetenzbereich: ${KB_LABELS[kb]}
+
+Formuliere aus diesem Lernmaterial eine prüfungsrelevante Frage für die Zwischenprüfung. Die Frage muss:
+- Fallbasiert sein (echte Pflegesituation)
+- Den genannten Kompetenzbereich prüfen
+- Fach- UND Personalkompetenz ansprechen
+- Auf Niveau Ende 2. Ausbildungsdrittel
+
+LERNMATERIAL:
+${JSON.stringify(raw).slice(0,600)}
+
+Antworte NUR mit validem JSON (keine Backticks, kein Text):
+{"question":"<Fallbasierte Frage mit Pflegesituation, 2-3 Sätze>","sampleAnswer":"<Vollständige Musterantwort mit Begründung, 3-4 Sätze>","kb":"${kb}","kbLabel":"${KB_LABELS[kb]}","keywords":["<Begriff1>","<Begriff2>","<Begriff3>"]}`;
     const result=await callKI({mode:'text',prompt});
     if(result){
       try{
         const c=result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
-        const parsed=JSON.parse(c);
-        if(parsed.question)return{question:parsed.question,sampleAnswer:parsed.sampleAnswer||'',keywords:parsed.keywords||[],moduleId:raw._moduleId,moduleName:raw._moduleName};
+        const s=c.indexOf('{'),e=c.lastIndexOf('}');
+        if(s>-1&&e>-1){
+          const parsed=JSON.parse(c.slice(s,e+1));
+          if(parsed.question)return{
+            question:parsed.question,sampleAnswer:parsed.sampleAnswer||'',
+            kb:parsed.kb||kb,kbLabel:parsed.kbLabel||KB_LABELS[kb],
+            keywords:parsed.keywords||[],
+            moduleId:raw._moduleId,moduleName:raw._moduleName
+          };
+        }
       }catch(e){}
     }
-    const q=raw.statement||raw.question||raw.frage||raw.title||String(Object.values(raw)[0]||'').slice(0,150);
-    const ans=raw.explanation||raw.answer||raw.sampleAnswer||'';
-    return{question:q,sampleAnswer:ans,keywords:[],moduleId:raw._moduleId,moduleName:raw._moduleName};
+    // Fallback
+    const q=raw.statement||raw.question||raw.frage||raw.title||String(Object.values(raw).filter(v=>typeof v==='string')[0]||'').slice(0,200);
+    return{question:q,sampleAnswer:raw.explanation||raw.answer||raw.sampleAnswer||'',kb,kbLabel:KB_LABELS[kb],keywords:[],moduleId:raw._moduleId,moduleName:raw._moduleName};
   }));
+
   zpState.rawQuestions=formatted.filter(q=>q&&q.question&&q.question.length>5);
   zpState.currentIndex=0;zpState.userAnswers=[];zpState.phase='spickzettel';
   renderRecallQ();
 }
+
 function showRecallLoading(msg){
-  document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-4"><div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div><p class="text-slate-500 text-sm">${msg}</p></div>`;
+  document.getElementById('recall-content').innerHTML=`
+    <div class="flex flex-col items-center justify-center py-14 gap-4">
+      <div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
+      <p class="text-slate-500 text-sm">${msg}</p>
+    </div>`;
 }
+
 function renderRecallQ(){
   const q=zpState.rawQuestions[zpState.currentIndex];
   if(!q){finishRecall();return;}
   const total=zpState.rawQuestions.length,cur=zpState.currentIndex+1;
   const pct=Math.round((zpState.currentIndex/total)*100);
   const isSpick=zpState.phase==='spickzettel';
-  const mColor=MODULES.find(m=>m.id===q.moduleId)?.color||'#6366f1';
+  const kbColors={I:'#a5b4fc',II:'#c4b5fd',III:'#93c5fd',IV:'#5eead4',V:'#fcd34d'};
+  const kbBgs={I:'rgba(99,102,241,.15)',II:'rgba(139,92,246,.15)',III:'rgba(59,130,246,.15)',IV:'rgba(20,184,166,.15)',V:'rgba(245,158,11,.15)'};
+  const kbColor=kbColors[q.kb]||'#a5b4fc';
+  const kbBg=kbBgs[q.kb]||'rgba(99,102,241,.15)';
+
   document.getElementById('recall-content').innerHTML=`
     <div class="mb-4">
-      <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5"><span>Frage ${cur} / ${total}</span><span style="color:${mColor}">${q.moduleName||''}</span></div>
-      <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)"><div class="h-full rounded-full" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div></div>
+      <div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5">
+        <span>Frage ${cur} / ${total}</span>
+        <span class="text-[9px] font-black px-2 py-0.5 rounded-full" style="background:${kbBg};color:${kbColor}">${q.kbLabel||q.moduleName}</span>
+      </div>
+      <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)">
+        <div class="h-full rounded-full transition-all duration-500" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+      </div>
     </div>
     <div class="flex items-center gap-2 mb-4">
-      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
+      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"
+        style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
         ${isSpick?'📖 Phase 1 — Einprägen':'✍️ Phase 2 — Abruf'}
       </span>
       ${isSpick?`<span id="recall-timer-disp" class="text-xs font-black ml-auto t-num" style="color:#94a3b8">120s</span>`:''}
@@ -738,24 +834,26 @@ function renderRecallQ(){
     </div>
     ${isSpick?`
       <div class="rounded-2xl p-4 mb-5" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
-        <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">Musterantwort</p>
+        <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">✅ Musterantwort (PflAPrV-konform)</p>
         <p class="text-slate-300 text-sm leading-relaxed">${q.sampleAnswer||'Keine Musterantwort verfügbar.'}</p>
         ${q.keywords?.length?`<div class="flex flex-wrap gap-1.5 mt-3">${q.keywords.map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${k}</span>`).join('')}</div>`:''}
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
-        <button onclick="recallSkipToAbfrage()" class="flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
+        <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
+        <button onclick="recallSkipToAbfrage()" class="flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
       </div>`
-    :`<div class="mb-4">
+    :`
+      <div class="mb-4">
         <textarea id="recall-answer-input" placeholder="Schreibe deine Antwort aus dem Gedächtnis..." rows="5"
           class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none placeholder:text-slate-700"
           style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s"
           onfocus="this.style.borderColor='rgba(99,102,241,.4)'" onblur="this.style.borderColor='rgba(255,255,255,.08)'" autofocus></textarea>
       </div>
       <div class="flex gap-2.5">
-        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
-        <button onclick="recallSubmit()" class="flex-grow py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-check mr-2"></i>Weiter</button>
+        <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
+        <button onclick="recallSubmit()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-check mr-2"></i>Weiter</button>
       </div>`}`;
+
   if(isSpick){
     clearInterval(zpState.timerInterval);zpState.timerSeconds=120;updateRecallTimer();
     zpState.timerInterval=setInterval(()=>{
@@ -764,6 +862,7 @@ function renderRecallQ(){
     },1000);
   }
 }
+
 function updateRecallTimer(){
   const el=document.getElementById('recall-timer-disp');if(!el)return;
   const s=zpState.timerSeconds;
@@ -777,51 +876,59 @@ function recallSubmit(){pushRecallAnswer(document.getElementById('recall-answer-
 function recallSkip(){pushRecallAnswer('');}
 function pushRecallAnswer(ans){
   const q=zpState.rawQuestions[zpState.currentIndex];
-  zpState.userAnswers.push({question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId});
+  zpState.userAnswers.push({
+    question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,
+    keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId,
+    kb:q.kb,kbLabel:q.kbLabel
+  });
   zpState.currentIndex++;zpState.phase='spickzettel';renderRecallQ();
 }
 function closeRecall(){clearInterval(zpState.timerInterval);document.getElementById('recall-modal').classList.add('hidden');}
+
 async function finishRecall(){
   clearInterval(zpState.timerInterval);
-  document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-5 text-center"><div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))"><i class="fas fa-robot text-indigo-400 text-2xl"></i></div><h3 class="text-white font-black text-lg">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Analyse läuft...</p></div>`;
+  document.getElementById('recall-content').innerHTML=`
+    <div class="flex flex-col items-center justify-center py-14 gap-5 text-center">
+      <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))">
+        <i class="fas fa-robot text-indigo-400 text-2xl"></i>
+      </div>
+      <div><h3 class="text-white font-black text-lg">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Kompetenzbasierte Analyse nach PflAPrV...</p></div>
+      <div class="flex gap-1.5">${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}</div>
+    </div>`;
   const prompt=buildLernheftPrompt(zpState.userAnswers);
   const html=await callKI({mode:'lernheft',prompt})||buildFallbackFeedback(zpState.userAnswers);
   const ans=zpState.userAnswers.filter(a=>a.userAnswer).length;
-  saveLernbuch(`Recall · ${ans}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`,html);
+  saveLernbuch(`Lernen · ${ans}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`,html);
   document.getElementById('recall-content').innerHTML=`
     <div class="flex items-center gap-3 p-3 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
       <i class="fas fa-check-circle text-emerald-400"></i>
-      <div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${zpState.userAnswers.length} Antworten.</p></div>
+      <div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${zpState.userAnswers.length} Antworten · Unter "Hefte" abrufbar</p></div>
     </div>
     <div class="rounded-2xl p-4 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:35vh;font-size:12px;color:#94a3b8;line-height:1.6">${html}</div>
     <div class="flex gap-2.5">
-      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
+      <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
+      <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
     </div>`;
 }
 
 // ═══════════════════════════════════════════════════════
-// PROBEKLAUSUR — builds static skeleton + KI fills content
+// PROBEKLAUSUR
 // ═══════════════════════════════════════════════════════
 async function startProbeklausur(){
   document.getElementById('pk-modal').classList.remove('hidden');
   document.getElementById('pk-footer').classList.add('hidden');
-  showPKLoading('Lade Lernmaterialien...');
+  showPKLoading('Lade Lernmaterialien aus allen Modulen...');
 
   const allData=await loadAllRaw();
   const sampledRaw=pickRawQuestions(allData,20);
 
-  showPKLoading('KI generiert Prüfungsinhalt... (kann 15–20 Sek. dauern)');
+  showPKLoading('KI generiert prüfungskonformen Bogen nach PflAPrV Anlage 1...');
 
-  // Build the content via KI
   const contentJSON=await generateExamContentViaKI(sampledRaw);
-
-  // Now inject into static HTML skeleton (this ALWAYS works regardless of KI output format)
-  const examHTML=buildExamHTML(contentJSON,sampledRaw);
+  const examHTML=buildExamHTML(contentJSON);
 
   zpState.pkExamHTML=examHTML;
   zpState.examSecondsLeft=120*60;
-
   document.getElementById('pk-content').innerHTML=`<div class="exam-paper">${examHTML}</div>`;
   initRFInteractivity();
   document.getElementById('pk-footer').classList.remove('hidden');
@@ -834,200 +941,160 @@ function showPKLoading(msg){
       <div class="text-center">
         <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
         <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">${msg}</p>
-        <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;margin-top:6px">100 Punkte · 6 Aufgaben · PflBG-Standard</p>
+        <p style="color:#999;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;margin-top:6px">KB I–V · 100 Punkte · 6 Aufgaben · PflAPrV-Standard</p>
       </div>
     </div>`;
 }
 
-// Ask KI to generate exam content as structured JSON
 async function generateExamContentViaKI(rawItems){
-  const context=rawItems.slice(0,15).map((item,i)=>{
-    const text=item.statement||item.question||item.frage||item.title||item.content||Object.values(item).filter(v=>typeof v==='string').join(' ');
-    return `[${i+1}] ${item._moduleName}: ${String(text).slice(0,200)}`;
+  const context=rawItems.slice(0,16).map((item,i)=>{
+    const text=item.statement||item.question||item.frage||item.title||item.content||
+      Object.values(item).filter(v=>typeof v==='string'&&v.length>10).join(' ');
+    return `[${i+1}] Modul: ${item._moduleName} — ${String(text).slice(0,180)}`;
   }).join('\n');
 
-  const prompt=`Du bist ein Pflegeprüfer am BZPG Würselen. Erstelle Prüfungsinhalte für eine Pflegefachkraft-Klausur.
+  const prompt=`Du bist Prüfer für die schriftliche Zwischenprüfung Pflegefachkraft (§ 6 Abs. 5 PflBG, § 7 PflAPrV).
+Die Prüfung prüft Kompetenzbereiche I–V der PflAPrV Anlage 1.
 
 LERNMATERIALIEN:
 ${context}
 
-Erstelle NUR valides JSON (kein Text davor/danach, keine Backticks):
+Erstelle prüfungsrelevante Inhalte. Antworte NUR mit validem JSON (keine Backticks):
 {
   "fallbeispiel": {
-    "patient": "Name, Alter, Diagnose",
-    "situation": "Beschreibung der Pflegesituation (3-4 Sätze)",
-    "hintergrund": "Anamnese und Vorgeschichte (2-3 Sätze)",
-    "aktuellesProblem": "Aktuelles pflegerisches Problem (2 Sätze)"
+    "patient": "Name, Alter, Diagnose (z.B. Herzinsuffizienz, COPD, Schlaganfall o.ä.)",
+    "situation": "Detaillierte Pflegesituation mit Symptomen und aktueller Problematik (3-4 Sätze)",
+    "hintergrund": "Biografie, soziale Situation, Vorerkrankungen, Medikamente (3 Sätze)",
+    "aktuellesProblem": "Hauptpflegeproblem mit Begründung (2 Sätze)"
   },
-  "aufgabe1_rf": {
-    "titel": "Richtig oder Falsch",
-    "punkte": 16,
-    "aussagen": [
-      {"text": "Aussage 1 zum Fallbeispiel", "antwort": "R"},
-      {"text": "Aussage 2 zum Thema Pflege", "antwort": "F"},
-      {"text": "Aussage 3 zum Thema Medizin", "antwort": "R"},
-      {"text": "Aussage 4 zur Kommunikation", "antwort": "F"},
-      {"text": "Aussage 5 zur Biografie", "antwort": "R"},
-      {"text": "Aussage 6 zur Dokumentation", "antwort": "F"},
-      {"text": "Aussage 7 zum Pflegeprozess", "antwort": "R"},
-      {"text": "Aussage 8 zur Hygiene", "antwort": "F"}
-    ]
-  },
-  "aufgabe2_kurz": {
-    "titel": "Pflegeplanung",
-    "punkte": 14,
-    "fragen": [
-      "Nennen Sie 3 Pflegeziele für den Patienten im Fallbeispiel.",
-      "Welche Pflegemaßnahmen würden Sie prioritär einleiten? Begründen Sie.",
-      "Wie dokumentieren Sie die durchgeführten Maßnahmen fachgerecht?"
-    ]
-  },
-  "aufgabe3_freitext": {
-    "titel": "Pflegemaßnahmen und Interventionen",
-    "punkte": 20,
-    "aufgabenstellung": "Beschreiben Sie ausführlich die pflegerischen Interventionen für den Patienten aus dem Fallbeispiel. Berücksichtigen Sie dabei Grundpflege, Mobilisation, Ernährung und psychosoziale Begleitung."
-  },
-  "aufgabe4_mc": {
-    "titel": "Fachwissen Multiple Choice",
-    "punkte": 15,
-    "fragen": [
-      {
-        "frage": "Welche Maßnahme hat bei der Wundversorgung höchste Priorität?",
-        "optionen": ["A) Wundverband wechseln", "B) Händedesinfektion durchführen", "C) Wunde inspizieren", "D) Arzt informieren"],
-        "richtig": "B"
-      },
-      {
-        "frage": "Was gehört zur professionellen Pflegedokumentation?",
-        "optionen": ["A) Nur positive Verläufe", "B) Lückenlose chronologische Erfassung", "C) Nur ärztliche Anordnungen", "D) Subjektive Meinungen"],
-        "richtig": "B"
-      },
-      {
-        "frage": "Welches Prinzip steht im Mittelpunkt der Biografiearbeit?",
-        "optionen": ["A) Diagnose stellen", "B) Medikamente verwalten", "C) Individuelle Lebensgeschichte verstehen", "D) Pflegekräfte entlasten"],
-        "richtig": "C"
-      }
-    ]
-  },
-  "aufgabe5_kommunikation": {
-    "titel": "Kommunikation und Beziehungsgestaltung",
-    "punkte": 20,
-    "aufgabenstellung": "Beschreiben Sie, wie Sie das Erstgespräch mit dem Patienten aus dem Fallbeispiel gestalten würden. Welche Kommunikationstechniken setzen Sie ein? Wie gehen Sie mit emotionalen Reaktionen des Patienten um? Berücksichtigen Sie dabei die Grundsätze der professionellen Pflegekommunikation."
-  },
-  "aufgabe6_reflexion": {
-    "titel": "Ethik und Reflexion",
-    "punkte": 15,
-    "aufgabenstellung": "Reflektieren Sie eine ethische Herausforderung, die im Pflegealltag auftreten kann (z.B. Patientenautonomie vs. Fürsorge, Ressourcenmangel, kulturelle Unterschiede). Welche ethischen Prinzipien leiten Ihr Handeln? Wie würden Sie in einem Konfliktfall vorgehen?"
-  }
+  "rf_aussagen": [
+    {"text": "Prüfungsrelevante Aussage zum Pflegeprozess (KB I)", "antwort": "R"},
+    {"text": "Aussage zur Pflegedokumentation (KB I)", "antwort": "F"},
+    {"text": "Aussage zur therapeutischen Kommunikation (KB II)", "antwort": "R"},
+    {"text": "Aussage zu Patientenrechten/Autonomie (KB IV)", "antwort": "F"},
+    {"text": "Aussage zu interprofessioneller Zusammenarbeit (KB III)", "antwort": "R"},
+    {"text": "Aussage zu Hygiene/Infektionsschutz (KB I)", "antwort": "R"},
+    {"text": "Aussage zu ethischen Prinzipien (KB IV)", "antwort": "F"},
+    {"text": "Aussage zu evidenzbasierter Pflege (KB V)", "antwort": "R"}
+  ],
+  "aufgabe2_fragen": [
+    "Formulieren Sie 3 SMART-Pflegeziele für den Patienten. Begründen Sie Ihre Wahl. (KB I)",
+    "Beschreiben Sie die prioritären Pflegemaßnahmen und deren Begründung nach aktuellem Pflegestandard. (KB I/V)",
+    "Wie fördern Sie die Selbstpflegekompetenz des Patienten? Nennen Sie konkrete Maßnahmen. (KB II)"
+  ],
+  "aufgabe3_text": "Beschreiben Sie ausführlich die pflegerische Versorgung des Patienten in den ersten 24 Stunden nach Aufnahme. Berücksichtigen Sie: (1) Pflegeassessment und AEDL/ATL, (2) Grundpflege und Körperpflege unter Ressourcenorientierung, (3) Mobilisation und Lagerung nach aktueller Leitlinie, (4) Ernährung, Flüssigkeitsmanagement und Ausscheidung, (5) Vitalzeichenmonitoring und Beobachtung. Begründen Sie Ihre Maßnahmen fachlich. (KB I, V)",
+  "mc_fragen": [
+    {"frage": "Welche Pflegediagnose nach NANDA beschreibt am treffendsten eine eingeschränkte körperliche Mobilität?", "optionen": ["A) Akuter Schmerz", "B) Beeinträchtigte körperliche Mobilität", "C) Flüssigkeitsdefizit", "D) Ineffektive Atmung"], "richtig": "B", "kb": "I"},
+    {"frage": "Was kennzeichnet das Prinzip der Patientenautonomie im Pflegekontext?", "optionen": ["A) Pflegekraft entscheidet allein", "B) Patient hat Recht auf informierte Selbstbestimmung", "C) Arzt hat letzte Entscheidungskompetenz", "D) Familie entscheidet bei Unsicherheit"], "richtig": "B", "kb": "IV"},
+    {"frage": "Welches Kommunikationsmodell ist für die Pflegepraxis besonders relevant?", "optionen": ["A) Sender-Empfänger-Modell nach Shannon", "B) Vier-Ohren-Modell nach Schulz von Thun", "C) Eisbergmodell nach Freud", "D) Lasswell-Formel"], "richtig": "B", "kb": "II"}
+  ],
+  "aufgabe5_text": "Beschreiben Sie, wie Sie ein professionelles Erstgespräch mit dem Patienten gestalten. Berücksichtigen Sie: (1) Gesprächsvorbereitung und Setting, (2) Kommunikationstechniken (aktives Zuhören, offene Fragen, Verbalisierung, Empathie), (3) Biografiearbeit und individuelle Ressourcen, (4) Umgang mit Angst, Ablehnung oder emotionalen Reaktionen, (5) Einbeziehung von Angehörigen. Begründen Sie Ihr Vorgehen mit Kommunikationsmodellen. (KB II)",
+  "aufgabe6_text": "Der Patient aus dem Fallbeispiel lehnt eine lebensnotwendige Maßnahme ab. Er ist nach ärztlicher Einschätzung einwilligungsfähig. Analysieren Sie diese ethische Konfliktsituation: (1) Welche ethischen Prinzipien (Autonomie, Benefizienz, Non-Malefizienz, Gerechtigkeit) sind berührt? (2) Welche rechtlichen Grundlagen gelten (Patientenrechtegesetz, BGB)? (3) Wie gehen Sie als Pflegefachkraft konkret vor? (4) Welche Berufsgruppen beziehen Sie ein? (5) Wie dokumentieren Sie die Situation? (KB IV, III)"
 }`;
 
   const result=await callKI({mode:'text',prompt});
   if(!result)return null;
   try{
-    const cleaned=result.trim()
-      .replace(/^```(?:json)?\s*/i,'')
-      .replace(/```\s*$/i,'')
-      .replace(/[\u0000-\u001F\u007F-\u009F]/g,' ')
-      .trim();
-    // Find JSON boundaries
-    const start=cleaned.indexOf('{');
-    const end=cleaned.lastIndexOf('}');
-    if(start===-1||end===-1)return null;
-    return JSON.parse(cleaned.slice(start,end+1));
-  }catch(e){
-    console.error('JSON parse error:',e);
-    return null;
-  }
+    const c=result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
+    const s=c.indexOf('{'),e=c.lastIndexOf('}');
+    if(s===-1||e===-1)return null;
+    return JSON.parse(c.slice(s,e+1));
+  }catch(err){console.error('JSON parse:',err);return null;}
 }
 
-// Build exam HTML from structured content (with fallback if KI fails)
-function buildExamHTML(content,rawItems){
+function buildExamHTML(content){
   const today=new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
 
-  // Fallback content if KI returned null
+  // Fallbacks
   const fb=content?.fallbeispiel||{
-    patient:'Herr Klaus Müller, 72 Jahre, Diabetes mellitus Typ 2, Hypertonie, beginnende Herzinsuffizienz',
-    situation:'Herr Müller wurde vor 3 Tagen mit einer dekompensierter Herzinsuffizienz stationär aufgenommen. Er zeigt Dyspnoe bei Belastung, beidseits Knöchelödeme und klagt über ausgeprägte Müdigkeit. Die Sauerstoffsättigung liegt bei 92%.',
-    hintergrund:'Der Patient lebt alleine seit dem Tod seiner Frau vor 2 Jahren. Er ist gelernter Handwerker und war bis vor 5 Jahren noch berufstätig. Seine Tochter wohnt 50 km entfernt und besucht ihn wöchentlich. Er nimmt täglich 6 verschiedene Medikamente ein.',
-    aktuellesProblem:'Trotz Therapie zeigt Herr Müller Zeichen der mangelnden Compliance bei der Medikamenteneinnahme und der empfohlenen Flüssigkeitsrestriktion auf 1,5 Liter täglich.'
+    patient:'Frau Ingrid Hoffmann, 78 Jahre, Diabetes mellitus Typ 2, arterielle Hypertonie, beginnende Herzinsuffizienz (NYHA II)',
+    situation:'Frau Hoffmann wurde heute Morgen über die Notaufnahme aufgenommen. Sie klagt über zunehmende Dyspnoe bei leichter Belastung, beidseits ausgeprägte Knöchelödeme sowie allgemeine Schwäche und Schwindel. Die Sauerstoffsättigung beträgt bei Aufnahme 91% (Raumluft), der Blutdruck 165/98 mmHg, Puls 92/min, Atemfrequenz 22/min.',
+    hintergrund:'Die Patientin lebt alleine in einer Wohnung im 3. Obergeschoss ohne Aufzug. Ihr Mann ist vor einem Jahr verstorben. Sie hat eine Tochter, die 80 km entfernt wohnt. Frau Hoffmann nimmt täglich 7 verschiedene Medikamente ein, gibt aber an, diese "manchmal zu vergessen". Sie isst wenig und trinkt nach eigener Aussage "nicht so viel, weil ich dann immer auf die Toilette muss".',
+    aktuellesProblem:'Aufgrund der Ödembildung, der eingeschränkten Belastbarkeit und der Medikamenten-Non-Compliance besteht ein komplexes pflegerisches Versorgungsproblem, das sowohl körperliche als auch psychosoziale Komponenten umfasst.'
   };
 
-  const rf=content?.aufgabe1_rf||{punkte:16,aussagen:[
-    {text:'Bei Herzinsuffizienz ist eine Flüssigkeitsrestriktion oft notwendig, um die Ödembildung zu reduzieren.',antwort:'R'},
-    {text:'Die Sauerstoffsättigung von 92% liegt im vollständig normalen Bereich und erfordert keine weiteren Maßnahmen.',antwort:'F'},
-    {text:'Pflegedokumentation muss lückenlos, chronologisch und nachvollziehbar erfolgen.',antwort:'R'},
-    {text:'Bei einem Patienten mit Hypertonie sollte der Blutdruck nur einmal täglich gemessen werden.',antwort:'F'},
-    {text:'Biografiearbeit kann zur Verbesserung der therapeutischen Beziehung beitragen.',antwort:'R'},
-    {text:'Compliance-Probleme bei der Medikamenteneinnahme sind für die Pflege nicht relevant.',antwort:'F'},
-    {text:'Knöchelödeme können ein Zeichen einer dekompensierter Herzinsuffizienz sein.',antwort:'R'},
-    {text:'Kommunikation in der Pflege beschränkt sich ausschließlich auf die Weitergabe medizinischer Informationen.',antwort:'F'}
-  ]};
+  const rfAussagen=content?.rf_aussagen||[
+    {text:'Eine lückenlose Pflegedokumentation ist gesetzlich vorgeschrieben und schützt sowohl Patienten als auch Pflegefachkräfte.',antwort:'R'},
+    {text:'Bei einer Sauerstoffsättigung von 91% besteht kein unmittelbarer Handlungsbedarf.',antwort:'F'},
+    {text:'Das Vier-Ohren-Modell nach Schulz von Thun beschreibt vier Ebenen einer Nachricht: Sachinhalt, Selbstkundgabe, Beziehung und Appell.',antwort:'R'},
+    {text:'Patienten können eine medizinische Behandlung nur dann ablehnen, wenn ein gesetzlicher Betreuer zustimmt.',antwort:'F'},
+    {text:'Interprofessionelle Zusammenarbeit im Krankenhaus umfasst u.a. Pflegefachkräfte, Ärzte, Physiotherapeuten und Sozialarbeiter.',antwort:'R'},
+    {text:'Händedesinfektion ist nur nach direktem Patientenkontakt erforderlich.',antwort:'F'},
+    {text:'Das Autonomieprinzip in der Pflege bedeutet, dass Patienten das Recht haben, über ihre Behandlung informiert selbst zu entscheiden.',antwort:'R'},
+    {text:'Evidenzbasierte Pflege bedeutet ausschließlich, wissenschaftliche Studien anzuwenden, ohne Patientenpräferenzen zu berücksichtigen.',antwort:'F'}
+  ];
 
-  const k2=content?.aufgabe2_kurz||{punkte:14,fragen:[
-    'Nennen Sie 3 konkrete Pflegeziele für Herrn Müller. Formulieren Sie diese SMART (spezifisch, messbar, erreichbar, realistisch, terminiert).',
-    'Welche 4 Pflegemaßnahmen haben bei Herrn Müller höchste Priorität? Begründen Sie Ihre Auswahl.',
-    'Wie würden Sie die Medikamentencompliance von Herrn Müller verbessern? Nennen Sie 3 konkrete Maßnahmen.'
-  ]};
+  const a2Fragen=content?.aufgabe2_fragen||[
+    'Formulieren Sie 3 SMART-formulierte Pflegeziele für Frau Hoffmann. Begründen Sie Ihre Auswahl anhand des Pflegeprozesses. (KB I)',
+    'Welche 4 pflegerischen Maßnahmen haben für Frau Hoffmann unmittelbar nach Aufnahme höchste Priorität? Begründen Sie nach aktuellem Pflegestandard. (KB I/V)',
+    'Wie können Sie die Medikamenten-Compliance von Frau Hoffmann verbessern? Beschreiben Sie 3 konkrete, patientenorientierte Maßnahmen. (KB II)'
+  ];
 
-  const a3=content?.aufgabe3_freitext||{punkte:20,aufgabenstellung:'Beschreiben Sie ausführlich die pflegerischen Interventionen für Herrn Müller. Berücksichtigen Sie dabei: (1) Grundpflege und Körperpflege, (2) Mobilisation und Lagerung, (3) Ernährung und Flüssigkeitsmanagement, (4) psychosoziale Begleitung. Begründen Sie Ihre Maßnahmen fachlich.'};
+  const a3Text=content?.aufgabe3_text||'Beschreiben Sie ausführlich die pflegerische Versorgung von Frau Hoffmann in den ersten 24 Stunden nach Aufnahme. Berücksichtigen Sie: (1) Pflegeassessment und Erhebung nach AEDL, (2) Grundpflege unter Beachtung ihrer Ressourcen und Einschränkungen, (3) Mobilisation und Lagerung zur Ödemreduktion, (4) Flüssigkeitsmanagement und Ernährung, (5) kontinuierliches Monitoring der Vitalparameter. Begründen Sie alle Maßnahmen fachlich nach aktuellen Leitlinien. (KB I, V)';
 
-  const mc=content?.aufgabe4_mc||{punkte:15,fragen:[
-    {frage:'Welche Maßnahme hat bei der Grundpflege Vorrang?',optionen:['A) Sofort mit der Körperpflege beginnen','B) Patientenwünsche und -ressourcen erfassen','C) Pflegebericht schreiben','D) Arzt informieren'],richtig:'B'},
-    {frage:'Was kennzeichnet eine professionelle Pflegedokumentation?',optionen:['A) Nur Auffälligkeiten dokumentieren','B) Subjektive Bewertungen einbeziehen','C) Lückenlose, objektive und zeitnahe Erfassung','D) Nur Vitalwerte notieren'],richtig:'C'},
-    {frage:'Welches Prinzip beschreibt die Handlungsfähigkeit trotz Einschränkungen?',optionen:['A) Compliance','B) Autonomie','C) Adhärenz','D) Resilienz'],richtig:'B'}
-  ]};
+  const mcFragen=content?.mc_fragen||[
+    {frage:'Welches Assessment-Instrument wird zur Einschätzung des Sturzrisikos verwendet?',optionen:['A) Glasgow Coma Scale','B) Morse Fall Scale','C) Braden-Skala','D) MMST'],richtig:'B',kb:'I'},
+    {frage:'Welcher Grundsatz gilt bei der Pflege eines einwilligungsfähigen Patienten vorrangig?',optionen:['A) Fürsorge (Benefizienz)','B) Patientenautonomie und Selbstbestimmung','C) Ressourcenschonung','D) Angehörigenwunsch'],richtig:'B',kb:'IV'},
+    {frage:'Was versteht man unter "aktivierender Pflege"?',optionen:['A) Alle Pflegehandlungen für den Patienten übernehmen','B) Den Patienten bei allen Aktivitäten vollständig unterstützen','C) Vorhandene Ressourcen des Patienten fördern und Selbstständigkeit erhalten','D) Nur bei Bedarf pflegen'],richtig:'C',kb:'I'}
+  ];
 
-  const a5=content?.aufgabe5_kommunikation||{punkte:20,aufgabenstellung:'Beschreiben Sie, wie Sie das Erstgespräch mit Herrn Müller gestalten würden. Berücksichtigen Sie: (1) Gesprächseinstieg und Atmosphäre, (2) eingesetzte Kommunikationstechniken (aktives Zuhören, offene Fragen, Spiegeln), (3) Umgang mit emotionalen Reaktionen, (4) Informationsvermittlung zur Erkrankung und Therapie.'};
+  const a5Text=content?.aufgabe5_text||'Beschreiben Sie detailliert, wie Sie das Erstgespräch mit Frau Hoffmann gestalten. Berücksichtigen Sie: (1) Vorbereitung und geeignetes Setting, (2) Kommunikationstechniken (aktives Zuhören, offene Fragen, Verbalisierung emotionaler Inhalte, Empathie), (3) Biografiearbeit zur Erfassung ihrer Ressourcen und Lebenssituation, (4) professionellen Umgang mit Angst und Unsicherheit der Patientin, (5) Einbeziehung der Tochter unter Beachtung der Schweigepflicht. Begründen Sie Ihr Vorgehen mit Bezug auf Kommunikationsmodelle. (KB II)';
 
-  const a6=content?.aufgabe6_reflexion||{punkte:15,aufgabenstellung:'Herr Müller lehnt eine weitere Blutentnahme ab und besteht darauf, das Krankenhaus verlassen zu wollen, obwohl er medizinisch noch nicht entlassen werden kann. Beschreiben Sie: (1) Welches ethische Prinzip steht im Vordergrund? (2) Wie gehen Sie in diesem Konflikt vor? (3) Welche Berufsgruppen beziehen Sie ein? (4) Wie dokumentieren Sie die Situation?'};
+  const a6Text=content?.aufgabe6_text||'Frau Hoffmann lehnt eine notwendige Blutentnahme für die Diagnostik kategorisch ab: "Ich will das nicht, lasst mich in Ruhe!" Sie ist nach ärztlicher Beurteilung voll einwilligungsfähig. Analysieren Sie diese ethische Konfliktsituation umfassend: (1) Welche ethischen Prinzipien nach Beauchamp & Childress sind berührt und wie stehen sie in Konflikt? (2) Welche rechtlichen Grundlagen (Patientenrechtegesetz §§ 630a ff. BGB) gelten? (3) Wie gehen Sie als Pflegefachkraft konkret und professionell vor? (4) Welche anderen Berufsgruppen und Instanzen beziehen Sie ein? (5) Wie dokumentieren Sie die Situation vollständig und rechtssicher? (KB IV, III)';
 
   return `
 <div class="ep-header">
   <div class="ep-header-top">
-    BERUFSKOLLEG FÜR PFLEGE UND GESUNDHEIT · BZPG WÜRSELEN &nbsp;|&nbsp; Ausbildung zur Pflegefachkraft (Generalistik) &nbsp;|&nbsp; Zwischenprüfung Ende 2. Ausbildungsjahr &nbsp;|&nbsp; Schuljahr 2024/2025
+    Bildungszentrum für Pflege und Gesundheit (BZPG) · Würselen · Ausbildung zur Pflegefachkraft (Generalistik) · Zwischenprüfung Ende 2. Ausbildungsdrittel · § 6 Abs. 5 PflBG · § 7 PflAPrV · Schuljahr 2024/2025
   </div>
   <div class="ep-title">
     <h1>Schriftliche Zwischenprüfung</h1>
-    <h2>Pflegefachkraft — Generalistik</h2>
-    <p>⚠️ KI-Modell · Basiert auf früheren Prüfungsversuchen · Abweichungen zur echten Prüfung möglich</p>
+    <h2>Pflegefachkraft — Generalistische Ausbildung</h2>
+    <p>⚠ KI-Modell auf Basis von Prüfungsmustern — Abweichungen zur schulinternen Prüfung möglich — Nicht offizielles BZPG-Dokument</p>
   </div>
   <div class="ep-info-grid">
-    <div class="ep-info-cell"><label>Name, Vorname</label><input type="text" placeholder="______________________________"></div>
-    <div class="ep-info-cell"><label>Klasse / Kurs</label><input type="text" placeholder="______________"></div>
-    <div class="ep-info-cell"><label>Datum</label><input type="text" value="${today}"></div>
-    <div class="ep-info-cell"><label>Gesamtpunktzahl / Erreichte Punkte</label><span style="font-weight:700;font-size:15px">100 Punkte &nbsp;/&nbsp; _______</span></div>
+    <div class="ep-info-cell"><label>Name, Vorname</label><input type="text" placeholder="___________________________"></div>
+    <div class="ep-info-cell"><label>Klasse / Kurs</label><input type="text" placeholder="_______________"></div>
+    <div class="ep-info-cell"><label>Datum der Prüfung</label><input type="text" value="${today}"></div>
+    <div class="ep-info-cell"><label>Erzielte Punkte / Gesamtpunkte</label><span style="font-weight:700;font-size:14px;font-family:'Plus Jakarta Sans',sans-serif">_______ / 100 Punkte</span></div>
   </div>
 </div>
+
 <div class="ep-hinweis">
-  <strong>⏱ Bearbeitungszeit:</strong> 120 Minuten &nbsp;|&nbsp; <strong>Hilfsmittel:</strong> Keine &nbsp;|&nbsp; <strong>Hinweis:</strong> Lesen Sie alle Aufgaben vollständig durch, bevor Sie mit der Bearbeitung beginnen. Beantworten Sie alle Aufgaben auf Basis des Fallbeispiels, sofern nicht anders angegeben.
+  <strong>⏱ Bearbeitungszeit:</strong> 120 Minuten &nbsp;|&nbsp; <strong>Hilfsmittel:</strong> Keine &nbsp;|&nbsp; <strong>Gesamtpunkte:</strong> 100 &nbsp;|&nbsp;
+  <strong>Hinweis:</strong> Lesen Sie zuerst das Fallbeispiel vollständig durch. Alle Aufgaben beziehen sich, sofern nicht anders angegeben, auf das Fallbeispiel. Begründen Sie Ihre Antworten fachlich. Schreiben Sie leserlich.
 </div>
 
 <!-- FALLBEISPIEL -->
 <div class="ep-fallbeispiel">
-  <div class="ep-fallbeispiel-title">📋 Fallbeispiel — Bitte aufmerksam lesen</div>
-  <p><strong>Patient:</strong> ${fb.patient}</p>
+  <div class="ep-fallbeispiel-title"><span>📋</span> Fallbeispiel — Bitte vollständig und aufmerksam lesen</div>
+  <p><strong>Patientin / Patient:</strong> ${fb.patient}</p>
   <p>${fb.situation}</p>
   <p>${fb.hintergrund}</p>
   <p>${fb.aktuellesProblem}</p>
 </div>
 
-<!-- AUFGABE 1: RICHTIG / FALSCH -->
+<!-- AUFGABE 1: RICHTIG / FALSCH — KB I, II, III, IV, V -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 1 — ${rf.titel||'Richtig oder Falsch'}</span>
-    <span class="ep-aufgabe-tag">Fallbezogenes Wissen</span>
-    <span class="ep-aufgabe-pts">${rf.punkte||16} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 1 — Richtig oder Falsch</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB I · II · III · IV · V</span>
+      <span class="ep-kb-badge">Pflegewissen</span>
+    </div>
+    <span class="ep-aufgabe-pts">16 Punkte</span>
   </div>
-  <p class="ep-instruction">Kreuzen Sie an, ob die folgenden Aussagen <strong>Richtig (R)</strong> oder <strong>Falsch (F)</strong> sind. Jede richtige Antwort ergibt ${Math.round((rf.punkte||16)/(rf.aussagen?.length||8) * 10)/10} Punkt(e). Es gibt keine Minuspunkte für falsche Antworten.</p>
+  <p class="ep-instruction">Kreuzen Sie an, ob die folgenden Aussagen <strong>Richtig (R)</strong> oder <strong>Falsch (F)</strong> sind. Jede richtige Antwort gibt <strong>2 Punkte</strong>. Es gibt keine Minuspunkte.</p>
   <table class="ep-rf-table">
     <thead>
       <tr>
-        <th style="text-align:left;width:70%">Aussage</th>
+        <th style="text-align:left;width:72%">Aussage</th>
         <th>Richtig</th>
         <th>Falsch</th>
       </tr>
     </thead>
     <tbody>
-      ${(rf.aussagen||[]).map((a,i)=>`
+      ${rfAussagen.map((a,i)=>`
       <tr class="ep-rf-row">
         <td>${i+1}. ${a.text||a}</td>
         <td class="ep-rf-option"><div class="ep-rf-radio"></div></td>
@@ -1035,101 +1102,107 @@ function buildExamHTML(content,rawItems){
       </tr>`).join('')}
     </tbody>
   </table>
-  <div class="ep-points">/ ${rf.punkte||16} Punkte</div>
+  <div class="ep-points">/ 16 Punkte</div>
 </div>
 
-<!-- AUFGABE 2: KURZANTWORTEN -->
+<!-- AUFGABE 2: PFLEGEPLANUNG — KB I, II, V -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 2 — ${k2.titel||'Pflegeplanung'}</span>
-    <span class="ep-aufgabe-tag">Pflegeprozess &amp; Planung</span>
-    <span class="ep-aufgabe-pts">${k2.punkte||14} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 2 — Pflegeprozess & Planung</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB I · II · V</span>
+      <span class="ep-kb-badge">Pflegeprozess</span>
+    </div>
+    <span class="ep-aufgabe-pts">18 Punkte</span>
   </div>
-  <p class="ep-instruction">Beantworten Sie die folgenden Fragen bezogen auf das Fallbeispiel. Schreiben Sie Ihre Antworten in die vorgesehenen Felder.</p>
-  ${(k2.fragen||[]).map((frage,i)=>`
-  <div style="margin-bottom:20px">
+  <p class="ep-instruction">Beantworten Sie die folgenden Fragen bezogen auf das Fallbeispiel. Begründen Sie Ihre Antworten fachlich.</p>
+  ${a2Fragen.map((frage,i)=>`
+  <div style="margin-bottom:18px">
     <p class="ep-sub"><strong>${i+1}.</strong> ${frage}</p>
-    <textarea class="ep-textarea" style="min-height:80px" placeholder="Ihre Antwort..."></textarea>
-    <div class="ep-points">/ ${Math.round((k2.punkte||14)/(k2.fragen?.length||3))} Punkte</div>
+    <textarea class="ep-textarea" style="min-height:85px" placeholder="Ihre Antwort..."></textarea>
+    <div class="ep-points">/ 6 Punkte</div>
   </div>`).join('')}
 </div>
 
-<!-- AUFGABE 3: FREITEXT PFLEGE -->
+<!-- AUFGABE 3: PFLEGERISCHE VERSORGUNG — KB I, V -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 3 — ${a3.titel||'Pflegemaßnahmen'}</span>
-    <span class="ep-aufgabe-tag">Pflegerische Praxis</span>
-    <span class="ep-aufgabe-pts">${a3.punkte||20} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 3 — Pflegerische Versorgung</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB I · V</span>
+      <span class="ep-kb-badge">Pflegepraxis</span>
+    </div>
+    <span class="ep-aufgabe-pts">20 Punkte</span>
   </div>
-  <p class="ep-instruction">${a3.aufgabenstellung}</p>
-  <textarea class="ep-textarea" style="min-height:160px" placeholder="Ihre ausführliche Antwort..."></textarea>
-  <div class="ep-points">/ ${a3.punkte||20} Punkte</div>
+  <p class="ep-instruction">${a3Text}</p>
+  <textarea class="ep-textarea" style="min-height:200px" placeholder="Ihre ausführliche Antwort... (Mind. 10-12 Sätze erwartet)"></textarea>
+  <div class="ep-points">/ 20 Punkte</div>
 </div>
 
-<!-- AUFGABE 4: MULTIPLE CHOICE -->
+<!-- AUFGABE 4: MULTIPLE CHOICE — KB I, II, IV -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 4 — ${mc.titel||'Fachwissen'}</span>
-    <span class="ep-aufgabe-tag">Multiple Choice — Eine Antwort richtig</span>
-    <span class="ep-aufgabe-pts">${mc.punkte||15} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 4 — Fachwissen Multiple Choice</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB I · II · IV</span>
+      <span class="ep-kb-badge">Fachwissen</span>
+    </div>
+    <span class="ep-aufgabe-pts">12 Punkte</span>
   </div>
-  <p class="ep-instruction">Kreuzen Sie jeweils die <strong>eine richtige Antwort</strong> an. Jede richtige Antwort gibt ${Math.round((mc.punkte||15)/(mc.fragen?.length||3) * 10)/10} Punkte.</p>
-  ${(mc.fragen||[]).map((f,i)=>`
-  <div style="margin-bottom:18px">
-    <p class="ep-sub"><strong>${i+1}.</strong> ${f.frage||f}</p>
+  <p class="ep-instruction">Kreuzen Sie jeweils die <strong>eine richtige Antwort</strong> an. Jede richtige Antwort gibt <strong>4 Punkte</strong>. Keine Minuspunkte.</p>
+  ${mcFragen.map((f,i)=>`
+  <div style="margin-bottom:20px">
+    <p class="ep-sub"><strong>${i+1}.</strong> ${f.frage||f} <span style="font-size:11px;color:#888;font-family:'Plus Jakarta Sans',sans-serif">(${f.kb?KB_LABELS[f.kb]:''||''})</span></p>
     <ul class="ep-mc-list" id="mc-group-${i}">
       ${(f.optionen||['A) Option A','B) Option B','C) Option C','D) Option D']).map((opt,j)=>`
-      <li onclick="selectMC(${i},${j})">
-        <span class="ep-mc-box" id="mc-box-${i}-${j}"></span>
+      <li onclick="selectMC(${i},${j},this)">
+        <span class="ep-mc-circle" id="mc-circle-${i}-${j}"></span>
         <span>${opt}</span>
       </li>`).join('')}
     </ul>
-    <div class="ep-points">/ ${Math.round((mc.punkte||15)/(mc.fragen?.length||3) * 10)/10} Punkte</div>
+    <div class="ep-points">/ 4 Punkte</div>
   </div>`).join('')}
 </div>
 
-<!-- AUFGABE 5: KOMMUNIKATION -->
+<!-- AUFGABE 5: KOMMUNIKATION — KB II -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 5 — ${a5.titel||'Kommunikation'}</span>
-    <span class="ep-aufgabe-tag">Kommunikation &amp; Beziehungsgestaltung</span>
-    <span class="ep-aufgabe-pts">${a5.punkte||20} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 5 — Kommunikation & Beratung</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB II</span>
+      <span class="ep-kb-badge">Kommunikation</span>
+    </div>
+    <span class="ep-aufgabe-pts">18 Punkte</span>
   </div>
-  <p class="ep-instruction">${a5.aufgabenstellung}</p>
-  <textarea class="ep-textarea" style="min-height:180px" placeholder="Ihre ausführliche Antwort..."></textarea>
-  <div class="ep-points">/ ${a5.punkte||20} Punkte</div>
+  <p class="ep-instruction">${a5Text}</p>
+  <textarea class="ep-textarea" style="min-height:180px" placeholder="Ihre ausführliche Antwort... (Mind. 8-10 Sätze erwartet)"></textarea>
+  <div class="ep-points">/ 18 Punkte</div>
 </div>
 
-<!-- AUFGABE 6: ETHIK / REFLEXION -->
+<!-- AUFGABE 6: ETHIK & RECHT — KB III, IV -->
 <div class="ep-aufgabe">
   <div class="ep-aufgabe-header">
-    <span class="ep-aufgabe-nr">Aufgabe 6 — ${a6.titel||'Ethik &amp; Reflexion'}</span>
-    <span class="ep-aufgabe-tag">Ethisches Handeln &amp; Berufsrolle</span>
-    <span class="ep-aufgabe-pts">${a6.punkte||15} Punkte</span>
+    <span class="ep-aufgabe-nr">Aufgabe 6 — Ethik, Recht & Reflexion</span>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="ep-aufgabe-tag">KB III · IV</span>
+      <span class="ep-kb-badge">Berufsethos</span>
+    </div>
+    <span class="ep-aufgabe-pts">16 Punkte</span>
   </div>
-  <p class="ep-instruction">${a6.aufgabenstellung}</p>
-  <textarea class="ep-textarea" style="min-height:150px" placeholder="Ihre Reflexion..."></textarea>
+  <p class="ep-instruction">${a6Text}</p>
+  <textarea class="ep-textarea" style="min-height:170px" placeholder="Ihre Reflexion und Analyse... (Mind. 8-10 Sätze erwartet)"></textarea>
   <div class="ep-scoring">
-    <span>✏️ Viel Erfolg bei der Bearbeitung!</span>
-    <span><strong>Gesamtpunkte: 100</strong></span>
+    <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:11px">✏️ Viel Erfolg! · Vergessen Sie nicht: Sie können die ZP nicht "durchfallen" — die Ausbildung geht weiter.</span>
+    <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:13px">Gesamt: 100 Punkte</span>
   </div>
 </div>`;
 }
 
-function selectMC(groupIdx,optIdx){
+function selectMC(groupIdx,optIdx,el){
   const group=document.getElementById(`mc-group-${groupIdx}`);
   if(!group)return;
-  group.querySelectorAll('li').forEach((li,i)=>{
-    li.classList.remove('selected');
-    const box=document.getElementById(`mc-box-${groupIdx}-${i}`);
-    if(box)box.style.background='';
-  });
-  const li=group.querySelectorAll('li')[optIdx];
-  if(li){
-    li.classList.add('selected');
-    const box=document.getElementById(`mc-box-${groupIdx}-${optIdx}`);
-    if(box){box.style.background='#6366f1';box.style.borderColor='#6366f1';}
-  }
+  group.querySelectorAll('li').forEach(li=>li.classList.remove('mc-selected'));
+  if(el)el.classList.add('mc-selected');
 }
 
 function initRFInteractivity(){
@@ -1164,21 +1237,20 @@ async function submitPK(timeout=false){
   clearInterval(zpState.examInterval);
   const answers=[];
   document.querySelectorAll('#pk-content .ep-textarea').forEach((ta,i)=>{
-    answers.push({field:`Aufgabe ${i+1} (Freitext)`,value:ta.value||''});
+    const labels=['Pflegeplanung Frage 1','Pflegeplanung Frage 2','Pflegeplanung Frage 3','Pflegerische Versorgung (A3)','Kommunikation & Beratung (A5)','Ethik & Recht (A6)'];
+    answers.push({field:labels[i]||`Freitext ${i+1}`,value:ta.value||'',pts:[6,6,6,20,18,16][i]||10});
   });
   document.querySelectorAll('#pk-content .ep-rf-row').forEach((row,i)=>{
-    const radios=row.querySelectorAll('.ep-rf-radio');
-    const options=row.querySelectorAll('.ep-rf-option');
+    const opts=row.querySelectorAll('.ep-rf-option');
     let chosen='Keine Antwort';
-    options.forEach((opt,j)=>{
-      if(opt.querySelector('.ep-rf-radio.selected')){chosen=j===0?'Richtig':'Falsch';}
-    });
-    const stmt=row.querySelector('td')?.textContent?.trim().replace(/^\d+\.\s*/,'').slice(0,60)||`Aussage ${i+1}`;
-    answers.push({field:`R/F ${i+1}: "${stmt}"`,value:chosen});
+    opts.forEach((opt,j)=>{if(opt.querySelector('.ep-rf-radio.selected'))chosen=j===0?'Richtig':'Falsch';});
+    const stmt=row.querySelector('td')?.textContent?.trim().replace(/^\d+\.\s*/,'').slice(0,70)||`Aussage ${i+1}`;
+    answers.push({field:`R/F ${i+1}: "${stmt}"`,value:chosen,pts:2});
   });
   document.querySelectorAll('#pk-content [id^="mc-group-"]').forEach((group,i)=>{
-    const selected=group.querySelector('li.selected span:last-child');
-    answers.push({field:`MC Frage ${i+1}`,value:selected?selected.textContent:'Keine Antwort'});
+    const sel=group.querySelector('li.mc-selected span:last-child');
+    const q=group.previousElementSibling?.textContent?.trim().slice(0,60)||`MC ${i+1}`;
+    answers.push({field:`MC ${i+1}: ${q}`,value:sel?sel.textContent:'Keine Antwort',pts:4});
   });
 
   document.getElementById('pk-footer').classList.add('hidden');
@@ -1186,37 +1258,36 @@ async function submitPK(timeout=false){
     <div class="flex items-center justify-center py-20" style="background:#f5f4f0">
       <div class="text-center">
         <div class="w-12 h-12 rounded-full animate-spin mx-auto mb-4" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
-        <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">${timeout?'⏰ Zeit abgelaufen! ':''}KI bewertet deine Antworten...</p>
+        <p style="color:#555;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600">${timeout?'⏰ Zeit abgelaufen! ':''}KI bewertet nach PflAPrV-Kriterien...</p>
       </div>
     </div>`;
 
-  const answeredCount=answers.filter(a=>a.value&&a.value!=='Keine Antwort').length;
-  const prompt=`Du bist ein Pflegeprüfer. Bewerte diese Prüfungsabgabe eines Pflegefachkraft-Auszubildenden.
+  const answeredFT=answers.filter(a=>a.value&&a.value!=='Keine Antwort'&&a.value.length>10).length;
+  const prompt=`Du bist Prüfer für die Zwischenprüfung Pflegefachkraft (PflAPrV). Bewerte diese Prüfungsabgabe kompetenzbasiert.
 
-ABGEGEBENE ANTWORTEN (${answers.length} Felder, ${answeredCount} beantwortet):
-${answers.map(a=>`• ${a.field}: "${a.value.slice(0,200)}"`).join('\n')}
+PRÜFUNGSABGABE (${answers.length} Felder, ${answeredFT} mit Freitextantworten):
+${answers.map(a=>`• ${a.field} (max. ${a.pts||'?'} Pts): "${String(a.value).slice(0,250)}"`).join('\n')}
 
-Erstelle eine strukturierte Bewertung als HTML mit:
-1. Großer Übersichtsbox: geschätzte Gesamtpunkte von 100 und Note (1=sehr gut bis 6=ungenügend)
-2. Tabelle mit allen Aufgaben: Aufgabe | Mögliche Punkte | Einschätzung
-3. "Was gut war" (grün, border-left:4px solid #22c55e)
-4. "Was verbessert werden sollte" (rot, border-left:4px solid #ef4444)  
-5. "Top 5 Lernempfehlungen" (nummeriert)
-6. Ermutigender Abschluss
+Erstelle eine detaillierte Bewertung als HTML mit inline-CSS:
+1. Übersichtsbox (blau): Geschätzte Gesamtpunkte/100, Note (1-6 mit Bezeichnung), Bestehensgrenze
+2. Kompetenzbereich-Tabelle: KB I–V | Aufgaben | Einschätzung (gut/ausreichend/unzureichend)
+3. "Stärken" (grün, border-left:4px solid #22c55e, bg:#f0fdf4): Was gut beantwortet wurde
+4. "Entwicklungsfelder" (orange, border-left:4px solid #f97316, bg:#fff7ed): Was verbessert werden sollte mit konkreten Hinweisen
+5. "Top 5 Lernempfehlungen für die ZP" (nummeriert, bezogen auf PflAPrV KB I–V)
+6. Hinweis: ZP kann nicht durchgefallen werden — ermutigender Abschluss
+Nur HTML zurückgeben.`;
 
-Nutze nur inline-CSS. Gib NUR HTML zurück.`;
-
-  const feedbackHTML=await callKI({mode:'lernheft',prompt})||buildSimpleFeedback(answers,answeredCount);
+  const feedbackHTML=await callKI({mode:'lernheft',prompt})||buildSimpleFeedback(answers,answeredFT);
   const elapsed=120*60-zpState.examSecondsLeft;const elMin=Math.floor(elapsed/60);
-  saveLernbuch(`Probeklausur · ${answeredCount}/${answers.length} Felder · ${new Date().toLocaleDateString('de-DE')}`,feedbackHTML);
+  saveLernbuch(`Probeklausur · ${answeredFT} Antworten · ${new Date().toLocaleDateString('de-DE')}`,feedbackHTML);
 
   document.getElementById('pk-content').innerHTML=`
     <div style="background:#f5f4f0;padding:24px 32px;min-height:100%">
       <div style="background:#f0fdf4;border:1.5px solid #22c55e;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:12px">
         <i class="fas fa-check-circle" style="color:#22c55e;font-size:18px"></i>
         <div>
-          <p style="color:#15803d;font-weight:700;font-size:13px">Bewertung abgeschlossen &amp; gespeichert!</p>
-          <p style="color:#64748b;font-size:11px">${elMin} Minuten Bearbeitungszeit · ${answeredCount} von ${answers.length} Feldern beantwortet · Unter "Hefte" abrufbar</p>
+          <p style="color:#15803d;font-weight:700;font-size:13px">Bewertung abgeschlossen & gespeichert!</p>
+          <p style="color:#64748b;font-size:11px">${elMin} Minuten · ${answeredFT} von ${answers.length} Feldern beantwortet · Unter "Hefte" abrufbar</p>
         </div>
       </div>
       <div style="font-family:'Plus Jakarta Sans',sans-serif">${feedbackHTML}</div>
@@ -1225,56 +1296,55 @@ Nutze nur inline-CSS. Gib NUR HTML zurück.`;
   document.getElementById('pk-footer').innerHTML=`
     <div class="flex gap-3">
       <button onclick="closePK()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-      <button onclick="closePK();showPKWarning()" class="flex-1 py-3 rounded-xl text-sm font-black text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-redo mr-2"></i>Neue Klausur</button>
+      <button onclick="closePK();showPKWarning()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-redo mr-2"></i>Neue Klausur</button>
     </div>`;
   document.getElementById('pk-footer').classList.remove('hidden');
 }
 
-function buildSimpleFeedback(answers,answeredCount){
+function buildSimpleFeedback(answers,answered){
   return`<div style="font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a">
     <div style="background:#eff6ff;border:2px solid #3b82f6;border-radius:8px;padding:16px;margin-bottom:16px">
-      <h2 style="font-size:18px;font-weight:900;color:#1e3a8a;margin-bottom:4px">📋 Deine Abgabe</h2>
-      <p style="color:#374151">${answeredCount} von ${answers.length} Feldern beantwortet.</p>
+      <h2 style="font-size:16px;font-weight:900;color:#1e3a8a;margin-bottom:4px">📋 Deine Abgabe</h2>
+      <p style="color:#374151;font-size:13px">${answered} von ${answers.length} Feldern beantwortet. KI-Bewertung nicht verfügbar — prüfe deine API-Verbindung.</p>
     </div>
     ${answers.map(a=>`
-    <div style="border:1px solid #e2e8f0;border-radius:6px;padding:12px 16px;margin-bottom:8px">
-      <p style="font-weight:700;font-size:11px;color:#64748b;margin-bottom:4px;text-transform:uppercase">${a.field}</p>
+    <div style="border:1px solid #e2e8f0;border-radius:6px;padding:10px 14px;margin-bottom:8px">
+      <p style="font-weight:700;font-size:11px;color:#64748b;margin-bottom:3px;text-transform:uppercase">${a.field} (max. ${a.pts||'?'} Pkt.)</p>
       <p style="font-size:13px;color:#374151">${a.value||'<em style="color:#9ca3af">Nicht beantwortet</em>'}</p>
     </div>`).join('')}
-    <div style="background:#fffbeb;border:1px solid #f59e0b;border-radius:6px;padding:12px;margin-top:16px">
-      <p style="font-weight:700;color:#92400e;margin-bottom:4px">💡 Hinweis</p>
-      <p style="color:#374151;font-size:13px">KI-Bewertung war nicht verfügbar. Überprüfe deine API-Verbindung für eine detaillierte Auswertung.</p>
-    </div>
   </div>`;
 }
 
 // ═══════════════════════════════════════════════════════
-// LERNHEFT PROMPT BUILDER
+// LERNHEFT PROMPT
 // ═══════════════════════════════════════════════════════
 function buildLernheftPrompt(pairs){
-  return`Du bist ein Pflegetutor für Auszubildende (Generalistik) am BZPG Würselen. Erstelle ein detailliertes Lernheft als HTML.
+  const kbSummary=[...new Set(pairs.map(p=>p.kbLabel).filter(Boolean))].join(', ')||'KB I–V';
+  return`Du bist Pflegetutor für die Zwischenprüfung (PflAPrV Anlage 1) am BZPG Würselen.
+Erstelle ein strukturiertes Lernheft als reines HTML mit inline-CSS.
 
-STRUKTUR (mit inline-styles):
-- Übersicht-Box oben (blau): <div style="background:#eff6ff;border-left:4px solid #3b82f6;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
-- Korrekt (grün): <div style="background:#f0fdf4;border-left:4px solid #22c55e;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
-- Verbesserung (rot): <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
-- Info-Box (indigo): <div style="background:#eef2ff;border-left:4px solid #6366f1;padding:12px 16px;border-radius:0 6px 6px 0;margin:10px 0">
-- h2: <h2 style="font-size:1.1rem;font-weight:800;color:#1e1b4b;margin:16px 0 8px;border-bottom:2px solid #e0e7ff;padding-bottom:4px">
-- h3: <h3 style="font-size:.95rem;font-weight:700;color:#3730a3;margin:12px 0 6px">
-- Tabellen, Listen, Merksätze nutzen
+ABGEDECKTE KOMPETENZBEREICHE: ${kbSummary}
 
-SESSION: Active Recall
-PFLICHT: 1) Übersicht, 2) Pro Frage Analyse, 3) Wissenserklärung, 4) Lernempfehlungen, 5) Merksätze
+HTML-STRUKTUR (Pflicht):
+- Übersicht-Box (blau, border-left:4px solid #3b82f6, bg:#eff6ff): Performance-Zusammenfassung mit KB-Abdeckung
+- Pro Frage: KB-Badge + Frage + Muster + Vergleich mit Antwort (grün=gut, rot=Lücke)
+- Wissenserklärung-Box (indigo, border-left:4px solid #6366f1, bg:#eef2ff): Wichtige Inhalte nach PflAPrV
+- Lernempfehlung-Box (amber): Top 5 Empfehlungen mit KB-Bezug
+- Merksätze: Eselsbrücken für die 5 KB (P-K-Z-R-W)
+- Tabellen und Listen verwenden
 
-FRAGEN:
-${pairs.map((p,i)=>`[${i+1}] ${p.moduleName}
+SESSION: Active Recall · Zwischenprüfungs-Training
+
+FRAGEN & ANTWORTEN:
+${pairs.map((p,i)=>`[${i+1}] ${p.kbLabel||p.moduleName}
 Frage: ${p.question}
 Muster: ${p.sampleAnswer||'–'}
-Antwort: ${p.userAnswer||'(keine)'}
+Nutzerantwort: ${p.userAnswer||'(keine Antwort)'}
 Keywords: ${(p.keywords||[]).join(', ')||'–'}`).join('\n\n')}
 
-Erstelle das HTML:`;
+Erstelle jetzt das HTML:`;
 }
+
 function buildFallbackFeedback(pairs){
   const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
   return`<div style="color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif">
@@ -1282,7 +1352,8 @@ function buildFallbackFeedback(pairs){
     <p style="color:#94a3b8;margin-bottom:1.5rem">${answered} von ${pairs.length} Fragen beantwortet.</p>
     ${pairs.map((p,i)=>`
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem;margin-bottom:1rem">
-      <h3 style="color:#c4b5fd;font-size:.85rem;font-weight:700;margin-bottom:.5rem">Frage ${i+1} · ${p.moduleName}</h3>
+      <p style="color:#a5b4fc;font-size:.75rem;font-weight:700;margin-bottom:.3rem">${p.kbLabel||p.moduleName}</p>
+      <h3 style="color:#c4b5fd;font-size:.85rem;font-weight:700;margin-bottom:.5rem">Frage ${i+1}</h3>
       <p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#e2e8f0">Frage:</strong> ${p.question}</p>
       <p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#86efac">✅ Muster:</strong> ${p.sampleAnswer||'–'}</p>
       <p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝 Antwort:':'❌ Keine Antwort:'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
@@ -1333,7 +1404,9 @@ function enterDashboard(){
   renderModules();renderDashLernhefte();
   setTimeout(showWelcome,500);
 }
-document.addEventListener('DOMContentLoaded',async()=>{const ok=await SLMCloud.autoLogin();if(ok)enterDashboard();});
+document.addEventListener('DOMContentLoaded',async()=>{
+  const ok=await SLMCloud.autoLogin();if(ok)enterDashboard();
+});
 
 // ═══════════════════════════════════════════════════════
 // MODULES GRID
