@@ -1,14 +1,16 @@
 // api/grade.js
 // ============================================
-//  ULTIMATE FREE AI ROUTER v3.0
+//  ULTIMATE FREE AI ROUTER v3.1
 //  Gemini + Gemma + Groq — Multi-Mode Engine
-//  Modes: text | image | grade | lernheft | generate
+//  Modes: text | image | grade | lernheft | generate | presentation | summary
+//  Data: data/question-banks/moduleX_questions.json
+//        data/moduleXsummariesunitY.json
 //  Total Capacity: ~72,500+ requests/day
 // ============================================
 
 export default async function handler(req, res) {
 
-  // ── CORS ─────────────────────────────────────────────────────
+  // ── CORS ──────────────────────────────────────────────────────
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -16,21 +18,20 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const {
-    // Legacy fields (backward compat)
     prompt,
     type,
-    // New structured fields
     mode,
-    model: preferredModel,
+    model:       preferredModel,
     question,
     sampleAnswer,
     userAnswer,
-    keywords   = [],
-    maxPoints  = 10,
+    keywords     = [],
+    maxPoints    = 10,
     topic,
     moduleId,
     moduleName,
     sessionType,
+    pairs,
   } = req.body || {};
 
   const GEMINI_KEY = process.env.GEMINI_KEY || process.env.GEMINI_API_KEY;
@@ -44,25 +45,20 @@ export default async function handler(req, res) {
 
   // ════════════════════════════════════════════════════════════
   //  PROVIDER REGISTRY
-  //  Priority order — best quality first, massive fallback pool
   // ════════════════════════════════════════════════════════════
   const PROVIDERS = [
-    // Tier 1 — Best quality
-    { name: 'Gemini 2.5 Flash',         type: 'google', model: 'gemini-2.5-flash-preview-04-17', maxTokens: 8192  },
-    { name: 'Gemini 2.5 Flash Latest',  type: 'google', model: 'gemini-2.5-flash',               maxTokens: 8192  },
-    { name: 'Gemini 2.5 Flash Lite',    type: 'google', model: 'gemini-2.5-flash-lite-preview-06-17', maxTokens: 8192 },
-    // Tier 2 — Groq (fast, 14 400/day)
-    { name: 'Groq LLaMA 3.3 70B',       type: 'groq',   model: 'llama-3.3-70b-versatile',        maxTokens: 8192  },
-    { name: 'Groq LLaMA 3.1 8B',        type: 'groq',   model: 'llama-3.1-8b-instant',           maxTokens: 8192  },
-    { name: 'Groq Gemma2 9B',           type: 'groq',   model: 'gemma2-9b-it',                   maxTokens: 8192  },
-    // Tier 3 — Gemma pool (14 400/day EACH)
-    { name: 'Gemma 3 27B',              type: 'google', model: 'gemma-3-27b-it',                 maxTokens: 8192  },
-    { name: 'Gemma 3 12B',              type: 'google', model: 'gemma-3-12b-it',                 maxTokens: 8192  },
-    { name: 'Gemma 3 4B',               type: 'google', model: 'gemma-3-4b-it',                  maxTokens: 4096  },
-    { name: 'Gemma 3 1B',               type: 'google', model: 'gemma-3-1b-it',                  maxTokens: 2048  },
+    { name: 'Gemini 2.5 Flash',        type: 'google', model: 'gemini-2.5-flash-preview-04-17', maxTokens: 8192 },
+    { name: 'Gemini 2.5 Flash Latest', type: 'google', model: 'gemini-2.5-flash',               maxTokens: 8192 },
+    { name: 'Gemini 2.5 Flash Lite',   type: 'google', model: 'gemini-2.5-flash-lite-preview-06-17', maxTokens: 8192 },
+    { name: 'Groq LLaMA 3.3 70B',      type: 'groq',   model: 'llama-3.3-70b-versatile',        maxTokens: 8192 },
+    { name: 'Groq LLaMA 3.1 8B',       type: 'groq',   model: 'llama-3.1-8b-instant',           maxTokens: 8192 },
+    { name: 'Groq Gemma2 9B',          type: 'groq',   model: 'gemma2-9b-it',                   maxTokens: 8192 },
+    { name: 'Gemma 3 27B',             type: 'google', model: 'gemma-3-27b-it',                 maxTokens: 8192 },
+    { name: 'Gemma 3 12B',             type: 'google', model: 'gemma-3-12b-it',                 maxTokens: 8192 },
+    { name: 'Gemma 3 4B',              type: 'google', model: 'gemma-3-4b-it',                  maxTokens: 4096 },
+    { name: 'Gemma 3 1B',              type: 'google', model: 'gemma-3-1b-it',                  maxTokens: 2048 },
   ];
 
-  // If caller requested a specific model, bump it to front
   function getProviders(preferFirst) {
     if (!preferFirst) return PROVIDERS;
     const idx = PROVIDERS.findIndex(p => p.model === preferFirst || p.name === preferFirst);
@@ -96,12 +92,10 @@ export default async function handler(req, res) {
         ],
       }),
     });
-
     if (!r.ok) {
       const body = await r.text().catch(() => '');
       throw new Error(`Google_${r.status}|${body.slice(0, 300)}`);
     }
-
     const data = await r.json();
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!text) throw new Error('Google_Empty_Response');
@@ -110,11 +104,9 @@ export default async function handler(req, res) {
 
   async function callGroq(model, promptText, maxTokens = 8192, systemPrompt = null) {
     if (!GROQ_KEY) throw new Error('Groq_No_Key');
-
     const messages = [];
     if (systemPrompt) messages.push({ role: 'system', content: systemPrompt });
     messages.push({ role: 'user', content: promptText });
-
     const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -129,12 +121,10 @@ export default async function handler(req, res) {
         top_p: 0.9,
       }),
     });
-
     if (!r.ok) {
       const body = await r.text().catch(() => '');
       throw new Error(`Groq_${r.status}|${body.slice(0, 300)}`);
     }
-
     const data = await r.json();
     const text = data?.choices?.[0]?.message?.content;
     if (!text) throw new Error('Groq_Empty_Response');
@@ -142,18 +132,12 @@ export default async function handler(req, res) {
   }
 
   // ════════════════════════════════════════════════════════════
-  //  UNIVERSAL RUNNER — tries providers until one works
+  //  UNIVERSAL RUNNER
   // ════════════════════════════════════════════════════════════
   async function runWithFallback(promptText, options = {}) {
-    const {
-      preferModel  = null,
-      systemPrompt = null,
-      maxTokens    = 8192,
-    } = options;
-
+    const { preferModel = null, systemPrompt = null, maxTokens = 8192 } = options;
     const providers = getProviders(preferModel);
     const errors    = [];
-
     for (const p of providers) {
       try {
         let text;
@@ -162,19 +146,18 @@ export default async function handler(req, res) {
         } else {
           text = await callGroq(p.model, promptText, Math.min(maxTokens, p.maxTokens), systemPrompt);
         }
-        console.log(`✅ [${p.name}] responded OK`);
+        console.log(`✅ [${p.name}] OK`);
         return { text, source: p.name, model: p.model };
       } catch (err) {
         console.warn(`⚠️  [${p.name}] failed: ${err.message}`);
         errors.push(`${p.name}: ${err.message}`);
       }
     }
-
-    throw new Error('ALL_PROVIDERS_FAILED|' + errors.join(' || '));
+    throw new Error('ALL_PROVIDERS_FAILED | ' + errors.join(' || '));
   }
 
   // ════════════════════════════════════════════════════════════
-  //  UTILITY — strip markdown code fences from LLM output
+  //  UTILITIES
   // ════════════════════════════════════════════════════════════
   function stripFences(raw) {
     return raw
@@ -186,40 +169,177 @@ export default async function handler(req, res) {
 
   function safeParseJSON(raw) {
     const cleaned = stripFences(raw);
-    try {
-      return JSON.parse(cleaned);
-    } catch {
-      // Try to extract first JSON object/array
-      const match = cleaned.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
-      if (match) return JSON.parse(match[1]);
-      throw new Error('JSON parse failed');
+    try { return JSON.parse(cleaned); } catch { /* fall through */ }
+    const match = cleaned.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+    if (match) return JSON.parse(match[1]);
+    throw new Error('JSON parse failed on: ' + cleaned.slice(0, 200));
+  }
+
+  function clamp(val, min, max) { return Math.min(max, Math.max(min, val)); }
+  function toArray(val) {
+    if (Array.isArray(val)) return val.map(String);
+    if (typeof val === 'string' && val.trim()) return [val];
+    return [];
+  }
+
+  // ════════════════════════════════════════════════════════════
+  //  QUESTION NORMALIZER
+  //  Handles BOTH JSON formats:
+  //
+  //  Format A (question-banks):          Format B (old style):
+  //  { q_id, type, statement, answer,    { question, sampleAnswer,
+  //    explanation, topic, difficulty }     keywords, points }
+  //
+  // ════════════════════════════════════════════════════════════
+  function normalizeQuestion(raw, modId, modName) {
+    // Already in new format?
+    if (raw.question && raw.sampleAnswer) {
+      return {
+        question:     String(raw.question),
+        sampleAnswer: String(raw.sampleAnswer),
+        keywords:     toArray(raw.keywords),
+        points:       Number(raw.points)  || 10,
+        difficulty:   String(raw.difficulty || 'mittel'),
+        topic:        String(raw.topic    || ''),
+        moduleId:     modId,
+        moduleName:   modName,
+        type:         raw.type || 'freitext',
+      };
     }
+
+    // Format A: richtig_falsch or multiple choice from question-banks
+    if (raw.statement) {
+      // Build a proper sampleAnswer from the explanation
+      const isRF      = raw.type === 'richtig_falsch';
+      const answerStr = raw.answer != null ? String(raw.answer) : '';
+      let sampleAnswer = '';
+
+      if (isRF) {
+        const correct = answerStr.toLowerCase() === 'richtig' ? 'RICHTIG' : 'FALSCH';
+        sampleAnswer  = `Die Aussage ist ${correct}. ${raw.explanation || ''}`.trim();
+      } else if (raw.correct_answer != null) {
+        sampleAnswer  = `Richtige Antwort: ${raw.correct_answer}. ${raw.explanation || ''}`.trim();
+      } else {
+        sampleAnswer  = raw.explanation || answerStr || 'Keine Musterlösung hinterlegt.';
+      }
+
+      // Extract keywords from topic and tags
+      const kws = [];
+      if (raw.topic)  kws.push(raw.topic.replace(/_/g, ' '));
+      if (raw.tags)   kws.push(...toArray(raw.tags));
+
+      return {
+        question:     String(raw.statement),
+        sampleAnswer: sampleAnswer,
+        keywords:     kws.slice(0, 6),
+        points:       raw.difficulty === 3 ? 15 : raw.difficulty === 2 ? 10 : 5,
+        difficulty:   raw.difficulty === 3 ? 'schwer' : raw.difficulty === 2 ? 'mittel' : 'leicht',
+        topic:        String(raw.topic || ''),
+        moduleId:     modId,
+        moduleName:   modName,
+        type:         raw.type || 'richtig_falsch',
+        source_hint:  raw.source_hint || '',
+      };
+    }
+
+    // Fallback: return as-is with safe defaults
+    return {
+      question:     String(raw.question || raw.statement || raw.frage || 'Unbekannte Frage'),
+      sampleAnswer: String(raw.sampleAnswer || raw.musterantwort || raw.explanation || raw.answer || ''),
+      keywords:     toArray(raw.keywords || raw.tags || []),
+      points:       Number(raw.points || raw.punkte) || 10,
+      difficulty:   String(raw.difficulty || 'mittel'),
+      topic:        String(raw.topic || ''),
+      moduleId:     modId,
+      moduleName:   modName,
+      type:         raw.type || 'freitext',
+    };
+  }
+
+  // ════════════════════════════════════════════════════════════
+  //  DATA LOADING — correct paths: data/question-banks/
+  // ════════════════════════════════════════════════════════════
+
+  // Module metadata
+  const MODULE_META = [
+    { id: 1, name: 'Kommunikation & Biografie'    },
+    { id: 2, name: 'Medizinisches Kernwissen'      },
+    { id: 3, name: 'Krankheitslehre'               },
+    { id: 4, name: 'Schwangerschaft & Geburt'      },
+    { id: 5, name: 'Prä- & Postoperative Pflege'   },
+    { id: 6, name: 'Notfall & Reanimation'          },
+    { id: 7, name: 'Ambulante & Chronische Pflege'  },
+    { id: 8, name: 'Innere Medizin & Niere'         },
+    { id: 9, name: 'Neurologische Rehabilitation'   },
+  ];
+
+  // Load a single module's questions from data/question-banks/
+  async function fetchModuleQuestions(modId) {
+    const meta  = MODULE_META.find(m => m.id === modId);
+    const mName = meta?.name || `Modul ${modId}`;
+
+    // Try the correct path first, then fallbacks
+    const paths = [
+      `${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''}/data/question-banks/module${modId}_questions.json`,
+      `/data/question-banks/module${modId}_questions.json`,
+      `./data/question-banks/module${modId}_questions.json`,
+    ];
+
+    for (const path of paths) {
+      try {
+        const r = await fetch(path);
+        if (!r.ok) continue;
+        const raw = await r.json();
+        // The file is a plain array  [ {...}, {...} ]
+        const arr = Array.isArray(raw) ? raw : (raw.questions || []);
+        return arr.map(q => normalizeQuestion(q, modId, mName));
+      } catch { /* try next */ }
+    }
+
+    console.warn(`⚠️  Could not load module${modId}_questions.json`);
+    return [];
+  }
+
+  // Load all 9 modules in parallel
+  async function fetchAllQuestions() {
+    const results = await Promise.allSettled(
+      MODULE_META.map(m => fetchModuleQuestions(m.id))
+    );
+    return results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+  }
+
+  // ── Endpoint: GET questions (for frontend fetch) ─────────────
+  if (req.method === 'GET' || (req.body && req.body.mode === 'fetch_questions')) {
+    const mid = parseInt(req.query?.moduleId || req.body?.moduleId, 10);
+    if (!mid || mid < 1 || mid > 9) {
+      return res.status(400).json({ error: 'moduleId 1–9 required' });
+    }
+    const qs = await fetchModuleQuestions(mid);
+    return res.status(200).json({ questions: qs, count: qs.length });
   }
 
   // ════════════════════════════════════════════════════════════
   //  MODE ROUTER
   // ════════════════════════════════════════════════════════════
-
-  // Resolve effective mode — supports legacy `type` field
   const effectiveMode = mode || type || 'text';
 
-  // ── IMAGE ─────────────────────────────────────────────────────
+  // ── IMAGE ────────────────────────────────────────────────────
   if (effectiveMode === 'image') {
     try {
-      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(
+      const imgUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(
         (prompt || '') + ' professional medical illustration, clean, educational'
       )}`;
-      const imgRes = await fetch(imageUrl);
+      const imgRes = await fetch(imgUrl);
       if (!imgRes.ok) throw new Error('Pollinations API error');
-      const buffer = await imgRes.arrayBuffer();
-      const b64    = Buffer.from(buffer).toString('base64');
+      const buf = await imgRes.arrayBuffer();
+      const b64 = Buffer.from(buf).toString('base64');
       return res.status(200).json({ imageUrl: `data:image/png;base64,${b64}` });
     } catch (err) {
       return res.status(500).json({ error: 'Bild-Generierung fehlgeschlagen.', details: err.message });
     }
   }
 
-  // ── TEXT (legacy / generic pass-through) ─────────────────────
+  // ── TEXT (generic pass-through) ───────────────────────────────
   if (effectiveMode === 'text') {
     if (!prompt) return res.status(400).json({ error: 'prompt required' });
     try {
@@ -227,18 +347,24 @@ export default async function handler(req, res) {
       return res.status(200).json({ text: result.text, source: result.source, model: result.model });
     } catch (err) {
       return res.status(503).json({
-        error: 'Alle KI-Dienste sind derzeit überlastet. Bitte versuche es gleich erneut.',
+        error: 'Alle KI-Dienste sind überlastet. Bitte erneut versuchen.',
         details: err.message,
       });
     }
   }
 
-  // ── LERNHEFT (Active Recall / Probeklausur AI feedback) ───────
+  // ── LERNHEFT ──────────────────────────────────────────────────
   if (effectiveMode === 'lernheft') {
-    const finalPrompt = prompt || buildLernheftPrompt(req.body);
-    if (!finalPrompt) return res.status(400).json({ error: 'prompt required for lernheft mode' });
+    // Accept either a pre-built prompt or a pairs[] array
+    let finalPrompt = prompt;
+    if (!finalPrompt && pairs && Array.isArray(pairs)) {
+      finalPrompt = buildLernheftPrompt(pairs, sessionType);
+    }
+    if (!finalPrompt) {
+      return res.status(400).json({ error: 'prompt or pairs[] required for lernheft mode' });
+    }
 
-    const SYSTEM = `Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen. Antworte AUSSCHLIESSLICH auf Deutsch. Wenn du HTML erstellst, gib NUR reines HTML zurück — keine Markdown-Blöcke, keine Backticks, kein Kommentar außerhalb des HTMLs.`;
+    const SYSTEM = `Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen. Antworte AUSSCHLIESSLICH auf Deutsch. Gib NUR reines HTML zurück — keine Markdown-Blöcke, keine Backticks, kein Text außerhalb des HTMLs.`;
 
     try {
       const result = await runWithFallback(finalPrompt, {
@@ -246,8 +372,6 @@ export default async function handler(req, res) {
         systemPrompt: SYSTEM,
         maxTokens:    6000,
       });
-
-      // Clean any accidental markdown fences the model added
       const html = stripFences(result.text);
       return res.status(200).json({ html, source: result.source, model: result.model });
     } catch (err) {
@@ -258,14 +382,12 @@ export default async function handler(req, res) {
     }
   }
 
-  // ── GRADE (single-answer scoring) ─────────────────────────────
+  // ── GRADE ─────────────────────────────────────────────────────
   if (effectiveMode === 'grade') {
     if (!question || !userAnswer) {
-      return res.status(400).json({ error: 'question and userAnswer are required for grade mode' });
+      return res.status(400).json({ error: 'question and userAnswer required' });
     }
-
     const gradePrompt = buildGradePrompt({ question, sampleAnswer, userAnswer, keywords, maxPoints });
-
     try {
       const result = await runWithFallback(gradePrompt, {
         preferModel: preferredModel || 'gemini-2.5-flash',
@@ -274,11 +396,11 @@ export default async function handler(req, res) {
       const parsed = parseGradeResponse(result.text, maxPoints);
       return res.status(200).json({ ...parsed, source: result.source, model: result.model });
     } catch (err) {
-      // Graceful fallback score so UI doesn't break
+      // Always return a usable score so UI never breaks
       return res.status(200).json({
         points:           Math.round(maxPoints * 0.5),
         percentage:       50,
-        feedback:         'Automatische Bewertung vorübergehend nicht verfügbar. Bitte manuell prüfen.',
+        feedback:         'Automatische Bewertung vorübergehend nicht verfügbar.',
         correct:          [],
         missing:          [],
         keywords_used:    [],
@@ -290,12 +412,10 @@ export default async function handler(req, res) {
     }
   }
 
-  // ── GENERATE (gap-fill: create new question for missing topic) ─
+  // ── GENERATE (gap-fill) ───────────────────────────────────────
   if (effectiveMode === 'generate') {
-    if (!topic) return res.status(400).json({ error: 'topic required for generate mode' });
-
+    if (!topic) return res.status(400).json({ error: 'topic required' });
     const genPrompt = buildGeneratePrompt({ topic, moduleId, moduleName });
-
     try {
       const result = await runWithFallback(genPrompt, {
         preferModel: preferredModel || 'gemini-2.5-flash',
@@ -308,12 +428,27 @@ export default async function handler(req, res) {
     }
   }
 
+  // ── LOAD_QUESTIONS (called by frontend JS) ────────────────────
+  // POST { mode: 'load_questions', moduleId: 1 }
+  // POST { mode: 'load_all_questions' }
+  if (effectiveMode === 'load_questions') {
+    const mid = parseInt(moduleId, 10);
+    if (!mid || mid < 1 || mid > 9) {
+      return res.status(400).json({ error: 'moduleId 1–9 required' });
+    }
+    const qs = await fetchModuleQuestions(mid);
+    return res.status(200).json({ questions: qs, count: qs.length, moduleId: mid });
+  }
+
+  if (effectiveMode === 'load_all_questions') {
+    const qs = await fetchAllQuestions();
+    return res.status(200).json({ questions: qs, count: qs.length });
+  }
+
   // ── PRESENTATION / STUDIO ─────────────────────────────────────
   if (effectiveMode === 'presentation' || effectiveMode === 'studio') {
     if (!prompt) return res.status(400).json({ error: 'prompt required' });
-
     const SYSTEM = `Du bist ein Experte für medizinische Bildung und erstellst professionelle Präsentationen für die Pflegeausbildung in Deutschland. Antworte ausschließlich auf Deutsch.`;
-
     try {
       const result = await runWithFallback(prompt, {
         preferModel:  preferredModel || 'gemini-2.5-flash',
@@ -322,16 +457,14 @@ export default async function handler(req, res) {
       });
       return res.status(200).json({ text: result.text, source: result.source, model: result.model });
     } catch (err) {
-      return res.status(503).json({ error: 'Präsentation konnte nicht generiert werden.', details: err.message });
+      return res.status(503).json({ error: 'Präsentation fehlgeschlagen.', details: err.message });
     }
   }
 
-  // ── SUMMARY (module summary generation) ───────────────────────
+  // ── SUMMARY ───────────────────────────────────────────────────
   if (effectiveMode === 'summary') {
     if (!prompt) return res.status(400).json({ error: 'prompt required' });
-
     const SYSTEM = `Du bist ein Pflegeexperte und erstellst präzise, lernfreundliche Zusammenfassungen für Pflegefachkraft-Auszubildende in Deutschland. Antworte auf Deutsch.`;
-
     try {
       const result = await runWithFallback(prompt, {
         preferModel:  preferredModel || 'gemini-2.5-flash',
@@ -344,44 +477,43 @@ export default async function handler(req, res) {
     }
   }
 
-  // ── UNKNOWN MODE ──────────────────────────────────────────────
+  // ── UNKNOWN ───────────────────────────────────────────────────
   return res.status(400).json({
     error:           `Unbekannter Modus: "${effectiveMode}"`,
-    supported_modes: ['text', 'image', 'grade', 'lernheft', 'generate', 'presentation', 'summary'],
+    supported_modes: ['text','image','grade','lernheft','generate','load_questions','load_all_questions','presentation','summary'],
   });
 }
 
-// ══════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════
 //  PROMPT BUILDERS
-// ══════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════
 
-function buildLernheftPrompt(body) {
-  const { pairs, sessionType: sType } = body;
-  if (!pairs || !Array.isArray(pairs) || pairs.length === 0) return null;
-
+function buildLernheftPrompt(pairs, sessionType) {
   return `Du bist ein professioneller Pflegetutor für Auszubildende zur Pflegefachkraft (Generalistik) in Deutschland am BZPG Würselen.
 
-Analysiere die folgenden Fragen und Antworten des Lernenden und erstelle ein detailliertes, strukturiertes Lernheft als REINES HTML.
+Analysiere die folgenden Fragen und Antworten des Lernenden und erstelle ein detailliertes Lernheft als REINES HTML.
 
-WICHTIG: Gib NUR HTML zurück. Keine Markdown-Blöcke, keine Backticks, kein Text außerhalb des HTMLs.
+WICHTIG: Gib NUR HTML zurück. Keine Markdown-Blöcke, keine Backticks.
 
-SESSION-TYP: ${sType || 'Lerneinheit'}
+SESSION-TYP: ${sessionType || 'Lerneinheit'}
 
-HTML-ANFORDERUNGEN:
-- Verwende: <div>, <h2>, <h3>, <p>, <ul>, <li>, <strong>, <span>, <hr>
-- Für korrekte Aspekte: ✅ in <span style="color:#4ade80">
-- Für Lücken: ❌ in <span style="color:#f87171"> mit Erklärung was fehlt
-- Section "💡 Lernempfehlungen" am Ende mit konkreten Themen zum Wiederholen
-- Section "📊 Zusammenfassung" ganz oben mit Gesamtbewertung in 2-3 Sätzen
-- Ton: ermutigend, professionell, medizinisch präzise
-- Sprache: Deutsch
+HTML-STRUKTUR:
+- <div> als Container
+- <h2> für Hauptabschnitte
+- <h3> für einzelne Fragen
+- <p>, <ul>, <li> für Inhalte
+- Für korrekte Aspekte: <span style="color:#4ade80">✅ ...</span>
+- Für Lücken: <span style="color:#f87171">❌ ...</span> mit Erklärung
+- Abschnitt "📊 Zusammenfassung" ganz oben
+- Abschnitt "💡 Lernempfehlungen" am Ende
 
 FRAGEN & ANTWORTEN:
 ${pairs.map((p, i) => `
 --- Frage ${i + 1} [${p.moduleName || 'Allgemein'}] ---
-Frage:        ${p.question}
+Typ:           ${p.type || 'freitext'}
+Frage:         ${p.question}
 Musterantwort: ${p.sampleAnswer || 'nicht angegeben'}
-Nutzerantwort: ${p.userAnswer || '(keine Antwort gegeben)'}
+Nutzerantwort: ${p.userAnswer   || '(keine Antwort gegeben)'}
 Keywords:      ${(p.keywords || []).join(', ') || 'keine'}
 `).join('\n')}
 
@@ -404,23 +536,21 @@ ${userAnswer}
 
 MAXIMALE PUNKTZAHL: ${maxPoints}
 
-BEWERTUNGSANWEISUNG:
-Bewerte objektiv nach diesen Kriterien:
-  - Fachliche Korrektheit   50%
-  - Vollständigkeit          30%
-  - Fachbegriffe             20%
+BEWERTUNGSKRITERIEN:
+- Fachliche Korrektheit 50%
+- Vollständigkeit       30%
+- Fachbegriffe          20%
 
-Antworte AUSSCHLIESSLICH mit einem JSON-Objekt. Kein Text davor oder danach, keine Markdown-Blöcke.
+Antworte AUSSCHLIESSLICH mit einem JSON-Objekt. Kein Text davor/danach, keine Markdown-Blöcke.
 
-JSON-FORMAT:
 {
   "points": <integer 0–${maxPoints}>,
   "percentage": <integer 0–100>,
   "feedback": "<2–3 Sätze konstruktives Feedback auf Deutsch>",
-  "correct": ["<korrekt genannter Aspekt>", ...],
-  "missing": ["<fehlender Aspekt>", ...],
-  "keywords_used": ["<verwendeter Fachbegriff>", ...],
-  "keywords_missing": ["<fehlender Fachbegriff>", ...]
+  "correct": ["<korrekt genannter Aspekt>"],
+  "missing": ["<fehlender Aspekt>"],
+  "keywords_used": ["<verwendeter Fachbegriff>"],
+  "keywords_missing": ["<fehlender Fachbegriff>"]
 }`;
 }
 
@@ -430,14 +560,12 @@ function buildGeneratePrompt({ topic, moduleId, moduleName }) {
 THEMA: ${topic}
 MODUL: ${moduleName || `Modul ${moduleId || '?'}`}
 
-Erstelle eine realistische Prüfungsfrage.
-Antworte AUSSCHLIESSLICH mit einem JSON-Objekt. Kein Text davor oder danach, keine Markdown-Blöcke.
+Antworte AUSSCHLIESSLICH mit einem JSON-Objekt. Keine Markdown-Blöcke.
 
-JSON-FORMAT:
 {
-  "question": "<klare, prüfungsreife Frage>",
+  "question": "<klare Prüfungsfrage>",
   "sampleAnswer": "<ausführliche Musterantwort, 3–5 Sätze>",
-  "keywords": ["<keyword1>", "<keyword2>", "<keyword3>", "<keyword4>", "<keyword5>"],
+  "keywords": ["<kw1>","<kw2>","<kw3>","<kw4>","<kw5>"],
   "points": 10,
   "difficulty": "<leicht|mittel|schwer>",
   "topic": "${topic}",
@@ -445,80 +573,58 @@ JSON-FORMAT:
 }`;
 }
 
-// ══════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════
 //  RESPONSE PARSERS
-// ══════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════
 
 function parseGradeResponse(raw, maxPoints) {
   try {
-    const parsed = safeParseJSON(raw);
+    const p = safeParseJSON(raw);
     return {
-      points:           clamp(Number(parsed.points)     || 0, 0, maxPoints),
-      percentage:       clamp(Number(parsed.percentage) || 0, 0, 100),
-      feedback:         String(parsed.feedback          || 'Keine Rückmeldung verfügbar.'),
-      correct:          toArray(parsed.correct),
-      missing:          toArray(parsed.missing),
-      keywords_used:    toArray(parsed.keywords_used),
-      keywords_missing: toArray(parsed.keywords_missing),
+      points:           clamp(Number(p.points)     || 0, 0, maxPoints),
+      percentage:       clamp(Number(p.percentage) || 0, 0, 100),
+      feedback:         String(p.feedback          || 'Keine Rückmeldung verfügbar.'),
+      correct:          toArray(p.correct),
+      missing:          toArray(p.missing),
+      keywords_used:    toArray(p.keywords_used),
+      keywords_missing: toArray(p.keywords_missing),
     };
   } catch (err) {
-    console.error('parseGradeResponse failed:', err.message, '| raw:', raw.slice(0, 400));
+    console.error('parseGradeResponse failed:', err.message);
     return {
-      points:           Math.round(maxPoints * 0.5),
-      percentage:       50,
-      feedback:         'Bewertung konnte nicht verarbeitet werden.',
-      correct:          [],
-      missing:          [],
-      keywords_used:    [],
-      keywords_missing: [],
+      points: Math.round(maxPoints * 0.5), percentage: 50,
+      feedback: 'Bewertung konnte nicht verarbeitet werden.',
+      correct: [], missing: [], keywords_used: [], keywords_missing: [],
     };
   }
 }
 
 function parseGeneratedQuestion(raw) {
-  try {
-    const parsed = safeParseJSON(raw);
-    return {
-      question:     String(parsed.question     || ''),
-      sampleAnswer: String(parsed.sampleAnswer || ''),
-      keywords:     toArray(parsed.keywords),
-      points:       Number(parsed.points)      || 10,
-      difficulty:   String(parsed.difficulty   || 'mittel'),
-      topic:        String(parsed.topic        || ''),
-      generated:    true,
-    };
-  } catch (err) {
-    throw new Error('Could not parse generated question: ' + err.message);
-  }
+  const p = safeParseJSON(raw);
+  return {
+    question:     String(p.question     || ''),
+    sampleAnswer: String(p.sampleAnswer || ''),
+    keywords:     toArray(p.keywords),
+    points:       Number(p.points)      || 10,
+    difficulty:   String(p.difficulty   || 'mittel'),
+    topic:        String(p.topic        || ''),
+    generated:    true,
+  };
 }
 
-// ── Helpers ───────────────────────────────────────────────────────
+// ── Shared helpers (duplicated here so they're in scope for parsers) ──
 function safeParseJSON(raw) {
-  const cleaned = raw
-    .trim()
+  const c = raw.trim()
     .replace(/^```(?:json|js|javascript|html)?\s*/i, '')
     .replace(/```\s*$/i, '')
     .trim();
-  try {
-    return JSON.parse(cleaned);
-  } catch {
-    const match = cleaned.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
-    if (match) return JSON.parse(match[1]);
-    throw new Error('JSON parse failed on: ' + cleaned.slice(0, 200));
-  }
+  try { return JSON.parse(c); } catch { /* fall through */ }
+  const m = c.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+  if (m) return JSON.parse(m[1]);
+  throw new Error('JSON parse failed: ' + c.slice(0, 200));
 }
 
-function stripFences(raw) {
-  return raw
-    .trim()
-    .replace(/^```(?:json|html|js|javascript)?\s*/i, '')
-    .replace(/```\s*$/i, '')
-    .trim();
-}
-
-function clamp(val, min, max) {
-  return Math.min(max, Math.max(min, val));
-}
+function clamp(val, min, max) { return Math.min(max, Math.max(min, val)); }
 
 function toArray(val) {
   if (Array.isArray(val)) return val.map(String);
