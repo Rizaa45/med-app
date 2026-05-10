@@ -41,11 +41,15 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 @keyframes timerPulse{0%,100%{opacity:1}50%{opacity:.5}}.timer-urgent{animation:timerPulse .8s ease-in-out infinite}
 .lernheft-card{transition:all .25s ease;cursor:pointer}
 .lernheft-card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)!important}
+/* NEU: Qualitäts-Badge für Fragen */
+.q-quality-good{border-left:3px solid #22c55e}
+.q-quality-warn{border-left:3px solid #f59e0b}
+.q-source-badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
 </style>
 </head>
 <body class="min-h-screen text-slate-100 relative">
 <div class="page-bg"></div>
- 
+
 <!-- ═══ WELCOME POPUP ═══ -->
 <div id="welcome-popup" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.7);backdrop-filter:blur(8px)">
 <div class="w-full max-w-md modal-anim">
@@ -59,14 +63,14 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 <div class="bg-[#0c1020] rounded-b-3xl p-6 sm:p-8 space-y-4 border border-white/5 border-t-0">
 <div class="flex items-start gap-3"><div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-book-open text-sm"></i></div><div><h4 class="font-bold text-sm text-white">9 Module · 5 Kompetenzbereiche</h4><p class="text-[11px] text-slate-500 leading-relaxed">Komplette Vorbereitung nach PflAPrV Anlage 1.</p></div></div>
-<div class="flex items-start gap-3"><div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div><div><h4 class="font-bold text-sm text-white">KI-gestütztes Lernen</h4><p class="text-[11px] text-slate-500 leading-relaxed">Kompetenzbasierte Lernhefte, realistische Probeklausur.</p></div></div>
+<div class="flex items-start gap-3"><div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div><div><h4 class="font-bold text-sm text-white">KI-optimiertes Active Recall</h4><p class="text-[11px] text-slate-500 leading-relaxed">Echte Datenbankfragen · KI verbessert, erfindet nicht.</p></div></div>
 <div class="flex items-start gap-3"><div class="w-9 h-9 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-cloud text-sm"></i></div><div><h4 class="font-bold text-sm text-white">Cloud-Sync</h4><p class="text-[11px] text-slate-500 leading-relaxed">4-stelliger Code synchronisiert alles über alle Geräte.</p></div></div>
 <button onclick="closeWelcome()" class="w-full gradient-bg text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm mt-4 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20"><i class="fas fa-rocket mr-2"></i>System starten</button>
-<p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v9.4 · PflBG/PflAPrV konform</p>
+<p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v10.0 · PflBG/PflAPrV konform</p>
 </div>
 </div>
 </div>
- 
+
 <!-- ═══ ZP HUB MODAL ═══ -->
 <div id="zp-hub-modal" class="fixed inset-0 z-[150] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.8);backdrop-filter:blur(12px)">
 <div class="w-full max-w-lg modal-anim">
@@ -104,16 +108,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 <div class="p-5 pt-3" style="min-height:290px">
-<!-- TAB: LERNEN -->
+
+<!-- TAB: LERNEN (VERBESSERT) -->
 <div id="zpTab-lernen" class="zp-tab-content">
-<p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Kompetenzbasiertes Lernen nach PflAPrV · 120s einprägen → abrufen → KI-Lernheft erstellen.</p>
+<div class="p-3 rounded-xl mb-3" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.15)">
+<p class="text-[10px] font-bold text-indigo-400 mb-1"><i class="fas fa-database mr-1"></i>Wie es funktioniert</p>
+<p class="text-slate-400 text-[10px] leading-relaxed">Echte Fragen aus deiner Datenbank → KI prüft Qualität & ergänzt Musterantworten → Active Recall mit 120s Timer.</p>
+</div>
 <div class="space-y-2.5">
 <div onclick="startRecall('schnell')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.15)">
 <div class="flex items-center gap-3">
 <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 text-xl" style="background:rgba(99,102,241,.12)">⚡</div>
 <div class="flex-1">
 <div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Schnell-Session</h3><span class="text-[9px] font-black bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full">5 FRAGEN</span></div>
-<p class="text-slate-500 text-[11px]">~15 Min · Fallbasiert · KB I–V</p>
+<p class="text-slate-500 text-[11px]">~15 Min · Aus Datenbank · KB I–V</p>
 </div>
 <i class="fas fa-arrow-right text-indigo-400 text-xs"></i>
 </div>
@@ -140,6 +148,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
+
 <!-- TAB: KLAUSUR -->
 <div id="zpTab-klausur" class="zp-tab-content hidden">
 <p class="text-slate-500 text-xs mb-3 leading-relaxed"><i class="fas fa-info-circle text-orange-400 mr-1"></i>Realistischer Prüfungsbogen · 100 Punkte · 120 Min (+ 10 Min Lesezeit) · Alle 5 KB · KI-generiert.</p>
@@ -159,20 +168,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div class="flex items-center justify-center gap-2 py-2.5 rounded-xl font-black text-sm text-white" style="background:linear-gradient(135deg,#f97316,#f59e0b)"><i class="fas fa-play text-xs"></i>Jetzt starten</div>
 </div>
 </div>
+
 <!-- TAB: MÜNDLICH -->
 <div id="zpTab-muendlich" class="zp-tab-content hidden">
 <div class="flex flex-col items-center justify-center py-6 text-center">
 <div class="w-20 h-20 rounded-3xl flex items-center justify-center mb-4 relative" style="background:rgba(139,92,246,.08);border:2px solid rgba(139,92,246,.15)">
 <i class="fas fa-microphone text-violet-500 text-2xl"></i>
-<div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)">
-<i class="fas fa-wrench text-violet-400 text-xs"></i>
-</div>
+<div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)"><i class="fas fa-wrench text-violet-400 text-xs"></i></div>
 </div>
 <h3 class="text-white font-black text-lg mb-1">Mündlicher Teil</h3>
 <p class="text-slate-500 text-xs mb-3 leading-relaxed max-w-xs">KI-Prüfer stellt kompetenzbasierte Fragen in Echtzeit (bis zu 30 Min.).</p>
 <div class="px-5 py-2 rounded-full font-black text-xs uppercase tracking-widest mb-3" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:#a78bfa">🚧 In Entwicklung</div>
 </div>
 </div>
+
 <!-- TAB: HEFTE -->
 <div id="zpTab-hefte" class="zp-tab-content hidden">
 <div class="flex items-center justify-between mb-3">
@@ -185,7 +194,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
- 
+
 <!-- ═══ RECALL MODAL ═══ -->
 <div id="recall-modal" class="fixed inset-0 z-[160] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(14px)">
 <div class="w-full max-w-lg modal-anim">
@@ -195,7 +204,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div class="w-8 h-8 rounded-xl flex items-center justify-center" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-sm"></i></div>
 <span class="font-black text-white text-sm uppercase tracking-wider">Lernen · Active Recall</span>
 </div>
+<div class="flex items-center gap-2">
+<span id="recall-db-badge" class="hidden text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.2)"><i class="fas fa-database mr-1"></i>DB</span>
 <button onclick="closeRecall()" class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all"><i class="fas fa-times text-sm"></i></button>
+</div>
 </div>
 <div id="recall-content" class="p-6">
 <div class="flex items-center justify-center py-16"><div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div></div>
@@ -203,7 +215,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
- 
+
 <!-- ═══ LERNBUCH VIEWER ═══ -->
 <div id="lb-view-modal" class="fixed inset-0 z-[170] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(14px)">
 <div class="w-full max-w-2xl modal-anim flex flex-col" style="max-height:90vh">
@@ -219,7 +231,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
- 
+
 <!-- ═══ LOGIN ═══ -->
 <div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center p-5" style="background:#060910">
 <div class="w-full max-w-sm enter">
@@ -255,7 +267,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
- 
+
 <!-- ═══ DASHBOARD ═══ -->
 <div id="dashboard" class="hidden relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-8 sm:py-12 pb-24">
 <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 anim" style="animation-delay:.05s">
@@ -272,7 +284,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <button onclick="doLogout()" class="glass rounded-xl px-3 py-2.5 text-slate-500 hover:text-red-400 transition-colors" title="Abmelden"><i class="fas fa-sign-out-alt text-sm"></i></button>
 </div>
 </header>
- 
+
 <!-- ZP WIDGET -->
 <div class="mb-8 anim" style="animation-delay:.08s">
 <div class="rounded-3xl overflow-hidden relative" style="background:linear-gradient(135deg,rgba(8,12,28,.9),rgba(12,16,36,.95));border:1px solid rgba(99,102,241,.15)">
@@ -308,7 +320,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </div>
 </div>
- 
+
 <!-- Tools -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 anim" style="animation-delay:.18s">
 <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.02] transition-all arena-glow">
@@ -334,10 +346,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 <div class="flex items-center gap-2 text-indigo-400 text-[10px] font-bold uppercase tracking-widest group-hover:gap-3 transition-all relative z-10"><span>Öffnen</span><i class="fas fa-arrow-right text-[8px]"></i></div>
 </a>
 </div>
- 
+
 <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4 pl-1 anim" style="animation-delay:.22s">Alle Module</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 anim" style="animation-delay:.24s" id="module-grid"></div>
- 
+
 <footer class="mt-16 pt-8 border-t border-white/5 anim" style="animation-delay:.35s">
 <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-600 uppercase tracking-widest font-bold">
 <span>SLM System · A Project by <span class="prasanth-label">Prasanth</span></span>
@@ -345,9 +357,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 </footer>
 </div>
- 
+
 <script src="js/cloud-sync.js"></script>
 <script>
+// ═══════════════════════════════════════════════════════════
+// KONFIGURATION
+// ═══════════════════════════════════════════════════════════
 const MODULES=[
 {id:1,name:'Kommunikation & Biografie',icon:'fa-book-open',color:'#6366f1',href:'module.html'},
 {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#6366f1',href:'module2.html'},
@@ -359,340 +374,748 @@ const MODULES=[
 {id:8,name:'Innere Medizin & Niere',icon:'fa-lungs',color:'#0ea5e9',href:'module8.html'},
 {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
 ];
- 
+
 const KB_LABELS={
-I:'KB I · Pflegeprozess & Diagnostik',
-II:'KB II · Kommunikation & Beratung',
-III:'KB III · Intra-/Interprofessionelles Handeln',
-IV:'KB IV · Recht, Ethik & Qualität',
-V:'KB V · Wissenschaft & Berufsethos'
+  I:'KB I · Pflegeprozess & Diagnostik',
+  II:'KB II · Kommunikation & Beratung',
+  III:'KB III · Intra-/Interprofessionelles Handeln',
+  IV:'KB IV · Recht, Ethik & Qualität',
+  V:'KB V · Wissenschaft & Berufsethos'
 };
- 
+
+// KB-Zuordnung pro Modul (für sinnvolle Zuordnung)
+const MODULE_KB_MAP={
+  1:['I','II'],2:['I','III'],3:['I','IV'],4:['I','II'],
+  5:['I','III'],6:['I','IV'],7:['I','II'],8:['I','III'],9:['I','V']
+};
+
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
 let rawQuestionCache={};
 let zpState={
-rawQuestions:[],currentIndex:0,phase:'spickzettel',
-userAnswers:[],timerInterval:null,timerSeconds:120,
+  questions:[],        // aufbereitete Fragen aus der DB
+  currentIndex:0,
+  phase:'spickzettel', // 'spickzettel' | 'abfrage'
+  userAnswers:[],
+  timerInterval:null,
+  timerSeconds:120,
+  sessionSize:'mittel'
 };
- 
-function openZwischenpruefung(){
-window.open('zwischenpruefung.html','_blank');
+
+// ═══════════════════════════════════════════════════════════
+// DATENBANK LADEN
+// ═══════════════════════════════════════════════════════════
+async function loadModuleQuestions(id){
+  if(rawQuestionCache[id]) return rawQuestionCache[id];
+  const paths=[
+    `data/question-banks/module${id}_questions.json`,
+    `/data/question-banks/module${id}_questions.json`,
+    `./data/question-banks/module${id}_questions.json`
+  ];
+  for(const path of paths){
+    try{
+      const r=await fetch(path,{cache:'no-cache'});
+      if(!r.ok) continue;
+      const raw=await r.json();
+      const arr=Array.isArray(raw)?raw:(raw.questions||[]);
+      if(arr.length){
+        rawQuestionCache[id]=arr;
+        return arr;
+      }
+    }catch(e){}
+  }
+  return [];
 }
- 
-function showWelcome(){
-if(!localStorage.getItem('slm_welcome_v94')){
-document.getElementById('welcome-popup').classList.remove('hidden');
+
+async function loadAllModules(){
+  const results=await Promise.allSettled(MODULES.map(m=>loadModuleQuestions(m.id)));
+  const all=[];
+  for(let i=0;i<MODULES.length;i++){
+    const m=MODULES[i];
+    const data=results[i].status==='fulfilled'?results[i].value:[];
+    if(data.length){
+      all.push({moduleId:m.id,moduleName:m.name,data});
+    }
+  }
+  return all;
 }
+
+// ═══════════════════════════════════════════════════════════
+// FRAGE EXTRAHIEREN UND VALIDIEREN
+// Extraktion aus verschiedenen JSON-Strukturen der Datenbank
+// ═══════════════════════════════════════════════════════════
+function extractQuestion(raw){
+  // Alle möglichen Feldnamen in deiner Datenbank
+  const questionText=
+    raw.question||raw.frage||raw.Question||raw.Frage||
+    raw.statement||raw.text||raw.title||raw.prompt||
+    (raw.stem)||null;
+
+  const answerText=
+    raw.answer||raw.answer_text||raw.correct_answer||
+    raw.explanation||raw.sampleAnswer||raw.Antwort||
+    raw.rationale||raw.solution||
+    // MC: richtige Option heraussuchen
+    (raw.options&&raw.correct_index!==undefined?raw.options[raw.correct_index]:null)||
+    (raw.choices&&raw.correct!==undefined?raw.choices[raw.correct]:null)||
+    null;
+
+  const keywords=
+    raw.keywords||raw.tags||raw.concepts||raw.schlüsselwörter||[];
+
+  const module_=raw.module||raw.moduleName||null;
+  const topic=raw.topic||raw.thema||raw.category||raw.unit||null;
+
+  return{questionText,answerText,keywords:Array.isArray(keywords)?keywords:[],module:module_,topic};
 }
-function closeWelcome(){
-const el=document.getElementById('welcome-popup');
-el.style.transition='opacity .3s ease';el.style.opacity='0';
-setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1';},300);
-localStorage.setItem('slm_welcome_v94','true');
+
+function isValidQuestion(extracted){
+  if(!extracted.questionText) return false;
+  const q=String(extracted.questionText).trim();
+  if(q.length<10) return false;   // zu kurz
+  if(q.length>600) return false;  // zu lang / kein echter Fragetext
+  // Kein reiner Datenmüll (nur Zahlen, Sonderzeichen)
+  if(!/[a-zA-ZäöüÄÖÜß]{5,}/.test(q)) return false;
+  return true;
 }
- 
-function openZPHub(){
-document.getElementById('zp-hub-modal').classList.remove('hidden');
-zpSetTab('lernen');renderZPLernhefte();
-}
-function closeZPHub(){document.getElementById('zp-hub-modal').classList.add('hidden');}
-function zpSetTab(tab){
-['lernen','klausur','muendlich','hefte'].forEach(t=>{
-const btn=document.getElementById('tab-'+t);
-const content=document.getElementById('zpTab-'+t);
-if(!btn||!content)return;
-if(t===tab){btn.classList.add('active');content.classList.remove('hidden');}
-else{btn.classList.remove('active');content.classList.add('hidden');}
-});
-if(tab==='hefte')renderZPLernhefte();
-}
- 
-function getLernbuecher(){return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');}
-function saveLernbuch(title,html){
-const books=getLernbuecher();
-books.unshift({id:Date.now(),date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),title,html});
-if(books.length>25)books.splice(25);
-localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
-renderDashLernhefte();renderZPLernhefte();
-}
-function viewLernbuch(id){
-const b=getLernbuecher().find(x=>x.id===id);if(!b)return;
-document.getElementById('lb-view-title').textContent=b.title;
-document.getElementById('lb-view-content').innerHTML=b.html;
-document.getElementById('lb-view-modal').classList.remove('hidden');
-}
-function deleteLernbuch(id){
-if(!confirm('Lernheft löschen?'))return;
-localStorage.setItem('slm_lernbuecher',JSON.stringify(getLernbuecher().filter(b=>b.id!==id)));
-renderDashLernhefte();renderZPLernhefte();
-}
-function clearAllLernbuecher(){
-if(!confirm('Alle Lernhefte löschen?'))return;
-localStorage.removeItem('slm_lernbuecher');
-renderDashLernhefte();renderZPLernhefte();
-}
-function renderDashLernhefte(){
-const countEl=document.getElementById('dash-hefte-count');
-const books=getLernbuecher();
-if(countEl)countEl.textContent=`${books.length} Heft${books.length!==1?'e':''}`;
-}
-function renderZPLernhefte(){
-const el=document.getElementById('zp-lernhefte-list');if(!el)return;
-const books=getLernbuecher();
-if(!books.length){el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p></div>`;return;}
-el.innerHTML=books.map(b=>`
-<div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
-<div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
-<div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.1)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div>
-<div class="min-w-0"><p class="text-white text-xs font-bold truncate">${b.title}</p><p class="text-slate-600 text-[10px]">${b.date}</p></div>
-</div>
-<button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100 shrink-0"><i class="fas fa-trash text-[10px]"></i></button>
-</div>`).join('');
-}
- 
-async function loadRawModule(id){
-if(rawQuestionCache[id])return rawQuestionCache[id];
-const paths=[`data/question-banks/module${id}_questions.json`,`/data/question-banks/module${id}_questions.json`,`./data/question-banks/module${id}_questions.json`];
-for(const path of paths){
-try{const r=await fetch(path,{cache:'no-cache'});if(!r.ok)continue;const raw=await r.json();const arr=Array.isArray(raw)?raw:(raw.questions||[]);if(arr.length){rawQuestionCache[id]=arr;return arr;}}catch(e){}
-}
-return null;
-}
-async function loadRawSummary(id){
-for(let unit=1;unit<=12;unit++){
-for(const path of[`data/module${id}summariesunit${unit}.json`,`/data/module${id}summariesunit${unit}.json`]){
-try{const r=await fetch(path,{cache:'no-cache'});if(!r.ok)continue;const raw=await r.json();const arr=Array.isArray(raw)?raw:[];if(arr.length)return arr;}catch(e){}
-}
-}
-return null;
-}
-async function loadAllRaw(){
-const results=await Promise.allSettled(MODULES.map(m=>loadRawModule(m.id)));
-const all=[];
-for(let i=0;i<MODULES.length;i++){
-const m=MODULES[i];const data=results[i].status==='fulfilled'?results[i].value:null;
-if(data&&data.length){all.push({moduleId:m.id,moduleName:m.name,source:'questions',data});}
-else{const summary=await loadRawSummary(m.id);if(summary){all.push({moduleId:m.id,moduleName:m.name,source:'summaries',data:summary});}else{all.push({moduleId:m.id,moduleName:m.name,source:'none',data:[]});}}
-}
-return all;
-}
+
+// ═══════════════════════════════════════════════════════════
+// FRAGEN AUSWÄHLEN (balanciert über alle Module)
+// ═══════════════════════════════════════════════════════════
 function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
-function pickRawQuestions(allData,n){
-const active=allData.filter(m=>m.data.length>0);
-if(!active.length)return[];
-const perMod=Math.max(1,Math.ceil(n/active.length));
-const picked=[];
-for(const mod of shuffle(allData)){if(!mod.data.length)continue;shuffle(mod.data).slice(0,perMod).forEach(item=>picked.push({...item,_moduleId:mod.moduleId,_moduleName:mod.moduleName,_source:mod.source}));}
-return shuffle(picked).slice(0,n);
+
+function pickQuestionsFromDB(allModules, n){
+  const kbKeys=['I','II','III','IV','V'];
+  const validQuestions=[];
+
+  for(const mod of allModules){
+    const kbOptions=MODULE_KB_MAP[mod.moduleId]||['I'];
+    for(const raw of mod.data){
+      const ex=extractQuestion(raw);
+      if(!isValidQuestion(ex)) continue;
+      // KB zuweisen basierend auf Modul
+      const kb=kbOptions[Math.floor(Math.random()*kbOptions.length)];
+      validQuestions.push({
+        question: String(ex.questionText).trim(),
+        rawAnswer: ex.answerText?String(ex.answerText).trim():'',
+        keywords: ex.keywords,
+        moduleName: mod.moduleName,
+        moduleId: mod.moduleId,
+        kb,
+        kbLabel: KB_LABELS[kb],
+        topic: ex.topic||mod.moduleName,
+        needsKIEnhancement: !ex.answerText||ex.answerText.length<20
+      });
+    }
+  }
+
+  if(!validQuestions.length) return[];
+
+  // Balanciert über Module verteilen
+  const byModule={};
+  for(const q of validQuestions){
+    if(!byModule[q.moduleId]) byModule[q.moduleId]=[];
+    byModule[q.moduleId].push(q);
+  }
+
+  const picked=[];
+  const modIds=shuffle(Object.keys(byModule));
+  const perMod=Math.ceil(n/modIds.length);
+
+  for(const mid of modIds){
+    const mQuestions=shuffle(byModule[mid]);
+    picked.push(...mQuestions.slice(0,perMod));
+    if(picked.length>=n*2) break;
+  }
+
+  return shuffle(picked).slice(0,n);
 }
- 
+
+// ═══════════════════════════════════════════════════════════
+// KI API - NUR ZUR VERBESSERUNG, NICHT ZUM ERFINDEN
+// ═══════════════════════════════════════════════════════════
 async function callKI(payload){
-try{const r=await fetch('/api/grade',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!r.ok)throw new Error(`API ${r.status}`);const d=await r.json();return d.html||d.text||null;}catch(e){console.error('KI Fehler:',e);return null;}
+  try{
+    const r=await fetch('/api/grade',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    if(!r.ok) throw new Error(`API ${r.status}`);
+    const d=await r.json();
+    return d.html||d.text||null;
+  }catch(e){
+    console.error('KI Fehler:',e);
+    return null;
+  }
 }
- 
+
+/**
+ * KI verbessert NUR Fragen wo die Musterantwort fehlt/schwach ist.
+ * Die Frage selbst wird NICHT verändert.
+ */
+async function enhanceQuestionsWithKI(questions){
+  const needEnhancement=questions.filter(q=>q.needsKIEnhancement);
+  
+  if(!needEnhancement.length) return questions;
+
+  // Batch: Alle auf einmal mit einem API-Call
+  const batchPrompt=`Du bist Pflegetutor für die Zwischenprüfung (PflAPrV Anlage 1).
+Ergänze für die folgenden Fragen aus der Pflegeausbildungs-Datenbank eine prägnante Musterantwort.
+
+WICHTIG:
+- Verändere die Frage NICHT
+- Musterantwort: 2-4 Sätze, fachlich korrekt, mit Fachbegriffen
+- Beziehe dich auf den Kompetenzbereich
+- Falls Keywords fehlen: ergänze 3-5 passende Fachbegriffe
+
+Antworte NUR mit validem JSON-Array:
+[{"id":<index>,"sampleAnswer":"<Musterantwort>","keywords":["<Begriff1>","<Begriff2>","<Begriff3>"]}]
+
+FRAGEN:
+${needEnhancement.map((q,i)=>`[${i}] KB: ${q.kbLabel} | Modul: ${q.moduleName}
+Frage: ${q.question}
+VorhandeneAntwort: ${q.rawAnswer||'(keine)'}`).join('\n\n')}`;
+
+  try{
+    const result=await callKI({mode:'text',prompt:batchPrompt});
+    if(result){
+      const cleaned=result.trim()
+        .replace(/^```(?:json)?\s*/i,'')
+        .replace(/```\s*$/i,'')
+        .trim();
+      const s=cleaned.indexOf('[');
+      const e=cleaned.lastIndexOf(']');
+      if(s>-1&&e>-1){
+        const parsed=JSON.parse(cleaned.slice(s,e+1));
+        if(Array.isArray(parsed)){
+          for(const item of parsed){
+            const idx=item.id;
+            if(idx>=0&&idx<needEnhancement.length){
+              const q=needEnhancement[idx];
+              if(item.sampleAnswer&&item.sampleAnswer.length>10){
+                q.sampleAnswer=item.sampleAnswer;
+                q.kiEnhanced=true;
+              }
+              if(item.keywords&&item.keywords.length>0&&q.keywords.length===0){
+                q.keywords=item.keywords;
+              }
+            }
+          }
+        }
+      }
+    }
+  }catch(e){
+    console.warn('KI Batch Enhancement fehlgeschlagen:',e);
+  }
+
+  // Fallback: Vorhandene Antwort verwenden
+  for(const q of questions){
+    if(!q.sampleAnswer){
+      q.sampleAnswer=q.rawAnswer||'Keine Musterantwort verfügbar. Schlage in deinen Unterlagen nach.';
+      q.kiEnhanced=false;
+    }
+  }
+
+  return questions;
+}
+
+// ═══════════════════════════════════════════════════════════
+// RECALL SESSION STARTEN
+// ═══════════════════════════════════════════════════════════
 async function startRecall(size){
-closeZPHub();
-document.getElementById('recall-modal').classList.remove('hidden');
-showRecallLoading('Lade Lernmaterialien...');
-const counts={schnell:5,mittel:10,intensiv:15};
-const n=counts[size]||10;
-const allData=await loadAllRaw();
-const rawPicked=pickRawQuestions(allData,n);
-if(!rawPicked.length){
-document.getElementById('recall-content').innerHTML=`<div class="text-center py-10"><div class="text-4xl mb-3">❌</div><p class="text-red-400 font-bold text-sm">Keine Materialien gefunden</p><button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button></div>`;
-return;
+  closeZPHub();
+  document.getElementById('recall-modal').classList.remove('hidden');
+  document.getElementById('recall-db-badge').classList.add('hidden');
+  zpState.sessionSize=size;
+
+  const counts={schnell:5,mittel:10,intensiv:15};
+  const n=counts[size]||10;
+
+  // Schritt 1: Aus Datenbank laden
+  showRecallLoading('📂 Lade Fragen aus Datenbank...');
+  const allModules=await loadAllModules();
+
+  if(!allModules.length){
+    showRecallError('Keine Datenbankdateien gefunden. Prüfe data/question-banks/');
+    return;
+  }
+
+  // Schritt 2: Fragen aus DB picken & validieren
+  showRecallLoading(`✅ Wähle ${n} Fragen aus ${allModules.reduce((s,m)=>s+m.data.length,0)} Einträgen...`);
+  const picked=pickQuestionsFromDB(allModules,n);
+
+  if(!picked.length){
+    showRecallError('Keine gültigen Fragen in der Datenbank gefunden.');
+    return;
+  }
+
+  // Schritt 3: KI verbessert nur wo nötig
+  const needsKI=picked.filter(q=>q.needsKIEnhancement).length;
+  if(needsKI>0){
+    showRecallLoading(`🤖 KI ergänzt Musterantworten für ${needsKI} Fragen...`);
+  }
+  
+  const enhanced=await enhanceQuestionsWithKI(picked);
+
+  // Schritt 4: Session starten
+  zpState.questions=enhanced;
+  zpState.currentIndex=0;
+  zpState.userAnswers=[];
+  zpState.phase='spickzettel';
+
+  document.getElementById('recall-db-badge').classList.remove('hidden');
+  renderRecallQ();
 }
-showRecallLoading(`KI formuliert ${rawPicked.length} Prüfungsfragen...`);
-const formatted=await Promise.all(rawPicked.map(async(raw,idx)=>{
-const kbKeys=['I','II','III','IV','V'];
-const kb=kbKeys[idx%5];
-const prompt=`Du bist Prüfer für die Zwischenprüfung Pflegefachkraft (§ 6 Abs. 5 PflBG, PflAPrV Anlage 1).
-Kompetenzbereich: ${KB_LABELS[kb]}
-Formuliere aus diesem Lernmaterial eine prüfungsrelevante Frage. Die Frage muss:
-- Fallbasiert sein (kurze, echte Pflegesituation in 1-2 Sätzen)
-- Den Kompetenzbereich direkt prüfen
-- Klar und präzise sein (nicht zu lang, nicht zu kurz)
-- Auf Niveau Ende 2. Ausbildungsdrittel
- 
-LERNMATERIAL:
-${JSON.stringify(raw).slice(0,500)}
- 
-Antworte NUR mit validem JSON (keine Backticks):
-{"question":"<Fallbasierte Frage, 2-3 Sätze max>","sampleAnswer":"<Prägnante Musterantwort, 3-4 Sätze mit Fachbegriffen>","kb":"${kb}","kbLabel":"${KB_LABELS[kb]}","keywords":["<Begriff1>","<Begriff2>","<Begriff3>"]}`;
-const result=await callKI({mode:'text',prompt});
-if(result){
-try{
-const c=result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
-const s=c.indexOf('{'),e=c.lastIndexOf('}');
-if(s>-1&&e>-1){
-const parsed=JSON.parse(c.slice(s,e+1));
-if(parsed.question&&parsed.question.length>10&&parsed.question.length<400)return{question:parsed.question,sampleAnswer:parsed.sampleAnswer||'',kb:parsed.kb||kb,kbLabel:parsed.kbLabel||KB_LABELS[kb],keywords:parsed.keywords||[],moduleId:raw._moduleId,moduleName:raw._moduleName};
-}
-}catch(e){}
-}
-const q=raw.statement||raw.question||raw.frage||raw.title||String(Object.values(raw).filter(v=>typeof v==='string')[0]||'').slice(0,200);
-return{question:q,sampleAnswer:raw.explanation||raw.answer||raw.sampleAnswer||'',kb,kbLabel:KB_LABELS[kb],keywords:[],moduleId:raw._moduleId,moduleName:raw._moduleName};
-}));
-zpState.rawQuestions=formatted.filter(q=>q&&q.question&&q.question.length>5);
-zpState.currentIndex=0;zpState.userAnswers=[];zpState.phase='spickzettel';
-renderRecallQ();
-}
- 
+
 function showRecallLoading(msg){
-document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-4"><div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div><p class="text-slate-500 text-sm">${msg}</p></div>`;
+  document.getElementById('recall-content').innerHTML=`
+  <div class="flex flex-col items-center justify-center py-14 gap-4">
+    <div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div>
+    <p class="text-slate-400 text-sm text-center px-4">${msg}</p>
+  </div>`;
 }
- 
+
+function showRecallError(msg){
+  document.getElementById('recall-content').innerHTML=`
+  <div class="text-center py-10">
+    <div class="text-4xl mb-3">⚠️</div>
+    <p class="text-red-400 font-bold text-sm mb-2">${msg}</p>
+    <button onclick="closeRecall()" class="mt-4 px-4 py-2 rounded-xl text-sm font-bold text-slate-400" style="background:rgba(255,255,255,.05)">Schließen</button>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// FRAGE RENDERN
+// ═══════════════════════════════════════════════════════════
 function renderRecallQ(){
-const q=zpState.rawQuestions[zpState.currentIndex];
-if(!q){finishRecall();return;}
-const total=zpState.rawQuestions.length,cur=zpState.currentIndex+1;
-const pct=Math.round((zpState.currentIndex/total)*100);
-const isSpick=zpState.phase==='spickzettel';
-const kbColors={I:'#a5b4fc',II:'#c4b5fd',III:'#93c5fd',IV:'#5eead4',V:'#fcd34d'};
-const kbBgs={I:'rgba(99,102,241,.15)',II:'rgba(139,92,246,.15)',III:'rgba(59,130,246,.15)',IV:'rgba(20,184,166,.15)',V:'rgba(245,158,11,.15)'};
-const kbColor=kbColors[q.kb]||'#a5b4fc';
-const kbBg=kbBgs[q.kb]||'rgba(99,102,241,.15)';
-document.getElementById('recall-content').innerHTML=`
-<div class="mb-4">
-<div class="flex justify-between text-[10px] font-bold text-slate-600 mb-1.5">
-<span>Frage ${cur} / ${total}</span>
-<span class="text-[9px] font-black px-2 py-0.5 rounded-full" style="background:${kbBg};color:${kbColor}">${q.kbLabel||q.moduleName}</span>
-</div>
-<div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)">
-<div class="h-full rounded-full transition-all duration-500" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
-</div>
-</div>
-<div class="flex items-center gap-2 mb-4">
-<span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
-${isSpick?'📖 Phase 1 — Einprägen':'✍️ Phase 2 — Abruf'}
-</span>
-${isSpick?`<span id="recall-timer-disp" class="text-xs font-black ml-auto t-num" style="color:#94a3b8">120s</span>`:''}
-</div>
-<div class="rounded-2xl p-5 mb-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)">
-<p class="text-white font-bold text-sm leading-relaxed">${q.question}</p>
-</div>
-${isSpick?`
-<div class="rounded-2xl p-4 mb-5" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
-<p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">✅ Musterantwort</p>
-<p class="text-slate-300 text-sm leading-relaxed">${q.sampleAnswer||'Keine Musterantwort verfügbar.'}</p>
-${q.keywords?.length?`<div class="flex flex-wrap gap-1.5 mt-3">${q.keywords.map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${k}</span>`).join('')}</div>`:''}
-</div>
-<div class="flex gap-2.5">
-<button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
-<button onclick="recallSkipToAbfrage()" class="flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
-</div>`
-:`
-<div class="mb-4">
-<textarea id="recall-answer-input" placeholder="Schreibe deine Antwort aus dem Gedächtnis..." rows="5"
-class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none placeholder:text-slate-700"
-style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s"
-onfocus="this.style.borderColor='rgba(99,102,241,.4)'"
-onblur="this.style.borderColor='rgba(255,255,255,.08)'" autofocus></textarea>
-</div>
-<div class="flex gap-2.5">
-<button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
-<button onclick="recallSubmit()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-check mr-2"></i>Weiter</button>
-</div>`}`;
-if(isSpick){
-clearInterval(zpState.timerInterval);zpState.timerSeconds=120;updateRecallTimer();
-zpState.timerInterval=setInterval(()=>{zpState.timerSeconds--;updateRecallTimer();if(zpState.timerSeconds<=0){clearInterval(zpState.timerInterval);recallSkipToAbfrage();}},1000);
+  const q=zpState.questions[zpState.currentIndex];
+  if(!q){finishRecall();return;}
+
+  const total=zpState.questions.length;
+  const cur=zpState.currentIndex+1;
+  const pct=Math.round((zpState.currentIndex/total)*100);
+  const isSpick=zpState.phase==='spickzettel';
+
+  const kbColors={I:'#a5b4fc',II:'#c4b5fd',III:'#93c5fd',IV:'#5eead4',V:'#fcd34d'};
+  const kbBgs={I:'rgba(99,102,241,.15)',II:'rgba(139,92,246,.15)',III:'rgba(59,130,246,.15)',IV:'rgba(20,184,166,.15)',V:'rgba(245,158,11,.15)'};
+  const kbColor=kbColors[q.kb]||'#a5b4fc';
+  const kbBg=kbBgs[q.kb]||'rgba(99,102,241,.15)';
+
+  // Qualitäts-Indikator
+  const qualityBadge=q.kiEnhanced
+    ?`<span class="q-source-badge" style="background:rgba(99,102,241,.15);color:#a5b4fc">🤖 KI-ergänzt</span>`
+    :q.rawAnswer
+    ?`<span class="q-source-badge" style="background:rgba(34,197,94,.12);color:#4ade80">✓ Datenbank</span>`
+    :`<span class="q-source-badge" style="background:rgba(245,158,11,.12);color:#fbbf24">DB-Frage</span>`;
+
+  document.getElementById('recall-content').innerHTML=`
+  <div class="mb-4">
+    <div class="flex justify-between items-center text-[10px] font-bold text-slate-600 mb-1.5">
+      <span>Frage ${cur} / ${total}</span>
+      <div class="flex items-center gap-2">
+        ${qualityBadge}
+        <span class="text-[9px] font-black px-2 py-0.5 rounded-full" style="background:${kbBg};color:${kbColor}">${q.kbLabel}</span>
+      </div>
+    </div>
+    <div class="w-full rounded-full overflow-hidden" style="height:4px;background:rgba(255,255,255,.05)">
+      <div class="h-full rounded-full transition-all duration-500" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-2 mb-4">
+    <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
+      ${isSpick?'📖 Phase 1 — Einprägen':'✍️ Phase 2 — Abruf'}
+    </span>
+    ${isSpick?`<span id="recall-timer-disp" class="text-xs font-black ml-auto t-num" style="color:#94a3b8">120s</span>`:''}
+  </div>
+
+  <!-- Modul-Info -->
+  <div class="flex items-center gap-1.5 mb-3">
+    <i class="fas fa-folder-open text-[10px] text-slate-600"></i>
+    <span class="text-[10px] text-slate-600 font-medium">${q.moduleName}${q.topic&&q.topic!==q.moduleName?' · '+q.topic:''}</span>
+  </div>
+
+  <!-- Frage (direkt aus Datenbank) -->
+  <div class="rounded-2xl p-5 mb-4 q-quality-good" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)">
+    <p class="text-white font-bold text-sm leading-relaxed">${escapeHtml(q.question)}</p>
+  </div>
+
+  ${isSpick?`
+  <!-- Musterantwort -->
+  <div class="rounded-2xl p-4 mb-5" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
+    <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">✅ Musterantwort</p>
+    <p class="text-slate-300 text-sm leading-relaxed">${escapeHtml(q.sampleAnswer||'')}</p>
+    ${q.keywords?.length?`<div class="flex flex-wrap gap-1.5 mt-3">${q.keywords.map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${escapeHtml(String(k))}</span>`).join('')}</div>`:''}
+  </div>
+  <div class="flex gap-2.5">
+    <button onclick="recallAddTime(30)" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8"><i class="fas fa-plus mr-1"></i>+30s</button>
+    <button onclick="recallSkipToAbfrage()" class="flex-grow py-3 rounded-xl text-xs font-black text-white uppercase tracking-wider transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i></button>
+  </div>`
+  :`
+  <!-- Abfrage-Phase -->
+  <div class="mb-4">
+    <textarea id="recall-answer-input"
+      placeholder="Schreibe deine Antwort aus dem Gedächtnis... (mind. 2-3 Sätze)" rows="5"
+      class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none placeholder:text-slate-700"
+      style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s"
+      onfocus="this.style.borderColor='rgba(99,102,241,.4)'"
+      onblur="this.style.borderColor='rgba(255,255,255,.08)'" autofocus></textarea>
+  </div>
+  <div class="flex gap-2.5">
+    <button onclick="recallSkip()" class="flex-1 py-3 rounded-xl text-xs font-bold transition-all" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#64748b">Überspringen</button>
+    <button onclick="recallSubmit()" class="flex-grow py-3 rounded-xl text-sm font-black text-white transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-check mr-2"></i>Weiter</button>
+  </div>`}`;
+
+  if(isSpick){
+    clearInterval(zpState.timerInterval);
+    zpState.timerSeconds=120;
+    updateRecallTimer();
+    zpState.timerInterval=setInterval(()=>{
+      zpState.timerSeconds--;
+      updateRecallTimer();
+      if(zpState.timerSeconds<=0){
+        clearInterval(zpState.timerInterval);
+        recallSkipToAbfrage();
+      }
+    },1000);
+  }
 }
+
+function escapeHtml(str){
+  if(!str) return '';
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
 }
+
 function updateRecallTimer(){
-const el=document.getElementById('recall-timer-disp');if(!el)return;
-const s=zpState.timerSeconds;
-el.style.color=s<=10?'#f87171':s<=30?'#fbbf24':'#94a3b8';
-el.textContent=`${s}s`;
-if(s<=10)el.classList.add('timer-urgent');else el.classList.remove('timer-urgent');
+  const el=document.getElementById('recall-timer-disp');
+  if(!el) return;
+  const s=zpState.timerSeconds;
+  el.style.color=s<=10?'#f87171':s<=30?'#fbbf24':'#94a3b8';
+  el.textContent=`${s}s`;
+  if(s<=10) el.classList.add('timer-urgent');
+  else el.classList.remove('timer-urgent');
 }
+
 function recallAddTime(s){zpState.timerSeconds+=s;updateRecallTimer();}
 function recallSkipToAbfrage(){clearInterval(zpState.timerInterval);zpState.phase='abfrage';renderRecallQ();}
 function recallSubmit(){pushRecallAnswer(document.getElementById('recall-answer-input')?.value?.trim()||'');}
 function recallSkip(){pushRecallAnswer('');}
+
 function pushRecallAnswer(ans){
-const q=zpState.rawQuestions[zpState.currentIndex];
-zpState.userAnswers.push({question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId,kb:q.kb,kbLabel:q.kbLabel});
-zpState.currentIndex++;zpState.phase='spickzettel';renderRecallQ();
+  const q=zpState.questions[zpState.currentIndex];
+  zpState.userAnswers.push({
+    question:q.question,
+    sampleAnswer:q.sampleAnswer,
+    userAnswer:ans,
+    keywords:q.keywords||[],
+    moduleName:q.moduleName,
+    moduleId:q.moduleId,
+    kb:q.kb,
+    kbLabel:q.kbLabel,
+    topic:q.topic,
+    kiEnhanced:q.kiEnhanced||false
+  });
+  zpState.currentIndex++;
+  zpState.phase='spickzettel';
+  renderRecallQ();
 }
-function closeRecall(){clearInterval(zpState.timerInterval);document.getElementById('recall-modal').classList.add('hidden');}
- 
+
+function closeRecall(){
+  clearInterval(zpState.timerInterval);
+  document.getElementById('recall-modal').classList.add('hidden');
+}
+
+// ═══════════════════════════════════════════════════════════
+// SESSION ABSCHLUSS & LERNHEFT
+// ═══════════════════════════════════════════════════════════
 async function finishRecall(){
-clearInterval(zpState.timerInterval);
-document.getElementById('recall-content').innerHTML=`<div class="flex flex-col items-center justify-center py-14 gap-5 text-center"><div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))"><i class="fas fa-robot text-indigo-400 text-2xl"></i></div><div><h3 class="text-white font-black text-lg">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Analyse nach PflAPrV...</p></div><div class="flex gap-1.5">${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}</div></div>`;
-const prompt=buildLernheftPrompt(zpState.userAnswers);
-const html=await callKI({mode:'lernheft',prompt})||buildFallbackFeedback(zpState.userAnswers);
-const ans=zpState.userAnswers.filter(a=>a.userAnswer).length;
-saveLernbuch(`Lernen · ${ans}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`,html);
-document.getElementById('recall-content').innerHTML=`
-<div class="flex items-center gap-3 p-3 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
-<i class="fas fa-check-circle text-emerald-400"></i>
-<div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs">${ans} von ${zpState.userAnswers.length} Antworten · Unter "Hefte" abrufbar</p></div>
-</div>
-<div class="rounded-2xl p-4 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:35vh;font-size:12px;color:#94a3b8;line-height:1.6">${html}</div>
-<div class="flex gap-2.5">
-<button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
-<button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
-</div>`;
+  clearInterval(zpState.timerInterval);
+
+  document.getElementById('recall-content').innerHTML=`
+  <div class="flex flex-col items-center justify-center py-14 gap-5 text-center">
+    <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))">
+      <i class="fas fa-robot text-indigo-400 text-2xl"></i>
+    </div>
+    <div><h3 class="text-white font-black text-lg">KI erstellt dein Lernheft</h3><p class="text-slate-500 text-sm">Analyse deiner Antworten...</p></div>
+    <div class="flex gap-1.5">${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}</div>
+  </div>`;
+
+  const prompt=buildLernheftPrompt(zpState.userAnswers);
+  const html=await callKI({mode:'lernheft',prompt})||buildFallbackFeedback(zpState.userAnswers);
+
+  const answered=zpState.userAnswers.filter(a=>a.userAnswer).length;
+  const title=`Lernen · ${answered}/${zpState.userAnswers.length} · ${new Date().toLocaleDateString('de-DE')}`;
+  saveLernbuch(title,html);
+
+  document.getElementById('recall-content').innerHTML=`
+  <div class="flex items-center gap-3 p-3 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
+    <i class="fas fa-check-circle text-emerald-400"></i>
+    <div>
+      <p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p>
+      <p class="text-slate-600 text-xs">${answered} von ${zpState.userAnswers.length} Antworten · Unter "Hefte" abrufbar</p>
+    </div>
+  </div>
+  <div class="rounded-2xl p-4 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:35vh;font-size:12px;color:#94a3b8;line-height:1.6">${html}</div>
+  <div class="flex gap-2.5">
+    <button onclick="closeRecall()" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#94a3b8">Schließen</button>
+    <button onclick="closeRecall();openZPHub()" class="flex-1 py-3 rounded-xl text-sm font-black text-white transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-redo mr-2"></i>Neu starten</button>
+  </div>`;
 }
- 
+
 function buildLernheftPrompt(pairs){
-const kbSummary=[...new Set(pairs.map(p=>p.kbLabel).filter(Boolean))].join(', ')||'KB I–V';
-return`Du bist Pflegetutor für die Zwischenprüfung (PflAPrV Anlage 1).
+  const kbSummary=[...new Set(pairs.map(p=>p.kbLabel).filter(Boolean))].join(', ')||'KB I–V';
+  const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
+  
+  return`Du bist Pflegetutor für die Zwischenprüfung (PflAPrV Anlage 1).
 Erstelle ein strukturiertes Lernheft als reines HTML mit inline-CSS.
- 
-ABGEDECKTE KOMPETENZBEREICHE: ${kbSummary}
- 
-HTML-STRUKTUR:
-- Übersicht-Box (blau): Performance mit KB-Abdeckung
-- Pro Frage: KB-Badge + Frage + Muster + Vergleich (grün=gut, rot=Lücke)
-- Wissenserklärung-Box (indigo): Wichtige Inhalte nach PflAPrV
-- Lernempfehlung-Box (amber): Top 5 Empfehlungen
-- Merksätze für die 5 KB
- 
-SESSION: Active Recall
+Alle ${pairs.length} Fragen stammen DIREKT aus der Pflegeausbildungs-Datenbank.
+
+KOMPETENZBEREICHE: ${kbSummary}
+BEANTWORTET: ${answered}/${pairs.length}
+
+HTML-STRUKTUR (dark theme, kompakt):
+1. Performance-Box (indigo): ${answered}/${pairs.length} Fragen beantwortet, KB-Übersicht
+2. Pro Frage (kompakt):
+   - KB-Badge + Modul + Thema
+   - Frage (aus DB - unverändert anzeigen)
+   - Musterantwort
+   - Benutzerantwort-Vergleich: grün=gut (Schlüsselbegriffe vorhanden), gelb=lückenhaft, rot=fehlt
+3. Wissenslücken-Box (amber): Was muss noch geübt werden?
+4. Top-5 Lernempfehlungen
+
 FRAGEN & ANTWORTEN:
-${pairs.map((p,i)=>`[${i+1}] ${p.kbLabel||p.moduleName}
+${pairs.map((p,i)=>`[${i+1}] ${p.kbLabel} | ${p.moduleName}${p.topic&&p.topic!==p.moduleName?' · '+p.topic:''}
 Frage: ${p.question}
 Muster: ${p.sampleAnswer||'–'}
 Antwort: ${p.userAnswer||'(keine Antwort)'}
 Keywords: ${(p.keywords||[]).join(', ')||'–'}`).join('\n\n')}
-Erstelle jetzt das HTML:`;
+
+Erstelle jetzt das HTML (nur HTML, keine Erklärung):`;
 }
- 
+
 function buildFallbackFeedback(pairs){
-const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
-return`<div style="color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif">
-<h2 style="color:#818cf8;font-size:1.2rem;font-weight:900;margin-bottom:1rem">📋 Dein Lernheft</h2>
-<p style="color:#94a3b8;margin-bottom:1.5rem">${answered} von ${pairs.length} Fragen beantwortet.</p>
-${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1rem;margin-bottom:1rem">
-<p style="color:#a5b4fc;font-size:.75rem;font-weight:700;margin-bottom:.3rem">${p.kbLabel||p.moduleName}</p>
-<p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#e2e8f0">Frage ${i+1}:</strong> ${p.question}</p>
-<p style="color:#94a3b8;font-size:.8rem;margin-bottom:.4rem"><strong style="color:#86efac">✅ Muster:</strong> ${p.sampleAnswer||'–'}</p>
-<p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝 Antwort:':'❌ Keine Antwort:'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
+  const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
+  return`<div style="color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif">
+<h2 style="color:#818cf8;font-size:1.1rem;font-weight:900;margin-bottom:.75rem">📋 Lernheft · ${answered}/${pairs.length} beantwortet</h2>
+${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:.875rem;margin-bottom:.75rem">
+<div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem">
+<span style="color:#a5b4fc;font-size:.7rem;font-weight:700;background:rgba(99,102,241,.15);padding:2px 8px;border-radius:999px">${p.kbLabel||''}</span>
+<span style="color:#475569;font-size:.7rem">${p.moduleName}</span>
+</div>
+<p style="color:#e2e8f0;font-size:.8rem;font-weight:600;margin-bottom:.4rem">F${i+1}: ${p.question}</p>
+<p style="color:#94a3b8;font-size:.78rem;margin-bottom:.35rem"><strong style="color:#86efac">✅</strong> ${p.sampleAnswer||'–'}</p>
+<p style="color:#94a3b8;font-size:.78rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝':'❌'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
 </div>`).join('')}
 </div>`;
 }
- 
-// PIN / AUTH
-function pinNav(n){const el=document.getElementById('p'+n);if(el.value.length>=1){el.value=el.value.slice(-1);if(n<4)document.getElementById('p'+(n+1)).focus();if(n===4)doLogin();}}
-function pinKey(e,n){if(e.key==='Backspace'&&n>1&&!document.getElementById('p'+n).value)document.getElementById('p'+(n-1)).focus();}
+
+// ═══════════════════════════════════════════════════════════
+// LERNHEFTE VERWALTEN
+// ═══════════════════════════════════════════════════════════
+function getLernbuecher(){return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');}
+
+function saveLernbuch(title,html){
+  const books=getLernbuecher();
+  books.unshift({
+    id:Date.now(),
+    date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),
+    title,html
+  });
+  if(books.length>25) books.splice(25);
+  localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
+  renderDashLernhefte();
+  renderZPLernhefte();
+}
+
+function viewLernbuch(id){
+  const b=getLernbuecher().find(x=>x.id===id);
+  if(!b) return;
+  document.getElementById('lb-view-title').textContent=b.title;
+  document.getElementById('lb-view-content').innerHTML=b.html;
+  document.getElementById('lb-view-modal').classList.remove('hidden');
+}
+
+function deleteLernbuch(id){
+  if(!confirm('Lernheft löschen?')) return;
+  localStorage.setItem('slm_lernbuecher',JSON.stringify(getLernbuecher().filter(b=>b.id!==id)));
+  renderDashLernhefte();
+  renderZPLernhefte();
+}
+
+function clearAllLernbuecher(){
+  if(!confirm('Alle Lernhefte löschen?')) return;
+  localStorage.removeItem('slm_lernbuecher');
+  renderDashLernhefte();
+  renderZPLernhefte();
+}
+
+function renderDashLernhefte(){
+  const el=document.getElementById('dash-hefte-count');
+  const books=getLernbuecher();
+  if(el) el.textContent=`${books.length} Heft${books.length!==1?'e':''}`;
+}
+
+function renderZPLernhefte(){
+  const el=document.getElementById('zp-lernhefte-list');
+  if(!el) return;
+  const books=getLernbuecher();
+  if(!books.length){
+    el.innerHTML=`<div class="text-center py-8"><div class="text-4xl mb-3">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p></div>`;
+    return;
+  }
+  el.innerHTML=books.map(b=>`
+  <div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
+    <div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
+      <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.1)"><i class="fas fa-book-open text-indigo-400 text-xs"></i></div>
+      <div class="min-w-0"><p class="text-white text-xs font-bold truncate">${b.title}</p><p class="text-slate-600 text-[10px]">${b.date}</p></div>
+    </div>
+    <button onclick="deleteLernbuch(${b.id})" class="w-7 h-7 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100 shrink-0"><i class="fas fa-trash text-[10px]"></i></button>
+  </div>`).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// ZP HUB / TABS
+// ═══════════════════════════════════════════════════════════
+function openZPHub(){
+  document.getElementById('zp-hub-modal').classList.remove('hidden');
+  zpSetTab('lernen');
+  renderZPLernhefte();
+}
+
+function closeZPHub(){document.getElementById('zp-hub-modal').classList.add('hidden');}
+
+function zpSetTab(tab){
+  ['lernen','klausur','muendlich','hefte'].forEach(t=>{
+    const btn=document.getElementById('tab-'+t);
+    const content=document.getElementById('zpTab-'+t);
+    if(!btn||!content) return;
+    if(t===tab){btn.classList.add('active');content.classList.remove('hidden');}
+    else{btn.classList.remove('active');content.classList.add('hidden');}
+  });
+  if(tab==='hefte') renderZPLernhefte();
+}
+
+function openZwischenpruefung(){window.open('zwischenpruefung.html','_blank');}
+
+// ═══════════════════════════════════════════════════════════
+// WELCOME
+// ═══════════════════════════════════════════════════════════
+function showWelcome(){
+  if(!localStorage.getItem('slm_welcome_v100')){
+    document.getElementById('welcome-popup').classList.remove('hidden');
+  }
+}
+
+function closeWelcome(){
+  const el=document.getElementById('welcome-popup');
+  el.style.transition='opacity .3s ease';
+  el.style.opacity='0';
+  setTimeout(()=>{el.classList.add('hidden');el.style.opacity='1';},300);
+  localStorage.setItem('slm_welcome_v100','true');
+}
+
+// ═══════════════════════════════════════════════════════════
+// AUTH / PIN
+// ═══════════════════════════════════════════════════════════
+function pinNav(n){
+  const el=document.getElementById('p'+n);
+  if(el.value.length>=1){
+    el.value=el.value.slice(-1);
+    if(n<4) document.getElementById('p'+(n+1)).focus();
+    if(n===4) doLogin();
+  }
+}
+
+function pinKey(e,n){
+  if(e.key==='Backspace'&&n>1&&!document.getElementById('p'+n).value)
+    document.getElementById('p'+(n-1)).focus();
+}
+
 function getPin(){return[1,2,3,4].map(n=>document.getElementById('p'+n).value).join('');}
-function showMsg(t,err){const el=document.getElementById('login-msg');el.textContent=t;el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;el.classList.remove('hidden');}
-function setLoading(on){document.getElementById('btn-login').disabled=on;document.getElementById('btn-register').disabled=on;document.getElementById('btn-login').innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';}
-async function doLogin(){const pin=getPin();if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}document.getElementById('login-msg').classList.add('hidden');setLoading(true);try{await SLMCloud.login(pin);enterDashboard();}catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}}
-async function doRegister(){document.getElementById('login-msg').classList.add('hidden');setLoading(true);try{const pin=await SLMCloud.register();document.getElementById('login-form').classList.add('hidden');document.getElementById('pin-display').classList.remove('hidden');pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d;});}catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}}
-function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload();}
-function enterDashboard(){document.getElementById('login-screen').classList.add('hidden');document.getElementById('dashboard').classList.remove('hidden');document.getElementById('show-pin').textContent=SLMCloud.pin;renderModules();renderDashLernhefte();setTimeout(showWelcome,500);}
-document.addEventListener('DOMContentLoaded',async()=>{const ok=await SLMCloud.autoLogin();if(ok)enterDashboard();});
- 
+
+function showMsg(t,err){
+  const el=document.getElementById('login-msg');
+  el.textContent=t;
+  el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;
+  el.classList.remove('hidden');
+}
+
+function setLoading(on){
+  document.getElementById('btn-login').disabled=on;
+  document.getElementById('btn-register').disabled=on;
+  document.getElementById('btn-login').innerHTML=on
+    ?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...'
+    :'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
+}
+
+async function doLogin(){
+  const pin=getPin();
+  if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}
+  document.getElementById('login-msg').classList.add('hidden');
+  setLoading(true);
+  try{
+    await SLMCloud.login(pin);
+    enterDashboard();
+  }catch(e){
+    showMsg('Code nicht gefunden.',true);
+    setLoading(false);
+    [1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');
+    document.getElementById('p1').focus();
+  }
+}
+
+async function doRegister(){
+  document.getElementById('login-msg').classList.add('hidden');
+  setLoading(true);
+  try{
+    const pin=await SLMCloud.register();
+    document.getElementById('login-form').classList.add('hidden');
+    document.getElementById('pin-display').classList.remove('hidden');
+    pin.split('').forEach((d,i)=>{document.getElementById('n'+(i+1)).textContent=d;});
+  }catch(e){
+    showMsg('Fehler: '+e.message,true);
+    setLoading(false);
+  }
+}
+
+function doLogout(){
+  if(!confirm('Abmelden?')) return;
+  SLMCloud.logout();
+  location.reload();
+}
+
+function enterDashboard(){
+  document.getElementById('login-screen').classList.add('hidden');
+  document.getElementById('dashboard').classList.remove('hidden');
+  document.getElementById('show-pin').textContent=SLMCloud.pin;
+  renderModules();
+  renderDashLernhefte();
+  setTimeout(showWelcome,500);
+}
+
+document.addEventListener('DOMContentLoaded',async()=>{
+  const ok=await SLMCloud.autoLogin();
+  if(ok) enterDashboard();
+});
+
+// ═══════════════════════════════════════════════════════════
+// MODULE GRID
+// ═══════════════════════════════════════════════════════════
 function renderModules(){
-const grid=document.getElementById('module-grid');
-const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
-grid.innerHTML=MODULES.map(m=>{
-const mH=history.filter(h=>h.module===m.id);
-const best=mH.length?mH.reduce((a,b)=>a.percentage>b.percentage?a:b):null;
-const pct=best?best.percentage:0;
-const chip=best?`<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>`:'';
-return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
+  const grid=document.getElementById('module-grid');
+  const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
+  grid.innerHTML=MODULES.map(m=>{
+    const mH=history.filter(h=>h.module===m.id);
+    const best=mH.length?mH.reduce((a,b)=>a.percentage>b.percentage?a:b):null;
+    const pct=best?best.percentage:0;
+    const chip=best?`<span class="text-[10px] font-bold px-2.5 py-1 rounded-lg border" style="background:${m.color}15;color:${m.color};border-color:${m.color}30"><i class="fas fa-file-alt mr-1"></i>${best.note} (${best.percentage}%)</span>`:'';
+    return`<div onclick="location.href='${m.href}'" class="module-card glass rounded-2xl p-7 sm:p-8 cursor-pointer" style="--accent:${m.color}">
 <div class="mod-glow" style="background:${m.color}"></div>
 <div class="flex justify-between items-start mb-6 relative z-10">
 <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background:${m.color};box-shadow:0 8px 20px ${m.color}30"><i class="fas ${m.icon} text-white text-2xl"></i></div>
@@ -705,8 +1128,9 @@ return`<div onclick="location.href='${m.href}'" class="module-card glass rounded
 <div class="h-full rounded-full transition-all duration-1000" style="width:${pct}%;background:${m.color}"></div>
 </div>
 </div>`;
-}).join('');
+  }).join('');
 }
+
 window.addEventListener('beforeunload',()=>{if(SLMCloud?.ready)SLMCloud.save();});
 </script>
 </body>
