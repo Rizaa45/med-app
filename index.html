@@ -42,18 +42,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:tran
 @keyframes timerPulse{0%,100%{opacity:1}50%{opacity:.5}}.timer-urgent{animation:timerPulse .8s ease-in-out infinite}
 .lernheft-card{transition:all .25s ease;cursor:pointer}
 .lernheft-card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1)!important}
-/* Mobile recall modal fix */
 .recall-modal-inner{display:flex;flex-direction:column;max-height:100%}
 .recall-scroll{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
-/* Safe area for notch phones */
 .safe-bottom{padding-bottom:env(safe-area-inset-bottom,0px)}
-/* Prevent iOS bounce on modals */
 .modal-scroll{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
-/* Button touch targets */
 .btn-touch{min-height:44px;min-width:44px}
-/* Fix textarea on iOS */
 textarea{-webkit-appearance:none;appearance:none}
-/* Shimmer loading */
 @keyframes pulse-bg{0%,100%{opacity:.6}50%{opacity:1}}.pulse{animation:pulse-bg 1.5s ease-in-out infinite}
 </style>
 </head>
@@ -85,10 +79,8 @@ textarea{-webkit-appearance:none;appearance:none}
 <div id="zp-hub-modal" class="fixed inset-0 z-[150] flex items-end sm:items-center justify-center sm:p-4 hidden" style="background:rgba(0,0,0,.8);backdrop-filter:blur(12px)">
 <div class="w-full sm:max-w-lg modal-anim">
 <div class="rounded-t-3xl sm:rounded-3xl overflow-hidden modal-scroll" style="background:rgba(8,12,28,.98);border:1px solid rgba(99,102,241,.2);box-shadow:0 0 60px rgba(99,102,241,.1);max-height:92vh">
-<!-- Header -->
 <div class="relative p-5 pb-3" style="background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(139,92,246,.06))">
 <div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(99,102,241,.5),transparent)"></div>
-<!-- Mobile drag handle -->
 <div class="w-10 h-1 bg-white/10 rounded-full mx-auto mb-4 sm:hidden"></div>
 <div class="flex items-start justify-between mb-3">
 <div class="flex items-center gap-3">
@@ -110,7 +102,6 @@ textarea{-webkit-appearance:none;appearance:none}
 </div>
 </div>
 </div>
-<!-- Tabs -->
 <div class="px-4 pt-3">
 <div class="flex gap-1 p-1 rounded-xl" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
 <button onclick="zpSetTab('lernen')" id="tab-lernen" class="zp-tab-btn active flex-1 py-2 rounded-lg text-[9px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book-open mr-1"></i>Lernen</button>
@@ -119,7 +110,6 @@ textarea{-webkit-appearance:none;appearance:none}
 <button onclick="zpSetTab('hefte')" id="tab-hefte" class="zp-tab-btn flex-1 py-2 rounded-lg text-[9px] font-black uppercase tracking-wider border border-transparent text-slate-400"><i class="fas fa-book mr-1"></i>Hefte</button>
 </div>
 </div>
-<!-- Tab Content -->
 <div class="p-4 pt-3 safe-bottom">
 
 <!-- TAB: LERNEN -->
@@ -129,36 +119,52 @@ textarea{-webkit-appearance:none;appearance:none}
 <p class="text-slate-400 text-[10px] leading-relaxed">KI liest deine Datenbank → formuliert <strong class="text-white">korrekte Fragen + Antworten</strong> → Active Recall mit Timer.</p>
 </div>
 <div class="space-y-2">
+
+<!-- SCHNELL -->
 <div onclick="startRecall('schnell')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.15)">
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg" style="background:rgba(99,102,241,.12)">⚡</div>
 <div class="flex-1 min-w-0">
-<div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Schnell-Session</h3><span class="text-[9px] font-black bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full shrink-0">5 FRAGEN</span></div>
-<p class="text-slate-500 text-[11px]">~15 Min · KI-formuliert · KB I–V</p>
+<div class="flex items-center gap-2 mb-0.5">
+<h3 class="text-white font-black text-sm">Schnell-Session</h3>
+<span class="text-[9px] font-black bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full shrink-0">5 FRAGEN</span>
+</div>
+<p class="text-slate-500 text-[11px]">~10 Min · Kurze Direktfragen · Blitzwissen</p>
 </div>
 <i class="fas fa-chevron-right text-indigo-400 text-xs shrink-0"></i>
 </div>
 </div>
+
+<!-- STANDARD -->
 <div onclick="startRecall('mittel')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(139,92,246,.06);border-color:rgba(139,92,246,.15)">
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg" style="background:rgba(139,92,246,.12)">🎯</div>
 <div class="flex-1 min-w-0">
-<div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Standard-Session</h3><span class="text-[9px] font-black bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded-full shrink-0">10 FRAGEN</span></div>
-<p class="text-slate-500 text-[11px]">~30 Min · Tägliches Lernen · Alle KB</p>
+<div class="flex items-center gap-2 mb-0.5">
+<h3 class="text-white font-black text-sm">Standard-Session</h3>
+<span class="text-[9px] font-black bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded-full shrink-0">10 FRAGEN</span>
+</div>
+<p class="text-slate-500 text-[11px]">~30 Min · Fallbasiert · Alle KB</p>
 </div>
 <i class="fas fa-chevron-right text-violet-400 text-xs shrink-0"></i>
 </div>
 </div>
+
+<!-- INTENSIV -->
 <div onclick="startRecall('intensiv')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.15)">
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg" style="background:rgba(59,130,246,.12)">🔥</div>
 <div class="flex-1 min-w-0">
-<div class="flex items-center gap-2 mb-0.5"><h3 class="text-white font-black text-sm">Intensiv-Session</h3><span class="text-[9px] font-black bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full shrink-0">15 FRAGEN</span></div>
+<div class="flex items-center gap-2 mb-0.5">
+<h3 class="text-white font-black text-sm">Intensiv-Session</h3>
+<span class="text-[9px] font-black bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full shrink-0">15 FRAGEN</span>
+</div>
 <p class="text-slate-500 text-[11px]">~45 Min · Maximale Prüfungsvorbereitung</p>
 </div>
 <i class="fas fa-chevron-right text-blue-400 text-xs shrink-0"></i>
 </div>
 </div>
+
 </div>
 </div>
 
@@ -201,27 +207,30 @@ textarea{-webkit-appearance:none;appearance:none}
 <div id="zp-lernhefte-list" class="space-y-2 overflow-y-auto pr-0.5" style="max-height:240px"></div>
 </div>
 
-</div><!-- end tab content wrapper -->
-</div><!-- end modal inner -->
-</div><!-- end modal anim -->
-</div><!-- end zp-hub-modal -->
+</div>
+</div>
+</div>
+</div>
 
 <!-- ═══ RECALL MODAL ═══ -->
 <div id="recall-modal" class="fixed inset-0 z-[160] flex items-end sm:items-center justify-center hidden" style="background:rgba(0,0,0,.88);backdrop-filter:blur(14px)">
 <div class="w-full sm:max-w-lg sm:mx-4 modal-anim recall-modal-inner" style="max-height:100dvh;max-height:100vh">
 <div class="rounded-t-3xl sm:rounded-3xl overflow-hidden recall-modal-inner" style="background:rgba(8,12,28,.98);border:1px solid rgba(139,92,246,.2)">
-<!-- Recall Header -->
+<!-- Header -->
 <div class="flex items-center justify-between px-5 py-4 shrink-0" style="border-bottom:1px solid rgba(255,255,255,.05)">
 <div class="flex items-center gap-3">
 <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.15)"><i class="fas fa-book-open text-indigo-400 text-sm"></i></div>
+<div>
 <span class="font-black text-white text-sm uppercase tracking-wider">Active Recall</span>
+<span id="recall-session-badge" class="ml-2 text-[9px] font-black px-2 py-0.5 rounded-full" style="background:rgba(99,102,241,.15);color:#a5b4fc"></span>
+</div>
 </div>
 <div class="flex items-center gap-2">
 <span id="recall-progress-label" class="text-[10px] font-bold text-slate-600"></span>
 <button onclick="closeRecall()" class="btn-touch w-9 h-9 rounded-xl flex items-center justify-center text-slate-600 hover:text-white hover:bg-white/5 transition-all"><i class="fas fa-times text-sm"></i></button>
 </div>
 </div>
-<!-- Recall Scrollable Content -->
+<!-- Content -->
 <div id="recall-content" class="recall-scroll p-5 safe-bottom" style="max-height:calc(100dvh - 70px);max-height:calc(100vh - 70px)">
 <div class="flex items-center justify-center py-16"><div class="w-10 h-10 rounded-full animate-spin" style="border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1"></div></div>
 </div>
@@ -270,10 +279,10 @@ textarea{-webkit-appearance:none;appearance:none}
 <h3 class="text-lg font-extrabold mb-1">Dein neuer Lern-Code</h3>
 <p class="text-xs text-slate-500 mb-5">Merke dir diesen Code — er ist dein Zugang auf allen Geräten</p>
 <div class="flex justify-center gap-2 mb-6">
-<div class="w-13 h-13 bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" style="width:3.2rem;height:3.2rem" id="n1"></div>
-<div class="w-13 h-13 bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" style="width:3.2rem;height:3.2rem" id="n2"></div>
-<div class="w-13 h-13 bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" style="width:3.2rem;height:3.2rem" id="n3"></div>
-<div class="w-13 h-13 bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" style="width:3.2rem;height:3.2rem" id="n4"></div>
+<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n1"></div>
+<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n2"></div>
+<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n3"></div>
+<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n4"></div>
 </div>
 <div class="glass rounded-xl p-3 mb-5"><p class="text-[11px] text-slate-400 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Gleicher Code auf jedem Gerät = gleicher Fortschritt.</p></div>
 <button onclick="enterDashboard()" class="btn-touch w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95"><i class="fas fa-rocket mr-2"></i>Los geht's</button>
@@ -312,23 +321,16 @@ textarea{-webkit-appearance:none;appearance:none}
 </div>
 </div>
 </div>
-<!-- Buttons - wrapped so they don't overflow on mobile -->
 <div class="flex flex-wrap gap-2">
-<button onclick="openZPHub()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)">
-<i class="fas fa-book-open text-xs"></i><span>Lernen</span>
-</button>
-<button onclick="openZwischenpruefung()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)">
-<i class="fas fa-file-contract text-xs"></i><span>Probeklausur</span>
-</button>
-<button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),150)" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
-<i class="fas fa-book text-xs"></i><span id="dash-hefte-count">0 Hefte</span>
-</button>
+<button onclick="openZPHub()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-book-open text-xs"></i><span>Lernen</span></button>
+<button onclick="openZwischenpruefung()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)"><i class="fas fa-file-contract text-xs"></i><span>Probeklausur</span></button>
+<button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),150)" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)"><i class="fas fa-book text-xs"></i><span id="dash-hefte-count">0 Hefte</span></button>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Tools Grid -->
+<!-- Tools -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 anim" style="animation-delay:.18s">
 <a href="arena.html" class="group block rounded-3xl p-[2px] bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 shadow-xl cursor-pointer hover:scale-[1.02] transition-all arena-glow">
 <div class="arena-card-bg h-full w-full rounded-[calc(1.5rem-2px)] p-6 flex flex-col justify-between overflow-hidden relative">
@@ -361,7 +363,7 @@ textarea{-webkit-appearance:none;appearance:none}
 <span>Pflegeausbildung 2026 · PflBG/PflAPrV · © 2025</span>
 </div>
 </footer>
-</div><!-- end dashboard -->
+</div>
 
 <script src="js/cloud-sync.js"></script>
 <script>
@@ -389,16 +391,18 @@ const KB_LABELS={
 };
 
 const MODULE_KB={
-  1:['I','II'], 2:['I','III'], 3:['I','IV'],
-  4:['I','II'], 5:['I','III'], 6:['I','IV'],
-  7:['I','II'], 8:['I','III'], 9:['I','V']
+  1:['I','II'],2:['I','III'],3:['I','IV'],
+  4:['I','II'],5:['I','III'],6:['I','IV'],
+  7:['I','II'],8:['I','III'],9:['I','V']
 };
 
-// Session sizes with batch config
+// ─── Session config ────────────────────────────────────────
+// style: 'flash' = kurze Direktfragen (Schnell)
+//        'case'  = Fallbasiert (Standard/Intensiv)
 const SESSION_CONFIG={
-  schnell:{n:5,  batchSize:5,  label:'Schnell-Session'},
-  mittel: {n:10, batchSize:5,  label:'Standard-Session'},
-  intensiv:{n:15, batchSize:5, label:'Intensiv-Session'}
+  schnell: {n:5,  batchSize:5,  label:'⚡ Schnell',  style:'flash'},
+  mittel:  {n:10, batchSize:5,  label:'🎯 Standard', style:'case'},
+  intensiv:{n:15, batchSize:5,  label:'🔥 Intensiv', style:'case'}
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -412,7 +416,8 @@ let recallState={
   userAnswers:[],
   timerInterval:null,
   timerSeconds:120,
-  sessionLabel:''
+  sessionLabel:'',
+  sessionStyle:'flash'
 };
 
 // ═══════════════════════════════════════════════════════════
@@ -434,7 +439,7 @@ async function loadModuleDB(id){
       if(arr.length){dbCache[id]=arr;return arr;}
     }catch(e){}
   }
-  return [];
+  return[];
 }
 
 async function loadAllModules(){
@@ -456,16 +461,13 @@ function extractContent(raw){
     'Question','Frage','Statement','Text','Title','Content'];
   let mainText='';
   for(const f of textFields){
-    if(raw[f]&&typeof raw[f]==='string'&&raw[f].trim().length>5){
-      mainText=raw[f].trim();break;
-    }
+    if(raw[f]&&typeof raw[f]==='string'&&raw[f].trim().length>5){mainText=raw[f].trim();break;}
   }
   if(!mainText){
-    for(const [,v] of Object.entries(raw)){
+    for(const[,v]of Object.entries(raw)){
       if(typeof v==='string'&&v.trim().length>10){mainText=v.trim();break;}
     }
   }
-
   const ansFields=['answer','answer_text','correct_answer','explanation',
     'sampleAnswer','Antwort','rationale','solution','lösung','erklärung',
     'richtige_antwort','musterantwort','feedback','Answer','Explanation'];
@@ -479,25 +481,22 @@ function extractContent(raw){
     else if(raw.choices&&raw.correct!==undefined&&Array.isArray(raw.choices))
       rawAnswer=String(raw.choices[raw.correct]||'');
   }
-
   let keywords=[];
-  const kwFields=['keywords','tags','concepts','schlüsselwörter','begriffe'];
-  for(const f of kwFields){
+  for(const f of['keywords','tags','concepts','schlüsselwörter','begriffe']){
     if(raw[f]&&Array.isArray(raw[f])&&raw[f].length){keywords=raw[f].map(String);break;}
   }
-
   const topic=String(raw.topic||raw.thema||raw.category||raw.unit||raw.kapitel||'');
   return{mainText,rawAnswer,keywords,topic};
 }
 
 // ═══════════════════════════════════════════════════════════
-// ITEM SELECTION (balanced across modules)
+// ITEM SELECTION
 // ═══════════════════════════════════════════════════════════
 function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
 
 function pickRawItems(allModules,n){
   const byMod={};
-  for(const {module,data} of allModules){
+  for(const{module,data}of allModules){
     const kbArr=MODULE_KB[module.id]||['I'];
     const valid=[];
     for(const raw of data){
@@ -509,11 +508,8 @@ function pickRawItems(allModules,n){
     }
     if(valid.length) byMod[module.id]=shuffle(valid);
   }
-
   const modIds=shuffle(Object.keys(byMod));
-  if(!modIds.length) return [];
-
-  // Round-robin pick
+  if(!modIds.length) return[];
   const picked=[];
   const perMod=Math.ceil(n/modIds.length);
   for(const mid of modIds){
@@ -529,8 +525,7 @@ function pickRawItems(allModules,n){
 async function callKI(payload){
   try{
     const r=await fetch('/api/grade',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
+      method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify(payload)
     });
     if(!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -551,57 +546,95 @@ function parseKIJsonArray(raw){
 }
 
 // ═══════════════════════════════════════════════════════════
-// KI BATCH PROCESSING
-// Splits large sessions into chunks of 5 to avoid timeouts
+// KI PROMPTS — getrennt für Schnell vs Standard/Intensiv
 // ═══════════════════════════════════════════════════════════
-async function generateQABatch(items, idOffset=0){
-  const prompt=`Du bist Prüfer für die Generalistische Pflegeausbildung (PflAPrV Anlage 1).
 
-Wandle jeden DB-Eintrag in eine KORREKTE Pflegeprüfungs-Frage mit Musterantwort um.
+// SCHNELL: kurze, direkte Wissensfragen — kein Fallbeispiel
+function buildFlashPrompt(items, idOffset){
+  return`Du bist Pflegetutor. Erstelle kurze, direkte Wissensfragen (Blitzfragen) für ein Schnell-Quiz.
+
+STIL: Direkte Faktenfragen wie:
+- "Was bedeutet der Begriff Pflegeprozess?"
+- "Welche Phasen hat die Wundversorgung?"
+- "Was ist der Unterschied zwischen Dyspnoe und Tachypnoe?"
+- "Nenne 3 Zeichen einer Infektion."
+KEIN Fallbeispiel, KEIN langer Text — nur kurze, präzise Frage!
 
 REGELN:
-1. Frage: klinische Pflegesituation (1-2 Sätze) + konkrete Frage am Ende — MUSS mit "?" enden
-2. Falls DB-Eintrag FALSCH ist → in der Frage korrekt formulieren, "corrected":true setzen
-3. Platzhalter wie [PFLEGEKRAFT], [PATIENT] → sinnvoll ersetzen
-4. Musterantwort: 3-5 Sätze, fachlich korrekt, mit Fachbegriffen
-5. Keywords: 3-4 wichtige Fachbegriffe als Array
-6. NUR valides JSON-Array zurückgeben — keine anderen Texte
+1. Frage: max. 1 Satz, direkte Wissensfrage, endet mit "?"
+2. Musterantwort: 1-3 kurze, prägnante Stichpunkte oder 1-2 Sätze
+3. Keywords: 2-3 Fachbegriffe
+4. Falls DB-Inhalt falsch → korrigieren, "corrected":true
+5. NUR JSON-Array, kein anderer Text
 
 FORMAT:
-[{"id":<number>,"question":"<Frage mit ?>","answer":"<Musterantwort>","keywords":["Begriff1","Begriff2","Begriff3"],"corrected":false}]
+[{"id":<number>,"question":"<Direkte Frage?>","answer":"<Kurze Antwort, max 2 Sätze>","keywords":["Begriff1","Begriff2"],"corrected":false}]
 
 DB-EINTRÄGE:
-${items.map((item,i)=>`[${idOffset+i}] Modul: ${item.moduleName} | KB: ${item.kbLabel}
-Inhalt: ${item.mainText.slice(0,300)}
-Antwort (DB): ${item.rawAnswer||'(keine)'}
-Keywords (DB): ${item.keywords.slice(0,3).join(', ')||'–'}`).join('\n\n')}
+${items.map((item,i)=>`[${idOffset+i}] ${item.moduleName} | ${item.kbLabel}
+Inhalt: ${item.mainText.slice(0,200)}
+DB-Antwort: ${item.rawAnswer.slice(0,100)||'–'}`).join('\n\n')}
 
 JSON-Array:`;
-
-  const result=await callKI({mode:'text',prompt});
-  return parseKIJsonArray(result);
 }
 
-async function generateAllQA(rawItems, onProgress){
+// STANDARD / INTENSIV: fallbasierte Prüfungsfragen
+function buildCasePrompt(items, idOffset){
+  return`Du bist Prüfer für die Generalistische Pflegeausbildung (PflAPrV Anlage 1).
+
+STIL: Klinische Pflegesituationen mit konkreter Frage:
+- Kurze Situation (1-2 Sätze) + konkrete Frage am Ende
+- Prüfungsrelevant, realistisch, fallbasiert
+KEIN reiner Faktenwissenstest — immer mit kleiner Situation!
+
+REGELN:
+1. Frage: 1-2 Sätze Situation + 1 Frage, endet mit "?"
+2. Falls DB-Inhalt falsch → korrigieren, "corrected":true
+3. Musterantwort: 3-5 Sätze, fachlich korrekt, Fachbegriffe
+4. Keywords: 3-4 Fachbegriffe
+5. NUR JSON-Array, kein anderer Text
+
+FORMAT:
+[{"id":<number>,"question":"<Situation + Frage?>","answer":"<Musterantwort>","keywords":["Begriff1","Begriff2","Begriff3"],"corrected":false}]
+
+DB-EINTRÄGE:
+${items.map((item,i)=>`[${idOffset+i}] ${item.moduleName} | ${item.kbLabel}
+Inhalt: ${item.mainText.slice(0,300)}
+DB-Antwort: ${item.rawAnswer.slice(0,150)||'–'}
+Keywords: ${item.keywords.slice(0,3).join(', ')||'–'}`).join('\n\n')}
+
+JSON-Array:`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// BATCH PROCESSOR
+// ═══════════════════════════════════════════════════════════
+async function generateQABatch(items, idOffset, style){
+  const prompt=style==='flash'
+    ?buildFlashPrompt(items,idOffset)
+    :buildCasePrompt(items,idOffset);
+  const result=await callKI({mode:'text',prompt});
+  const parsed=parseKIJsonArray(result);
+  if(!parsed) return[];
+  return parsed.filter(r=>
+    typeof r.id==='number'&&
+    typeof r.question==='string'&&r.question.trim().length>5&&
+    typeof r.answer==='string'&&r.answer.trim().length>3
+  );
+}
+
+async function generateAllQA(rawItems, style, onProgress){
   const BATCH=5;
   const allResults=[];
   const total=rawItems.length;
   let done=0;
-
   for(let i=0;i<rawItems.length;i+=BATCH){
     const batch=rawItems.slice(i,i+BATCH);
-    onProgress(done,total,`🤖 KI formuliert Fragen ${i+1}–${Math.min(i+BATCH,total)} von ${total}...`);
-    const batchResult=await generateQABatch(batch,i);
-    if(batchResult){
-      for(const r of batchResult){
-        if(typeof r.id==='number'&&r.question?.length>10&&r.answer?.length>10){
-          allResults.push(r);
-        }
-      }
-    }
+    onProgress(done,total,`🤖 Generiere Fragen ${i+1}–${Math.min(i+BATCH,total)} von ${total}...`);
+    const batchResult=await generateQABatch(batch,i,style);
+    allResults.push(...batchResult);
     done=Math.min(i+BATCH,total);
   }
-
   return allResults;
 }
 
@@ -615,18 +648,22 @@ async function startRecall(size){
 
   const cfg=SESSION_CONFIG[size]||SESSION_CONFIG.mittel;
   recallState.sessionLabel=cfg.label;
+  recallState.sessionStyle=cfg.style;
 
-  // Step 1: Load DB
+  // Badge im Header
+  const badge=document.getElementById('recall-session-badge');
+  if(badge){badge.textContent=cfg.label;}
+
+  // Step 1: DB laden
   showRecallLoading('📂 Lade Lernmaterialien...',0);
   const allModules=await loadAllModules();
   if(!allModules.length){
     showRecallError('Keine Datenbank gefunden.<br><small>Prüfe: data/question-banks/module1_questions.json</small>');
     return;
   }
-
   const totalEntries=allModules.reduce((s,m)=>s+m.data.length,0);
 
-  // Step 2: Pick items
+  // Step 2: Auswahl
   showRecallLoading(`✅ ${totalEntries} Einträge · Wähle ${cfg.n} aus...`,20);
   const rawItems=pickRawItems(allModules,cfg.n);
   if(!rawItems.length){
@@ -634,18 +671,18 @@ async function startRecall(size){
     return;
   }
 
-  // Step 3: KI generates Q&A in batches
-  const kiResults=await generateAllQA(rawItems,(done,total,msg)=>{
+  // Step 3: KI generiert Fragen (style-abhängig)
+  const kiResults=await generateAllQA(rawItems,cfg.style,(done,total,msg)=>{
     const pct=20+Math.round((done/total)*70);
     showRecallLoading(msg,pct);
   });
 
-  showRecallLoading('✨ Bereite Session vor...',95);
+  showRecallLoading('✨ Bereite Session vor...',96);
 
-  // Step 4: Merge results
+  // Step 4: Merge
   const questions=rawItems.map((raw,idx)=>{
     const ki=kiResults.find(r=>r.id===idx);
-    if(ki){
+    if(ki&&ki.question&&ki.answer){
       return{
         question:ki.question.trim(),
         sampleAnswer:ki.answer.trim(),
@@ -656,11 +693,11 @@ async function startRecall(size){
         kbLabel:raw.kbLabel,
         topic:raw.topic,
         corrected:ki.corrected||false,
-        source:'ki'
+        source:'ki',
+        style:cfg.style
       };
     }
-    // Fallback
-    return buildFallback(raw);
+    return buildFallback(raw,cfg.style);
   });
 
   recallState.questions=questions.filter(q=>q&&q.question.length>5);
@@ -672,12 +709,12 @@ async function startRecall(size){
   renderRecallQ();
 }
 
-function buildFallback(raw){
+function buildFallback(raw,style){
   let q=raw.mainText
     .replace(/\[PFLEGEKRAFT\]/gi,'Die Pflegefachkraft')
     .replace(/\[PATIENT\]/gi,'der Patient')
     .replace(/\[BEWOHNER\]/gi,'der Bewohner');
-  if(!q.includes('?')) q=`Was ist zu beachten?\n${q}`;
+  if(!q.includes('?')) q=(style==='flash')?`Was bedeutet: ${q}?`:`Was ist zu beachten?\n${q}`;
   return{
     question:q,
     sampleAnswer:raw.rawAnswer||'Bitte schlage die Antwort in deinen Unterlagen nach.',
@@ -688,7 +725,8 @@ function buildFallback(raw){
     kbLabel:raw.kbLabel,
     topic:raw.topic,
     corrected:false,
-    source:'db'
+    source:'db',
+    style
   };
 }
 
@@ -696,13 +734,13 @@ function updateRecallHeader(){
   const label=document.getElementById('recall-progress-label');
   if(label){
     const total=recallState.questions.length;
-    const cur=recallState.currentIndex+1;
-    label.textContent=`${Math.min(cur,total)} / ${total}`;
+    const cur=Math.min(recallState.currentIndex+1,total);
+    label.textContent=`${cur} / ${total}`;
   }
 }
 
 // ═══════════════════════════════════════════════════════════
-// LOADING UI with progress bar
+// LOADING UI
 // ═══════════════════════════════════════════════════════════
 function showRecallLoading(msg,pct=0){
   document.getElementById('recall-progress-label').textContent='';
@@ -742,8 +780,8 @@ function renderRecallQ(){
   const cur=recallState.currentIndex+1;
   const pct=Math.round((recallState.currentIndex/total)*100);
   const isSpick=recallState.phase==='spickzettel';
+  const isFlash=q.style==='flash';
 
-  // Update header counter
   document.getElementById('recall-progress-label').textContent=`${cur} / ${total}`;
 
   const kbColors={I:'#a5b4fc',II:'#c4b5fd',III:'#93c5fd',IV:'#5eead4',V:'#fcd34d'};
@@ -754,43 +792,44 @@ function renderRecallQ(){
   const corrNote=q.corrected?`
   <div class="flex items-center gap-2 mb-3 p-2.5 rounded-xl" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2)">
     <i class="fas fa-check-circle text-amber-400 text-xs shrink-0"></i>
-    <p class="text-amber-400 text-[10px] font-bold">Fachlich korrigiert – DB-Eintrag enthielt Ungenauigkeit</p>
+    <p class="text-amber-400 text-[10px] font-bold">Fachlich korrigiert</p>
   </div>`:'';
 
+  // Timer: Schnell = 60s, andere = 120s
+  const defaultTimer=isFlash?60:120;
+
   document.getElementById('recall-content').innerHTML=`
-  <!-- Progress -->
+  <!-- Progress bar -->
   <div class="mb-4">
     <div class="flex justify-between items-center mb-1.5">
       <span class="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full" style="${isSpick?'background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)':'background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.2)'}">
-        ${isSpick?'📖 Einprägen':'✍️ Abruf'}
+        ${isSpick?(isFlash?'⚡ Einprägen':'📖 Einprägen'):(isFlash?'⚡ Abruf':'✍️ Abruf')}
       </span>
-      <div class="flex items-center gap-2">
-        ${isSpick?`<span id="recall-timer-disp" class="text-sm font-black t-num" style="color:#94a3b8;min-width:3rem;text-align:right">120s</span>`:'<span class="text-[10px] text-slate-600">Schreibe aus dem Gedächtnis</span>'}
-      </div>
+      ${isSpick?`<span id="recall-timer-disp" class="text-sm font-black t-num" style="color:#94a3b8;min-width:3rem;text-align:right">${defaultTimer}s</span>`:'<span class="text-[10px] text-slate-600">Aus dem Gedächtnis</span>'}
     </div>
     <div class="w-full rounded-full overflow-hidden" style="height:3px;background:rgba(255,255,255,.05)">
       <div class="h-full rounded-full transition-all duration-700" style="width:${pct}%;background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
     </div>
   </div>
 
-  <!-- KB + Module info -->
+  <!-- KB + Module -->
   <div class="flex items-center gap-2 mb-3 flex-wrap">
     <span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:${kbBg};color:${kbColor}">${q.kbLabel}</span>
-    <span class="text-[9px] text-slate-600 font-medium">${q.moduleName}${q.topic&&q.topic!==q.moduleName?' · '+q.topic:''}</span>
+    <span class="text-[9px] text-slate-600 font-medium">${q.moduleName}</span>
   </div>
 
   ${corrNote}
 
-  <!-- Question box -->
+  <!-- Question -->
   <div class="rounded-2xl p-4 mb-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)">
-    <p class="text-white font-bold text-sm leading-relaxed">${esc(q.question)}</p>
+    <p class="text-white font-bold leading-relaxed" style="font-size:${isFlash?'1rem':'0.875rem'}">${esc(q.question)}</p>
   </div>
 
-  ${isSpick?renderSpickzettel(q):renderAbfrage()}`;
+  ${isSpick?renderSpickzettel(q,isFlash):renderAbfrage(isFlash)}`;
 
   if(isSpick){
     clearInterval(recallState.timerInterval);
-    recallState.timerSeconds=120;
+    recallState.timerSeconds=defaultTimer;
     updateTimer();
     recallState.timerInterval=setInterval(()=>{
       recallState.timerSeconds--;
@@ -802,26 +841,26 @@ function renderRecallQ(){
     },1000);
   }
 
-  // Scroll to top of content
   const content=document.getElementById('recall-content');
   if(content) content.scrollTop=0;
 }
 
-function renderSpickzettel(q){
+function renderSpickzettel(q,isFlash){
+  // Flash: kompakte Antwort-Box, kleine Keywords
+  // Case: normale Antwort-Box mit Keywords
+  const answerFontSize=isFlash?'0.85rem':'0.875rem';
   return`
-  <!-- Sample Answer -->
   <div class="rounded-2xl p-4 mb-4" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
-    <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">✅ Musterantwort</p>
-    <p class="text-slate-300 text-sm leading-relaxed">${esc(q.sampleAnswer)}</p>
+    <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2">✅ ${isFlash?'Antwort':'Musterantwort'}</p>
+    <p class="text-slate-300 leading-relaxed" style="font-size:${answerFontSize}">${esc(q.sampleAnswer)}</p>
     ${q.keywords?.length?`
     <div class="flex flex-wrap gap-1.5 mt-3">
-      ${q.keywords.slice(0,5).map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${esc(String(k))}</span>`).join('')}
+      ${q.keywords.slice(0,isFlash?3:5).map(k=>`<span class="text-[9px] px-2 py-0.5 rounded-full font-bold" style="background:rgba(34,197,94,.08);color:#4ade80;border:1px solid rgba(34,197,94,.15)">${esc(String(k))}</span>`).join('')}
     </div>`:''}
   </div>
-  <!-- Actions -->
   <div class="flex gap-2.5 sticky bottom-0 pb-1" style="background:rgba(8,12,28,.98)">
-    <button onclick="recallAddTime(30)" class="btn-touch flex-none px-4 py-3.5 rounded-xl text-xs font-bold active:scale-95 transition-all" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#94a3b8">
-      <i class="fas fa-plus mr-1"></i>30s
+    <button onclick="recallAddTime(${isFlash?20:30})" class="btn-touch flex-none px-4 py-3.5 rounded-xl text-xs font-bold active:scale-95 transition-all" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#94a3b8">
+      <i class="fas fa-plus mr-1"></i>${isFlash?'20s':'30s'}
     </button>
     <button onclick="toAbfrage()" class="btn-touch flex-1 py-3.5 rounded-xl text-sm font-black text-white active:scale-95 transition-all" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
       Ich hab's! <i class="fas fa-arrow-right ml-1.5"></i>
@@ -829,18 +868,20 @@ function renderSpickzettel(q){
   </div>`;
 }
 
-function renderAbfrage(){
+function renderAbfrage(isFlash){
+  const rows=isFlash?2:4;
+  const placeholder=isFlash
+    ?'Deine kurze Antwort...'
+    :'Deine Antwort aus dem Gedächtnis...';
   return`
-  <!-- Answer input -->
   <div class="mb-3">
     <textarea id="recall-input"
-      placeholder="Deine Antwort aus dem Gedächtnis..." rows="4"
+      placeholder="${placeholder}" rows="${rows}"
       class="w-full rounded-2xl p-4 text-sm leading-relaxed resize-none outline-none"
       style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s;-webkit-appearance:none;appearance:none"
       onfocus="this.style.borderColor='rgba(99,102,241,.5)'"
       onblur="this.style.borderColor='rgba(255,255,255,.08)'" autofocus></textarea>
   </div>
-  <!-- Actions -->
   <div class="flex gap-2.5 sticky bottom-0 pb-1" style="background:rgba(8,12,28,.98)">
     <button onclick="recallSkip()" class="btn-touch flex-none px-4 py-3.5 rounded-xl text-xs font-bold active:scale-95" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:#64748b">
       <i class="fas fa-forward mr-1"></i>Skip
@@ -852,7 +893,7 @@ function renderAbfrage(){
 }
 
 function esc(str){
-  if(!str) return '';
+  if(!str) return'';
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
 
@@ -876,7 +917,7 @@ function pushAnswer(ans){
   recallState.userAnswers.push({
     question:q.question,sampleAnswer:q.sampleAnswer,userAnswer:ans,
     keywords:q.keywords||[],moduleName:q.moduleName,moduleId:q.moduleId,
-    kb:q.kb,kbLabel:q.kbLabel
+    kb:q.kb,kbLabel:q.kbLabel,style:q.style
   });
   recallState.currentIndex++;
   recallState.phase='spickzettel';
@@ -890,7 +931,7 @@ function closeRecall(){
 }
 
 // ═══════════════════════════════════════════════════════════
-// FINISH SESSION
+// FINISH
 // ═══════════════════════════════════════════════════════════
 async function finishRecall(){
   clearInterval(recallState.timerInterval);
@@ -900,26 +941,19 @@ async function finishRecall(){
     <div class="w-16 h-16 rounded-2xl flex items-center justify-center pulse" style="background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15))">
       <i class="fas fa-robot text-indigo-400 text-2xl"></i>
     </div>
-    <div>
-      <h3 class="text-white font-black text-lg">KI erstellt Lernheft</h3>
-      <p class="text-slate-500 text-sm mt-1">Analysiere deine Antworten...</p>
-    </div>
+    <div><h3 class="text-white font-black text-lg">KI erstellt Lernheft</h3><p class="text-slate-500 text-sm mt-1">Analysiere deine Antworten...</p></div>
     <div class="flex gap-1.5">${[0,1,2].map(i=>`<div class="w-2 h-2 rounded-full animate-bounce" style="background:#6366f1;animation-delay:${i*.15}s"></div>`).join('')}</div>
   </div>`;
 
-  const html=await callKI({mode:'lernheft',prompt:buildLernheftPrompt(recallState.userAnswers)})||buildFallbackHTML(recallState.userAnswers);
+  const html=await callKI({mode:'lernheft',prompt:buildLernheftPrompt(recallState.userAnswers,recallState.sessionStyle)})||buildFallbackHTML(recallState.userAnswers);
   const answered=recallState.userAnswers.filter(a=>a.userAnswer).length;
   const total=recallState.userAnswers.length;
-  const title=`${recallState.sessionLabel} · ${answered}/${total} · ${new Date().toLocaleDateString('de-DE')}`;
-  saveLernbuch(title,html);
+  saveLernbuch(`${recallState.sessionLabel} · ${answered}/${total} · ${new Date().toLocaleDateString('de-DE')}`,html);
 
   document.getElementById('recall-content').innerHTML=`
   <div class="flex items-center gap-3 p-3.5 rounded-2xl mb-4" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15)">
     <i class="fas fa-check-circle text-emerald-400 text-lg shrink-0"></i>
-    <div>
-      <p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p>
-      <p class="text-slate-600 text-xs mt-0.5">${answered}/${total} beantwortet · Unter "Hefte" abrufbar</p>
-    </div>
+    <div><p class="text-emerald-400 font-bold text-sm">Lernheft gespeichert!</p><p class="text-slate-600 text-xs mt-0.5">${answered}/${total} beantwortet · Unter "Hefte" abrufbar</p></div>
   </div>
   <div class="rounded-2xl p-4 mb-4 overflow-y-auto" style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);max-height:30vh;font-size:12px;color:#94a3b8;line-height:1.6">${html}</div>
   <div class="flex gap-2.5 sticky bottom-0 pb-1" style="background:rgba(8,12,28,.98)">
@@ -928,22 +962,28 @@ async function finishRecall(){
   </div>`;
 }
 
-function buildLernheftPrompt(pairs){
+function buildLernheftPrompt(pairs,style){
   const kbs=[...new Set(pairs.map(p=>p.kbLabel).filter(Boolean))].join(', ')||'KB I–V';
   const answered=pairs.filter(p=>p.userAnswer?.trim()).length;
-  return`Du bist Pflegetutor (PflAPrV Anlage 1). Erstelle kompaktes Lernheft als HTML mit inline-CSS (dark theme, Schrift hell auf dunkel).
+  const isFlash=style==='flash';
+  return`Du bist Pflegetutor. Erstelle ${isFlash?'kompaktes Blitz-':'strukturiertes '}Lernheft als HTML mit inline-CSS (dark theme).
 
+SESSION-TYP: ${isFlash?'Schnell-Session (Direktfragen)':'Prüfungs-Session (Fallbasiert)'}
 KOMPETENZBEREICHE: ${kbs}
 ERGEBNIS: ${answered}/${pairs.length}
 
-STRUKTUR:
+${isFlash?`STRUKTUR (kompakt):
 1. Score-Box (indigo)
-2. Pro Frage: KB-Badge | Frage | Musterantwort | Benutzerantwort (grün=gut, rot=Lücke)
+2. Pro Frage: Begriff | Richtige Antwort | Deine Antwort (✅/❌)
+3. Top-3 Merksätze`
+:`STRUKTUR:
+1. Score-Box (indigo)
+2. Pro Frage: KB | Situation | Musterantwort | Deine Antwort (grün/rot)
 3. Wissenslücken (amber)
-4. Top-3 Empfehlungen
+4. Top-3 Empfehlungen`}
 
 FRAGEN:
-${pairs.map((p,i)=>`[${i+1}] ${p.kbLabel} | ${p.moduleName}
+${pairs.map((p,i)=>`[${i+1}] ${p.kbLabel}
 F: ${p.question}
 Muster: ${p.sampleAnswer}
 Antwort: ${p.userAnswer||'(keine)'}
@@ -958,9 +998,9 @@ function buildFallbackHTML(pairs){
 <h2 style="color:#818cf8;font-size:1rem;font-weight:900;margin-bottom:1rem">📋 ${ans}/${pairs.length} beantwortet</h2>
 ${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:.875rem;margin-bottom:.625rem">
 <span style="color:#a5b4fc;font-size:.7rem;font-weight:700;background:rgba(99,102,241,.15);padding:2px 8px;border-radius:999px">${p.kbLabel}</span>
-<p style="color:#e2e8f0;font-size:.82rem;font-weight:600;margin:.5rem 0 .3rem">${p.question}</p>
-<p style="color:#94a3b8;font-size:.78rem;margin-bottom:.3rem"><strong style="color:#86efac">✅</strong> ${p.sampleAnswer}</p>
-<p style="color:#94a3b8;font-size:.78rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝':'❌'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
+<p style="color:#e2e8f0;font-size:.85rem;font-weight:600;margin:.5rem 0 .3rem">${p.question}</p>
+<p style="color:#94a3b8;font-size:.8rem;margin-bottom:.3rem"><strong style="color:#86efac">✅</strong> ${p.sampleAnswer}</p>
+<p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝':'❌'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
 </div>`).join('')}</div>`;
 }
 
@@ -968,7 +1008,6 @@ ${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px soli
 // LERNHEFTE
 // ═══════════════════════════════════════════════════════════
 function getLernbuecher(){return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');}
-
 function saveLernbuch(title,html){
   const books=getLernbuecher();
   books.unshift({id:Date.now(),date:new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}),title,html});
@@ -976,39 +1015,31 @@ function saveLernbuch(title,html){
   localStorage.setItem('slm_lernbuecher',JSON.stringify(books));
   renderDashLernhefte();renderZPLernhefte();
 }
-
 function viewLernbuch(id){
   const b=getLernbuecher().find(x=>x.id===id);if(!b)return;
   document.getElementById('lb-view-title').textContent=b.title;
   document.getElementById('lb-view-content').innerHTML=b.html;
   document.getElementById('lb-view-modal').classList.remove('hidden');
 }
-
 function deleteLernbuch(id){
   if(!confirm('Lernheft löschen?'))return;
   localStorage.setItem('slm_lernbuecher',JSON.stringify(getLernbuecher().filter(b=>b.id!==id)));
   renderDashLernhefte();renderZPLernhefte();
 }
-
 function clearAllLernbuecher(){
   if(!confirm('Alle Lernhefte löschen?'))return;
   localStorage.removeItem('slm_lernbuecher');
   renderDashLernhefte();renderZPLernhefte();
 }
-
 function renderDashLernhefte(){
   const el=document.getElementById('dash-hefte-count');
   const n=getLernbuecher().length;
   if(el) el.textContent=`${n} Heft${n!==1?'e':''}`;
 }
-
 function renderZPLernhefte(){
   const el=document.getElementById('zp-lernhefte-list');if(!el)return;
   const books=getLernbuecher();
-  if(!books.length){
-    el.innerHTML=`<div class="text-center py-8"><div class="text-3xl mb-2">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p></div>`;
-    return;
-  }
+  if(!books.length){el.innerHTML=`<div class="text-center py-8"><div class="text-3xl mb-2">📚</div><p class="text-slate-500 text-sm font-bold">Noch keine Lernhefte</p></div>`;return;}
   el.innerHTML=books.map(b=>`
   <div class="lernheft-card flex items-center gap-3 p-3 rounded-2xl group" style="border:1px solid rgba(255,255,255,.05)">
     <div onclick="viewLernbuch(${b.id})" class="flex-1 flex items-center gap-3 cursor-pointer min-w-0">
@@ -1025,15 +1056,12 @@ function renderZPLernhefte(){
 function openZPHub(){
   document.getElementById('zp-hub-modal').classList.remove('hidden');
   document.body.style.overflow='hidden';
-  zpSetTab('lernen');
-  renderZPLernhefte();
+  zpSetTab('lernen');renderZPLernhefte();
 }
-
 function closeZPHub(){
   document.getElementById('zp-hub-modal').classList.add('hidden');
   document.body.style.overflow='';
 }
-
 function zpSetTab(tab){
   ['lernen','klausur','muendlich','hefte'].forEach(t=>{
     const btn=document.getElementById('tab-'+t);
@@ -1044,7 +1072,6 @@ function zpSetTab(tab){
   });
   if(tab==='hefte') renderZPLernhefte();
 }
-
 function openZwischenpruefung(){window.open('zwischenpruefung.html','_blank');}
 
 // ═══════════════════════════════════════════════════════════
@@ -1056,7 +1083,6 @@ function showWelcome(){
     document.body.style.overflow='hidden';
   }
 }
-
 function closeWelcome(){
   const el=document.getElementById('welcome-popup');
   el.style.transition='opacity .3s';el.style.opacity='0';
@@ -1092,45 +1118,27 @@ function setLoading(on){
   bl.disabled=on;br.disabled=on;
   bl.innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
 }
-
 async function doLogin(){
   const pin=getPin();
   if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}
   document.getElementById('login-msg').classList.add('hidden');
   setLoading(true);
   try{await SLMCloud.login(pin);enterDashboard();}
-  catch(e){
-    showMsg('Code nicht gefunden.',true);setLoading(false);
-    [1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');
-    document.getElementById('p1').focus();
-  }
+  catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}
 }
-
 async function doRegister(){
-  document.getElementById('login-msg').classList.add('hidden');
-  setLoading(true);
-  try{
-    const pin=await SLMCloud.register();
-    document.getElementById('login-form').classList.add('hidden');
-    document.getElementById('pin-display').classList.remove('hidden');
-    pin.split('').forEach((d,i)=>document.getElementById('n'+(i+1)).textContent=d);
-  }catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
+  document.getElementById('login-msg').classList.add('hidden');setLoading(true);
+  try{const pin=await SLMCloud.register();document.getElementById('login-form').classList.add('hidden');document.getElementById('pin-display').classList.remove('hidden');pin.split('').forEach((d,i)=>document.getElementById('n'+(i+1)).textContent=d);}
+  catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
 }
-
-function doLogout(){
-  if(!confirm('Abmelden?'))return;
-  SLMCloud.logout();location.reload();
-}
-
+function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload();}
 function enterDashboard(){
   document.getElementById('login-screen').classList.add('hidden');
   document.getElementById('dashboard').classList.remove('hidden');
   document.getElementById('show-pin').textContent=SLMCloud.pin;
-  renderModules();
-  renderDashLernhefte();
+  renderModules();renderDashLernhefte();
   setTimeout(showWelcome,600);
 }
-
 document.addEventListener('DOMContentLoaded',async()=>{
   const ok=await SLMCloud.autoLogin();
   if(ok) enterDashboard();
@@ -1165,16 +1173,10 @@ function renderModules(){
 
 window.addEventListener('beforeunload',()=>{if(SLMCloud?.ready)SLMCloud.save();});
 
-// Close modals on backdrop click
-document.getElementById('zp-hub-modal').addEventListener('click',function(e){
-  if(e.target===this) closeZPHub();
-});
-document.getElementById('recall-modal').addEventListener('click',function(e){
-  if(e.target===this) closeRecall();
-});
-document.getElementById('lb-view-modal').addEventListener('click',function(e){
-  if(e.target===this) document.getElementById('lb-view-modal').classList.add('hidden');
-});
+// Backdrop click to close
+document.getElementById('zp-hub-modal').addEventListener('click',function(e){if(e.target===this)closeZPHub();});
+document.getElementById('recall-modal').addEventListener('click',function(e){if(e.target===this)closeRecall();});
+document.getElementById('lb-view-modal').addEventListener('click',function(e){if(e.target===this)document.getElementById('lb-view-modal').classList.add('hidden');});
 </script>
 </body>
 </html>
