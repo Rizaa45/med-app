@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLM System | Zwischenprüfung Schwerpunkte</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  body { font-family: 'Inter', sans-serif; background: #fcfdfe; }
+  .fade-in { animation: fadeIn 0.4s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
+    <button onclick="location.href='index.html'" class="group flex items-center text-slate-500 hover:text-violet-600 font-semibold transition-all">
+      <i class="fas fa-chevron-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+      <span class="text-sm uppercase tracking-wider">Dashboard</span>
+    </button>
+    <div class="text-center">
+      <span class="font-extrabold text-slate-900 text-lg uppercase tracking-tighter">Zwischenprüfung: Schwerpunkte</span>
+      <p class="text-[9px] text-violet-600 font-bold tracking-[0.3em] uppercase mt-1">SLM Core v.5.4 • Pflege Edition</p>
+    </div>
+    <div class="flex gap-4">
+      <button onclick="location.href='vault.html'" class="p-2 text-slate-400 hover:text-violet-600 transition-all">
+        <i class="fas fa-thumbtack text-lg"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="max-w-4xl mx-auto px-6 py-8">
+
+  <!-- Tab Bar -->
+  <div class="flex bg-slate-100 rounded-2xl p-1.5 shadow-inner mb-8 border border-slate-200">
+    <button onclick="switchTab('inhalt')" id="tab-inhalt" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 bg-white text-violet-700 shadow-sm border border-slate-200/50">
+      <i class="fas fa-book-medical mr-2"></i>Lerninhalte
+    </button>
+    <button onclick="switchTab('quiz')" id="tab-quiz" class="flex-1 py-3 rounded-xl font-bold transition-all duration-300 text-slate-500 hover:text-violet-600">
+      <i class="fas fa-tasks mr-2"></i>Prüfungstraining
+    </button>
+  </div>
+
+  <!-- INHALT SECTION -->
+  <div id="section-inhalt" class="space-y-6 fade-in">
+
+    <!-- Dropdown Card -->
+    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-200 mb-8">
+      <label class="block text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3 ml-1">Schwerpunkt auswählen</label>
+      <div id="summary-dropdown-container"></div>
+    </div>
+
+    <!-- Display Area -->
+    <div id="summary-display-area" class="hidden min-h-[400px]"></div>
+
+    <!-- Welcome State -->
+    <div id="welcome-state" class="text-center py-20 bg-slate-50 rounded-[3rem] border-2 border-dashed border-slate-200">
+      <div class="w-20 h-20 bg-white rounded-3xl shadow-sm flex items-center justify-center mx-auto mb-6">
+        <i class="fas fa-graduation-cap text-3xl text-violet-500"></i>
+      </div>
+      <h3 class="text-xl font-bold text-slate-800 mb-2">Prüfungsvorbereitung</h3>
+      <p class="text-slate-500 text-sm max-w-xs mx-auto italic">Wähle eines der 9 Schwerpunktthemen oben aus, um die detaillierte Zusammenfassung zu laden.</p>
+    </div>
+  </div>
+
+  <!-- QUIZ SECTION -->
+  <div id="section-quiz" class="hidden space-y-8 fade-in">
+    <div class="text-center py-24 bg-white rounded-[3rem] border border-slate-100 shadow-sm">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-violet-50 text-violet-600 rounded-full mb-6">
+        <i class="fas fa-vial text-3xl"></i>
+      </div>
+      <h3 class="text-2xl font-black text-slate-900 uppercase tracking-tight">Quiz-Modul</h3>
+      <p class="text-slate-500 font-medium mb-8">Interaktive Prüfungsfragen sind in Vorbereitung.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pflegeprozess</span>
+        <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Kommunikation</span>
+        <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Ethik</span>
+        <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Diabetes</span>
+        <span class="px-4 py-2 bg-slate-100 rounded-full text-[10px] font-bold text-slate-400 uppercase tracking-widest">Demenz</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const topics = [
+  { id: "1",  title: "Fallorientierter Pflegeprozess",                    icon: "fa-clipboard-list",   color: "from-violet-900 to-violet-700" },
+  { id: "2",  title: "Kommunikationsstrategien",                           icon: "fa-comments",         color: "from-blue-900 to-blue-700" },
+  { id: "3",  title: "Personenzentrierter Ansatz",                         icon: "fa-user-heart",       color: "from-teal-900 to-teal-700" },
+  { id: "4",  title: "Gewalt in der Pflege",                               icon: "fa-shield-halved",    color: "from-red-900 to-red-700" },
+  { id: "5",  title: "Ekel und Scham",                                     icon: "fa-face-grimace",     color: "from-orange-900 to-orange-700" },
+  { id: "6",  title: "Rollenkonflikte",                                    icon: "fa-people-arrows",    color: "from-amber-900 to-amber-700" },
+  { id: "7",  title: "Kollegiale Beratung",                                icon: "fa-handshake",        color: "from-cyan-900 to-cyan-700" },
+  { id: "8",  title: "Ethische Prinzipien / Pflegecharta",                 icon: "fa-scale-balanced",   color: "from-indigo-900 to-indigo-700" },
+  { id: "9",  title: "Pflegerische Versorgung: Diabetes, Demenz, Gastro",  icon: "fa-stethoscope",      color: "from-green-900 to-green-700" }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderDropdown();
+});
+
+function renderDropdown() {
+  const container = document.getElementById('summary-dropdown-container');
+  container.innerHTML = `
+    <div class="relative">
+      <select onchange="handleTopicSelection(this.value)"
+        class="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl shadow-sm text-slate-800 font-bold
+               focus:border-violet-500 focus:bg-white outline-none appearance-none cursor-pointer transition-all">
+        <option value="">Bitte Schwerpunkt wählen...</option>
+        ${topics.map(t => `<option value="${t.id}">${t.id}. ${t.title}</option>`).join('')}
+      </select>
+      <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-violet-500">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  `;
+}
+
+async function handleTopicSelection(id) {
+  const displayArea  = document.getElementById('summary-display-area');
+  const welcomeState = document.getElementById('welcome-state');
+
+  if (!id) {
+    displayArea.classList.add('hidden');
+    welcomeState.classList.remove('hidden');
+    return;
+  }
+
+  welcomeState.classList.add('hidden');
+  displayArea.classList.remove('hidden');
+
+  displayArea.innerHTML = `
+    <div class="flex flex-col items-center justify-center py-20 text-violet-600">
+      <i class="fas fa-circle-notch animate-spin text-4xl mb-4"></i>
+      <p class="font-black uppercase tracking-widest text-xs">Lade Schwerpunkt-Dossier...</p>
+    </div>
+  `;
+
+  const topic = topics.find(t => t.id === id);
+
+  try {
+    const response = await fetch(`data/schwerpunkt/thema${id}.json`);
+    if (!response.ok) throw new Error("File not found");
+    const data = await response.json();
+    const content = data[0];
+
+    displayArea.innerHTML = `
+      <div class="fade-in bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden mb-12">
+
+        <!-- Header -->
+        <div class="bg-gradient-to-r ${topic.color} p-10 text-white relative">
+          <div class="absolute right-8 top-8 opacity-10 text-6xl rotate-12">
+            <i class="fas ${topic.icon}"></i>
+          </div>
+          <span class="bg-green-500 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4 inline-block">
+            Schwerpunkt ${id}
+          </span>
+          <h2 class="text-3xl font-black tracking-tight leading-tight">${content.topic}</h2>
+          <div class="flex flex-wrap gap-2 mt-6">
+            ${(content.tags || []).map(tag => `
+              <span class="bg-white/10 backdrop-blur-md text-white/90 text-[10px] px-3 py-1 rounded-lg font-bold border border-white/10">#${tag}</span>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="p-8 md:p-12">
+          ${content.content}
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-50 p-6 border-t border-slate-100 flex justify-center">
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="text-slate-400 hover:text-violet-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 transition-all">
+            <i class="fas fa-arrow-up"></i> Zum Anfang
+          </button>
+        </div>
+      </div>
+    `;
+
+  } catch (error) {
+    displayArea.innerHTML = `
+      <div class="p-12 text-center bg-amber-50 rounded-[2.5rem] border-2 border-amber-100">
+        <i class="fas fa-triangle-exclamation text-amber-500 text-4xl mb-4"></i>
+        <h4 class="font-black text-amber-900 uppercase">In Entwicklung</h4>
+        <p class="text-amber-700 text-sm mt-2">
+          Die Datei <b>thema${id}.json</b> ist noch nicht verfügbar.<br>
+          Dieses Schwerpunktthema wird bald freigeschaltet.
+        </p>
+        <div class="mt-6 inline-flex items-center gap-2 px-5 py-2 bg-amber-100 rounded-xl text-amber-700 font-bold text-xs uppercase">
+          <i class="fas fa-clock"></i> Coming Soon
+        </div>
+      </div>
+    `;
+  }
+}
+
+function switchTab(tab) {
+  const isContent = tab === 'inhalt';
+  document.getElementById('section-inhalt').classList.toggle('hidden', !isContent);
+  document.getElementById('section-quiz').classList.toggle('hidden', isContent);
+
+  const btnInhalt = document.getElementById('tab-inhalt');
+  const btnQuiz   = document.getElementById('tab-quiz');
+
+  if (isContent) {
+    btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-violet-700 shadow-sm border border-slate-200/50";
+    btnQuiz.className   = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-violet-600";
+  } else {
+    btnQuiz.className   = "flex-1 py-3 rounded-xl font-bold transition-all bg-white text-violet-700 shadow-sm border border-slate-200/50";
+    btnInhalt.className = "flex-1 py-3 rounded-xl font-bold transition-all text-slate-500 hover:text-violet-600";
+  }
+}
+</script>
+</body>
+</html>
