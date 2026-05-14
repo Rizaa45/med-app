@@ -115,28 +115,25 @@ textarea{-webkit-appearance:none;appearance:none}
 <!-- TAB: LERNEN -->
 <div id="zpTab-lernen" class="zp-tab-content">
 <div class="p-3 rounded-xl mb-4" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.15)">
-    <p class="text-[10px] font-bold text-indigo-400 mb-1"><i class="fas fa-magic mr-1"></i>JSON Schwerpunkt-Themen</p>
-    
-    <!-- HIER IST DAS NEUE DROPDOWN -->
-    <div class="relative mt-2">
-        <select id="zp-theme-select" class="w-full bg-slate-900 text-white text-xs font-bold border border-white/10 rounded-lg px-3 py-2 outline-none focus:border-indigo-500 transition-colors" style="-webkit-appearance:none;appearance:none;">
-            <option value="all">Alle Themen gemischt (Realistisch)</option>
-            <option value="1">1. Fallorientierter Pflegeprozess</option>
-            <option value="2">2. Kommunikationsstrategien</option>
-            <option value="3">3. Personenzentrierter Ansatz</option>
-            <option value="4">4. Gewalt in der Pflege</option>
-            <option value="5">5. Ekel und Scham</option>
-            <option value="6">6. Rollenkonflikte</option>
-            <option value="7">7. Kollegiale Beratung</option>
-            <option value="8">8. Ethische Prinzipien nach Beauchamp / Pflegecharta</option>
-            <option value="9">9. Pflegerische Versorgung (Diabetes, Demenz, Gastroenteritis)</option>
-        </select>
-        <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-            <i class="fas fa-chevron-down text-xs"></i>
-        </div>
-    </div>
+<p class="text-[10px] font-bold text-indigo-400 mb-1"><i class="fas fa-magic mr-1"></i>Zusammenfassung (Schwerpunkt)</p>
+<div class="relative mt-2">
+<select id="zp-theme-select" class="w-full bg-slate-900 text-white text-xs font-bold border border-white/10 rounded-lg px-3 py-2 outline-none focus:border-indigo-500 transition-colors" style="-webkit-appearance:none;appearance:none;">
+    <option value="all">Alle Themen gemischt (Realistisch)</option>
+    <option value="1">1. Fallorientierter Pflegeprozess</option>
+    <option value="2">2. Kommunikationsstrategien</option>
+    <option value="3">3. Personenzentrierter Ansatz</option>
+    <option value="4">4. Gewalt in der Pflege</option>
+    <option value="5">5. Ekel und Scham</option>
+    <option value="6">6. Rollenkonflikte</option>
+    <option value="7">7. Kollegiale Beratung</option>
+    <option value="8">8. Ethische Prinzipien nach Beauchamp / Pflegecharta</option>
+    <option value="9">9. Pflegerische Versorgung (Diabetes, Demenz, Gastro)</option>
+</select>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+    <i class="fas fa-chevron-down text-xs"></i>
 </div>
-
+</div>
+</div>
 <div class="space-y-2">
 <div onclick="startRecall('schnell')" class="recall-card rounded-2xl p-4 cursor-pointer border" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.15)">
 <div class="flex items-center gap-3">
@@ -450,7 +447,7 @@ mittel:{n:10,batchSize:5,label:'🎯 Standard',style:'case'},
 intensiv:{n:15,batchSize:5,label:'🔥 Intensiv',style:'case'}
 };
 
-// Speziell für die neuen Zwischenprüfung JSONs:
+// Neue ZP Themen nur für den Zwischenprüfungs-Lernmodus
 const ZP_THEMES = {
     1: {name: 'Fallorientierter Pflegeprozess', kb: 'I'},
     2: {name: 'Kommunikationsstrategien', kb: 'II'},
@@ -459,7 +456,7 @@ const ZP_THEMES = {
     5: {name: 'Ekel und Scham', kb: 'I'},
     6: {name: 'Rollenkonflikte', kb: 'III'},
     7: {name: 'Kollegiale Beratung', kb: 'III'},
-    8: {name: 'Ethische Prinzipien / Pflegecharta', kb: 'IV'},
+    8: {name: 'Ethische Prinzipien nach Beauchamp / Pflegecharta', kb: 'IV'},
     9: {name: 'Pflegerische Versorgung', kb: 'I'}
 };
 
@@ -500,26 +497,23 @@ if(arr.length){dbCache[id]=arr;return arr;}
 return[];
 }
 
-async function loadAllModules(){
-const results=await Promise.allSettled(MODULES.map(m=>loadModuleDB(m.id)));
-const all=[];
-for(let i=0;i<MODULES.length;i++){
-const data=results[i].status==='fulfilled'?results[i].value:[];
-if(data.length) all.push({module:MODULES[i],data});
-}
-return all;
-}
-
-// Ladefunktion spezifisch für die neuen ZP JSON Zusammenfassungen
+// Lädt gezielt aus dem schwerpunkt Ordner (nur für ZP Widget)
 async function loadZpThemeDB(id){
-    const path = `data/schwerpunkt/thema${id}.json`;
-    try {
-        const r = await fetch(path, {cache:'no-cache'});
-        if(r.ok) {
-            const raw = await r.json();
-            return Array.isArray(raw) ? raw : (raw.questions || raw.data || [raw]);
-        }
-    } catch(e) {}
+    const paths = [
+        `data/schwerpunkt/thema${id}.json`,
+        `/data/schwerpunkt/thema${id}.json`,
+        `./data/schwerpunkt/thema${id}.json`,
+        `../data/schwerpunkt/thema${id}.json`
+    ];
+    for(let path of paths) {
+        try {
+            const r = await fetch(path, {cache:'no-cache'});
+            if(r.ok) {
+                const raw = await r.json();
+                return Array.isArray(raw) ? raw : [raw];
+            }
+        } catch(e) {}
+    }
     return [];
 }
 
@@ -559,34 +553,7 @@ const topic=String(raw.topic||raw.thema||raw.category||raw.unit||raw.kapitel||''
 return{mainText,rawAnswer,keywords,topic};
 }
 
-// ═══════════════════════════════════════════════════════════
-// ITEM SELECTION
-// ═══════════════════════════════════════════════════════════
 function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
-function pickRawItems(allModules,n){
-const byMod={};
-for(const{module,data}of allModules){
-const kbArr = (ZP_THEMES[module.id] && [ZP_THEMES[module.id].kb]) || MODULE_KB[module.id] || ['I'];
-const valid=[];
-for(const raw of data){
-const ex=extractContent(raw);
-if(!ex.mainText||ex.mainText.length<8) continue;
-const kb=kbArr[Math.floor(Math.random()*kbArr.length)];
-valid.push({mainText:ex.mainText,rawAnswer:ex.rawAnswer,keywords:ex.keywords,
-topic:ex.topic,moduleName:module.name,moduleId:module.id,kb,kbLabel:KB_LABELS[kb]});
-}
-if(valid.length) byMod[module.id]=shuffle(valid);
-}
-const modIds=shuffle(Object.keys(byMod));
-if(!modIds.length) return[];
-const picked=[];
-const perMod=Math.ceil(n/modIds.length);
-for(const mid of modIds){
-picked.push(...(byMod[mid]||[]).slice(0,perMod));
-if(picked.length>=n*1.5) break;
-}
-return shuffle(picked).slice(0,n);
-}
 
 // ═══════════════════════════════════════════════════════════
 // KI API
@@ -614,10 +581,10 @@ return Array.isArray(arr)?arr:null;
 }
 
 // ═══════════════════════════════════════════════════════════
-// KI PROMPTS
+// KI PROMPTS FÜR DEN NEUEN ZP LERNEN MODUS
 // ═══════════════════════════════════════════════════════════
-function buildFlashPrompt(items,idOffset){
-return`Du bist Pflegetutor für die Pflege Zwischenprüfung. Erstelle kurze, direkte Wissensfragen (Blitzfragen) aus den folgenden JSON-Zusammenfassungen.
+function buildFlashPrompt(summaries, n){
+return `Du bist Pflegetutor für die Pflege Zwischenprüfung. Erstelle EXAKT ${n} kurze, direkte Wissensfragen (Blitzfragen) aus den folgenden JSON-Zusammenfassungen.
 
 STIL: Direkte Faktenfragen wie:
 - "Was bedeutet der Begriff Pflegeprozess?"
@@ -625,75 +592,52 @@ STIL: Direkte Faktenfragen wie:
 KEIN Fallbeispiel, KEIN langer Text — nur kurze, präzise Frage!
 
 REGELN:
-1. Frage: max. 1 Satz, direkte Wissensfrage, endet mit "?"
-2. Musterantwort: 1-3 kurze, prägnante Stichpunkte (basiert auf der Zusammenfassung)
-3. Keywords: 2-3 Fachbegriffe
-4. NUR JSON-Array, kein anderer Text
+1. Erstelle genau ${n} Fragen.
+2. Frage: max. 1 Satz, direkte Wissensfrage, endet mit "?"
+3. Musterantwort: 1-3 kurze, prägnante Stichpunkte (basiert auf der Zusammenfassung)
+4. Keywords: 2-3 Fachbegriffe
+5. NUR JSON-Array, kein anderer Text!
 
 FORMAT:
-[{"id":<number>,"question":"<Direkte Frage?>","answer":"<Kurze Antwort, max 2 Sätze>","keywords":["Begriff1","Begriff2"],"corrected":false}]
+[
+  {"id":1,"question":"<Direkte Frage?>","answer":"<Kurze Antwort, max 2 Sätze>","keywords":["Begriff1","Begriff2"]},
+  ... (${n} Objekte)
+]
 
 ZUSAMMENFASSUNGEN:
-${items.map((item,i)=>`[${idOffset+i}] Thema: ${item.moduleName} | ${item.kbLabel}
-Zusammenfassung: ${item.mainText.slice(0,400)}`).join('\n\n')}
+${summaries.map(item => `Thema: ${item.moduleName}\nInhalt: ${item.text.slice(0,800)}`).join('\n\n')}
 
-JSON-Array:`;
+WICHTIG: Gib ausschließlich das reine JSON-Array zurück.`;
 }
 
-function buildCasePrompt(items,idOffset){
-return`Du bist Prüfer für die Pflegeausbildung (PflAPrV). Erstelle klinische Pflegesituationen mit konkreter Frage basierend auf den bereitgestellten JSON-Zusammenfassungen.
+function buildCasePrompt(summaries, n){
+return `Du bist Prüfer für die Pflegeausbildung (PflAPrV). Erstelle EXAKT ${n} klinische Pflegesituationen mit konkreter Frage basierend auf den bereitgestellten JSON-Zusammenfassungen.
 
 STIL: Klinische Pflegesituationen mit konkreter Frage:
 - Kurze Situation (1-2 Sätze) + konkrete Frage am Ende
 - Prüfungsrelevant, realistisch, fallbasiert
 
 REGELN:
-1. Frage: 1-2 Sätze Situation + 1 Frage, endet mit "?"
-2. Musterantwort: 3-5 Sätze, fachlich korrekt, Fachbegriffe
-3. Keywords: 3-4 Fachbegriffe
-4. NUR JSON-Array, kein anderer Text
+1. Erstelle genau ${n} Fragen.
+2. Frage: 1-2 Sätze Situation + 1 Frage, endet mit "?"
+3. Musterantwort: 3-5 Sätze, fachlich korrekt, Fachbegriffe
+4. Keywords: 3-4 Fachbegriffe
+5. NUR JSON-Array, kein anderer Text!
 
 FORMAT:
-[{"id":<number>,"question":"<Situation + Frage?>","answer":"<Musterantwort>","keywords":["Begriff1","Begriff2"],"corrected":false}]
+[
+  {"id":1,"question":"<Situation + Frage?>","answer":"<Musterantwort>","keywords":["Begriff1","Begriff2"]},
+  ... (${n} Objekte)
+]
 
 ZUSAMMENFASSUNGEN:
-${items.map((item,i)=>`[${idOffset+i}] Thema: ${item.moduleName} | ${item.kbLabel}
-Zusammenfassung: ${item.mainText.slice(0,600)}`).join('\n\n')}
+${summaries.map(item => `Thema: ${item.moduleName}\nInhalt: ${item.text.slice(0,800)}`).join('\n\n')}
 
-JSON-Array:`;
-}
-
-// ═══════════════════════════════════════════════════════════
-// BATCH PROCESSOR
-// ═══════════════════════════════════════════════════════════
-async function generateQABatch(items,idOffset,style){
-const prompt=style==='flash'?buildFlashPrompt(items,idOffset):buildCasePrompt(items,idOffset);
-const result=await callKI({mode:'text',prompt});
-const parsed=parseKIJsonArray(result);
-if(!parsed) return[];
-return parsed.filter(r=>
-typeof r.id==='number'&&
-typeof r.question==='string'&&r.question.trim().length>5&&
-typeof r.answer==='string'&&r.answer.trim().length>3
-);
-}
-async function generateAllQA(rawItems,style,onProgress){
-const BATCH=5;
-const allResults=[];
-const total=rawItems.length;
-let done=0;
-for(let i=0;i<rawItems.length;i+=BATCH){
-const batch=rawItems.slice(i,i+BATCH);
-onProgress(done,total,`🤖 Generiere Fragen ${i+1}–${Math.min(i+BATCH,total)} von ${total}...`);
-const batchResult=await generateQABatch(batch,i,style);
-allResults.push(...batchResult);
-done=Math.min(i+BATCH,total);
-}
-return allResults;
+WICHTIG: Gib ausschließlich das reine JSON-Array zurück.`;
 }
 
 // ═══════════════════════════════════════════════════════════
-// SESSION START
+// SESSION START (KOMPLETT NEU FÜR ZP-THEMEN ZUSAMMENFASSUNGEN)
 // ═══════════════════════════════════════════════════════════
 async function startRecall(size){
 closeZPHub();
@@ -708,7 +652,7 @@ if(badge){badge.textContent=cfg.label;}
 const themeSelect = document.getElementById('zp-theme-select');
 const sel = themeSelect ? themeSelect.value : 'all';
 
-showRecallLoading('📚 Lade JSON Zusammenfassungen...',0);
+showRecallLoading('📚 Lade JSON Zusammenfassungen...', 10);
 
 const targetModules = [];
 const idsToLoad = sel === 'all' ? [1,2,3,4,5,6,7,8,9] : [parseInt(sel)];
@@ -717,79 +661,86 @@ for(let id of idsToLoad) {
     const data = await loadZpThemeDB(id);
     if(data.length) {
         targetModules.push({
-            module: { id: id, name: ZP_THEMES[id].name },
+            id: id,
+            name: ZP_THEMES[id].name,
+            kb: ZP_THEMES[id].kb,
             data: data
         });
     }
 }
 
 if(!targetModules.length){
-    showRecallError('Keine Zusammenfassungen gefunden.<br><small>Prüfe: data/schwerpunkt/thema1.json</small>');
+    showRecallError('Keine Zusammenfassungen gefunden.<br><small>Stelle sicher, dass data/schwerpunkt/thema1.json etc. existieren.</small>');
     return;
 }
 
-const totalEntries=targetModules.reduce((s,m)=>s+m.data.length,0);
-showRecallLoading(`✅ ${totalEntries} Dateien · Wähle ${cfg.n} aus...`,20);
+let allSummaries = [];
+targetModules.forEach(m => {
+    m.data.forEach(d => {
+        const ex = extractContent(d);
+        if(ex.mainText && ex.mainText.length > 10) {
+            allSummaries.push({
+                moduleName: m.name,
+                moduleId: m.id,
+                kb: m.kb,
+                kbLabel: KB_LABELS[m.kb],
+                text: ex.mainText
+            });
+        }
+    });
+});
 
-const rawItems=pickRawItems(targetModules,cfg.n);
-if(!rawItems.length){
-    showRecallError('Keine verwertbaren Einträge in den JSONs.');
+if(!allSummaries.length){
+    showRecallError('Keine verwertbaren Texte in den JSONs.');
     return;
 }
 
-const kiResults=await generateAllQA(rawItems,cfg.style,(done,total,msg)=>{
-    const pct=20+Math.round((done/total)*70);
-    showRecallLoading(msg,pct);
-});
+// Um die KI nicht mit zu viel Text zu überlasten, wähle max. 3 Blöcke aus
+const selectedSummaries = shuffle(allSummaries).slice(0, 3);
 
-showRecallLoading('✨ Bereite Session vor...',96);
-const questions=rawItems.map((raw,idx)=>{
-const ki=kiResults.find(r=>r.id===idx);
-if(ki&&ki.question&&ki.answer){
-return{
-question:ki.question.trim(),
-sampleAnswer:ki.answer.trim(),
-keywords:ki.keywords||raw.keywords||[],
-moduleName:raw.moduleName,
-moduleId:raw.moduleId,
-kb:raw.kb,
-kbLabel:raw.kbLabel,
-topic:raw.topic,
-corrected:ki.corrected||false,
-source:'ki',
-style:cfg.style
-};
+showRecallLoading(`🤖 Generiere exakt ${cfg.n} Fragen...`, 40);
+
+const prompt = cfg.style === 'flash' ? buildFlashPrompt(selectedSummaries, cfg.n) : buildCasePrompt(selectedSummaries, cfg.n);
+const result = await callKI({mode:'text', prompt});
+const parsed = parseKIJsonArray(result);
+
+if(!parsed || !Array.isArray(parsed) || parsed.length === 0) {
+    showRecallError('KI konnte keine Fragen generieren. Versuche es nochmal.');
+    return;
 }
-return buildFallback(raw,cfg.style);
+
+showRecallLoading('✨ Bereite Session vor...', 96);
+
+const questions = parsed.map((ki, idx) => {
+    // Verknüpfe die Frage rotierend mit den ausgewählten Zusammenfassungen
+    const ref = selectedSummaries[idx % selectedSummaries.length];
+    return {
+        question: ki.question.trim(),
+        sampleAnswer: ki.answer.trim(),
+        keywords: ki.keywords || [],
+        moduleName: ref.moduleName,
+        moduleId: ref.moduleId,
+        kb: ref.kb,
+        kbLabel: ref.kbLabel,
+        topic: ref.moduleName,
+        corrected: false,
+        source: 'ki',
+        style: cfg.style
+    };
 });
 
-recallState.questions=questions.filter(q=>q&&q.question.length>5);
+recallState.questions = questions.slice(0, cfg.n);
+
+if(recallState.questions.length === 0) {
+    showRecallError('Keine gültigen Fragen generiert.');
+    return;
+}
+
 recallState.currentIndex=0;
 recallState.userAnswers=[];
 recallState.phase='spickzettel';
 updateRecallHeader();
 renderRecallQ();
-}
-
-function buildFallback(raw,style){
-let q=raw.mainText
-.replace(/\[PFLEGEKRAFT\]/gi,'Die Pflegefachkraft')
-.replace(/\[PATIENT\]/gi,'der Patient')
-.replace(/\[BEWOHNER\]/gi,'der Bewohner');
-if(!q.includes('?')) q=(style==='flash')?`Was bedeutet: ${q.slice(0,50)}...?`:`Fasse zusammen:\n${q.slice(0,100)}...`;
-return{
-question:q,
-sampleAnswer:raw.rawAnswer||'Bitte schlage die Antwort in der Zusammenfassung nach.',
-keywords:raw.keywords||[],
-moduleName:raw.moduleName,
-moduleId:raw.moduleId,
-kb:raw.kb,
-kbLabel:raw.kbLabel,
-topic:raw.topic,
-corrected:false,
-source:'db',
-style
-};
 }
 
 function updateRecallHeader(){
@@ -1094,9 +1045,9 @@ else{btn.classList.remove('active');content.classList.add('hidden');}
 if(tab==='hefte') renderZPLernhefte();
 }
 function openZwischenpruefung(){
-    const themeSelect = document.getElementById('zp-theme-select');
-    const sel = themeSelect ? themeSelect.value : 'all';
-    window.open('zwischenpruefung.html?thema=' + sel,'_blank');
+const themeSelect = document.getElementById('zp-theme-select');
+const sel = themeSelect ? themeSelect.value : 'all';
+window.open('zwischenpruefung.html?thema=' + sel,'_blank');
 }
 
 // ═══════════════════════════════════════════════════════════
