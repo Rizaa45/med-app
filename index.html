@@ -56,41 +56,21 @@ textarea{-webkit-appearance:none;appearance:none}
 <div class="page-bg"></div>
 
 <!-- ═══ AUTO LOGIN POPUP ═══ -->
-<div id="autologin-popup" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.75);backdrop-filter:blur(8px)">
+<div id="autologin-popup" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.75);backdrop-filter:blur(8px)">
 <div class="w-full max-w-md modal-anim">
 <div class="gradient-bg rounded-t-3xl p-7 text-center relative overflow-hidden">
 <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px"></div>
 <div class="relative z-10">
-<div class="text-5xl mb-3 sparkle">🔐</div>
-<h2 class="text-2xl font-black tracking-tight text-white">Willkommen zurück!</h2>
-<p class="text-indigo-200 text-sm font-medium mt-2">Auto-Login · SLM System</p>
+<div class="text-5xl mb-3 sparkle">🚀</div>
+<h2 class="text-2xl font-black tracking-tight text-white">Auto Login...</h2>
+<p class="text-indigo-200 text-sm font-medium mt-2">SLM System · Pflegeausbildung</p>
 </div>
 </div>
-<div class="bg-[#0c1020] rounded-b-3xl p-6 space-y-4 border border-white/5 border-t-0">
-<div class="flex items-center gap-3 p-3 rounded-2xl" style="background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.15)">
-<div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center shrink-0">
-<i class="fas fa-key text-sm"></i>
-</div>
-<div>
-<h4 class="font-bold text-sm text-white">Lern-Code erkannt</h4>
-<p id="autologin-pin-display" class="text-[11px] text-slate-500 leading-relaxed font-mono tracking-widest">····</p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
-<i class="fas fa-sync-alt text-sm"></i>
-</div>
-<div>
-<h4 class="font-bold text-sm text-white">Fortschritt wird geladen</h4>
-<p class="text-[11px] text-slate-500 leading-relaxed">Alle Daten werden synchronisiert.</p>
-</div>
-</div>
-<button onclick="doAutoLoginConfirm()" class="w-full btn-touch gradient-bg text-white py-3.5 rounded-2xl font-black uppercase tracking-widest text-sm mt-2 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20">
-<i class="fas fa-rocket mr-2"></i>Jetzt einloggen
-</button>
-<button onclick="doAutoLoginManual()" class="w-full btn-touch text-slate-500 hover:text-white py-2 rounded-2xl font-bold text-xs transition-colors">
-<i class="fas fa-user mr-1"></i>Anderen Code verwenden
-</button>
+<div class="bg-[#0c1020] rounded-b-3xl p-6 space-y-3 border border-white/5 border-t-0">
+<div class="flex items-start gap-3"><div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-book-open text-sm"></i></div><div><h4 class="font-bold text-sm text-white">9 Module · 5 Kompetenzbereiche</h4><p class="text-[11px] text-slate-500 leading-relaxed">Komplette Vorbereitung nach PflAPrV Anlage 1.</p></div></div>
+<div class="flex items-start gap-3"><div class="w-9 h-9 bg-orange-500/10 text-orange-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-brain text-sm"></i></div><div><h4 class="font-bold text-sm text-white">KI-optimiertes Active Recall</h4><p class="text-[11px] text-slate-500 leading-relaxed">DB-Inhalte → KI formuliert korrekte Fragen & Antworten.</p></div></div>
+<div class="flex items-start gap-3"><div class="w-9 h-9 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-cloud text-sm"></i></div><div><h4 class="font-bold text-sm text-white">Cloud-Sync</h4><p class="text-[11px] text-slate-500 leading-relaxed">4-stelliger Code synchronisiert alles über alle Geräte.</p></div></div>
+<button onclick="closeAutoLogin()" class="w-full btn-touch gradient-bg text-white py-3.5 rounded-2xl font-black uppercase tracking-widest text-sm mt-2 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20"><i class="fas fa-rocket mr-2"></i>System starten</button>
 <p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v11.0 · PflBG/PflAPrV konform</p>
 </div>
 </div>
@@ -298,44 +278,8 @@ textarea{-webkit-appearance:none;appearance:none}
 </div>
 </div>
 
-<!-- ═══ LOGIN (versteckt, aber HTML bleibt für Funktionen) ═══ -->
-<div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center p-5 hidden" style="background:#060910">
-<div class="w-full max-w-sm enter">
-<div class="text-center mb-7">
-<div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-xl"></i></div>
-<h1 class="text-2xl font-extrabold tracking-tight">SLM System</h1>
-<p class="text-slate-500 text-sm mt-1">Gib deinen Lern-Code ein</p>
-</div>
-<div id="login-form" class="glass rounded-3xl p-6 sm:p-8">
-<div class="flex justify-center gap-3 mb-6">
-<input type="tel" maxlength="1" class="pin-box" id="p1" inputmode="numeric" pattern="[0-9]*" oninput="pinNav(1)" onkeydown="pinKey(event,1)" autofocus>
-<input type="tel" maxlength="1" class="pin-box" id="p2" inputmode="numeric" pattern="[0-9]*" oninput="pinNav(2)" onkeydown="pinKey(event,2)">
-<input type="tel" maxlength="1" class="pin-box" id="p3" inputmode="numeric" pattern="[0-9]*" oninput="pinNav(3)" onkeydown="pinKey(event,3)">
-<input type="tel" maxlength="1" class="pin-box" id="p4" inputmode="numeric" pattern="[0-9]*" oninput="pinNav(4)" onkeydown="pinKey(event,4)">
-</div>
-<div id="login-msg" class="hidden text-center text-xs font-bold mb-4 px-2"></div>
-<button onclick="doLogin()" id="btn-login" class="btn-touch w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3.5 rounded-xl font-bold text-sm transition-all mb-3 active:scale-95"><i class="fas fa-sign-in-alt mr-2"></i>Einloggen</button>
-<div class="relative my-4"><div class="absolute inset-0 flex items-center"><div class="w-full border-t border-white/10"></div></div><div class="relative flex justify-center"><span class="bg-[#0d1225] px-3 text-[10px] text-slate-600 font-bold uppercase tracking-widest">oder</span></div></div>
-<button onclick="doRegister()" id="btn-register" class="btn-touch w-full glass text-slate-400 hover:text-white py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95"><i class="fas fa-user-plus mr-2"></i>Neuen Code erstellen</button>
-</div>
-<div id="pin-display" class="hidden glass rounded-3xl p-6 sm:p-8 text-center">
-<div class="text-4xl mb-3">🎉</div>
-<h3 class="text-lg font-extrabold mb-1">Dein neuer Lern-Code</h3>
-<p class="text-xs text-slate-500 mb-5">Merke dir diesen Code — er ist dein Zugang auf allen Geräten</p>
-<div class="flex justify-center gap-2 mb-6">
-<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n1"></div>
-<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n2"></div>
-<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n3"></div>
-<div style="width:3.2rem;height:3.2rem" class="bg-violet-600 rounded-xl flex items-center justify-center text-xl font-black" id="n4"></div>
-</div>
-<div class="glass rounded-xl p-3 mb-5"><p class="text-[11px] text-slate-400 leading-relaxed"><i class="fas fa-info-circle text-indigo-400 mr-1"></i>Gleicher Code auf jedem Gerät = gleicher Fortschritt.</p></div>
-<button onclick="enterDashboard()" class="btn-touch w-full bg-indigo-600 hover:bg-indigo-500 text-white py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95"><i class="fas fa-rocket mr-2"></i>Los geht's</button>
-</div>
-</div>
-</div>
-
 <!-- ═══ DASHBOARD ═══ -->
-<div id="dashboard" class="hidden relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-12 pb-28 sm:pb-16">
+<div id="dashboard" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-12 pb-28 sm:pb-16">
 <header class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 anim" style="animation-delay:.05s">
 <div>
 <div class="flex items-center gap-3 mb-3">
@@ -483,7 +427,6 @@ schnell:{n:5,batchSize:5,label:'⚡ Schnell',style:'flash'},
 mittel:{n:10,batchSize:5,label:'🎯 Standard',style:'case'},
 intensiv:{n:15,batchSize:5,label:'🔥 Intensiv',style:'case'}
 };
-// Neue ZP Themen nur für den Zwischenprüfungs-Lernmodus
 const ZP_THEMES = {
 1: {name: 'Fallorientierter Pflegeprozess', kb: 'I'},
 2: {name: 'Kommunikationsstrategien', kb: 'II'},
@@ -530,7 +473,6 @@ if(arr.length){dbCache[id]=arr;return arr;}
 }
 return[];
 }
-// Lädt gezielt aus dem schwerpunkt Ordner (nur für ZP Widget)
 async function loadZpThemeDB(id){
 const paths = [
 `data/schwerpunkt/thema${id}.json`,
@@ -610,7 +552,7 @@ return Array.isArray(arr)?arr:null;
 }catch(e){return null;}
 }
 //═══════════════════════════════════════════════════════════
-// KI PROMPTS FÜR DEN NEUEN ZP LERNEN MODUS
+// KI PROMPTS
 //═══════════════════════════════════════════════════════════
 function buildFlashPrompt(summaries, n){
 return `Du bist Pflegetutor für die Pflege Zwischenprüfung. Erstelle EXAKT ${n} kurze, direkte Wissensfragen (Blitzfragen) aus den folgenden JSON-Zusammenfassungen.
@@ -664,7 +606,7 @@ ${summaries.map(item => `Thema: ${item.moduleName}\nInhalt: ${item.text.slice(0,
 WICHTIG: Gib ausschließlich das reine JSON-Array zurück.`;
 }
 //═══════════════════════════════════════════════════════════
-// SESSION START (KOMPLETT NEU FÜR ZP-THEMEN ZUSAMMENFASSUNGEN)
+// SESSION START
 //═══════════════════════════════════════════════════════════
 async function startRecall(size){
 closeZPHub();
@@ -714,7 +656,6 @@ if(!allSummaries.length){
 showRecallError('Keine verwertbaren Texte in den JSONs.');
 return;
 }
-// Um die KI nicht mit zu viel Text zu überlasten, wähle max. 3 Blöcke aus
 const selectedSummaries = shuffle(allSummaries).slice(0, 3);
 showRecallLoading(`🤖 Generiere exakt ${cfg.n} Fragen...`, 40);
 const prompt = cfg.style === 'flash' ? buildFlashPrompt(selectedSummaries, cfg.n) :
@@ -727,7 +668,6 @@ return;
 }
 showRecallLoading('✨ Bereite Session vor...', 96);
 const questions = parsed.map((ki, idx) => {
-// Verknüpfe die Frage rotierend mit den ausgewählten Zusammenfassungen
 const ref = selectedSummaries[idx % selectedSummaries.length];
 return {
 question: ki.question.trim(),
@@ -1073,88 +1013,40 @@ localStorage.setItem('slm_welcome_v110','true');
 //═══════════════════════════════════════════════════════════
 // AUTO LOGIN POPUP
 //═══════════════════════════════════════════════════════════
-let _pendingAutoPin = null;
-
-function showAutoLoginPopup(pin){
-_pendingAutoPin = pin;
-const dispEl = document.getElementById('autologin-pin-display');
-if(dispEl) dispEl.textContent = pin.split('').join(' · ');
-document.getElementById('autologin-popup').classList.remove('hidden');
-document.body.style.overflow='hidden';
-}
-function closeAutoLoginPopup(){
-document.getElementById('autologin-popup').classList.add('hidden');
-document.body.style.overflow='';
-}
-function doAutoLoginConfirm(){
-closeAutoLoginPopup();
-enterDashboard();
-}
-function doAutoLoginManual(){
-closeAutoLoginPopup();
-// Login-Screen anzeigen für manuellen Login
-document.getElementById('login-screen').classList.remove('hidden');
+function closeAutoLogin(){
+const el=document.getElementById('autologin-popup');
+el.style.transition='opacity .3s';el.style.opacity='0';
+setTimeout(()=>{el.classList.add('hidden');el.style.opacity='';document.body.style.overflow='';},300);
 }
 //═══════════════════════════════════════════════════════════
-// AUTH
+// AUTH (Logout bleibt für den Abmelden-Button)
 //═══════════════════════════════════════════════════════════
-function pinNav(n){
-const el=document.getElementById('p'+n);
-if(el.value.length>=1){
-el.value=el.value.replace(/\D/g,'').slice(-1);
-if(n<4&&el.value) document.getElementById('p'+(n+1)).focus();
-if(n===4&&el.value) doLogin();
+function doLogout(){
+if(!confirm('Abmelden?'))return;
+if(typeof SLMCloud!=='undefined') SLMCloud.logout();
+location.reload();
 }
-}
-function pinKey(e,n){
-if(e.key==='Backspace'&&!document.getElementById('p'+n).value&&n>1)
-document.getElementById('p'+(n-1)).focus();
-}
-function getPin(){return[1,2,3,4].map(n=>document.getElementById('p'+n).value).join('');}
-function showMsg(t,err){
-const el=document.getElementById('login-msg');
-el.textContent=t;
-el.className=`text-center text-xs font-bold mb-4 px-2 ${err?'text-red-400':'text-violet-400'}`;
-el.classList.remove('hidden');
-}
-function setLoading(on){
-const bl=document.getElementById('btn-login');
-const br=document.getElementById('btn-register');
-bl.disabled=on;br.disabled=on;
-bl.innerHTML=on?'<i class="fas fa-spinner fa-spin mr-2"></i>Laden...':'<i class="fas fa-sign-in-alt mr-2"></i>Einloggen';
-}
-async function doLogin(){
-const pin=getPin();
-if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}
-document.getElementById('login-msg').classList.add('hidden');
-setLoading(true);
-try{await SLMCloud.login(pin);
-document.getElementById('login-screen').classList.add('hidden');
-enterDashboard();}
-catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}
-}
-async function doRegister(){
-document.getElementById('login-msg').classList.add('hidden');setLoading(true);
-try{const pin=await SLMCloud.register();document.getElementById('login-form').classList.add('hidden');document.getElementById('pin-display').classList.remove('hidden');pin.split('').forEach((d,i)=>document.getElementById('n'+(i+1)).textContent=d);}
-catch(e){showMsg('Fehler: '+e.message,true);setLoading(false);}
-}
-function doLogout(){if(!confirm('Abmelden?'))return;SLMCloud.logout();location.reload();}
 function enterDashboard(){
-document.getElementById('login-screen').classList.add('hidden');
-document.getElementById('dashboard').classList.remove('hidden');
-document.getElementById('show-pin').textContent=SLMCloud.pin;
-renderModules();renderDashLernhefte();
+document.getElementById('show-pin').textContent = (typeof SLMCloud!=='undefined' && SLMCloud.pin) ? SLMCloud.pin : '––––';
+renderModules();
+renderDashLernhefte();
 setTimeout(showWelcome,600);
 }
-document.addEventListener('DOMContentLoaded',async()=>{
-const ok=typeof SLMCloud!=='undefined' && await SLMCloud.autoLogin();
-if(ok){
-// Auto-Login erfolgreich: Popup zeigen
-showAutoLoginPopup(SLMCloud.pin);
-} else {
-// Kein gespeicherter Login: Login-Screen zeigen
-document.getElementById('login-screen').classList.remove('hidden');
+//═══════════════════════════════════════════════════════════
+// INIT — direkt starten, Auto-Login Popup zeigen
+//═══════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', async () => {
+// Auto-Login Popup sofort anzeigen
+document.getElementById('autologin-popup').classList.remove('hidden');
+document.body.style.overflow='hidden';
+// Versuche SLMCloud autoLogin im Hintergrund
+if(typeof SLMCloud !== 'undefined') {
+try { await SLMCloud.autoLogin(); } catch(e) {}
 }
+// Dashboard initialisieren
+enterDashboard();
+// Popup nach kurzer Verzögerung automatisch schließen
+setTimeout(closeAutoLogin, 2000);
 });
 //═══════════════════════════════════════════════════════════
 // MODULE GRID
