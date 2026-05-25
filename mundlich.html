@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mündliche Prüfung – SLM System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:transparent;background:#060910}
+.page-bg{background:#060910;position:fixed;inset:0;z-index:0}
+.page-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,rgba(139,92,246,.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(99,102,241,.06) 0%,transparent 50%)}
+.glass{background:rgba(15,23,42,.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}
+.btn-touch{min-height:44px;min-width:44px}
+@keyframes modalIn{from{opacity:0;transform:scale(.93) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}.modal-anim{animation:modalIn .45s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.anim{animation:fadeUp .6s cubic-bezier(.22,1,.36,1) forwards;opacity:0}
+@keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.gradient-bg{background:linear-gradient(135deg,#7c3aed,#6366f1,#8b5cf6,#6366f1);background-size:300% 300%;animation:gradient-shift 6s ease infinite}
+@keyframes pulse-bg{0%,100%{opacity:.6}50%{opacity:1}}.pulse{animation:pulse-bg 1.5s ease-in-out infinite}
+@keyframes timerPulse{0%,100%{opacity:1}50%{opacity:.5}}.timer-urgent{animation:timerPulse .8s ease-in-out infinite}
+@keyframes sparkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}.sparkle{animation:sparkle 2s ease-in-out infinite}
+@keyframes waveform{0%,100%{height:8px}50%{height:24px}}.wave-bar{animation:waveform 1s ease-in-out infinite}
+@keyframes borderGlow{0%{box-shadow:0 0 10px rgba(139,92,246,.2)}50%{box-shadow:0 0 30px rgba(139,92,246,.5),0 0 60px rgba(99,102,241,.2)}100%{box-shadow:0 0 10px rgba(139,92,246,.2)}}.border-glow{animation:borderGlow 3s infinite}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#1e293b;border-radius:10px}
+.safe-bottom{padding-bottom:env(safe-area-inset-bottom,0px)}
+.modal-scroll{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+textarea{-webkit-appearance:none;appearance:none}
+.phase-btn{transition:all .3s cubic-bezier(.22,1,.36,1)}
+.phase-btn.active{background:rgba(139,92,246,.2);border-color:rgba(139,92,246,.5)!important;color:#c4b5fd}
+.kb-chip{font-size:9px;font-weight:700;padding:2px 8px;border-radius:999px}
+.chat-bubble-examiner{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);border-radius:0 18px 18px 18px}
+.chat-bubble-user{background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);border-radius:18px 0 18px 18px}
+@keyframes slideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.slide-in{animation:slideIn .35s ease forwards}
+.prasanth-label{background:linear-gradient(135deg,#818cf8,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.format-card{transition:all .3s cubic-bezier(.22,1,.36,1);cursor:pointer}
+.format-card:hover{transform:translateY(-2px)}
+.format-card.selected{border-color:rgba(139,92,246,.5)!important;background:rgba(139,92,246,.1)!important}
+@keyframes thinking{0%{opacity:.3}33%{opacity:1}66%{opacity:.3}100%{opacity:.3}}
+.dot1{animation:thinking 1.2s ease-in-out infinite}
+.dot2{animation:thinking 1.2s ease-in-out infinite .2s}
+.dot3{animation:thinking 1.2s ease-in-out infinite .4s}
+.progress-phase{transition:all .5s ease}
+.score-bar{transition:width 1s ease}
+</style>
+</head>
+<body class="min-h-screen text-slate-100 relative">
+<div class="page-bg"></div>
+
+<!-- ═══ SETUP SCREEN ═══ -->
+<div id="setup-screen" class="relative z-10 max-w-2xl mx-auto px-4 py-8 pb-24">
+
+  <!-- Header -->
+  <div class="flex items-center gap-3 mb-8 anim" style="animation-delay:.05s">
+    <a href="index.html" class="btn-touch w-10 h-10 rounded-xl flex items-center justify-center text-slate-500 hover:text-white transition-colors" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+      <i class="fas fa-arrow-left text-sm"></i>
+    </a>
+    <div>
+      <h1 class="text-white font-black text-lg tracking-tight">Mündliche Prüfung</h1>
+      <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">§ 7 PflAPrV · Bis 30 Minuten</p>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="rounded-3xl overflow-hidden mb-6 anim border-glow" style="animation-delay:.08s;border:1px solid rgba(139,92,246,.3)">
+    <div class="gradient-bg p-6 text-center relative overflow-hidden">
+      <div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:20px 20px"></div>
+      <div class="relative z-10">
+        <div class="text-5xl mb-3 sparkle">🎤</div>
+        <h2 class="text-xl font-black text-white tracking-tight">KI-Prüfer Simulation</h2>
+        <p class="text-indigo-200 text-xs font-medium mt-1">Realistisches Fachgespräch · PflAPrV Anlage 1 · KB III, IV & V</p>
+      </div>
+    </div>
+    <div class="p-5" style="background:rgba(8,12,28,.95)">
+      <div class="grid grid-cols-3 gap-3">
+        <div class="rounded-2xl p-3 text-center" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
+          <div class="text-violet-400 font-black text-xl">30</div>
+          <div class="text-slate-600 text-[9px] font-bold uppercase tracking-wider mt-0.5">Min max</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
+          <div class="text-violet-400 font-black text-xl">4</div>
+          <div class="text-slate-600 text-[9px] font-bold uppercase tracking-wider mt-0.5">Phasen</div>
+        </div>
+        <div class="rounded-2xl p-3 text-center" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
+          <div class="text-violet-400 font-black text-xl">KB III-V</div>
+          <div class="text-slate-600 text-[9px] font-bold uppercase tracking-wider mt-0.5">Fokus</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Format Wahl -->
+  <div class="mb-6 anim" style="animation-delay:.11s">
+    <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 pl-1">Prüfungsformat wählen</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div onclick="selectFormat('integriert')" id="fmt-integriert" class="format-card rounded-2xl p-4 selected" style="background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.3)">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg" style="background:rgba(139,92,246,.15)">🏥</div>
+          <div>
+            <h3 class="text-white font-black text-sm mb-0.5">Integriertes Fachgespräch</h3>
+            <p class="text-slate-500 text-[10px] leading-relaxed">Anschluss an praktischen Teil · Realer Patient · Tiefe Befragung</p>
+            <div class="flex gap-1 mt-2">
+              <span class="kb-chip" style="background:rgba(99,102,241,.15);color:#a5b4fc;border:1px solid rgba(99,102,241,.2)">KB III</span>
+              <span class="kb-chip" style="background:rgba(20,184,166,.15);color:#5eead4;border:1px solid rgba(20,184,166,.2)">KB IV</span>
+              <span class="kb-chip" style="background:rgba(245,158,11,.15);color:#fcd34d;border:1px solid rgba(245,158,11,.2)">KB V</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div onclick="selectFormat('fallstudie')" id="fmt-fallstudie" class="format-card rounded-2xl p-4" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.15)">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-lg" style="background:rgba(99,102,241,.12)">📋</div>
+          <div>
+            <h3 class="text-white font-black text-sm mb-0.5">Separate Fallstudie</h3>
+            <p class="text-slate-500 text-[10px] leading-relaxed">Colloquium · Fiktiver Fall · Vorbereitungszeit · Prüfergespräch</p>
+            <div class="flex gap-1 mt-2">
+              <span class="kb-chip" style="background:rgba(99,102,241,.15);color:#a5b4fc;border:1px solid rgba(99,102,241,.2)">KB III</span>
+              <span class="kb-chip" style="background:rgba(20,184,166,.15);color:#5eead4;border:1px solid rgba(20,184,166,.2)">KB IV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thema Wahl -->
+  <div class="mb-6 anim" style="animation-delay:.14s">
+    <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 pl-1">Prüfungsschwerpunkt</p>
+    <div class="rounded-2xl p-4" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div class="relative">
+        <select id="thema-select" class="w-full bg-transparent text-white text-sm font-bold border-0 outline-none py-1 pr-8" style="-webkit-appearance:none;appearance:none;">
+          <option value="all" style="background:#0c1020">Zufälliger Schwerpunkt (Empfohlen)</option>
+          <option value="1" style="background:#0c1020">Fallorientierter Pflegeprozess</option>
+          <option value="2" style="background:#0c1020">Kommunikationsstrategien</option>
+          <option value="3" style="background:#0c1020">Personenzentrierter Ansatz</option>
+          <option value="4" style="background:#0c1020">Gewalt in der Pflege</option>
+          <option value="5" style="background:#0c1020">Ekel und Scham</option>
+          <option value="6" style="background:#0c1020">Rollenkonflikte</option>
+          <option value="7" style="background:#0c1020">Kollegiale Beratung</option>
+          <option value="8" style="background:#0c1020">Ethische Prinzipien / Pflegecharta</option>
+          <option value="9" style="background:#0c1020">Pflegerische Versorgung (Diabetes, Demenz, Gastro)</option>
+        </select>
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+          <i class="fas fa-chevron-down text-xs"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schwierigkeitsgrad -->
+  <div class="mb-6 anim" style="animation-delay:.16s">
+    <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 pl-1">Prüfer-Intensität</p>
+    <div class="grid grid-cols-3 gap-2">
+      <button onclick="selectLevel('standard')" id="lvl-standard" class="phase-btn active rounded-xl p-3 text-center border border-transparent" style="background:rgba(255,255,255,.04)">
+        <div class="text-lg mb-1">🎓</div>
+        <div class="text-white font-black text-xs">Standard</div>
+        <div class="text-slate-600 text-[9px]">Freundlich</div>
+      </button>
+      <button onclick="selectLevel('streng')" id="lvl-streng" class="phase-btn rounded-xl p-3 text-center border border-transparent" style="background:rgba(255,255,255,.04)">
+        <div class="text-lg mb-1">🔍</div>
+        <div class="text-white font-black text-xs">Streng</div>
+        <div class="text-slate-600 text-[9px]">Kritisch</div>
+      </button>
+      <button onclick="selectLevel('intensiv')" id="lvl-intensiv" class="phase-btn rounded-xl p-3 text-center border border-transparent" style="background:rgba(255,255,255,.04)">
+        <div class="text-lg mb-1">🔥</div>
+        <div class="text-white font-black text-xs">Intensiv</div>
+        <div class="text-slate-600 text-[9px]">Maximal</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Bewertungskriterien Info -->
+  <div class="mb-6 anim" style="animation-delay:.18s">
+    <div class="rounded-2xl p-4" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.15)">
+      <p class="text-[10px] font-black text-indigo-400 uppercase tracking-widest mb-3"><i class="fas fa-clipboard-check mr-1"></i>Bewertungskriterien</p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></div><p class="text-slate-400 text-[11px]"><span class="text-white font-bold">Fachsprache</span> · Medizinische Begriffe korrekt verwenden</p></div>
+        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></div><p class="text-slate-400 text-[11px]"><span class="text-white font-bold">Transferleistung</span> · Wissen auf Patienten-Lebenswelt anwenden</p></div>
+        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></div><p class="text-slate-400 text-[11px]"><span class="text-white font-bold">Lösungsorientierung</span> · Realistische Pflegemaßnahmen</p></div>
+        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></div><p class="text-slate-400 text-[11px]"><span class="text-white font-bold">Struktur</span> · Roter Faden, keine unnötigen Details</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Button -->
+  <div class="anim" style="animation-delay:.2s">
+    <button onclick="startPruefung()" class="w-full btn-touch gradient-bg text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm active:scale-95 transition-transform shadow-lg shadow-violet-500/20">
+      <i class="fas fa-microphone mr-2"></i>Prüfung starten
+    </button>
+    <p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest mt-3">KI-generierter Prüfer · Echtzeit-Bewertung</p>
+  </div>
+</div>
+
+<!-- ═══ PRÜFUNGS SCREEN ═══ -->
+<div id="pruefung-screen" class="hidden fixed inset-0 z-20 flex flex-col" style="background:#060910">
+
+  <!-- Top Bar -->
+  <div class="shrink-0 px-4 py-3 flex items-center justify-between" style="background:rgba(8,12,28,.95);border-bottom:1px solid rgba(255,255,255,.05)">
+    <div class="flex items-center gap-3">
+      <button onclick="confirmExit()" class="btn-touch w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 hover:text-white transition-colors" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+      <div>
+        <p class="text-white font-black text-sm" id="pruefung-title">Mündliche Prüfung</p>
+        <p class="text-slate-600 text-[9px] font-bold uppercase tracking-widest" id="pruefung-subtitle">Phase 1 · Fallvorstellung</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <div id="timer-display" class="glass rounded-xl px-3 py-1.5 flex items-center gap-1.5">
+        <i class="fas fa-clock text-violet-400 text-xs"></i>
+        <span id="timer-text" class="text-sm font-black text-white t-num">30:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase Progress -->
+  <div class="shrink-0 px-4 py-2" style="background:rgba(8,12,28,.9)">
+    <div class="flex gap-1.5">
+      <div id="phase-dot-1" class="phase-dot flex-1 h-1.5 rounded-full transition-all duration-500" style="background:rgba(139,92,246,.3)"></div>
+      <div id="phase-dot-2" class="phase-dot flex-1 h-1.5 rounded-full transition-all duration-500" style="background:rgba(255,255,255,.08)"></div>
+      <div id="phase-dot-3" class="phase-dot flex-1 h-1.5 rounded-full transition-all duration-500" style="background:rgba(255,255,255,.08)"></div>
+      <div id="phase-dot-4" class="phase-dot flex-1 h-1.5 rounded-full transition-all duration-500" style="background:rgba(255,255,255,.08)"></div>
+    </div>
+    <div class="flex justify-between mt-1">
+      <span class="text-[8px] font-bold text-slate-600 uppercase">Fallvorstellung</span>
+      <span class="text-[8px] font-bold text-slate-600 uppercase">Krankheitslehre</span>
+      <span class="text-[8px] font-bold text-slate-600 uppercase">Beratung</span>
+      <span class="text-[8px] font-bold text-slate-600 uppercase">Reflexion</span>
+    </div>
+  </div>
+
+  <!-- Chat Area -->
+  <div id="chat-area" class="flex-1 overflow-y-auto p-4 space-y-4" style="-webkit-overflow-scrolling:touch;overscroll-behavior:contain">
+    <!-- Messages appear here -->
+  </div>
+
+  <!-- Loading indicator -->
+  <div id="ki-thinking" class="hidden px-4 pb-2">
+    <div class="flex items-center gap-3 p-3 rounded-2xl" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.12)">
+      <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style="background:rgba(99,102,241,.15)">
+        <i class="fas fa-robot text-indigo-400 text-xs"></i>
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-slate-500 text-xs font-medium">Prüfer denkt</span>
+        <span class="dot1 w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block ml-1"></span>
+        <span class="dot2 w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block"></span>
+        <span class="dot3 w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Area -->
+  <div class="shrink-0 px-4 pb-4 pt-2 safe-bottom" style="background:rgba(8,12,28,.95);border-top:1px solid rgba(255,255,255,.05)">
+    <div class="flex gap-2 items-end">
+      <textarea id="antwort-input" placeholder="Deine Antwort eingeben..." rows="2" class="flex-1 rounded-2xl px-4 py-3 text-sm leading-relaxed resize-none outline-none" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#e2e8f0;font-family:inherit;transition:border-color .2s;max-height:120px;-webkit-appearance:none;appearance:none" onfocus="this.style.borderColor='rgba(139,92,246,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.08)'"></textarea>
+      <button onclick="submitAntwort()" id="send-btn" class="btn-touch w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 active:scale-95 transition-transform" style="background:linear-gradient(135deg,#7c3aed,#6366f1)">
+        <i class="fas fa-paper-plane text-white text-sm"></i>
+      </button>
+    </div>
+    <div class="flex items-center justify-between mt-2">
+      <div id="phase-info-bar" class="text-[9px] text-slate-600 font-bold"></div>
+      <button onclick="nextPhase()" id="next-phase-btn" class="hidden btn-touch text-[9px] font-black text-violet-400 px-3 py-1.5 rounded-lg active:scale-95 transition-all" style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2)">
+        Nächste Phase <i class="fas fa-arrow-right ml-1"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ERGEBNIS SCREEN ═══ -->
+<div id="ergebnis-screen" class="hidden fixed inset-0 z-30 overflow-y-auto" style="background:#060910">
+  <div class="max-w-2xl mx-auto px-4 py-8 pb-24">
+
+    <div class="text-center mb-8 anim">
+      <div class="text-6xl mb-4">🎓</div>
+      <h1 class="text-2xl font-black text-white tracking-tight">Prüfung abgeschlossen</h1>
+      <p class="text-slate-500 text-sm mt-1">Mündliche Zwischenprüfung · KI-Auswertung</p>
+    </div>
+
+    <!-- Score Card -->
+    <div id="score-card" class="rounded-3xl overflow-hidden mb-6 anim" style="animation-delay:.1s;border:1px solid rgba(139,92,246,.2)">
+      <div class="gradient-bg p-6 text-center">
+        <div class="text-5xl font-black text-white mb-1" id="gesamt-note">–</div>
+        <div class="text-indigo-200 text-sm font-bold" id="gesamt-label">Gesamtnote</div>
+      </div>
+      <div class="p-5" style="background:rgba(8,12,28,.98)">
+        <div class="grid grid-cols-2 gap-3" id="kriterien-scores">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailauswertung -->
+    <div id="detail-auswertung" class="space-y-4 mb-6 anim" style="animation-delay:.15s">
+      <!-- filled by JS -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex gap-3 anim" style="animation-delay:.2s">
+      <button onclick="resetPruefung()" class="btn-touch flex-1 py-3.5 rounded-2xl font-black text-sm active:scale-95 transition-transform" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);color:#94a3b8">
+        <i class="fas fa-redo mr-2"></i>Neu starten
+      </button>
+      <a href="index.html" class="btn-touch flex-1 py-3.5 rounded-2xl font-black text-sm active:scale-95 transition-transform gradient-bg text-white flex items-center justify-center">
+        <i class="fas fa-home mr-2"></i>Dashboard
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+//═══════════════════════════════════════════════════════════
+// CONFIG & STATE
+//═══════════════════════════════════════════════════════════
+const ZP_THEMES = {
+  1: {name: 'Fallorientierter Pflegeprozess', kb: 'I'},
+  2: {name: 'Kommunikationsstrategien', kb: 'II'},
+  3: {name: 'Personenzentrierter Ansatz', kb: 'II'},
+  4: {name: 'Gewalt in der Pflege', kb: 'III'},
+  5: {name: 'Ekel und Scham', kb: 'I'},
+  6: {name: 'Rollenkonflikte', kb: 'III'},
+  7: {name: 'Kollegiale Beratung', kb: 'III'},
+  8: {name: 'Ethische Prinzipien nach Beauchamp / Pflegecharta', kb: 'IV'},
+  9: {name: 'Pflegerische Versorgung (Diabetes, Demenz, Gastro)', kb: 'I'}
+};
+
+const PHASES = [
+  {id:1, name:'Fallvorstellung & Anamnese', short:'Fallvorstellung', duration:5, icon:'📋', kb:'KB I · Pflegeprozess'},
+  {id:2, name:'Krankheitslehre & Anatomie', short:'Krankheitslehre', duration:10, icon:'🔬', kb:'KB I · Diagnostik'},
+  {id:3, name:'Beratung & Problemlösung', short:'Beratung', duration:10, icon:'💬', kb:'KB III · Kommunikation'},
+  {id:4, name:'Reflexion & Ethik', short:'Reflexion', duration:5, icon:'🤔', kb:'KB IV & V · Recht & Ethik'},
+];
+
+let state = {
+  format: 'integriert',
+  level: 'standard',
+  thema: 'all',
+  themaData: [],
+  themaName: '',
+  currentPhase: 1,
+  messages: [],
+  phaseMessages: {1:[], 2:[], 3:[], 4:[]},
+  timerInterval: null,
+  timerSeconds: 1800,
+  isWaiting: false,
+  pruefungActive: false,
+  phaseComplete: {1:false, 2:false, 3:false, 4:false},
+  bewertung: null
+};
+
+//═══════════════════════════════════════════════════════════
+// SETUP
+//═══════════════════════════════════════════════════════════
+function selectFormat(fmt){
+  state.format = fmt;
+  document.querySelectorAll('.format-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('fmt-'+fmt).classList.add('selected');
+}
+
+function selectLevel(lvl){
+  state.level = lvl;
+  document.querySelectorAll('.phase-btn').forEach(b => {
+    if(b.id && b.id.startsWith('lvl-')) b.classList.remove('active');
+  });
+  document.getElementById('lvl-'+lvl).classList.add('active');
+}
+
+//═══════════════════════════════════════════════════════════
+// DATA LOADING
+//═══════════════════════════════════════════════════════════
+async function loadThemaData(id){
+  const paths = [
+    `data/schwerpunkt/thema${id}.json`,
+    `/data/schwerpunkt/thema${id}.json`,
+    `./data/schwerpunkt/thema${id}.json`
+  ];
+  for(let path of paths){
+    try{
+      const r = await fetch(path,{cache:'no-cache'});
+      if(r.ok){
+        const raw = await r.json();
+        return Array.isArray(raw) ? raw : [raw];
+      }
+    }catch(e){}
+  }
+  return [];
+}
+
+async function loadModuleData(id){
+  const paths = [
+    `data/question-banks/module${id}_questions.json`,
+    `/data/question-banks/module${id}_questions.json`
+  ];
+  for(let path of paths){
+    try{
+      const r = await fetch(path,{cache:'no-cache'});
+      if(r.ok){
+        const raw = await r.json();
+        return Array.isArray(raw) ? raw : (raw.questions || raw.data || []);
+      }
+    }catch(e){}
+  }
+  return [];
+}
+
+function extractText(obj){
+  const fields = ['zusammenfassung','inhalt','content','text','description','question','frage','statement','aufgabe'];
+  for(const f of fields){
+    if(obj[f] && typeof obj[f]==='string' && obj[f].trim().length > 20) return obj[f].trim();
+  }
+  for(const [,v] of Object.entries(obj)){
+    if(typeof v==='string' && v.trim().length > 20) return v.trim();
+  }
+  return '';
+}
+
+async function gatherContext(themaId){
+  let context = [];
+  // Load from schwerpunkt folder
+  const ids = themaId === 'all' ? [1,2,3,4,5,6,7,8,9] : [parseInt(themaId)];
+  const shuffledIds = ids.sort(()=>Math.random()-.5).slice(0,3);
+
+  for(let id of shuffledIds){
+    const data = await loadThemaData(id);
+    data.forEach(d => {
+      const t = extractText(d);
+      if(t.length > 20){
+        context.push({source: ZP_THEMES[id]?.name || `Thema ${id}`, text: t.slice(0,600)});
+      }
+    });
+  }
+
+  // Also load some module data for enrichment
+  const moduleIds = [1,2,3].sort(()=>Math.random()-.5).slice(0,2);
+  for(let mid of moduleIds){
+    const data = await loadModuleData(mid);
+    data.slice(0,3).forEach(d => {
+      const t = extractText(d);
+      if(t.length > 20) context.push({source: `Modul ${mid}`, text: t.slice(0,400)});
+    });
+  }
+
+  return context.slice(0,6);
+}
+
+//═══════════════════════════════════════════════════════════
+// KI API
+//═══════════════════════════════════════════════════════════
+async function callKI(prompt){
+  try{
+    const r = await fetch('/api/grade',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({mode:'text', prompt})
+    });
+    if(!r.ok) throw new Error(`HTTP ${r.status}`);
+    const d = await r.json();
+    return d.html || d.text || null;
+  }catch(e){
+    console.error('KI error:',e);
+    return null;
+  }
+}
+
+//═══════════════════════════════════════════════════════════
+// TIMER
+//═══════════════════════════════════════════════════════════
+function startTimer(){
+  state.timerInterval = setInterval(()=>{
+    state.timerSeconds--;
+    updateTimerDisplay();
+    if(state.timerSeconds <= 0){
+      clearInterval(state.timerInterval);
+      endPruefung();
+    }
+  },1000);
+}
+
+function updateTimerDisplay(){
+  const m = Math.floor(state.timerSeconds/60);
+  const s = state.timerSeconds%60;
+  const txt = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  const el = document.getElementById('timer-text');
+  if(el) el.textContent = txt;
+  const disp = document.getElementById('timer-display');
+  if(disp){
+    if(state.timerSeconds <= 300){
+      disp.style.borderColor = 'rgba(239,68,68,.4)';
+      el.classList.add('timer-urgent');
+      el.style.color = '#f87171';
+    } else if(state.timerSeconds <= 600){
+      el.style.color = '#fbbf24';
+    }
+  }
+}
+
+//═══════════════════════════════════════════════════════════
+// CHAT UI
+//═══════════════════════════════════════════════════════════
+function addMessage(role, text, phaseTag=''){
+  const chat = document.getElementById('chat-area');
+  const isExaminer = role === 'examiner';
+  const div = document.createElement('div');
+  div.className = 'slide-in flex ' + (isExaminer ? 'justify-start' : 'justify-end');
+
+  const phaseHTML = phaseTag ? `<span class="text-[8px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full mb-1 inline-block" style="background:rgba(139,92,246,.15);color:#c4b5fd">${phaseTag}</span><br>` : '';
+
+  if(isExaminer){
+    div.innerHTML = `
+      <div class="flex items-start gap-2 max-w-[85%]">
+        <div class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2)">
+          <i class="fas fa-user-tie text-indigo-400 text-xs"></i>
+        </div>
+        <div>
+          ${phaseHTML}
+          <div class="chat-bubble-examiner px-4 py-3">
+            <p class="text-slate-200 text-sm leading-relaxed">${escHtml(text)}</p>
+          </div>
+        </div>
+      </div>`;
+  } else {
+    div.innerHTML = `
+      <div class="max-w-[85%]">
+        <div class="chat-bubble-user px-4 py-3">
+          <p class="text-slate-200 text-sm leading-relaxed">${escHtml(text)}</p>
+        </div>
+        <p class="text-right text-[9px] text-slate-600 mt-1 font-bold">Du</p>
+      </div>`;
+  }
+
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+
+  // Store message
+  state.messages.push({role, text, phase: state.currentPhase});
+  state.phaseMessages[state.currentPhase].push({role, text});
+}
+
+function addSystemNote(text){
+  const chat = document.getElementById('chat-area');
+  const div = document.createElement('div');
+  div.className = 'slide-in flex justify-center';
+  div.innerHTML = `<div class="px-4 py-2 rounded-full text-[9px] font-black uppercase tracking-widest" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:#475569">${text}</div>`;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function addFeedbackBubble(feedback){
+  const chat = document.getElementById('chat-area');
+  const div = document.createElement('div');
+  div.className = 'slide-in';
+  div.innerHTML = `
+    <div class="rounded-2xl p-4 mt-2" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
+      <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-2"><i class="fas fa-comment-dots mr-1"></i>Prüfer-Feedback</p>
+      <p class="text-slate-300 text-xs leading-relaxed">${escHtml(feedback)}</p>
+    </div>`;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function showKIThinking(show){
+  document.getElementById('ki-thinking').classList.toggle('hidden', !show);
+  document.getElementById('send-btn').disabled = show;
+  state.isWaiting = show;
+}
+
+function escHtml(str){
+  if(!str) return '';
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/\n/g,'<br>');
+}
+
+//═══════════════════════════════════════════════════════════
+// PHASE MANAGEMENT
+//═══════════════════════════════════════════════════════════
+function updatePhaseUI(){
+  const phase = PHASES[state.currentPhase-1];
+  document.getElementById('pruefung-subtitle').textContent = `Phase ${state.currentPhase} · ${phase.short}`;
+  document.getElementById('phase-info-bar').textContent = `${phase.icon} ${phase.name} · ${phase.kb}`;
+
+  // Update dots
+  PHASES.forEach((p,i) => {
+    const dot = document.getElementById(`phase-dot-${i+1}`);
+    if(!dot) return;
+    if(i+1 < state.currentPhase) dot.style.background = '#8b5cf6';
+    else if(i+1 === state.currentPhase) dot.style.background = 'linear-gradient(90deg,#7c3aed,#6366f1)';
+    else dot.style.background = 'rgba(255,255,255,.08)';
+  });
+
+  const nextBtn = document.getElementById('next-phase-btn');
+  if(nextBtn) nextBtn.classList.add('hidden');
+}
+
+async function nextPhase(){
+  if(state.currentPhase >= 4){
+    endPruefung();
+    return;
+  }
+  state.phaseComplete[state.currentPhase] = true;
+  state.currentPhase++;
+  updatePhaseUI();
+  addSystemNote(`── Phase ${state.currentPhase}: ${PHASES[state.currentPhase-1].name} ──`);
+  document.getElementById('next-phase-btn').classList.add('hidden');
+  await askPhaseQuestion();
+}
+
+function showNextPhaseButton(){
+  const btn = document.getElementById('next-phase-btn');
+  if(btn){
+    btn.classList.remove('hidden');
+    if(state.currentPhase >= 4){
+      btn.innerHTML = '<i class="fas fa-flag-checkered mr-1"></i>Prüfung beenden';
+    } else {
+      btn.innerHTML = `Nächste Phase <i class="fas fa-arrow-right ml-1"></i>`;
+    }
+  }
+}
+
+//═══════════════════════════════════════════════════════════
+// PROMPTS
+//═══════════════════════════════════════════════════════════
+function buildSystemContext(){
+  const levelDesc = {
+    standard: 'freundlich und unterstützend, gibt Hinweise wenn nötig',
+    streng: 'kritisch und anspruchsvoll, hakt bei ungenauen Antworten nach',
+    intensiv: 'sehr streng, stellt Gegenfragen, fordert detaillierte Begründungen'
+  };
+
+  const formatDesc = state.format === 'integriert'
+    ? 'integriertes Fachgespräch (anschluss an praktischen Teil, realer Patient)'
+    : 'separate Fallstudie / Colloquium (fiktiver Fall, Papier-Fallbeispiel)';
+
+  return `Du bist ein erfahrener Prüfer für die Pflegeausbildung (Zwischenprüfung, § 7 PflAPrV).
+Prüfungsformat: ${formatDesc}
+Schwerpunkt: ${state.themaName}
+Prüfer-Stil: ${levelDesc[state.level]}
+
+Kontext aus Lernmaterialien:
+${state.themaData.map(d => `[${d.source}]: ${d.text}`).join('\n\n')}
+
+Bewertungskriterien:
+1. Fachsprache (medizinische Begriffe korrekt)
+2. Transferleistung (Wissen auf Patienten anwenden)
+3. Lösungsorientierung (realistische Maßnahmen)
+4. Struktur (roter Faden)
+
+Wichtige Regeln:
+- Stelle immer nur EINE Frage auf einmal
+- Reagiere direkt auf die Antwort des Schülers
+- Lob kurz, hake bei Lücken nach
+- Verwende Fachbegriffe (Hypertonie, nicht Bluthochdruck)
+- Bleibe im Gesprächsfluss, kein langer Monolog
+- Antwort: max 3-4 Sätze als Prüfer`;
+}
+
+function buildPhasePrompt(phase, previousExchange=''){
+  const phaseInstructions = {
+    1: `PHASE 1 - FALLVORSTELLUNG (ca. 3-5 Min):
+Bitte den Schüler, einen Patienten vorzustellen. Frage nach:
+- Biografischen Daten (Name, Alter, Lebenssituation)
+- Hauptdiagnosen und Nebendiagnosen
+- Ressourcen und Pflegeprobleme
+- Aktuellen Pflegemaßnahmen
+Starte mit: "Bitte stellen Sie mir Ihren Patienten kurz vor."`,
+
+    2: `PHASE 2 - KRANKHEITSLEHRE & ANATOMIE (ca. 10 Min):
+Wähle 1-2 Hauptdiagnosen aus der Fallvorstellung. Frage nach:
+- Anatomie der betroffenen Organe
+- Pathophysiologie (Wie entsteht die Krankheit?)
+- Typische Symptome und Zeichen
+- Medikamenten-Wirkweise (z.B. "Wie wirken ACE-Hemmer?")
+- Pflegerelevante Beobachtungsparameter
+Beginne mit einer konkreten Fachfrage zur Diagnose.`,
+
+    3: `PHASE 3 - BERATUNG & PROBLEMLÖSUNG (ca. 10 Min):
+Jetzt geht es um Handlungskompetenz. Simuliere Beratungssituationen:
+- "Erklären Sie dem Patienten, warum...?"
+- "Wie würden Sie mit einem Angehörigen sprechen, der...?"
+- "Was tun Sie, wenn der Patient die Maßnahme ablehnt?"
+- Konkrete Pflegemaßnahmen zur Lebensqualitätsverbesserung
+- Einbeziehen von Expertenstandards (Dekubitus, Sturz, Schmerz)
+Fokus: Kommunikation (KB III), Recht (KB IV)`,
+
+    4: `PHASE 4 - REFLEXION & ETHIK (ca. 5 Min):
+Abschlussphase mit ethischen und reflexiven Fragen:
+- "Was war für Sie die größte Herausforderung in diesem Fall?"
+- Ethische Dilemmata (Patientenverfügung vs. Fürsorgepflicht)
+- Kulturelle/soziale Besonderheiten des Patienten
+- Selbstreflexion der eigenen Leistung
+- Teamarbeit und interprofessionelle Kommunikation
+Fokus: KB IV (Recht), KB V (Ethik & Berufsethos)`
+  };
+
+  return `${buildSystemContext()}
+
+AKTUELLE PHASE: ${phaseInstructions[phase]}
+
+${previousExchange ? `BISHERIGES GESPRÄCH:\n${previousExchange}` : ''}
+
+Stelle jetzt die nächste Frage als Prüfer (max 2-3 Sätze):`;
+}
+
+function buildFeedbackPrompt(antwort, frage){
+  return `${buildSystemContext()}
+
+Der Schüler hat auf folgende Prüferfrage geantwortet:
+
+FRAGE: ${frage}
+ANTWORT: ${antwort}
+
+Reagiere als Prüfer auf diese Antwort:
+1. Kurzes Feedback (gut/lückenhaft/falsch)
+2. Ggf. Ergänzung oder Korrektur
+3. Dann stelle die nächste vertiefende Frage
+
+Antworte in 2-4 Sätzen, bleibe im Gesprächsfluss:`;
+}
+
+function buildBewertungsPrompt(){
+  const gespraeche = state.messages.map(m =>
+    `[${m.role === 'examiner' ? 'PRÜFER' : 'SCHÜLER'}]: ${m.text}`
+  ).join('\n');
+
+  return `Du bist Prüfer und bewertest jetzt das abgeschlossene mündliche Prüfungsgespräch.
+
+GESPRÄCH:
+${gespraeche}
+
+Erstelle eine strukturierte Bewertung als JSON:
+{
+  "gesamtnote": "1-6 als Zahl",
+  "notenlabel": "Sehr gut / Gut / Befriedigend / Ausreichend / Mangelhaft / Ungenügend",
+  "fachsprache": {"punkte": 1-10, "kommentar": "kurz"},
+  "transfer": {"punkte": 1-10, "kommentar": "kurz"},
+  "loesungsorientierung": {"punkte": 1-10, "kommentar": "kurz"},
+  "struktur": {"punkte": 1-10, "kommentar": "kurz"},
+  "phasen": [
+    {"phase": "Fallvorstellung", "bewertung": "gut/ausreichend/mangelhaft", "kommentar": "kurz"},
+    {"phase": "Krankheitslehre", "bewertung": "...", "kommentar": "..."},
+    {"phase": "Beratung", "bewertung": "...", "kommentar": "..."},
+    {"phase": "Reflexion", "bewertung": "...", "kommentar": "..."}
+  ],
+  "staerken": ["Stärke 1", "Stärke 2"],
+  "verbesserungen": ["Verbesserung 1", "Verbesserung 2"],
+  "gesamtfeedback": "2-3 Sätze zusammenfassendes Feedback"
+}
+
+Nur reines JSON ausgeben, kein anderer Text:`;
+}
+
+//═══════════════════════════════════════════════════════════
+// PRÜFUNG LOGIC
+//═══════════════════════════════════════════════════════════
+async function startPruefung(){
+  state.thema = document.getElementById('thema-select').value;
+
+  // Show loading
+  document.getElementById('setup-screen').innerHTML = `
+    <div class="fixed inset-0 flex flex-col items-center justify-center gap-6 text-center px-4">
+      <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background:rgba(139,92,246,.15);border:2px solid rgba(139,92,246,.3)">
+        <i class="fas fa-brain text-violet-400 text-3xl pulse"></i>
+      </div>
+      <div>
+        <h2 class="text-white font-black text-xl mb-2">Prüfer wird vorbereitet</h2>
+        <p class="text-slate-500 text-sm">Lade Lernmaterialien & erstelle Fallszenario...</p>
+      </div>
+      <div class="flex gap-2">
+        <div class="dot1 w-3 h-3 rounded-full bg-violet-500"></div>
+        <div class="dot2 w-3 h-3 rounded-full bg-violet-500"></div>
+        <div class="dot3 w-3 h-3 rounded-full bg-violet-500"></div>
+      </div>
+    </div>`;
+
+  // Load context data
+  const contextData = await gatherContext(state.thema);
+  state.themaData = contextData;
+
+  // Set thema name
+  if(state.thema === 'all'){
+    state.themaName = 'Alle Schwerpunkte (gemischt)';
+  } else {
+    state.themaName = ZP_THEMES[parseInt(state.thema)]?.name || 'Allgemein';
+  }
+
+  // Init state
+  state.currentPhase = 1;
+  state.messages = [];
+  state.phaseMessages = {1:[],2:[],3:[],4:[]};
+  state.timerSeconds = 1800;
+  state.pruefungActive = true;
+  state.phaseComplete = {1:false,2:false,3:false,4:false};
+
+  // Show pruefung screen
+  document.getElementById('setup-screen').classList.add('hidden');
+  document.getElementById('pruefung-screen').classList.remove('hidden');
+  updatePhaseUI();
+  startTimer();
+
+  // Welcome message
+  addSystemNote('── Mündliche Prüfung beginnt ──');
+  addSystemNote(`Format: ${state.format === 'integriert' ? 'Integriertes Fachgespräch' : 'Fallstudie / Colloquium'} · ${state.themaName}`);
+
+  // First examiner question
+  await askPhaseQuestion();
+}
+
+let lastExaminerQuestion = '';
+
+async function askPhaseQuestion(){
+  showKIThinking(true);
+
+  const history = state.messages.slice(-6).map(m =>
+    `${m.role === 'examiner' ? 'Prüfer' : 'Schüler'}: ${m.text}`
+  ).join('\n');
+
+  const prompt = buildPhasePrompt(state.currentPhase, history);
+  const response = await callKI(prompt);
+
+  showKIThinking(false);
+
+  const phaseTag = `Phase ${state.currentPhase} · ${PHASES[state.currentPhase-1].short}`;
+  const question = response || getFallbackQuestion(state.currentPhase);
+  lastExaminerQuestion = question;
+  addMessage('examiner', question, phaseTag);
+
+  // Show next phase button after 1 exchange per phase (except phase 1 needs intro)
+  if(state.phaseMessages[state.currentPhase].filter(m=>m.role==='user').length >= 2){
+    showNextPhaseButton();
+  }
+}
+
+async function submitAntwort(){
+  if(state.isWaiting) return;
+  const input = document.getElementById('antwort-input');
+  const antwort = input.value.trim();
+  if(!antwort) return;
+
+  input.value = '';
+  input.style.height = 'auto';
+  addMessage('user', antwort);
+
+  // Check if we have enough exchanges in this phase
+  const userMsgsInPhase = state.phaseMessages[state.currentPhase].filter(m=>m.role==='user').length;
+
+  showKIThinking(true);
+
+  const history = state.messages.slice(-8).map(m =>
+    `${m.role === 'examiner' ? 'Prüfer' : 'Schüler'}: ${m.text}`
+  ).join('\n');
+
+  let prompt;
+  if(userMsgsInPhase >= 2){
+    // Enough exchanges, wrap up this phase question
+    prompt = `${buildSystemContext()}
+
+BISHERIGES GESPRÄCH:
+${history}
+
+Der Schüler hat ausreichend zu dieser Phase geantwortet. Gib kurzes abschließendes Feedback zu Phase ${state.currentPhase} und sage, dass wir zur nächsten Phase übergehen werden (wenn Phase < 4) oder die Prüfung abschließen (wenn Phase 4).
+
+Antworte in 2-3 Sätzen:`;
+  } else {
+    prompt = buildFeedbackPrompt(antwort, lastExaminerQuestion) + `\n\nBISHERIGES GESPRÄCH:\n${history}`;
+  }
+
+  const response = await callKI(prompt);
+  showKIThinking(false);
+
+  const reply = response || getFallbackFeedback();
+  lastExaminerQuestion = reply;
+  addMessage('examiner', reply);
+
+  // Show next phase button after enough exchanges
+  if(userMsgsInPhase >= 1){
+    showNextPhaseButton();
+  }
+}
+
+function getFallbackQuestion(phase){
+  const fallbacks = {
+    1: "Bitte stellen Sie mir Ihren Patienten vor. Beginnen Sie mit den wichtigsten biografischen Daten, den Hauptdiagnosen und den aktuellen Pflegeproblemen.",
+    2: "Erläutern Sie mir bitte die Pathophysiologie der Hauptdiagnose Ihres Patienten. Was passiert physiologisch im Körper und welche Symptome erwarten Sie?",
+    3: "Welche konkreten Pflegemaßnahmen würden Sie einleiten, um die Lebensqualität Ihres Patienten zu verbessern? Bitte begründen Sie Ihre Entscheidungen fachlich.",
+    4: "Reflektieren Sie kurz Ihren heutigen Prüfungstag. Welche Aspekte der Pflege dieses Patienten waren für Sie besonders herausfordernd und warum?"
+  };
+  return fallbacks[phase] || "Bitte fahren Sie fort.";
+}
+
+function getFallbackFeedback(){
+  return "Vielen Dank für Ihre Antwort. Könnten Sie das noch etwas detaillierter ausführen und dabei die entsprechenden Fachbegriffe verwenden?";
+}
+
+//═══════════════════════════════════════════════════════════
+// END PRUEFUNG
+//═══════════════════════════════════════════════════════════
+async function endPruefung(){
+  clearInterval(state.timerInterval);
+  state.pruefungActive = false;
+
+  // Show loading in chat
+  addSystemNote('── Prüfung beendet · KI erstellt Bewertung ──');
+
+  document.getElementById('pruefung-screen').innerHTML = `
+    <div class="fixed inset-0 flex flex-col items-center justify-center gap-6 text-center px-4" style="background:#060910">
+      <div class="w-20 h-20 rounded-3xl flex items-center justify-center" style="background:rgba(139,92,246,.15);border:2px solid rgba(139,92,246,.3)">
+        <i class="fas fa-robot text-violet-400 text-3xl pulse"></i>
+      </div>
+      <div>
+        <h2 class="text-white font-black text-xl mb-2">KI erstellt Bewertung</h2>
+        <p class="text-slate-500 text-sm">Analysiere alle ${state.messages.length} Gesprächsrunden...</p>
+      </div>
+      <div class="flex gap-2">
+        <div class="dot1 w-3 h-3 rounded-full bg-violet-500"></div>
+        <div class="dot2 w-3 h-3 rounded-full bg-violet-500"></div>
+        <div class="dot3 w-3 h-3 rounded-full bg-violet-500"></div>
+      </div>
+    </div>`;
+
+  if(state.messages.length < 2){
+    // No real conversation, show basic result
+    showErgebnisScreen(null);
+    return;
+  }
+
+  const prompt = buildBewertungsPrompt();
+  const result = await callKI(prompt);
+
+  let bewertung = null;
+  if(result){
+    try{
+      const clean = result.trim().replace(/^```(?:json)?\s*/i,'').replace(/```\s*$/i,'').trim();
+      const s = clean.indexOf('{'), e = clean.lastIndexOf('}');
+      if(s>=0 && e>s) bewertung = JSON.parse(clean.slice(s,e+1));
+    }catch(err){ console.error('Parse error:',err); }
+  }
+
+  state.bewertung = bewertung;
+  showErgebnisScreen(bewertung);
+}
+
+function showErgebnisScreen(bw){
+  document.getElementById('pruefung-screen').classList.add('hidden');
+  document.getElementById('ergebnis-screen').classList.remove('hidden');
+
+  if(!bw){
+    document.getElementById('gesamt-note').textContent = '–';
+    document.getElementById('gesamt-label').textContent = 'Keine Bewertung möglich';
+    document.getElementById('kriterien-scores').innerHTML = '<p class="text-slate-500 text-xs col-span-2 text-center">Zu wenig Gesprächsinhalt für Bewertung</p>';
+    document.getElementById('detail-auswertung').innerHTML = '';
+    return;
+  }
+
+  // Note colors
+  const noteColors = {'1':'#22c55e','2':'#4ade80','3':'#fbbf24','4':'#f97316','5':'#ef4444','6':'#dc2626'};
+  const nc = noteColors[String(bw.gesamtnote)] || '#8b5cf6';
+
+  document.getElementById('gesamt-note').textContent = bw.gesamtnote || '–';
+  document.getElementById('gesamt-note').style.color = nc;
+  document.getElementById('gesamt-label').textContent = bw.notenlabel || 'Bewertung';
+
+  // Criteria scores
+  const kriterien = [
+    {key:'fachsprache', label:'Fachsprache', icon:'fa-language'},
+    {key:'transfer', label:'Transferleistung', icon:'fa-exchange-alt'},
+    {key:'loesungsorientierung', label:'Lösungsorientierung', icon:'fa-lightbulb'},
+    {key:'struktur', label:'Struktur', icon:'fa-sitemap'}
+  ];
+
+  document.getElementById('kriterien-scores').innerHTML = kriterien.map(k => {
+    const data = bw[k.key] || {punkte:5, kommentar:'–'};
+    const pct = (data.punkte/10)*100;
+    const barColor = data.punkte >= 8 ? '#22c55e' : data.punkte >= 6 ? '#fbbf24' : '#ef4444';
+    return `
+      <div class="rounded-2xl p-3" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05)">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-slate-400 text-[10px] font-bold"><i class="fas ${k.icon} mr-1"></i>${k.label}</span>
+          <span class="font-black text-sm" style="color:${barColor}">${data.punkte}/10</span>
+        </div>
+        <div class="w-full h-1.5 rounded-full overflow-hidden mb-2" style="background:rgba(255,255,255,.06)">
+          <div class="h-full rounded-full score-bar" style="width:${pct}%;background:${barColor}"></div>
+        </div>
+        <p class="text-slate-500 text-[10px] leading-relaxed">${data.kommentar||''}</p>
+      </div>`;
+  }).join('');
+
+  // Phase breakdown
+  const phasenHTML = bw.phasen ? bw.phasen.map((p,i) => {
+    const bColors = {gut:'rgba(34,197,94,.1)', ausreichend:'rgba(245,158,11,.1)', mangelhaft:'rgba(239,68,68,.1)'};
+    const tColors = {gut:'#4ade80', ausreichend:'#fbbf24', mangelhaft:'#f87171'};
+    const bColor = bColors[p.bewertung] || 'rgba(255,255,255,.04)';
+    const tColor = tColors[p.bewertung] || '#94a3b8';
+    return `
+      <div class="flex items-start gap-3 p-3 rounded-2xl" style="background:${bColor};border:1px solid rgba(255,255,255,.06)">
+        <div class="text-xl shrink-0">${PHASES[i]?.icon||'📋'}</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-white font-black text-xs">${p.phase}</span>
+            <span class="text-[9px] font-black uppercase px-2 py-0.5 rounded-full" style="color:${tColor};background:rgba(255,255,255,.06)">${p.bewertung}</span>
+          </div>
+          <p class="text-slate-400 text-[11px] leading-relaxed">${p.kommentar||''}</p>
+        </div>
+      </div>`;
+  }).join('') : '';
+
+  const staerkenHTML = bw.staerken ? bw.staerken.map(s =>
+    `<div class="flex items-start gap-2"><i class="fas fa-check-circle text-emerald-400 text-xs mt-0.5 shrink-0"></i><p class="text-slate-300 text-xs">${s}</p></div>`
+  ).join('') : '';
+
+  const verbHTML = bw.verbesserungen ? bw.verbesserungen.map(v =>
+    `<div class="flex items-start gap-2"><i class="fas fa-arrow-up-right-from-square text-amber-400 text-xs mt-0.5 shrink-0"></i><p class="text-slate-300 text-xs">${v}</p></div>`
+  ).join('') : '';
+
+  document.getElementById('detail-auswertung').innerHTML = `
+    ${phasenHTML ? `<div>
+      <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 pl-1">Phasen-Bewertung</p>
+      <div class="space-y-2">${phasenHTML}</div>
+    </div>` : ''}
+
+    ${(staerkenHTML || verbHTML) ? `<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      ${staerkenHTML ? `<div class="rounded-2xl p-4" style="background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.12)">
+        <p class="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-3">✅ Stärken</p>
+        <div class="space-y-2">${staerkenHTML}</div>
+      </div>` : ''}
+      ${verbHTML ? `<div class="rounded-2xl p-4" style="background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.12)">
+        <p class="text-[9px] font-black text-amber-500 uppercase tracking-widest mb-3">📈 Verbesserungen</p>
+        <div class="space-y-2">${verbHTML}</div>
+      </div>` : ''}
+    </div>` : ''}
+
+    ${bw.gesamtfeedback ? `<div class="rounded-2xl p-4" style="background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.15)">
+      <p class="text-[9px] font-black text-indigo-400 uppercase tracking-widest mb-2"><i class="fas fa-comment-dots mr-1"></i>Gesamtfeedback</p>
+      <p class="text-slate-300 text-sm leading-relaxed">${bw.gesamtfeedback}</p>
+    </div>` : ''}`;
+}
+
+//═══════════════════════════════════════════════════════════
+// UTILS
+//═══════════════════════════════════════════════════════════
+function confirmExit(){
+  if(confirm('Prüfung wirklich beenden? Der Fortschritt geht verloren.')){
+    clearInterval(state.timerInterval);
+    endPruefung();
+  }
+}
+
+function resetPruefung(){
+  location.reload();
+}
+
+// Auto-resize textarea
+document.addEventListener('DOMContentLoaded', () => {
+  const ta = document.getElementById('antwort-input');
+  if(ta){
+    ta.addEventListener('input', function(){
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+    ta.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' && !e.shiftKey){
+        e.preventDefault();
+        submitAntwort();
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
