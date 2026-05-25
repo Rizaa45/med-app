@@ -55,6 +55,47 @@ textarea{-webkit-appearance:none;appearance:none}
 <body class="min-h-screen text-slate-100 relative">
 <div class="page-bg"></div>
 
+<!-- ═══ AUTO LOGIN POPUP ═══ -->
+<div id="autologin-popup" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.75);backdrop-filter:blur(8px)">
+<div class="w-full max-w-md modal-anim">
+<div class="gradient-bg rounded-t-3xl p-7 text-center relative overflow-hidden">
+<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px"></div>
+<div class="relative z-10">
+<div class="text-5xl mb-3 sparkle">🔐</div>
+<h2 class="text-2xl font-black tracking-tight text-white">Willkommen zurück!</h2>
+<p class="text-indigo-200 text-sm font-medium mt-2">Auto-Login · SLM System</p>
+</div>
+</div>
+<div class="bg-[#0c1020] rounded-b-3xl p-6 space-y-4 border border-white/5 border-t-0">
+<div class="flex items-center gap-3 p-3 rounded-2xl" style="background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.15)">
+<div class="w-10 h-10 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center shrink-0">
+<i class="fas fa-key text-sm"></i>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">Lern-Code erkannt</h4>
+<p id="autologin-pin-display" class="text-[11px] text-slate-500 leading-relaxed font-mono tracking-widest">····</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 bg-violet-500/10 text-violet-400 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+<i class="fas fa-sync-alt text-sm"></i>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white">Fortschritt wird geladen</h4>
+<p class="text-[11px] text-slate-500 leading-relaxed">Alle Daten werden synchronisiert.</p>
+</div>
+</div>
+<button onclick="doAutoLoginConfirm()" class="w-full btn-touch gradient-bg text-white py-3.5 rounded-2xl font-black uppercase tracking-widest text-sm mt-2 active:scale-95 transition-transform shadow-lg shadow-indigo-500/20">
+<i class="fas fa-rocket mr-2"></i>Jetzt einloggen
+</button>
+<button onclick="doAutoLoginManual()" class="w-full btn-touch text-slate-500 hover:text-white py-2 rounded-2xl font-bold text-xs transition-colors">
+<i class="fas fa-user mr-1"></i>Anderen Code verwenden
+</button>
+<p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">v11.0 · PflBG/PflAPrV konform</p>
+</div>
+</div>
+</div>
+
 <!-- ═══ WELCOME POPUP ═══ -->
 <div id="welcome-popup" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.75);backdrop-filter:blur(8px)">
 <div class="w-full max-w-md modal-anim">
@@ -118,19 +159,19 @@ textarea{-webkit-appearance:none;appearance:none}
 <p class="text-[10px] font-bold text-indigo-400 mb-1"><i class="fas fa-magic mr-1"></i>Zusammenfassung (Schwerpunkt)</p>
 <div class="relative mt-2">
 <select id="zp-theme-select" class="w-full bg-slate-900 text-white text-xs font-bold border border-white/10 rounded-lg px-3 py-2 outline-none focus:border-indigo-500 transition-colors" style="-webkit-appearance:none;appearance:none;">
-    <option value="all">Alle Themen gemischt (Realistisch)</option>
-    <option value="1">1. Fallorientierter Pflegeprozess</option>
-    <option value="2">2. Kommunikationsstrategien</option>
-    <option value="3">3. Personenzentrierter Ansatz</option>
-    <option value="4">4. Gewalt in der Pflege</option>
-    <option value="5">5. Ekel und Scham</option>
-    <option value="6">6. Rollenkonflikte</option>
-    <option value="7">7. Kollegiale Beratung</option>
-    <option value="8">8. Ethische Prinzipien nach Beauchamp / Pflegecharta</option>
-    <option value="9">9. Pflegerische Versorgung (Diabetes, Demenz, Gastro)</option>
+<option value="all">Alle Themen gemischt (Realistisch)</option>
+<option value="1">1. Fallorientierter Pflegeprozess</option>
+<option value="2">2. Kommunikationsstrategien</option>
+<option value="3">3. Personenzentrierter Ansatz</option>
+<option value="4">4. Gewalt in der Pflege</option>
+<option value="5">5. Ekel und Scham</option>
+<option value="6">6. Rollenkonflikte</option>
+<option value="7">7. Kollegiale Beratung</option>
+<option value="8">8. Ethische Prinzipien nach Beauchamp / Pflegecharta</option>
+<option value="9">9. Pflegerische Versorgung (Diabetes, Demenz, Gastro)</option>
 </select>
 <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-    <i class="fas fa-chevron-down text-xs"></i>
+<i class="fas fa-chevron-down text-xs"></i>
 </div>
 </div>
 </div>
@@ -257,8 +298,8 @@ textarea{-webkit-appearance:none;appearance:none}
 </div>
 </div>
 
-<!-- ═══ LOGIN ═══ -->
-<div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center p-5" style="background:#060910">
+<!-- ═══ LOGIN (versteckt, aber HTML bleibt für Funktionen) ═══ -->
+<div id="login-screen" class="fixed inset-0 z-50 flex items-center justify-center p-5 hidden" style="background:#060910">
 <div class="w-full max-w-sm enter">
 <div class="text-center mb-7">
 <div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-500/20"><i class="fas fa-graduation-cap text-white text-xl"></i></div>
@@ -411,9 +452,9 @@ textarea{-webkit-appearance:none;appearance:none}
 
 <script src="js/cloud-sync.js"></script>
 <script>
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // CONFIG
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 const MODULES=[
 {id:1,name:'Kommunikation & Biografie',icon:'fa-book-open',color:'#6366f1',href:'module.html'},
 {id:2,name:'Medizinisches Kernwissen',icon:'fa-stethoscope',color:'#6366f1',href:'module2.html'},
@@ -425,7 +466,6 @@ const MODULES=[
 {id:8,name:'Innere Medizin & Niere',icon:'fa-lungs',color:'#0ea5e9',href:'module8.html'},
 {id:9,name:'Neurologische Rehabilitation',icon:'fa-brain',color:'#f59e0b',href:'module9.html'},
 ];
-
 const KB_LABELS={
 I:'KB I · Pflegeprozess & Diagnostik',
 II:'KB II · Kommunikation & Beratung',
@@ -433,35 +473,31 @@ III:'KB III · Intra-/Interprofessionelles Handeln',
 IV:'KB IV · Recht, Ethik & Qualität',
 V:'KB V · Wissenschaft & Berufsethos'
 };
-
 const MODULE_KB={
 1:['I','II'],2:['I','III'],3:['I','IV'],
 4:['I','II'],5:['I','III'],6:['I','IV'],
 7:['I','II'],8:['I','III'],9:['I','V']
 };
-
 const SESSION_CONFIG={
 schnell:{n:5,batchSize:5,label:'⚡ Schnell',style:'flash'},
 mittel:{n:10,batchSize:5,label:'🎯 Standard',style:'case'},
 intensiv:{n:15,batchSize:5,label:'🔥 Intensiv',style:'case'}
 };
-
 // Neue ZP Themen nur für den Zwischenprüfungs-Lernmodus
 const ZP_THEMES = {
-    1: {name: 'Fallorientierter Pflegeprozess', kb: 'I'},
-    2: {name: 'Kommunikationsstrategien', kb: 'II'},
-    3: {name: 'Personenzentrierter Ansatz', kb: 'II'},
-    4: {name: 'Gewalt in der Pflege', kb: 'III'},
-    5: {name: 'Ekel und Scham', kb: 'I'},
-    6: {name: 'Rollenkonflikte', kb: 'III'},
-    7: {name: 'Kollegiale Beratung', kb: 'III'},
-    8: {name: 'Ethische Prinzipien nach Beauchamp / Pflegecharta', kb: 'IV'},
-    9: {name: 'Pflegerische Versorgung', kb: 'I'}
+1: {name: 'Fallorientierter Pflegeprozess', kb: 'I'},
+2: {name: 'Kommunikationsstrategien', kb: 'II'},
+3: {name: 'Personenzentrierter Ansatz', kb: 'II'},
+4: {name: 'Gewalt in der Pflege', kb: 'III'},
+5: {name: 'Ekel und Scham', kb: 'I'},
+6: {name: 'Rollenkonflikte', kb: 'III'},
+7: {name: 'Kollegiale Beratung', kb: 'III'},
+8: {name: 'Ethische Prinzipien nach Beauchamp / Pflegecharta', kb: 'IV'},
+9: {name: 'Pflegerische Versorgung', kb: 'I'}
 };
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // STATE
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 let dbCache={};
 let recallState={
 questions:[],
@@ -473,10 +509,9 @@ timerSeconds:120,
 sessionLabel:'',
 sessionStyle:'flash'
 };
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // DB LOADING
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 async function loadModuleDB(id){
 if(dbCache[id]) return dbCache[id];
 const paths=[
@@ -495,30 +530,28 @@ if(arr.length){dbCache[id]=arr;return arr;}
 }
 return[];
 }
-
 // Lädt gezielt aus dem schwerpunkt Ordner (nur für ZP Widget)
 async function loadZpThemeDB(id){
-    const paths = [
-        `data/schwerpunkt/thema${id}.json`,
-        `/data/schwerpunkt/thema${id}.json`,
-        `./data/schwerpunkt/thema${id}.json`,
-        `../data/schwerpunkt/thema${id}.json`
-    ];
-    for(let path of paths) {
-        try {
-            const r = await fetch(path, {cache:'no-cache'});
-            if(r.ok) {
-                const raw = await r.json();
-                return Array.isArray(raw) ? raw : [raw];
-            }
-        } catch(e) {}
-    }
-    return [];
+const paths = [
+`data/schwerpunkt/thema${id}.json`,
+`/data/schwerpunkt/thema${id}.json`,
+`./data/schwerpunkt/thema${id}.json`,
+`../data/schwerpunkt/thema${id}.json`
+];
+for(let path of paths) {
+try {
+const r = await fetch(path, {cache:'no-cache'});
+if(r.ok) {
+const raw = await r.json();
+return Array.isArray(raw) ? raw : [raw];
 }
-
-// ═══════════════════════════════════════════════════════════
+} catch(e) {}
+}
+return [];
+}
+//═══════════════════════════════════════════════════════════
 // CONTENT EXTRACTION
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function extractContent(raw){
 const textFields=['zusammenfassung','inhalt','question','frage','statement','text','title','content',
 'description','prompt','stem','aufgabe','thema','lernziel'];
@@ -551,12 +584,10 @@ if(raw[f]&&Array.isArray(raw[f])&&raw[f].length){keywords=raw[f].map(String);bre
 const topic=String(raw.topic||raw.thema||raw.category||raw.unit||raw.kapitel||'');
 return{mainText,rawAnswer,keywords,topic};
 }
-
 function shuffle(a){return[...a].sort(()=>Math.random()-.5);}
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // KI API
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 async function callKI(payload){
 try{
 const r=await fetch('/api/grade',{
@@ -578,10 +609,9 @@ const arr=JSON.parse(c.slice(s,e+1));
 return Array.isArray(arr)?arr:null;
 }catch(e){return null;}
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // KI PROMPTS FÜR DEN NEUEN ZP LERNEN MODUS
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function buildFlashPrompt(summaries, n){
 return `Du bist Pflegetutor für die Pflege Zwischenprüfung. Erstelle EXAKT ${n} kurze, direkte Wissensfragen (Blitzfragen) aus den folgenden JSON-Zusammenfassungen.
 
@@ -608,7 +638,6 @@ ${summaries.map(item => `Thema: ${item.moduleName}\nInhalt: ${item.text.slice(0,
 
 WICHTIG: Gib ausschließlich das reine JSON-Array zurück.`;
 }
-
 function buildCasePrompt(summaries, n){
 return `Du bist Prüfer für die Pflegeausbildung (PflAPrV). Erstelle EXAKT ${n} klinische Pflegesituationen mit konkreter Frage basierend auf den bereitgestellten JSON-Zusammenfassungen.
 
@@ -634,10 +663,9 @@ ${summaries.map(item => `Thema: ${item.moduleName}\nInhalt: ${item.text.slice(0,
 
 WICHTIG: Gib ausschließlich das reine JSON-Array zurück.`;
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // SESSION START (KOMPLETT NEU FÜR ZP-THEMEN ZUSAMMENFASSUNGEN)
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 async function startRecall(size){
 closeZPHub();
 document.getElementById('recall-modal').classList.remove('hidden');
@@ -647,101 +675,85 @@ recallState.sessionLabel=cfg.label;
 recallState.sessionStyle=cfg.style;
 const badge=document.getElementById('recall-session-badge');
 if(badge){badge.textContent=cfg.label;}
-
 const themeSelect = document.getElementById('zp-theme-select');
 const sel = themeSelect ? themeSelect.value : 'all';
-
 showRecallLoading('📚 Lade JSON Zusammenfassungen...', 10);
-
 const targetModules = [];
 const idsToLoad = sel === 'all' ? [1,2,3,4,5,6,7,8,9] : [parseInt(sel)];
-
 for(let id of idsToLoad) {
-    const data = await loadZpThemeDB(id);
-    if(data.length) {
-        targetModules.push({
-            id: id,
-            name: ZP_THEMES[id].name,
-            kb: ZP_THEMES[id].kb,
-            data: data
-        });
-    }
+const data = await loadZpThemeDB(id);
+if(data.length) {
+targetModules.push({
+id: id,
+name: ZP_THEMES[id].name,
+kb: ZP_THEMES[id].kb,
+data: data
+});
 }
-
+}
 if(!targetModules.length){
-    showRecallError('Keine Zusammenfassungen gefunden.<br><small>Stelle sicher, dass data/schwerpunkt/thema1.json etc. existieren.</small>');
-    return;
+showRecallError('Keine Zusammenfassungen gefunden.<br><small>Stelle sicher, dass data/schwerpunkt/thema1.json etc. existieren.</small>');
+return;
 }
-
 let allSummaries = [];
 targetModules.forEach(m => {
-    m.data.forEach(d => {
-        const ex = extractContent(d);
-        if(ex.mainText && ex.mainText.length > 10) {
-            allSummaries.push({
-                moduleName: m.name,
-                moduleId: m.id,
-                kb: m.kb,
-                kbLabel: KB_LABELS[m.kb],
-                text: ex.mainText
-            });
-        }
-    });
+m.data.forEach(d => {
+const ex = extractContent(d);
+if(ex.mainText && ex.mainText.length > 10) {
+allSummaries.push({
+moduleName: m.name,
+moduleId: m.id,
+kb: m.kb,
+kbLabel: KB_LABELS[m.kb],
+text: ex.mainText
 });
-
-if(!allSummaries.length){
-    showRecallError('Keine verwertbaren Texte in den JSONs.');
-    return;
 }
-
+});
+});
+if(!allSummaries.length){
+showRecallError('Keine verwertbaren Texte in den JSONs.');
+return;
+}
 // Um die KI nicht mit zu viel Text zu überlasten, wähle max. 3 Blöcke aus
 const selectedSummaries = shuffle(allSummaries).slice(0, 3);
-
 showRecallLoading(`🤖 Generiere exakt ${cfg.n} Fragen...`, 40);
-
-const prompt = cfg.style === 'flash' ? buildFlashPrompt(selectedSummaries, cfg.n) : buildCasePrompt(selectedSummaries, cfg.n);
+const prompt = cfg.style === 'flash' ? buildFlashPrompt(selectedSummaries, cfg.n) :
+buildCasePrompt(selectedSummaries, cfg.n);
 const result = await callKI({mode:'text', prompt});
 const parsed = parseKIJsonArray(result);
-
 if(!parsed || !Array.isArray(parsed) || parsed.length === 0) {
-    showRecallError('KI konnte keine Fragen generieren. Versuche es nochmal.');
-    return;
+showRecallError('KI konnte keine Fragen generieren. Versuche es nochmal.');
+return;
 }
-
 showRecallLoading('✨ Bereite Session vor...', 96);
-
 const questions = parsed.map((ki, idx) => {
-    // Verknüpfe die Frage rotierend mit den ausgewählten Zusammenfassungen
-    const ref = selectedSummaries[idx % selectedSummaries.length];
-    return {
-        question: ki.question.trim(),
-        sampleAnswer: ki.answer.trim(),
-        keywords: ki.keywords || [],
-        moduleName: ref.moduleName,
-        moduleId: ref.moduleId,
-        kb: ref.kb,
-        kbLabel: ref.kbLabel,
-        topic: ref.moduleName,
-        corrected: false,
-        source: 'ki',
-        style: cfg.style
-    };
+// Verknüpfe die Frage rotierend mit den ausgewählten Zusammenfassungen
+const ref = selectedSummaries[idx % selectedSummaries.length];
+return {
+question: ki.question.trim(),
+sampleAnswer: ki.answer.trim(),
+keywords: ki.keywords || [],
+moduleName: ref.moduleName,
+moduleId: ref.moduleId,
+kb: ref.kb,
+kbLabel: ref.kbLabel,
+topic: ref.moduleName,
+corrected: false,
+source: 'ki',
+style: cfg.style
+};
 });
-
 recallState.questions = questions.slice(0, cfg.n);
-
 if(recallState.questions.length === 0) {
-    showRecallError('Keine gültigen Fragen generiert.');
-    return;
+showRecallError('Keine gültigen Fragen generiert.');
+return;
 }
-
 recallState.currentIndex=0;
 recallState.userAnswers=[];
 recallState.phase='spickzettel';
 updateRecallHeader();
 renderRecallQ();
 }
-
 function updateRecallHeader(){
 const label=document.getElementById('recall-progress-label');
 if(label){
@@ -750,10 +762,9 @@ const cur=Math.min(recallState.currentIndex+1,total);
 label.textContent=`${cur} / ${total}`;
 }
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // LOADING UI
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function showRecallLoading(msg,pct=0){
 document.getElementById('recall-progress-label').textContent='';
 document.getElementById('recall-content').innerHTML=`
@@ -779,10 +790,9 @@ document.getElementById('recall-content').innerHTML=`
 <button onclick="closeRecall()" class="btn-touch px-6 py-3 rounded-xl text-sm font-bold text-slate-300 active:scale-95" style="background:rgba(255,255,255,.06)">Schließen</button>
 </div>`;
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // RENDER QUESTION
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function renderRecallQ(){
 const q=recallState.questions[recallState.currentIndex];
 if(!q){finishRecall();return;}
@@ -908,10 +918,9 @@ clearInterval(recallState.timerInterval);
 document.getElementById('recall-modal').classList.add('hidden');
 document.body.style.overflow='';
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // FINISH
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 async function finishRecall(){
 clearInterval(recallState.timerInterval);
 document.getElementById('recall-progress-label').textContent='';
@@ -974,10 +983,9 @@ ${pairs.map((p,i)=>`<div style="background:rgba(255,255,255,.03);border:1px soli
 <p style="color:#94a3b8;font-size:.8rem"><strong style="color:${p.userAnswer?'#fbbf24':'#f87171'}">${p.userAnswer?'📝':'❌'}</strong> ${p.userAnswer||'Nicht beantwortet.'}</p>
 </div>`).join('')}</div>`;
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // LERNHEFTE
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function getLernbuecher(){return JSON.parse(localStorage.getItem('slm_lernbuecher')||'[]');}
 function saveLernbuch(title,html){
 const books=getLernbuecher();
@@ -1020,10 +1028,9 @@ el.innerHTML=books.map(b=>`
 <button onclick="deleteLernbuch(${b.id})" class="btn-touch w-8 h-8 rounded-lg flex items-center justify-center text-slate-700 hover:text-red-400 active:scale-95 transition-all opacity-0 group-hover:opacity-100 shrink-0"><i class="fas fa-trash text-[10px]"></i></button>
 </div>`).join('');
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // ZP HUB
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function openZPHub(){
 document.getElementById('zp-hub-modal').classList.remove('hidden');
 document.body.style.overflow='hidden';
@@ -1048,10 +1055,9 @@ const themeSelect = document.getElementById('zp-theme-select');
 const sel = themeSelect ? themeSelect.value : 'all';
 window.open('zwischenpruefung.html?thema=' + sel,'_blank');
 }
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // WELCOME
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function showWelcome(){
 if(!localStorage.getItem('slm_welcome_v110')){
 document.getElementById('welcome-popup').classList.remove('hidden');
@@ -1064,10 +1070,34 @@ el.style.transition='opacity .3s';el.style.opacity='0';
 setTimeout(()=>{el.classList.add('hidden');el.style.opacity='';document.body.style.overflow='';},300);
 localStorage.setItem('slm_welcome_v110','true');
 }
+//═══════════════════════════════════════════════════════════
+// AUTO LOGIN POPUP
+//═══════════════════════════════════════════════════════════
+let _pendingAutoPin = null;
 
-// ═══════════════════════════════════════════════════════════
+function showAutoLoginPopup(pin){
+_pendingAutoPin = pin;
+const dispEl = document.getElementById('autologin-pin-display');
+if(dispEl) dispEl.textContent = pin.split('').join(' · ');
+document.getElementById('autologin-popup').classList.remove('hidden');
+document.body.style.overflow='hidden';
+}
+function closeAutoLoginPopup(){
+document.getElementById('autologin-popup').classList.add('hidden');
+document.body.style.overflow='';
+}
+function doAutoLoginConfirm(){
+closeAutoLoginPopup();
+enterDashboard();
+}
+function doAutoLoginManual(){
+closeAutoLoginPopup();
+// Login-Screen anzeigen für manuellen Login
+document.getElementById('login-screen').classList.remove('hidden');
+}
+//═══════════════════════════════════════════════════════════
 // AUTH
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function pinNav(n){
 const el=document.getElementById('p'+n);
 if(el.value.length>=1){
@@ -1098,7 +1128,9 @@ const pin=getPin();
 if(pin.length!==4){showMsg('Bitte 4 Ziffern eingeben',true);return;}
 document.getElementById('login-msg').classList.add('hidden');
 setLoading(true);
-try{await SLMCloud.login(pin);enterDashboard();}
+try{await SLMCloud.login(pin);
+document.getElementById('login-screen').classList.add('hidden');
+enterDashboard();}
 catch(e){showMsg('Code nicht gefunden.',true);setLoading(false);[1,2,3,4].forEach(n=>document.getElementById('p'+n).value='');document.getElementById('p1').focus();}
 }
 async function doRegister(){
@@ -1116,12 +1148,17 @@ setTimeout(showWelcome,600);
 }
 document.addEventListener('DOMContentLoaded',async()=>{
 const ok=typeof SLMCloud!=='undefined' && await SLMCloud.autoLogin();
-if(ok) enterDashboard();
+if(ok){
+// Auto-Login erfolgreich: Popup zeigen
+showAutoLoginPopup(SLMCloud.pin);
+} else {
+// Kein gespeicherter Login: Login-Screen zeigen
+document.getElementById('login-screen').classList.remove('hidden');
+}
 });
-
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 // MODULE GRID
-// ═══════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════
 function renderModules(){
 const grid=document.getElementById('module-grid');
 const history=JSON.parse(localStorage.getItem('slm_exam_history')||'[]');
@@ -1146,7 +1183,6 @@ return`<div onclick="location.href='${m.href}'" class="module-card glass rounded
 }).join('');
 }
 window.addEventListener('beforeunload',()=>{if(typeof SLMCloud!=='undefined' && SLMCloud.ready)SLMCloud.save();});
-
 // Backdrop click to close
 document.getElementById('zp-hub-modal').addEventListener('click',function(e){if(e.target===this)closeZPHub();});
 document.getElementById('recall-modal').addEventListener('click',function(e){if(e.target===this)closeRecall();});
