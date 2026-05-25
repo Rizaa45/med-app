@@ -50,10 +50,75 @@ body{font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:tran
 textarea{-webkit-appearance:none;appearance:none}
 @keyframes pulse-bg{0%,100%{opacity:.6}50%{opacity:1}}.pulse{animation:pulse-bg 1.5s ease-in-out infinite}
 @keyframes schwerpunktGlow{0%{box-shadow:0 0 15px rgba(139,92,246,.15)}50%{box-shadow:0 0 40px rgba(139,92,246,.5),0 0 60px rgba(99,102,241,.2)}100%{box-shadow:0 0 15px rgba(139,92,246,.15)}}.schwerpunkt-glow{animation:schwerpunktGlow 3s infinite}
+@keyframes betaFlicker{0%,100%{opacity:1}50%{opacity:.7}}.beta-flicker{animation:betaFlicker 2s ease-in-out infinite}
+@keyframes serverPulse{0%{transform:scale(1);opacity:.8}50%{transform:scale(1.05);opacity:1}100%{transform:scale(1);opacity:.8}}.server-pulse{animation:serverPulse 1.5s ease-in-out infinite}
+@keyframes dangerGlow{0%{box-shadow:0 0 10px rgba(239,68,68,.2)}50%{box-shadow:0 0 30px rgba(239,68,68,.5),0 0 60px rgba(239,68,68,.2)}100%{box-shadow:0 0 10px rgba(239,68,68,.2)}}.danger-glow{animation:dangerGlow 2s infinite}
 </style>
 </head>
 <body class="min-h-screen text-slate-100 relative">
 <div class="page-bg"></div>
+
+<!-- ═══ BETA WARNING POPUP ═══ -->
+<div id="beta-warning-popup" class="fixed inset-0 z-[300] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.85);backdrop-filter:blur(12px)">
+<div class="w-full max-w-md modal-anim">
+<div class="rounded-t-3xl overflow-hidden relative" style="background:linear-gradient(135deg,rgba(239,68,68,.15),rgba(220,38,38,.08),rgba(8,12,28,.95));border:1px solid rgba(239,68,68,.3)" >
+<div class="absolute top-0 left-0 right-0 h-[1px]" style="background:linear-gradient(90deg,transparent,rgba(239,68,68,.6),transparent)"></div>
+<div class="p-7 text-center relative">
+<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(239,68,68,.04) 1px,transparent 1px);background-size:20px 20px"></div>
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 danger-glow" style="background:rgba(239,68,68,.1);border:2px solid rgba(239,68,68,.3)">
+<i class="fas fa-microchip text-red-400 text-2xl server-pulse"></i>
+</div>
+<div class="flex items-center justify-center gap-2 mb-3">
+<span class="text-[9px] font-black px-3 py-1 rounded-full beta-flicker" style="background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)">⚠ BETA · EXPERIMENTELL</span>
+</div>
+<h2 class="text-xl font-black tracking-tight text-white mb-1">Mündliche Prüfung · KI-Simulator</h2>
+<p class="text-red-300 text-xs font-medium">Frontier Model · Hochlast-System</p>
+</div>
+</div>
+</div>
+<div class="rounded-b-3xl p-6 space-y-4" style="background:rgba(8,12,28,.98);border:1px solid rgba(239,68,68,.15);border-top:0">
+<div class="rounded-2xl p-4 space-y-3" style="background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.12)">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(239,68,68,.1)">
+<i class="fas fa-fire text-red-400 text-xs"></i>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white mb-0.5">Extreme Serverauslastung</h4>
+<p class="text-[11px] text-slate-400 leading-relaxed">Dieses Modul verwendet <span class="text-red-300 font-bold">Frontier-Modelle</span> und fortschrittliche KI-Algorithmen, die die Hauptserver stark belasten und erhitzen können.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(239,68,68,.1)">
+<i class="fas fa-users text-red-400 text-xs"></i>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white mb-0.5">Parallele Nutzung</h4>
+<p class="text-[11px] text-slate-400 leading-relaxed">Bei gleichzeitiger Nutzung durch mehrere Personen kann die Prüfung aufgrund der <span class="text-red-300 font-bold">Systemlast abrupt unterbrochen</span> werden.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(245,158,11,.1)">
+<i class="fas fa-triangle-exclamation text-amber-400 text-xs"></i>
+</div>
+<div>
+<h4 class="font-bold text-sm text-white mb-0.5">Beta-Status</h4>
+<p class="text-[11px] text-slate-400 leading-relaxed">Dieses Feature befindet sich in aktiver Entwicklung. Unerwartetes Verhalten ist möglich.</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2.5">
+<button onclick="closeBetaWarning()" class="btn-touch flex-1 py-3.5 rounded-2xl font-black text-sm active:scale-95 transition-transform" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#64748b">
+Abbrechen
+</button>
+<button onclick="proceedToMuendlich()" class="btn-touch flex-1 py-3.5 rounded-2xl font-black text-sm active:scale-95 transition-transform text-white" style="background:linear-gradient(135deg,#dc2626,#ef4444);box-shadow:0 6px 20px rgba(239,68,68,.25)">
+<i class="fas fa-microphone mr-2"></i>Verstanden · Starten
+</button>
+</div>
+<p class="text-center text-[9px] text-slate-600 font-bold uppercase tracking-widest">§ 7 PflAPrV · KI-Prüfer · Frontier Models</p>
+</div>
+</div>
+</div>
 
 <!-- ═══ AUTO LOGIN POPUP ═══ -->
 <div id="autologin-popup" class="fixed inset-0 z-[200] flex items-center justify-center p-4 hidden" style="background:rgba(0,0,0,.75);backdrop-filter:blur(8px)">
@@ -215,14 +280,28 @@ textarea{-webkit-appearance:none;appearance:none}
 </div>
 <!-- TAB: MÜNDLICH -->
 <div id="zpTab-muendlich" class="zp-tab-content hidden">
-<div class="flex flex-col items-center justify-center py-8 text-center">
-<div class="w-16 h-16 rounded-3xl flex items-center justify-center mb-3 relative" style="background:rgba(139,92,246,.08);border:2px solid rgba(139,92,246,.15)">
-<i class="fas fa-microphone text-violet-500 text-xl"></i>
-<div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center" style="background:#1e1b4b;border:2px solid rgba(139,92,246,.3)"><i class="fas fa-wrench text-violet-400 text-[9px]"></i></div>
+<div class="flex flex-col items-center justify-center py-6 text-center">
+<div class="w-16 h-16 rounded-3xl flex items-center justify-center mb-4 relative" style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(99,102,241,.1));border:2px solid rgba(139,92,246,.3)">
+<i class="fas fa-microphone text-violet-400 text-xl"></i>
+<div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#dc2626,#ef4444);box-shadow:0 2px 8px rgba(239,68,68,.4)">
+<span class="text-white text-[7px] font-black">BETA</span>
 </div>
-<h3 class="text-white font-black text-base mb-1">Mündlicher Teil</h3>
-<p class="text-slate-500 text-xs mb-3 leading-relaxed max-w-xs">KI-Prüfer stellt kompetenzbasierte Fragen in Echtzeit.</p>
-<div class="px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:#a78bfa">🚧 In Entwicklung</div>
+</div>
+<h3 class="text-white font-black text-base mb-1">Mündliche Prüfung</h3>
+<p class="text-slate-500 text-xs mb-4 leading-relaxed max-w-xs">KI-Prüfer simuliert das echte Fachgespräch nach § 7 PflAPrV. Frontier Model · 4 Phasen · Echtzeit-Bewertung.</p>
+<div class="flex flex-wrap gap-1.5 justify-center mb-5">
+<span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(99,102,241,.15);color:#a5b4fc;border:1px solid rgba(99,102,241,.2)">KB III · Kommunikation</span>
+<span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(20,184,166,.15);color:#5eead4;border:1px solid rgba(20,184,166,.2)">KB IV · Recht</span>
+<span class="text-[9px] font-bold px-2 py-0.5 rounded-full" style="background:rgba(245,158,11,.15);color:#fcd34d;border:1px solid rgba(245,158,11,.2)">KB V · Ethik</span>
+</div>
+<button onclick="openBetaWarning()" class="btn-touch w-full py-3.5 rounded-2xl font-black text-sm active:scale-95 transition-transform text-white relative overflow-hidden" style="background:linear-gradient(135deg,#7c3aed,#6366f1,#8b5cf6);box-shadow:0 6px 24px rgba(124,58,237,.35)">
+<div class="absolute inset-0" style="background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:16px 16px"></div>
+<span class="relative z-10"><i class="fas fa-microphone mr-2"></i>KI-Prüfer starten</span>
+</button>
+<div class="flex items-center gap-1.5 mt-3">
+<div class="w-1.5 h-1.5 rounded-full beta-flicker" style="background:#ef4444"></div>
+<p class="text-[9px] text-slate-600 font-bold uppercase tracking-widest">Beta · Frontier Model · Hochlast</p>
+</div>
 </div>
 </div>
 <!-- TAB: HEFTE -->
@@ -312,6 +391,10 @@ textarea{-webkit-appearance:none;appearance:none}
 <div class="flex flex-wrap gap-2">
 <button onclick="openZPHub()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-white text-sm font-black transition-all active:scale-95" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);box-shadow:0 6px 20px rgba(99,102,241,.3)"><i class="fas fa-book-open text-xs"></i><span>Lernen</span></button>
 <button onclick="openZwischenpruefung()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-orange-400 text-sm font-black transition-all active:scale-95" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2)"><i class="fas fa-file-contract text-xs"></i><span>Probeklausur</span></button>
+<button onclick="openBetaWarning()" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-violet-400 text-sm font-black transition-all active:scale-95 relative overflow-hidden" style="background:rgba(124,58,237,.1);border:1px solid rgba(139,92,246,.3)">
+<i class="fas fa-microphone text-xs"></i><span>Mündlich</span>
+<span class="absolute -top-0.5 -right-0.5 text-[7px] font-black px-1.5 py-0.5 rounded-full" style="background:linear-gradient(135deg,#dc2626,#ef4444);color:white">BETA</span>
+</button>
 <button onclick="openZPHub();setTimeout(()=>zpSetTab('hefte'),150)" class="btn-touch flex items-center gap-2 px-4 py-2.5 rounded-xl text-slate-400 text-sm font-bold transition-all active:scale-95 hover:text-white" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)"><i class="fas fa-book text-xs"></i><span id="dash-hefte-count">0 Hefte</span></button>
 </div>
 </div>
@@ -996,6 +1079,31 @@ const sel = themeSelect ? themeSelect.value : 'all';
 window.open('zwischenpruefung.html?thema=' + sel,'_blank');
 }
 //═══════════════════════════════════════════════════════════
+// BETA WARNING POPUP
+//═══════════════════════════════════════════════════════════
+function openBetaWarning(){
+// Close ZP Hub if open
+document.getElementById('zp-hub-modal').classList.add('hidden');
+document.getElementById('beta-warning-popup').classList.remove('hidden');
+document.body.style.overflow='hidden';
+}
+function closeBetaWarning(){
+const el=document.getElementById('beta-warning-popup');
+el.style.transition='opacity .3s';
+el.style.opacity='0';
+setTimeout(()=>{
+el.classList.add('hidden');
+el.style.opacity='';
+document.body.style.overflow='';
+},300);
+}
+function proceedToMuendlich(){
+closeBetaWarning();
+setTimeout(()=>{
+window.location.href='mundlich.html';
+},350);
+}
+//═══════════════════════════════════════════════════════════
 // WELCOME
 //═══════════════════════════════════════════════════════════
 function showWelcome(){
@@ -1036,16 +1144,12 @@ setTimeout(showWelcome,600);
 // INIT — direkt starten, Auto-Login Popup zeigen
 //═══════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', async () => {
-// Auto-Login Popup sofort anzeigen
 document.getElementById('autologin-popup').classList.remove('hidden');
 document.body.style.overflow='hidden';
-// Versuche SLMCloud autoLogin im Hintergrund
 if(typeof SLMCloud !== 'undefined') {
 try { await SLMCloud.autoLogin(); } catch(e) {}
 }
-// Dashboard initialisieren
 enterDashboard();
-// Popup nach kurzer Verzögerung automatisch schließen
 setTimeout(closeAutoLogin, 2000);
 });
 //═══════════════════════════════════════════════════════════
@@ -1079,6 +1183,7 @@ window.addEventListener('beforeunload',()=>{if(typeof SLMCloud!=='undefined' && 
 document.getElementById('zp-hub-modal').addEventListener('click',function(e){if(e.target===this)closeZPHub();});
 document.getElementById('recall-modal').addEventListener('click',function(e){if(e.target===this)closeRecall();});
 document.getElementById('lb-view-modal').addEventListener('click',function(e){if(e.target===this)document.getElementById('lb-view-modal').classList.add('hidden');});
+document.getElementById('beta-warning-popup').addEventListener('click',function(e){if(e.target===this)closeBetaWarning();});
 </script>
 </body>
 </html>
