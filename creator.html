@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>SLM Studio Pro | Creator</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tw.css"><script src="js/vendor/pdf.min.js"></script>
+<script src="js/vendor/pptxgen.bundle.js"></script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="fonts/fa/all.min.css">
 <style>
 body{font-family:'Plus Jakarta Sans',sans-serif;background:#0b0f19;color:#f8fafc;overflow:hidden}
 #sidebar{transition:transform .4s cubic-bezier(.4,0,.2,1),width .4s}
@@ -302,7 +301,7 @@ body{display:block!important}body>.flex{display:block!important;overflow:visible
 </div>
 </div>
 <script>
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc='js/vendor/pdf.worker.min.js';
 let isSidebarOpen=true,scriptPanelOpen=false,scriptViewMode='notes';
 const speakers=[];
 let slideScripts=[],currentSlidesData=null,extractedPdfText='',pdfFileName='';
