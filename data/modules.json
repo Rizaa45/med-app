@@ -1,0 +1,74 @@
+[
+  {
+    "id": "mod_1",
+    "name": "Kommunikation & Biografie",
+    "shortName": "Kommunikation",
+    "description": "Pflegeprozess, Anamnese, Kommunikationsmodelle, Biografiearbeit",
+    "accent": "#6366f1",
+    "competencyArea": "I · Pflegeprozess"
+  },
+  {
+    "id": "mod_2",
+    "name": "Medizinisches Kernwissen",
+    "shortName": "Medizin",
+    "description": "Anatomie, Physiologie, Vitalzeichen, Hygienestandards",
+    "accent": "#6366f1",
+    "competencyArea": "I · Pflegeprozess"
+  },
+  {
+    "id": "mod_3",
+    "name": "Krankheitslehre",
+    "shortName": "Krankheitslehre",
+    "description": "Pathologie, Pharmakologie, Prophylaxen",
+    "accent": "#6366f1",
+    "competencyArea": "I · Pflegeprozess"
+  },
+  {
+    "id": "mod_4",
+    "name": "Schwangerschaft & Geburt",
+    "shortName": "Geburtshilfe",
+    "description": "Geburtshilfe, Neonatologie, pädiatrische Pflegegrundlagen",
+    "accent": "#14b8a6",
+    "competencyArea": "II · Kommunikation"
+  },
+  {
+    "id": "mod_5",
+    "name": "Prä- & Postoperative Pflege",
+    "shortName": "Chirurgie",
+    "description": "Perioperative Pflege, Wundversorgung, Asepsis",
+    "accent": "#22c55e",
+    "competencyArea": "I · Pflegeprozess"
+  },
+  {
+    "id": "mod_6",
+    "name": "Notfall & Reanimation",
+    "shortName": "Notfall",
+    "description": "ABCDE-Schema, Reanimation (BLS/ALS), Schockformen, Triage",
+    "accent": "#ef4444",
+    "competencyArea": "II · Kommunikation"
+  },
+  {
+    "id": "mod_7",
+    "name": "Ambulante & Chronische Pflege",
+    "shortName": "Chronische Pflege",
+    "description": "Ambulante Pflege, SGB XI/V, Pflegegrade",
+    "accent": "#a855f7",
+    "competencyArea": "IV · Recht & Qualität"
+  },
+  {
+    "id": "mod_8",
+    "name": "Innere Medizin & Niere",
+    "shortName": "Innere Medizin",
+    "description": "Nephrologie, Kardiologie, Gastroenterologie, Dialyse",
+    "accent": "#0ea5e9",
+    "competencyArea": "I · Pflegeprozess"
+  },
+  {
+    "id": "mod_9",
+    "name": "Neurologische Rehabilitation",
+    "shortName": "Neurologie",
+    "description": "Apoplex, Bobath-Konzept, Dysphagie, Reha-Stadien",
+    "accent": "#f59e0b",
+    "competencyArea": "II · Kommunikation"
+  }
+]
